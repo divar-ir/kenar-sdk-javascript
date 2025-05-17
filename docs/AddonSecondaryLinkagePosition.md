@@ -3,12 +3,12 @@
 ## Enum
 
 
-* `SPEC_HEAD` (value: `"POST_SPEC_HEAD"`)
+* `POST_SPEC_HEAD` (value: `"POST_SPEC_HEAD"`)
 
-* `SPEC_TAIL` (value: `"POST_SPEC_TAIL"`)
+* `POST_SPEC_TAIL` (value: `"POST_SPEC_TAIL"`)
 
-* `PRICE_SPEC` (value: `"POST_PRICE_SPEC"`)
+* `POST_PRICE_SPEC` (value: `"POST_PRICE_SPEC"`)
 
-* `DESC_TAIL` (value: `"POST_DESC_TAIL"`)
+* `POST_DESC_TAIL` (value: `"POST_DESC_TAIL"`)
 
 

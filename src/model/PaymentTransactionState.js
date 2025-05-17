@@ -23,28 +23,28 @@ export default class PaymentTransactionState {
          * value: "TRANSACTION_STATE_PENDING"
          * @const
          */
-        "PENDING" = "TRANSACTION_STATE_PENDING";
+        "TRANSACTION_STATE_PENDING" = "TRANSACTION_STATE_PENDING";
 
     
         /**
          * value: "TRANSACTION_STATE_COMPLETED"
          * @const
          */
-        "COMPLETED" = "TRANSACTION_STATE_COMPLETED";
+        "TRANSACTION_STATE_COMPLETED" = "TRANSACTION_STATE_COMPLETED";
 
     
         /**
          * value: "TRANSACTION_STATE_FAILED"
          * @const
          */
-        "FAILED" = "TRANSACTION_STATE_FAILED";
+        "TRANSACTION_STATE_FAILED" = "TRANSACTION_STATE_FAILED";
 
     
         /**
          * value: "TRANSACTION_STATE_REFUNDED"
          * @const
          */
-        "REFUNDED" = "TRANSACTION_STATE_REFUNDED";
+        "TRANSACTION_STATE_REFUNDED" = "TRANSACTION_STATE_REFUNDED";
 
     
 

@@ -3,8 +3,8 @@
 ## Enum
 
 
-* `DETAILS` (value: `"POST_DETAILS"`)
+* `POST_DETAILS` (value: `"POST_DETAILS"`)
 
-* `MANAGEMENT` (value: `"POST_MANAGEMENT"`)
+* `POST_MANAGEMENT` (value: `"POST_MANAGEMENT"`)
 
 

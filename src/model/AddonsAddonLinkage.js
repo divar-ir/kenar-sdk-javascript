@@ -23,14 +23,14 @@ export default class AddonsAddonLinkage {
          * value: "POST_DETAILS"
          * @const
          */
-        "DETAILS" = "POST_DETAILS";
+        "POST_DETAILS" = "POST_DETAILS";
 
     
         /**
          * value: "POST_MANAGEMENT"
          * @const
          */
-        "MANAGEMENT" = "POST_MANAGEMENT";
+        "POST_MANAGEMENT" = "POST_MANAGEMENT";
 
     
 

@@ -23,28 +23,28 @@ export default class AddonSecondaryLinkagePosition {
          * value: "POST_SPEC_HEAD"
          * @const
          */
-        "SPEC_HEAD" = "POST_SPEC_HEAD";
+        "POST_SPEC_HEAD" = "POST_SPEC_HEAD";
 
     
         /**
          * value: "POST_SPEC_TAIL"
          * @const
          */
-        "SPEC_TAIL" = "POST_SPEC_TAIL";
+        "POST_SPEC_TAIL" = "POST_SPEC_TAIL";
 
     
         /**
          * value: "POST_PRICE_SPEC"
          * @const
          */
-        "PRICE_SPEC" = "POST_PRICE_SPEC";
+        "POST_PRICE_SPEC" = "POST_PRICE_SPEC";
 
     
         /**
          * value: "POST_DESC_TAIL"
          * @const
          */
-        "DESC_TAIL" = "POST_DESC_TAIL";
+        "POST_DESC_TAIL" = "POST_DESC_TAIL";
 
     
 

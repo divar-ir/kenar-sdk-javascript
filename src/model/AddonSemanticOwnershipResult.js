@@ -23,14 +23,14 @@ export default class AddonSemanticOwnershipResult {
          * value: "OWNERSHIP_CONFIRMED"
          * @const
          */
-        "CONFIRMED" = "OWNERSHIP_CONFIRMED";
+        "OWNERSHIP_CONFIRMED" = "OWNERSHIP_CONFIRMED";
 
     
         /**
          * value: "OWNERSHIP_DELEGATION_CONFIRMED"
          * @const
          */
-        "DELEGATION_CONFIRMED" = "OWNERSHIP_DELEGATION_CONFIRMED";
+        "OWNERSHIP_DELEGATION_CONFIRMED" = "OWNERSHIP_DELEGATION_CONFIRMED";
 
     
 
