@@ -1,0 +1,14 @@
+# KenarAPIClient.PaymentTransactionState
+
+## Enum
+
+
+* `PENDING` (value: `"TRANSACTION_STATE_PENDING"`)
+
+* `COMPLETED` (value: `"TRANSACTION_STATE_COMPLETED"`)
+
+* `FAILED` (value: `"TRANSACTION_STATE_FAILED"`)
+
+* `REFUNDED` (value: `"TRANSACTION_STATE_REFUNDED"`)
+
+
