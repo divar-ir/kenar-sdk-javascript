@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FinderSearchQueryNumberRange model module.
  * @module model/FinderSearchQueryNumberRange
- * @version version not set
+ * @version 0.1.0
  */
 class FinderSearchQueryNumberRange {
     /**
@@ -75,6 +75,32 @@ class FinderSearchQueryNumberRange {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getMin() {
+        return this.min;
+    }
+
+    /**
+     * @param {String} min
+     */
+    setMin(min) {
+        this['min'] = min;
+    }
+/**
+     * @return {String}
+     */
+    getMax() {
+        return this.max;
+    }
+
+    /**
+     * @param {String} max
+     */
+    setMax(max) {
+        this['max'] = max;
+    }
 
 }
 

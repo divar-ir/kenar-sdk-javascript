@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsEnumOption
+# KenarApiClient.AssetsEnumOption
 
 ## Properties
 

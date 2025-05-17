@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetPermissionsResponse
+# KenarApiClient.AssetsGetPermissionsResponse
 
 ## Properties
 

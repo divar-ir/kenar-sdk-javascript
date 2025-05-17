@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessageFileData model module.
  * @module model/MessageFileData
- * @version version not set
+ * @version 0.1.0
  */
 class MessageFileData {
     /**
@@ -82,6 +82,45 @@ class MessageFileData {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getLink() {
+        return this.link;
+    }
+
+    /**
+     * @param {String} link
+     */
+    setLink(link) {
+        this['link'] = link;
+    }
+/**
+     * @return {String}
+     */
+    getName() {
+        return this.name;
+    }
+
+    /**
+     * @param {String} name
+     */
+    setName(name) {
+        this['name'] = name;
+    }
+/**
+     * @return {String}
+     */
+    getSizeBytes() {
+        return this.size_bytes;
+    }
+
+    /**
+     * @param {String} sizeBytes
+     */
+    setSizeBytes(sizeBytes) {
+        this['size_bytes'] = sizeBytes;
+    }
 
 }
 

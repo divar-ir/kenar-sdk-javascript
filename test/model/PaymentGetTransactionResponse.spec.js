@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentGetTransactionResponse();
+    instance = new KenarApiClient.PaymentGetTransactionResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PaymentGetTransactionResponse', function() {
     it('should create an instance of PaymentGetTransactionResponse', function() {
       // uncomment below and update the code to test PaymentGetTransactionResponse
-      //var instance = new KenarAPIClient.PaymentGetTransactionResponse();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentGetTransactionResponse);
+      //var instance = new KenarApiClient.PaymentGetTransactionResponse();
+      //expect(instance).to.be.a(KenarApiClient.PaymentGetTransactionResponse);
     });
 
     it('should have the property transaction (base name: "transaction")', function() {
       // uncomment below and update the code to test the property transaction
-      //var instance = new KenarAPIClient.PaymentGetTransactionResponse();
+      //var instance = new KenarApiClient.PaymentGetTransactionResponse();
       //expect(instance).to.be();
     });
 

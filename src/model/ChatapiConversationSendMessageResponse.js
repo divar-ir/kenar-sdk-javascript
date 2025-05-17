@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChatapiConversationSendMessageResponse model module.
  * @module model/ChatapiConversationSendMessageResponse
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiConversationSendMessageResponse {
     /**
@@ -71,6 +71,32 @@ class ChatapiConversationSendMessageResponse {
         return true;
     }
 
+/**
+     * @return {Number}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {Number} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
+/**
+     * @return {String}
+     */
+    getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @param {String} message
+     */
+    setMessage(message) {
+        this['message'] = message;
+    }
 
 }
 

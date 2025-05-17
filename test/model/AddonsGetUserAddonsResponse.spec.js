@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsGetUserAddonsResponse();
+    instance = new KenarApiClient.AddonsGetUserAddonsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AddonsGetUserAddonsResponse', function() {
     it('should create an instance of AddonsGetUserAddonsResponse', function() {
       // uncomment below and update the code to test AddonsGetUserAddonsResponse
-      //var instance = new KenarAPIClient.AddonsGetUserAddonsResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsGetUserAddonsResponse);
+      //var instance = new KenarApiClient.AddonsGetUserAddonsResponse();
+      //expect(instance).to.be.a(KenarApiClient.AddonsGetUserAddonsResponse);
     });
 
     it('should have the property addons (base name: "addons")', function() {
       // uncomment below and update the code to test the property addons
-      //var instance = new KenarAPIClient.AddonsGetUserAddonsResponse();
+      //var instance = new KenarApiClient.AddonsGetUserAddonsResponse();
       //expect(instance).to.be();
     });
 

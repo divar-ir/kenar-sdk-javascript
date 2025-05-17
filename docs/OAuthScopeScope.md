@@ -1,4 +1,4 @@
-# KenarAPIClient.OAuthScopeScope
+# KenarApiClient.OAuthScopeScope
 
 ## Enum
 

@@ -18,7 +18,7 @@ import GetPostResponseBusinessData from './GetPostResponseBusinessData';
 /**
  * The FinderGetPostResponse model module.
  * @module model/FinderGetPostResponse
- * @version version not set
+ * @version 0.1.0
  */
 class FinderGetPostResponse {
     /**
@@ -110,6 +110,123 @@ class FinderGetPostResponse {
         return true;
     }
 
+/**
+     * @return {module:model/FinderPostExtState}
+     */
+    getState() {
+        return this.state;
+    }
+
+    /**
+     * @param {module:model/FinderPostExtState} state
+     */
+    setState(state) {
+        this['state'] = state;
+    }
+/**
+     * @return {Date}
+     */
+    getFirstPublishedAt() {
+        return this.first_published_at;
+    }
+
+    /**
+     * @param {Date} firstPublishedAt
+     */
+    setFirstPublishedAt(firstPublishedAt) {
+        this['first_published_at'] = firstPublishedAt;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {String}
+     */
+    getCategory() {
+        return this.category;
+    }
+
+    /**
+     * @param {String} category
+     */
+    setCategory(category) {
+        this['category'] = category;
+    }
+/**
+     * @return {String}
+     */
+    getCity() {
+        return this.city;
+    }
+
+    /**
+     * @param {String} city
+     */
+    setCity(city) {
+        this['city'] = city;
+    }
+/**
+     * @return {String}
+     */
+    getDistrict() {
+        return this.district;
+    }
+
+    /**
+     * @param {String} district
+     */
+    setDistrict(district) {
+        this['district'] = district;
+    }
+/**
+     * @return {Object}
+     */
+    getData() {
+        return this.data;
+    }
+
+    /**
+     * @param {Object} data
+     */
+    setData(data) {
+        this['data'] = data;
+    }
+/**
+     * @return {Boolean}
+     */
+    getChatEnabled() {
+        return this.chat_enabled;
+    }
+
+    /**
+     * @param {Boolean} chatEnabled
+     */
+    setChatEnabled(chatEnabled) {
+        this['chat_enabled'] = chatEnabled;
+    }
+/**
+     * @return {module:model/GetPostResponseBusinessData}
+     */
+    getBusinessData() {
+        return this.business_data;
+    }
+
+    /**
+     * @param {module:model/GetPostResponseBusinessData} businessData
+     */
+    setBusinessData(businessData) {
+        this['business_data'] = businessData;
+    }
 
 }
 

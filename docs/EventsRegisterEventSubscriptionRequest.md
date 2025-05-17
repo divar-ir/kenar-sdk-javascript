@@ -1,4 +1,4 @@
-# KenarAPIClient.EventsRegisterEventSubscriptionRequest
+# KenarApiClient.EventsRegisterEventSubscriptionRequest
 
 ## Properties
 

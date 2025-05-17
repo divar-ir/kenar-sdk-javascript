@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.EventsRegisterEventSubscriptionRequest();
+    instance = new KenarApiClient.EventsRegisterEventSubscriptionRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('EventsRegisterEventSubscriptionRequest', function() {
     it('should create an instance of EventsRegisterEventSubscriptionRequest', function() {
       // uncomment below and update the code to test EventsRegisterEventSubscriptionRequest
-      //var instance = new KenarAPIClient.EventsRegisterEventSubscriptionRequest();
-      //expect(instance).to.be.a(KenarAPIClient.EventsRegisterEventSubscriptionRequest);
+      //var instance = new KenarApiClient.EventsRegisterEventSubscriptionRequest();
+      //expect(instance).to.be.a(KenarApiClient.EventsRegisterEventSubscriptionRequest);
     });
 
     it('should have the property eventType (base name: "event_type")', function() {
       // uncomment below and update the code to test the property eventType
-      //var instance = new KenarAPIClient.EventsRegisterEventSubscriptionRequest();
+      //var instance = new KenarApiClient.EventsRegisterEventSubscriptionRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property eventResourceId (base name: "event_resource_id")', function() {
       // uncomment below and update the code to test the property eventResourceId
-      //var instance = new KenarAPIClient.EventsRegisterEventSubscriptionRequest();
+      //var instance = new KenarApiClient.EventsRegisterEventSubscriptionRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instance = new KenarAPIClient.EventsRegisterEventSubscriptionRequest();
+      //var instance = new KenarApiClient.EventsRegisterEventSubscriptionRequest();
       //expect(instance).to.be();
     });
 

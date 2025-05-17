@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetInternalStoragesResponse();
+    instance = new KenarApiClient.AssetsGetInternalStoragesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetInternalStoragesResponse', function() {
     it('should create an instance of AssetsGetInternalStoragesResponse', function() {
       // uncomment below and update the code to test AssetsGetInternalStoragesResponse
-      //var instance = new KenarAPIClient.AssetsGetInternalStoragesResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetInternalStoragesResponse);
+      //var instance = new KenarApiClient.AssetsGetInternalStoragesResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetInternalStoragesResponse);
     });
 
     it('should have the property internalStorages (base name: "internal_storages")', function() {
       // uncomment below and update the code to test the property internalStorages
-      //var instance = new KenarAPIClient.AssetsGetInternalStoragesResponse();
+      //var instance = new KenarApiClient.AssetsGetInternalStoragesResponse();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetCitiesResponse
+# KenarApiClient.AssetsGetCitiesResponse
 
 ## Properties
 

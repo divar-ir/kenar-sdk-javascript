@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentGetBalanceResponse();
+    instance = new KenarApiClient.PaymentGetBalanceResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PaymentGetBalanceResponse', function() {
     it('should create an instance of PaymentGetBalanceResponse', function() {
       // uncomment below and update the code to test PaymentGetBalanceResponse
-      //var instance = new KenarAPIClient.PaymentGetBalanceResponse();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentGetBalanceResponse);
+      //var instance = new KenarApiClient.PaymentGetBalanceResponse();
+      //expect(instance).to.be.a(KenarApiClient.PaymentGetBalanceResponse);
     });
 
     it('should have the property balanceRials (base name: "balance_rials")', function() {
       // uncomment below and update the code to test the property balanceRials
-      //var instance = new KenarAPIClient.PaymentGetBalanceResponse();
+      //var instance = new KenarApiClient.PaymentGetBalanceResponse();
       //expect(instance).to.be();
     });
 

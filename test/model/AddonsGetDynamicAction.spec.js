@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsGetDynamicAction();
+    instance = new KenarApiClient.AddonsGetDynamicAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AddonsGetDynamicAction', function() {
     it('should create an instance of AddonsGetDynamicAction', function() {
       // uncomment below and update the code to test AddonsGetDynamicAction
-      //var instance = new KenarAPIClient.AddonsGetDynamicAction();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsGetDynamicAction);
+      //var instance = new KenarApiClient.AddonsGetDynamicAction();
+      //expect(instance).to.be.a(KenarApiClient.AddonsGetDynamicAction);
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new KenarAPIClient.AddonsGetDynamicAction();
+      //var instance = new KenarApiClient.AddonsGetDynamicAction();
       //expect(instance).to.be();
     });
 

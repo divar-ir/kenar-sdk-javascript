@@ -1,4 +1,4 @@
-# KenarAPIClient.PostEditPostBody
+# KenarApiClient.PostEditPostBody
 
 ## Properties
 

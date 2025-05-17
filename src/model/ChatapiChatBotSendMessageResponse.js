@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChatapiChatBotSendMessageResponse model module.
  * @module model/ChatapiChatBotSendMessageResponse
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiChatBotSendMessageResponse {
     /**
@@ -68,6 +68,19 @@ class ChatapiChatBotSendMessageResponse {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getConversationId() {
+        return this.conversation_id;
+    }
+
+    /**
+     * @param {String} conversationId
+     */
+    setConversationId(conversationId) {
+        this['conversation_id'] = conversationId;
+    }
 
 }
 

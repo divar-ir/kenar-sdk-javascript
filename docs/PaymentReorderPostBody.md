@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentReorderPostBody
+# KenarApiClient.PaymentReorderPostBody
 
 ## Properties
 

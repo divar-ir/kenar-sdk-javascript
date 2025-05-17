@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderSearchQuery();
+    instance = new KenarApiClient.FinderSearchQuery();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,55 +50,55 @@
   describe('FinderSearchQuery', function() {
     it('should create an instance of FinderSearchQuery', function() {
       // uncomment below and update the code to test FinderSearchQuery
-      //var instance = new KenarAPIClient.FinderSearchQuery();
-      //expect(instance).to.be.a(KenarAPIClient.FinderSearchQuery);
+      //var instance = new KenarApiClient.FinderSearchQuery();
+      //expect(instance).to.be.a(KenarApiClient.FinderSearchQuery);
     });
 
     it('should have the property brandModel (base name: "brand_model")', function() {
       // uncomment below and update the code to test the property brandModel
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 
     it('should have the property productionYear (base name: "production_year")', function() {
       // uncomment below and update the code to test the property productionYear
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 
     it('should have the property usage (base name: "usage")', function() {
       // uncomment below and update the code to test the property usage
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 
     it('should have the property rooms (base name: "rooms")', function() {
       // uncomment below and update the code to test the property rooms
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 
     it('should have the property rent (base name: "rent")', function() {
       // uncomment below and update the code to test the property rent
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 
     it('should have the property credit (base name: "credit")', function() {
       // uncomment below and update the code to test the property credit
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 
     it('should have the property size (base name: "size")', function() {
       // uncomment below and update the code to test the property size
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 
     it('should have the property onlyWithParking (base name: "only_with_parking")', function() {
       // uncomment below and update the code to test the property onlyWithParking
-      //var instance = new KenarAPIClient.FinderSearchQuery();
+      //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
 

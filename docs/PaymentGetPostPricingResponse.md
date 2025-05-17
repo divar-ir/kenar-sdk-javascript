@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentGetPostPricingResponse
+# KenarApiClient.PaymentGetPostPricingResponse
 
 ## Properties
 

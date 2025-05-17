@@ -19,7 +19,7 @@ import SearchPostItemVehiclesFields from './SearchPostItemVehiclesFields';
 /**
  * The FinderSearchPostItem model module.
  * @module model/FinderSearchPostItem
- * @version version not set
+ * @version 0.1.0
  */
 class FinderSearchPostItem {
     /**
@@ -140,6 +140,214 @@ class FinderSearchPostItem {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {String}
+     */
+    getCategory() {
+        return this.category;
+    }
+
+    /**
+     * @param {String} category
+     */
+    setCategory(category) {
+        this['category'] = category;
+    }
+/**
+     * @return {Date}
+     */
+    getLastModifiedAt() {
+        return this.last_modified_at;
+    }
+
+    /**
+     * @param {Date} lastModifiedAt
+     */
+    setLastModifiedAt(lastModifiedAt) {
+        this['last_modified_at'] = lastModifiedAt;
+    }
+/**
+     * @return {String}
+     */
+    getCity() {
+        return this.city;
+    }
+
+    /**
+     * @param {String} city
+     */
+    setCity(city) {
+        this['city'] = city;
+    }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {module:model/SearchPostItemPrice}
+     */
+    getPrice() {
+        return this.price;
+    }
+
+    /**
+     * @param {module:model/SearchPostItemPrice} price
+     */
+    setPrice(price) {
+        this['price'] = price;
+    }
+/**
+     * @return {module:model/SearchPostItemRealEstateFields}
+     */
+    getRealEstateFields() {
+        return this.real_estate_fields;
+    }
+
+    /**
+     * @param {module:model/SearchPostItemRealEstateFields} realEstateFields
+     */
+    setRealEstateFields(realEstateFields) {
+        this['real_estate_fields'] = realEstateFields;
+    }
+/**
+     * @return {module:model/SearchPostItemVehiclesFields}
+     */
+    getVehiclesFields() {
+        return this.vehicles_fields;
+    }
+
+    /**
+     * @param {module:model/SearchPostItemVehiclesFields} vehiclesFields
+     */
+    setVehiclesFields(vehiclesFields) {
+        this['vehicles_fields'] = vehiclesFields;
+    }
+/**
+     * @return {Object}
+     */
+    getElectronicDevicesFields() {
+        return this.electronic_devices_fields;
+    }
+
+    /**
+     * @param {Object} electronicDevicesFields
+     */
+    setElectronicDevicesFields(electronicDevicesFields) {
+        this['electronic_devices_fields'] = electronicDevicesFields;
+    }
+/**
+     * @return {Object}
+     */
+    getHomeKitchenFields() {
+        return this.home_kitchen_fields;
+    }
+
+    /**
+     * @param {Object} homeKitchenFields
+     */
+    setHomeKitchenFields(homeKitchenFields) {
+        this['home_kitchen_fields'] = homeKitchenFields;
+    }
+/**
+     * @return {Object}
+     */
+    getServicesFields() {
+        return this.services_fields;
+    }
+
+    /**
+     * @param {Object} servicesFields
+     */
+    setServicesFields(servicesFields) {
+        this['services_fields'] = servicesFields;
+    }
+/**
+     * @return {Object}
+     */
+    getPersonalGoodsFields() {
+        return this.personal_goods_fields;
+    }
+
+    /**
+     * @param {Object} personalGoodsFields
+     */
+    setPersonalGoodsFields(personalGoodsFields) {
+        this['personal_goods_fields'] = personalGoodsFields;
+    }
+/**
+     * @return {Object}
+     */
+    getLeisureHobbiesFields() {
+        return this.leisure_hobbies_fields;
+    }
+
+    /**
+     * @param {Object} leisureHobbiesFields
+     */
+    setLeisureHobbiesFields(leisureHobbiesFields) {
+        this['leisure_hobbies_fields'] = leisureHobbiesFields;
+    }
+/**
+     * @return {Object}
+     */
+    getCommunityFields() {
+        return this.community_fields;
+    }
+
+    /**
+     * @param {Object} communityFields
+     */
+    setCommunityFields(communityFields) {
+        this['community_fields'] = communityFields;
+    }
+/**
+     * @return {Object}
+     */
+    getToolsMaterialsEquipmentFields() {
+        return this.tools_materials_equipment_fields;
+    }
+
+    /**
+     * @param {Object} toolsMaterialsEquipmentFields
+     */
+    setToolsMaterialsEquipmentFields(toolsMaterialsEquipmentFields) {
+        this['tools_materials_equipment_fields'] = toolsMaterialsEquipmentFields;
+    }
+/**
+     * @return {Object}
+     */
+    getJobsFields() {
+        return this.jobs_fields;
+    }
+
+    /**
+     * @param {Object} jobsFields
+     */
+    setJobsFields(jobsFields) {
+        this['jobs_fields'] = jobsFields;
+    }
 
 }
 

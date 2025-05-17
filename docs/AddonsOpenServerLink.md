@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsOpenServerLink
+# KenarApiClient.AddonsOpenServerLink
 
 ## Properties
 

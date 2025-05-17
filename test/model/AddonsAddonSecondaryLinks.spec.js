@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsAddonSecondaryLinks();
+    instance = new KenarApiClient.AddonsAddonSecondaryLinks();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AddonsAddonSecondaryLinks', function() {
     it('should create an instance of AddonsAddonSecondaryLinks', function() {
       // uncomment below and update the code to test AddonsAddonSecondaryLinks
-      //var instance = new KenarAPIClient.AddonsAddonSecondaryLinks();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsAddonSecondaryLinks);
+      //var instance = new KenarApiClient.AddonsAddonSecondaryLinks();
+      //expect(instance).to.be.a(KenarApiClient.AddonsAddonSecondaryLinks);
     });
 
     it('should have the property secondaryLinkages (base name: "secondary_linkages")', function() {
       // uncomment below and update the code to test the property secondaryLinkages
-      //var instance = new KenarAPIClient.AddonsAddonSecondaryLinks();
+      //var instance = new KenarApiClient.AddonsAddonSecondaryLinks();
       //expect(instance).to.be();
     });
 

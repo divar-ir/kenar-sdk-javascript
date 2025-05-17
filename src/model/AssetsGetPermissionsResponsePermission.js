@@ -17,7 +17,7 @@ import AssetsGetPermissionsResponseLifeCycleState from './AssetsGetPermissionsRe
 /**
  * The AssetsGetPermissionsResponsePermission model module.
  * @module model/AssetsGetPermissionsResponsePermission
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetPermissionsResponsePermission {
     /**
@@ -86,6 +86,58 @@ class AssetsGetPermissionsResponsePermission {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {String} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
+/**
+     * @return {String}
+     */
+    getDisplay() {
+        return this.display;
+    }
+
+    /**
+     * @param {String} display
+     */
+    setDisplay(display) {
+        this['display'] = display;
+    }
+/**
+     * @return {String}
+     */
+    getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @param {String} description
+     */
+    setDescription(description) {
+        this['description'] = description;
+    }
+/**
+     * @return {module:model/AssetsGetPermissionsResponseLifeCycleState}
+     */
+    getLifecycleState() {
+        return this.lifecycle_state;
+    }
+
+    /**
+     * @param {module:model/AssetsGetPermissionsResponseLifeCycleState} lifecycleState
+     */
+    setLifecycleState(lifecycleState) {
+        this['lifecycle_state'] = lifecycleState;
+    }
 
 }
 

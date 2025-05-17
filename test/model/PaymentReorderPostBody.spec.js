@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentReorderPostBody();
+    instance = new KenarApiClient.PaymentReorderPostBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('PaymentReorderPostBody', function() {
     it('should create an instance of PaymentReorderPostBody', function() {
       // uncomment below and update the code to test PaymentReorderPostBody
-      //var instance = new KenarAPIClient.PaymentReorderPostBody();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentReorderPostBody);
+      //var instance = new KenarApiClient.PaymentReorderPostBody();
+      //expect(instance).to.be.a(KenarApiClient.PaymentReorderPostBody);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KenarAPIClient.PaymentReorderPostBody();
+      //var instance = new KenarApiClient.PaymentReorderPostBody();
       //expect(instance).to.be();
     });
 
     it('should have the property extraDetails (base name: "extra_details")', function() {
       // uncomment below and update the code to test the property extraDetails
-      //var instance = new KenarAPIClient.PaymentReorderPostBody();
+      //var instance = new KenarApiClient.PaymentReorderPostBody();
       //expect(instance).to.be();
     });
 

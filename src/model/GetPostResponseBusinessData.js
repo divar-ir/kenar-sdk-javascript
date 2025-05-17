@@ -17,7 +17,7 @@ import PremiumPanelBusinessDataSubBusinessType from './PremiumPanelBusinessDataS
 /**
  * The GetPostResponseBusinessData model module.
  * @module model/GetPostResponseBusinessData
- * @version version not set
+ * @version 0.1.0
  */
 class GetPostResponseBusinessData {
     /**
@@ -72,6 +72,32 @@ class GetPostResponseBusinessData {
         return true;
     }
 
+/**
+     * @return {module:model/PremiumPanelBusinessDataSubBusinessType}
+     */
+    getBusinessType() {
+        return this.business_type;
+    }
+
+    /**
+     * @param {module:model/PremiumPanelBusinessDataSubBusinessType} businessType
+     */
+    setBusinessType(businessType) {
+        this['business_type'] = businessType;
+    }
+/**
+     * @return {String}
+     */
+    getBusinessName() {
+        return this.business_name;
+    }
+
+    /**
+     * @param {String} businessName
+     */
+    setBusinessName(businessName) {
+        this['business_name'] = businessName;
+    }
 
 }
 

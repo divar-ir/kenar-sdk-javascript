@@ -17,7 +17,7 @@ import AddonsAddonSecondaryLinkage from './AddonsAddonSecondaryLinkage';
 /**
  * The AddonsAddonSecondaryLinks model module.
  * @module model/AddonsAddonSecondaryLinks
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsAddonSecondaryLinks {
     /**
@@ -75,6 +75,19 @@ class AddonsAddonSecondaryLinks {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AddonsAddonSecondaryLinkage>}
+     */
+    getSecondaryLinkages() {
+        return this.secondary_linkages;
+    }
+
+    /**
+     * @param {Array.<module:model/AddonsAddonSecondaryLinkage>} secondaryLinkages
+     */
+    setSecondaryLinkages(secondaryLinkages) {
+        this['secondary_linkages'] = secondaryLinkages;
+    }
 
 }
 

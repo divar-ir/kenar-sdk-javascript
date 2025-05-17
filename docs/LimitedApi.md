@@ -1,4 +1,4 @@
-# KenarAPIClient.LimitedApi
+# KenarApiClient.LimitedApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,9 +22,9 @@ Using this API you can retrieve current balance of your app.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.LimitedApi();
+let apiInstance = new KenarApiClient.LimitedApi();
 apiInstance.paymentGetBalance().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -62,9 +62,9 @@ Using this API and with user permission, you can get the price of various servic
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.LimitedApi();
+let apiInstance = new KenarApiClient.LimitedApi();
 let postToken = "postToken_example"; // String | An 8-9 character unique identifier for the post
 apiInstance.paymentGetPostPricing(postToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -106,9 +106,9 @@ Using this API you can retrieve transaction details.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.LimitedApi();
+let apiInstance = new KenarApiClient.LimitedApi();
 let id = "id_example"; // String | The unique identifier for the transaction, same as the id in the request
 apiInstance.paymentGetTransaction(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -150,11 +150,11 @@ Use GetPostPricing API to get the cost of the service before calling this API.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.LimitedApi();
+let apiInstance = new KenarApiClient.LimitedApi();
 let postToken = "postToken_example"; // String | 
-let paymentReorderPostBody = new KenarAPIClient.PaymentReorderPostBody(); // PaymentReorderPostBody | 
+let paymentReorderPostBody = new KenarApiClient.PaymentReorderPostBody(); // PaymentReorderPostBody | 
 apiInstance.paymentReorderPost(postToken, paymentReorderPostBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

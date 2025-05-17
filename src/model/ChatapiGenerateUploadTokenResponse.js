@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChatapiGenerateUploadTokenResponse model module.
  * @module model/ChatapiGenerateUploadTokenResponse
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiGenerateUploadTokenResponse {
     /**
@@ -68,6 +68,19 @@ class ChatapiGenerateUploadTokenResponse {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
 
 }
 

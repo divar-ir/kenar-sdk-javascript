@@ -1,4 +1,4 @@
-# KenarAPIClient.ChatAPIChatBotSendMessageBody
+# KenarApiClient.ChatAPIChatBotSendMessageBody
 
 ## Properties
 

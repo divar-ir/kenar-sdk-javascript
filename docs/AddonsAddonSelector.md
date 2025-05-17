@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsAddonSelector
+# KenarApiClient.AddonsAddonSelector
 
 ## Properties
 

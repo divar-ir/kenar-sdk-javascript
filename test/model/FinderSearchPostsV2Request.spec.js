@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderSearchPostsV2Request();
+    instance = new KenarApiClient.FinderSearchPostsV2Request();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('FinderSearchPostsV2Request', function() {
     it('should create an instance of FinderSearchPostsV2Request', function() {
       // uncomment below and update the code to test FinderSearchPostsV2Request
-      //var instance = new KenarAPIClient.FinderSearchPostsV2Request();
-      //expect(instance).to.be.a(KenarAPIClient.FinderSearchPostsV2Request);
+      //var instance = new KenarApiClient.FinderSearchPostsV2Request();
+      //expect(instance).to.be.a(KenarApiClient.FinderSearchPostsV2Request);
     });
 
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instance = new KenarAPIClient.FinderSearchPostsV2Request();
+      //var instance = new KenarApiClient.FinderSearchPostsV2Request();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instance = new KenarAPIClient.FinderSearchPostsV2Request();
+      //var instance = new KenarApiClient.FinderSearchPostsV2Request();
       //expect(instance).to.be();
     });
 
     it('should have the property districts (base name: "districts")', function() {
       // uncomment below and update the code to test the property districts
-      //var instance = new KenarAPIClient.FinderSearchPostsV2Request();
+      //var instance = new KenarApiClient.FinderSearchPostsV2Request();
       //expect(instance).to.be();
     });
 
     it('should have the property query (base name: "query")', function() {
       // uncomment below and update the code to test the property query
-      //var instance = new KenarAPIClient.FinderSearchPostsV2Request();
+      //var instance = new KenarApiClient.FinderSearchPostsV2Request();
       //expect(instance).to.be();
     });
 

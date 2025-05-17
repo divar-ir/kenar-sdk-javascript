@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetDistrictsResponse();
+    instance = new KenarApiClient.AssetsGetDistrictsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetDistrictsResponse', function() {
     it('should create an instance of AssetsGetDistrictsResponse', function() {
       // uncomment below and update the code to test AssetsGetDistrictsResponse
-      //var instance = new KenarAPIClient.AssetsGetDistrictsResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetDistrictsResponse);
+      //var instance = new KenarApiClient.AssetsGetDistrictsResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetDistrictsResponse);
     });
 
     it('should have the property districts (base name: "districts")', function() {
       // uncomment below and update the code to test the property districts
-      //var instance = new KenarAPIClient.AssetsGetDistrictsResponse();
+      //var instance = new KenarApiClient.AssetsGetDistrictsResponse();
       //expect(instance).to.be();
     });
 

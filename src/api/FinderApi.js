@@ -23,7 +23,7 @@ import GooglerpcStatus from '../model/GooglerpcStatus';
 /**
 * Finder service.
 * @module api/FinderApi
-* @version version not set
+* @version 0.1.0
 */
 export default class FinderApi {
 

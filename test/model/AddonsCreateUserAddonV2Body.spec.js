@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
+    instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('AddonsCreateUserAddonV2Body', function() {
     it('should create an instance of AddonsCreateUserAddonV2Body', function() {
       // uncomment below and update the code to test AddonsCreateUserAddonV2Body
-      //var instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsCreateUserAddonV2Body);
+      //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
+      //expect(instance).to.be.a(KenarApiClient.AddonsCreateUserAddonV2Body);
     });
 
     it('should have the property widgets (base name: "widgets")', function() {
       // uncomment below and update the code to test the property widgets
-      //var instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
+      //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
 
     it('should have the property semantic (base name: "semantic")', function() {
       // uncomment below and update the code to test the property semantic
-      //var instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
+      //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
 
     it('should have the property phone (base name: "phone")', function() {
       // uncomment below and update the code to test the property phone
-      //var instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
+      //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
 
     it('should have the property categories (base name: "categories")', function() {
       // uncomment below and update the code to test the property categories
-      //var instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
+      //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
 
     it('should have the property ticketUuid (base name: "ticket_uuid")', function() {
       // uncomment below and update the code to test the property ticketUuid
-      //var instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
+      //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
 
     it('should have the property cost (base name: "cost")', function() {
       // uncomment below and update the code to test the property cost
-      //var instance = new KenarAPIClient.AddonsCreateUserAddonV2Body();
+      //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
 

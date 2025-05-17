@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsGroupInfoRowGroupInfoItem();
+    instance = new KenarApiClient.AddonsGroupInfoRowGroupInfoItem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AddonsGroupInfoRowGroupInfoItem', function() {
     it('should create an instance of AddonsGroupInfoRowGroupInfoItem', function() {
       // uncomment below and update the code to test AddonsGroupInfoRowGroupInfoItem
-      //var instance = new KenarAPIClient.AddonsGroupInfoRowGroupInfoItem();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsGroupInfoRowGroupInfoItem);
+      //var instance = new KenarApiClient.AddonsGroupInfoRowGroupInfoItem();
+      //expect(instance).to.be.a(KenarApiClient.AddonsGroupInfoRowGroupInfoItem);
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instance = new KenarAPIClient.AddonsGroupInfoRowGroupInfoItem();
+      //var instance = new KenarApiClient.AddonsGroupInfoRowGroupInfoItem();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new KenarAPIClient.AddonsGroupInfoRowGroupInfoItem();
+      //var instance = new KenarApiClient.AddonsGroupInfoRowGroupInfoItem();
       //expect(instance).to.be();
     });
 

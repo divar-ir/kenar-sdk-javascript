@@ -17,7 +17,7 @@ import FinderSearchQuery from './FinderSearchQuery';
 /**
  * The FinderSearchPostsV2Request model module.
  * @module model/FinderSearchPostsV2Request
- * @version version not set
+ * @version 0.1.0
  */
 class FinderSearchPostsV2Request {
     /**
@@ -90,6 +90,58 @@ class FinderSearchPostsV2Request {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getCategory() {
+        return this.category;
+    }
+
+    /**
+     * @param {String} category
+     */
+    setCategory(category) {
+        this['category'] = category;
+    }
+/**
+     * @return {String}
+     */
+    getCity() {
+        return this.city;
+    }
+
+    /**
+     * @param {String} city
+     */
+    setCity(city) {
+        this['city'] = city;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getDistricts() {
+        return this.districts;
+    }
+
+    /**
+     * @param {Array.<String>} districts
+     */
+    setDistricts(districts) {
+        this['districts'] = districts;
+    }
+/**
+     * @return {module:model/FinderSearchQuery}
+     */
+    getQuery() {
+        return this.query;
+    }
+
+    /**
+     * @param {module:model/FinderSearchQuery} query
+     */
+    setQuery(query) {
+        this['query'] = query;
+    }
 
 }
 

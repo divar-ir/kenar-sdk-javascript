@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PostEditPostBody model module.
  * @module model/PostEditPostBody
- * @version version not set
+ * @version 0.1.0
  */
 class PostEditPostBody {
     /**
@@ -82,6 +82,45 @@ class PostEditPostBody {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {String}
+     */
+    getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @param {String} description
+     */
+    setDescription(description) {
+        this['description'] = description;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getImagePaths() {
+        return this.image_paths;
+    }
+
+    /**
+     * @param {Array.<String>} imagePaths
+     */
+    setImagePaths(imagePaths) {
+        this['image_paths'] = imagePaths;
+    }
 
 }
 

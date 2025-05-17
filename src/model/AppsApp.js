@@ -19,7 +19,7 @@ import AppsServiceType from './AppsServiceType';
 /**
  * The AppsApp model module.
  * @module model/AppsApp
- * @version version not set
+ * @version 0.1.0
  */
 class AppsApp {
     /**
@@ -109,6 +109,97 @@ class AppsApp {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {String} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
+/**
+     * @return {String}
+     */
+    getDisplay() {
+        return this.display;
+    }
+
+    /**
+     * @param {String} display
+     */
+    setDisplay(display) {
+        this['display'] = display;
+    }
+/**
+     * @return {String}
+     */
+    getAvatar() {
+        return this.avatar;
+    }
+
+    /**
+     * @param {String} avatar
+     */
+    setAvatar(avatar) {
+        this['avatar'] = avatar;
+    }
+/**
+     * @return {String}
+     */
+    getDivarIdentificationKey() {
+        return this.divar_identification_key;
+    }
+
+    /**
+     * @param {String} divarIdentificationKey
+     */
+    setDivarIdentificationKey(divarIdentificationKey) {
+        this['divar_identification_key'] = divarIdentificationKey;
+    }
+/**
+     * @return {module:model/AppsAppStatus}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {module:model/AppsAppStatus} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
+/**
+     * @return {module:model/AppsServiceType}
+     */
+    getServiceType() {
+        return this.service_type;
+    }
+
+    /**
+     * @param {module:model/AppsServiceType} serviceType
+     */
+    setServiceType(serviceType) {
+        this['service_type'] = serviceType;
+    }
+/**
+     * @return {Array.<module:model/AppsServiceTag>}
+     */
+    getServiceTags() {
+        return this.service_tags;
+    }
+
+    /**
+     * @param {Array.<module:model/AppsServiceTag>} serviceTags
+     */
+    setServiceTags(serviceTags) {
+        this['service_tags'] = serviceTags;
+    }
 
 }
 

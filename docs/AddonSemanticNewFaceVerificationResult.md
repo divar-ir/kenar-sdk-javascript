@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSemanticNewFaceVerificationResult
+# KenarApiClient.AddonSemanticNewFaceVerificationResult
 
 ## Enum
 

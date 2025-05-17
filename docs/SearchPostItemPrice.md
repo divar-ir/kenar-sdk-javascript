@@ -1,4 +1,4 @@
-# KenarAPIClient.SearchPostItemPrice
+# KenarApiClient.SearchPostItemPrice
 
 ## Properties
 

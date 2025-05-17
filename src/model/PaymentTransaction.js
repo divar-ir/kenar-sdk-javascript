@@ -18,7 +18,7 @@ import PaymentTransactionType from './PaymentTransactionType';
 /**
  * The PaymentTransaction model module.
  * @module model/PaymentTransaction
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentTransaction {
     /**
@@ -90,6 +90,77 @@ class PaymentTransaction {
         return true;
     }
 
+/**
+     * Returns Same uuid when creating transaction
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * Sets Same uuid when creating transaction
+     * @param {String} id Same uuid when creating transaction
+     */
+    setId(id) {
+        this['id'] = id;
+    }
+/**
+     * Returns The cost of the transaction in rials for your application
+     * @return {String}
+     */
+    getCostRials() {
+        return this.cost_rials;
+    }
+
+    /**
+     * Sets The cost of the transaction in rials for your application
+     * @param {String} costRials The cost of the transaction in rials for your application
+     */
+    setCostRials(costRials) {
+        this['cost_rials'] = costRials;
+    }
+/**
+     * Returns Same Additional details which you sent in the request
+     * @return {String}
+     */
+    getExtraDetails() {
+        return this.extra_details;
+    }
+
+    /**
+     * Sets Same Additional details which you sent in the request
+     * @param {String} extraDetails Same Additional details which you sent in the request
+     */
+    setExtraDetails(extraDetails) {
+        this['extra_details'] = extraDetails;
+    }
+/**
+     * @return {module:model/PaymentTransactionState}
+     */
+    getState() {
+        return this.state;
+    }
+
+    /**
+     * @param {module:model/PaymentTransactionState} state
+     */
+    setState(state) {
+        this['state'] = state;
+    }
+/**
+     * @return {module:model/PaymentTransactionType}
+     */
+    getType() {
+        return this.type;
+    }
+
+    /**
+     * @param {module:model/PaymentTransactionType} type
+     */
+    setType(type) {
+        this['type'] = type;
+    }
 
 }
 

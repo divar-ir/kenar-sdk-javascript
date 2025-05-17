@@ -1,4 +1,4 @@
-# KenarAPIClient.ChatapiChatButtonGrid
+# KenarApiClient.ChatapiChatButtonGrid
 
 ## Properties
 

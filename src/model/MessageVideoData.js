@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessageVideoData model module.
  * @module model/MessageVideoData
- * @version version not set
+ * @version 0.1.0
  */
 class MessageVideoData {
     /**
@@ -82,6 +82,45 @@ class MessageVideoData {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getLink() {
+        return this.link;
+    }
+
+    /**
+     * @param {String} link
+     */
+    setLink(link) {
+        this['link'] = link;
+    }
+/**
+     * @return {String}
+     */
+    getThumbnailLink() {
+        return this.thumbnail_link;
+    }
+
+    /**
+     * @param {String} thumbnailLink
+     */
+    setThumbnailLink(thumbnailLink) {
+        this['thumbnail_link'] = thumbnailLink;
+    }
+/**
+     * @return {String}
+     */
+    getSizeBytes() {
+        return this.size_bytes;
+    }
+
+    /**
+     * @param {String} sizeBytes
+     */
+    setSizeBytes(sizeBytes) {
+        this['size_bytes'] = sizeBytes;
+    }
 
 }
 

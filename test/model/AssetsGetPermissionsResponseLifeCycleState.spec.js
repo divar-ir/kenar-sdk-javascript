@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('AssetsGetPermissionsResponseLifeCycleState', function() {
     it('should create an instance of AssetsGetPermissionsResponseLifeCycleState', function() {
       // uncomment below and update the code to test AssetsGetPermissionsResponseLifeCycleState
-      //var instance = new KenarAPIClient.AssetsGetPermissionsResponseLifeCycleState();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetPermissionsResponseLifeCycleState);
+      //var instance = new KenarApiClient.AssetsGetPermissionsResponseLifeCycleState();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetPermissionsResponseLifeCycleState);
     });
 
   });

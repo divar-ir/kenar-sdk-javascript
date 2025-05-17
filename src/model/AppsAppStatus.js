@@ -17,7 +17,7 @@ import AppsAppStatusStatus from './AppsAppStatusStatus';
 /**
  * The AppsAppStatus model module.
  * @module model/AppsAppStatus
- * @version version not set
+ * @version 0.1.0
  */
 class AppsAppStatus {
     /**
@@ -65,6 +65,19 @@ class AppsAppStatus {
         return true;
     }
 
+/**
+     * @return {module:model/AppsAppStatusStatus}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {module:model/AppsAppStatusStatus} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
 
 }
 

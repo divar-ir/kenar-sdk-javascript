@@ -17,7 +17,7 @@ import ChatapiChatButtonGrid from './ChatapiChatButtonGrid';
 /**
  * The ChatAPIConversationSendMessageBody model module.
  * @module model/ChatAPIConversationSendMessageBody
- * @version version not set
+ * @version 0.1.0
  */
 class ChatAPIConversationSendMessageBody {
     /**
@@ -90,6 +90,58 @@ class ChatAPIConversationSendMessageBody {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @param {String} message
+     */
+    setMessage(message) {
+        this['message'] = message;
+    }
+/**
+     * @return {String}
+     */
+    getMediaToken() {
+        return this.media_token;
+    }
+
+    /**
+     * @param {String} mediaToken
+     */
+    setMediaToken(mediaToken) {
+        this['media_token'] = mediaToken;
+    }
+/**
+     * @return {module:model/ChatapiChatButtonGrid}
+     */
+    getSenderButtons() {
+        return this.sender_buttons;
+    }
+
+    /**
+     * @param {module:model/ChatapiChatButtonGrid} senderButtons
+     */
+    setSenderButtons(senderButtons) {
+        this['sender_buttons'] = senderButtons;
+    }
+/**
+     * @return {module:model/ChatapiChatButtonGrid}
+     */
+    getReceiverButtons() {
+        return this.receiver_buttons;
+    }
+
+    /**
+     * @param {module:model/ChatapiChatButtonGrid} receiverButtons
+     */
+    setReceiverButtons(receiverButtons) {
+        this['receiver_buttons'] = receiverButtons;
+    }
 
 }
 

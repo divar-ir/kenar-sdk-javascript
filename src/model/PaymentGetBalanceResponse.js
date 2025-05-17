@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentGetBalanceResponse model module.
  * @module model/PaymentGetBalanceResponse
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentGetBalanceResponse {
     /**
@@ -68,6 +68,21 @@ class PaymentGetBalanceResponse {
         return true;
     }
 
+/**
+     * Returns The balance of the app in rials
+     * @return {String}
+     */
+    getBalanceRials() {
+        return this.balance_rials;
+    }
+
+    /**
+     * Sets The balance of the app in rials
+     * @param {String} balanceRials The balance of the app in rials
+     */
+    setBalanceRials(balanceRials) {
+        this['balance_rials'] = balanceRials;
+    }
 
 }
 

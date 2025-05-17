@@ -1,4 +1,4 @@
-# KenarAPIClient.MessageVideoData
+# KenarApiClient.MessageVideoData
 
 ## Properties
 

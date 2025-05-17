@@ -1,4 +1,4 @@
-# KenarAPIClient.GetPostPricingResponseReorder
+# KenarApiClient.GetPostPricingResponseReorder
 
 ## Properties
 

@@ -17,7 +17,7 @@ import SearchPostItemPrice from './SearchPostItemPrice';
 /**
  * The SearchPostItemRealEstateFields model module.
  * @module model/SearchPostItemRealEstateFields
- * @version version not set
+ * @version 0.1.0
  */
 class SearchPostItemRealEstateFields {
     /**
@@ -105,6 +105,123 @@ class SearchPostItemRealEstateFields {
         return true;
     }
 
+/**
+     * @return {module:model/SearchPostItemPrice}
+     */
+    getCredit() {
+        return this.credit;
+    }
+
+    /**
+     * @param {module:model/SearchPostItemPrice} credit
+     */
+    setCredit(credit) {
+        this['credit'] = credit;
+    }
+/**
+     * @return {module:model/SearchPostItemPrice}
+     */
+    getRent() {
+        return this.rent;
+    }
+
+    /**
+     * @param {module:model/SearchPostItemPrice} rent
+     */
+    setRent(rent) {
+        this['rent'] = rent;
+    }
+/**
+     * @return {String}
+     */
+    getDailyRent() {
+        return this.daily_rent;
+    }
+
+    /**
+     * @param {String} dailyRent
+     */
+    setDailyRent(dailyRent) {
+        this['daily_rent'] = dailyRent;
+    }
+/**
+     * @return {Number}
+     */
+    getSize() {
+        return this.size;
+    }
+
+    /**
+     * @param {Number} size
+     */
+    setSize(size) {
+        this['size'] = size;
+    }
+/**
+     * @return {Number}
+     */
+    getYear() {
+        return this.year;
+    }
+
+    /**
+     * @param {Number} year
+     */
+    setYear(year) {
+        this['year'] = year;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasParking() {
+        return this.has_parking;
+    }
+
+    /**
+     * @param {Boolean} hasParking
+     */
+    setHasParking(hasParking) {
+        this['has_parking'] = hasParking;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasElevator() {
+        return this.has_elevator;
+    }
+
+    /**
+     * @param {Boolean} hasElevator
+     */
+    setHasElevator(hasElevator) {
+        this['has_elevator'] = hasElevator;
+    }
+/**
+     * @return {String}
+     */
+    getRooms() {
+        return this.rooms;
+    }
+
+    /**
+     * @param {String} rooms
+     */
+    setRooms(rooms) {
+        this['rooms'] = rooms;
+    }
+/**
+     * @return {Number}
+     */
+    getFloor() {
+        return this.floor;
+    }
+
+    /**
+     * @param {Number} floor
+     */
+    setFloor(floor) {
+        this['floor'] = floor;
+    }
 
 }
 

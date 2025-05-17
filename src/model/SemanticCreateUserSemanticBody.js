@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SemanticCreateUserSemanticBody model module.
  * @module model/SemanticCreateUserSemanticBody
- * @version version not set
+ * @version 0.1.0
  */
 class SemanticCreateUserSemanticBody {
     /**
@@ -81,6 +81,58 @@ class SemanticCreateUserSemanticBody {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getPhone() {
+        return this.phone;
+    }
+
+    /**
+     * @param {String} phone
+     */
+    setPhone(phone) {
+        this['phone'] = phone;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSemantic() {
+        return this.semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} semantic
+     */
+    setSemantic(semantic) {
+        this['semantic'] = semantic;
+    }
+/**
+     * @return {String}
+     */
+    getTicketUuid() {
+        return this.ticket_uuid;
+    }
+
+    /**
+     * @param {String} ticketUuid
+     */
+    setTicketUuid(ticketUuid) {
+        this['ticket_uuid'] = ticketUuid;
+    }
+/**
+     * @return {Number}
+     */
+    getCost() {
+        return this.cost;
+    }
+
+    /**
+     * @param {Number} cost
+     */
+    setCost(cost) {
+        this['cost'] = cost;
+    }
 
 }
 

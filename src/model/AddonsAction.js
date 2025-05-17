@@ -18,7 +18,7 @@ import AddonsOpenServerLink from './AddonsOpenServerLink';
 /**
  * The AddonsAction model module.
  * @module model/AddonsAction
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsAction {
     /**
@@ -84,6 +84,45 @@ class AddonsAction {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getOpenDirectLink() {
+        return this.open_direct_link;
+    }
+
+    /**
+     * @param {String} openDirectLink
+     */
+    setOpenDirectLink(openDirectLink) {
+        this['open_direct_link'] = openDirectLink;
+    }
+/**
+     * @return {module:model/AddonsOpenServerLink}
+     */
+    getOpenServerLink() {
+        return this.open_server_link;
+    }
+
+    /**
+     * @param {module:model/AddonsOpenServerLink} openServerLink
+     */
+    setOpenServerLink(openServerLink) {
+        this['open_server_link'] = openServerLink;
+    }
+/**
+     * @return {module:model/AddonsGetDynamicAction}
+     */
+    getGetDynamicAction() {
+        return this.get_dynamic_action;
+    }
+
+    /**
+     * @param {module:model/AddonsGetDynamicAction} getDynamicAction
+     */
+    setGetDynamicAction(getDynamicAction) {
+        this['get_dynamic_action'] = getDynamicAction;
+    }
 
 }
 

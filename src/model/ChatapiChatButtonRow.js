@@ -17,7 +17,7 @@ import ChatapiChatButton from './ChatapiChatButton';
 /**
  * The ChatapiChatButtonRow model module.
  * @module model/ChatapiChatButtonRow
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiChatButtonRow {
     /**
@@ -75,6 +75,19 @@ class ChatapiChatButtonRow {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/ChatapiChatButton>}
+     */
+    getButtons() {
+        return this.buttons;
+    }
+
+    /**
+     * @param {Array.<module:model/ChatapiChatButton>} buttons
+     */
+    setButtons(buttons) {
+        this['buttons'] = buttons;
+    }
 
 }
 

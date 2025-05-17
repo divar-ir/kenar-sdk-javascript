@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.SearchPostItemPrice();
+    instance = new KenarApiClient.SearchPostItemPrice();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('SearchPostItemPrice', function() {
     it('should create an instance of SearchPostItemPrice', function() {
       // uncomment below and update the code to test SearchPostItemPrice
-      //var instance = new KenarAPIClient.SearchPostItemPrice();
-      //expect(instance).to.be.a(KenarAPIClient.SearchPostItemPrice);
+      //var instance = new KenarApiClient.SearchPostItemPrice();
+      //expect(instance).to.be.a(KenarApiClient.SearchPostItemPrice);
     });
 
     it('should have the property mode (base name: "mode")', function() {
       // uncomment below and update the code to test the property mode
-      //var instance = new KenarAPIClient.SearchPostItemPrice();
+      //var instance = new KenarApiClient.SearchPostItemPrice();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new KenarAPIClient.SearchPostItemPrice();
+      //var instance = new KenarApiClient.SearchPostItemPrice();
       //expect(instance).to.be();
     });
 

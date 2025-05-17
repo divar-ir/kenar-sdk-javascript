@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentTicketValidateResponse();
+    instance = new KenarApiClient.PaymentTicketValidateResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PaymentTicketValidateResponse', function() {
     it('should create an instance of PaymentTicketValidateResponse', function() {
       // uncomment below and update the code to test PaymentTicketValidateResponse
-      //var instance = new KenarAPIClient.PaymentTicketValidateResponse();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentTicketValidateResponse);
+      //var instance = new KenarApiClient.PaymentTicketValidateResponse();
+      //expect(instance).to.be.a(KenarApiClient.PaymentTicketValidateResponse);
     });
 
     it('should have the property issuerPayload (base name: "issuer_payload")', function() {
       // uncomment below and update the code to test the property issuerPayload
-      //var instance = new KenarAPIClient.PaymentTicketValidateResponse();
+      //var instance = new KenarApiClient.PaymentTicketValidateResponse();
       //expect(instance).to.be();
     });
 

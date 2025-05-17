@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AppsAppStatus();
+    instance = new KenarApiClient.AppsAppStatus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AppsAppStatus', function() {
     it('should create an instance of AppsAppStatus', function() {
       // uncomment below and update the code to test AppsAppStatus
-      //var instance = new KenarAPIClient.AppsAppStatus();
-      //expect(instance).to.be.a(KenarAPIClient.AppsAppStatus);
+      //var instance = new KenarApiClient.AppsAppStatus();
+      //expect(instance).to.be.a(KenarApiClient.AppsAppStatus);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new KenarAPIClient.AppsAppStatus();
+      //var instance = new KenarApiClient.AppsAppStatus();
       //expect(instance).to.be();
     });
 

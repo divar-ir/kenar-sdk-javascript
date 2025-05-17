@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderGetAllDevelopmentPostsResponse();
+    instance = new KenarApiClient.FinderGetAllDevelopmentPostsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('FinderGetAllDevelopmentPostsResponse', function() {
     it('should create an instance of FinderGetAllDevelopmentPostsResponse', function() {
       // uncomment below and update the code to test FinderGetAllDevelopmentPostsResponse
-      //var instance = new KenarAPIClient.FinderGetAllDevelopmentPostsResponse();
-      //expect(instance).to.be.a(KenarAPIClient.FinderGetAllDevelopmentPostsResponse);
+      //var instance = new KenarApiClient.FinderGetAllDevelopmentPostsResponse();
+      //expect(instance).to.be.a(KenarApiClient.FinderGetAllDevelopmentPostsResponse);
     });
 
     it('should have the property developmentPosts (base name: "development_posts")', function() {
       // uncomment below and update the code to test the property developmentPosts
-      //var instance = new KenarAPIClient.FinderGetAllDevelopmentPostsResponse();
+      //var instance = new KenarApiClient.FinderGetAllDevelopmentPostsResponse();
       //expect(instance).to.be();
     });
 

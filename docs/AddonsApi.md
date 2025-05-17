@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsApi
+# KenarApiClient.AddonsApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,11 +26,11 @@ Using this API and with user permission, you can attach a new AD to a post. You 
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let token = "token_example"; // String | 
-let addonsCreatePostAddonV2Body = new KenarAPIClient.AddonsCreatePostAddonV2Body(); // AddonsCreatePostAddonV2Body | 
+let addonsCreatePostAddonV2Body = new KenarApiClient.AddonsCreatePostAddonV2Body(); // AddonsCreatePostAddonV2Body | 
 apiInstance.addonsCreatePostAddonV2(token, addonsCreatePostAddonV2Body).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -72,11 +72,11 @@ Using this API and with user permission, you can create a UserAddon. UserAddon w
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let phone = "phone_example"; // String | 
-let addonsCreateUserAddonV2Body = new KenarAPIClient.AddonsCreateUserAddonV2Body(); // AddonsCreateUserAddonV2Body | 
+let addonsCreateUserAddonV2Body = new KenarApiClient.AddonsCreateUserAddonV2Body(); // AddonsCreateUserAddonV2Body | 
 apiInstance.addonsCreateUserAddonV2(phone, addonsCreateUserAddonV2Body).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -118,11 +118,11 @@ Using this API and with user permission, you can create a UserAddon. UserAddon w
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let divarUserId = "divarUserId_example"; // String | 
-let addonsCreateUserAddonV2Body = new KenarAPIClient.AddonsCreateUserAddonV2Body(); // AddonsCreateUserAddonV2Body | 
+let addonsCreateUserAddonV2Body = new KenarApiClient.AddonsCreateUserAddonV2Body(); // AddonsCreateUserAddonV2Body | 
 apiInstance.addonsCreateUserAddonV22(divarUserId, addonsCreateUserAddonV2Body).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -164,9 +164,9 @@ You can only delete addons which are created by your app.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let token = "token_example"; // String | 
 apiInstance.addonsDeletePostAddon(token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -208,9 +208,9 @@ You can only delete addons which are created by your app.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let token = "token_example"; // String | 
 apiInstance.addonsDeletePostAddon2(token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -252,9 +252,9 @@ This will delete all correlated Addons to all user posts. You can only delete Ad
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let id = "id_example"; // String | 
 apiInstance.addonsDeleteUserAddon(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -296,9 +296,9 @@ Retrieve all UserAddons of a user.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let phone = "phone_example"; // String | 
 let opts = {
   'divarUserId': "divarUserId_example" // String | 
@@ -344,9 +344,9 @@ Retrieve all UserAddons of a user.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AddonsApi();
+let apiInstance = new KenarApiClient.AddonsApi();
 let divarUserId = "divarUserId_example"; // String | 
 let opts = {
   'phone': "phone_example" // String | 

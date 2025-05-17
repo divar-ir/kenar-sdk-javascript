@@ -1,4 +1,4 @@
-# KenarAPIClient.ChatAPIApi
+# KenarApiClient.ChatAPIApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,11 +24,11 @@ You can call this API with either conversation_id or user_id. Calling with user_
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.ChatAPIApi();
+let apiInstance = new KenarApiClient.ChatAPIApi();
 let conversationId = "conversationId_example"; // String | 
-let chatAPIChatBotSendMessageBody = new KenarAPIClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
+let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage(conversationId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -70,11 +70,11 @@ You can call this API with either conversation_id or user_id. Calling with user_
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.ChatAPIApi();
+let apiInstance = new KenarApiClient.ChatAPIApi();
 let userId = "userId_example"; // String | 
-let chatAPIChatBotSendMessageBody = new KenarAPIClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
+let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage2(userId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -116,11 +116,11 @@ You can call this API with either conversation_id or user_id. Calling with user_
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.ChatAPIApi();
+let apiInstance = new KenarApiClient.ChatAPIApi();
 let conversationId = "conversationId_example"; // String | 
-let chatAPIChatBotSendMessageBody = new KenarAPIClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
+let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage3(conversationId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -162,11 +162,11 @@ This API is used to send a message to a conversation. You need one of the follow
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.ChatAPIApi();
+let apiInstance = new KenarApiClient.ChatAPIApi();
 let conversationId = "conversationId_example"; // String | 
-let chatAPIConversationSendMessageBody = new KenarAPIClient.ChatAPIConversationSendMessageBody(); // ChatAPIConversationSendMessageBody | 
+let chatAPIConversationSendMessageBody = new KenarApiClient.ChatAPIConversationSendMessageBody(); // ChatAPIConversationSendMessageBody | 
 apiInstance.chatAPIConversationSendMessage(conversationId, chatAPIConversationSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -208,9 +208,9 @@ This API is used to generate an upload token for uploading media files.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.ChatAPIApi();
+let apiInstance = new KenarApiClient.ChatAPIApi();
 let body = {key: null}; // Object | 
 apiInstance.chatAPIGenerateUploadToken(body).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -252,9 +252,9 @@ This API is used to get the conversation and messages of a conversation by it&#3
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.ChatAPIApi();
+let apiInstance = new KenarApiClient.ChatAPIApi();
 let conversationId = "conversationId_example"; // String | 
 apiInstance.chatAPIGetConversation(conversationId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

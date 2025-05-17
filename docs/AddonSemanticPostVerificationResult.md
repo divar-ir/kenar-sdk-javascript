@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSemanticPostVerificationResult
+# KenarApiClient.AddonSemanticPostVerificationResult
 
 ## Enum
 

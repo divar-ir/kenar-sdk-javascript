@@ -1,4 +1,4 @@
-# KenarAPIClient.FinderApi
+# KenarApiClient.FinderApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,9 +23,9 @@ This API allows you to get details about Divar post by its token. You can use th
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.FinderApi();
+let apiInstance = new KenarApiClient.FinderApi();
 let token = "token_example"; // String | 
 apiInstance.finderGetPost(token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -67,9 +67,9 @@ After gaining an access token, you can use this API to get user information. Wit
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.FinderApi();
+let apiInstance = new KenarApiClient.FinderApi();
 let body = {key: null}; // Object | 
 apiInstance.finderGetUser(body).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -111,9 +111,9 @@ After gaining an access token, you can use this API to get user information. Wit
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.FinderApi();
+let apiInstance = new KenarApiClient.FinderApi();
 apiInstance.finderGetUser2().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -151,9 +151,9 @@ This API allows you to get all posts of a user. You can use this API to show use
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.FinderApi();
+let apiInstance = new KenarApiClient.FinderApi();
 apiInstance.finderGetUserPosts().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -191,10 +191,10 @@ This API allows you to search Divar posts with some filters. You can search post
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.FinderApi();
-let finderSearchPostsV2Request = new KenarAPIClient.FinderSearchPostsV2Request(); // FinderSearchPostsV2Request | 
+let apiInstance = new KenarApiClient.FinderApi();
+let finderSearchPostsV2Request = new KenarApiClient.FinderSearchPostsV2Request(); // FinderSearchPostsV2Request | 
 apiInstance.finderSearchPostV2(finderSearchPostsV2Request).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

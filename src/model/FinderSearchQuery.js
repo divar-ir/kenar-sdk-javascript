@@ -17,7 +17,7 @@ import FinderSearchQueryNumberRange from './FinderSearchQueryNumberRange';
 /**
  * The FinderSearchQuery model module.
  * @module model/FinderSearchQuery
- * @version version not set
+ * @version 0.1.0
  */
 class FinderSearchQuery {
     /**
@@ -114,6 +114,110 @@ class FinderSearchQuery {
         return true;
     }
 
+/**
+     * @return {Array.<String>}
+     */
+    getBrandModel() {
+        return this.brand_model;
+    }
+
+    /**
+     * @param {Array.<String>} brandModel
+     */
+    setBrandModel(brandModel) {
+        this['brand_model'] = brandModel;
+    }
+/**
+     * @return {module:model/FinderSearchQueryNumberRange}
+     */
+    getProductionYear() {
+        return this.production_year;
+    }
+
+    /**
+     * @param {module:model/FinderSearchQueryNumberRange} productionYear
+     */
+    setProductionYear(productionYear) {
+        this['production_year'] = productionYear;
+    }
+/**
+     * @return {module:model/FinderSearchQueryNumberRange}
+     */
+    getUsage() {
+        return this.usage;
+    }
+
+    /**
+     * @param {module:model/FinderSearchQueryNumberRange} usage
+     */
+    setUsage(usage) {
+        this['usage'] = usage;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getRooms() {
+        return this.rooms;
+    }
+
+    /**
+     * @param {Array.<String>} rooms
+     */
+    setRooms(rooms) {
+        this['rooms'] = rooms;
+    }
+/**
+     * @return {module:model/FinderSearchQueryNumberRange}
+     */
+    getRent() {
+        return this.rent;
+    }
+
+    /**
+     * @param {module:model/FinderSearchQueryNumberRange} rent
+     */
+    setRent(rent) {
+        this['rent'] = rent;
+    }
+/**
+     * @return {module:model/FinderSearchQueryNumberRange}
+     */
+    getCredit() {
+        return this.credit;
+    }
+
+    /**
+     * @param {module:model/FinderSearchQueryNumberRange} credit
+     */
+    setCredit(credit) {
+        this['credit'] = credit;
+    }
+/**
+     * @return {module:model/FinderSearchQueryNumberRange}
+     */
+    getSize() {
+        return this.size;
+    }
+
+    /**
+     * @param {module:model/FinderSearchQueryNumberRange} size
+     */
+    setSize(size) {
+        this['size'] = size;
+    }
+/**
+     * @return {Boolean}
+     */
+    getOnlyWithParking() {
+        return this.only_with_parking;
+    }
+
+    /**
+     * @param {Boolean} onlyWithParking
+     */
+    setOnlyWithParking(onlyWithParking) {
+        this['only_with_parking'] = onlyWithParking;
+    }
 
 }
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.ChatapiConversationSendMessageResponse
+# KenarApiClient.ChatapiConversationSendMessageResponse
 
 ## Properties
 

@@ -163,9 +163,9 @@ import SemanticApi from './api/SemanticApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var KenarAPIClient = require('index'); // See note below*.
-* var xxxSvc = new KenarAPIClient.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new KenarAPIClient.Yyy(); // Construct a model instance.
+* var KenarApiClient = require('index'); // See note below*.
+* var xxxSvc = new KenarApiClient.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new KenarApiClient.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -177,8 +177,8 @@ import SemanticApi from './api/SemanticApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new KenarAPIClient.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new KenarAPIClient.Yyy(); // Construct a model instance.
+* var xxxSvc = new KenarApiClient.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new KenarApiClient.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -186,7 +186,7 @@ import SemanticApi from './api/SemanticApi';
 * </pre>
 * </p>
 * @module index
-* @version version not set
+* @version 0.1.0
 */
 export {
     /**

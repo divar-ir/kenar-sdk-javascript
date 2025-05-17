@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsBusinessAddon();
+    instance = new KenarApiClient.AddonsBusinessAddon();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('AddonsBusinessAddon', function() {
     it('should create an instance of AddonsBusinessAddon', function() {
       // uncomment below and update the code to test AddonsBusinessAddon
-      //var instance = new KenarAPIClient.AddonsBusinessAddon();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsBusinessAddon);
+      //var instance = new KenarApiClient.AddonsBusinessAddon();
+      //expect(instance).to.be.a(KenarApiClient.AddonsBusinessAddon);
     });
 
     it('should have the property metaData (base name: "meta_data")', function() {
       // uncomment below and update the code to test the property metaData
-      //var instance = new KenarAPIClient.AddonsBusinessAddon();
+      //var instance = new KenarApiClient.AddonsBusinessAddon();
       //expect(instance).to.be();
     });
 
     it('should have the property businessRef (base name: "business_ref")', function() {
       // uncomment below and update the code to test the property businessRef
-      //var instance = new KenarAPIClient.AddonsBusinessAddon();
+      //var instance = new KenarApiClient.AddonsBusinessAddon();
       //expect(instance).to.be();
     });
 
     it('should have the property widgets (base name: "widgets")', function() {
       // uncomment below and update the code to test the property widgets
-      //var instance = new KenarAPIClient.AddonsBusinessAddon();
+      //var instance = new KenarApiClient.AddonsBusinessAddon();
       //expect(instance).to.be();
     });
 

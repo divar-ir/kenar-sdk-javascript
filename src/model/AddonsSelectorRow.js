@@ -18,7 +18,7 @@ import DivarIconsIconName from './DivarIconsIconName';
 /**
  * The AddonsSelectorRow model module.
  * @module model/AddonsSelectorRow
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsSelectorRow {
     /**
@@ -90,6 +90,71 @@ class AddonsSelectorRow {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {String}
+     */
+    getImageId() {
+        return this.image_id;
+    }
+
+    /**
+     * @param {String} imageId
+     */
+    setImageId(imageId) {
+        this['image_id'] = imageId;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasDivider() {
+        return this.has_divider;
+    }
+
+    /**
+     * @param {Boolean} hasDivider
+     */
+    setHasDivider(hasDivider) {
+        this['has_divider'] = hasDivider;
+    }
+/**
+     * @return {module:model/DivarIconsIconName}
+     */
+    getIconName() {
+        return this.icon_name;
+    }
+
+    /**
+     * @param {module:model/DivarIconsIconName} iconName
+     */
+    setIconName(iconName) {
+        this['icon_name'] = iconName;
+    }
+/**
+     * @return {module:model/AddonsAction}
+     */
+    getAction() {
+        return this.action;
+    }
+
+    /**
+     * @param {module:model/AddonsAction} action
+     */
+    setAction(action) {
+        this['action'] = action;
+    }
 
 }
 

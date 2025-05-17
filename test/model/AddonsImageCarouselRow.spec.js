@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsImageCarouselRow();
+    instance = new KenarApiClient.AddonsImageCarouselRow();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AddonsImageCarouselRow', function() {
     it('should create an instance of AddonsImageCarouselRow', function() {
       // uncomment below and update the code to test AddonsImageCarouselRow
-      //var instance = new KenarAPIClient.AddonsImageCarouselRow();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsImageCarouselRow);
+      //var instance = new KenarApiClient.AddonsImageCarouselRow();
+      //expect(instance).to.be.a(KenarApiClient.AddonsImageCarouselRow);
     });
 
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
-      //var instance = new KenarAPIClient.AddonsImageCarouselRow();
+      //var instance = new KenarApiClient.AddonsImageCarouselRow();
       //expect(instance).to.be();
     });
 
     it('should have the property hasDivider (base name: "has_divider")', function() {
       // uncomment below and update the code to test the property hasDivider
-      //var instance = new KenarAPIClient.AddonsImageCarouselRow();
+      //var instance = new KenarApiClient.AddonsImageCarouselRow();
       //expect(instance).to.be();
     });
 

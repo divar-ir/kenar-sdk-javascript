@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('AddonSemanticPostVerificationResult', function() {
     it('should create an instance of AddonSemanticPostVerificationResult', function() {
       // uncomment below and update the code to test AddonSemanticPostVerificationResult
-      //var instance = new KenarAPIClient.AddonSemanticPostVerificationResult();
-      //expect(instance).to.be.a(KenarAPIClient.AddonSemanticPostVerificationResult);
+      //var instance = new KenarApiClient.AddonSemanticPostVerificationResult();
+      //expect(instance).to.be.a(KenarApiClient.AddonSemanticPostVerificationResult);
     });
 
   });

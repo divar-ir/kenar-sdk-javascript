@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.SemanticCreateUserSemanticResponse();
+    instance = new KenarApiClient.SemanticCreateUserSemanticResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('SemanticCreateUserSemanticResponse', function() {
     it('should create an instance of SemanticCreateUserSemanticResponse', function() {
       // uncomment below and update the code to test SemanticCreateUserSemanticResponse
-      //var instance = new KenarAPIClient.SemanticCreateUserSemanticResponse();
-      //expect(instance).to.be.a(KenarAPIClient.SemanticCreateUserSemanticResponse);
+      //var instance = new KenarApiClient.SemanticCreateUserSemanticResponse();
+      //expect(instance).to.be.a(KenarApiClient.SemanticCreateUserSemanticResponse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KenarAPIClient.SemanticCreateUserSemanticResponse();
+      //var instance = new KenarApiClient.SemanticCreateUserSemanticResponse();
       //expect(instance).to.be();
     });
 

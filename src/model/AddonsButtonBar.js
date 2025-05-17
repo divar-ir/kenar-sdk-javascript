@@ -17,7 +17,7 @@ import AddonsAction from './AddonsAction';
 /**
  * The AddonsButtonBar model module.
  * @module model/AddonsButtonBar
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsButtonBar {
     /**
@@ -76,6 +76,32 @@ class AddonsButtonBar {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {module:model/AddonsAction}
+     */
+    getAction() {
+        return this.action;
+    }
+
+    /**
+     * @param {module:model/AddonsAction} action
+     */
+    setAction(action) {
+        this['action'] = action;
+    }
 
 }
 

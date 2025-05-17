@@ -17,7 +17,7 @@ import ProtobufAny from './ProtobufAny';
 /**
  * The GooglerpcStatus model module.
  * @module model/GooglerpcStatus
- * @version version not set
+ * @version 0.1.0
  */
 class GooglerpcStatus {
     /**
@@ -79,6 +79,45 @@ class GooglerpcStatus {
         return true;
     }
 
+/**
+     * @return {Number}
+     */
+    getCode() {
+        return this.code;
+    }
+
+    /**
+     * @param {Number} code
+     */
+    setCode(code) {
+        this['code'] = code;
+    }
+/**
+     * @return {String}
+     */
+    getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @param {String} message
+     */
+    setMessage(message) {
+        this['message'] = message;
+    }
+/**
+     * @return {Array.<module:model/ProtobufAny>}
+     */
+    getDetails() {
+        return this.details;
+    }
+
+    /**
+     * @param {Array.<module:model/ProtobufAny>} details
+     */
+    setDetails(details) {
+        this['details'] = details;
+    }
 
 }
 

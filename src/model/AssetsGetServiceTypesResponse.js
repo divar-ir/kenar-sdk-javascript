@@ -17,7 +17,7 @@ import GetServiceTypesResponseServiceTypeData from './GetServiceTypesResponseSer
 /**
  * The AssetsGetServiceTypesResponse model module.
  * @module model/AssetsGetServiceTypesResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetServiceTypesResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetServiceTypesResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/GetServiceTypesResponseServiceTypeData>}
+     */
+    getServiceTypes() {
+        return this.service_types;
+    }
+
+    /**
+     * @param {Array.<module:model/GetServiceTypesResponseServiceTypeData>} serviceTypes
+     */
+    setServiceTypes(serviceTypes) {
+        this['service_types'] = serviceTypes;
+    }
 
 }
 

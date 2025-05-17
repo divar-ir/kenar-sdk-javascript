@@ -1,4 +1,4 @@
-# KenarAPIClient.DivarIconsIconName
+# KenarApiClient.DivarIconsIconName
 
 ## Enum
 

@@ -24,7 +24,7 @@ import GooglerpcStatus from '../model/GooglerpcStatus';
 /**
 * ChatAPI service.
 * @module api/ChatAPIApi
-* @version version not set
+* @version 0.1.0
 */
 export default class ChatAPIApi {
 

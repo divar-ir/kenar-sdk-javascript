@@ -1,4 +1,4 @@
-# KenarAPIClient.FinderPostExtState
+# KenarApiClient.FinderPostExtState
 
 ## Enum
 

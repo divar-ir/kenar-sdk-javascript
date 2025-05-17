@@ -18,7 +18,7 @@ import ChatapiMessage from './ChatapiMessage';
 /**
  * The ChatapiGetConversationResponse model module.
  * @module model/ChatapiGetConversationResponse
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiGetConversationResponse {
     /**
@@ -83,6 +83,32 @@ class ChatapiGetConversationResponse {
         return true;
     }
 
+/**
+     * @return {module:model/ChatapiConversation}
+     */
+    getConversation() {
+        return this.conversation;
+    }
+
+    /**
+     * @param {module:model/ChatapiConversation} conversation
+     */
+    setConversation(conversation) {
+        this['conversation'] = conversation;
+    }
+/**
+     * @return {Array.<module:model/ChatapiMessage>}
+     */
+    getMessages() {
+        return this.messages;
+    }
+
+    /**
+     * @param {Array.<module:model/ChatapiMessage>} messages
+     */
+    setMessages(messages) {
+        this['messages'] = messages;
+    }
 
 }
 

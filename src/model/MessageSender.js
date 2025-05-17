@@ -18,7 +18,7 @@ import ChatapiMessageSenderType from './ChatapiMessageSenderType';
 /**
  * The MessageSender model module.
  * @module model/MessageSender
- * @version version not set
+ * @version 0.1.0
  */
 class MessageSender {
     /**
@@ -69,6 +69,32 @@ class MessageSender {
         return true;
     }
 
+/**
+     * @return {module:model/ChatapiMessageSenderSide}
+     */
+    getSide() {
+        return this.side;
+    }
+
+    /**
+     * @param {module:model/ChatapiMessageSenderSide} side
+     */
+    setSide(side) {
+        this['side'] = side;
+    }
+/**
+     * @return {module:model/ChatapiMessageSenderType}
+     */
+    getType() {
+        return this.type;
+    }
+
+    /**
+     * @param {module:model/ChatapiMessageSenderType} type
+     */
+    setType(type) {
+        this['type'] = type;
+    }
 
 }
 

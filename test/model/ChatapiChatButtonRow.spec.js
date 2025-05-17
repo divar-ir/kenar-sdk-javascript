@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ChatapiChatButtonRow();
+    instance = new KenarApiClient.ChatapiChatButtonRow();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ChatapiChatButtonRow', function() {
     it('should create an instance of ChatapiChatButtonRow', function() {
       // uncomment below and update the code to test ChatapiChatButtonRow
-      //var instance = new KenarAPIClient.ChatapiChatButtonRow();
-      //expect(instance).to.be.a(KenarAPIClient.ChatapiChatButtonRow);
+      //var instance = new KenarApiClient.ChatapiChatButtonRow();
+      //expect(instance).to.be.a(KenarApiClient.ChatapiChatButtonRow);
     });
 
     it('should have the property buttons (base name: "buttons")', function() {
       // uncomment below and update the code to test the property buttons
-      //var instance = new KenarAPIClient.ChatapiChatButtonRow();
+      //var instance = new KenarApiClient.ChatapiChatButtonRow();
       //expect(instance).to.be();
     });
 

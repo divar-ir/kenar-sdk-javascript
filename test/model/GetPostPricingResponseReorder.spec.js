@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.GetPostPricingResponseReorder();
+    instance = new KenarApiClient.GetPostPricingResponseReorder();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('GetPostPricingResponseReorder', function() {
     it('should create an instance of GetPostPricingResponseReorder', function() {
       // uncomment below and update the code to test GetPostPricingResponseReorder
-      //var instance = new KenarAPIClient.GetPostPricingResponseReorder();
-      //expect(instance).to.be.a(KenarAPIClient.GetPostPricingResponseReorder);
+      //var instance = new KenarApiClient.GetPostPricingResponseReorder();
+      //expect(instance).to.be.a(KenarApiClient.GetPostPricingResponseReorder);
     });
 
     it('should have the property costRials (base name: "cost_rials")', function() {
       // uncomment below and update the code to test the property costRials
-      //var instance = new KenarAPIClient.GetPostPricingResponseReorder();
+      //var instance = new KenarApiClient.GetPostPricingResponseReorder();
       //expect(instance).to.be();
     });
 
     it('should have the property available (base name: "available")', function() {
       // uncomment below and update the code to test the property available
-      //var instance = new KenarAPIClient.GetPostPricingResponseReorder();
+      //var instance = new KenarApiClient.GetPostPricingResponseReorder();
       //expect(instance).to.be();
     });
 

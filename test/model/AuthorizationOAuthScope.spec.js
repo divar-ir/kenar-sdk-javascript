@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AuthorizationOAuthScope();
+    instance = new KenarApiClient.AuthorizationOAuthScope();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AuthorizationOAuthScope', function() {
     it('should create an instance of AuthorizationOAuthScope', function() {
       // uncomment below and update the code to test AuthorizationOAuthScope
-      //var instance = new KenarAPIClient.AuthorizationOAuthScope();
-      //expect(instance).to.be.a(KenarAPIClient.AuthorizationOAuthScope);
+      //var instance = new KenarApiClient.AuthorizationOAuthScope();
+      //expect(instance).to.be.a(KenarApiClient.AuthorizationOAuthScope);
     });
 
     it('should have the property resourceId (base name: "resource_id")', function() {
       // uncomment below and update the code to test the property resourceId
-      //var instance = new KenarAPIClient.AuthorizationOAuthScope();
+      //var instance = new KenarApiClient.AuthorizationOAuthScope();
       //expect(instance).to.be();
     });
 
     it('should have the property scope (base name: "scope")', function() {
       // uncomment below and update the code to test the property scope
-      //var instance = new KenarAPIClient.AuthorizationOAuthScope();
+      //var instance = new KenarApiClient.AuthorizationOAuthScope();
       //expect(instance).to.be();
     });
 

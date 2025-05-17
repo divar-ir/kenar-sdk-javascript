@@ -17,7 +17,7 @@ import AddonsWidget from './AddonsWidget';
 /**
  * The AddonsCreatePostAddonV2Body model module.
  * @module model/AddonsCreatePostAddonV2Body
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsCreatePostAddonV2Body {
     /**
@@ -85,6 +85,45 @@ class AddonsCreatePostAddonV2Body {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AddonsWidget>}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Array.<module:model/AddonsWidget>} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSemantic() {
+        return this.semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} semantic
+     */
+    setSemantic(semantic) {
+        this['semantic'] = semantic;
+    }
+/**
+     * @return {String}
+     */
+    getNotes() {
+        return this.notes;
+    }
+
+    /**
+     * @param {String} notes
+     */
+    setNotes(notes) {
+        this['notes'] = notes;
+    }
 
 }
 

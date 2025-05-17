@@ -23,7 +23,7 @@ import PaymentReorderPostResponse from '../model/PaymentReorderPostResponse';
 /**
 * Limited service.
 * @module api/LimitedApi
-* @version version not set
+* @version 0.1.0
 */
 export default class LimitedApi {
 

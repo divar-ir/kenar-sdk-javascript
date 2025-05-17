@@ -1,4 +1,4 @@
-# KenarAPIClient.ChatapiChatButtonRow
+# KenarApiClient.ChatapiChatButtonRow
 
 ## Properties
 

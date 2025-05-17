@@ -1,4 +1,4 @@
-# KenarAPIClient.AuthorizationOAuthScope
+# KenarApiClient.AuthorizationOAuthScope
 
 ## Properties
 

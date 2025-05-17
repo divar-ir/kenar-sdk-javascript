@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsAddonSemantic
+# KenarApiClient.AddonsAddonSemantic
 
 ## Properties
 

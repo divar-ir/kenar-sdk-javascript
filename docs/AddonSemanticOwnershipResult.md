@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSemanticOwnershipResult
+# KenarApiClient.AddonSemanticOwnershipResult
 
 ## Enum
 

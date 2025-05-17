@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsDescriptionRow model module.
  * @module model/AddonsDescriptionRow
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsDescriptionRow {
     /**
@@ -74,6 +74,45 @@ class AddonsDescriptionRow {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getText() {
+        return this.text;
+    }
+
+    /**
+     * @param {String} text
+     */
+    setText(text) {
+        this['text'] = text;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasDivider() {
+        return this.has_divider;
+    }
+
+    /**
+     * @param {Boolean} hasDivider
+     */
+    setHasDivider(hasDivider) {
+        this['has_divider'] = hasDivider;
+    }
+/**
+     * @return {Boolean}
+     */
+    getExpandable() {
+        return this.expandable;
+    }
+
+    /**
+     * @param {Boolean} expandable
+     */
+    setExpandable(expandable) {
+        this['expandable'] = expandable;
+    }
 
 }
 

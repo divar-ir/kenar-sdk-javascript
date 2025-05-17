@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsWidgetColor
+# KenarApiClient.AddonsWidgetColor
 
 ## Enum
 

@@ -18,7 +18,7 @@ import DivarIconsIconName from './DivarIconsIconName';
 /**
  * The ChatapiChatButton model module.
  * @module model/ChatapiChatButton
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiChatButton {
     /**
@@ -87,6 +87,58 @@ class ChatapiChatButton {
         return true;
     }
 
+/**
+     * @return {module:model/AddonsAction}
+     */
+    getAction() {
+        return this.action;
+    }
+
+    /**
+     * @param {module:model/AddonsAction} action
+     */
+    setAction(action) {
+        this['action'] = action;
+    }
+/**
+     * @return {String}
+     */
+    getIconName() {
+        return this.icon_name;
+    }
+
+    /**
+     * @param {String} iconName
+     */
+    setIconName(iconName) {
+        this['icon_name'] = iconName;
+    }
+/**
+     * @return {String}
+     */
+    getCaption() {
+        return this.caption;
+    }
+
+    /**
+     * @param {String} caption
+     */
+    setCaption(caption) {
+        this['caption'] = caption;
+    }
+/**
+     * @return {module:model/DivarIconsIconName}
+     */
+    getIcon() {
+        return this.icon;
+    }
+
+    /**
+     * @param {module:model/DivarIconsIconName} icon
+     */
+    setIcon(icon) {
+        this['icon'] = icon;
+    }
 
 }
 

@@ -17,7 +17,7 @@ import AssetsGetOAuthScopesResponseAppOauthScope from './AssetsGetOAuthScopesRes
 /**
  * The AssetsGetOAuthScopesResponse model module.
  * @module model/AssetsGetOAuthScopesResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetOAuthScopesResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetOAuthScopesResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsGetOAuthScopesResponseAppOauthScope>}
+     */
+    getScopes() {
+        return this.scopes;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsGetOAuthScopesResponseAppOauthScope>} scopes
+     */
+    setScopes(scopes) {
+        this['scopes'] = scopes;
+    }
 
 }
 

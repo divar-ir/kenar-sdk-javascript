@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsPostAddon
+# KenarApiClient.AddonsPostAddon
 
 ## Properties
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderSearchQueryNumberRange();
+    instance = new KenarApiClient.FinderSearchQueryNumberRange();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('FinderSearchQueryNumberRange', function() {
     it('should create an instance of FinderSearchQueryNumberRange', function() {
       // uncomment below and update the code to test FinderSearchQueryNumberRange
-      //var instance = new KenarAPIClient.FinderSearchQueryNumberRange();
-      //expect(instance).to.be.a(KenarAPIClient.FinderSearchQueryNumberRange);
+      //var instance = new KenarApiClient.FinderSearchQueryNumberRange();
+      //expect(instance).to.be.a(KenarApiClient.FinderSearchQueryNumberRange);
     });
 
     it('should have the property min (base name: "min")', function() {
       // uncomment below and update the code to test the property min
-      //var instance = new KenarAPIClient.FinderSearchQueryNumberRange();
+      //var instance = new KenarApiClient.FinderSearchQueryNumberRange();
       //expect(instance).to.be();
     });
 
     it('should have the property max (base name: "max")', function() {
       // uncomment below and update the code to test the property max
-      //var instance = new KenarAPIClient.FinderSearchQueryNumberRange();
+      //var instance = new KenarApiClient.FinderSearchQueryNumberRange();
       //expect(instance).to.be();
     });
 

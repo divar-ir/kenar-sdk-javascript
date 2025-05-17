@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentTicketValidateResponse model module.
  * @module model/PaymentTicketValidateResponse
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentTicketValidateResponse {
     /**
@@ -64,6 +64,19 @@ class PaymentTicketValidateResponse {
         return true;
     }
 
+/**
+     * @return {Object}
+     */
+    getIssuerPayload() {
+        return this.issuer_payload;
+    }
+
+    /**
+     * @param {Object} issuerPayload
+     */
+    setIssuerPayload(issuerPayload) {
+        this['issuer_payload'] = issuerPayload;
+    }
 
 }
 

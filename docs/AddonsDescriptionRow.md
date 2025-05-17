@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsDescriptionRow
+# KenarApiClient.AddonsDescriptionRow
 
 ## Properties
 

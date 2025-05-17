@@ -1,4 +1,4 @@
-# KenarAPIClient.MessageLocationData
+# KenarApiClient.MessageLocationData
 
 ## Properties
 

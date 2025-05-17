@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderUser();
+    instance = new KenarApiClient.FinderUser();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('FinderUser', function() {
     it('should create an instance of FinderUser', function() {
       // uncomment below and update the code to test FinderUser
-      //var instance = new KenarAPIClient.FinderUser();
-      //expect(instance).to.be.a(KenarAPIClient.FinderUser);
+      //var instance = new KenarApiClient.FinderUser();
+      //expect(instance).to.be.a(KenarApiClient.FinderUser);
     });
 
     it('should have the property phoneNumbers (base name: "phone_numbers")', function() {
       // uncomment below and update the code to test the property phoneNumbers
-      //var instance = new KenarAPIClient.FinderUser();
+      //var instance = new KenarApiClient.FinderUser();
       //expect(instance).to.be();
     });
 
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instance = new KenarAPIClient.FinderUser();
+      //var instance = new KenarApiClient.FinderUser();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
-      //var instance = new KenarAPIClient.FinderUser();
+      //var instance = new KenarApiClient.FinderUser();
       //expect(instance).to.be();
     });
 

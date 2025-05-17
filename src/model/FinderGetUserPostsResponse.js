@@ -17,7 +17,7 @@ import FinderGetUserPostsResponsePost from './FinderGetUserPostsResponsePost';
 /**
  * The FinderGetUserPostsResponse model module.
  * @module model/FinderGetUserPostsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class FinderGetUserPostsResponse {
     /**
@@ -75,6 +75,19 @@ class FinderGetUserPostsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/FinderGetUserPostsResponsePost>}
+     */
+    getPosts() {
+        return this.posts;
+    }
+
+    /**
+     * @param {Array.<module:model/FinderGetUserPostsResponsePost>} posts
+     */
+    setPosts(posts) {
+        this['posts'] = posts;
+    }
 
 }
 

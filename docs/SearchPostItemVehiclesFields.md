@@ -1,4 +1,4 @@
-# KenarAPIClient.SearchPostItemVehiclesFields
+# KenarApiClient.SearchPostItemVehiclesFields
 
 ## Properties
 

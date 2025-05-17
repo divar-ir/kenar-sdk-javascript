@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsEnumOption();
+    instance = new KenarApiClient.AssetsEnumOption();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AssetsEnumOption', function() {
     it('should create an instance of AssetsEnumOption', function() {
       // uncomment below and update the code to test AssetsEnumOption
-      //var instance = new KenarAPIClient.AssetsEnumOption();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsEnumOption);
+      //var instance = new KenarApiClient.AssetsEnumOption();
+      //expect(instance).to.be.a(KenarApiClient.AssetsEnumOption);
     });
 
     it('should have the property display (base name: "display")', function() {
       // uncomment below and update the code to test the property display
-      //var instance = new KenarAPIClient.AssetsEnumOption();
+      //var instance = new KenarApiClient.AssetsEnumOption();
       //expect(instance).to.be();
     });
 
     it('should have the property slug (base name: "slug")', function() {
       // uncomment below and update the code to test the property slug
-      //var instance = new KenarAPIClient.AssetsEnumOption();
+      //var instance = new KenarApiClient.AssetsEnumOption();
       //expect(instance).to.be();
     });
 

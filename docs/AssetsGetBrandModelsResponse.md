@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetBrandModelsResponse
+# KenarApiClient.AssetsGetBrandModelsResponse
 
 ## Properties
 

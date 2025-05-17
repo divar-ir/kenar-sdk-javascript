@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsButtonBar();
+    instance = new KenarApiClient.AddonsButtonBar();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AddonsButtonBar', function() {
     it('should create an instance of AddonsButtonBar', function() {
       // uncomment below and update the code to test AddonsButtonBar
-      //var instance = new KenarAPIClient.AddonsButtonBar();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsButtonBar);
+      //var instance = new KenarApiClient.AddonsButtonBar();
+      //expect(instance).to.be.a(KenarApiClient.AddonsButtonBar);
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instance = new KenarAPIClient.AddonsButtonBar();
+      //var instance = new KenarApiClient.AddonsButtonBar();
       //expect(instance).to.be();
     });
 
     it('should have the property action (base name: "action")', function() {
       // uncomment below and update the code to test the property action
-      //var instance = new KenarAPIClient.AddonsButtonBar();
+      //var instance = new KenarApiClient.AddonsButtonBar();
       //expect(instance).to.be();
     });
 

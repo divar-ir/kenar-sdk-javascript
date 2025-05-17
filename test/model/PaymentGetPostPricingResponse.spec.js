@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentGetPostPricingResponse();
+    instance = new KenarApiClient.PaymentGetPostPricingResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PaymentGetPostPricingResponse', function() {
     it('should create an instance of PaymentGetPostPricingResponse', function() {
       // uncomment below and update the code to test PaymentGetPostPricingResponse
-      //var instance = new KenarAPIClient.PaymentGetPostPricingResponse();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentGetPostPricingResponse);
+      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
+      //expect(instance).to.be.a(KenarApiClient.PaymentGetPostPricingResponse);
     });
 
     it('should have the property reorder (base name: "reorder")', function() {
       // uncomment below and update the code to test the property reorder
-      //var instance = new KenarAPIClient.PaymentGetPostPricingResponse();
+      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentTicketGenerateResponse
+# KenarApiClient.PaymentTicketGenerateResponse
 
 ## Properties
 

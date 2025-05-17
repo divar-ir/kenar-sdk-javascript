@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentTicketGenerateResponse model module.
  * @module model/PaymentTicketGenerateResponse
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentTicketGenerateResponse {
     /**
@@ -68,6 +68,19 @@ class PaymentTicketGenerateResponse {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getTicketUuid() {
+        return this.ticket_uuid;
+    }
+
+    /**
+     * @param {String} ticketUuid
+     */
+    setTicketUuid(ticketUuid) {
+        this['ticket_uuid'] = ticketUuid;
+    }
 
 }
 

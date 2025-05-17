@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentTicketValidateResponse
+# KenarApiClient.PaymentTicketValidateResponse
 
 ## Properties
 

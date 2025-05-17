@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsStatus
+# KenarApiClient.AddonsStatus
 
 ## Enum
 

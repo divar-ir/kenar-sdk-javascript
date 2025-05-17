@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetInternalStoragesResponse model module.
  * @module model/AssetsGetInternalStoragesResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetInternalStoragesResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetInternalStoragesResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getInternalStorages() {
+        return this.internal_storages;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} internalStorages
+     */
+    setInternalStorages(internalStorages) {
+        this['internal_storages'] = internalStorages;
+    }
 
 }
 

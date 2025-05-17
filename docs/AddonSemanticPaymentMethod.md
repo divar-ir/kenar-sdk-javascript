@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSemanticPaymentMethod
+# KenarApiClient.AddonSemanticPaymentMethod
 
 ## Enum
 

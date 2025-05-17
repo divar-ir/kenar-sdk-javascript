@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetBrandModelsResponse model module.
  * @module model/AssetsGetBrandModelsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetBrandModelsResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetBrandModelsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getBrandModels() {
+        return this.brand_models;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} brandModels
+     */
+    setBrandModels(brandModels) {
+        this['brand_models'] = brandModels;
+    }
 
 }
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetColorsResponse();
+    instance = new KenarApiClient.AssetsGetColorsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetColorsResponse', function() {
     it('should create an instance of AssetsGetColorsResponse', function() {
       // uncomment below and update the code to test AssetsGetColorsResponse
-      //var instance = new KenarAPIClient.AssetsGetColorsResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetColorsResponse);
+      //var instance = new KenarApiClient.AssetsGetColorsResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetColorsResponse);
     });
 
     it('should have the property colors (base name: "colors")', function() {
       // uncomment below and update the code to test the property colors
-      //var instance = new KenarAPIClient.AssetsGetColorsResponse();
+      //var instance = new KenarApiClient.AssetsGetColorsResponse();
       //expect(instance).to.be();
     });
 

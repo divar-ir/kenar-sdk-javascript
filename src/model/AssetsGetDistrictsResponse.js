@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetDistrictsResponse model module.
  * @module model/AssetsGetDistrictsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetDistrictsResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetDistrictsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getDistricts() {
+        return this.districts;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} districts
+     */
+    setDistricts(districts) {
+        this['districts'] = districts;
+    }
 
 }
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.PostApi
+# KenarApiClient.PostApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,11 +20,11 @@ This API allows you to edit a post. This needs &#x60;POST_EDIT.{post_token}&#x60
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.PostApi();
+let apiInstance = new KenarApiClient.PostApi();
 let postToken = "postToken_example"; // String | 
-let postEditPostBody = new KenarAPIClient.PostEditPostBody(); // PostEditPostBody | 
+let postEditPostBody = new KenarApiClient.PostEditPostBody(); // PostEditPostBody | 
 apiInstance.postEditPost(postToken, postEditPostBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -66,9 +66,9 @@ This API allows you to get an upload URL for uploading images of a post. You can
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.PostApi();
+let apiInstance = new KenarApiClient.PostApi();
 apiInstance.postGetImageUploadURL().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

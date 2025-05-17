@@ -1,4 +1,4 @@
-# KenarAPIClient.AuthorizationAPICallerInfo
+# KenarApiClient.AuthorizationAPICallerInfo
 
 ## Properties
 

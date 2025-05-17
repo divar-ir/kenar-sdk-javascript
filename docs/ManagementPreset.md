@@ -1,4 +1,4 @@
-# KenarAPIClient.ManagementPreset
+# KenarApiClient.ManagementPreset
 
 ## Enum
 

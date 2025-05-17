@@ -17,7 +17,7 @@ import AddonSecondaryLinkagePosition from './AddonSecondaryLinkagePosition';
 /**
  * The AddonsAddonSecondaryLinkage model module.
  * @module model/AddonsAddonSecondaryLinkage
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsAddonSecondaryLinkage {
     /**
@@ -68,6 +68,32 @@ class AddonsAddonSecondaryLinkage {
         return true;
     }
 
+/**
+     * @return {module:model/AddonSecondaryLinkagePosition}
+     */
+    getPosition() {
+        return this.position;
+    }
+
+    /**
+     * @param {module:model/AddonSecondaryLinkagePosition} position
+     */
+    setPosition(position) {
+        this['position'] = position;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
 
 }
 

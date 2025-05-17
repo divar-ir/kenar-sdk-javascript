@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsAddonSecondaryLinks
+# KenarApiClient.AddonsAddonSecondaryLinks
 
 ## Properties
 

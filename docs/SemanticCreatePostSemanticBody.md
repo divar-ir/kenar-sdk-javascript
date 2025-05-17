@@ -1,4 +1,4 @@
-# KenarAPIClient.SemanticCreatePostSemanticBody
+# KenarApiClient.SemanticCreatePostSemanticBody
 
 ## Properties
 

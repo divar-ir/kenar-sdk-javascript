@@ -18,7 +18,7 @@ import DivarIconsIconName from './DivarIconsIconName';
 /**
  * The AddonsEvaluationRow model module.
  * @module model/AddonsEvaluationRow
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsEvaluationRow {
     /**
@@ -97,6 +97,84 @@ class AddonsEvaluationRow {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getIndicatorText() {
+        return this.indicator_text;
+    }
+
+    /**
+     * @param {String} indicatorText
+     */
+    setIndicatorText(indicatorText) {
+        this['indicator_text'] = indicatorText;
+    }
+/**
+     * @return {Number}
+     */
+    getIndicatorPercentage() {
+        return this.indicator_percentage;
+    }
+
+    /**
+     * @param {Number} indicatorPercentage
+     */
+    setIndicatorPercentage(indicatorPercentage) {
+        this['indicator_percentage'] = indicatorPercentage;
+    }
+/**
+     * @return {module:model/DivarIconsIconName}
+     */
+    getIconName() {
+        return this.icon_name;
+    }
+
+    /**
+     * @param {module:model/DivarIconsIconName} iconName
+     */
+    setIconName(iconName) {
+        this['icon_name'] = iconName;
+    }
+/**
+     * @return {module:model/AddonsEvaluationRowSection}
+     */
+    getLeft() {
+        return this.left;
+    }
+
+    /**
+     * @param {module:model/AddonsEvaluationRowSection} left
+     */
+    setLeft(left) {
+        this['left'] = left;
+    }
+/**
+     * @return {module:model/AddonsEvaluationRowSection}
+     */
+    getMiddle() {
+        return this.middle;
+    }
+
+    /**
+     * @param {module:model/AddonsEvaluationRowSection} middle
+     */
+    setMiddle(middle) {
+        this['middle'] = middle;
+    }
+/**
+     * @return {module:model/AddonsEvaluationRowSection}
+     */
+    getRight() {
+        return this.right;
+    }
+
+    /**
+     * @param {module:model/AddonsEvaluationRowSection} right
+     */
+    setRight(right) {
+        this['right'] = right;
+    }
 
 }
 

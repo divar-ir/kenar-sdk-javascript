@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetPermissionsResponse();
+    instance = new KenarApiClient.AssetsGetPermissionsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetPermissionsResponse', function() {
     it('should create an instance of AssetsGetPermissionsResponse', function() {
       // uncomment below and update the code to test AssetsGetPermissionsResponse
-      //var instance = new KenarAPIClient.AssetsGetPermissionsResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetPermissionsResponse);
+      //var instance = new KenarApiClient.AssetsGetPermissionsResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetPermissionsResponse);
     });
 
     it('should have the property permissions (base name: "permissions")', function() {
       // uncomment below and update the code to test the property permissions
-      //var instance = new KenarAPIClient.AssetsGetPermissionsResponse();
+      //var instance = new KenarApiClient.AssetsGetPermissionsResponse();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.SemanticCreateUserSemanticResponse
+# KenarApiClient.SemanticCreateUserSemanticResponse
 
 ## Properties
 

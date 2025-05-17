@@ -17,7 +17,7 @@ import ChatapiChatButtonGrid from './ChatapiChatButtonGrid';
 /**
  * The ChatAPIChatBotSendMessageBody model module.
  * @module model/ChatAPIChatBotSendMessageBody
- * @version version not set
+ * @version 0.1.0
  */
 class ChatAPIChatBotSendMessageBody {
     /**
@@ -90,6 +90,58 @@ class ChatAPIChatBotSendMessageBody {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getUserId() {
+        return this.user_id;
+    }
+
+    /**
+     * @param {String} userId
+     */
+    setUserId(userId) {
+        this['user_id'] = userId;
+    }
+/**
+     * @return {String}
+     */
+    getTextMessage() {
+        return this.text_message;
+    }
+
+    /**
+     * @param {String} textMessage
+     */
+    setTextMessage(textMessage) {
+        this['text_message'] = textMessage;
+    }
+/**
+     * @return {String}
+     */
+    getMediaToken() {
+        return this.media_token;
+    }
+
+    /**
+     * @param {String} mediaToken
+     */
+    setMediaToken(mediaToken) {
+        this['media_token'] = mediaToken;
+    }
+/**
+     * @return {module:model/ChatapiChatButtonGrid}
+     */
+    getButtons() {
+        return this.buttons;
+    }
+
+    /**
+     * @param {module:model/ChatapiChatButtonGrid} buttons
+     */
+    setButtons(buttons) {
+        this['buttons'] = buttons;
+    }
 
 }
 

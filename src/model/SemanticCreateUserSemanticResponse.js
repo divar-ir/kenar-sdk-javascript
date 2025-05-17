@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SemanticCreateUserSemanticResponse model module.
  * @module model/SemanticCreateUserSemanticResponse
- * @version version not set
+ * @version 0.1.0
  */
 class SemanticCreateUserSemanticResponse {
     /**
@@ -68,6 +68,19 @@ class SemanticCreateUserSemanticResponse {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * @param {String} id
+     */
+    setId(id) {
+        this['id'] = id;
+    }
 
 }
 

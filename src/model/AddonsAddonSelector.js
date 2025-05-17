@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsAddonSelector model module.
  * @module model/AddonsAddonSelector
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsAddonSelector {
     /**
@@ -96,6 +96,71 @@ class AddonsAddonSelector {
         return true;
     }
 
+/**
+     * @return {Array.<String>}
+     */
+    getTokens() {
+        return this.tokens;
+    }
+
+    /**
+     * @param {Array.<String>} tokens
+     */
+    setTokens(tokens) {
+        this['tokens'] = tokens;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getCategories() {
+        return this.categories;
+    }
+
+    /**
+     * @param {Array.<String>} categories
+     */
+    setCategories(categories) {
+        this['categories'] = categories;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getCities() {
+        return this.cities;
+    }
+
+    /**
+     * @param {Array.<String>} cities
+     */
+    setCities(cities) {
+        this['cities'] = cities;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getDistricts() {
+        return this.districts;
+    }
+
+    /**
+     * @param {Array.<String>} districts
+     */
+    setDistricts(districts) {
+        this['districts'] = districts;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getBrandModels() {
+        return this.brand_models;
+    }
+
+    /**
+     * @param {Array.<String>} brandModels
+     */
+    setBrandModels(brandModels) {
+        this['brand_models'] = brandModels;
+    }
 
 }
 

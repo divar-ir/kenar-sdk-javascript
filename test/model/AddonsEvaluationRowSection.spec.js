@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsEvaluationRowSection();
+    instance = new KenarApiClient.AddonsEvaluationRowSection();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AddonsEvaluationRowSection', function() {
     it('should create an instance of AddonsEvaluationRowSection', function() {
       // uncomment below and update the code to test AddonsEvaluationRowSection
-      //var instance = new KenarAPIClient.AddonsEvaluationRowSection();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsEvaluationRowSection);
+      //var instance = new KenarApiClient.AddonsEvaluationRowSection();
+      //expect(instance).to.be.a(KenarApiClient.AddonsEvaluationRowSection);
     });
 
     it('should have the property text (base name: "text")', function() {
       // uncomment below and update the code to test the property text
-      //var instance = new KenarAPIClient.AddonsEvaluationRowSection();
+      //var instance = new KenarApiClient.AddonsEvaluationRowSection();
       //expect(instance).to.be();
     });
 
     it('should have the property sectionColor (base name: "section_color")', function() {
       // uncomment below and update the code to test the property sectionColor
-      //var instance = new KenarAPIClient.AddonsEvaluationRowSection();
+      //var instance = new KenarApiClient.AddonsEvaluationRowSection();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.AppsApp
+# KenarApiClient.AppsApp
 
 ## Properties
 

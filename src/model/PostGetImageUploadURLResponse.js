@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PostGetImageUploadURLResponse model module.
  * @module model/PostGetImageUploadURLResponse
- * @version version not set
+ * @version 0.1.0
  */
 class PostGetImageUploadURLResponse {
     /**
@@ -68,6 +68,19 @@ class PostGetImageUploadURLResponse {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getUploadUrl() {
+        return this.upload_url;
+    }
+
+    /**
+     * @param {String} uploadUrl
+     */
+    setUploadUrl(uploadUrl) {
+        this['upload_url'] = uploadUrl;
+    }
 
 }
 

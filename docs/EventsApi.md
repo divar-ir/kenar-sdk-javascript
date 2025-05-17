@@ -1,4 +1,4 @@
-# KenarAPIClient.EventsApi
+# KenarApiClient.EventsApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,10 +19,10 @@ This requests allows you to subscribe to an event. You need to send access-token
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.EventsApi();
-let eventsRegisterEventSubscriptionRequest = new KenarAPIClient.EventsRegisterEventSubscriptionRequest(); // EventsRegisterEventSubscriptionRequest | 
+let apiInstance = new KenarApiClient.EventsApi();
+let eventsRegisterEventSubscriptionRequest = new KenarApiClient.EventsRegisterEventSubscriptionRequest(); // EventsRegisterEventSubscriptionRequest | 
 apiInstance.eventsRegisterEventSubscription(eventsRegisterEventSubscriptionRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

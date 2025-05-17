@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope
+# KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope
 
 ## Properties
 

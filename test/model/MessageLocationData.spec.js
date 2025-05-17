@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.MessageLocationData();
+    instance = new KenarApiClient.MessageLocationData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('MessageLocationData', function() {
     it('should create an instance of MessageLocationData', function() {
       // uncomment below and update the code to test MessageLocationData
-      //var instance = new KenarAPIClient.MessageLocationData();
-      //expect(instance).to.be.a(KenarAPIClient.MessageLocationData);
+      //var instance = new KenarApiClient.MessageLocationData();
+      //expect(instance).to.be.a(KenarApiClient.MessageLocationData);
     });
 
     it('should have the property latitude (base name: "latitude")', function() {
       // uncomment below and update the code to test the property latitude
-      //var instance = new KenarAPIClient.MessageLocationData();
+      //var instance = new KenarApiClient.MessageLocationData();
       //expect(instance).to.be();
     });
 
     it('should have the property longitude (base name: "longitude")', function() {
       // uncomment below and update the code to test the property longitude
-      //var instance = new KenarAPIClient.MessageLocationData();
+      //var instance = new KenarApiClient.MessageLocationData();
       //expect(instance).to.be();
     });
 

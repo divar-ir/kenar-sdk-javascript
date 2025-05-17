@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ChatapiMessage();
+    instance = new KenarApiClient.ChatapiMessage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,73 +50,73 @@
   describe('ChatapiMessage', function() {
     it('should create an instance of ChatapiMessage', function() {
       // uncomment below and update the code to test ChatapiMessage
-      //var instance = new KenarAPIClient.ChatapiMessage();
-      //expect(instance).to.be.a(KenarAPIClient.ChatapiMessage);
+      //var instance = new KenarApiClient.ChatapiMessage();
+      //expect(instance).to.be.a(KenarApiClient.ChatapiMessage);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property conversation (base name: "conversation")', function() {
       // uncomment below and update the code to test the property conversation
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property sender (base name: "sender")', function() {
       // uncomment below and update the code to test the property sender
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property sentAt (base name: "sent_at")', function() {
       // uncomment below and update the code to test the property sentAt
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property text (base name: "text")', function() {
       // uncomment below and update the code to test the property text
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property imageData (base name: "image_data")', function() {
       // uncomment below and update the code to test the property imageData
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property fileData (base name: "file_data")', function() {
       // uncomment below and update the code to test the property fileData
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property voiceData (base name: "voice_data")', function() {
       // uncomment below and update the code to test the property voiceData
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property locationData (base name: "location_data")', function() {
       // uncomment below and update the code to test the property locationData
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property videoData (base name: "video_data")', function() {
       // uncomment below and update the code to test the property videoData
-      //var instance = new KenarAPIClient.ChatapiMessage();
+      //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 

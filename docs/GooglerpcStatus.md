@@ -1,4 +1,4 @@
-# KenarAPIClient.GooglerpcStatus
+# KenarApiClient.GooglerpcStatus
 
 ## Properties
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetOAuthScopesResponse();
+    instance = new KenarApiClient.AssetsGetOAuthScopesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetOAuthScopesResponse', function() {
     it('should create an instance of AssetsGetOAuthScopesResponse', function() {
       // uncomment below and update the code to test AssetsGetOAuthScopesResponse
-      //var instance = new KenarAPIClient.AssetsGetOAuthScopesResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetOAuthScopesResponse);
+      //var instance = new KenarApiClient.AssetsGetOAuthScopesResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetOAuthScopesResponse);
     });
 
     it('should have the property scopes (base name: "scopes")', function() {
       // uncomment below and update the code to test the property scopes
-      //var instance = new KenarAPIClient.AssetsGetOAuthScopesResponse();
+      //var instance = new KenarApiClient.AssetsGetOAuthScopesResponse();
       //expect(instance).to.be();
     });
 

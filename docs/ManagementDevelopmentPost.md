@@ -1,4 +1,4 @@
-# KenarAPIClient.ManagementDevelopmentPost
+# KenarApiClient.ManagementDevelopmentPost
 
 ## Properties
 

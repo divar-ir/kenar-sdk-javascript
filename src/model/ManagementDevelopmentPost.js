@@ -17,7 +17,7 @@ import ManagementPreset from './ManagementPreset';
 /**
  * The ManagementDevelopmentPost model module.
  * @module model/ManagementDevelopmentPost
- * @version version not set
+ * @version 0.1.0
  */
 class ManagementDevelopmentPost {
     /**
@@ -82,6 +82,58 @@ class ManagementDevelopmentPost {
         return true;
     }
 
+/**
+     * @return {module:model/ManagementPreset}
+     */
+    getPreset() {
+        return this.preset;
+    }
+
+    /**
+     * @param {module:model/ManagementPreset} preset
+     */
+    setPreset(preset) {
+        this['preset'] = preset;
+    }
+/**
+     * @return {Date}
+     */
+    getCreatedAt() {
+        return this.created_at;
+    }
+
+    /**
+     * @param {Date} createdAt
+     */
+    setCreatedAt(createdAt) {
+        this['created_at'] = createdAt;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {String}
+     */
+    getMngToken() {
+        return this.mng_token;
+    }
+
+    /**
+     * @param {String} mngToken
+     */
+    setMngToken(mngToken) {
+        this['mng_token'] = mngToken;
+    }
 
 }
 

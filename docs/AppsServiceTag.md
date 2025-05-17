@@ -1,4 +1,4 @@
-# KenarAPIClient.AppsServiceTag
+# KenarApiClient.AppsServiceTag
 
 ## Enum
 

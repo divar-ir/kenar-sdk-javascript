@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.GetServiceTypesResponseServiceTypeData();
+    instance = new KenarApiClient.GetServiceTypesResponseServiceTypeData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('GetServiceTypesResponseServiceTypeData', function() {
     it('should create an instance of GetServiceTypesResponseServiceTypeData', function() {
       // uncomment below and update the code to test GetServiceTypesResponseServiceTypeData
-      //var instance = new KenarAPIClient.GetServiceTypesResponseServiceTypeData();
-      //expect(instance).to.be.a(KenarAPIClient.GetServiceTypesResponseServiceTypeData);
+      //var instance = new KenarApiClient.GetServiceTypesResponseServiceTypeData();
+      //expect(instance).to.be.a(KenarApiClient.GetServiceTypesResponseServiceTypeData);
     });
 
     it('should have the property slug (base name: "slug")', function() {
       // uncomment below and update the code to test the property slug
-      //var instance = new KenarAPIClient.GetServiceTypesResponseServiceTypeData();
+      //var instance = new KenarApiClient.GetServiceTypesResponseServiceTypeData();
       //expect(instance).to.be();
     });
 
     it('should have the property display (base name: "display")', function() {
       // uncomment below and update the code to test the property display
-      //var instance = new KenarAPIClient.GetServiceTypesResponseServiceTypeData();
+      //var instance = new KenarApiClient.GetServiceTypesResponseServiceTypeData();
       //expect(instance).to.be();
     });
 

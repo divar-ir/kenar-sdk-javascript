@@ -17,7 +17,7 @@ import AddonsAddonMetaData from './AddonsAddonMetaData';
 /**
  * The AddonsBusinessAddon model module.
  * @module model/AddonsBusinessAddon
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsBusinessAddon {
     /**
@@ -79,6 +79,45 @@ class AddonsBusinessAddon {
         return true;
     }
 
+/**
+     * @return {module:model/AddonsAddonMetaData}
+     */
+    getMetaData() {
+        return this.meta_data;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonMetaData} metaData
+     */
+    setMetaData(metaData) {
+        this['meta_data'] = metaData;
+    }
+/**
+     * @return {String}
+     */
+    getBusinessRef() {
+        return this.business_ref;
+    }
+
+    /**
+     * @param {String} businessRef
+     */
+    setBusinessRef(businessRef) {
+        this['business_ref'] = businessRef;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
 
 }
 

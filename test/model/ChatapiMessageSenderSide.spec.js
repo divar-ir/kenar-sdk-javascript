@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('ChatapiMessageSenderSide', function() {
     it('should create an instance of ChatapiMessageSenderSide', function() {
       // uncomment below and update the code to test ChatapiMessageSenderSide
-      //var instance = new KenarAPIClient.ChatapiMessageSenderSide();
-      //expect(instance).to.be.a(KenarAPIClient.ChatapiMessageSenderSide);
+      //var instance = new KenarApiClient.ChatapiMessageSenderSide();
+      //expect(instance).to.be.a(KenarApiClient.ChatapiMessageSenderSide);
     });
 
   });

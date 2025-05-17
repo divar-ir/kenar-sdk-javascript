@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetCategoriesResponse model module.
  * @module model/AssetsGetCategoriesResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetCategoriesResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetCategoriesResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getCategories() {
+        return this.categories;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} categories
+     */
+    setCategories(categories) {
+        this['categories'] = categories;
+    }
 
 }
 

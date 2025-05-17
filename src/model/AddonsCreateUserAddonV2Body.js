@@ -17,7 +17,7 @@ import AddonsWidget from './AddonsWidget';
 /**
  * The AddonsCreateUserAddonV2Body model module.
  * @module model/AddonsCreateUserAddonV2Body
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsCreateUserAddonV2Body {
     /**
@@ -102,6 +102,84 @@ class AddonsCreateUserAddonV2Body {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AddonsWidget>}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Array.<module:model/AddonsWidget>} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSemantic() {
+        return this.semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} semantic
+     */
+    setSemantic(semantic) {
+        this['semantic'] = semantic;
+    }
+/**
+     * @return {String}
+     */
+    getPhone() {
+        return this.phone;
+    }
+
+    /**
+     * @param {String} phone
+     */
+    setPhone(phone) {
+        this['phone'] = phone;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getCategories() {
+        return this.categories;
+    }
+
+    /**
+     * @param {Array.<String>} categories
+     */
+    setCategories(categories) {
+        this['categories'] = categories;
+    }
+/**
+     * @return {String}
+     */
+    getTicketUuid() {
+        return this.ticket_uuid;
+    }
+
+    /**
+     * @param {String} ticketUuid
+     */
+    setTicketUuid(ticketUuid) {
+        this['ticket_uuid'] = ticketUuid;
+    }
+/**
+     * @return {Number}
+     */
+    getCost() {
+        return this.cost;
+    }
+
+    /**
+     * @param {Number} cost
+     */
+    setCost(cost) {
+        this['cost'] = cost;
+    }
 
 }
 

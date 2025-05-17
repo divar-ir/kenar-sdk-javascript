@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('EventsRegisterEventSubscriptionRequestEventType', function() {
     it('should create an instance of EventsRegisterEventSubscriptionRequestEventType', function() {
       // uncomment below and update the code to test EventsRegisterEventSubscriptionRequestEventType
-      //var instance = new KenarAPIClient.EventsRegisterEventSubscriptionRequestEventType();
-      //expect(instance).to.be.a(KenarAPIClient.EventsRegisterEventSubscriptionRequestEventType);
+      //var instance = new KenarApiClient.EventsRegisterEventSubscriptionRequestEventType();
+      //expect(instance).to.be.a(KenarApiClient.EventsRegisterEventSubscriptionRequestEventType);
     });
 
   });

@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetCitiesResponse model module.
  * @module model/AssetsGetCitiesResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetCitiesResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetCitiesResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getCities() {
+        return this.cities;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} cities
+     */
+    setCities(cities) {
+        this['cities'] = cities;
+    }
 
 }
 

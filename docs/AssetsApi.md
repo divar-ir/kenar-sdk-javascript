@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsApi
+# KenarApiClient.AssetsApi
 
 All URIs are relative to *http://localhost*
 
@@ -30,9 +30,9 @@ Get all available body-status options in Divar vehicle categories.This provides 
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetBodyStatuses().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -70,9 +70,9 @@ Get all Divar brand models in specified category.This provides persian translati
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 let category = "category_example"; // String | 
 apiInstance.assetsGetBrandModels(category).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -114,9 +114,9 @@ Get all Divar categories. This provides persian translations for each category w
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetCategories().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -154,9 +154,9 @@ Get all Divar cities. This provides persian translations for each city which use
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetCities().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -194,9 +194,9 @@ Get all Divar colors in specified category.This provides persian translations fo
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 let category = "category_example"; // String | 
 apiInstance.assetsGetColors(category).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -238,9 +238,9 @@ Get all Divar districts. This provides persian translations for each district wh
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 let opts = {
   'citySlug': "citySlug_example" // String | 
 };
@@ -284,9 +284,9 @@ Get all Divar districts. This provides persian translations for each district wh
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 let citySlug = "citySlug_example"; // String | 
 apiInstance.assetsGetDistricts2(citySlug).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -328,9 +328,9 @@ Get all available internal-storage options in Divar mobile categories.This provi
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetInternalStorages().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -368,9 +368,9 @@ These are available scopes for KenarDivar OAuth2.0. Use scopes in OAuth flow to 
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetOAuthScopes().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -408,9 +408,9 @@ These permission are used to control access in KenarDivar Apps. Don&#39;t mistak
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetPermissions().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -448,9 +448,9 @@ Get all available ram-memory options in Divar mobile/tablet/laptop categories.Th
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetRamMemories().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -488,9 +488,9 @@ These service types is used to group similar services in KenarDivar. Any new ide
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.AssetsApi();
+let apiInstance = new KenarApiClient.AssetsApi();
 apiInstance.assetsGetServiceTypes().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

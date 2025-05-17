@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsAddonMetaData();
+    instance = new KenarApiClient.AddonsAddonMetaData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('AddonsAddonMetaData', function() {
     it('should create an instance of AddonsAddonMetaData', function() {
       // uncomment below and update the code to test AddonsAddonMetaData
-      //var instance = new KenarAPIClient.AddonsAddonMetaData();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsAddonMetaData);
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
+      //expect(instance).to.be.a(KenarApiClient.AddonsAddonMetaData);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KenarAPIClient.AddonsAddonMetaData();
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 
     it('should have the property app (base name: "app")', function() {
       // uncomment below and update the code to test the property app
-      //var instance = new KenarAPIClient.AddonsAddonMetaData();
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new KenarAPIClient.AddonsAddonMetaData();
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 
     it('should have the property lastModified (base name: "last_modified")', function() {
       // uncomment below and update the code to test the property lastModified
-      //var instance = new KenarAPIClient.AddonsAddonMetaData();
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new KenarAPIClient.AddonsAddonMetaData();
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 
     it('should have the property serviceTags (base name: "service_tags")', function() {
       // uncomment below and update the code to test the property serviceTags
-      //var instance = new KenarAPIClient.AddonsAddonMetaData();
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 

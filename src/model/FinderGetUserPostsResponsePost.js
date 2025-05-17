@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FinderGetUserPostsResponsePost model module.
  * @module model/FinderGetUserPostsResponsePost
- * @version version not set
+ * @version 0.1.0
  */
 class FinderGetUserPostsResponsePost {
     /**
@@ -89,6 +89,58 @@ class FinderGetUserPostsResponsePost {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getImages() {
+        return this.images;
+    }
+
+    /**
+     * @param {Array.<String>} images
+     */
+    setImages(images) {
+        this['images'] = images;
+    }
+/**
+     * @return {String}
+     */
+    getCategory() {
+        return this.category;
+    }
+
+    /**
+     * @param {String} category
+     */
+    setCategory(category) {
+        this['category'] = category;
+    }
 
 }
 

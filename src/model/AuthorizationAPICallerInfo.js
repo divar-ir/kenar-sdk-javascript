@@ -18,7 +18,7 @@ import AuthorizationOAuthScope from './AuthorizationOAuthScope';
 /**
  * The AuthorizationAPICallerInfo model module.
  * @module model/AuthorizationAPICallerInfo
- * @version version not set
+ * @version 0.1.0
  */
 class AuthorizationAPICallerInfo {
     /**
@@ -93,6 +93,58 @@ class AuthorizationAPICallerInfo {
         return true;
     }
 
+/**
+     * @return {Number}
+     */
+    getApiKeyId() {
+        return this.api_key_id;
+    }
+
+    /**
+     * @param {Number} apiKeyId
+     */
+    setApiKeyId(apiKeyId) {
+        this['api_key_id'] = apiKeyId;
+    }
+/**
+     * @return {module:model/AppsApp}
+     */
+    getApp() {
+        return this.app;
+    }
+
+    /**
+     * @param {module:model/AppsApp} app
+     */
+    setApp(app) {
+        this['app'] = app;
+    }
+/**
+     * @return {Array.<module:model/AuthorizationOAuthScope>}
+     */
+    getScopes() {
+        return this.scopes;
+    }
+
+    /**
+     * @param {Array.<module:model/AuthorizationOAuthScope>} scopes
+     */
+    setScopes(scopes) {
+        this['scopes'] = scopes;
+    }
+/**
+     * @return {String}
+     */
+    getApiKeyIdV2() {
+        return this.api_key_id_v2;
+    }
+
+    /**
+     * @param {String} apiKeyIdV2
+     */
+    setApiKeyIdV2(apiKeyIdV2) {
+        this['api_key_id_v2'] = apiKeyIdV2;
+    }
 
 }
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.GetPostResponseBusinessData();
+    instance = new KenarApiClient.GetPostResponseBusinessData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('GetPostResponseBusinessData', function() {
     it('should create an instance of GetPostResponseBusinessData', function() {
       // uncomment below and update the code to test GetPostResponseBusinessData
-      //var instance = new KenarAPIClient.GetPostResponseBusinessData();
-      //expect(instance).to.be.a(KenarAPIClient.GetPostResponseBusinessData);
+      //var instance = new KenarApiClient.GetPostResponseBusinessData();
+      //expect(instance).to.be.a(KenarApiClient.GetPostResponseBusinessData);
     });
 
     it('should have the property businessType (base name: "business_type")', function() {
       // uncomment below and update the code to test the property businessType
-      //var instance = new KenarAPIClient.GetPostResponseBusinessData();
+      //var instance = new KenarApiClient.GetPostResponseBusinessData();
       //expect(instance).to.be();
     });
 
     it('should have the property businessName (base name: "business_name")', function() {
       // uncomment below and update the code to test the property businessName
-      //var instance = new KenarAPIClient.GetPostResponseBusinessData();
+      //var instance = new KenarApiClient.GetPostResponseBusinessData();
       //expect(instance).to.be();
     });
 

@@ -20,7 +20,7 @@ import PostGetImageUploadURLResponse from '../model/PostGetImageUploadURLRespons
 /**
 * Post service.
 * @module api/PostApi
-* @version version not set
+* @version 0.1.0
 */
 export default class PostApi {
 

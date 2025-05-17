@@ -17,7 +17,7 @@ import AppsServiceType from './AppsServiceType';
 /**
  * The GetServiceTypesResponseServiceTypeData model module.
  * @module model/GetServiceTypesResponseServiceTypeData
- * @version version not set
+ * @version 0.1.0
  */
 class GetServiceTypesResponseServiceTypeData {
     /**
@@ -72,6 +72,32 @@ class GetServiceTypesResponseServiceTypeData {
         return true;
     }
 
+/**
+     * @return {module:model/AppsServiceType}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {module:model/AppsServiceType} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
+/**
+     * @return {String}
+     */
+    getDisplay() {
+        return this.display;
+    }
+
+    /**
+     * @param {String} display
+     */
+    setDisplay(display) {
+        this['display'] = display;
+    }
 
 }
 

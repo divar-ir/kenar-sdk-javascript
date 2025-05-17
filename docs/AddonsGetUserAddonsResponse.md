@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsGetUserAddonsResponse
+# KenarApiClient.AddonsGetUserAddonsResponse
 
 ## Properties
 

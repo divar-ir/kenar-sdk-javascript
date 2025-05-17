@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsAddonSelector();
+    instance = new KenarApiClient.AddonsAddonSelector();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('AddonsAddonSelector', function() {
     it('should create an instance of AddonsAddonSelector', function() {
       // uncomment below and update the code to test AddonsAddonSelector
-      //var instance = new KenarAPIClient.AddonsAddonSelector();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsAddonSelector);
+      //var instance = new KenarApiClient.AddonsAddonSelector();
+      //expect(instance).to.be.a(KenarApiClient.AddonsAddonSelector);
     });
 
     it('should have the property tokens (base name: "tokens")', function() {
       // uncomment below and update the code to test the property tokens
-      //var instance = new KenarAPIClient.AddonsAddonSelector();
+      //var instance = new KenarApiClient.AddonsAddonSelector();
       //expect(instance).to.be();
     });
 
     it('should have the property categories (base name: "categories")', function() {
       // uncomment below and update the code to test the property categories
-      //var instance = new KenarAPIClient.AddonsAddonSelector();
+      //var instance = new KenarApiClient.AddonsAddonSelector();
       //expect(instance).to.be();
     });
 
     it('should have the property cities (base name: "cities")', function() {
       // uncomment below and update the code to test the property cities
-      //var instance = new KenarAPIClient.AddonsAddonSelector();
+      //var instance = new KenarApiClient.AddonsAddonSelector();
       //expect(instance).to.be();
     });
 
     it('should have the property districts (base name: "districts")', function() {
       // uncomment below and update the code to test the property districts
-      //var instance = new KenarAPIClient.AddonsAddonSelector();
+      //var instance = new KenarApiClient.AddonsAddonSelector();
       //expect(instance).to.be();
     });
 
     it('should have the property brandModels (base name: "brand_models")', function() {
       // uncomment below and update the code to test the property brandModels
-      //var instance = new KenarAPIClient.AddonsAddonSelector();
+      //var instance = new KenarApiClient.AddonsAddonSelector();
       //expect(instance).to.be();
     });
 

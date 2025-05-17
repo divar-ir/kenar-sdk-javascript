@@ -1,4 +1,4 @@
-# KenarAPIClient.ImageCarouselRowImageItem
+# KenarApiClient.ImageCarouselRowImageItem
 
 ## Properties
 

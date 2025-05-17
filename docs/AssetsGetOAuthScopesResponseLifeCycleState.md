@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetOAuthScopesResponseLifeCycleState
+# KenarApiClient.AssetsGetOAuthScopesResponseLifeCycleState
 
 ## Enum
 

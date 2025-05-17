@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FinderUser model module.
  * @module model/FinderUser
- * @version version not set
+ * @version 0.1.0
  */
 class FinderUser {
     /**
@@ -82,6 +82,47 @@ class FinderUser {
         return true;
     }
 
+/**
+     * Returns deprecated
+     * @return {Array.<String>}
+     */
+    getPhoneNumbers() {
+        return this.phone_numbers;
+    }
+
+    /**
+     * Sets deprecated
+     * @param {Array.<String>} phoneNumbers deprecated
+     */
+    setPhoneNumbers(phoneNumbers) {
+        this['phone_numbers'] = phoneNumbers;
+    }
+/**
+     * @return {String}
+     */
+    getPhoneNumber() {
+        return this.phone_number;
+    }
+
+    /**
+     * @param {String} phoneNumber
+     */
+    setPhoneNumber(phoneNumber) {
+        this['phone_number'] = phoneNumber;
+    }
+/**
+     * @return {String}
+     */
+    getUserId() {
+        return this.user_id;
+    }
+
+    /**
+     * @param {String} userId
+     */
+    setUserId(userId) {
+        this['user_id'] = userId;
+    }
 
 }
 

@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('AddonSemanticIdentityVerificationStage', function() {
     it('should create an instance of AddonSemanticIdentityVerificationStage', function() {
       // uncomment below and update the code to test AddonSemanticIdentityVerificationStage
-      //var instance = new KenarAPIClient.AddonSemanticIdentityVerificationStage();
-      //expect(instance).to.be.a(KenarAPIClient.AddonSemanticIdentityVerificationStage);
+      //var instance = new KenarApiClient.AddonSemanticIdentityVerificationStage();
+      //expect(instance).to.be.a(KenarApiClient.AddonSemanticIdentityVerificationStage);
     });
 
   });

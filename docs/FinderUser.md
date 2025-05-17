@@ -1,4 +1,4 @@
-# KenarAPIClient.FinderUser
+# KenarApiClient.FinderUser
 
 ## Properties
 

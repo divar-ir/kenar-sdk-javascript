@@ -1,4 +1,4 @@
-# KenarAPIClient.FinderSearchPostItem
+# KenarApiClient.FinderSearchPostItem
 
 ## Properties
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentReorderPostResponse();
+    instance = new KenarApiClient.PaymentReorderPostResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('PaymentReorderPostResponse', function() {
     it('should create an instance of PaymentReorderPostResponse', function() {
       // uncomment below and update the code to test PaymentReorderPostResponse
-      //var instance = new KenarAPIClient.PaymentReorderPostResponse();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentReorderPostResponse);
+      //var instance = new KenarApiClient.PaymentReorderPostResponse();
+      //expect(instance).to.be.a(KenarApiClient.PaymentReorderPostResponse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KenarAPIClient.PaymentReorderPostResponse();
+      //var instance = new KenarApiClient.PaymentReorderPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property costRials (base name: "cost_rials")', function() {
       // uncomment below and update the code to test the property costRials
-      //var instance = new KenarAPIClient.PaymentReorderPostResponse();
+      //var instance = new KenarApiClient.PaymentReorderPostResponse();
       //expect(instance).to.be();
     });
 

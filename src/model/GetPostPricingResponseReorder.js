@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetPostPricingResponseReorder model module.
  * @module model/GetPostPricingResponseReorder
- * @version version not set
+ * @version 0.1.0
  */
 class GetPostPricingResponseReorder {
     /**
@@ -71,6 +71,36 @@ class GetPostPricingResponseReorder {
         return true;
     }
 
+/**
+     * Returns The cost of reordering in rials
+     * @return {String}
+     */
+    getCostRials() {
+        return this.cost_rials;
+    }
+
+    /**
+     * Sets The cost of reordering in rials
+     * @param {String} costRials The cost of reordering in rials
+     */
+    setCostRials(costRials) {
+        this['cost_rials'] = costRials;
+    }
+/**
+     * Returns Indicates if the post can be reordered. If false, the reorder API will return an error
+     * @return {Boolean}
+     */
+    getAvailable() {
+        return this.available;
+    }
+
+    /**
+     * Sets Indicates if the post can be reordered. If false, the reorder API will return an error
+     * @param {Boolean} available Indicates if the post can be reordered. If false, the reorder API will return an error
+     */
+    setAvailable(available) {
+        this['available'] = available;
+    }
 
 }
 

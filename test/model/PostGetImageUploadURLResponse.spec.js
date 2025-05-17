@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PostGetImageUploadURLResponse();
+    instance = new KenarApiClient.PostGetImageUploadURLResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PostGetImageUploadURLResponse', function() {
     it('should create an instance of PostGetImageUploadURLResponse', function() {
       // uncomment below and update the code to test PostGetImageUploadURLResponse
-      //var instance = new KenarAPIClient.PostGetImageUploadURLResponse();
-      //expect(instance).to.be.a(KenarAPIClient.PostGetImageUploadURLResponse);
+      //var instance = new KenarApiClient.PostGetImageUploadURLResponse();
+      //expect(instance).to.be.a(KenarApiClient.PostGetImageUploadURLResponse);
     });
 
     it('should have the property uploadUrl (base name: "upload_url")', function() {
       // uncomment below and update the code to test the property uploadUrl
-      //var instance = new KenarAPIClient.PostGetImageUploadURLResponse();
+      //var instance = new KenarApiClient.PostGetImageUploadURLResponse();
       //expect(instance).to.be();
     });
 

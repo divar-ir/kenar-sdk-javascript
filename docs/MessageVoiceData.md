@@ -1,4 +1,4 @@
-# KenarAPIClient.MessageVoiceData
+# KenarApiClient.MessageVoiceData
 
 ## Properties
 

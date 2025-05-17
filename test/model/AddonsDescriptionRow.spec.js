@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsDescriptionRow();
+    instance = new KenarApiClient.AddonsDescriptionRow();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('AddonsDescriptionRow', function() {
     it('should create an instance of AddonsDescriptionRow', function() {
       // uncomment below and update the code to test AddonsDescriptionRow
-      //var instance = new KenarAPIClient.AddonsDescriptionRow();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsDescriptionRow);
+      //var instance = new KenarApiClient.AddonsDescriptionRow();
+      //expect(instance).to.be.a(KenarApiClient.AddonsDescriptionRow);
     });
 
     it('should have the property text (base name: "text")', function() {
       // uncomment below and update the code to test the property text
-      //var instance = new KenarAPIClient.AddonsDescriptionRow();
+      //var instance = new KenarApiClient.AddonsDescriptionRow();
       //expect(instance).to.be();
     });
 
     it('should have the property hasDivider (base name: "has_divider")', function() {
       // uncomment below and update the code to test the property hasDivider
-      //var instance = new KenarAPIClient.AddonsDescriptionRow();
+      //var instance = new KenarApiClient.AddonsDescriptionRow();
       //expect(instance).to.be();
     });
 
     it('should have the property expandable (base name: "expandable")', function() {
       // uncomment below and update the code to test the property expandable
-      //var instance = new KenarAPIClient.AddonsDescriptionRow();
+      //var instance = new KenarApiClient.AddonsDescriptionRow();
       //expect(instance).to.be();
     });
 

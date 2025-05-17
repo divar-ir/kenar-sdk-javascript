@@ -17,7 +17,7 @@ import AddonsBusinessAddon from './AddonsBusinessAddon';
 /**
  * The AddonsGetBusinessAddonsResponse model module.
  * @module model/AddonsGetBusinessAddonsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsGetBusinessAddonsResponse {
     /**
@@ -75,6 +75,19 @@ class AddonsGetBusinessAddonsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AddonsBusinessAddon>}
+     */
+    getAddons() {
+        return this.addons;
+    }
+
+    /**
+     * @param {Array.<module:model/AddonsBusinessAddon>} addons
+     */
+    setAddons(addons) {
+        this['addons'] = addons;
+    }
 
 }
 

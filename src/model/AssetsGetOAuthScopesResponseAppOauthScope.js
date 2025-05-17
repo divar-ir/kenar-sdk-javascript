@@ -18,7 +18,7 @@ import OAuthScopeScope from './OAuthScopeScope';
 /**
  * The AssetsGetOAuthScopesResponseAppOauthScope model module.
  * @module model/AssetsGetOAuthScopesResponseAppOauthScope
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetOAuthScopesResponseAppOauthScope {
     /**
@@ -83,6 +83,58 @@ class AssetsGetOAuthScopesResponseAppOauthScope {
         return true;
     }
 
+/**
+     * @return {module:model/OAuthScopeScope}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {module:model/OAuthScopeScope} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
+/**
+     * @return {String}
+     */
+    getDisplay() {
+        return this.display;
+    }
+
+    /**
+     * @param {String} display
+     */
+    setDisplay(display) {
+        this['display'] = display;
+    }
+/**
+     * @return {String}
+     */
+    getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @param {String} description
+     */
+    setDescription(description) {
+        this['description'] = description;
+    }
+/**
+     * @return {module:model/AssetsGetOAuthScopesResponseLifeCycleState}
+     */
+    getLifecycleState() {
+        return this.lifecycle_state;
+    }
+
+    /**
+     * @param {module:model/AssetsGetOAuthScopesResponseLifeCycleState} lifecycleState
+     */
+    setLifecycleState(lifecycleState) {
+        this['lifecycle_state'] = lifecycleState;
+    }
 
 }
 

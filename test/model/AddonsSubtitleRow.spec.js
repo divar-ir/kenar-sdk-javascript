@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsSubtitleRow();
+    instance = new KenarApiClient.AddonsSubtitleRow();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AddonsSubtitleRow', function() {
     it('should create an instance of AddonsSubtitleRow', function() {
       // uncomment below and update the code to test AddonsSubtitleRow
-      //var instance = new KenarAPIClient.AddonsSubtitleRow();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsSubtitleRow);
+      //var instance = new KenarApiClient.AddonsSubtitleRow();
+      //expect(instance).to.be.a(KenarApiClient.AddonsSubtitleRow);
     });
 
     it('should have the property text (base name: "text")', function() {
       // uncomment below and update the code to test the property text
-      //var instance = new KenarAPIClient.AddonsSubtitleRow();
+      //var instance = new KenarApiClient.AddonsSubtitleRow();
       //expect(instance).to.be();
     });
 
     it('should have the property hasDivider (base name: "has_divider")', function() {
       // uncomment below and update the code to test the property hasDivider
-      //var instance = new KenarAPIClient.AddonsSubtitleRow();
+      //var instance = new KenarApiClient.AddonsSubtitleRow();
       //expect(instance).to.be();
     });
 

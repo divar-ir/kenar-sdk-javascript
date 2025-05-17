@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsGroupInfoRowGroupInfoItem model module.
  * @module model/AddonsGroupInfoRowGroupInfoItem
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsGroupInfoRowGroupInfoItem {
     /**
@@ -75,6 +75,32 @@ class AddonsGroupInfoRowGroupInfoItem {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {String}
+     */
+    getValue() {
+        return this.value;
+    }
+
+    /**
+     * @param {String} value
+     */
+    setValue(value) {
+        this['value'] = value;
+    }
 
 }
 

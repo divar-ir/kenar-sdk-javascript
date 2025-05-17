@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AssetsEnumOption model module.
  * @module model/AssetsEnumOption
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsEnumOption {
     /**
@@ -75,6 +75,32 @@ class AssetsEnumOption {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getDisplay() {
+        return this.display;
+    }
+
+    /**
+     * @param {String} display
+     */
+    setDisplay(display) {
+        this['display'] = display;
+    }
+/**
+     * @return {String}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {String} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
 
 }
 

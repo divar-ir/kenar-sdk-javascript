@@ -1,4 +1,4 @@
-# KenarAPIClient.PremiumPanelBusinessDataSubBusinessType
+# KenarApiClient.PremiumPanelBusinessDataSubBusinessType
 
 ## Enum
 

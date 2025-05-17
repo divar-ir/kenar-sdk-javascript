@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentGetBalanceResponse
+# KenarApiClient.PaymentGetBalanceResponse
 
 ## Properties
 

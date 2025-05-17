@@ -1,4 +1,4 @@
-# KenarAPIClient.MessageFileData
+# KenarApiClient.MessageFileData
 
 ## Properties
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.MessageImageData();
+    instance = new KenarApiClient.MessageImageData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('MessageImageData', function() {
     it('should create an instance of MessageImageData', function() {
       // uncomment below and update the code to test MessageImageData
-      //var instance = new KenarAPIClient.MessageImageData();
-      //expect(instance).to.be.a(KenarAPIClient.MessageImageData);
+      //var instance = new KenarApiClient.MessageImageData();
+      //expect(instance).to.be.a(KenarApiClient.MessageImageData);
     });
 
     it('should have the property link (base name: "link")', function() {
       // uncomment below and update the code to test the property link
-      //var instance = new KenarAPIClient.MessageImageData();
+      //var instance = new KenarApiClient.MessageImageData();
       //expect(instance).to.be();
     });
 
     it('should have the property sizeBytes (base name: "size_bytes")', function() {
       // uncomment below and update the code to test the property sizeBytes
-      //var instance = new KenarAPIClient.MessageImageData();
+      //var instance = new KenarApiClient.MessageImageData();
       //expect(instance).to.be();
     });
 
     it('should have the property heightPx (base name: "height_px")', function() {
       // uncomment below and update the code to test the property heightPx
-      //var instance = new KenarAPIClient.MessageImageData();
+      //var instance = new KenarApiClient.MessageImageData();
       //expect(instance).to.be();
     });
 
     it('should have the property widthPx (base name: "width_px")', function() {
       // uncomment below and update the code to test the property widthPx
-      //var instance = new KenarAPIClient.MessageImageData();
+      //var instance = new KenarApiClient.MessageImageData();
       //expect(instance).to.be();
     });
 

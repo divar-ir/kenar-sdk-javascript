@@ -1,4 +1,4 @@
-# KenarAPIClient.ProtobufAny
+# KenarApiClient.ProtobufAny
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.EventsRegisterEventSubscriptionRequestEventType
+# KenarApiClient.EventsRegisterEventSubscriptionRequestEventType
 
 ## Enum
 

@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetColorsResponse model module.
  * @module model/AssetsGetColorsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetColorsResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetColorsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getColors() {
+        return this.colors;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} colors
+     */
+    setColors(colors) {
+        this['colors'] = colors;
+    }
 
 }
 

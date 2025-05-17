@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetRamMemoriesResponse model module.
  * @module model/AssetsGetRamMemoriesResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetRamMemoriesResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetRamMemoriesResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getRamMemories() {
+        return this.ram_memories;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} ramMemories
+     */
+    setRamMemories(ramMemories) {
+        this['ram_memories'] = ramMemories;
+    }
 
 }
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderGetPostResponse();
+    instance = new KenarApiClient.FinderGetPostResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,61 +50,61 @@
   describe('FinderGetPostResponse', function() {
     it('should create an instance of FinderGetPostResponse', function() {
       // uncomment below and update the code to test FinderGetPostResponse
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
-      //expect(instance).to.be.a(KenarAPIClient.FinderGetPostResponse);
+      //var instance = new KenarApiClient.FinderGetPostResponse();
+      //expect(instance).to.be.a(KenarApiClient.FinderGetPostResponse);
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property firstPublishedAt (base name: "first_published_at")', function() {
       // uncomment below and update the code to test the property firstPublishedAt
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property district (base name: "district")', function() {
       // uncomment below and update the code to test the property district
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property chatEnabled (base name: "chat_enabled")', function() {
       // uncomment below and update the code to test the property chatEnabled
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property businessData (base name: "business_data")', function() {
       // uncomment below and update the code to test the property businessData
-      //var instance = new KenarAPIClient.FinderGetPostResponse();
+      //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 

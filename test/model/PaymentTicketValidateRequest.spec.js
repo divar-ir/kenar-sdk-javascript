@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentTicketValidateRequest();
+    instance = new KenarApiClient.PaymentTicketValidateRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('PaymentTicketValidateRequest', function() {
     it('should create an instance of PaymentTicketValidateRequest', function() {
       // uncomment below and update the code to test PaymentTicketValidateRequest
-      //var instance = new KenarAPIClient.PaymentTicketValidateRequest();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentTicketValidateRequest);
+      //var instance = new KenarApiClient.PaymentTicketValidateRequest();
+      //expect(instance).to.be.a(KenarApiClient.PaymentTicketValidateRequest);
     });
 
     it('should have the property ticketUuid (base name: "ticket_uuid")', function() {
       // uncomment below and update the code to test the property ticketUuid
-      //var instance = new KenarAPIClient.PaymentTicketValidateRequest();
+      //var instance = new KenarApiClient.PaymentTicketValidateRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instance = new KenarAPIClient.PaymentTicketValidateRequest();
+      //var instance = new KenarApiClient.PaymentTicketValidateRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "user_id")', function() {
       // uncomment below and update the code to test the property userId
-      //var instance = new KenarAPIClient.PaymentTicketValidateRequest();
+      //var instance = new KenarApiClient.PaymentTicketValidateRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property serviceCost (base name: "service_cost")', function() {
       // uncomment below and update the code to test the property serviceCost
-      //var instance = new KenarAPIClient.PaymentTicketValidateRequest();
+      //var instance = new KenarApiClient.PaymentTicketValidateRequest();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderSearchPostV2Response();
+    instance = new KenarApiClient.FinderSearchPostV2Response();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('FinderSearchPostV2Response', function() {
     it('should create an instance of FinderSearchPostV2Response', function() {
       // uncomment below and update the code to test FinderSearchPostV2Response
-      //var instance = new KenarAPIClient.FinderSearchPostV2Response();
-      //expect(instance).to.be.a(KenarAPIClient.FinderSearchPostV2Response);
+      //var instance = new KenarApiClient.FinderSearchPostV2Response();
+      //expect(instance).to.be.a(KenarApiClient.FinderSearchPostV2Response);
     });
 
     it('should have the property posts (base name: "posts")', function() {
       // uncomment below and update the code to test the property posts
-      //var instance = new KenarAPIClient.FinderSearchPostV2Response();
+      //var instance = new KenarApiClient.FinderSearchPostV2Response();
       //expect(instance).to.be();
     });
 

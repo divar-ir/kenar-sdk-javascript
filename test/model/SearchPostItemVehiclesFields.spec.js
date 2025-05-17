@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.SearchPostItemVehiclesFields();
+    instance = new KenarApiClient.SearchPostItemVehiclesFields();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('SearchPostItemVehiclesFields', function() {
     it('should create an instance of SearchPostItemVehiclesFields', function() {
       // uncomment below and update the code to test SearchPostItemVehiclesFields
-      //var instance = new KenarAPIClient.SearchPostItemVehiclesFields();
-      //expect(instance).to.be.a(KenarAPIClient.SearchPostItemVehiclesFields);
+      //var instance = new KenarApiClient.SearchPostItemVehiclesFields();
+      //expect(instance).to.be.a(KenarApiClient.SearchPostItemVehiclesFields);
     });
 
     it('should have the property usage (base name: "usage")', function() {
       // uncomment below and update the code to test the property usage
-      //var instance = new KenarAPIClient.SearchPostItemVehiclesFields();
+      //var instance = new KenarApiClient.SearchPostItemVehiclesFields();
       //expect(instance).to.be();
     });
 
     it('should have the property installmentSale (base name: "installment_sale")', function() {
       // uncomment below and update the code to test the property installmentSale
-      //var instance = new KenarAPIClient.SearchPostItemVehiclesFields();
+      //var instance = new KenarApiClient.SearchPostItemVehiclesFields();
       //expect(instance).to.be();
     });
 
     it('should have the property customPostSubtitle (base name: "custom_post_subtitle")', function() {
       // uncomment below and update the code to test the property customPostSubtitle
-      //var instance = new KenarAPIClient.SearchPostItemVehiclesFields();
+      //var instance = new KenarApiClient.SearchPostItemVehiclesFields();
       //expect(instance).to.be();
     });
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ImageCarouselRowImageItem model module.
  * @module model/ImageCarouselRowImageItem
- * @version version not set
+ * @version 0.1.0
  */
 class ImageCarouselRowImageItem {
     /**
@@ -75,6 +75,32 @@ class ImageCarouselRowImageItem {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getImageId() {
+        return this.image_id;
+    }
+
+    /**
+     * @param {String} imageId
+     */
+    setImageId(imageId) {
+        this['image_id'] = imageId;
+    }
+/**
+     * @return {String}
+     */
+    getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @param {String} description
+     */
+    setDescription(description) {
+        this['description'] = description;
+    }
 
 }
 

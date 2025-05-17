@@ -1,4 +1,4 @@
-# KenarAPIClient.AppsAppStatusStatus
+# KenarApiClient.AppsAppStatusStatus
 
 ## Enum
 

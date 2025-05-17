@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsOpenServerLink model module.
  * @module model/AddonsOpenServerLink
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsOpenServerLink {
     /**
@@ -64,6 +64,19 @@ class AddonsOpenServerLink {
         return true;
     }
 
+/**
+     * @return {Object}
+     */
+    getData() {
+        return this.data;
+    }
+
+    /**
+     * @param {Object} data
+     */
+    setData(data) {
+        this['data'] = data;
+    }
 
 }
 

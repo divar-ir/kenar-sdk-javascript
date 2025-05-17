@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetColorsResponse
+# KenarApiClient.AssetsGetColorsResponse
 
 ## Properties
 

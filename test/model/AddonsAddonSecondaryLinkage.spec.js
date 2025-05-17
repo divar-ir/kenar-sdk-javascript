@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsAddonSecondaryLinkage();
+    instance = new KenarApiClient.AddonsAddonSecondaryLinkage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('AddonsAddonSecondaryLinkage', function() {
     it('should create an instance of AddonsAddonSecondaryLinkage', function() {
       // uncomment below and update the code to test AddonsAddonSecondaryLinkage
-      //var instance = new KenarAPIClient.AddonsAddonSecondaryLinkage();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsAddonSecondaryLinkage);
+      //var instance = new KenarApiClient.AddonsAddonSecondaryLinkage();
+      //expect(instance).to.be.a(KenarApiClient.AddonsAddonSecondaryLinkage);
     });
 
     it('should have the property position (base name: "position")', function() {
       // uncomment below and update the code to test the property position
-      //var instance = new KenarAPIClient.AddonsAddonSecondaryLinkage();
+      //var instance = new KenarApiClient.AddonsAddonSecondaryLinkage();
       //expect(instance).to.be();
     });
 
     it('should have the property widgets (base name: "widgets")', function() {
       // uncomment below and update the code to test the property widgets
-      //var instance = new KenarAPIClient.AddonsAddonSecondaryLinkage();
+      //var instance = new KenarApiClient.AddonsAddonSecondaryLinkage();
       //expect(instance).to.be();
     });
 

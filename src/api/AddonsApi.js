@@ -22,7 +22,7 @@ import GooglerpcStatus from '../model/GooglerpcStatus';
 /**
 * Addons service.
 * @module api/AddonsApi
-* @version version not set
+* @version 0.1.0
 */
 export default class AddonsApi {
 

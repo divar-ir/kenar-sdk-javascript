@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentTransactionState
+# KenarApiClient.PaymentTransactionState
 
 ## Enum
 

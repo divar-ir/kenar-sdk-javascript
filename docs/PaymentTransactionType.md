@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentTransactionType
+# KenarApiClient.PaymentTransactionType
 
 ## Enum
 

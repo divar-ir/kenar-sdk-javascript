@@ -19,7 +19,7 @@ import AddonsUserAddonFilters from './AddonsUserAddonFilters';
 /**
  * The AddonsUserAddon model module.
  * @module model/AddonsUserAddon
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsUserAddon {
     /**
@@ -111,6 +111,123 @@ class AddonsUserAddon {
         return true;
     }
 
+/**
+     * @return {module:model/AddonsAddonMetaData}
+     */
+    getMetaData() {
+        return this.meta_data;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonMetaData} metaData
+     */
+    setMetaData(metaData) {
+        this['meta_data'] = metaData;
+    }
+/**
+     * @return {String}
+     */
+    getPhone() {
+        return this.phone;
+    }
+
+    /**
+     * @param {String} phone
+     */
+    setPhone(phone) {
+        this['phone'] = phone;
+    }
+/**
+     * @return {String}
+     */
+    getDivarUserId() {
+        return this.divar_user_id;
+    }
+
+    /**
+     * @param {String} divarUserId
+     */
+    setDivarUserId(divarUserId) {
+        this['divar_user_id'] = divarUserId;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSemantic() {
+        return this.semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} semantic
+     */
+    setSemantic(semantic) {
+        this['semantic'] = semantic;
+    }
+/**
+     * @return {module:model/AddonsAddonSemantic}
+     */
+    getSemanticData() {
+        return this.semantic_data;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSemantic} semanticData
+     */
+    setSemanticData(semanticData) {
+        this['semantic_data'] = semanticData;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSensitiveSemantic() {
+        return this.sensitive_semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} sensitiveSemantic
+     */
+    setSensitiveSemantic(sensitiveSemantic) {
+        this['sensitive_semantic'] = sensitiveSemantic;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgetsSemantic() {
+        return this.widgets_semantic;
+    }
+
+    /**
+     * @param {Object} widgetsSemantic
+     */
+    setWidgetsSemantic(widgetsSemantic) {
+        this['widgets_semantic'] = widgetsSemantic;
+    }
+/**
+     * @return {module:model/AddonsUserAddonFilters}
+     */
+    getFilters() {
+        return this.filters;
+    }
+
+    /**
+     * @param {module:model/AddonsUserAddonFilters} filters
+     */
+    setFilters(filters) {
+        this['filters'] = filters;
+    }
 
 }
 

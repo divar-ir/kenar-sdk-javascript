@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetBodyStatusesResponse
+# KenarApiClient.AssetsGetBodyStatusesResponse
 
 ## Properties
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsCreateUserAddonResponseV2 model module.
  * @module model/AddonsCreateUserAddonResponseV2
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsCreateUserAddonResponseV2 {
     /**
@@ -68,6 +68,19 @@ class AddonsCreateUserAddonResponseV2 {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * @param {String} id
+     */
+    setId(id) {
+        this['id'] = id;
+    }
 
 }
 

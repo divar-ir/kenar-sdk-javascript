@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsGetDynamicAction model module.
  * @module model/AddonsGetDynamicAction
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsGetDynamicAction {
     /**
@@ -64,6 +64,19 @@ class AddonsGetDynamicAction {
         return true;
     }
 
+/**
+     * @return {Object}
+     */
+    getData() {
+        return this.data;
+    }
+
+    /**
+     * @param {Object} data
+     */
+    setData(data) {
+        this['data'] = data;
+    }
 
 }
 

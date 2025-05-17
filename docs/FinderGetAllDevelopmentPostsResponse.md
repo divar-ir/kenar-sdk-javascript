@@ -1,4 +1,4 @@
-# KenarAPIClient.FinderGetAllDevelopmentPostsResponse
+# KenarApiClient.FinderGetAllDevelopmentPostsResponse
 
 ## Properties
 

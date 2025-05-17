@@ -17,7 +17,7 @@ import DivarIconsIconName from './DivarIconsIconName';
 /**
  * The AddonsEventRow model module.
  * @module model/AddonsEventRow
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsEventRow {
     /**
@@ -96,6 +96,84 @@ class AddonsEventRow {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {String}
+     */
+    getSubtitle() {
+        return this.subtitle;
+    }
+
+    /**
+     * @param {String} subtitle
+     */
+    setSubtitle(subtitle) {
+        this['subtitle'] = subtitle;
+    }
+/**
+     * @return {String}
+     */
+    getLabel() {
+        return this.label;
+    }
+
+    /**
+     * @param {String} label
+     */
+    setLabel(label) {
+        this['label'] = label;
+    }
+/**
+     * @return {String}
+     */
+    getImageId() {
+        return this.image_id;
+    }
+
+    /**
+     * @param {String} imageId
+     */
+    setImageId(imageId) {
+        this['image_id'] = imageId;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasDivider() {
+        return this.has_divider;
+    }
+
+    /**
+     * @param {Boolean} hasDivider
+     */
+    setHasDivider(hasDivider) {
+        this['has_divider'] = hasDivider;
+    }
+/**
+     * @return {module:model/DivarIconsIconName}
+     */
+    getIconName() {
+        return this.icon_name;
+    }
+
+    /**
+     * @param {module:model/DivarIconsIconName} iconName
+     */
+    setIconName(iconName) {
+        this['icon_name'] = iconName;
+    }
 
 }
 

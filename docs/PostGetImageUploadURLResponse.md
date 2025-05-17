@@ -1,4 +1,4 @@
-# KenarAPIClient.PostGetImageUploadURLResponse
+# KenarApiClient.PostGetImageUploadURLResponse
 
 ## Properties
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentReorderPostBody model module.
  * @module model/PaymentReorderPostBody
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentReorderPostBody {
     /**
@@ -75,6 +75,36 @@ class PaymentReorderPostBody {
         return true;
     }
 
+/**
+     * Returns A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * Sets A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     * @param {String} id A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     */
+    setId(id) {
+        this['id'] = id;
+    }
+/**
+     * Returns Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
+     * @return {String}
+     */
+    getExtraDetails() {
+        return this.extra_details;
+    }
+
+    /**
+     * Sets Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
+     * @param {String} extraDetails Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
+     */
+    setExtraDetails(extraDetails) {
+        this['extra_details'] = extraDetails;
+    }
 
 }
 

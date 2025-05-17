@@ -1,4 +1,4 @@
-# KenarAPIClient.FinderSearchQuery
+# KenarApiClient.FinderSearchQuery
 
 ## Properties
 

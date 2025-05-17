@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessageLocationData model module.
  * @module model/MessageLocationData
- * @version version not set
+ * @version 0.1.0
  */
 class MessageLocationData {
     /**
@@ -67,6 +67,36 @@ class MessageLocationData {
         return true;
     }
 
+/**
+     * Returns The latitude in degrees. It must be in the range [-90.0, +90.0].
+     * @return {Number}
+     */
+    getLatitude() {
+        return this.latitude;
+    }
+
+    /**
+     * Sets The latitude in degrees. It must be in the range [-90.0, +90.0].
+     * @param {Number} latitude The latitude in degrees. It must be in the range [-90.0, +90.0].
+     */
+    setLatitude(latitude) {
+        this['latitude'] = latitude;
+    }
+/**
+     * Returns The longitude in degrees. It must be in the range [-180.0, +180.0].
+     * @return {Number}
+     */
+    getLongitude() {
+        return this.longitude;
+    }
+
+    /**
+     * Sets The longitude in degrees. It must be in the range [-180.0, +180.0].
+     * @param {Number} longitude The longitude in degrees. It must be in the range [-180.0, +180.0].
+     */
+    setLongitude(longitude) {
+        this['longitude'] = longitude;
+    }
 
 }
 

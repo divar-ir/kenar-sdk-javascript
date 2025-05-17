@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('FinderPostExtState', function() {
     it('should create an instance of FinderPostExtState', function() {
       // uncomment below and update the code to test FinderPostExtState
-      //var instance = new KenarAPIClient.FinderPostExtState();
-      //expect(instance).to.be.a(KenarAPIClient.FinderPostExtState);
+      //var instance = new KenarApiClient.FinderPostExtState();
+      //expect(instance).to.be.a(KenarApiClient.FinderPostExtState);
     });
 
   });

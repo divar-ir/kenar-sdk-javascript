@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.MessageSender();
+    instance = new KenarApiClient.MessageSender();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('MessageSender', function() {
     it('should create an instance of MessageSender', function() {
       // uncomment below and update the code to test MessageSender
-      //var instance = new KenarAPIClient.MessageSender();
-      //expect(instance).to.be.a(KenarAPIClient.MessageSender);
+      //var instance = new KenarApiClient.MessageSender();
+      //expect(instance).to.be.a(KenarApiClient.MessageSender);
     });
 
     it('should have the property side (base name: "side")', function() {
       // uncomment below and update the code to test the property side
-      //var instance = new KenarAPIClient.MessageSender();
+      //var instance = new KenarApiClient.MessageSender();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new KenarAPIClient.MessageSender();
+      //var instance = new KenarApiClient.MessageSender();
       //expect(instance).to.be();
     });
 

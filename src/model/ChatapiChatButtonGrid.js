@@ -17,7 +17,7 @@ import ChatapiChatButtonRow from './ChatapiChatButtonRow';
 /**
  * The ChatapiChatButtonGrid model module.
  * @module model/ChatapiChatButtonGrid
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiChatButtonGrid {
     /**
@@ -75,6 +75,19 @@ class ChatapiChatButtonGrid {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/ChatapiChatButtonRow>}
+     */
+    getRows() {
+        return this.rows;
+    }
+
+    /**
+     * @param {Array.<module:model/ChatapiChatButtonRow>} rows
+     */
+    setRows(rows) {
+        this['rows'] = rows;
+    }
 
 }
 

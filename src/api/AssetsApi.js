@@ -29,7 +29,7 @@ import GooglerpcStatus from '../model/GooglerpcStatus';
 /**
 * Assets service.
 * @module api/AssetsApi
-* @version version not set
+* @version 0.1.0
 */
 export default class AssetsApi {
 

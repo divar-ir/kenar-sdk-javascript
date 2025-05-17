@@ -17,7 +17,7 @@ import AddonsWidgetColor from './AddonsWidgetColor';
 /**
  * The AddonsEvaluationRowSection model module.
  * @module model/AddonsEvaluationRowSection
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsEvaluationRowSection {
     /**
@@ -72,6 +72,32 @@ class AddonsEvaluationRowSection {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getText() {
+        return this.text;
+    }
+
+    /**
+     * @param {String} text
+     */
+    setText(text) {
+        this['text'] = text;
+    }
+/**
+     * @return {module:model/AddonsWidgetColor}
+     */
+    getSectionColor() {
+        return this.section_color;
+    }
+
+    /**
+     * @param {module:model/AddonsWidgetColor} sectionColor
+     */
+    setSectionColor(sectionColor) {
+        this['section_color'] = sectionColor;
+    }
 
 }
 

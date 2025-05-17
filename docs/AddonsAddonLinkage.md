@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsAddonLinkage
+# KenarApiClient.AddonsAddonLinkage
 
 ## Enum
 

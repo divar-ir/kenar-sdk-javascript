@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.FinderGetUserPostsResponse();
+    instance = new KenarApiClient.FinderGetUserPostsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('FinderGetUserPostsResponse', function() {
     it('should create an instance of FinderGetUserPostsResponse', function() {
       // uncomment below and update the code to test FinderGetUserPostsResponse
-      //var instance = new KenarAPIClient.FinderGetUserPostsResponse();
-      //expect(instance).to.be.a(KenarAPIClient.FinderGetUserPostsResponse);
+      //var instance = new KenarApiClient.FinderGetUserPostsResponse();
+      //expect(instance).to.be.a(KenarApiClient.FinderGetUserPostsResponse);
     });
 
     it('should have the property posts (base name: "posts")', function() {
       // uncomment below and update the code to test the property posts
-      //var instance = new KenarAPIClient.FinderGetUserPostsResponse();
+      //var instance = new KenarApiClient.FinderGetUserPostsResponse();
       //expect(instance).to.be();
     });
 

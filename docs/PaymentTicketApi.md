@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentTicketApi
+# KenarApiClient.PaymentTicketApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,10 +19,10 @@ Payment tickets are designed to integrate Kenar apps with Divar internal teams. 
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.PaymentTicketApi();
-let paymentTicketValidateRequest = new KenarAPIClient.PaymentTicketValidateRequest(); // PaymentTicketValidateRequest | 
+let apiInstance = new KenarApiClient.PaymentTicketApi();
+let paymentTicketValidateRequest = new KenarApiClient.PaymentTicketValidateRequest(); // PaymentTicketValidateRequest | 
 apiInstance.paymentTicketValidate(paymentTicketValidateRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {

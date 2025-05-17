@@ -17,7 +17,7 @@ import AssetsGetPermissionsResponsePermission from './AssetsGetPermissionsRespon
 /**
  * The AssetsGetPermissionsResponse model module.
  * @module model/AssetsGetPermissionsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetPermissionsResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetPermissionsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsGetPermissionsResponsePermission>}
+     */
+    getPermissions() {
+        return this.permissions;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsGetPermissionsResponsePermission>} permissions
+     */
+    setPermissions(permissions) {
+        this['permissions'] = permissions;
+    }
 
 }
 

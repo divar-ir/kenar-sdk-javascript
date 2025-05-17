@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ChatapiChatButton();
+    instance = new KenarApiClient.ChatapiChatButton();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ChatapiChatButton', function() {
     it('should create an instance of ChatapiChatButton', function() {
       // uncomment below and update the code to test ChatapiChatButton
-      //var instance = new KenarAPIClient.ChatapiChatButton();
-      //expect(instance).to.be.a(KenarAPIClient.ChatapiChatButton);
+      //var instance = new KenarApiClient.ChatapiChatButton();
+      //expect(instance).to.be.a(KenarApiClient.ChatapiChatButton);
     });
 
     it('should have the property action (base name: "action")', function() {
       // uncomment below and update the code to test the property action
-      //var instance = new KenarAPIClient.ChatapiChatButton();
+      //var instance = new KenarApiClient.ChatapiChatButton();
       //expect(instance).to.be();
     });
 
     it('should have the property iconName (base name: "icon_name")', function() {
       // uncomment below and update the code to test the property iconName
-      //var instance = new KenarAPIClient.ChatapiChatButton();
+      //var instance = new KenarApiClient.ChatapiChatButton();
       //expect(instance).to.be();
     });
 
     it('should have the property caption (base name: "caption")', function() {
       // uncomment below and update the code to test the property caption
-      //var instance = new KenarAPIClient.ChatapiChatButton();
+      //var instance = new KenarApiClient.ChatapiChatButton();
       //expect(instance).to.be();
     });
 
     it('should have the property icon (base name: "icon")', function() {
       // uncomment below and update the code to test the property icon
-      //var instance = new KenarAPIClient.ChatapiChatButton();
+      //var instance = new KenarApiClient.ChatapiChatButton();
       //expect(instance).to.be();
     });
 

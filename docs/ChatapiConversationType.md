@@ -1,4 +1,4 @@
-# KenarAPIClient.ChatapiConversationType
+# KenarApiClient.ChatapiConversationType
 
 ## Enum
 

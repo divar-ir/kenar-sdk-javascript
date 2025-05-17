@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsTitleRow model module.
  * @module model/AddonsTitleRow
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsTitleRow {
     /**
@@ -71,6 +71,32 @@ class AddonsTitleRow {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getText() {
+        return this.text;
+    }
+
+    /**
+     * @param {String} text
+     */
+    setText(text) {
+        this['text'] = text;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasDivider() {
+        return this.has_divider;
+    }
+
+    /**
+     * @param {Boolean} hasDivider
+     */
+    setHasDivider(hasDivider) {
+        this['has_divider'] = hasDivider;
+    }
 
 }
 

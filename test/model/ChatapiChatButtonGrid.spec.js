@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ChatapiChatButtonGrid();
+    instance = new KenarApiClient.ChatapiChatButtonGrid();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ChatapiChatButtonGrid', function() {
     it('should create an instance of ChatapiChatButtonGrid', function() {
       // uncomment below and update the code to test ChatapiChatButtonGrid
-      //var instance = new KenarAPIClient.ChatapiChatButtonGrid();
-      //expect(instance).to.be.a(KenarAPIClient.ChatapiChatButtonGrid);
+      //var instance = new KenarApiClient.ChatapiChatButtonGrid();
+      //expect(instance).to.be.a(KenarApiClient.ChatapiChatButtonGrid);
     });
 
     it('should have the property rows (base name: "rows")', function() {
       // uncomment below and update the code to test the property rows
-      //var instance = new KenarAPIClient.ChatapiChatButtonGrid();
+      //var instance = new KenarApiClient.ChatapiChatButtonGrid();
       //expect(instance).to.be();
     });
 

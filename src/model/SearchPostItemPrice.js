@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SearchPostItemPrice model module.
  * @module model/SearchPostItemPrice
- * @version version not set
+ * @version 0.1.0
  */
 class SearchPostItemPrice {
     /**
@@ -75,6 +75,32 @@ class SearchPostItemPrice {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getMode() {
+        return this.mode;
+    }
+
+    /**
+     * @param {String} mode
+     */
+    setMode(mode) {
+        this['mode'] = mode;
+    }
+/**
+     * @return {String}
+     */
+    getValue() {
+        return this.value;
+    }
+
+    /**
+     * @param {String} value
+     */
+    setValue(value) {
+        this['value'] = value;
+    }
 
 }
 

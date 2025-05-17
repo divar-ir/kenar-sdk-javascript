@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetCategoriesResponse
+# KenarApiClient.AssetsGetCategoriesResponse
 
 ## Properties
 

@@ -20,7 +20,7 @@ import PaymentTicketValidateResponse from '../model/PaymentTicketValidateRespons
 /**
 * PaymentTicket service.
 * @module api/PaymentTicketApi
-* @version version not set
+* @version 0.1.0
 */
 export default class PaymentTicketApi {
 

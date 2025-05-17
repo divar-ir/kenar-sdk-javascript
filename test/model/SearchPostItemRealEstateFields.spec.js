@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+    instance = new KenarApiClient.SearchPostItemRealEstateFields();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,61 +50,61 @@
   describe('SearchPostItemRealEstateFields', function() {
     it('should create an instance of SearchPostItemRealEstateFields', function() {
       // uncomment below and update the code to test SearchPostItemRealEstateFields
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
-      //expect(instance).to.be.a(KenarAPIClient.SearchPostItemRealEstateFields);
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
+      //expect(instance).to.be.a(KenarApiClient.SearchPostItemRealEstateFields);
     });
 
     it('should have the property credit (base name: "credit")', function() {
       // uncomment below and update the code to test the property credit
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property rent (base name: "rent")', function() {
       // uncomment below and update the code to test the property rent
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property dailyRent (base name: "daily_rent")', function() {
       // uncomment below and update the code to test the property dailyRent
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property size (base name: "size")', function() {
       // uncomment below and update the code to test the property size
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property year (base name: "year")', function() {
       // uncomment below and update the code to test the property year
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property hasParking (base name: "has_parking")', function() {
       // uncomment below and update the code to test the property hasParking
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property hasElevator (base name: "has_elevator")', function() {
       // uncomment below and update the code to test the property hasElevator
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property rooms (base name: "rooms")', function() {
       // uncomment below and update the code to test the property rooms
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 
     it('should have the property floor (base name: "floor")', function() {
       // uncomment below and update the code to test the property floor
-      //var instance = new KenarAPIClient.SearchPostItemRealEstateFields();
+      //var instance = new KenarApiClient.SearchPostItemRealEstateFields();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsScoreRow();
+    instance = new KenarApiClient.AddonsScoreRow();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('AddonsScoreRow', function() {
     it('should create an instance of AddonsScoreRow', function() {
       // uncomment below and update the code to test AddonsScoreRow
-      //var instance = new KenarAPIClient.AddonsScoreRow();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsScoreRow);
+      //var instance = new KenarApiClient.AddonsScoreRow();
+      //expect(instance).to.be.a(KenarApiClient.AddonsScoreRow);
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instance = new KenarAPIClient.AddonsScoreRow();
+      //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 
     it('should have the property descriptiveScore (base name: "descriptive_score")', function() {
       // uncomment below and update the code to test the property descriptiveScore
-      //var instance = new KenarAPIClient.AddonsScoreRow();
+      //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 
     it('should have the property percentageScore (base name: "percentage_score")', function() {
       // uncomment below and update the code to test the property percentageScore
-      //var instance = new KenarAPIClient.AddonsScoreRow();
+      //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 
     it('should have the property scoreColor (base name: "score_color")', function() {
       // uncomment below and update the code to test the property scoreColor
-      //var instance = new KenarAPIClient.AddonsScoreRow();
+      //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 
     it('should have the property hasDivider (base name: "has_divider")', function() {
       // uncomment below and update the code to test the property hasDivider
-      //var instance = new KenarAPIClient.AddonsScoreRow();
+      //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 
     it('should have the property iconName (base name: "icon_name")', function() {
       // uncomment below and update the code to test the property iconName
-      //var instance = new KenarAPIClient.AddonsScoreRow();
+      //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 
     it('should have the property action (base name: "action")', function() {
       // uncomment below and update the code to test the property action
-      //var instance = new KenarAPIClient.AddonsScoreRow();
+      //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 

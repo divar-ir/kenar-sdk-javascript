@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SearchPostItemVehiclesFields model module.
  * @module model/SearchPostItemVehiclesFields
- * @version version not set
+ * @version 0.1.0
  */
 class SearchPostItemVehiclesFields {
     /**
@@ -82,6 +82,45 @@ class SearchPostItemVehiclesFields {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getUsage() {
+        return this.usage;
+    }
+
+    /**
+     * @param {String} usage
+     */
+    setUsage(usage) {
+        this['usage'] = usage;
+    }
+/**
+     * @return {String}
+     */
+    getInstallmentSale() {
+        return this.installment_sale;
+    }
+
+    /**
+     * @param {String} installmentSale
+     */
+    setInstallmentSale(installmentSale) {
+        this['installment_sale'] = installmentSale;
+    }
+/**
+     * @return {String}
+     */
+    getCustomPostSubtitle() {
+        return this.custom_post_subtitle;
+    }
+
+    /**
+     * @param {String} customPostSubtitle
+     */
+    setCustomPostSubtitle(customPostSubtitle) {
+        this['custom_post_subtitle'] = customPostSubtitle;
+    }
 
 }
 

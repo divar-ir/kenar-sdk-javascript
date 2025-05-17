@@ -17,7 +17,7 @@ import AddonsPostAddon from './AddonsPostAddon';
 /**
  * The AddonsGetUserPostAddonsResponse model module.
  * @module model/AddonsGetUserPostAddonsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsGetUserPostAddonsResponse {
     /**
@@ -75,6 +75,19 @@ class AddonsGetUserPostAddonsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AddonsPostAddon>}
+     */
+    getAddons() {
+        return this.addons;
+    }
+
+    /**
+     * @param {Array.<module:model/AddonsPostAddon>} addons
+     */
+    setAddons(addons) {
+        this['addons'] = addons;
+    }
 
 }
 

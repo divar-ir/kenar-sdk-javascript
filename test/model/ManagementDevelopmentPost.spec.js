@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ManagementDevelopmentPost();
+    instance = new KenarApiClient.ManagementDevelopmentPost();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ManagementDevelopmentPost', function() {
     it('should create an instance of ManagementDevelopmentPost', function() {
       // uncomment below and update the code to test ManagementDevelopmentPost
-      //var instance = new KenarAPIClient.ManagementDevelopmentPost();
-      //expect(instance).to.be.a(KenarAPIClient.ManagementDevelopmentPost);
+      //var instance = new KenarApiClient.ManagementDevelopmentPost();
+      //expect(instance).to.be.a(KenarApiClient.ManagementDevelopmentPost);
     });
 
     it('should have the property preset (base name: "preset")', function() {
       // uncomment below and update the code to test the property preset
-      //var instance = new KenarAPIClient.ManagementDevelopmentPost();
+      //var instance = new KenarApiClient.ManagementDevelopmentPost();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new KenarAPIClient.ManagementDevelopmentPost();
+      //var instance = new KenarApiClient.ManagementDevelopmentPost();
       //expect(instance).to.be();
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instance = new KenarAPIClient.ManagementDevelopmentPost();
+      //var instance = new KenarApiClient.ManagementDevelopmentPost();
       //expect(instance).to.be();
     });
 
     it('should have the property mngToken (base name: "mng_token")', function() {
       // uncomment below and update the code to test the property mngToken
-      //var instance = new KenarAPIClient.ManagementDevelopmentPost();
+      //var instance = new KenarApiClient.ManagementDevelopmentPost();
       //expect(instance).to.be();
     });
 

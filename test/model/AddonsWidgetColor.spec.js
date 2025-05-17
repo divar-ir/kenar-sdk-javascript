@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('AddonsWidgetColor', function() {
     it('should create an instance of AddonsWidgetColor', function() {
       // uncomment below and update the code to test AddonsWidgetColor
-      //var instance = new KenarAPIClient.AddonsWidgetColor();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsWidgetColor);
+      //var instance = new KenarApiClient.AddonsWidgetColor();
+      //expect(instance).to.be.a(KenarApiClient.AddonsWidgetColor);
     });
 
   });

@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetServiceTypesResponse
+# KenarApiClient.AssetsGetServiceTypesResponse
 
 ## Properties
 

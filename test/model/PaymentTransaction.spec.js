@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PaymentTransaction();
+    instance = new KenarApiClient.PaymentTransaction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('PaymentTransaction', function() {
     it('should create an instance of PaymentTransaction', function() {
       // uncomment below and update the code to test PaymentTransaction
-      //var instance = new KenarAPIClient.PaymentTransaction();
-      //expect(instance).to.be.a(KenarAPIClient.PaymentTransaction);
+      //var instance = new KenarApiClient.PaymentTransaction();
+      //expect(instance).to.be.a(KenarApiClient.PaymentTransaction);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new KenarAPIClient.PaymentTransaction();
+      //var instance = new KenarApiClient.PaymentTransaction();
       //expect(instance).to.be();
     });
 
     it('should have the property costRials (base name: "cost_rials")', function() {
       // uncomment below and update the code to test the property costRials
-      //var instance = new KenarAPIClient.PaymentTransaction();
+      //var instance = new KenarApiClient.PaymentTransaction();
       //expect(instance).to.be();
     });
 
     it('should have the property extraDetails (base name: "extra_details")', function() {
       // uncomment below and update the code to test the property extraDetails
-      //var instance = new KenarAPIClient.PaymentTransaction();
+      //var instance = new KenarApiClient.PaymentTransaction();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instance = new KenarAPIClient.PaymentTransaction();
+      //var instance = new KenarApiClient.PaymentTransaction();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new KenarAPIClient.PaymentTransaction();
+      //var instance = new KenarApiClient.PaymentTransaction();
       //expect(instance).to.be();
     });
 

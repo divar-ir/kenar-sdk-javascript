@@ -1,4 +1,4 @@
-# KenarAPIClient.MessageSender
+# KenarApiClient.MessageSender
 
 ## Properties
 

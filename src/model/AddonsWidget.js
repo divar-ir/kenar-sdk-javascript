@@ -26,7 +26,7 @@ import AddonsTitleRow from './AddonsTitleRow';
 /**
  * The AddonsWidget model module.
  * @module model/AddonsWidget
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsWidget {
     /**
@@ -144,6 +144,149 @@ class AddonsWidget {
         return true;
     }
 
+/**
+     * @return {module:model/AddonsEventRow}
+     */
+    getEventRow() {
+        return this.event_row;
+    }
+
+    /**
+     * @param {module:model/AddonsEventRow} eventRow
+     */
+    setEventRow(eventRow) {
+        this['event_row'] = eventRow;
+    }
+/**
+     * @return {module:model/AddonsButtonBar}
+     */
+    getButtonBar() {
+        return this.button_bar;
+    }
+
+    /**
+     * @param {module:model/AddonsButtonBar} buttonBar
+     */
+    setButtonBar(buttonBar) {
+        this['button_bar'] = buttonBar;
+    }
+/**
+     * @return {module:model/AddonsTitleRow}
+     */
+    getTitleRow() {
+        return this.title_row;
+    }
+
+    /**
+     * @param {module:model/AddonsTitleRow} titleRow
+     */
+    setTitleRow(titleRow) {
+        this['title_row'] = titleRow;
+    }
+/**
+     * @return {module:model/AddonsSubtitleRow}
+     */
+    getSubtitleRow() {
+        return this.subtitle_row;
+    }
+
+    /**
+     * @param {module:model/AddonsSubtitleRow} subtitleRow
+     */
+    setSubtitleRow(subtitleRow) {
+        this['subtitle_row'] = subtitleRow;
+    }
+/**
+     * @return {module:model/AddonsSelectorRow}
+     */
+    getSelectorRow() {
+        return this.selector_row;
+    }
+
+    /**
+     * @param {module:model/AddonsSelectorRow} selectorRow
+     */
+    setSelectorRow(selectorRow) {
+        this['selector_row'] = selectorRow;
+    }
+/**
+     * @return {module:model/AddonsScoreRow}
+     */
+    getScoreRow() {
+        return this.score_row;
+    }
+
+    /**
+     * @param {module:model/AddonsScoreRow} scoreRow
+     */
+    setScoreRow(scoreRow) {
+        this['score_row'] = scoreRow;
+    }
+/**
+     * @return {module:model/AddonsImageCarouselRow}
+     */
+    getImageCarouselRow() {
+        return this.image_carousel_row;
+    }
+
+    /**
+     * @param {module:model/AddonsImageCarouselRow} imageCarouselRow
+     */
+    setImageCarouselRow(imageCarouselRow) {
+        this['image_carousel_row'] = imageCarouselRow;
+    }
+/**
+     * @return {module:model/AddonsGroupInfoRow}
+     */
+    getGroupInfoRow() {
+        return this.group_info_row;
+    }
+
+    /**
+     * @param {module:model/AddonsGroupInfoRow} groupInfoRow
+     */
+    setGroupInfoRow(groupInfoRow) {
+        this['group_info_row'] = groupInfoRow;
+    }
+/**
+     * @return {module:model/AddonsEvaluationRow}
+     */
+    getEvaluationRow() {
+        return this.evaluation_row;
+    }
+
+    /**
+     * @param {module:model/AddonsEvaluationRow} evaluationRow
+     */
+    setEvaluationRow(evaluationRow) {
+        this['evaluation_row'] = evaluationRow;
+    }
+/**
+     * @return {module:model/AddonsDescriptionRow}
+     */
+    getDescriptionRow() {
+        return this.description_row;
+    }
+
+    /**
+     * @param {module:model/AddonsDescriptionRow} descriptionRow
+     */
+    setDescriptionRow(descriptionRow) {
+        this['description_row'] = descriptionRow;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSemanticPaths() {
+        return this.semantic_paths;
+    }
+
+    /**
+     * @param {Object.<String, String>} semanticPaths
+     */
+    setSemanticPaths(semanticPaths) {
+        this['semantic_paths'] = semanticPaths;
+    }
 
 }
 

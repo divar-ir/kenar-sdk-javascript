@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsGroupInfoRow
+# KenarApiClient.AddonsGroupInfoRow
 
 ## Properties
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentTicketValidateRequest model module.
  * @module model/PaymentTicketValidateRequest
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentTicketValidateRequest {
     /**
@@ -85,6 +85,60 @@ class PaymentTicketValidateRequest {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getTicketUuid() {
+        return this.ticket_uuid;
+    }
+
+    /**
+     * @param {String} ticketUuid
+     */
+    setTicketUuid(ticketUuid) {
+        this['ticket_uuid'] = ticketUuid;
+    }
+/**
+     * Returns Deprecated. Use divar_user_id.
+     * @return {String}
+     */
+    getPhoneNumber() {
+        return this.phone_number;
+    }
+
+    /**
+     * Sets Deprecated. Use divar_user_id.
+     * @param {String} phoneNumber Deprecated. Use divar_user_id.
+     */
+    setPhoneNumber(phoneNumber) {
+        this['phone_number'] = phoneNumber;
+    }
+/**
+     * @return {String}
+     */
+    getUserId() {
+        return this.user_id;
+    }
+
+    /**
+     * @param {String} userId
+     */
+    setUserId(userId) {
+        this['user_id'] = userId;
+    }
+/**
+     * @return {Number}
+     */
+    getServiceCost() {
+        return this.service_cost;
+    }
+
+    /**
+     * @param {Number} serviceCost
+     */
+    setServiceCost(serviceCost) {
+        this['service_cost'] = serviceCost;
+    }
 
 }
 

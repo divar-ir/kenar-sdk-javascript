@@ -1,4 +1,4 @@
-# KenarAPIClient.AppsServiceType
+# KenarApiClient.AppsServiceType
 
 ## Enum
 

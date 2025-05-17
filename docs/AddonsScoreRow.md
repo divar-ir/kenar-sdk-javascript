@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsScoreRow
+# KenarApiClient.AddonsScoreRow
 
 ## Properties
 

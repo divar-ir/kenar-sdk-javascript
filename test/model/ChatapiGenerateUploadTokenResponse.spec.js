@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ChatapiGenerateUploadTokenResponse();
+    instance = new KenarApiClient.ChatapiGenerateUploadTokenResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ChatapiGenerateUploadTokenResponse', function() {
     it('should create an instance of ChatapiGenerateUploadTokenResponse', function() {
       // uncomment below and update the code to test ChatapiGenerateUploadTokenResponse
-      //var instance = new KenarAPIClient.ChatapiGenerateUploadTokenResponse();
-      //expect(instance).to.be.a(KenarAPIClient.ChatapiGenerateUploadTokenResponse);
+      //var instance = new KenarApiClient.ChatapiGenerateUploadTokenResponse();
+      //expect(instance).to.be.a(KenarApiClient.ChatapiGenerateUploadTokenResponse);
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instance = new KenarAPIClient.ChatapiGenerateUploadTokenResponse();
+      //var instance = new KenarApiClient.ChatapiGenerateUploadTokenResponse();
       //expect(instance).to.be();
     });
 

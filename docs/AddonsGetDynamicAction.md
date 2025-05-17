@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsGetDynamicAction
+# KenarApiClient.AddonsGetDynamicAction
 
 ## Properties
 

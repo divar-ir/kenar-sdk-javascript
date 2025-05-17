@@ -24,7 +24,7 @@ import MessageVoiceData from './MessageVoiceData';
 /**
  * The ChatapiMessage model module.
  * @module model/ChatapiMessage
- * @version version not set
+ * @version 0.1.0
  */
 class ChatapiMessage {
     /**
@@ -138,6 +138,149 @@ class ChatapiMessage {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * @param {String} id
+     */
+    setId(id) {
+        this['id'] = id;
+    }
+/**
+     * @return {module:model/ChatapiConversation}
+     */
+    getConversation() {
+        return this.conversation;
+    }
+
+    /**
+     * @param {module:model/ChatapiConversation} conversation
+     */
+    setConversation(conversation) {
+        this['conversation'] = conversation;
+    }
+/**
+     * @return {module:model/MessageSender}
+     */
+    getSender() {
+        return this.sender;
+    }
+
+    /**
+     * @param {module:model/MessageSender} sender
+     */
+    setSender(sender) {
+        this['sender'] = sender;
+    }
+/**
+     * @return {module:model/ChatapiMessageType}
+     */
+    getType() {
+        return this.type;
+    }
+
+    /**
+     * @param {module:model/ChatapiMessageType} type
+     */
+    setType(type) {
+        this['type'] = type;
+    }
+/**
+     * @return {Date}
+     */
+    getSentAt() {
+        return this.sent_at;
+    }
+
+    /**
+     * @param {Date} sentAt
+     */
+    setSentAt(sentAt) {
+        this['sent_at'] = sentAt;
+    }
+/**
+     * @return {String}
+     */
+    getText() {
+        return this.text;
+    }
+
+    /**
+     * @param {String} text
+     */
+    setText(text) {
+        this['text'] = text;
+    }
+/**
+     * @return {module:model/MessageImageData}
+     */
+    getImageData() {
+        return this.image_data;
+    }
+
+    /**
+     * @param {module:model/MessageImageData} imageData
+     */
+    setImageData(imageData) {
+        this['image_data'] = imageData;
+    }
+/**
+     * @return {module:model/MessageFileData}
+     */
+    getFileData() {
+        return this.file_data;
+    }
+
+    /**
+     * @param {module:model/MessageFileData} fileData
+     */
+    setFileData(fileData) {
+        this['file_data'] = fileData;
+    }
+/**
+     * @return {module:model/MessageVoiceData}
+     */
+    getVoiceData() {
+        return this.voice_data;
+    }
+
+    /**
+     * @param {module:model/MessageVoiceData} voiceData
+     */
+    setVoiceData(voiceData) {
+        this['voice_data'] = voiceData;
+    }
+/**
+     * @return {module:model/MessageLocationData}
+     */
+    getLocationData() {
+        return this.location_data;
+    }
+
+    /**
+     * @param {module:model/MessageLocationData} locationData
+     */
+    setLocationData(locationData) {
+        this['location_data'] = locationData;
+    }
+/**
+     * @return {module:model/MessageVideoData}
+     */
+    getVideoData() {
+        return this.video_data;
+    }
+
+    /**
+     * @param {module:model/MessageVideoData} videoData
+     */
+    setVideoData(videoData) {
+        this['video_data'] = videoData;
+    }
 
 }
 

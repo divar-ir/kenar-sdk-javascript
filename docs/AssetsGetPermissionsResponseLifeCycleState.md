@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetPermissionsResponseLifeCycleState
+# KenarApiClient.AssetsGetPermissionsResponseLifeCycleState
 
 ## Enum
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSecondaryLinkagePosition
+# KenarApiClient.AddonSecondaryLinkagePosition
 
 ## Enum
 

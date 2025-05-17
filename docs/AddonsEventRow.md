@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsEventRow
+# KenarApiClient.AddonsEventRow
 
 ## Properties
 

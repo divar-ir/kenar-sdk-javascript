@@ -17,7 +17,7 @@ import GetPostPricingResponseReorder from './GetPostPricingResponseReorder';
 /**
  * The PaymentGetPostPricingResponse model module.
  * @module model/PaymentGetPostPricingResponse
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentGetPostPricingResponse {
     /**
@@ -69,6 +69,19 @@ class PaymentGetPostPricingResponse {
         return true;
     }
 
+/**
+     * @return {module:model/GetPostPricingResponseReorder}
+     */
+    getReorder() {
+        return this.reorder;
+    }
+
+    /**
+     * @param {module:model/GetPostPricingResponseReorder} reorder
+     */
+    setReorder(reorder) {
+        this['reorder'] = reorder;
+    }
 
 }
 

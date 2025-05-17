@@ -1,4 +1,4 @@
-# KenarAPIClient.PaymentGetTransactionResponse
+# KenarApiClient.PaymentGetTransactionResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetInternalStoragesResponse
+# KenarApiClient.AssetsGetInternalStoragesResponse
 
 ## Properties
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsEventRow();
+    instance = new KenarApiClient.AddonsEventRow();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('AddonsEventRow', function() {
     it('should create an instance of AddonsEventRow', function() {
       // uncomment below and update the code to test AddonsEventRow
-      //var instance = new KenarAPIClient.AddonsEventRow();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsEventRow);
+      //var instance = new KenarApiClient.AddonsEventRow();
+      //expect(instance).to.be.a(KenarApiClient.AddonsEventRow);
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instance = new KenarAPIClient.AddonsEventRow();
+      //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 
     it('should have the property subtitle (base name: "subtitle")', function() {
       // uncomment below and update the code to test the property subtitle
-      //var instance = new KenarAPIClient.AddonsEventRow();
+      //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 
     it('should have the property label (base name: "label")', function() {
       // uncomment below and update the code to test the property label
-      //var instance = new KenarAPIClient.AddonsEventRow();
+      //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 
     it('should have the property imageId (base name: "image_id")', function() {
       // uncomment below and update the code to test the property imageId
-      //var instance = new KenarAPIClient.AddonsEventRow();
+      //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 
     it('should have the property hasDivider (base name: "has_divider")', function() {
       // uncomment below and update the code to test the property hasDivider
-      //var instance = new KenarAPIClient.AddonsEventRow();
+      //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 
     it('should have the property iconName (base name: "icon_name")', function() {
       // uncomment below and update the code to test the property iconName
-      //var instance = new KenarAPIClient.AddonsEventRow();
+      //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 

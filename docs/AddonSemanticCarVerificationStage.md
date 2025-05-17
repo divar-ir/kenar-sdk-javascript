@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSemanticCarVerificationStage
+# KenarApiClient.AddonSemanticCarVerificationStage
 
 ## Enum
 

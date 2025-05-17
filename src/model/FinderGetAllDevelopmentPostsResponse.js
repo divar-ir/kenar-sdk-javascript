@@ -17,7 +17,7 @@ import ManagementDevelopmentPost from './ManagementDevelopmentPost';
 /**
  * The FinderGetAllDevelopmentPostsResponse model module.
  * @module model/FinderGetAllDevelopmentPostsResponse
- * @version version not set
+ * @version 0.1.0
  */
 class FinderGetAllDevelopmentPostsResponse {
     /**
@@ -75,6 +75,19 @@ class FinderGetAllDevelopmentPostsResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/ManagementDevelopmentPost>}
+     */
+    getDevelopmentPosts() {
+        return this.development_posts;
+    }
+
+    /**
+     * @param {Array.<module:model/ManagementDevelopmentPost>} developmentPosts
+     */
+    setDevelopmentPosts(developmentPosts) {
+        this['development_posts'] = developmentPosts;
+    }
 
 }
 

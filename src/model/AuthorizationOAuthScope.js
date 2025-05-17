@@ -17,7 +17,7 @@ import OAuthScopeScope from './OAuthScopeScope';
 /**
  * The AuthorizationOAuthScope model module.
  * @module model/AuthorizationOAuthScope
- * @version version not set
+ * @version 0.1.0
  */
 class AuthorizationOAuthScope {
     /**
@@ -72,6 +72,32 @@ class AuthorizationOAuthScope {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getResourceId() {
+        return this.resource_id;
+    }
+
+    /**
+     * @param {String} resourceId
+     */
+    setResourceId(resourceId) {
+        this['resource_id'] = resourceId;
+    }
+/**
+     * @return {module:model/OAuthScopeScope}
+     */
+    getScope() {
+        return this.scope;
+    }
+
+    /**
+     * @param {module:model/OAuthScopeScope} scope
+     */
+    setScope(scope) {
+        this['scope'] = scope;
+    }
 
 }
 

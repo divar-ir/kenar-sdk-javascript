@@ -17,7 +17,7 @@ import PaymentTransaction from './PaymentTransaction';
 /**
  * The PaymentGetTransactionResponse model module.
  * @module model/PaymentGetTransactionResponse
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentGetTransactionResponse {
     /**
@@ -69,6 +69,19 @@ class PaymentGetTransactionResponse {
         return true;
     }
 
+/**
+     * @return {module:model/PaymentTransaction}
+     */
+    getTransaction() {
+        return this.transaction;
+    }
+
+    /**
+     * @param {module:model/PaymentTransaction} transaction
+     */
+    setTransaction(transaction) {
+        this['transaction'] = transaction;
+    }
 
 }
 

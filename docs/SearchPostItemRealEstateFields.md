@@ -1,4 +1,4 @@
-# KenarAPIClient.SearchPostItemRealEstateFields
+# KenarApiClient.SearchPostItemRealEstateFields
 
 ## Properties
 

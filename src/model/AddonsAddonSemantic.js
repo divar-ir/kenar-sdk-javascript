@@ -25,7 +25,7 @@ import AddonsAddonSemanticStatus from './AddonsAddonSemanticStatus';
 /**
  * The AddonsAddonSemantic model module.
  * @module model/AddonsAddonSemantic
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsAddonSemantic {
     /**
@@ -104,6 +104,149 @@ class AddonsAddonSemantic {
         return true;
     }
 
+/**
+     * @return {module:model/AddonSemanticPaymentMethod}
+     */
+    getPaymentMethod() {
+        return this.payment_method;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticPaymentMethod} paymentMethod
+     */
+    setPaymentMethod(paymentMethod) {
+        this['payment_method'] = paymentMethod;
+    }
+/**
+     * @return {module:model/AddonSemanticIdentityVerificationResult}
+     */
+    getIdentityVerificationResult() {
+        return this.identity_verification_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticIdentityVerificationResult} identityVerificationResult
+     */
+    setIdentityVerificationResult(identityVerificationResult) {
+        this['identity_verification_result'] = identityVerificationResult;
+    }
+/**
+     * @return {module:model/AddonSemanticPostVerificationResult}
+     */
+    getPostVerificationResult() {
+        return this.post_verification_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticPostVerificationResult} postVerificationResult
+     */
+    setPostVerificationResult(postVerificationResult) {
+        this['post_verification_result'] = postVerificationResult;
+    }
+/**
+     * @return {module:model/AddonsAddonSemanticStatus}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSemanticStatus} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
+/**
+     * @return {module:model/AddonSemanticIdentityVerificationStage}
+     */
+    getIdentityVerificationLastSuccessfulStage() {
+        return this.identity_verification_last_successful_stage;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticIdentityVerificationStage} identityVerificationLastSuccessfulStage
+     */
+    setIdentityVerificationLastSuccessfulStage(identityVerificationLastSuccessfulStage) {
+        this['identity_verification_last_successful_stage'] = identityVerificationLastSuccessfulStage;
+    }
+/**
+     * @return {module:model/AddonSemanticIdentityVerificationStage}
+     */
+    getIdentityVerificationFailureReason() {
+        return this.identity_verification_failure_reason;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticIdentityVerificationStage} identityVerificationFailureReason
+     */
+    setIdentityVerificationFailureReason(identityVerificationFailureReason) {
+        this['identity_verification_failure_reason'] = identityVerificationFailureReason;
+    }
+/**
+     * @return {module:model/AddonSemanticCarVerificationStage}
+     */
+    getCarVerificationLastSuccessfulStage() {
+        return this.car_verification_last_successful_stage;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticCarVerificationStage} carVerificationLastSuccessfulStage
+     */
+    setCarVerificationLastSuccessfulStage(carVerificationLastSuccessfulStage) {
+        this['car_verification_last_successful_stage'] = carVerificationLastSuccessfulStage;
+    }
+/**
+     * @return {module:model/AddonSemanticCarVerificationStage}
+     */
+    getCarVerificationFailureReason() {
+        return this.car_verification_failure_reason;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticCarVerificationStage} carVerificationFailureReason
+     */
+    setCarVerificationFailureReason(carVerificationFailureReason) {
+        this['car_verification_failure_reason'] = carVerificationFailureReason;
+    }
+/**
+     * @return {module:model/AddonSemanticOwnershipResult}
+     */
+    getOwnershipResult() {
+        return this.ownership_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticOwnershipResult} ownershipResult
+     */
+    setOwnershipResult(ownershipResult) {
+        this['ownership_result'] = ownershipResult;
+    }
+/**
+     * @return {module:model/AddonSemanticInspectionResult}
+     */
+    getInspectionResult() {
+        return this.inspection_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticInspectionResult} inspectionResult
+     */
+    setInspectionResult(inspectionResult) {
+        this['inspection_result'] = inspectionResult;
+    }
+/**
+     * @return {module:model/AddonSemanticNewFaceVerificationResult}
+     */
+    getNewFaceVerificationResult() {
+        return this.new_face_verification_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticNewFaceVerificationResult} newFaceVerificationResult
+     */
+    setNewFaceVerificationResult(newFaceVerificationResult) {
+        this['new_face_verification_result'] = newFaceVerificationResult;
+    }
 
 }
 

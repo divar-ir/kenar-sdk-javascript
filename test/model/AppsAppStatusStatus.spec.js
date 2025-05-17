@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('AppsAppStatusStatus', function() {
     it('should create an instance of AppsAppStatusStatus', function() {
       // uncomment below and update the code to test AppsAppStatusStatus
-      //var instance = new KenarAPIClient.AppsAppStatusStatus();
-      //expect(instance).to.be.a(KenarAPIClient.AppsAppStatusStatus);
+      //var instance = new KenarApiClient.AppsAppStatusStatus();
+      //expect(instance).to.be.a(KenarApiClient.AppsAppStatusStatus);
     });
 
   });

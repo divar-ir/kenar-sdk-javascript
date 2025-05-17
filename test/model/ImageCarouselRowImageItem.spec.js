@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ImageCarouselRowImageItem();
+    instance = new KenarApiClient.ImageCarouselRowImageItem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('ImageCarouselRowImageItem', function() {
     it('should create an instance of ImageCarouselRowImageItem', function() {
       // uncomment below and update the code to test ImageCarouselRowImageItem
-      //var instance = new KenarAPIClient.ImageCarouselRowImageItem();
-      //expect(instance).to.be.a(KenarAPIClient.ImageCarouselRowImageItem);
+      //var instance = new KenarApiClient.ImageCarouselRowImageItem();
+      //expect(instance).to.be.a(KenarApiClient.ImageCarouselRowImageItem);
     });
 
     it('should have the property imageId (base name: "image_id")', function() {
       // uncomment below and update the code to test the property imageId
-      //var instance = new KenarAPIClient.ImageCarouselRowImageItem();
+      //var instance = new KenarApiClient.ImageCarouselRowImageItem();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new KenarAPIClient.ImageCarouselRowImageItem();
+      //var instance = new KenarApiClient.ImageCarouselRowImageItem();
       //expect(instance).to.be();
     });
 

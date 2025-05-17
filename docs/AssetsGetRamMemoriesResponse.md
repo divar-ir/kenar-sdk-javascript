@@ -1,4 +1,4 @@
-# KenarAPIClient.AssetsGetRamMemoriesResponse
+# KenarApiClient.AssetsGetRamMemoriesResponse
 
 ## Properties
 

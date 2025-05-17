@@ -21,7 +21,7 @@ import SemanticCreateUserSemanticResponse from '../model/SemanticCreateUserSeman
 /**
 * Semantic service.
 * @module api/SemanticApi
-* @version version not set
+* @version 0.1.0
 */
 export default class SemanticApi {
 

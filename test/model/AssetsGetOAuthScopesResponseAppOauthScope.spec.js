@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope();
+    instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('AssetsGetOAuthScopesResponseAppOauthScope', function() {
     it('should create an instance of AssetsGetOAuthScopesResponseAppOauthScope', function() {
       // uncomment below and update the code to test AssetsGetOAuthScopesResponseAppOauthScope
-      //var instance = new KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope);
+      //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope);
     });
 
     it('should have the property slug (base name: "slug")', function() {
       // uncomment below and update the code to test the property slug
-      //var instance = new KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope();
+      //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
       //expect(instance).to.be();
     });
 
     it('should have the property display (base name: "display")', function() {
       // uncomment below and update the code to test the property display
-      //var instance = new KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope();
+      //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope();
+      //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
       //expect(instance).to.be();
     });
 
     it('should have the property lifecycleState (base name: "lifecycle_state")', function() {
       // uncomment below and update the code to test the property lifecycleState
-      //var instance = new KenarAPIClient.AssetsGetOAuthScopesResponseAppOauthScope();
+      //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
       //expect(instance).to.be();
     });
 

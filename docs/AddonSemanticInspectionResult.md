@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSemanticInspectionResult
+# KenarApiClient.AddonSemanticInspectionResult
 
 ## Enum
 

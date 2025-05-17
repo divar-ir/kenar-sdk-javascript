@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsImageCarouselRow
+# KenarApiClient.AddonsImageCarouselRow
 
 ## Properties
 

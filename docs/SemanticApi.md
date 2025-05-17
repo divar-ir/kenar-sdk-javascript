@@ -1,4 +1,4 @@
-# KenarAPIClient.SemanticApi
+# KenarApiClient.SemanticApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,11 +23,11 @@ In some cases, it is necessary to store information about the post in Divar with
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.SemanticApi();
+let apiInstance = new KenarApiClient.SemanticApi();
 let token = "token_example"; // String | 
-let semanticCreatePostSemanticBody = new KenarAPIClient.SemanticCreatePostSemanticBody(); // SemanticCreatePostSemanticBody | 
+let semanticCreatePostSemanticBody = new KenarApiClient.SemanticCreatePostSemanticBody(); // SemanticCreatePostSemanticBody | 
 apiInstance.semanticCreatePostSemantic(token, semanticCreatePostSemanticBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -69,11 +69,11 @@ In some cases, it is necessary to store information about the user in Divar with
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.SemanticApi();
+let apiInstance = new KenarApiClient.SemanticApi();
 let phone = "phone_example"; // String | 
-let semanticCreateUserSemanticBody = new KenarAPIClient.SemanticCreateUserSemanticBody(); // SemanticCreateUserSemanticBody | 
+let semanticCreateUserSemanticBody = new KenarApiClient.SemanticCreateUserSemanticBody(); // SemanticCreateUserSemanticBody | 
 apiInstance.semanticCreateUserSemantic(phone, semanticCreateUserSemanticBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -115,11 +115,11 @@ In some cases, it is necessary to store information about the user in Divar with
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.SemanticApi();
+let apiInstance = new KenarApiClient.SemanticApi();
 let divarUserId = "divarUserId_example"; // String | 
-let semanticCreateUserSemanticBody = new KenarAPIClient.SemanticCreateUserSemanticBody(); // SemanticCreateUserSemanticBody | 
+let semanticCreateUserSemanticBody = new KenarApiClient.SemanticCreateUserSemanticBody(); // SemanticCreateUserSemanticBody | 
 apiInstance.semanticCreateUserSemantic2(divarUserId, semanticCreateUserSemanticBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -161,9 +161,9 @@ You can delete the semantic information of a user by calling this API.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.SemanticApi();
+let apiInstance = new KenarApiClient.SemanticApi();
 let phone = "phone_example"; // String | 
 let opts = {
   'divarUserId': "divarUserId_example" // String | 
@@ -209,9 +209,9 @@ You can delete the semantic information of a user by calling this API.
 ### Example
 
 ```javascript
-import KenarAPIClient from 'kenar-api-client';
+import KenarApiClient from 'kenar-api-client';
 
-let apiInstance = new KenarAPIClient.SemanticApi();
+let apiInstance = new KenarApiClient.SemanticApi();
 let divarUserId = "divarUserId_example"; // String | 
 let opts = {
   'phone': "phone_example" // String | 

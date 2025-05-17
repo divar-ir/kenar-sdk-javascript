@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsOpenServerLink();
+    instance = new KenarApiClient.AddonsOpenServerLink();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AddonsOpenServerLink', function() {
     it('should create an instance of AddonsOpenServerLink', function() {
       // uncomment below and update the code to test AddonsOpenServerLink
-      //var instance = new KenarAPIClient.AddonsOpenServerLink();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsOpenServerLink);
+      //var instance = new KenarApiClient.AddonsOpenServerLink();
+      //expect(instance).to.be.a(KenarApiClient.AddonsOpenServerLink);
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new KenarAPIClient.AddonsOpenServerLink();
+      //var instance = new KenarApiClient.AddonsOpenServerLink();
       //expect(instance).to.be();
     });
 

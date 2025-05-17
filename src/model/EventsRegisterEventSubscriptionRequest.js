@@ -17,7 +17,7 @@ import EventsRegisterEventSubscriptionRequestEventType from './EventsRegisterEve
 /**
  * The EventsRegisterEventSubscriptionRequest model module.
  * @module model/EventsRegisterEventSubscriptionRequest
- * @version version not set
+ * @version 0.1.0
  */
 class EventsRegisterEventSubscriptionRequest {
     /**
@@ -75,6 +75,45 @@ class EventsRegisterEventSubscriptionRequest {
         return true;
     }
 
+/**
+     * @return {module:model/EventsRegisterEventSubscriptionRequestEventType}
+     */
+    getEventType() {
+        return this.event_type;
+    }
+
+    /**
+     * @param {module:model/EventsRegisterEventSubscriptionRequestEventType} eventType
+     */
+    setEventType(eventType) {
+        this['event_type'] = eventType;
+    }
+/**
+     * @return {String}
+     */
+    getEventResourceId() {
+        return this.event_resource_id;
+    }
+
+    /**
+     * @param {String} eventResourceId
+     */
+    setEventResourceId(eventResourceId) {
+        this['event_resource_id'] = eventResourceId;
+    }
+/**
+     * @return {Object}
+     */
+    getMetadata() {
+        return this.metadata;
+    }
+
+    /**
+     * @param {Object} metadata
+     */
+    setMetadata(metadata) {
+        this['metadata'] = metadata;
+    }
 
 }
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.MessageVideoData();
+    instance = new KenarApiClient.MessageVideoData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('MessageVideoData', function() {
     it('should create an instance of MessageVideoData', function() {
       // uncomment below and update the code to test MessageVideoData
-      //var instance = new KenarAPIClient.MessageVideoData();
-      //expect(instance).to.be.a(KenarAPIClient.MessageVideoData);
+      //var instance = new KenarApiClient.MessageVideoData();
+      //expect(instance).to.be.a(KenarApiClient.MessageVideoData);
     });
 
     it('should have the property link (base name: "link")', function() {
       // uncomment below and update the code to test the property link
-      //var instance = new KenarAPIClient.MessageVideoData();
+      //var instance = new KenarApiClient.MessageVideoData();
       //expect(instance).to.be();
     });
 
     it('should have the property thumbnailLink (base name: "thumbnail_link")', function() {
       // uncomment below and update the code to test the property thumbnailLink
-      //var instance = new KenarAPIClient.MessageVideoData();
+      //var instance = new KenarApiClient.MessageVideoData();
       //expect(instance).to.be();
     });
 
     it('should have the property sizeBytes (base name: "size_bytes")', function() {
       // uncomment below and update the code to test the property sizeBytes
-      //var instance = new KenarAPIClient.MessageVideoData();
+      //var instance = new KenarApiClient.MessageVideoData();
       //expect(instance).to.be();
     });
 

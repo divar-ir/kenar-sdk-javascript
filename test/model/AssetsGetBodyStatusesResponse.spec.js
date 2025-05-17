@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetBodyStatusesResponse();
+    instance = new KenarApiClient.AssetsGetBodyStatusesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetBodyStatusesResponse', function() {
     it('should create an instance of AssetsGetBodyStatusesResponse', function() {
       // uncomment below and update the code to test AssetsGetBodyStatusesResponse
-      //var instance = new KenarAPIClient.AssetsGetBodyStatusesResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetBodyStatusesResponse);
+      //var instance = new KenarApiClient.AssetsGetBodyStatusesResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetBodyStatusesResponse);
     });
 
     it('should have the property bodyStatus (base name: "body_status")', function() {
       // uncomment below and update the code to test the property bodyStatus
-      //var instance = new KenarAPIClient.AssetsGetBodyStatusesResponse();
+      //var instance = new KenarApiClient.AssetsGetBodyStatusesResponse();
       //expect(instance).to.be();
     });
 

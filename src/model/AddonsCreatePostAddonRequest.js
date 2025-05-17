@@ -17,7 +17,7 @@ import AddonsAddonSelector from './AddonsAddonSelector';
 /**
  * The AddonsCreatePostAddonRequest model module.
  * @module model/AddonsCreatePostAddonRequest
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsCreatePostAddonRequest {
     /**
@@ -103,6 +103,97 @@ class AddonsCreatePostAddonRequest {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
+/**
+     * @return {module:model/AddonsAddonSelector}
+     */
+    getSelector() {
+        return this.selector;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSelector} selector
+     */
+    setSelector(selector) {
+        this['selector'] = selector;
+    }
+/**
+     * @return {String}
+     */
+    getLinkInSpec() {
+        return this.link_in_spec;
+    }
+
+    /**
+     * @param {String} linkInSpec
+     */
+    setLinkInSpec(linkInSpec) {
+        this['link_in_spec'] = linkInSpec;
+    }
+/**
+     * @return {String}
+     */
+    getNotes() {
+        return this.notes;
+    }
+
+    /**
+     * @param {String} notes
+     */
+    setNotes(notes) {
+        this['notes'] = notes;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSemantic() {
+        return this.semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} semantic
+     */
+    setSemantic(semantic) {
+        this['semantic'] = semantic;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getSemanticSensitives() {
+        return this.semantic_sensitives;
+    }
+
+    /**
+     * @param {Array.<String>} semanticSensitives
+     */
+    setSemanticSensitives(semanticSensitives) {
+        this['semantic_sensitives'] = semanticSensitives;
+    }
 
 }
 

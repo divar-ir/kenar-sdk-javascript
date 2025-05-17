@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsEvaluationRow();
+    instance = new KenarApiClient.AddonsEvaluationRow();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('AddonsEvaluationRow', function() {
     it('should create an instance of AddonsEvaluationRow', function() {
       // uncomment below and update the code to test AddonsEvaluationRow
-      //var instance = new KenarAPIClient.AddonsEvaluationRow();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsEvaluationRow);
+      //var instance = new KenarApiClient.AddonsEvaluationRow();
+      //expect(instance).to.be.a(KenarApiClient.AddonsEvaluationRow);
     });
 
     it('should have the property indicatorText (base name: "indicator_text")', function() {
       // uncomment below and update the code to test the property indicatorText
-      //var instance = new KenarAPIClient.AddonsEvaluationRow();
+      //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });
 
     it('should have the property indicatorPercentage (base name: "indicator_percentage")', function() {
       // uncomment below and update the code to test the property indicatorPercentage
-      //var instance = new KenarAPIClient.AddonsEvaluationRow();
+      //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });
 
     it('should have the property iconName (base name: "icon_name")', function() {
       // uncomment below and update the code to test the property iconName
-      //var instance = new KenarAPIClient.AddonsEvaluationRow();
+      //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });
 
     it('should have the property left (base name: "left")', function() {
       // uncomment below and update the code to test the property left
-      //var instance = new KenarAPIClient.AddonsEvaluationRow();
+      //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });
 
     it('should have the property middle (base name: "middle")', function() {
       // uncomment below and update the code to test the property middle
-      //var instance = new KenarAPIClient.AddonsEvaluationRow();
+      //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });
 
     it('should have the property right (base name: "right")', function() {
       // uncomment below and update the code to test the property right
-      //var instance = new KenarAPIClient.AddonsEvaluationRow();
+      //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });
 

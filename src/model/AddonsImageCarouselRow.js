@@ -17,7 +17,7 @@ import ImageCarouselRowImageItem from './ImageCarouselRowImageItem';
 /**
  * The AddonsImageCarouselRow model module.
  * @module model/AddonsImageCarouselRow
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsImageCarouselRow {
     /**
@@ -78,6 +78,32 @@ class AddonsImageCarouselRow {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/ImageCarouselRowImageItem>}
+     */
+    getItems() {
+        return this.items;
+    }
+
+    /**
+     * @param {Array.<module:model/ImageCarouselRowImageItem>} items
+     */
+    setItems(items) {
+        this['items'] = items;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasDivider() {
+        return this.has_divider;
+    }
+
+    /**
+     * @param {Boolean} hasDivider
+     */
+    setHasDivider(hasDivider) {
+        this['has_divider'] = hasDivider;
+    }
 
 }
 

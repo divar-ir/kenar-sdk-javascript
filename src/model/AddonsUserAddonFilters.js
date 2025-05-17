@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddonsUserAddonFilters model module.
  * @module model/AddonsUserAddonFilters
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsUserAddonFilters {
     /**
@@ -68,6 +68,19 @@ class AddonsUserAddonFilters {
         return true;
     }
 
+/**
+     * @return {Array.<String>}
+     */
+    getCategories() {
+        return this.categories;
+    }
+
+    /**
+     * @param {Array.<String>} categories
+     */
+    setCategories(categories) {
+        this['categories'] = categories;
+    }
 
 }
 

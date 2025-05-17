@@ -17,7 +17,7 @@ import FinderSearchPostItem from './FinderSearchPostItem';
 /**
  * The FinderSearchPostV2Response model module.
  * @module model/FinderSearchPostV2Response
- * @version version not set
+ * @version 0.1.0
  */
 class FinderSearchPostV2Response {
     /**
@@ -75,6 +75,19 @@ class FinderSearchPostV2Response {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/FinderSearchPostItem>}
+     */
+    getPosts() {
+        return this.posts;
+    }
+
+    /**
+     * @param {Array.<module:model/FinderSearchPostItem>} posts
+     */
+    setPosts(posts) {
+        this['posts'] = posts;
+    }
 
 }
 

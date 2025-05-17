@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonSemanticIdentityVerificationStage
+# KenarApiClient.AddonSemanticIdentityVerificationStage
 
 ## Enum
 

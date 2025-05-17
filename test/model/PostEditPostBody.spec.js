@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.PostEditPostBody();
+    instance = new KenarApiClient.PostEditPostBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('PostEditPostBody', function() {
     it('should create an instance of PostEditPostBody', function() {
       // uncomment below and update the code to test PostEditPostBody
-      //var instance = new KenarAPIClient.PostEditPostBody();
-      //expect(instance).to.be.a(KenarAPIClient.PostEditPostBody);
+      //var instance = new KenarApiClient.PostEditPostBody();
+      //expect(instance).to.be.a(KenarApiClient.PostEditPostBody);
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instance = new KenarAPIClient.PostEditPostBody();
+      //var instance = new KenarApiClient.PostEditPostBody();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new KenarAPIClient.PostEditPostBody();
+      //var instance = new KenarApiClient.PostEditPostBody();
       //expect(instance).to.be();
     });
 
     it('should have the property imagePaths (base name: "image_paths")', function() {
       // uncomment below and update the code to test the property imagePaths
-      //var instance = new KenarAPIClient.PostEditPostBody();
+      //var instance = new KenarApiClient.PostEditPostBody();
       //expect(instance).to.be();
     });
 

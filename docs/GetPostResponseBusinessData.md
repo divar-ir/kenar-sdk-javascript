@@ -1,4 +1,4 @@
-# KenarAPIClient.GetPostResponseBusinessData
+# KenarApiClient.GetPostResponseBusinessData
 
 ## Properties
 

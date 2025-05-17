@@ -22,7 +22,7 @@ import AppsApp from './AppsApp';
 /**
  * The AddonsPostAddon model module.
  * @module model/AddonsPostAddon
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsPostAddon {
     /**
@@ -138,6 +138,175 @@ class AddonsPostAddon {
         return true;
     }
 
+/**
+     * @return {module:model/AddonsAddonMetaData}
+     */
+    getMetaData() {
+        return this.meta_data;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonMetaData} metaData
+     */
+    setMetaData(metaData) {
+        this['meta_data'] = metaData;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {module:model/AppsApp}
+     */
+    getApp() {
+        return this.app;
+    }
+
+    /**
+     * @param {module:model/AppsApp} app
+     */
+    setApp(app) {
+        this['app'] = app;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
+/**
+     * @return {String}
+     */
+    getScore() {
+        return this.score;
+    }
+
+    /**
+     * @param {String} score
+     */
+    setScore(score) {
+        this['score'] = score;
+    }
+/**
+     * @return {module:model/AddonsAddonSelector}
+     */
+    getSelector() {
+        return this.selector;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSelector} selector
+     */
+    setSelector(selector) {
+        this['selector'] = selector;
+    }
+/**
+     * @return {module:model/AddonsAddonLinkage}
+     */
+    getLinkage() {
+        return this.linkage;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonLinkage} linkage
+     */
+    setLinkage(linkage) {
+        this['linkage'] = linkage;
+    }
+/**
+     * @return {module:model/AddonsAddonSecondaryLinks}
+     */
+    getSecondaryLinks() {
+        return this.secondary_links;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSecondaryLinks} secondaryLinks
+     */
+    setSecondaryLinks(secondaryLinks) {
+        this['secondary_links'] = secondaryLinks;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSemantic() {
+        return this.semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} semantic
+     */
+    setSemantic(semantic) {
+        this['semantic'] = semantic;
+    }
+/**
+     * @return {module:model/AddonsAddonSemantic}
+     */
+    getSemanticData() {
+        return this.semantic_data;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSemantic} semanticData
+     */
+    setSemanticData(semanticData) {
+        this['semantic_data'] = semanticData;
+    }
+/**
+     * @return {Object.<String, String>}
+     */
+    getSensitiveSemantic() {
+        return this.sensitive_semantic;
+    }
+
+    /**
+     * @param {Object.<String, String>} sensitiveSemantic
+     */
+    setSensitiveSemantic(sensitiveSemantic) {
+        this['sensitive_semantic'] = sensitiveSemantic;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgetsSemantic() {
+        return this.widgets_semantic;
+    }
+
+    /**
+     * @param {Object} widgetsSemantic
+     */
+    setWidgetsSemantic(widgetsSemantic) {
+        this['widgets_semantic'] = widgetsSemantic;
+    }
+/**
+     * @return {Array.<String>}
+     */
+    getSemanticSensitives() {
+        return this.semantic_sensitives;
+    }
+
+    /**
+     * @param {Array.<String>} semanticSensitives
+     */
+    setSemanticSensitives(semanticSensitives) {
+        this['semantic_sensitives'] = semanticSensitives;
+    }
 
 }
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.MessageVoiceData();
+    instance = new KenarApiClient.MessageVoiceData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('MessageVoiceData', function() {
     it('should create an instance of MessageVoiceData', function() {
       // uncomment below and update the code to test MessageVoiceData
-      //var instance = new KenarAPIClient.MessageVoiceData();
-      //expect(instance).to.be.a(KenarAPIClient.MessageVoiceData);
+      //var instance = new KenarApiClient.MessageVoiceData();
+      //expect(instance).to.be.a(KenarApiClient.MessageVoiceData);
     });
 
     it('should have the property link (base name: "link")', function() {
       // uncomment below and update the code to test the property link
-      //var instance = new KenarAPIClient.MessageVoiceData();
+      //var instance = new KenarApiClient.MessageVoiceData();
       //expect(instance).to.be();
     });
 
     it('should have the property sizeBytes (base name: "size_bytes")', function() {
       // uncomment below and update the code to test the property sizeBytes
-      //var instance = new KenarAPIClient.MessageVoiceData();
+      //var instance = new KenarApiClient.MessageVoiceData();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ChatapiGetConversationResponse();
+    instance = new KenarApiClient.ChatapiGetConversationResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('ChatapiGetConversationResponse', function() {
     it('should create an instance of ChatapiGetConversationResponse', function() {
       // uncomment below and update the code to test ChatapiGetConversationResponse
-      //var instance = new KenarAPIClient.ChatapiGetConversationResponse();
-      //expect(instance).to.be.a(KenarAPIClient.ChatapiGetConversationResponse);
+      //var instance = new KenarApiClient.ChatapiGetConversationResponse();
+      //expect(instance).to.be.a(KenarApiClient.ChatapiGetConversationResponse);
     });
 
     it('should have the property conversation (base name: "conversation")', function() {
       // uncomment below and update the code to test the property conversation
-      //var instance = new KenarAPIClient.ChatapiGetConversationResponse();
+      //var instance = new KenarApiClient.ChatapiGetConversationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property messages (base name: "messages")', function() {
       // uncomment below and update the code to test the property messages
-      //var instance = new KenarAPIClient.ChatapiGetConversationResponse();
+      //var instance = new KenarApiClient.ChatapiGetConversationResponse();
       //expect(instance).to.be();
     });
 

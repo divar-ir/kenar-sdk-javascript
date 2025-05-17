@@ -17,7 +17,7 @@ import AssetsEnumOption from './AssetsEnumOption';
 /**
  * The AssetsGetBodyStatusesResponse model module.
  * @module model/AssetsGetBodyStatusesResponse
- * @version version not set
+ * @version 0.1.0
  */
 class AssetsGetBodyStatusesResponse {
     /**
@@ -75,6 +75,19 @@ class AssetsGetBodyStatusesResponse {
         return true;
     }
 
+/**
+     * @return {Array.<module:model/AssetsEnumOption>}
+     */
+    getBodyStatus() {
+        return this.body_status;
+    }
+
+    /**
+     * @param {Array.<module:model/AssetsEnumOption>} bodyStatus
+     */
+    setBodyStatus(bodyStatus) {
+        this['body_status'] = bodyStatus;
+    }
 
 }
 

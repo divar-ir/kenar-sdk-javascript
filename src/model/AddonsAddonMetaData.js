@@ -19,7 +19,7 @@ import AppsServiceTag from './AppsServiceTag';
 /**
  * The AddonsAddonMetaData model module.
  * @module model/AddonsAddonMetaData
- * @version version not set
+ * @version 0.1.0
  */
 class AddonsAddonMetaData {
     /**
@@ -94,6 +94,84 @@ class AddonsAddonMetaData {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * @param {String} id
+     */
+    setId(id) {
+        this['id'] = id;
+    }
+/**
+     * @return {module:model/AppsApp}
+     */
+    getApp() {
+        return this.app;
+    }
+
+    /**
+     * @param {module:model/AppsApp} app
+     */
+    setApp(app) {
+        this['app'] = app;
+    }
+/**
+     * @return {Date}
+     */
+    getCreatedAt() {
+        return this.created_at;
+    }
+
+    /**
+     * @param {Date} createdAt
+     */
+    setCreatedAt(createdAt) {
+        this['created_at'] = createdAt;
+    }
+/**
+     * @return {Date}
+     */
+    getLastModified() {
+        return this.last_modified;
+    }
+
+    /**
+     * @param {Date} lastModified
+     */
+    setLastModified(lastModified) {
+        this['last_modified'] = lastModified;
+    }
+/**
+     * @return {module:model/AddonsStatus}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {module:model/AddonsStatus} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
+/**
+     * @return {Array.<module:model/AppsServiceTag>}
+     */
+    getServiceTags() {
+        return this.service_tags;
+    }
+
+    /**
+     * @param {Array.<module:model/AppsServiceTag>} serviceTags
+     */
+    setServiceTags(serviceTags) {
+        this['service_tags'] = serviceTags;
+    }
 
 }
 

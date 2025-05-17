@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AuthorizationAPICallerInfo();
+    instance = new KenarApiClient.AuthorizationAPICallerInfo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('AuthorizationAPICallerInfo', function() {
     it('should create an instance of AuthorizationAPICallerInfo', function() {
       // uncomment below and update the code to test AuthorizationAPICallerInfo
-      //var instance = new KenarAPIClient.AuthorizationAPICallerInfo();
-      //expect(instance).to.be.a(KenarAPIClient.AuthorizationAPICallerInfo);
+      //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
+      //expect(instance).to.be.a(KenarApiClient.AuthorizationAPICallerInfo);
     });
 
     it('should have the property apiKeyId (base name: "api_key_id")', function() {
       // uncomment below and update the code to test the property apiKeyId
-      //var instance = new KenarAPIClient.AuthorizationAPICallerInfo();
+      //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property app (base name: "app")', function() {
       // uncomment below and update the code to test the property app
-      //var instance = new KenarAPIClient.AuthorizationAPICallerInfo();
+      //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property scopes (base name: "scopes")', function() {
       // uncomment below and update the code to test the property scopes
-      //var instance = new KenarAPIClient.AuthorizationAPICallerInfo();
+      //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property apiKeyIdV2 (base name: "api_key_id_v2")', function() {
       // uncomment below and update the code to test the property apiKeyIdV2
-      //var instance = new KenarAPIClient.AuthorizationAPICallerInfo();
+      //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
       //expect(instance).to.be();
     });
 

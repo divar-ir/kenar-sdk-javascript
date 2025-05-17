@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentReorderPostResponse model module.
  * @module model/PaymentReorderPostResponse
- * @version version not set
+ * @version 0.1.0
  */
 class PaymentReorderPostResponse {
     /**
@@ -75,6 +75,36 @@ class PaymentReorderPostResponse {
         return true;
     }
 
+/**
+     * Returns Same uuid when creating transaction
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * Sets Same uuid when creating transaction
+     * @param {String} id Same uuid when creating transaction
+     */
+    setId(id) {
+        this['id'] = id;
+    }
+/**
+     * Returns The cost of the transaction in rials for your application
+     * @return {String}
+     */
+    getCostRials() {
+        return this.cost_rials;
+    }
+
+    /**
+     * Sets The cost of the transaction in rials for your application
+     * @param {String} costRials The cost of the transaction in rials for your application
+     */
+    setCostRials(costRials) {
+        this['cost_rials'] = costRials;
+    }
 
 }
 

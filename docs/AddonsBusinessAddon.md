@@ -1,4 +1,4 @@
-# KenarAPIClient.AddonsBusinessAddon
+# KenarApiClient.AddonsBusinessAddon
 
 ## Properties
 

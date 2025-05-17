@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetServiceTypesResponse();
+    instance = new KenarApiClient.AssetsGetServiceTypesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetServiceTypesResponse', function() {
     it('should create an instance of AssetsGetServiceTypesResponse', function() {
       // uncomment below and update the code to test AssetsGetServiceTypesResponse
-      //var instance = new KenarAPIClient.AssetsGetServiceTypesResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetServiceTypesResponse);
+      //var instance = new KenarApiClient.AssetsGetServiceTypesResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetServiceTypesResponse);
     });
 
     it('should have the property serviceTypes (base name: "service_types")', function() {
       // uncomment below and update the code to test the property serviceTypes
-      //var instance = new KenarAPIClient.AssetsGetServiceTypesResponse();
+      //var instance = new KenarApiClient.AssetsGetServiceTypesResponse();
       //expect(instance).to.be();
     });
 

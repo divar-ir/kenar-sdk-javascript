@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AddonsAction();
+    instance = new KenarApiClient.AddonsAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('AddonsAction', function() {
     it('should create an instance of AddonsAction', function() {
       // uncomment below and update the code to test AddonsAction
-      //var instance = new KenarAPIClient.AddonsAction();
-      //expect(instance).to.be.a(KenarAPIClient.AddonsAction);
+      //var instance = new KenarApiClient.AddonsAction();
+      //expect(instance).to.be.a(KenarApiClient.AddonsAction);
     });
 
     it('should have the property openDirectLink (base name: "open_direct_link")', function() {
       // uncomment below and update the code to test the property openDirectLink
-      //var instance = new KenarAPIClient.AddonsAction();
+      //var instance = new KenarApiClient.AddonsAction();
       //expect(instance).to.be();
     });
 
     it('should have the property openServerLink (base name: "open_server_link")', function() {
       // uncomment below and update the code to test the property openServerLink
-      //var instance = new KenarAPIClient.AddonsAction();
+      //var instance = new KenarApiClient.AddonsAction();
       //expect(instance).to.be();
     });
 
     it('should have the property getDynamicAction (base name: "get_dynamic_action")', function() {
       // uncomment below and update the code to test the property getDynamicAction
-      //var instance = new KenarAPIClient.AddonsAction();
+      //var instance = new KenarApiClient.AddonsAction();
       //expect(instance).to.be();
     });
 

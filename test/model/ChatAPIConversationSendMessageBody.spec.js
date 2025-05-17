@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.ChatAPIConversationSendMessageBody();
+    instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ChatAPIConversationSendMessageBody', function() {
     it('should create an instance of ChatAPIConversationSendMessageBody', function() {
       // uncomment below and update the code to test ChatAPIConversationSendMessageBody
-      //var instance = new KenarAPIClient.ChatAPIConversationSendMessageBody();
-      //expect(instance).to.be.a(KenarAPIClient.ChatAPIConversationSendMessageBody);
+      //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
+      //expect(instance).to.be.a(KenarApiClient.ChatAPIConversationSendMessageBody);
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instance = new KenarAPIClient.ChatAPIConversationSendMessageBody();
+      //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
       //expect(instance).to.be();
     });
 
     it('should have the property mediaToken (base name: "media_token")', function() {
       // uncomment below and update the code to test the property mediaToken
-      //var instance = new KenarAPIClient.ChatAPIConversationSendMessageBody();
+      //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
       //expect(instance).to.be();
     });
 
     it('should have the property senderButtons (base name: "sender_buttons")', function() {
       // uncomment below and update the code to test the property senderButtons
-      //var instance = new KenarAPIClient.ChatAPIConversationSendMessageBody();
+      //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
       //expect(instance).to.be();
     });
 
     it('should have the property receiverButtons (base name: "receiver_buttons")', function() {
       // uncomment below and update the code to test the property receiverButtons
-      //var instance = new KenarAPIClient.ChatAPIConversationSendMessageBody();
+      //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
       //expect(instance).to.be();
     });
 

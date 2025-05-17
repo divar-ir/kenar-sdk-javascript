@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.KenarAPIClient);
+    factory(root.expect, root.KenarApiClient);
   }
-}(this, function(expect, KenarAPIClient) {
+}(this, function(expect, KenarApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new KenarAPIClient.AssetsGetBrandModelsResponse();
+    instance = new KenarApiClient.AssetsGetBrandModelsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('AssetsGetBrandModelsResponse', function() {
     it('should create an instance of AssetsGetBrandModelsResponse', function() {
       // uncomment below and update the code to test AssetsGetBrandModelsResponse
-      //var instance = new KenarAPIClient.AssetsGetBrandModelsResponse();
-      //expect(instance).to.be.a(KenarAPIClient.AssetsGetBrandModelsResponse);
+      //var instance = new KenarApiClient.AssetsGetBrandModelsResponse();
+      //expect(instance).to.be.a(KenarApiClient.AssetsGetBrandModelsResponse);
     });
 
     it('should have the property brandModels (base name: "brand_models")', function() {
       // uncomment below and update the code to test the property brandModels
-      //var instance = new KenarAPIClient.AssetsGetBrandModelsResponse();
+      //var instance = new KenarApiClient.AssetsGetBrandModelsResponse();
       //expect(instance).to.be();
     });
 
