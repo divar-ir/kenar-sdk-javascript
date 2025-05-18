@@ -13,31 +13,24 @@
 
 import ApiClient from '../ApiClient';
 /**
-* Enum class AddonSemanticOwnershipResult.
+* Enum class AddonsAddonSemanticPaymentMethod.
 * @enum {}
 * @readonly
 */
-export default class AddonSemanticOwnershipResult {
+export default class AddonsAddonSemanticPaymentMethod {
     
         /**
-         * value: "OWNERSHIP_CONFIRMED"
+         * value: "SECURE"
          * @const
          */
-        "OWNERSHIP_CONFIRMED" = "OWNERSHIP_CONFIRMED";
-
-    
-        /**
-         * value: "OWNERSHIP_DELEGATION_CONFIRMED"
-         * @const
-         */
-        "OWNERSHIP_DELEGATION_CONFIRMED" = "OWNERSHIP_DELEGATION_CONFIRMED";
+        "SECURE" = "SECURE";
 
     
 
     /**
-    * Returns a <code>AddonSemanticOwnershipResult</code> enum value from a Javascript object name.
+    * Returns a <code>AddonsAddonSemanticPaymentMethod</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/AddonSemanticOwnershipResult} The enum <code>AddonSemanticOwnershipResult</code> value.
+    * @return {module:model/AddonsAddonSemanticPaymentMethod} The enum <code>AddonsAddonSemanticPaymentMethod</code> value.
     */
     static constructFromObject(object) {
         return object;

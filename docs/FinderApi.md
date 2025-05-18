@@ -1,6 +1,6 @@
 # KenarApiClient.FinderApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Get a Divar post
 
-This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state in order to implement your service. 
+This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
 
 ### Example
 

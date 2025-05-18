@@ -46,11 +46,11 @@
       object[property] = value;
   }
 
-  describe('PaymentTransactionType', function() {
-    it('should create an instance of PaymentTransactionType', function() {
-      // uncomment below and update the code to test PaymentTransactionType
-      //var instance = new KenarApiClient.PaymentTransactionType();
-      //expect(instance).to.be.a(KenarApiClient.PaymentTransactionType);
+  describe('AddonsAddonSemanticPaymentMethod', function() {
+    it('should create an instance of AddonsAddonSemanticPaymentMethod', function() {
+      // uncomment below and update the code to test AddonsAddonSemanticPaymentMethod
+      //var instance = new KenarApiClient.AddonsAddonSemanticPaymentMethod();
+      //expect(instance).to.be.a(KenarApiClient.AddonsAddonSemanticPaymentMethod);
     });
 
   });

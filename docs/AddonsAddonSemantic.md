@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paymentMethod** | [**AddonSemanticPaymentMethod**](AddonSemanticPaymentMethod.md) |  | [optional] 
+**paymentMethod** | [**AddonsAddonSemanticPaymentMethod**](AddonsAddonSemanticPaymentMethod.md) |  | [optional] 
 **identityVerificationResult** | [**AddonSemanticIdentityVerificationResult**](AddonSemanticIdentityVerificationResult.md) |  | [optional] 
 **postVerificationResult** | [**AddonSemanticPostVerificationResult**](AddonSemanticPostVerificationResult.md) |  | [optional] 
 **status** | [**AddonsAddonSemanticStatus**](AddonsAddonSemanticStatus.md) |  | [optional] 

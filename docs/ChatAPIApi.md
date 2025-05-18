@@ -1,6 +1,6 @@
 # KenarApiClient.ChatAPIApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,7 +27,7 @@ You can call this API with either conversation_id or user_id. Calling with user_
 import KenarApiClient from 'kenar-api-client';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | 
+let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage(conversationId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -42,7 +42,7 @@ apiInstance.chatAPIChatBotSendMessage(conversationId, chatAPIChatBotSendMessageB
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**|  | 
+ **conversationId** | **String**| Unique identifier for the conversation | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -73,7 +73,7 @@ You can call this API with either conversation_id or user_id. Calling with user_
 import KenarApiClient from 'kenar-api-client';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let userId = "userId_example"; // String | 
+let userId = "userId_example"; // String | Unique identifier for the user to start or continue a conversation with
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage2(userId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -88,7 +88,7 @@ apiInstance.chatAPIChatBotSendMessage2(userId, chatAPIChatBotSendMessageBody).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **String**|  | 
+ **userId** | **String**| Unique identifier for the user to start or continue a conversation with | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -119,7 +119,7 @@ You can call this API with either conversation_id or user_id. Calling with user_
 import KenarApiClient from 'kenar-api-client';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | 
+let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage3(conversationId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -134,7 +134,7 @@ apiInstance.chatAPIChatBotSendMessage3(conversationId, chatAPIChatBotSendMessage
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**|  | 
+ **conversationId** | **String**| Unique identifier for the conversation | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -165,7 +165,7 @@ This API is used to send a message to a conversation. You need one of the follow
 import KenarApiClient from 'kenar-api-client';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | 
+let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
 let chatAPIConversationSendMessageBody = new KenarApiClient.ChatAPIConversationSendMessageBody(); // ChatAPIConversationSendMessageBody | 
 apiInstance.chatAPIConversationSendMessage(conversationId, chatAPIConversationSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -180,7 +180,7 @@ apiInstance.chatAPIConversationSendMessage(conversationId, chatAPIConversationSe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**|  | 
+ **conversationId** | **String**| Unique identifier for the conversation | 
  **chatAPIConversationSendMessageBody** | [**ChatAPIConversationSendMessageBody**](ChatAPIConversationSendMessageBody.md)|  | 
 
 ### Return type
@@ -255,7 +255,7 @@ This API is used to get the conversation and messages of a conversation by it&#3
 import KenarApiClient from 'kenar-api-client';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | 
+let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
 apiInstance.chatAPIGetConversation(conversationId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -269,7 +269,7 @@ apiInstance.chatAPIGetConversation(conversationId).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**|  | 
+ **conversationId** | **String**| Unique identifier for the conversation | 
 
 ### Return type
 

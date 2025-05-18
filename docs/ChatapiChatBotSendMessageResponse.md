@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conversationId** | **String** |  | [optional] 
+**conversationId** | **String** | ID of the conversation created or updated | [optional] [readonly] 
 
 

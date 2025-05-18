@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **String** |  | [optional] 
+**token** | **String** | A url safe base64 encoded token that can be used in the upload endpoint | [optional] [readonly] 
 
 
