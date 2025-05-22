@@ -47,14 +47,14 @@ class SearchPostItemVehiclesFields {
         if (data) {
             obj = obj || new SearchPostItemVehiclesFields();
 
-            if (data.hasOwnProperty('usage')) {
-                obj['usage'] = ApiClient.convertToType(data['usage'], 'String');
+            if (data.hasOwnProperty('custom_post_subtitle')) {
+                obj['custom_post_subtitle'] = ApiClient.convertToType(data['custom_post_subtitle'], 'String');
             }
             if (data.hasOwnProperty('installment_sale')) {
                 obj['installment_sale'] = ApiClient.convertToType(data['installment_sale'], 'String');
             }
-            if (data.hasOwnProperty('custom_post_subtitle')) {
-                obj['custom_post_subtitle'] = ApiClient.convertToType(data['custom_post_subtitle'], 'String');
+            if (data.hasOwnProperty('usage')) {
+                obj['usage'] = ApiClient.convertToType(data['usage'], 'String');
             }
         }
         return obj;
@@ -67,16 +67,16 @@ class SearchPostItemVehiclesFields {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['usage'] && !(typeof data['usage'] === 'string' || data['usage'] instanceof String)) {
-            throw new Error("Expected the field `usage` to be a primitive type in the JSON string but got " + data['usage']);
+        if (data['custom_post_subtitle'] && !(typeof data['custom_post_subtitle'] === 'string' || data['custom_post_subtitle'] instanceof String)) {
+            throw new Error("Expected the field `custom_post_subtitle` to be a primitive type in the JSON string but got " + data['custom_post_subtitle']);
         }
         // ensure the json data is a string
         if (data['installment_sale'] && !(typeof data['installment_sale'] === 'string' || data['installment_sale'] instanceof String)) {
             throw new Error("Expected the field `installment_sale` to be a primitive type in the JSON string but got " + data['installment_sale']);
         }
         // ensure the json data is a string
-        if (data['custom_post_subtitle'] && !(typeof data['custom_post_subtitle'] === 'string' || data['custom_post_subtitle'] instanceof String)) {
-            throw new Error("Expected the field `custom_post_subtitle` to be a primitive type in the JSON string but got " + data['custom_post_subtitle']);
+        if (data['usage'] && !(typeof data['usage'] === 'string' || data['usage'] instanceof String)) {
+            throw new Error("Expected the field `usage` to be a primitive type in the JSON string but got " + data['usage']);
         }
 
         return true;
@@ -85,15 +85,15 @@ class SearchPostItemVehiclesFields {
 /**
      * @return {String}
      */
-    getUsage() {
-        return this.usage;
+    getCustomPostSubtitle() {
+        return this.custom_post_subtitle;
     }
 
     /**
-     * @param {String} usage
+     * @param {String} customPostSubtitle
      */
-    setUsage(usage) {
-        this['usage'] = usage;
+    setCustomPostSubtitle(customPostSubtitle) {
+        this['custom_post_subtitle'] = customPostSubtitle;
     }
 /**
      * @return {String}
@@ -111,15 +111,15 @@ class SearchPostItemVehiclesFields {
 /**
      * @return {String}
      */
-    getCustomPostSubtitle() {
-        return this.custom_post_subtitle;
+    getUsage() {
+        return this.usage;
     }
 
     /**
-     * @param {String} customPostSubtitle
+     * @param {String} usage
      */
-    setCustomPostSubtitle(customPostSubtitle) {
-        this['custom_post_subtitle'] = customPostSubtitle;
+    setUsage(usage) {
+        this['usage'] = usage;
     }
 
 }
@@ -127,9 +127,9 @@ class SearchPostItemVehiclesFields {
 
 
 /**
- * @member {String} usage
+ * @member {String} custom_post_subtitle
  */
-SearchPostItemVehiclesFields.prototype['usage'] = undefined;
+SearchPostItemVehiclesFields.prototype['custom_post_subtitle'] = undefined;
 
 /**
  * @member {String} installment_sale
@@ -137,9 +137,9 @@ SearchPostItemVehiclesFields.prototype['usage'] = undefined;
 SearchPostItemVehiclesFields.prototype['installment_sale'] = undefined;
 
 /**
- * @member {String} custom_post_subtitle
+ * @member {String} usage
  */
-SearchPostItemVehiclesFields.prototype['custom_post_subtitle'] = undefined;
+SearchPostItemVehiclesFields.prototype['usage'] = undefined;
 
 
 

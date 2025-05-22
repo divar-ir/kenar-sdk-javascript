@@ -54,26 +54,26 @@
       //expect(instance).to.be.a(KenarApiClient.ManagementDevelopmentPost);
     });
 
-    it('should have the property preset (base name: "preset")', function() {
-      // uncomment below and update the code to test the property preset
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
-      //expect(instance).to.be();
-    });
-
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
       //var instance = new KenarApiClient.ManagementDevelopmentPost();
       //expect(instance).to.be();
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
+    it('should have the property mngToken (base name: "mng_token")', function() {
+      // uncomment below and update the code to test the property mngToken
       //var instance = new KenarApiClient.ManagementDevelopmentPost();
       //expect(instance).to.be();
     });
 
-    it('should have the property mngToken (base name: "mng_token")', function() {
-      // uncomment below and update the code to test the property mngToken
+    it('should have the property preset (base name: "preset")', function() {
+      // uncomment below and update the code to test the property preset
+      //var instance = new KenarApiClient.ManagementDevelopmentPost();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
       //var instance = new KenarApiClient.ManagementDevelopmentPost();
       //expect(instance).to.be();
     });

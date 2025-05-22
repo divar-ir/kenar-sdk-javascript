@@ -53,29 +53,23 @@ class AddonsPostAddon {
         if (data) {
             obj = obj || new AddonsPostAddon();
 
-            if (data.hasOwnProperty('meta_data')) {
-                obj['meta_data'] = AddonsAddonMetaData.constructFromObject(data['meta_data']);
-            }
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
             if (data.hasOwnProperty('app')) {
                 obj['app'] = AppsApp.constructFromObject(data['app']);
-            }
-            if (data.hasOwnProperty('widgets')) {
-                obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
-            }
-            if (data.hasOwnProperty('score')) {
-                obj['score'] = ApiClient.convertToType(data['score'], 'String');
-            }
-            if (data.hasOwnProperty('selector')) {
-                obj['selector'] = AddonsAddonSelector.constructFromObject(data['selector']);
             }
             if (data.hasOwnProperty('linkage')) {
                 obj['linkage'] = AddonsAddonLinkage.constructFromObject(data['linkage']);
             }
+            if (data.hasOwnProperty('meta_data')) {
+                obj['meta_data'] = AddonsAddonMetaData.constructFromObject(data['meta_data']);
+            }
+            if (data.hasOwnProperty('score')) {
+                obj['score'] = ApiClient.convertToType(data['score'], 'String');
+            }
             if (data.hasOwnProperty('secondary_links')) {
                 obj['secondary_links'] = AddonsAddonSecondaryLinks.constructFromObject(data['secondary_links']);
+            }
+            if (data.hasOwnProperty('selector')) {
+                obj['selector'] = AddonsAddonSelector.constructFromObject(data['selector']);
             }
             if (data.hasOwnProperty('semantic')) {
                 obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
@@ -83,14 +77,20 @@ class AddonsPostAddon {
             if (data.hasOwnProperty('semantic_data')) {
                 obj['semantic_data'] = AddonsAddonSemantic.constructFromObject(data['semantic_data']);
             }
+            if (data.hasOwnProperty('semantic_sensitives')) {
+                obj['semantic_sensitives'] = ApiClient.convertToType(data['semantic_sensitives'], ['String']);
+            }
             if (data.hasOwnProperty('sensitive_semantic')) {
                 obj['sensitive_semantic'] = ApiClient.convertToType(data['sensitive_semantic'], {'String': 'String'});
             }
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
+            }
+            if (data.hasOwnProperty('widgets')) {
+                obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
+            }
             if (data.hasOwnProperty('widgets_semantic')) {
                 obj['widgets_semantic'] = ApiClient.convertToType(data['widgets_semantic'], Object);
-            }
-            if (data.hasOwnProperty('semantic_sensitives')) {
-                obj['semantic_sensitives'] = ApiClient.convertToType(data['semantic_sensitives'], ['String']);
             }
         }
         return obj;
@@ -102,29 +102,25 @@ class AddonsPostAddon {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsPostAddon</code>.
      */
     static validateJSON(data) {
+        // validate the optional field `app`
+        if (data['app']) { // data not null
+          AppsApp.validateJSON(data['app']);
+        }
         // validate the optional field `meta_data`
         if (data['meta_data']) { // data not null
           AddonsAddonMetaData.validateJSON(data['meta_data']);
         }
         // ensure the json data is a string
-        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
-            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
-        }
-        // validate the optional field `app`
-        if (data['app']) { // data not null
-          AppsApp.validateJSON(data['app']);
-        }
-        // ensure the json data is a string
         if (data['score'] && !(typeof data['score'] === 'string' || data['score'] instanceof String)) {
             throw new Error("Expected the field `score` to be a primitive type in the JSON string but got " + data['score']);
-        }
-        // validate the optional field `selector`
-        if (data['selector']) { // data not null
-          AddonsAddonSelector.validateJSON(data['selector']);
         }
         // validate the optional field `secondary_links`
         if (data['secondary_links']) { // data not null
           AddonsAddonSecondaryLinks.validateJSON(data['secondary_links']);
+        }
+        // validate the optional field `selector`
+        if (data['selector']) { // data not null
+          AddonsAddonSelector.validateJSON(data['selector']);
         }
         // validate the optional field `semantic_data`
         if (data['semantic_data']) { // data not null
@@ -134,10 +130,40 @@ class AddonsPostAddon {
         if (!Array.isArray(data['semantic_sensitives'])) {
             throw new Error("Expected the field `semantic_sensitives` to be an array in the JSON data but got " + data['semantic_sensitives']);
         }
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
+        }
 
         return true;
     }
 
+/**
+     * @return {module:model/AppsApp}
+     */
+    getApp() {
+        return this.app;
+    }
+
+    /**
+     * @param {module:model/AppsApp} app
+     */
+    setApp(app) {
+        this['app'] = app;
+    }
+/**
+     * @return {module:model/AddonsAddonLinkage}
+     */
+    getLinkage() {
+        return this.linkage;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonLinkage} linkage
+     */
+    setLinkage(linkage) {
+        this['linkage'] = linkage;
+    }
 /**
      * @return {module:model/AddonsAddonMetaData}
      */
@@ -154,45 +180,6 @@ class AddonsPostAddon {
 /**
      * @return {String}
      */
-    getToken() {
-        return this.token;
-    }
-
-    /**
-     * @param {String} token
-     */
-    setToken(token) {
-        this['token'] = token;
-    }
-/**
-     * @return {module:model/AppsApp}
-     */
-    getApp() {
-        return this.app;
-    }
-
-    /**
-     * @param {module:model/AppsApp} app
-     */
-    setApp(app) {
-        this['app'] = app;
-    }
-/**
-     * @return {Object}
-     */
-    getWidgets() {
-        return this.widgets;
-    }
-
-    /**
-     * @param {Object} widgets
-     */
-    setWidgets(widgets) {
-        this['widgets'] = widgets;
-    }
-/**
-     * @return {String}
-     */
     getScore() {
         return this.score;
     }
@@ -202,32 +189,6 @@ class AddonsPostAddon {
      */
     setScore(score) {
         this['score'] = score;
-    }
-/**
-     * @return {module:model/AddonsAddonSelector}
-     */
-    getSelector() {
-        return this.selector;
-    }
-
-    /**
-     * @param {module:model/AddonsAddonSelector} selector
-     */
-    setSelector(selector) {
-        this['selector'] = selector;
-    }
-/**
-     * @return {module:model/AddonsAddonLinkage}
-     */
-    getLinkage() {
-        return this.linkage;
-    }
-
-    /**
-     * @param {module:model/AddonsAddonLinkage} linkage
-     */
-    setLinkage(linkage) {
-        this['linkage'] = linkage;
     }
 /**
      * @return {module:model/AddonsAddonSecondaryLinks}
@@ -241,6 +202,19 @@ class AddonsPostAddon {
      */
     setSecondaryLinks(secondaryLinks) {
         this['secondary_links'] = secondaryLinks;
+    }
+/**
+     * @return {module:model/AddonsAddonSelector}
+     */
+    getSelector() {
+        return this.selector;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSelector} selector
+     */
+    setSelector(selector) {
+        this['selector'] = selector;
     }
 /**
      * @return {Object.<String, String>}
@@ -269,6 +243,19 @@ class AddonsPostAddon {
         this['semantic_data'] = semanticData;
     }
 /**
+     * @return {Array.<String>}
+     */
+    getSemanticSensitives() {
+        return this.semantic_sensitives;
+    }
+
+    /**
+     * @param {Array.<String>} semanticSensitives
+     */
+    setSemanticSensitives(semanticSensitives) {
+        this['semantic_sensitives'] = semanticSensitives;
+    }
+/**
      * @return {Object.<String, String>}
      */
     getSensitiveSemantic() {
@@ -280,6 +267,32 @@ class AddonsPostAddon {
      */
     setSensitiveSemantic(sensitiveSemantic) {
         this['sensitive_semantic'] = sensitiveSemantic;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
     }
 /**
      * @return {Object}
@@ -294,33 +307,10 @@ class AddonsPostAddon {
     setWidgetsSemantic(widgetsSemantic) {
         this['widgets_semantic'] = widgetsSemantic;
     }
-/**
-     * @return {Array.<String>}
-     */
-    getSemanticSensitives() {
-        return this.semantic_sensitives;
-    }
-
-    /**
-     * @param {Array.<String>} semanticSensitives
-     */
-    setSemanticSensitives(semanticSensitives) {
-        this['semantic_sensitives'] = semanticSensitives;
-    }
 
 }
 
 
-
-/**
- * @member {module:model/AddonsAddonMetaData} meta_data
- */
-AddonsPostAddon.prototype['meta_data'] = undefined;
-
-/**
- * @member {String} token
- */
-AddonsPostAddon.prototype['token'] = undefined;
 
 /**
  * @member {module:model/AppsApp} app
@@ -328,9 +318,14 @@ AddonsPostAddon.prototype['token'] = undefined;
 AddonsPostAddon.prototype['app'] = undefined;
 
 /**
- * @member {Object} widgets
+ * @member {module:model/AddonsAddonLinkage} linkage
  */
-AddonsPostAddon.prototype['widgets'] = undefined;
+AddonsPostAddon.prototype['linkage'] = undefined;
+
+/**
+ * @member {module:model/AddonsAddonMetaData} meta_data
+ */
+AddonsPostAddon.prototype['meta_data'] = undefined;
 
 /**
  * @member {String} score
@@ -338,19 +333,14 @@ AddonsPostAddon.prototype['widgets'] = undefined;
 AddonsPostAddon.prototype['score'] = undefined;
 
 /**
- * @member {module:model/AddonsAddonSelector} selector
- */
-AddonsPostAddon.prototype['selector'] = undefined;
-
-/**
- * @member {module:model/AddonsAddonLinkage} linkage
- */
-AddonsPostAddon.prototype['linkage'] = undefined;
-
-/**
  * @member {module:model/AddonsAddonSecondaryLinks} secondary_links
  */
 AddonsPostAddon.prototype['secondary_links'] = undefined;
+
+/**
+ * @member {module:model/AddonsAddonSelector} selector
+ */
+AddonsPostAddon.prototype['selector'] = undefined;
 
 /**
  * @member {Object.<String, String>} semantic
@@ -363,19 +353,29 @@ AddonsPostAddon.prototype['semantic'] = undefined;
 AddonsPostAddon.prototype['semantic_data'] = undefined;
 
 /**
+ * @member {Array.<String>} semantic_sensitives
+ */
+AddonsPostAddon.prototype['semantic_sensitives'] = undefined;
+
+/**
  * @member {Object.<String, String>} sensitive_semantic
  */
 AddonsPostAddon.prototype['sensitive_semantic'] = undefined;
 
 /**
+ * @member {String} token
+ */
+AddonsPostAddon.prototype['token'] = undefined;
+
+/**
+ * @member {Object} widgets
+ */
+AddonsPostAddon.prototype['widgets'] = undefined;
+
+/**
  * @member {Object} widgets_semantic
  */
 AddonsPostAddon.prototype['widgets_semantic'] = undefined;
-
-/**
- * @member {Array.<String>} semantic_sensitives
- */
-AddonsPostAddon.prototype['semantic_sensitives'] = undefined;
 
 
 

@@ -47,11 +47,11 @@ class ChatapiConversationSendMessageResponse {
         if (data) {
             obj = obj || new ChatapiConversationSendMessageResponse();
 
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'Number');
-            }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'Number');
             }
         }
         return obj;
@@ -72,19 +72,6 @@ class ChatapiConversationSendMessageResponse {
     }
 
 /**
-     * @return {Number}
-     */
-    getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @param {Number} status
-     */
-    setStatus(status) {
-        this['status'] = status;
-    }
-/**
      * @return {String}
      */
     getMessage() {
@@ -97,20 +84,33 @@ class ChatapiConversationSendMessageResponse {
     setMessage(message) {
         this['message'] = message;
     }
+/**
+     * @return {Number}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {Number} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
 
 }
 
 
 
 /**
- * @member {Number} status
- */
-ChatapiConversationSendMessageResponse.prototype['status'] = undefined;
-
-/**
  * @member {String} message
  */
 ChatapiConversationSendMessageResponse.prototype['message'] = undefined;
+
+/**
+ * @member {Number} status
+ */
+ChatapiConversationSendMessageResponse.prototype['status'] = undefined;
 
 
 

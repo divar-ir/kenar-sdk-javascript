@@ -24,6 +24,12 @@ This API allows you to get details about Divar post by its token. You can use th
 
 ```javascript
 import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.FinderApi();
 let token = "token_example"; // String | 
@@ -48,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -68,6 +74,12 @@ After gaining an access token, you can use this API to get user information. Wit
 
 ```javascript
 import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.FinderApi();
 let body = {key: null}; // Object | 
@@ -92,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -112,6 +124,12 @@ After gaining an access token, you can use this API to get user information. Wit
 
 ```javascript
 import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.FinderApi();
 apiInstance.finderGetUser2().then((data) => {
@@ -132,7 +150,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -152,6 +170,12 @@ This API allows you to get all posts of a user. You can use this API to show use
 
 ```javascript
 import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.FinderApi();
 apiInstance.finderGetUserPosts().then((data) => {
@@ -172,7 +196,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -192,6 +216,12 @@ This API allows you to search Divar posts with some filters. You can search post
 
 ```javascript
 import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.FinderApi();
 let finderSearchPostsV2Request = new KenarApiClient.FinderSearchPostsV2Request(); // FinderSearchPostsV2Request | 
@@ -216,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 

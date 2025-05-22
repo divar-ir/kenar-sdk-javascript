@@ -49,17 +49,17 @@ class AssetsGetOAuthScopesResponseAppOauthScope {
         if (data) {
             obj = obj || new AssetsGetOAuthScopesResponseAppOauthScope();
 
-            if (data.hasOwnProperty('slug')) {
-                obj['slug'] = OAuthScopeScope.constructFromObject(data['slug']);
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('display')) {
                 obj['display'] = ApiClient.convertToType(data['display'], 'String');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
             if (data.hasOwnProperty('lifecycle_state')) {
                 obj['lifecycle_state'] = AssetsGetOAuthScopesResponseLifeCycleState.constructFromObject(data['lifecycle_state']);
+            }
+            if (data.hasOwnProperty('slug')) {
+                obj['slug'] = OAuthScopeScope.constructFromObject(data['slug']);
             }
         }
         return obj;
@@ -72,29 +72,29 @@ class AssetsGetOAuthScopesResponseAppOauthScope {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['display'] && !(typeof data['display'] === 'string' || data['display'] instanceof String)) {
-            throw new Error("Expected the field `display` to be a primitive type in the JSON string but got " + data['display']);
-        }
-        // ensure the json data is a string
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['display'] && !(typeof data['display'] === 'string' || data['display'] instanceof String)) {
+            throw new Error("Expected the field `display` to be a primitive type in the JSON string but got " + data['display']);
         }
 
         return true;
     }
 
 /**
-     * @return {module:model/OAuthScopeScope}
+     * @return {String}
      */
-    getSlug() {
-        return this.slug;
+    getDescription() {
+        return this.description;
     }
 
     /**
-     * @param {module:model/OAuthScopeScope} slug
+     * @param {String} description
      */
-    setSlug(slug) {
-        this['slug'] = slug;
+    setDescription(description) {
+        this['description'] = description;
     }
 /**
      * @return {String}
@@ -110,19 +110,6 @@ class AssetsGetOAuthScopesResponseAppOauthScope {
         this['display'] = display;
     }
 /**
-     * @return {String}
-     */
-    getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param {String} description
-     */
-    setDescription(description) {
-        this['description'] = description;
-    }
-/**
      * @return {module:model/AssetsGetOAuthScopesResponseLifeCycleState}
      */
     getLifecycleState() {
@@ -135,20 +122,23 @@ class AssetsGetOAuthScopesResponseAppOauthScope {
     setLifecycleState(lifecycleState) {
         this['lifecycle_state'] = lifecycleState;
     }
+/**
+     * @return {module:model/OAuthScopeScope}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {module:model/OAuthScopeScope} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
 
 }
 
 
-
-/**
- * @member {module:model/OAuthScopeScope} slug
- */
-AssetsGetOAuthScopesResponseAppOauthScope.prototype['slug'] = undefined;
-
-/**
- * @member {String} display
- */
-AssetsGetOAuthScopesResponseAppOauthScope.prototype['display'] = undefined;
 
 /**
  * @member {String} description
@@ -156,9 +146,19 @@ AssetsGetOAuthScopesResponseAppOauthScope.prototype['display'] = undefined;
 AssetsGetOAuthScopesResponseAppOauthScope.prototype['description'] = undefined;
 
 /**
+ * @member {String} display
+ */
+AssetsGetOAuthScopesResponseAppOauthScope.prototype['display'] = undefined;
+
+/**
  * @member {module:model/AssetsGetOAuthScopesResponseLifeCycleState} lifecycle_state
  */
 AssetsGetOAuthScopesResponseAppOauthScope.prototype['lifecycle_state'] = undefined;
+
+/**
+ * @member {module:model/OAuthScopeScope} slug
+ */
+AssetsGetOAuthScopesResponseAppOauthScope.prototype['slug'] = undefined;
 
 
 

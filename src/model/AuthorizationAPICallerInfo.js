@@ -52,14 +52,14 @@ class AuthorizationAPICallerInfo {
             if (data.hasOwnProperty('api_key_id')) {
                 obj['api_key_id'] = ApiClient.convertToType(data['api_key_id'], 'Number');
             }
+            if (data.hasOwnProperty('api_key_id_v2')) {
+                obj['api_key_id_v2'] = ApiClient.convertToType(data['api_key_id_v2'], 'String');
+            }
             if (data.hasOwnProperty('app')) {
                 obj['app'] = AppsApp.constructFromObject(data['app']);
             }
             if (data.hasOwnProperty('scopes')) {
                 obj['scopes'] = ApiClient.convertToType(data['scopes'], [AuthorizationOAuthScope]);
-            }
-            if (data.hasOwnProperty('api_key_id_v2')) {
-                obj['api_key_id_v2'] = ApiClient.convertToType(data['api_key_id_v2'], 'String');
             }
         }
         return obj;
@@ -71,6 +71,10 @@ class AuthorizationAPICallerInfo {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AuthorizationAPICallerInfo</code>.
      */
     static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['api_key_id_v2'] && !(typeof data['api_key_id_v2'] === 'string' || data['api_key_id_v2'] instanceof String)) {
+            throw new Error("Expected the field `api_key_id_v2` to be a primitive type in the JSON string but got " + data['api_key_id_v2']);
+        }
         // validate the optional field `app`
         if (data['app']) { // data not null
           AppsApp.validateJSON(data['app']);
@@ -84,10 +88,6 @@ class AuthorizationAPICallerInfo {
             for (const item of data['scopes']) {
                 AuthorizationOAuthScope.validateJSON(item);
             };
-        }
-        // ensure the json data is a string
-        if (data['api_key_id_v2'] && !(typeof data['api_key_id_v2'] === 'string' || data['api_key_id_v2'] instanceof String)) {
-            throw new Error("Expected the field `api_key_id_v2` to be a primitive type in the JSON string but got " + data['api_key_id_v2']);
         }
 
         return true;
@@ -105,6 +105,19 @@ class AuthorizationAPICallerInfo {
      */
     setApiKeyId(apiKeyId) {
         this['api_key_id'] = apiKeyId;
+    }
+/**
+     * @return {String}
+     */
+    getApiKeyIdV2() {
+        return this.api_key_id_v2;
+    }
+
+    /**
+     * @param {String} apiKeyIdV2
+     */
+    setApiKeyIdV2(apiKeyIdV2) {
+        this['api_key_id_v2'] = apiKeyIdV2;
     }
 /**
      * @return {module:model/AppsApp}
@@ -132,19 +145,6 @@ class AuthorizationAPICallerInfo {
     setScopes(scopes) {
         this['scopes'] = scopes;
     }
-/**
-     * @return {String}
-     */
-    getApiKeyIdV2() {
-        return this.api_key_id_v2;
-    }
-
-    /**
-     * @param {String} apiKeyIdV2
-     */
-    setApiKeyIdV2(apiKeyIdV2) {
-        this['api_key_id_v2'] = apiKeyIdV2;
-    }
 
 }
 
@@ -156,6 +156,11 @@ class AuthorizationAPICallerInfo {
 AuthorizationAPICallerInfo.prototype['api_key_id'] = undefined;
 
 /**
+ * @member {String} api_key_id_v2
+ */
+AuthorizationAPICallerInfo.prototype['api_key_id_v2'] = undefined;
+
+/**
  * @member {module:model/AppsApp} app
  */
 AuthorizationAPICallerInfo.prototype['app'] = undefined;
@@ -164,11 +169,6 @@ AuthorizationAPICallerInfo.prototype['app'] = undefined;
  * @member {Array.<module:model/AuthorizationOAuthScope>} scopes
  */
 AuthorizationAPICallerInfo.prototype['scopes'] = undefined;
-
-/**
- * @member {String} api_key_id_v2
- */
-AuthorizationAPICallerInfo.prototype['api_key_id_v2'] = undefined;
 
 
 

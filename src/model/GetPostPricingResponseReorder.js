@@ -47,11 +47,11 @@ class GetPostPricingResponseReorder {
         if (data) {
             obj = obj || new GetPostPricingResponseReorder();
 
-            if (data.hasOwnProperty('cost_rials')) {
-                obj['cost_rials'] = ApiClient.convertToType(data['cost_rials'], 'String');
-            }
             if (data.hasOwnProperty('available')) {
                 obj['available'] = ApiClient.convertToType(data['available'], 'Boolean');
+            }
+            if (data.hasOwnProperty('cost_rials')) {
+                obj['cost_rials'] = ApiClient.convertToType(data['cost_rials'], 'String');
             }
         }
         return obj;
@@ -72,21 +72,6 @@ class GetPostPricingResponseReorder {
     }
 
 /**
-     * Returns The cost of reordering in rials
-     * @return {String}
-     */
-    getCostRials() {
-        return this.cost_rials;
-    }
-
-    /**
-     * Sets The cost of reordering in rials
-     * @param {String} costRials The cost of reordering in rials
-     */
-    setCostRials(costRials) {
-        this['cost_rials'] = costRials;
-    }
-/**
      * Returns Indicates if the post can be reordered. If false, the reorder API will return an error
      * @return {Boolean}
      */
@@ -101,22 +86,37 @@ class GetPostPricingResponseReorder {
     setAvailable(available) {
         this['available'] = available;
     }
+/**
+     * Returns The cost of reordering in rials
+     * @return {String}
+     */
+    getCostRials() {
+        return this.cost_rials;
+    }
+
+    /**
+     * Sets The cost of reordering in rials
+     * @param {String} costRials The cost of reordering in rials
+     */
+    setCostRials(costRials) {
+        this['cost_rials'] = costRials;
+    }
 
 }
 
 
 
 /**
- * The cost of reordering in rials
- * @member {String} cost_rials
- */
-GetPostPricingResponseReorder.prototype['cost_rials'] = undefined;
-
-/**
  * Indicates if the post can be reordered. If false, the reorder API will return an error
  * @member {Boolean} available
  */
 GetPostPricingResponseReorder.prototype['available'] = undefined;
+
+/**
+ * The cost of reordering in rials
+ * @member {String} cost_rials
+ */
+GetPostPricingResponseReorder.prototype['cost_rials'] = undefined;
 
 
 

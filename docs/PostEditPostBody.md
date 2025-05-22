@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **imagePaths** | **[String]** |  | [optional] 
+**title** | **String** |  | [optional] 
 
 

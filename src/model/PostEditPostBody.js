@@ -47,14 +47,14 @@ class PostEditPostBody {
         if (data) {
             obj = obj || new PostEditPostBody();
 
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('image_paths')) {
                 obj['image_paths'] = ApiClient.convertToType(data['image_paths'], ['String']);
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
         }
         return obj;
@@ -67,10 +67,6 @@ class PostEditPostBody {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
-        }
-        // ensure the json data is a string
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
@@ -78,23 +74,14 @@ class PostEditPostBody {
         if (!Array.isArray(data['image_paths'])) {
             throw new Error("Expected the field `image_paths` to be an array in the JSON data but got " + data['image_paths']);
         }
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        }
 
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getTitle() {
-        return this.title;
-    }
-
-    /**
-     * @param {String} title
-     */
-    setTitle(title) {
-        this['title'] = title;
-    }
 /**
      * @return {String}
      */
@@ -121,15 +108,23 @@ class PostEditPostBody {
     setImagePaths(imagePaths) {
         this['image_paths'] = imagePaths;
     }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
 
 }
 
 
-
-/**
- * @member {String} title
- */
-PostEditPostBody.prototype['title'] = undefined;
 
 /**
  * @member {String} description
@@ -140,6 +135,11 @@ PostEditPostBody.prototype['description'] = undefined;
  * @member {Array.<String>} image_paths
  */
 PostEditPostBody.prototype['image_paths'] = undefined;
+
+/**
+ * @member {String} title
+ */
+PostEditPostBody.prototype['title'] = undefined;
 
 
 

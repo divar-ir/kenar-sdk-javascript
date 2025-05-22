@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AppsApp);
     });
 
-    it('should have the property slug (base name: "slug")', function() {
-      // uncomment below and update the code to test the property slug
+    it('should have the property avatar (base name: "avatar")', function() {
+      // uncomment below and update the code to test the property avatar
       //var instance = new KenarApiClient.AppsApp();
       //expect(instance).to.be();
     });
@@ -66,20 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property avatar (base name: "avatar")', function() {
-      // uncomment below and update the code to test the property avatar
-      //var instance = new KenarApiClient.AppsApp();
-      //expect(instance).to.be();
-    });
-
     it('should have the property divarIdentificationKey (base name: "divar_identification_key")', function() {
       // uncomment below and update the code to test the property divarIdentificationKey
       //var instance = new KenarApiClient.AppsApp();
       //expect(instance).to.be();
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
+    it('should have the property serviceTags (base name: "service_tags")', function() {
+      // uncomment below and update the code to test the property serviceTags
       //var instance = new KenarApiClient.AppsApp();
       //expect(instance).to.be();
     });
@@ -90,8 +84,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property serviceTags (base name: "service_tags")', function() {
-      // uncomment below and update the code to test the property serviceTags
+    it('should have the property slug (base name: "slug")', function() {
+      // uncomment below and update the code to test the property slug
+      //var instance = new KenarApiClient.AppsApp();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new KenarApiClient.AppsApp();
       //expect(instance).to.be();
     });

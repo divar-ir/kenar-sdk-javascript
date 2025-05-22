@@ -50,26 +50,26 @@ class AppsApp {
         if (data) {
             obj = obj || new AppsApp();
 
-            if (data.hasOwnProperty('slug')) {
-                obj['slug'] = ApiClient.convertToType(data['slug'], 'String');
+            if (data.hasOwnProperty('avatar')) {
+                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
             }
             if (data.hasOwnProperty('display')) {
                 obj['display'] = ApiClient.convertToType(data['display'], 'String');
             }
-            if (data.hasOwnProperty('avatar')) {
-                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
-            }
             if (data.hasOwnProperty('divar_identification_key')) {
                 obj['divar_identification_key'] = ApiClient.convertToType(data['divar_identification_key'], 'String');
             }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = AppsAppStatus.constructFromObject(data['status']);
+            if (data.hasOwnProperty('service_tags')) {
+                obj['service_tags'] = ApiClient.convertToType(data['service_tags'], [AppsServiceTag]);
             }
             if (data.hasOwnProperty('service_type')) {
                 obj['service_type'] = AppsServiceType.constructFromObject(data['service_type']);
             }
-            if (data.hasOwnProperty('service_tags')) {
-                obj['service_tags'] = ApiClient.convertToType(data['service_tags'], [AppsServiceTag]);
+            if (data.hasOwnProperty('slug')) {
+                obj['slug'] = ApiClient.convertToType(data['slug'], 'String');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = AppsAppStatus.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -82,28 +82,28 @@ class AppsApp {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['slug'] && !(typeof data['slug'] === 'string' || data['slug'] instanceof String)) {
-            throw new Error("Expected the field `slug` to be a primitive type in the JSON string but got " + data['slug']);
+        if (data['avatar'] && !(typeof data['avatar'] === 'string' || data['avatar'] instanceof String)) {
+            throw new Error("Expected the field `avatar` to be a primitive type in the JSON string but got " + data['avatar']);
         }
         // ensure the json data is a string
         if (data['display'] && !(typeof data['display'] === 'string' || data['display'] instanceof String)) {
             throw new Error("Expected the field `display` to be a primitive type in the JSON string but got " + data['display']);
         }
         // ensure the json data is a string
-        if (data['avatar'] && !(typeof data['avatar'] === 'string' || data['avatar'] instanceof String)) {
-            throw new Error("Expected the field `avatar` to be a primitive type in the JSON string but got " + data['avatar']);
-        }
-        // ensure the json data is a string
         if (data['divar_identification_key'] && !(typeof data['divar_identification_key'] === 'string' || data['divar_identification_key'] instanceof String)) {
             throw new Error("Expected the field `divar_identification_key` to be a primitive type in the JSON string but got " + data['divar_identification_key']);
-        }
-        // validate the optional field `status`
-        if (data['status']) { // data not null
-          AppsAppStatus.validateJSON(data['status']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['service_tags'])) {
             throw new Error("Expected the field `service_tags` to be an array in the JSON data but got " + data['service_tags']);
+        }
+        // ensure the json data is a string
+        if (data['slug'] && !(typeof data['slug'] === 'string' || data['slug'] instanceof String)) {
+            throw new Error("Expected the field `slug` to be a primitive type in the JSON string but got " + data['slug']);
+        }
+        // validate the optional field `status`
+        if (data['status']) { // data not null
+          AppsAppStatus.validateJSON(data['status']);
         }
 
         return true;
@@ -112,15 +112,15 @@ class AppsApp {
 /**
      * @return {String}
      */
-    getSlug() {
-        return this.slug;
+    getAvatar() {
+        return this.avatar;
     }
 
     /**
-     * @param {String} slug
+     * @param {String} avatar
      */
-    setSlug(slug) {
-        this['slug'] = slug;
+    setAvatar(avatar) {
+        this['avatar'] = avatar;
     }
 /**
      * @return {String}
@@ -138,19 +138,6 @@ class AppsApp {
 /**
      * @return {String}
      */
-    getAvatar() {
-        return this.avatar;
-    }
-
-    /**
-     * @param {String} avatar
-     */
-    setAvatar(avatar) {
-        this['avatar'] = avatar;
-    }
-/**
-     * @return {String}
-     */
     getDivarIdentificationKey() {
         return this.divar_identification_key;
     }
@@ -162,17 +149,17 @@ class AppsApp {
         this['divar_identification_key'] = divarIdentificationKey;
     }
 /**
-     * @return {module:model/AppsAppStatus}
+     * @return {Array.<module:model/AppsServiceTag>}
      */
-    getStatus() {
-        return this.status;
+    getServiceTags() {
+        return this.service_tags;
     }
 
     /**
-     * @param {module:model/AppsAppStatus} status
+     * @param {Array.<module:model/AppsServiceTag>} serviceTags
      */
-    setStatus(status) {
-        this['status'] = status;
+    setServiceTags(serviceTags) {
+        this['service_tags'] = serviceTags;
     }
 /**
      * @return {module:model/AppsServiceType}
@@ -188,17 +175,30 @@ class AppsApp {
         this['service_type'] = serviceType;
     }
 /**
-     * @return {Array.<module:model/AppsServiceTag>}
+     * @return {String}
      */
-    getServiceTags() {
-        return this.service_tags;
+    getSlug() {
+        return this.slug;
     }
 
     /**
-     * @param {Array.<module:model/AppsServiceTag>} serviceTags
+     * @param {String} slug
      */
-    setServiceTags(serviceTags) {
-        this['service_tags'] = serviceTags;
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
+/**
+     * @return {module:model/AppsAppStatus}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {module:model/AppsAppStatus} status
+     */
+    setStatus(status) {
+        this['status'] = status;
     }
 
 }
@@ -206,9 +206,9 @@ class AppsApp {
 
 
 /**
- * @member {String} slug
+ * @member {String} avatar
  */
-AppsApp.prototype['slug'] = undefined;
+AppsApp.prototype['avatar'] = undefined;
 
 /**
  * @member {String} display
@@ -216,19 +216,14 @@ AppsApp.prototype['slug'] = undefined;
 AppsApp.prototype['display'] = undefined;
 
 /**
- * @member {String} avatar
- */
-AppsApp.prototype['avatar'] = undefined;
-
-/**
  * @member {String} divar_identification_key
  */
 AppsApp.prototype['divar_identification_key'] = undefined;
 
 /**
- * @member {module:model/AppsAppStatus} status
+ * @member {Array.<module:model/AppsServiceTag>} service_tags
  */
-AppsApp.prototype['status'] = undefined;
+AppsApp.prototype['service_tags'] = undefined;
 
 /**
  * @member {module:model/AppsServiceType} service_type
@@ -236,9 +231,14 @@ AppsApp.prototype['status'] = undefined;
 AppsApp.prototype['service_type'] = undefined;
 
 /**
- * @member {Array.<module:model/AppsServiceTag>} service_tags
+ * @member {String} slug
  */
-AppsApp.prototype['service_tags'] = undefined;
+AppsApp.prototype['slug'] = undefined;
+
+/**
+ * @member {module:model/AppsAppStatus} status
+ */
+AppsApp.prototype['status'] = undefined;
 
 
 

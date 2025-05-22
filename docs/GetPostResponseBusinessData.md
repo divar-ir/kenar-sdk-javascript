@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**businessType** | [**PremiumPanelBusinessDataSubBusinessType**](PremiumPanelBusinessDataSubBusinessType.md) |  | [optional] 
 **businessName** | **String** |  | [optional] 
+**businessType** | [**PremiumPanelBusinessDataSubBusinessType**](PremiumPanelBusinessDataSubBusinessType.md) |  | [optional] 
 
 

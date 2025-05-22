@@ -47,11 +47,11 @@ class FinderUser {
         if (data) {
             obj = obj || new FinderUser();
 
-            if (data.hasOwnProperty('phone_numbers')) {
-                obj['phone_numbers'] = ApiClient.convertToType(data['phone_numbers'], ['String']);
-            }
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
+            }
+            if (data.hasOwnProperty('phone_numbers')) {
+                obj['phone_numbers'] = ApiClient.convertToType(data['phone_numbers'], ['String']);
             }
             if (data.hasOwnProperty('user_id')) {
                 obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
@@ -66,13 +66,13 @@ class FinderUser {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FinderUser</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is an array
-        if (!Array.isArray(data['phone_numbers'])) {
-            throw new Error("Expected the field `phone_numbers` to be an array in the JSON data but got " + data['phone_numbers']);
-        }
         // ensure the json data is a string
         if (data['phone_number'] && !(typeof data['phone_number'] === 'string' || data['phone_number'] instanceof String)) {
             throw new Error("Expected the field `phone_number` to be a primitive type in the JSON string but got " + data['phone_number']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['phone_numbers'])) {
+            throw new Error("Expected the field `phone_numbers` to be an array in the JSON data but got " + data['phone_numbers']);
         }
         // ensure the json data is a string
         if (data['user_id'] && !(typeof data['user_id'] === 'string' || data['user_id'] instanceof String)) {
@@ -82,6 +82,19 @@ class FinderUser {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getPhoneNumber() {
+        return this.phone_number;
+    }
+
+    /**
+     * @param {String} phoneNumber
+     */
+    setPhoneNumber(phoneNumber) {
+        this['phone_number'] = phoneNumber;
+    }
 /**
      * Returns deprecated
      * @return {Array.<String>}
@@ -96,19 +109,6 @@ class FinderUser {
      */
     setPhoneNumbers(phoneNumbers) {
         this['phone_numbers'] = phoneNumbers;
-    }
-/**
-     * @return {String}
-     */
-    getPhoneNumber() {
-        return this.phone_number;
-    }
-
-    /**
-     * @param {String} phoneNumber
-     */
-    setPhoneNumber(phoneNumber) {
-        this['phone_number'] = phoneNumber;
     }
 /**
      * @return {String}
@@ -129,15 +129,15 @@ class FinderUser {
 
 
 /**
+ * @member {String} phone_number
+ */
+FinderUser.prototype['phone_number'] = undefined;
+
+/**
  * deprecated
  * @member {Array.<String>} phone_numbers
  */
 FinderUser.prototype['phone_numbers'] = undefined;
-
-/**
- * @member {String} phone_number
- */
-FinderUser.prototype['phone_number'] = undefined;
 
 /**
  * @member {String} user_id

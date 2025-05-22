@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.GetServiceTypesResponseServiceTypeData);
     });
 
-    it('should have the property slug (base name: "slug")', function() {
-      // uncomment below and update the code to test the property slug
+    it('should have the property display (base name: "display")', function() {
+      // uncomment below and update the code to test the property display
       //var instance = new KenarApiClient.GetServiceTypesResponseServiceTypeData();
       //expect(instance).to.be();
     });
 
-    it('should have the property display (base name: "display")', function() {
-      // uncomment below and update the code to test the property display
+    it('should have the property slug (base name: "slug")', function() {
+      // uncomment below and update the code to test the property slug
       //var instance = new KenarApiClient.GetServiceTypesResponseServiceTypeData();
       //expect(instance).to.be();
     });

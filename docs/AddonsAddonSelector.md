@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tokens** | **[String]** |  | [optional] 
+**brandModels** | **[String]** |  | [optional] 
 **categories** | **[String]** |  | [optional] 
 **cities** | **[String]** |  | [optional] 
 **districts** | **[String]** |  | [optional] 
-**brandModels** | **[String]** |  | [optional] 
+**tokens** | **[String]** |  | [optional] 
 
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metaData** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
 **businessRef** | **String** |  | [optional] 
+**metaData** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
 **widgets** | **Object** |  | [optional] 
 
 

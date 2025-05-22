@@ -54,38 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsAddonSemantic);
     });
 
-    it('should have the property paymentMethod (base name: "payment_method")', function() {
-      // uncomment below and update the code to test the property paymentMethod
-      //var instance = new KenarApiClient.AddonsAddonSemantic();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property identityVerificationResult (base name: "identity_verification_result")', function() {
-      // uncomment below and update the code to test the property identityVerificationResult
-      //var instance = new KenarApiClient.AddonsAddonSemantic();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property postVerificationResult (base name: "post_verification_result")', function() {
-      // uncomment below and update the code to test the property postVerificationResult
-      //var instance = new KenarApiClient.AddonsAddonSemantic();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new KenarApiClient.AddonsAddonSemantic();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property identityVerificationLastSuccessfulStage (base name: "identity_verification_last_successful_stage")', function() {
-      // uncomment below and update the code to test the property identityVerificationLastSuccessfulStage
-      //var instance = new KenarApiClient.AddonsAddonSemantic();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property identityVerificationFailureReason (base name: "identity_verification_failure_reason")', function() {
-      // uncomment below and update the code to test the property identityVerificationFailureReason
+    it('should have the property carVerificationFailureReason (base name: "car_verification_failure_reason")', function() {
+      // uncomment below and update the code to test the property carVerificationFailureReason
       //var instance = new KenarApiClient.AddonsAddonSemantic();
       //expect(instance).to.be();
     });
@@ -96,14 +66,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property carVerificationFailureReason (base name: "car_verification_failure_reason")', function() {
-      // uncomment below and update the code to test the property carVerificationFailureReason
+    it('should have the property identityVerificationFailureReason (base name: "identity_verification_failure_reason")', function() {
+      // uncomment below and update the code to test the property identityVerificationFailureReason
       //var instance = new KenarApiClient.AddonsAddonSemantic();
       //expect(instance).to.be();
     });
 
-    it('should have the property ownershipResult (base name: "ownership_result")', function() {
-      // uncomment below and update the code to test the property ownershipResult
+    it('should have the property identityVerificationLastSuccessfulStage (base name: "identity_verification_last_successful_stage")', function() {
+      // uncomment below and update the code to test the property identityVerificationLastSuccessfulStage
+      //var instance = new KenarApiClient.AddonsAddonSemantic();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property identityVerificationResult (base name: "identity_verification_result")', function() {
+      // uncomment below and update the code to test the property identityVerificationResult
       //var instance = new KenarApiClient.AddonsAddonSemantic();
       //expect(instance).to.be();
     });
@@ -116,6 +92,30 @@
 
     it('should have the property newFaceVerificationResult (base name: "new_face_verification_result")', function() {
       // uncomment below and update the code to test the property newFaceVerificationResult
+      //var instance = new KenarApiClient.AddonsAddonSemantic();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ownershipResult (base name: "ownership_result")', function() {
+      // uncomment below and update the code to test the property ownershipResult
+      //var instance = new KenarApiClient.AddonsAddonSemantic();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property paymentMethod (base name: "payment_method")', function() {
+      // uncomment below and update the code to test the property paymentMethod
+      //var instance = new KenarApiClient.AddonsAddonSemantic();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postVerificationResult (base name: "post_verification_result")', function() {
+      // uncomment below and update the code to test the property postVerificationResult
+      //var instance = new KenarApiClient.AddonsAddonSemantic();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new KenarApiClient.AddonsAddonSemantic();
       //expect(instance).to.be();
     });

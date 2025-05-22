@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsGroupInfoRow);
     });
 
-    it('should have the property items (base name: "items")', function() {
-      // uncomment below and update the code to test the property items
+    it('should have the property hasDivider (base name: "has_divider")', function() {
+      // uncomment below and update the code to test the property hasDivider
       //var instance = new KenarApiClient.AddonsGroupInfoRow();
       //expect(instance).to.be();
     });
 
-    it('should have the property hasDivider (base name: "has_divider")', function() {
-      // uncomment below and update the code to test the property hasDivider
+    it('should have the property items (base name: "items")', function() {
+      // uncomment below and update the code to test the property items
       //var instance = new KenarApiClient.AddonsGroupInfoRow();
       //expect(instance).to.be();
     });

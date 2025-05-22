@@ -60,14 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property message (base name: "message")', function() {
-      // uncomment below and update the code to test the property message
+    it('should have the property details (base name: "details")', function() {
+      // uncomment below and update the code to test the property details
       //var instance = new KenarApiClient.GooglerpcStatus();
       //expect(instance).to.be();
     });
 
-    it('should have the property details (base name: "details")', function() {
-      // uncomment below and update the code to test the property details
+    it('should have the property message (base name: "message")', function() {
+      // uncomment below and update the code to test the property message
       //var instance = new KenarApiClient.GooglerpcStatus();
       //expect(instance).to.be();
     });

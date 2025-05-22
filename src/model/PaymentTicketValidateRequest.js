@@ -47,17 +47,17 @@ class PaymentTicketValidateRequest {
         if (data) {
             obj = obj || new PaymentTicketValidateRequest();
 
-            if (data.hasOwnProperty('ticket_uuid')) {
-                obj['ticket_uuid'] = ApiClient.convertToType(data['ticket_uuid'], 'String');
-            }
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
             if (data.hasOwnProperty('service_cost')) {
                 obj['service_cost'] = ApiClient.convertToType(data['service_cost'], 'Number');
+            }
+            if (data.hasOwnProperty('ticket_uuid')) {
+                obj['ticket_uuid'] = ApiClient.convertToType(data['ticket_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
             }
         }
         return obj;
@@ -70,12 +70,12 @@ class PaymentTicketValidateRequest {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['ticket_uuid'] && !(typeof data['ticket_uuid'] === 'string' || data['ticket_uuid'] instanceof String)) {
-            throw new Error("Expected the field `ticket_uuid` to be a primitive type in the JSON string but got " + data['ticket_uuid']);
-        }
-        // ensure the json data is a string
         if (data['phone_number'] && !(typeof data['phone_number'] === 'string' || data['phone_number'] instanceof String)) {
             throw new Error("Expected the field `phone_number` to be a primitive type in the JSON string but got " + data['phone_number']);
+        }
+        // ensure the json data is a string
+        if (data['ticket_uuid'] && !(typeof data['ticket_uuid'] === 'string' || data['ticket_uuid'] instanceof String)) {
+            throw new Error("Expected the field `ticket_uuid` to be a primitive type in the JSON string but got " + data['ticket_uuid']);
         }
         // ensure the json data is a string
         if (data['user_id'] && !(typeof data['user_id'] === 'string' || data['user_id'] instanceof String)) {
@@ -85,19 +85,6 @@ class PaymentTicketValidateRequest {
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getTicketUuid() {
-        return this.ticket_uuid;
-    }
-
-    /**
-     * @param {String} ticketUuid
-     */
-    setTicketUuid(ticketUuid) {
-        this['ticket_uuid'] = ticketUuid;
-    }
 /**
      * Returns Deprecated. Use divar_user_id.
      * @return {String}
@@ -114,19 +101,6 @@ class PaymentTicketValidateRequest {
         this['phone_number'] = phoneNumber;
     }
 /**
-     * @return {String}
-     */
-    getUserId() {
-        return this.user_id;
-    }
-
-    /**
-     * @param {String} userId
-     */
-    setUserId(userId) {
-        this['user_id'] = userId;
-    }
-/**
      * @return {Number}
      */
     getServiceCost() {
@@ -139,15 +113,36 @@ class PaymentTicketValidateRequest {
     setServiceCost(serviceCost) {
         this['service_cost'] = serviceCost;
     }
+/**
+     * @return {String}
+     */
+    getTicketUuid() {
+        return this.ticket_uuid;
+    }
+
+    /**
+     * @param {String} ticketUuid
+     */
+    setTicketUuid(ticketUuid) {
+        this['ticket_uuid'] = ticketUuid;
+    }
+/**
+     * @return {String}
+     */
+    getUserId() {
+        return this.user_id;
+    }
+
+    /**
+     * @param {String} userId
+     */
+    setUserId(userId) {
+        this['user_id'] = userId;
+    }
 
 }
 
 
-
-/**
- * @member {String} ticket_uuid
- */
-PaymentTicketValidateRequest.prototype['ticket_uuid'] = undefined;
 
 /**
  * Deprecated. Use divar_user_id.
@@ -156,14 +151,19 @@ PaymentTicketValidateRequest.prototype['ticket_uuid'] = undefined;
 PaymentTicketValidateRequest.prototype['phone_number'] = undefined;
 
 /**
- * @member {String} user_id
- */
-PaymentTicketValidateRequest.prototype['user_id'] = undefined;
-
-/**
  * @member {Number} service_cost
  */
 PaymentTicketValidateRequest.prototype['service_cost'] = undefined;
+
+/**
+ * @member {String} ticket_uuid
+ */
+PaymentTicketValidateRequest.prototype['ticket_uuid'] = undefined;
+
+/**
+ * @member {String} user_id
+ */
+PaymentTicketValidateRequest.prototype['user_id'] = undefined;
 
 
 

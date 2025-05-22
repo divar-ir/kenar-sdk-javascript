@@ -54,20 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsEventRow);
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
+    it('should have the property hasDivider (base name: "has_divider")', function() {
+      // uncomment below and update the code to test the property hasDivider
       //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 
-    it('should have the property subtitle (base name: "subtitle")', function() {
-      // uncomment below and update the code to test the property subtitle
-      //var instance = new KenarApiClient.AddonsEventRow();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property label (base name: "label")', function() {
-      // uncomment below and update the code to test the property label
+    it('should have the property iconName (base name: "icon_name")', function() {
+      // uncomment below and update the code to test the property iconName
       //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
@@ -78,14 +72,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property hasDivider (base name: "has_divider")', function() {
-      // uncomment below and update the code to test the property hasDivider
+    it('should have the property label (base name: "label")', function() {
+      // uncomment below and update the code to test the property label
       //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });
 
-    it('should have the property iconName (base name: "icon_name")', function() {
-      // uncomment below and update the code to test the property iconName
+    it('should have the property subtitle (base name: "subtitle")', function() {
+      // uncomment below and update the code to test the property subtitle
+      //var instance = new KenarApiClient.AddonsEventRow();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
       //var instance = new KenarApiClient.AddonsEventRow();
       //expect(instance).to.be();
     });

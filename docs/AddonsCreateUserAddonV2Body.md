@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**widgets** | [**[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
-**semantic** | **{String: String}** |  | [optional] 
-**phone** | **String** |  | [optional] 
 **categories** | **[String]** |  | [optional] 
-**ticketUuid** | **String** |  | [optional] 
 **cost** | **Number** |  | [optional] 
+**phone** | **String** |  | [optional] 
+**semantic** | **{String: String}** |  | [optional] 
+**ticketUuid** | **String** |  | [optional] 
+**widgets** | [**[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
 
 

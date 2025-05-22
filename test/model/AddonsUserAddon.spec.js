@@ -54,6 +54,18 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsUserAddon);
     });
 
+    it('should have the property divarUserId (base name: "divar_user_id")', function() {
+      // uncomment below and update the code to test the property divarUserId
+      //var instance = new KenarApiClient.AddonsUserAddon();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property filters (base name: "filters")', function() {
+      // uncomment below and update the code to test the property filters
+      //var instance = new KenarApiClient.AddonsUserAddon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property metaData (base name: "meta_data")', function() {
       // uncomment below and update the code to test the property metaData
       //var instance = new KenarApiClient.AddonsUserAddon();
@@ -62,18 +74,6 @@
 
     it('should have the property phone (base name: "phone")', function() {
       // uncomment below and update the code to test the property phone
-      //var instance = new KenarApiClient.AddonsUserAddon();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property divarUserId (base name: "divar_user_id")', function() {
-      // uncomment below and update the code to test the property divarUserId
-      //var instance = new KenarApiClient.AddonsUserAddon();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property widgets (base name: "widgets")', function() {
-      // uncomment below and update the code to test the property widgets
       //var instance = new KenarApiClient.AddonsUserAddon();
       //expect(instance).to.be();
     });
@@ -96,14 +96,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property widgetsSemantic (base name: "widgets_semantic")', function() {
-      // uncomment below and update the code to test the property widgetsSemantic
+    it('should have the property widgets (base name: "widgets")', function() {
+      // uncomment below and update the code to test the property widgets
       //var instance = new KenarApiClient.AddonsUserAddon();
       //expect(instance).to.be();
     });
 
-    it('should have the property filters (base name: "filters")', function() {
-      // uncomment below and update the code to test the property filters
+    it('should have the property widgetsSemantic (base name: "widgets_semantic")', function() {
+      // uncomment below and update the code to test the property widgetsSemantic
       //var instance = new KenarApiClient.AddonsUserAddon();
       //expect(instance).to.be();
     });

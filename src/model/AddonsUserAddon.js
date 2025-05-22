@@ -50,17 +50,17 @@ class AddonsUserAddon {
         if (data) {
             obj = obj || new AddonsUserAddon();
 
+            if (data.hasOwnProperty('divar_user_id')) {
+                obj['divar_user_id'] = ApiClient.convertToType(data['divar_user_id'], 'String');
+            }
+            if (data.hasOwnProperty('filters')) {
+                obj['filters'] = AddonsUserAddonFilters.constructFromObject(data['filters']);
+            }
             if (data.hasOwnProperty('meta_data')) {
                 obj['meta_data'] = AddonsAddonMetaData.constructFromObject(data['meta_data']);
             }
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
-            }
-            if (data.hasOwnProperty('divar_user_id')) {
-                obj['divar_user_id'] = ApiClient.convertToType(data['divar_user_id'], 'String');
-            }
-            if (data.hasOwnProperty('widgets')) {
-                obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
             }
             if (data.hasOwnProperty('semantic')) {
                 obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
@@ -71,11 +71,11 @@ class AddonsUserAddon {
             if (data.hasOwnProperty('sensitive_semantic')) {
                 obj['sensitive_semantic'] = ApiClient.convertToType(data['sensitive_semantic'], {'String': 'String'});
             }
+            if (data.hasOwnProperty('widgets')) {
+                obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
+            }
             if (data.hasOwnProperty('widgets_semantic')) {
                 obj['widgets_semantic'] = ApiClient.convertToType(data['widgets_semantic'], Object);
-            }
-            if (data.hasOwnProperty('filters')) {
-                obj['filters'] = AddonsUserAddonFilters.constructFromObject(data['filters']);
             }
         }
         return obj;
@@ -87,6 +87,14 @@ class AddonsUserAddon {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsUserAddon</code>.
      */
     static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['divar_user_id'] && !(typeof data['divar_user_id'] === 'string' || data['divar_user_id'] instanceof String)) {
+            throw new Error("Expected the field `divar_user_id` to be a primitive type in the JSON string but got " + data['divar_user_id']);
+        }
+        // validate the optional field `filters`
+        if (data['filters']) { // data not null
+          AddonsUserAddonFilters.validateJSON(data['filters']);
+        }
         // validate the optional field `meta_data`
         if (data['meta_data']) { // data not null
           AddonsAddonMetaData.validateJSON(data['meta_data']);
@@ -95,22 +103,40 @@ class AddonsUserAddon {
         if (data['phone'] && !(typeof data['phone'] === 'string' || data['phone'] instanceof String)) {
             throw new Error("Expected the field `phone` to be a primitive type in the JSON string but got " + data['phone']);
         }
-        // ensure the json data is a string
-        if (data['divar_user_id'] && !(typeof data['divar_user_id'] === 'string' || data['divar_user_id'] instanceof String)) {
-            throw new Error("Expected the field `divar_user_id` to be a primitive type in the JSON string but got " + data['divar_user_id']);
-        }
         // validate the optional field `semantic_data`
         if (data['semantic_data']) { // data not null
           AddonsAddonSemantic.validateJSON(data['semantic_data']);
-        }
-        // validate the optional field `filters`
-        if (data['filters']) { // data not null
-          AddonsUserAddonFilters.validateJSON(data['filters']);
         }
 
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getDivarUserId() {
+        return this.divar_user_id;
+    }
+
+    /**
+     * @param {String} divarUserId
+     */
+    setDivarUserId(divarUserId) {
+        this['divar_user_id'] = divarUserId;
+    }
+/**
+     * @return {module:model/AddonsUserAddonFilters}
+     */
+    getFilters() {
+        return this.filters;
+    }
+
+    /**
+     * @param {module:model/AddonsUserAddonFilters} filters
+     */
+    setFilters(filters) {
+        this['filters'] = filters;
+    }
 /**
      * @return {module:model/AddonsAddonMetaData}
      */
@@ -136,32 +162,6 @@ class AddonsUserAddon {
      */
     setPhone(phone) {
         this['phone'] = phone;
-    }
-/**
-     * @return {String}
-     */
-    getDivarUserId() {
-        return this.divar_user_id;
-    }
-
-    /**
-     * @param {String} divarUserId
-     */
-    setDivarUserId(divarUserId) {
-        this['divar_user_id'] = divarUserId;
-    }
-/**
-     * @return {Object}
-     */
-    getWidgets() {
-        return this.widgets;
-    }
-
-    /**
-     * @param {Object} widgets
-     */
-    setWidgets(widgets) {
-        this['widgets'] = widgets;
     }
 /**
      * @return {Object.<String, String>}
@@ -205,6 +205,19 @@ class AddonsUserAddon {
 /**
      * @return {Object}
      */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
+/**
+     * @return {Object}
+     */
     getWidgetsSemantic() {
         return this.widgets_semantic;
     }
@@ -215,23 +228,20 @@ class AddonsUserAddon {
     setWidgetsSemantic(widgetsSemantic) {
         this['widgets_semantic'] = widgetsSemantic;
     }
-/**
-     * @return {module:model/AddonsUserAddonFilters}
-     */
-    getFilters() {
-        return this.filters;
-    }
-
-    /**
-     * @param {module:model/AddonsUserAddonFilters} filters
-     */
-    setFilters(filters) {
-        this['filters'] = filters;
-    }
 
 }
 
 
+
+/**
+ * @member {String} divar_user_id
+ */
+AddonsUserAddon.prototype['divar_user_id'] = undefined;
+
+/**
+ * @member {module:model/AddonsUserAddonFilters} filters
+ */
+AddonsUserAddon.prototype['filters'] = undefined;
 
 /**
  * @member {module:model/AddonsAddonMetaData} meta_data
@@ -242,16 +252,6 @@ AddonsUserAddon.prototype['meta_data'] = undefined;
  * @member {String} phone
  */
 AddonsUserAddon.prototype['phone'] = undefined;
-
-/**
- * @member {String} divar_user_id
- */
-AddonsUserAddon.prototype['divar_user_id'] = undefined;
-
-/**
- * @member {Object} widgets
- */
-AddonsUserAddon.prototype['widgets'] = undefined;
 
 /**
  * @member {Object.<String, String>} semantic
@@ -269,14 +269,14 @@ AddonsUserAddon.prototype['semantic_data'] = undefined;
 AddonsUserAddon.prototype['sensitive_semantic'] = undefined;
 
 /**
+ * @member {Object} widgets
+ */
+AddonsUserAddon.prototype['widgets'] = undefined;
+
+/**
  * @member {Object} widgets_semantic
  */
 AddonsUserAddon.prototype['widgets_semantic'] = undefined;
-
-/**
- * @member {module:model/AddonsUserAddonFilters} filters
- */
-AddonsUserAddon.prototype['filters'] = undefined;
 
 
 

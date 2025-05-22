@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.FinderUser);
     });
 
-    it('should have the property phoneNumbers (base name: "phone_numbers")', function() {
-      // uncomment below and update the code to test the property phoneNumbers
+    it('should have the property phoneNumber (base name: "phone_number")', function() {
+      // uncomment below and update the code to test the property phoneNumber
       //var instance = new KenarApiClient.FinderUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property phoneNumber (base name: "phone_number")', function() {
-      // uncomment below and update the code to test the property phoneNumber
+    it('should have the property phoneNumbers (base name: "phone_numbers")', function() {
+      // uncomment below and update the code to test the property phoneNumbers
       //var instance = new KenarApiClient.FinderUser();
       //expect(instance).to.be();
     });

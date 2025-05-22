@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsAddonMetaData);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new KenarApiClient.AddonsAddonMetaData();
-      //expect(instance).to.be();
-    });
-
     it('should have the property app (base name: "app")', function() {
       // uncomment below and update the code to test the property app
       //var instance = new KenarApiClient.AddonsAddonMetaData();
@@ -72,20 +66,26 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new KenarApiClient.AddonsAddonMetaData();
+      //expect(instance).to.be();
+    });
+
     it('should have the property lastModified (base name: "last_modified")', function() {
       // uncomment below and update the code to test the property lastModified
       //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
+    it('should have the property serviceTags (base name: "service_tags")', function() {
+      // uncomment below and update the code to test the property serviceTags
       //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });
 
-    it('should have the property serviceTags (base name: "service_tags")', function() {
-      // uncomment below and update the code to test the property serviceTags
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new KenarApiClient.AddonsAddonMetaData();
       //expect(instance).to.be();
     });

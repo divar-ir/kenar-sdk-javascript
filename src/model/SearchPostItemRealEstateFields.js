@@ -51,29 +51,29 @@ class SearchPostItemRealEstateFields {
             if (data.hasOwnProperty('credit')) {
                 obj['credit'] = SearchPostItemPrice.constructFromObject(data['credit']);
             }
+            if (data.hasOwnProperty('daily_rent')) {
+                obj['daily_rent'] = ApiClient.convertToType(data['daily_rent'], 'String');
+            }
+            if (data.hasOwnProperty('floor')) {
+                obj['floor'] = ApiClient.convertToType(data['floor'], 'Number');
+            }
+            if (data.hasOwnProperty('has_elevator')) {
+                obj['has_elevator'] = ApiClient.convertToType(data['has_elevator'], 'Boolean');
+            }
+            if (data.hasOwnProperty('has_parking')) {
+                obj['has_parking'] = ApiClient.convertToType(data['has_parking'], 'Boolean');
+            }
             if (data.hasOwnProperty('rent')) {
                 obj['rent'] = SearchPostItemPrice.constructFromObject(data['rent']);
             }
-            if (data.hasOwnProperty('daily_rent')) {
-                obj['daily_rent'] = ApiClient.convertToType(data['daily_rent'], 'String');
+            if (data.hasOwnProperty('rooms')) {
+                obj['rooms'] = ApiClient.convertToType(data['rooms'], 'String');
             }
             if (data.hasOwnProperty('size')) {
                 obj['size'] = ApiClient.convertToType(data['size'], 'Number');
             }
             if (data.hasOwnProperty('year')) {
                 obj['year'] = ApiClient.convertToType(data['year'], 'Number');
-            }
-            if (data.hasOwnProperty('has_parking')) {
-                obj['has_parking'] = ApiClient.convertToType(data['has_parking'], 'Boolean');
-            }
-            if (data.hasOwnProperty('has_elevator')) {
-                obj['has_elevator'] = ApiClient.convertToType(data['has_elevator'], 'Boolean');
-            }
-            if (data.hasOwnProperty('rooms')) {
-                obj['rooms'] = ApiClient.convertToType(data['rooms'], 'String');
-            }
-            if (data.hasOwnProperty('floor')) {
-                obj['floor'] = ApiClient.convertToType(data['floor'], 'Number');
             }
         }
         return obj;
@@ -89,13 +89,13 @@ class SearchPostItemRealEstateFields {
         if (data['credit']) { // data not null
           SearchPostItemPrice.validateJSON(data['credit']);
         }
-        // validate the optional field `rent`
-        if (data['rent']) { // data not null
-          SearchPostItemPrice.validateJSON(data['rent']);
-        }
         // ensure the json data is a string
         if (data['daily_rent'] && !(typeof data['daily_rent'] === 'string' || data['daily_rent'] instanceof String)) {
             throw new Error("Expected the field `daily_rent` to be a primitive type in the JSON string but got " + data['daily_rent']);
+        }
+        // validate the optional field `rent`
+        if (data['rent']) { // data not null
+          SearchPostItemPrice.validateJSON(data['rent']);
         }
         // ensure the json data is a string
         if (data['rooms'] && !(typeof data['rooms'] === 'string' || data['rooms'] instanceof String)) {
@@ -119,6 +119,58 @@ class SearchPostItemRealEstateFields {
         this['credit'] = credit;
     }
 /**
+     * @return {String}
+     */
+    getDailyRent() {
+        return this.daily_rent;
+    }
+
+    /**
+     * @param {String} dailyRent
+     */
+    setDailyRent(dailyRent) {
+        this['daily_rent'] = dailyRent;
+    }
+/**
+     * @return {Number}
+     */
+    getFloor() {
+        return this.floor;
+    }
+
+    /**
+     * @param {Number} floor
+     */
+    setFloor(floor) {
+        this['floor'] = floor;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasElevator() {
+        return this.has_elevator;
+    }
+
+    /**
+     * @param {Boolean} hasElevator
+     */
+    setHasElevator(hasElevator) {
+        this['has_elevator'] = hasElevator;
+    }
+/**
+     * @return {Boolean}
+     */
+    getHasParking() {
+        return this.has_parking;
+    }
+
+    /**
+     * @param {Boolean} hasParking
+     */
+    setHasParking(hasParking) {
+        this['has_parking'] = hasParking;
+    }
+/**
      * @return {module:model/SearchPostItemPrice}
      */
     getRent() {
@@ -134,15 +186,15 @@ class SearchPostItemRealEstateFields {
 /**
      * @return {String}
      */
-    getDailyRent() {
-        return this.daily_rent;
+    getRooms() {
+        return this.rooms;
     }
 
     /**
-     * @param {String} dailyRent
+     * @param {String} rooms
      */
-    setDailyRent(dailyRent) {
-        this['daily_rent'] = dailyRent;
+    setRooms(rooms) {
+        this['rooms'] = rooms;
     }
 /**
      * @return {Number}
@@ -170,58 +222,6 @@ class SearchPostItemRealEstateFields {
     setYear(year) {
         this['year'] = year;
     }
-/**
-     * @return {Boolean}
-     */
-    getHasParking() {
-        return this.has_parking;
-    }
-
-    /**
-     * @param {Boolean} hasParking
-     */
-    setHasParking(hasParking) {
-        this['has_parking'] = hasParking;
-    }
-/**
-     * @return {Boolean}
-     */
-    getHasElevator() {
-        return this.has_elevator;
-    }
-
-    /**
-     * @param {Boolean} hasElevator
-     */
-    setHasElevator(hasElevator) {
-        this['has_elevator'] = hasElevator;
-    }
-/**
-     * @return {String}
-     */
-    getRooms() {
-        return this.rooms;
-    }
-
-    /**
-     * @param {String} rooms
-     */
-    setRooms(rooms) {
-        this['rooms'] = rooms;
-    }
-/**
-     * @return {Number}
-     */
-    getFloor() {
-        return this.floor;
-    }
-
-    /**
-     * @param {Number} floor
-     */
-    setFloor(floor) {
-        this['floor'] = floor;
-    }
 
 }
 
@@ -233,14 +233,34 @@ class SearchPostItemRealEstateFields {
 SearchPostItemRealEstateFields.prototype['credit'] = undefined;
 
 /**
+ * @member {String} daily_rent
+ */
+SearchPostItemRealEstateFields.prototype['daily_rent'] = undefined;
+
+/**
+ * @member {Number} floor
+ */
+SearchPostItemRealEstateFields.prototype['floor'] = undefined;
+
+/**
+ * @member {Boolean} has_elevator
+ */
+SearchPostItemRealEstateFields.prototype['has_elevator'] = undefined;
+
+/**
+ * @member {Boolean} has_parking
+ */
+SearchPostItemRealEstateFields.prototype['has_parking'] = undefined;
+
+/**
  * @member {module:model/SearchPostItemPrice} rent
  */
 SearchPostItemRealEstateFields.prototype['rent'] = undefined;
 
 /**
- * @member {String} daily_rent
+ * @member {String} rooms
  */
-SearchPostItemRealEstateFields.prototype['daily_rent'] = undefined;
+SearchPostItemRealEstateFields.prototype['rooms'] = undefined;
 
 /**
  * @member {Number} size
@@ -251,26 +271,6 @@ SearchPostItemRealEstateFields.prototype['size'] = undefined;
  * @member {Number} year
  */
 SearchPostItemRealEstateFields.prototype['year'] = undefined;
-
-/**
- * @member {Boolean} has_parking
- */
-SearchPostItemRealEstateFields.prototype['has_parking'] = undefined;
-
-/**
- * @member {Boolean} has_elevator
- */
-SearchPostItemRealEstateFields.prototype['has_elevator'] = undefined;
-
-/**
- * @member {String} rooms
- */
-SearchPostItemRealEstateFields.prototype['rooms'] = undefined;
-
-/**
- * @member {Number} floor
- */
-SearchPostItemRealEstateFields.prototype['floor'] = undefined;
 
 
 

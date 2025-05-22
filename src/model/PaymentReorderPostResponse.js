@@ -47,11 +47,11 @@ class PaymentReorderPostResponse {
         if (data) {
             obj = obj || new PaymentReorderPostResponse();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('cost_rials')) {
                 obj['cost_rials'] = ApiClient.convertToType(data['cost_rials'], 'String');
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
         }
         return obj;
@@ -64,32 +64,17 @@ class PaymentReorderPostResponse {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
         if (data['cost_rials'] && !(typeof data['cost_rials'] === 'string' || data['cost_rials'] instanceof String)) {
             throw new Error("Expected the field `cost_rials` to be a primitive type in the JSON string but got " + data['cost_rials']);
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
 
         return true;
     }
 
-/**
-     * Returns Same uuid when creating transaction
-     * @return {String}
-     */
-    getId() {
-        return this.id;
-    }
-
-    /**
-     * Sets Same uuid when creating transaction
-     * @param {String} id Same uuid when creating transaction
-     */
-    setId(id) {
-        this['id'] = id;
-    }
 /**
      * Returns The cost of the transaction in rials for your application
      * @return {String}
@@ -105,22 +90,37 @@ class PaymentReorderPostResponse {
     setCostRials(costRials) {
         this['cost_rials'] = costRials;
     }
+/**
+     * Returns Same uuid when creating transaction
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * Sets Same uuid when creating transaction
+     * @param {String} id Same uuid when creating transaction
+     */
+    setId(id) {
+        this['id'] = id;
+    }
 
 }
 
 
 
 /**
- * Same uuid when creating transaction
- * @member {String} id
- */
-PaymentReorderPostResponse.prototype['id'] = undefined;
-
-/**
  * The cost of the transaction in rials for your application
  * @member {String} cost_rials
  */
 PaymentReorderPostResponse.prototype['cost_rials'] = undefined;
+
+/**
+ * Same uuid when creating transaction
+ * @member {String} id
+ */
+PaymentReorderPostResponse.prototype['id'] = undefined;
 
 
 

@@ -48,17 +48,17 @@ class ManagementDevelopmentPost {
         if (data) {
             obj = obj || new ManagementDevelopmentPost();
 
-            if (data.hasOwnProperty('preset')) {
-                obj['preset'] = ManagementPreset.constructFromObject(data['preset']);
-            }
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
             }
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
             if (data.hasOwnProperty('mng_token')) {
                 obj['mng_token'] = ApiClient.convertToType(data['mng_token'], 'String');
+            }
+            if (data.hasOwnProperty('preset')) {
+                obj['preset'] = ManagementPreset.constructFromObject(data['preset']);
+            }
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
         }
         return obj;
@@ -71,30 +71,17 @@ class ManagementDevelopmentPost {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
-            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
-        }
-        // ensure the json data is a string
         if (data['mng_token'] && !(typeof data['mng_token'] === 'string' || data['mng_token'] instanceof String)) {
             throw new Error("Expected the field `mng_token` to be a primitive type in the JSON string but got " + data['mng_token']);
+        }
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
         }
 
         return true;
     }
 
-/**
-     * @return {module:model/ManagementPreset}
-     */
-    getPreset() {
-        return this.preset;
-    }
-
-    /**
-     * @param {module:model/ManagementPreset} preset
-     */
-    setPreset(preset) {
-        this['preset'] = preset;
-    }
 /**
      * @return {Date}
      */
@@ -111,19 +98,6 @@ class ManagementDevelopmentPost {
 /**
      * @return {String}
      */
-    getToken() {
-        return this.token;
-    }
-
-    /**
-     * @param {String} token
-     */
-    setToken(token) {
-        this['token'] = token;
-    }
-/**
-     * @return {String}
-     */
     getMngToken() {
         return this.mng_token;
     }
@@ -134,15 +108,36 @@ class ManagementDevelopmentPost {
     setMngToken(mngToken) {
         this['mng_token'] = mngToken;
     }
+/**
+     * @return {module:model/ManagementPreset}
+     */
+    getPreset() {
+        return this.preset;
+    }
+
+    /**
+     * @param {module:model/ManagementPreset} preset
+     */
+    setPreset(preset) {
+        this['preset'] = preset;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
 
 }
 
 
-
-/**
- * @member {module:model/ManagementPreset} preset
- */
-ManagementDevelopmentPost.prototype['preset'] = undefined;
 
 /**
  * @member {Date} created_at
@@ -150,14 +145,19 @@ ManagementDevelopmentPost.prototype['preset'] = undefined;
 ManagementDevelopmentPost.prototype['created_at'] = undefined;
 
 /**
- * @member {String} token
- */
-ManagementDevelopmentPost.prototype['token'] = undefined;
-
-/**
  * @member {String} mng_token
  */
 ManagementDevelopmentPost.prototype['mng_token'] = undefined;
+
+/**
+ * @member {module:model/ManagementPreset} preset
+ */
+ManagementDevelopmentPost.prototype['preset'] = undefined;
+
+/**
+ * @member {String} token
+ */
+ManagementDevelopmentPost.prototype['token'] = undefined;
 
 
 

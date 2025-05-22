@@ -48,11 +48,11 @@ class GetServiceTypesResponseServiceTypeData {
         if (data) {
             obj = obj || new GetServiceTypesResponseServiceTypeData();
 
-            if (data.hasOwnProperty('slug')) {
-                obj['slug'] = AppsServiceType.constructFromObject(data['slug']);
-            }
             if (data.hasOwnProperty('display')) {
                 obj['display'] = ApiClient.convertToType(data['display'], 'String');
+            }
+            if (data.hasOwnProperty('slug')) {
+                obj['slug'] = AppsServiceType.constructFromObject(data['slug']);
             }
         }
         return obj;
@@ -73,19 +73,6 @@ class GetServiceTypesResponseServiceTypeData {
     }
 
 /**
-     * @return {module:model/AppsServiceType}
-     */
-    getSlug() {
-        return this.slug;
-    }
-
-    /**
-     * @param {module:model/AppsServiceType} slug
-     */
-    setSlug(slug) {
-        this['slug'] = slug;
-    }
-/**
      * @return {String}
      */
     getDisplay() {
@@ -98,20 +85,33 @@ class GetServiceTypesResponseServiceTypeData {
     setDisplay(display) {
         this['display'] = display;
     }
+/**
+     * @return {module:model/AppsServiceType}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {module:model/AppsServiceType} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
 
 }
 
 
 
 /**
- * @member {module:model/AppsServiceType} slug
- */
-GetServiceTypesResponseServiceTypeData.prototype['slug'] = undefined;
-
-/**
  * @member {String} display
  */
 GetServiceTypesResponseServiceTypeData.prototype['display'] = undefined;
+
+/**
+ * @member {module:model/AppsServiceType} slug
+ */
+GetServiceTypesResponseServiceTypeData.prototype['slug'] = undefined;
 
 
 

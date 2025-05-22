@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property apiKeyIdV2 (base name: "api_key_id_v2")', function() {
+      // uncomment below and update the code to test the property apiKeyIdV2
+      //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property app (base name: "app")', function() {
       // uncomment below and update the code to test the property app
       //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
@@ -68,12 +74,6 @@
 
     it('should have the property scopes (base name: "scopes")', function() {
       // uncomment below and update the code to test the property scopes
-      //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property apiKeyIdV2 (base name: "api_key_id_v2")', function() {
-      // uncomment below and update the code to test the property apiKeyIdV2
       //var instance = new KenarApiClient.AuthorizationAPICallerInfo();
       //expect(instance).to.be();
     });

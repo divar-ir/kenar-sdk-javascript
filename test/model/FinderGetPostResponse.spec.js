@@ -54,20 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.FinderGetPostResponse);
     });
 
-    it('should have the property state (base name: "state")', function() {
-      // uncomment below and update the code to test the property state
-      //var instance = new KenarApiClient.FinderGetPostResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property firstPublishedAt (base name: "first_published_at")', function() {
-      // uncomment below and update the code to test the property firstPublishedAt
-      //var instance = new KenarApiClient.FinderGetPostResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
+    it('should have the property businessData (base name: "business_data")', function() {
+      // uncomment below and update the code to test the property businessData
       //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
@@ -78,14 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property city (base name: "city")', function() {
-      // uncomment below and update the code to test the property city
+    it('should have the property chatEnabled (base name: "chat_enabled")', function() {
+      // uncomment below and update the code to test the property chatEnabled
       //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property district (base name: "district")', function() {
-      // uncomment below and update the code to test the property district
+    it('should have the property city (base name: "city")', function() {
+      // uncomment below and update the code to test the property city
       //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
@@ -96,14 +84,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property chatEnabled (base name: "chat_enabled")', function() {
-      // uncomment below and update the code to test the property chatEnabled
+    it('should have the property district (base name: "district")', function() {
+      // uncomment below and update the code to test the property district
       //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property businessData (base name: "business_data")', function() {
-      // uncomment below and update the code to test the property businessData
+    it('should have the property firstPublishedAt (base name: "first_published_at")', function() {
+      // uncomment below and update the code to test the property firstPublishedAt
+      //var instance = new KenarApiClient.FinderGetPostResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property state (base name: "state")', function() {
+      // uncomment below and update the code to test the property state
+      //var instance = new KenarApiClient.FinderGetPostResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
       //var instance = new KenarApiClient.FinderGetPostResponse();
       //expect(instance).to.be();
     });

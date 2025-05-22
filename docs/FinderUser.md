@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phoneNumbers** | **[String]** | deprecated | [optional] 
 **phoneNumber** | **String** |  | [optional] 
+**phoneNumbers** | **[String]** | deprecated | [optional] 
 **userId** | **String** |  | [optional] 
 
 

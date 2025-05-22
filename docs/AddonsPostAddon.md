@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metaData** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
-**token** | **String** |  | [optional] 
 **app** | [**AppsApp**](AppsApp.md) |  | [optional] 
-**widgets** | **Object** |  | [optional] 
-**score** | **String** |  | [optional] 
-**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **linkage** | [**AddonsAddonLinkage**](AddonsAddonLinkage.md) |  | [optional] 
+**metaData** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
+**score** | **String** |  | [optional] 
 **secondaryLinks** | [**AddonsAddonSecondaryLinks**](AddonsAddonSecondaryLinks.md) |  | [optional] 
+**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **semantic** | **{String: String}** |  | [optional] 
 **semanticData** | [**AddonsAddonSemantic**](AddonsAddonSemantic.md) |  | [optional] 
-**sensitiveSemantic** | **{String: String}** |  | [optional] 
-**widgetsSemantic** | **Object** |  | [optional] 
 **semanticSensitives** | **[String]** |  | [optional] 
+**sensitiveSemantic** | **{String: String}** |  | [optional] 
+**token** | **String** |  | [optional] 
+**widgets** | **Object** |  | [optional] 
+**widgetsSemantic** | **Object** |  | [optional] 
 
 

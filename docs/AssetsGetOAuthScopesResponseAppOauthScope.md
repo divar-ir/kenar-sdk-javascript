@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | [**OAuthScopeScope**](OAuthScopeScope.md) |  | [optional] 
-**display** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**display** | **String** |  | [optional] 
 **lifecycleState** | [**AssetsGetOAuthScopesResponseLifeCycleState**](AssetsGetOAuthScopesResponseLifeCycleState.md) |  | [optional] 
+**slug** | [**OAuthScopeScope**](OAuthScopeScope.md) |  | [optional] 
 
 

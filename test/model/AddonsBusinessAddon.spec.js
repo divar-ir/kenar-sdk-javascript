@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsBusinessAddon);
     });
 
-    it('should have the property metaData (base name: "meta_data")', function() {
-      // uncomment below and update the code to test the property metaData
+    it('should have the property businessRef (base name: "business_ref")', function() {
+      // uncomment below and update the code to test the property businessRef
       //var instance = new KenarApiClient.AddonsBusinessAddon();
       //expect(instance).to.be();
     });
 
-    it('should have the property businessRef (base name: "business_ref")', function() {
-      // uncomment below and update the code to test the property businessRef
+    it('should have the property metaData (base name: "meta_data")', function() {
+      // uncomment below and update the code to test the property metaData
       //var instance = new KenarApiClient.AddonsBusinessAddon();
       //expect(instance).to.be();
     });

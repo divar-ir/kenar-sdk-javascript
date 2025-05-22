@@ -48,11 +48,11 @@ class AddonsBusinessAddon {
         if (data) {
             obj = obj || new AddonsBusinessAddon();
 
-            if (data.hasOwnProperty('meta_data')) {
-                obj['meta_data'] = AddonsAddonMetaData.constructFromObject(data['meta_data']);
-            }
             if (data.hasOwnProperty('business_ref')) {
                 obj['business_ref'] = ApiClient.convertToType(data['business_ref'], 'String');
+            }
+            if (data.hasOwnProperty('meta_data')) {
+                obj['meta_data'] = AddonsAddonMetaData.constructFromObject(data['meta_data']);
             }
             if (data.hasOwnProperty('widgets')) {
                 obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
@@ -67,31 +67,18 @@ class AddonsBusinessAddon {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsBusinessAddon</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `meta_data`
-        if (data['meta_data']) { // data not null
-          AddonsAddonMetaData.validateJSON(data['meta_data']);
-        }
         // ensure the json data is a string
         if (data['business_ref'] && !(typeof data['business_ref'] === 'string' || data['business_ref'] instanceof String)) {
             throw new Error("Expected the field `business_ref` to be a primitive type in the JSON string but got " + data['business_ref']);
+        }
+        // validate the optional field `meta_data`
+        if (data['meta_data']) { // data not null
+          AddonsAddonMetaData.validateJSON(data['meta_data']);
         }
 
         return true;
     }
 
-/**
-     * @return {module:model/AddonsAddonMetaData}
-     */
-    getMetaData() {
-        return this.meta_data;
-    }
-
-    /**
-     * @param {module:model/AddonsAddonMetaData} metaData
-     */
-    setMetaData(metaData) {
-        this['meta_data'] = metaData;
-    }
 /**
      * @return {String}
      */
@@ -104,6 +91,19 @@ class AddonsBusinessAddon {
      */
     setBusinessRef(businessRef) {
         this['business_ref'] = businessRef;
+    }
+/**
+     * @return {module:model/AddonsAddonMetaData}
+     */
+    getMetaData() {
+        return this.meta_data;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonMetaData} metaData
+     */
+    setMetaData(metaData) {
+        this['meta_data'] = metaData;
     }
 /**
      * @return {Object}
@@ -124,14 +124,14 @@ class AddonsBusinessAddon {
 
 
 /**
- * @member {module:model/AddonsAddonMetaData} meta_data
- */
-AddonsBusinessAddon.prototype['meta_data'] = undefined;
-
-/**
  * @member {String} business_ref
  */
 AddonsBusinessAddon.prototype['business_ref'] = undefined;
+
+/**
+ * @member {module:model/AddonsAddonMetaData} meta_data
+ */
+AddonsBusinessAddon.prototype['meta_data'] = undefined;
 
 /**
  * @member {Object} widgets

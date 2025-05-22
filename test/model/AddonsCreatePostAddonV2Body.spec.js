@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsCreatePostAddonV2Body);
     });
 
-    it('should have the property widgets (base name: "widgets")', function() {
-      // uncomment below and update the code to test the property widgets
+    it('should have the property notes (base name: "notes")', function() {
+      // uncomment below and update the code to test the property notes
       //var instance = new KenarApiClient.AddonsCreatePostAddonV2Body();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property notes (base name: "notes")', function() {
-      // uncomment below and update the code to test the property notes
+    it('should have the property widgets (base name: "widgets")', function() {
+      // uncomment below and update the code to test the property widgets
       //var instance = new KenarApiClient.AddonsCreatePostAddonV2Body();
       //expect(instance).to.be();
     });

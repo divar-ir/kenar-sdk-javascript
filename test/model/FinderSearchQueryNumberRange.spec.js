@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.FinderSearchQueryNumberRange);
     });
 
-    it('should have the property min (base name: "min")', function() {
-      // uncomment below and update the code to test the property min
+    it('should have the property max (base name: "max")', function() {
+      // uncomment below and update the code to test the property max
       //var instance = new KenarApiClient.FinderSearchQueryNumberRange();
       //expect(instance).to.be();
     });
 
-    it('should have the property max (base name: "max")', function() {
-      // uncomment below and update the code to test the property max
+    it('should have the property min (base name: "min")', function() {
+      // uncomment below and update the code to test the property min
       //var instance = new KenarApiClient.FinderSearchQueryNumberRange();
       //expect(instance).to.be();
     });

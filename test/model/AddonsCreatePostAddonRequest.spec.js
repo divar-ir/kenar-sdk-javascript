@@ -54,24 +54,6 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsCreatePostAddonRequest);
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
-      //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property widgets (base name: "widgets")', function() {
-      // uncomment below and update the code to test the property widgets
-      //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property selector (base name: "selector")', function() {
-      // uncomment below and update the code to test the property selector
-      //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property linkInSpec (base name: "link_in_spec")', function() {
       // uncomment below and update the code to test the property linkInSpec
       //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
@@ -84,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property selector (base name: "selector")', function() {
+      // uncomment below and update the code to test the property selector
+      //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property semantic (base name: "semantic")', function() {
       // uncomment below and update the code to test the property semantic
       //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
@@ -92,6 +80,18 @@
 
     it('should have the property semanticSensitives (base name: "semantic_sensitives")', function() {
       // uncomment below and update the code to test the property semanticSensitives
+      //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
+      //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property widgets (base name: "widgets")', function() {
+      // uncomment below and update the code to test the property widgets
       //var instance = new KenarApiClient.AddonsCreatePostAddonRequest();
       //expect(instance).to.be();
     });

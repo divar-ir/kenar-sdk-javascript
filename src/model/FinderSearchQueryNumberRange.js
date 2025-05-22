@@ -47,11 +47,11 @@ class FinderSearchQueryNumberRange {
         if (data) {
             obj = obj || new FinderSearchQueryNumberRange();
 
-            if (data.hasOwnProperty('min')) {
-                obj['min'] = ApiClient.convertToType(data['min'], 'String');
-            }
             if (data.hasOwnProperty('max')) {
                 obj['max'] = ApiClient.convertToType(data['max'], 'String');
+            }
+            if (data.hasOwnProperty('min')) {
+                obj['min'] = ApiClient.convertToType(data['min'], 'String');
             }
         }
         return obj;
@@ -64,30 +64,17 @@ class FinderSearchQueryNumberRange {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['min'] && !(typeof data['min'] === 'string' || data['min'] instanceof String)) {
-            throw new Error("Expected the field `min` to be a primitive type in the JSON string but got " + data['min']);
-        }
-        // ensure the json data is a string
         if (data['max'] && !(typeof data['max'] === 'string' || data['max'] instanceof String)) {
             throw new Error("Expected the field `max` to be a primitive type in the JSON string but got " + data['max']);
+        }
+        // ensure the json data is a string
+        if (data['min'] && !(typeof data['min'] === 'string' || data['min'] instanceof String)) {
+            throw new Error("Expected the field `min` to be a primitive type in the JSON string but got " + data['min']);
         }
 
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getMin() {
-        return this.min;
-    }
-
-    /**
-     * @param {String} min
-     */
-    setMin(min) {
-        this['min'] = min;
-    }
 /**
      * @return {String}
      */
@@ -101,20 +88,33 @@ class FinderSearchQueryNumberRange {
     setMax(max) {
         this['max'] = max;
     }
+/**
+     * @return {String}
+     */
+    getMin() {
+        return this.min;
+    }
+
+    /**
+     * @param {String} min
+     */
+    setMin(min) {
+        this['min'] = min;
+    }
 
 }
 
 
 
 /**
- * @member {String} min
- */
-FinderSearchQueryNumberRange.prototype['min'] = undefined;
-
-/**
  * @member {String} max
  */
 FinderSearchQueryNumberRange.prototype['max'] = undefined;
+
+/**
+ * @member {String} min
+ */
+FinderSearchQueryNumberRange.prototype['min'] = undefined;
 
 
 

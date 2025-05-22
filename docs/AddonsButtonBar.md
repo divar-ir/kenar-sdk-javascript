@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **String** |  | [optional] 
 **action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
+**title** | **String** |  | [optional] 
 
 

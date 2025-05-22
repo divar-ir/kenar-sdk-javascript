@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.FinderGetUserPostsResponsePost);
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
-      //var instance = new KenarApiClient.FinderGetUserPostsResponsePost();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
+    it('should have the property category (base name: "category")', function() {
+      // uncomment below and update the code to test the property category
       //var instance = new KenarApiClient.FinderGetUserPostsResponsePost();
       //expect(instance).to.be();
     });
@@ -72,8 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property category (base name: "category")', function() {
-      // uncomment below and update the code to test the property category
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new KenarApiClient.FinderGetUserPostsResponsePost();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
       //var instance = new KenarApiClient.FinderGetUserPostsResponsePost();
       //expect(instance).to.be();
     });

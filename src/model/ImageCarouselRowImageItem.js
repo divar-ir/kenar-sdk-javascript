@@ -47,11 +47,11 @@ class ImageCarouselRowImageItem {
         if (data) {
             obj = obj || new ImageCarouselRowImageItem();
 
-            if (data.hasOwnProperty('image_id')) {
-                obj['image_id'] = ApiClient.convertToType(data['image_id'], 'String');
-            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('image_id')) {
+                obj['image_id'] = ApiClient.convertToType(data['image_id'], 'String');
             }
         }
         return obj;
@@ -64,30 +64,17 @@ class ImageCarouselRowImageItem {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['image_id'] && !(typeof data['image_id'] === 'string' || data['image_id'] instanceof String)) {
-            throw new Error("Expected the field `image_id` to be a primitive type in the JSON string but got " + data['image_id']);
-        }
-        // ensure the json data is a string
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['image_id'] && !(typeof data['image_id'] === 'string' || data['image_id'] instanceof String)) {
+            throw new Error("Expected the field `image_id` to be a primitive type in the JSON string but got " + data['image_id']);
         }
 
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getImageId() {
-        return this.image_id;
-    }
-
-    /**
-     * @param {String} imageId
-     */
-    setImageId(imageId) {
-        this['image_id'] = imageId;
-    }
 /**
      * @return {String}
      */
@@ -101,20 +88,33 @@ class ImageCarouselRowImageItem {
     setDescription(description) {
         this['description'] = description;
     }
+/**
+     * @return {String}
+     */
+    getImageId() {
+        return this.image_id;
+    }
+
+    /**
+     * @param {String} imageId
+     */
+    setImageId(imageId) {
+        this['image_id'] = imageId;
+    }
 
 }
 
 
 
 /**
- * @member {String} image_id
- */
-ImageCarouselRowImageItem.prototype['image_id'] = undefined;
-
-/**
  * @member {String} description
  */
 ImageCarouselRowImageItem.prototype['description'] = undefined;
+
+/**
+ * @member {String} image_id
+ */
+ImageCarouselRowImageItem.prototype['image_id'] = undefined;
 
 
 

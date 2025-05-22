@@ -54,38 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsPostAddon);
     });
 
-    it('should have the property metaData (base name: "meta_data")', function() {
-      // uncomment below and update the code to test the property metaData
-      //var instance = new KenarApiClient.AddonsPostAddon();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
-      //var instance = new KenarApiClient.AddonsPostAddon();
-      //expect(instance).to.be();
-    });
-
     it('should have the property app (base name: "app")', function() {
       // uncomment below and update the code to test the property app
-      //var instance = new KenarApiClient.AddonsPostAddon();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property widgets (base name: "widgets")', function() {
-      // uncomment below and update the code to test the property widgets
-      //var instance = new KenarApiClient.AddonsPostAddon();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property score (base name: "score")', function() {
-      // uncomment below and update the code to test the property score
-      //var instance = new KenarApiClient.AddonsPostAddon();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property selector (base name: "selector")', function() {
-      // uncomment below and update the code to test the property selector
       //var instance = new KenarApiClient.AddonsPostAddon();
       //expect(instance).to.be();
     });
@@ -96,8 +66,26 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property metaData (base name: "meta_data")', function() {
+      // uncomment below and update the code to test the property metaData
+      //var instance = new KenarApiClient.AddonsPostAddon();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property score (base name: "score")', function() {
+      // uncomment below and update the code to test the property score
+      //var instance = new KenarApiClient.AddonsPostAddon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property secondaryLinks (base name: "secondary_links")', function() {
       // uncomment below and update the code to test the property secondaryLinks
+      //var instance = new KenarApiClient.AddonsPostAddon();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property selector (base name: "selector")', function() {
+      // uncomment below and update the code to test the property selector
       //var instance = new KenarApiClient.AddonsPostAddon();
       //expect(instance).to.be();
     });
@@ -114,20 +102,32 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property semanticSensitives (base name: "semantic_sensitives")', function() {
+      // uncomment below and update the code to test the property semanticSensitives
+      //var instance = new KenarApiClient.AddonsPostAddon();
+      //expect(instance).to.be();
+    });
+
     it('should have the property sensitiveSemantic (base name: "sensitive_semantic")', function() {
       // uncomment below and update the code to test the property sensitiveSemantic
       //var instance = new KenarApiClient.AddonsPostAddon();
       //expect(instance).to.be();
     });
 
-    it('should have the property widgetsSemantic (base name: "widgets_semantic")', function() {
-      // uncomment below and update the code to test the property widgetsSemantic
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
       //var instance = new KenarApiClient.AddonsPostAddon();
       //expect(instance).to.be();
     });
 
-    it('should have the property semanticSensitives (base name: "semantic_sensitives")', function() {
-      // uncomment below and update the code to test the property semanticSensitives
+    it('should have the property widgets (base name: "widgets")', function() {
+      // uncomment below and update the code to test the property widgets
+      //var instance = new KenarApiClient.AddonsPostAddon();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property widgetsSemantic (base name: "widgets_semantic")', function() {
+      // uncomment below and update the code to test the property widgetsSemantic
       //var instance = new KenarApiClient.AddonsPostAddon();
       //expect(instance).to.be();
     });

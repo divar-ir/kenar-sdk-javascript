@@ -48,26 +48,26 @@ class AddonsCreatePostAddonRequest {
         if (data) {
             obj = obj || new AddonsCreatePostAddonRequest();
 
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
-            if (data.hasOwnProperty('widgets')) {
-                obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
-            }
-            if (data.hasOwnProperty('selector')) {
-                obj['selector'] = AddonsAddonSelector.constructFromObject(data['selector']);
-            }
             if (data.hasOwnProperty('link_in_spec')) {
                 obj['link_in_spec'] = ApiClient.convertToType(data['link_in_spec'], 'String');
             }
             if (data.hasOwnProperty('notes')) {
                 obj['notes'] = ApiClient.convertToType(data['notes'], 'String');
             }
+            if (data.hasOwnProperty('selector')) {
+                obj['selector'] = AddonsAddonSelector.constructFromObject(data['selector']);
+            }
             if (data.hasOwnProperty('semantic')) {
                 obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
             }
             if (data.hasOwnProperty('semantic_sensitives')) {
                 obj['semantic_sensitives'] = ApiClient.convertToType(data['semantic_sensitives'], ['String']);
+            }
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
+            }
+            if (data.hasOwnProperty('widgets')) {
+                obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
             }
         }
         return obj;
@@ -80,14 +80,6 @@ class AddonsCreatePostAddonRequest {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
-            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
-        }
-        // validate the optional field `selector`
-        if (data['selector']) { // data not null
-          AddonsAddonSelector.validateJSON(data['selector']);
-        }
-        // ensure the json data is a string
         if (data['link_in_spec'] && !(typeof data['link_in_spec'] === 'string' || data['link_in_spec'] instanceof String)) {
             throw new Error("Expected the field `link_in_spec` to be a primitive type in the JSON string but got " + data['link_in_spec']);
         }
@@ -95,53 +87,22 @@ class AddonsCreatePostAddonRequest {
         if (data['notes'] && !(typeof data['notes'] === 'string' || data['notes'] instanceof String)) {
             throw new Error("Expected the field `notes` to be a primitive type in the JSON string but got " + data['notes']);
         }
+        // validate the optional field `selector`
+        if (data['selector']) { // data not null
+          AddonsAddonSelector.validateJSON(data['selector']);
+        }
         // ensure the json data is an array
         if (!Array.isArray(data['semantic_sensitives'])) {
             throw new Error("Expected the field `semantic_sensitives` to be an array in the JSON data but got " + data['semantic_sensitives']);
+        }
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
         }
 
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getToken() {
-        return this.token;
-    }
-
-    /**
-     * @param {String} token
-     */
-    setToken(token) {
-        this['token'] = token;
-    }
-/**
-     * @return {Object}
-     */
-    getWidgets() {
-        return this.widgets;
-    }
-
-    /**
-     * @param {Object} widgets
-     */
-    setWidgets(widgets) {
-        this['widgets'] = widgets;
-    }
-/**
-     * @return {module:model/AddonsAddonSelector}
-     */
-    getSelector() {
-        return this.selector;
-    }
-
-    /**
-     * @param {module:model/AddonsAddonSelector} selector
-     */
-    setSelector(selector) {
-        this['selector'] = selector;
-    }
 /**
      * @return {String}
      */
@@ -169,6 +130,19 @@ class AddonsCreatePostAddonRequest {
         this['notes'] = notes;
     }
 /**
+     * @return {module:model/AddonsAddonSelector}
+     */
+    getSelector() {
+        return this.selector;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSelector} selector
+     */
+    setSelector(selector) {
+        this['selector'] = selector;
+    }
+/**
      * @return {Object.<String, String>}
      */
     getSemantic() {
@@ -194,25 +168,36 @@ class AddonsCreatePostAddonRequest {
     setSemanticSensitives(semanticSensitives) {
         this['semantic_sensitives'] = semanticSensitives;
     }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
+    }
+/**
+     * @return {Object}
+     */
+    getWidgets() {
+        return this.widgets;
+    }
+
+    /**
+     * @param {Object} widgets
+     */
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
+    }
 
 }
 
 
-
-/**
- * @member {String} token
- */
-AddonsCreatePostAddonRequest.prototype['token'] = undefined;
-
-/**
- * @member {Object} widgets
- */
-AddonsCreatePostAddonRequest.prototype['widgets'] = undefined;
-
-/**
- * @member {module:model/AddonsAddonSelector} selector
- */
-AddonsCreatePostAddonRequest.prototype['selector'] = undefined;
 
 /**
  * @member {String} link_in_spec
@@ -225,6 +210,11 @@ AddonsCreatePostAddonRequest.prototype['link_in_spec'] = undefined;
 AddonsCreatePostAddonRequest.prototype['notes'] = undefined;
 
 /**
+ * @member {module:model/AddonsAddonSelector} selector
+ */
+AddonsCreatePostAddonRequest.prototype['selector'] = undefined;
+
+/**
  * @member {Object.<String, String>} semantic
  */
 AddonsCreatePostAddonRequest.prototype['semantic'] = undefined;
@@ -233,6 +223,16 @@ AddonsCreatePostAddonRequest.prototype['semantic'] = undefined;
  * @member {Array.<String>} semantic_sensitives
  */
 AddonsCreatePostAddonRequest.prototype['semantic_sensitives'] = undefined;
+
+/**
+ * @member {String} token
+ */
+AddonsCreatePostAddonRequest.prototype['token'] = undefined;
+
+/**
+ * @member {Object} widgets
+ */
+AddonsCreatePostAddonRequest.prototype['widgets'] = undefined;
 
 
 

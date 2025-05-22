@@ -48,11 +48,11 @@ class AddonsImageCarouselRow {
         if (data) {
             obj = obj || new AddonsImageCarouselRow();
 
-            if (data.hasOwnProperty('items')) {
-                obj['items'] = ApiClient.convertToType(data['items'], [ImageCarouselRowImageItem]);
-            }
             if (data.hasOwnProperty('has_divider')) {
                 obj['has_divider'] = ApiClient.convertToType(data['has_divider'], 'Boolean');
+            }
+            if (data.hasOwnProperty('items')) {
+                obj['items'] = ApiClient.convertToType(data['items'], [ImageCarouselRowImageItem]);
             }
         }
         return obj;
@@ -79,19 +79,6 @@ class AddonsImageCarouselRow {
     }
 
 /**
-     * @return {Array.<module:model/ImageCarouselRowImageItem>}
-     */
-    getItems() {
-        return this.items;
-    }
-
-    /**
-     * @param {Array.<module:model/ImageCarouselRowImageItem>} items
-     */
-    setItems(items) {
-        this['items'] = items;
-    }
-/**
      * @return {Boolean}
      */
     getHasDivider() {
@@ -104,20 +91,33 @@ class AddonsImageCarouselRow {
     setHasDivider(hasDivider) {
         this['has_divider'] = hasDivider;
     }
+/**
+     * @return {Array.<module:model/ImageCarouselRowImageItem>}
+     */
+    getItems() {
+        return this.items;
+    }
+
+    /**
+     * @param {Array.<module:model/ImageCarouselRowImageItem>} items
+     */
+    setItems(items) {
+        this['items'] = items;
+    }
 
 }
 
 
 
 /**
- * @member {Array.<module:model/ImageCarouselRowImageItem>} items
- */
-AddonsImageCarouselRow.prototype['items'] = undefined;
-
-/**
  * @member {Boolean} has_divider
  */
 AddonsImageCarouselRow.prototype['has_divider'] = undefined;
+
+/**
+ * @member {Array.<module:model/ImageCarouselRowImageItem>} items
+ */
+AddonsImageCarouselRow.prototype['items'] = undefined;
 
 
 

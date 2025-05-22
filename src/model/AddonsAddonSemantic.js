@@ -57,38 +57,38 @@ class AddonsAddonSemantic {
         if (data) {
             obj = obj || new AddonsAddonSemantic();
 
-            if (data.hasOwnProperty('payment_method')) {
-                obj['payment_method'] = AddonsAddonSemanticPaymentMethod.constructFromObject(data['payment_method']);
-            }
-            if (data.hasOwnProperty('identity_verification_result')) {
-                obj['identity_verification_result'] = AddonSemanticIdentityVerificationResult.constructFromObject(data['identity_verification_result']);
-            }
-            if (data.hasOwnProperty('post_verification_result')) {
-                obj['post_verification_result'] = AddonSemanticPostVerificationResult.constructFromObject(data['post_verification_result']);
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = AddonsAddonSemanticStatus.constructFromObject(data['status']);
-            }
-            if (data.hasOwnProperty('identity_verification_last_successful_stage')) {
-                obj['identity_verification_last_successful_stage'] = AddonSemanticIdentityVerificationStage.constructFromObject(data['identity_verification_last_successful_stage']);
-            }
-            if (data.hasOwnProperty('identity_verification_failure_reason')) {
-                obj['identity_verification_failure_reason'] = AddonSemanticIdentityVerificationStage.constructFromObject(data['identity_verification_failure_reason']);
+            if (data.hasOwnProperty('car_verification_failure_reason')) {
+                obj['car_verification_failure_reason'] = AddonSemanticCarVerificationStage.constructFromObject(data['car_verification_failure_reason']);
             }
             if (data.hasOwnProperty('car_verification_last_successful_stage')) {
                 obj['car_verification_last_successful_stage'] = AddonSemanticCarVerificationStage.constructFromObject(data['car_verification_last_successful_stage']);
             }
-            if (data.hasOwnProperty('car_verification_failure_reason')) {
-                obj['car_verification_failure_reason'] = AddonSemanticCarVerificationStage.constructFromObject(data['car_verification_failure_reason']);
+            if (data.hasOwnProperty('identity_verification_failure_reason')) {
+                obj['identity_verification_failure_reason'] = AddonSemanticIdentityVerificationStage.constructFromObject(data['identity_verification_failure_reason']);
             }
-            if (data.hasOwnProperty('ownership_result')) {
-                obj['ownership_result'] = AddonSemanticOwnershipResult.constructFromObject(data['ownership_result']);
+            if (data.hasOwnProperty('identity_verification_last_successful_stage')) {
+                obj['identity_verification_last_successful_stage'] = AddonSemanticIdentityVerificationStage.constructFromObject(data['identity_verification_last_successful_stage']);
+            }
+            if (data.hasOwnProperty('identity_verification_result')) {
+                obj['identity_verification_result'] = AddonSemanticIdentityVerificationResult.constructFromObject(data['identity_verification_result']);
             }
             if (data.hasOwnProperty('inspection_result')) {
                 obj['inspection_result'] = AddonSemanticInspectionResult.constructFromObject(data['inspection_result']);
             }
             if (data.hasOwnProperty('new_face_verification_result')) {
                 obj['new_face_verification_result'] = AddonSemanticNewFaceVerificationResult.constructFromObject(data['new_face_verification_result']);
+            }
+            if (data.hasOwnProperty('ownership_result')) {
+                obj['ownership_result'] = AddonSemanticOwnershipResult.constructFromObject(data['ownership_result']);
+            }
+            if (data.hasOwnProperty('payment_method')) {
+                obj['payment_method'] = AddonsAddonSemanticPaymentMethod.constructFromObject(data['payment_method']);
+            }
+            if (data.hasOwnProperty('post_verification_result')) {
+                obj['post_verification_result'] = AddonSemanticPostVerificationResult.constructFromObject(data['post_verification_result']);
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = AddonsAddonSemanticStatus.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -105,82 +105,17 @@ class AddonsAddonSemantic {
     }
 
 /**
-     * @return {module:model/AddonsAddonSemanticPaymentMethod}
+     * @return {module:model/AddonSemanticCarVerificationStage}
      */
-    getPaymentMethod() {
-        return this.payment_method;
+    getCarVerificationFailureReason() {
+        return this.car_verification_failure_reason;
     }
 
     /**
-     * @param {module:model/AddonsAddonSemanticPaymentMethod} paymentMethod
+     * @param {module:model/AddonSemanticCarVerificationStage} carVerificationFailureReason
      */
-    setPaymentMethod(paymentMethod) {
-        this['payment_method'] = paymentMethod;
-    }
-/**
-     * @return {module:model/AddonSemanticIdentityVerificationResult}
-     */
-    getIdentityVerificationResult() {
-        return this.identity_verification_result;
-    }
-
-    /**
-     * @param {module:model/AddonSemanticIdentityVerificationResult} identityVerificationResult
-     */
-    setIdentityVerificationResult(identityVerificationResult) {
-        this['identity_verification_result'] = identityVerificationResult;
-    }
-/**
-     * @return {module:model/AddonSemanticPostVerificationResult}
-     */
-    getPostVerificationResult() {
-        return this.post_verification_result;
-    }
-
-    /**
-     * @param {module:model/AddonSemanticPostVerificationResult} postVerificationResult
-     */
-    setPostVerificationResult(postVerificationResult) {
-        this['post_verification_result'] = postVerificationResult;
-    }
-/**
-     * @return {module:model/AddonsAddonSemanticStatus}
-     */
-    getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @param {module:model/AddonsAddonSemanticStatus} status
-     */
-    setStatus(status) {
-        this['status'] = status;
-    }
-/**
-     * @return {module:model/AddonSemanticIdentityVerificationStage}
-     */
-    getIdentityVerificationLastSuccessfulStage() {
-        return this.identity_verification_last_successful_stage;
-    }
-
-    /**
-     * @param {module:model/AddonSemanticIdentityVerificationStage} identityVerificationLastSuccessfulStage
-     */
-    setIdentityVerificationLastSuccessfulStage(identityVerificationLastSuccessfulStage) {
-        this['identity_verification_last_successful_stage'] = identityVerificationLastSuccessfulStage;
-    }
-/**
-     * @return {module:model/AddonSemanticIdentityVerificationStage}
-     */
-    getIdentityVerificationFailureReason() {
-        return this.identity_verification_failure_reason;
-    }
-
-    /**
-     * @param {module:model/AddonSemanticIdentityVerificationStage} identityVerificationFailureReason
-     */
-    setIdentityVerificationFailureReason(identityVerificationFailureReason) {
-        this['identity_verification_failure_reason'] = identityVerificationFailureReason;
+    setCarVerificationFailureReason(carVerificationFailureReason) {
+        this['car_verification_failure_reason'] = carVerificationFailureReason;
     }
 /**
      * @return {module:model/AddonSemanticCarVerificationStage}
@@ -196,30 +131,43 @@ class AddonsAddonSemantic {
         this['car_verification_last_successful_stage'] = carVerificationLastSuccessfulStage;
     }
 /**
-     * @return {module:model/AddonSemanticCarVerificationStage}
+     * @return {module:model/AddonSemanticIdentityVerificationStage}
      */
-    getCarVerificationFailureReason() {
-        return this.car_verification_failure_reason;
+    getIdentityVerificationFailureReason() {
+        return this.identity_verification_failure_reason;
     }
 
     /**
-     * @param {module:model/AddonSemanticCarVerificationStage} carVerificationFailureReason
+     * @param {module:model/AddonSemanticIdentityVerificationStage} identityVerificationFailureReason
      */
-    setCarVerificationFailureReason(carVerificationFailureReason) {
-        this['car_verification_failure_reason'] = carVerificationFailureReason;
+    setIdentityVerificationFailureReason(identityVerificationFailureReason) {
+        this['identity_verification_failure_reason'] = identityVerificationFailureReason;
     }
 /**
-     * @return {module:model/AddonSemanticOwnershipResult}
+     * @return {module:model/AddonSemanticIdentityVerificationStage}
      */
-    getOwnershipResult() {
-        return this.ownership_result;
+    getIdentityVerificationLastSuccessfulStage() {
+        return this.identity_verification_last_successful_stage;
     }
 
     /**
-     * @param {module:model/AddonSemanticOwnershipResult} ownershipResult
+     * @param {module:model/AddonSemanticIdentityVerificationStage} identityVerificationLastSuccessfulStage
      */
-    setOwnershipResult(ownershipResult) {
-        this['ownership_result'] = ownershipResult;
+    setIdentityVerificationLastSuccessfulStage(identityVerificationLastSuccessfulStage) {
+        this['identity_verification_last_successful_stage'] = identityVerificationLastSuccessfulStage;
+    }
+/**
+     * @return {module:model/AddonSemanticIdentityVerificationResult}
+     */
+    getIdentityVerificationResult() {
+        return this.identity_verification_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticIdentityVerificationResult} identityVerificationResult
+     */
+    setIdentityVerificationResult(identityVerificationResult) {
+        this['identity_verification_result'] = identityVerificationResult;
     }
 /**
      * @return {module:model/AddonSemanticInspectionResult}
@@ -247,45 +195,62 @@ class AddonsAddonSemantic {
     setNewFaceVerificationResult(newFaceVerificationResult) {
         this['new_face_verification_result'] = newFaceVerificationResult;
     }
+/**
+     * @return {module:model/AddonSemanticOwnershipResult}
+     */
+    getOwnershipResult() {
+        return this.ownership_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticOwnershipResult} ownershipResult
+     */
+    setOwnershipResult(ownershipResult) {
+        this['ownership_result'] = ownershipResult;
+    }
+/**
+     * @return {module:model/AddonsAddonSemanticPaymentMethod}
+     */
+    getPaymentMethod() {
+        return this.payment_method;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSemanticPaymentMethod} paymentMethod
+     */
+    setPaymentMethod(paymentMethod) {
+        this['payment_method'] = paymentMethod;
+    }
+/**
+     * @return {module:model/AddonSemanticPostVerificationResult}
+     */
+    getPostVerificationResult() {
+        return this.post_verification_result;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticPostVerificationResult} postVerificationResult
+     */
+    setPostVerificationResult(postVerificationResult) {
+        this['post_verification_result'] = postVerificationResult;
+    }
+/**
+     * @return {module:model/AddonsAddonSemanticStatus}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {module:model/AddonsAddonSemanticStatus} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
 
 }
 
 
-
-/**
- * @member {module:model/AddonsAddonSemanticPaymentMethod} payment_method
- */
-AddonsAddonSemantic.prototype['payment_method'] = undefined;
-
-/**
- * @member {module:model/AddonSemanticIdentityVerificationResult} identity_verification_result
- */
-AddonsAddonSemantic.prototype['identity_verification_result'] = undefined;
-
-/**
- * @member {module:model/AddonSemanticPostVerificationResult} post_verification_result
- */
-AddonsAddonSemantic.prototype['post_verification_result'] = undefined;
-
-/**
- * @member {module:model/AddonsAddonSemanticStatus} status
- */
-AddonsAddonSemantic.prototype['status'] = undefined;
-
-/**
- * @member {module:model/AddonSemanticIdentityVerificationStage} identity_verification_last_successful_stage
- */
-AddonsAddonSemantic.prototype['identity_verification_last_successful_stage'] = undefined;
-
-/**
- * @member {module:model/AddonSemanticIdentityVerificationStage} identity_verification_failure_reason
- */
-AddonsAddonSemantic.prototype['identity_verification_failure_reason'] = undefined;
-
-/**
- * @member {module:model/AddonSemanticCarVerificationStage} car_verification_last_successful_stage
- */
-AddonsAddonSemantic.prototype['car_verification_last_successful_stage'] = undefined;
 
 /**
  * @member {module:model/AddonSemanticCarVerificationStage} car_verification_failure_reason
@@ -293,9 +258,24 @@ AddonsAddonSemantic.prototype['car_verification_last_successful_stage'] = undefi
 AddonsAddonSemantic.prototype['car_verification_failure_reason'] = undefined;
 
 /**
- * @member {module:model/AddonSemanticOwnershipResult} ownership_result
+ * @member {module:model/AddonSemanticCarVerificationStage} car_verification_last_successful_stage
  */
-AddonsAddonSemantic.prototype['ownership_result'] = undefined;
+AddonsAddonSemantic.prototype['car_verification_last_successful_stage'] = undefined;
+
+/**
+ * @member {module:model/AddonSemanticIdentityVerificationStage} identity_verification_failure_reason
+ */
+AddonsAddonSemantic.prototype['identity_verification_failure_reason'] = undefined;
+
+/**
+ * @member {module:model/AddonSemanticIdentityVerificationStage} identity_verification_last_successful_stage
+ */
+AddonsAddonSemantic.prototype['identity_verification_last_successful_stage'] = undefined;
+
+/**
+ * @member {module:model/AddonSemanticIdentityVerificationResult} identity_verification_result
+ */
+AddonsAddonSemantic.prototype['identity_verification_result'] = undefined;
 
 /**
  * @member {module:model/AddonSemanticInspectionResult} inspection_result
@@ -306,6 +286,26 @@ AddonsAddonSemantic.prototype['inspection_result'] = undefined;
  * @member {module:model/AddonSemanticNewFaceVerificationResult} new_face_verification_result
  */
 AddonsAddonSemantic.prototype['new_face_verification_result'] = undefined;
+
+/**
+ * @member {module:model/AddonSemanticOwnershipResult} ownership_result
+ */
+AddonsAddonSemantic.prototype['ownership_result'] = undefined;
+
+/**
+ * @member {module:model/AddonsAddonSemanticPaymentMethod} payment_method
+ */
+AddonsAddonSemantic.prototype['payment_method'] = undefined;
+
+/**
+ * @member {module:model/AddonSemanticPostVerificationResult} post_verification_result
+ */
+AddonsAddonSemantic.prototype['post_verification_result'] = undefined;
+
+/**
+ * @member {module:model/AddonsAddonSemanticStatus} status
+ */
+AddonsAddonSemantic.prototype['status'] = undefined;
 
 
 

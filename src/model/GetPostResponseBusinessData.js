@@ -48,11 +48,11 @@ class GetPostResponseBusinessData {
         if (data) {
             obj = obj || new GetPostResponseBusinessData();
 
-            if (data.hasOwnProperty('business_type')) {
-                obj['business_type'] = PremiumPanelBusinessDataSubBusinessType.constructFromObject(data['business_type']);
-            }
             if (data.hasOwnProperty('business_name')) {
                 obj['business_name'] = ApiClient.convertToType(data['business_name'], 'String');
+            }
+            if (data.hasOwnProperty('business_type')) {
+                obj['business_type'] = PremiumPanelBusinessDataSubBusinessType.constructFromObject(data['business_type']);
             }
         }
         return obj;
@@ -73,19 +73,6 @@ class GetPostResponseBusinessData {
     }
 
 /**
-     * @return {module:model/PremiumPanelBusinessDataSubBusinessType}
-     */
-    getBusinessType() {
-        return this.business_type;
-    }
-
-    /**
-     * @param {module:model/PremiumPanelBusinessDataSubBusinessType} businessType
-     */
-    setBusinessType(businessType) {
-        this['business_type'] = businessType;
-    }
-/**
      * @return {String}
      */
     getBusinessName() {
@@ -98,20 +85,33 @@ class GetPostResponseBusinessData {
     setBusinessName(businessName) {
         this['business_name'] = businessName;
     }
+/**
+     * @return {module:model/PremiumPanelBusinessDataSubBusinessType}
+     */
+    getBusinessType() {
+        return this.business_type;
+    }
+
+    /**
+     * @param {module:model/PremiumPanelBusinessDataSubBusinessType} businessType
+     */
+    setBusinessType(businessType) {
+        this['business_type'] = businessType;
+    }
 
 }
 
 
 
 /**
- * @member {module:model/PremiumPanelBusinessDataSubBusinessType} business_type
- */
-GetPostResponseBusinessData.prototype['business_type'] = undefined;
-
-/**
  * @member {String} business_name
  */
 GetPostResponseBusinessData.prototype['business_name'] = undefined;
+
+/**
+ * @member {module:model/PremiumPanelBusinessDataSubBusinessType} business_type
+ */
+GetPostResponseBusinessData.prototype['business_type'] = undefined;
 
 
 

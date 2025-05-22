@@ -4,21 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **String** |  | [optional] 
 **category** | **String** |  | [optional] 
-**lastModifiedAt** | **Date** |  | [optional] 
 **city** | **String** |  | [optional] 
-**title** | **String** |  | [optional] 
-**price** | [**SearchPostItemPrice**](SearchPostItemPrice.md) |  | [optional] 
-**realEstateFields** | [**SearchPostItemRealEstateFields**](SearchPostItemRealEstateFields.md) |  | [optional] 
-**vehiclesFields** | [**SearchPostItemVehiclesFields**](SearchPostItemVehiclesFields.md) |  | [optional] 
+**communityFields** | **Object** |  | [optional] 
 **electronicDevicesFields** | **Object** |  | [optional] 
 **homeKitchenFields** | **Object** |  | [optional] 
-**servicesFields** | **Object** |  | [optional] 
-**personalGoodsFields** | **Object** |  | [optional] 
-**leisureHobbiesFields** | **Object** |  | [optional] 
-**communityFields** | **Object** |  | [optional] 
-**toolsMaterialsEquipmentFields** | **Object** |  | [optional] 
 **jobsFields** | **Object** |  | [optional] 
+**lastModifiedAt** | **Date** |  | [optional] 
+**leisureHobbiesFields** | **Object** |  | [optional] 
+**personalGoodsFields** | **Object** |  | [optional] 
+**price** | [**SearchPostItemPrice**](SearchPostItemPrice.md) |  | [optional] 
+**realEstateFields** | [**SearchPostItemRealEstateFields**](SearchPostItemRealEstateFields.md) |  | [optional] 
+**servicesFields** | **Object** |  | [optional] 
+**title** | **String** |  | [optional] 
+**token** | **String** |  | [optional] 
+**toolsMaterialsEquipmentFields** | **Object** |  | [optional] 
+**vehiclesFields** | [**SearchPostItemVehiclesFields**](SearchPostItemVehiclesFields.md) |  | [optional] 
 
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**heightPx** | **Number** |  | [optional] 
 **link** | **String** |  | [optional] 
 **sizeBytes** | **String** |  | [optional] 
-**heightPx** | **Number** |  | [optional] 
 **widthPx** | **Number** |  | [optional] 
 
 

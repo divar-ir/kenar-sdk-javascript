@@ -1587,4 +1587,6 @@
 
 * `WHATS_APP` (value: `"WHATS_APP"`)
 
+* `CHAT_SPARKLES` (value: `"CHAT_SPARKLES"`)
+
 

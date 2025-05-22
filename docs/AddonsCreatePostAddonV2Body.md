@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**widgets** | [**[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
-**semantic** | **{String: String}** |  | [optional] 
 **notes** | **String** |  | [optional] 
+**semantic** | **{String: String}** |  | [optional] 
+**widgets** | [**[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
 
 

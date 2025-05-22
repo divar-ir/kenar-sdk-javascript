@@ -48,11 +48,11 @@ class AddonsEvaluationRowSection {
         if (data) {
             obj = obj || new AddonsEvaluationRowSection();
 
-            if (data.hasOwnProperty('text')) {
-                obj['text'] = ApiClient.convertToType(data['text'], 'String');
-            }
             if (data.hasOwnProperty('section_color')) {
                 obj['section_color'] = AddonsWidgetColor.constructFromObject(data['section_color']);
+            }
+            if (data.hasOwnProperty('text')) {
+                obj['text'] = ApiClient.convertToType(data['text'], 'String');
             }
         }
         return obj;
@@ -73,19 +73,6 @@ class AddonsEvaluationRowSection {
     }
 
 /**
-     * @return {String}
-     */
-    getText() {
-        return this.text;
-    }
-
-    /**
-     * @param {String} text
-     */
-    setText(text) {
-        this['text'] = text;
-    }
-/**
      * @return {module:model/AddonsWidgetColor}
      */
     getSectionColor() {
@@ -98,20 +85,33 @@ class AddonsEvaluationRowSection {
     setSectionColor(sectionColor) {
         this['section_color'] = sectionColor;
     }
+/**
+     * @return {String}
+     */
+    getText() {
+        return this.text;
+    }
+
+    /**
+     * @param {String} text
+     */
+    setText(text) {
+        this['text'] = text;
+    }
 
 }
 
 
 
 /**
- * @member {String} text
- */
-AddonsEvaluationRowSection.prototype['text'] = undefined;
-
-/**
  * @member {module:model/AddonsWidgetColor} section_color
  */
 AddonsEvaluationRowSection.prototype['section_color'] = undefined;
+
+/**
+ * @member {String} text
+ */
+AddonsEvaluationRowSection.prototype['text'] = undefined;
 
 
 

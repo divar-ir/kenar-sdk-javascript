@@ -50,17 +50,11 @@ class AddonsScoreRow {
         if (data) {
             obj = obj || new AddonsScoreRow();
 
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            if (data.hasOwnProperty('action')) {
+                obj['action'] = AddonsAction.constructFromObject(data['action']);
             }
             if (data.hasOwnProperty('descriptive_score')) {
                 obj['descriptive_score'] = ApiClient.convertToType(data['descriptive_score'], 'String');
-            }
-            if (data.hasOwnProperty('percentage_score')) {
-                obj['percentage_score'] = ApiClient.convertToType(data['percentage_score'], 'Number');
-            }
-            if (data.hasOwnProperty('score_color')) {
-                obj['score_color'] = AddonsWidgetColor.constructFromObject(data['score_color']);
             }
             if (data.hasOwnProperty('has_divider')) {
                 obj['has_divider'] = ApiClient.convertToType(data['has_divider'], 'Boolean');
@@ -68,8 +62,14 @@ class AddonsScoreRow {
             if (data.hasOwnProperty('icon_name')) {
                 obj['icon_name'] = DivarIconsIconName.constructFromObject(data['icon_name']);
             }
-            if (data.hasOwnProperty('action')) {
-                obj['action'] = AddonsAction.constructFromObject(data['action']);
+            if (data.hasOwnProperty('percentage_score')) {
+                obj['percentage_score'] = ApiClient.convertToType(data['percentage_score'], 'Number');
+            }
+            if (data.hasOwnProperty('score_color')) {
+                obj['score_color'] = AddonsWidgetColor.constructFromObject(data['score_color']);
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
         }
         return obj;
@@ -81,34 +81,34 @@ class AddonsScoreRow {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsScoreRow</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        // validate the optional field `action`
+        if (data['action']) { // data not null
+          AddonsAction.validateJSON(data['action']);
         }
         // ensure the json data is a string
         if (data['descriptive_score'] && !(typeof data['descriptive_score'] === 'string' || data['descriptive_score'] instanceof String)) {
             throw new Error("Expected the field `descriptive_score` to be a primitive type in the JSON string but got " + data['descriptive_score']);
         }
-        // validate the optional field `action`
-        if (data['action']) { // data not null
-          AddonsAction.validateJSON(data['action']);
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
 
         return true;
     }
 
 /**
-     * @return {String}
+     * @return {module:model/AddonsAction}
      */
-    getTitle() {
-        return this.title;
+    getAction() {
+        return this.action;
     }
 
     /**
-     * @param {String} title
+     * @param {module:model/AddonsAction} action
      */
-    setTitle(title) {
-        this['title'] = title;
+    setAction(action) {
+        this['action'] = action;
     }
 /**
      * @return {String}
@@ -122,32 +122,6 @@ class AddonsScoreRow {
      */
     setDescriptiveScore(descriptiveScore) {
         this['descriptive_score'] = descriptiveScore;
-    }
-/**
-     * @return {Number}
-     */
-    getPercentageScore() {
-        return this.percentage_score;
-    }
-
-    /**
-     * @param {Number} percentageScore
-     */
-    setPercentageScore(percentageScore) {
-        this['percentage_score'] = percentageScore;
-    }
-/**
-     * @return {module:model/AddonsWidgetColor}
-     */
-    getScoreColor() {
-        return this.score_color;
-    }
-
-    /**
-     * @param {module:model/AddonsWidgetColor} scoreColor
-     */
-    setScoreColor(scoreColor) {
-        this['score_color'] = scoreColor;
     }
 /**
      * @return {Boolean}
@@ -176,17 +150,43 @@ class AddonsScoreRow {
         this['icon_name'] = iconName;
     }
 /**
-     * @return {module:model/AddonsAction}
+     * @return {Number}
      */
-    getAction() {
-        return this.action;
+    getPercentageScore() {
+        return this.percentage_score;
     }
 
     /**
-     * @param {module:model/AddonsAction} action
+     * @param {Number} percentageScore
      */
-    setAction(action) {
-        this['action'] = action;
+    setPercentageScore(percentageScore) {
+        this['percentage_score'] = percentageScore;
+    }
+/**
+     * @return {module:model/AddonsWidgetColor}
+     */
+    getScoreColor() {
+        return this.score_color;
+    }
+
+    /**
+     * @param {module:model/AddonsWidgetColor} scoreColor
+     */
+    setScoreColor(scoreColor) {
+        this['score_color'] = scoreColor;
+    }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
     }
 
 }
@@ -194,24 +194,14 @@ class AddonsScoreRow {
 
 
 /**
- * @member {String} title
+ * @member {module:model/AddonsAction} action
  */
-AddonsScoreRow.prototype['title'] = undefined;
+AddonsScoreRow.prototype['action'] = undefined;
 
 /**
  * @member {String} descriptive_score
  */
 AddonsScoreRow.prototype['descriptive_score'] = undefined;
-
-/**
- * @member {Number} percentage_score
- */
-AddonsScoreRow.prototype['percentage_score'] = undefined;
-
-/**
- * @member {module:model/AddonsWidgetColor} score_color
- */
-AddonsScoreRow.prototype['score_color'] = undefined;
 
 /**
  * @member {Boolean} has_divider
@@ -224,9 +214,19 @@ AddonsScoreRow.prototype['has_divider'] = undefined;
 AddonsScoreRow.prototype['icon_name'] = undefined;
 
 /**
- * @member {module:model/AddonsAction} action
+ * @member {Number} percentage_score
  */
-AddonsScoreRow.prototype['action'] = undefined;
+AddonsScoreRow.prototype['percentage_score'] = undefined;
+
+/**
+ * @member {module:model/AddonsWidgetColor} score_color
+ */
+AddonsScoreRow.prototype['score_color'] = undefined;
+
+/**
+ * @member {String} title
+ */
+AddonsScoreRow.prototype['title'] = undefined;
 
 
 

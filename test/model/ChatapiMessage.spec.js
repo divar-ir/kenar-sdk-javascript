@@ -54,26 +54,38 @@
       //expect(instance).to.be.a(KenarApiClient.ChatapiMessage);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new KenarApiClient.ChatapiMessage();
-      //expect(instance).to.be();
-    });
-
     it('should have the property conversation (base name: "conversation")', function() {
       // uncomment below and update the code to test the property conversation
       //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
-    it('should have the property sender (base name: "sender")', function() {
-      // uncomment below and update the code to test the property sender
+    it('should have the property fileData (base name: "file_data")', function() {
+      // uncomment below and update the code to test the property fileData
       //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new KenarApiClient.ChatapiMessage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property imageData (base name: "image_data")', function() {
+      // uncomment below and update the code to test the property imageData
+      //var instance = new KenarApiClient.ChatapiMessage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property locationData (base name: "location_data")', function() {
+      // uncomment below and update the code to test the property locationData
+      //var instance = new KenarApiClient.ChatapiMessage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sender (base name: "sender")', function() {
+      // uncomment below and update the code to test the property sender
       //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
@@ -90,32 +102,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property imageData (base name: "image_data")', function() {
-      // uncomment below and update the code to test the property imageData
-      //var instance = new KenarApiClient.ChatapiMessage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property fileData (base name: "file_data")', function() {
-      // uncomment below and update the code to test the property fileData
-      //var instance = new KenarApiClient.ChatapiMessage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property voiceData (base name: "voice_data")', function() {
-      // uncomment below and update the code to test the property voiceData
-      //var instance = new KenarApiClient.ChatapiMessage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property locationData (base name: "location_data")', function() {
-      // uncomment below and update the code to test the property locationData
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });
 
     it('should have the property videoData (base name: "video_data")', function() {
       // uncomment below and update the code to test the property videoData
+      //var instance = new KenarApiClient.ChatapiMessage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property voiceData (base name: "voice_data")', function() {
+      // uncomment below and update the code to test the property voiceData
       //var instance = new KenarApiClient.ChatapiMessage();
       //expect(instance).to.be();
     });

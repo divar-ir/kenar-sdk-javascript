@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.ChatAPIChatBotSendMessageBody);
     });
 
-    it('should have the property userId (base name: "user_id")', function() {
-      // uncomment below and update the code to test the property userId
-      //var instance = new KenarApiClient.ChatAPIChatBotSendMessageBody();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property textMessage (base name: "text_message")', function() {
-      // uncomment below and update the code to test the property textMessage
+    it('should have the property buttons (base name: "buttons")', function() {
+      // uncomment below and update the code to test the property buttons
       //var instance = new KenarApiClient.ChatAPIChatBotSendMessageBody();
       //expect(instance).to.be();
     });
@@ -72,8 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property buttons (base name: "buttons")', function() {
-      // uncomment below and update the code to test the property buttons
+    it('should have the property textMessage (base name: "text_message")', function() {
+      // uncomment below and update the code to test the property textMessage
+      //var instance = new KenarApiClient.ChatAPIChatBotSendMessageBody();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property userId (base name: "user_id")', function() {
+      // uncomment below and update the code to test the property userId
       //var instance = new KenarApiClient.ChatAPIChatBotSendMessageBody();
       //expect(instance).to.be();
     });

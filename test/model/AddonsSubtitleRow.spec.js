@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsSubtitleRow);
     });
 
-    it('should have the property text (base name: "text")', function() {
-      // uncomment below and update the code to test the property text
+    it('should have the property hasDivider (base name: "has_divider")', function() {
+      // uncomment below and update the code to test the property hasDivider
       //var instance = new KenarApiClient.AddonsSubtitleRow();
       //expect(instance).to.be();
     });
 
-    it('should have the property hasDivider (base name: "has_divider")', function() {
-      // uncomment below and update the code to test the property hasDivider
+    it('should have the property text (base name: "text")', function() {
+      // uncomment below and update the code to test the property text
       //var instance = new KenarApiClient.AddonsSubtitleRow();
       //expect(instance).to.be();
     });

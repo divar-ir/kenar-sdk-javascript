@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.SearchPostItemVehiclesFields);
     });
 
-    it('should have the property usage (base name: "usage")', function() {
-      // uncomment below and update the code to test the property usage
+    it('should have the property customPostSubtitle (base name: "custom_post_subtitle")', function() {
+      // uncomment below and update the code to test the property customPostSubtitle
       //var instance = new KenarApiClient.SearchPostItemVehiclesFields();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property customPostSubtitle (base name: "custom_post_subtitle")', function() {
-      // uncomment below and update the code to test the property customPostSubtitle
+    it('should have the property usage (base name: "usage")', function() {
+      // uncomment below and update the code to test the property usage
       //var instance = new KenarApiClient.SearchPostItemVehiclesFields();
       //expect(instance).to.be();
     });

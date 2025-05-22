@@ -48,17 +48,17 @@ class AssetsGetPermissionsResponsePermission {
         if (data) {
             obj = obj || new AssetsGetPermissionsResponsePermission();
 
-            if (data.hasOwnProperty('slug')) {
-                obj['slug'] = ApiClient.convertToType(data['slug'], 'String');
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('display')) {
                 obj['display'] = ApiClient.convertToType(data['display'], 'String');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
             if (data.hasOwnProperty('lifecycle_state')) {
                 obj['lifecycle_state'] = AssetsGetPermissionsResponseLifeCycleState.constructFromObject(data['lifecycle_state']);
+            }
+            if (data.hasOwnProperty('slug')) {
+                obj['slug'] = ApiClient.convertToType(data['slug'], 'String');
             }
         }
         return obj;
@@ -71,16 +71,16 @@ class AssetsGetPermissionsResponsePermission {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['slug'] && !(typeof data['slug'] === 'string' || data['slug'] instanceof String)) {
-            throw new Error("Expected the field `slug` to be a primitive type in the JSON string but got " + data['slug']);
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
         // ensure the json data is a string
         if (data['display'] && !(typeof data['display'] === 'string' || data['display'] instanceof String)) {
             throw new Error("Expected the field `display` to be a primitive type in the JSON string but got " + data['display']);
         }
         // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        if (data['slug'] && !(typeof data['slug'] === 'string' || data['slug'] instanceof String)) {
+            throw new Error("Expected the field `slug` to be a primitive type in the JSON string but got " + data['slug']);
         }
 
         return true;
@@ -89,15 +89,15 @@ class AssetsGetPermissionsResponsePermission {
 /**
      * @return {String}
      */
-    getSlug() {
-        return this.slug;
+    getDescription() {
+        return this.description;
     }
 
     /**
-     * @param {String} slug
+     * @param {String} description
      */
-    setSlug(slug) {
-        this['slug'] = slug;
+    setDescription(description) {
+        this['description'] = description;
     }
 /**
      * @return {String}
@@ -113,19 +113,6 @@ class AssetsGetPermissionsResponsePermission {
         this['display'] = display;
     }
 /**
-     * @return {String}
-     */
-    getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @param {String} description
-     */
-    setDescription(description) {
-        this['description'] = description;
-    }
-/**
      * @return {module:model/AssetsGetPermissionsResponseLifeCycleState}
      */
     getLifecycleState() {
@@ -138,20 +125,23 @@ class AssetsGetPermissionsResponsePermission {
     setLifecycleState(lifecycleState) {
         this['lifecycle_state'] = lifecycleState;
     }
+/**
+     * @return {String}
+     */
+    getSlug() {
+        return this.slug;
+    }
+
+    /**
+     * @param {String} slug
+     */
+    setSlug(slug) {
+        this['slug'] = slug;
+    }
 
 }
 
 
-
-/**
- * @member {String} slug
- */
-AssetsGetPermissionsResponsePermission.prototype['slug'] = undefined;
-
-/**
- * @member {String} display
- */
-AssetsGetPermissionsResponsePermission.prototype['display'] = undefined;
 
 /**
  * @member {String} description
@@ -159,9 +149,19 @@ AssetsGetPermissionsResponsePermission.prototype['display'] = undefined;
 AssetsGetPermissionsResponsePermission.prototype['description'] = undefined;
 
 /**
+ * @member {String} display
+ */
+AssetsGetPermissionsResponsePermission.prototype['display'] = undefined;
+
+/**
  * @member {module:model/AssetsGetPermissionsResponseLifeCycleState} lifecycle_state
  */
 AssetsGetPermissionsResponsePermission.prototype['lifecycle_state'] = undefined;
+
+/**
+ * @member {String} slug
+ */
+AssetsGetPermissionsResponsePermission.prototype['slug'] = undefined;
 
 
 

@@ -49,11 +49,8 @@ class AddonsSelectorRow {
         if (data) {
             obj = obj || new AddonsSelectorRow();
 
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('image_id')) {
-                obj['image_id'] = ApiClient.convertToType(data['image_id'], 'String');
+            if (data.hasOwnProperty('action')) {
+                obj['action'] = AddonsAction.constructFromObject(data['action']);
             }
             if (data.hasOwnProperty('has_divider')) {
                 obj['has_divider'] = ApiClient.convertToType(data['has_divider'], 'Boolean');
@@ -61,8 +58,11 @@ class AddonsSelectorRow {
             if (data.hasOwnProperty('icon_name')) {
                 obj['icon_name'] = DivarIconsIconName.constructFromObject(data['icon_name']);
             }
-            if (data.hasOwnProperty('action')) {
-                obj['action'] = AddonsAction.constructFromObject(data['action']);
+            if (data.hasOwnProperty('image_id')) {
+                obj['image_id'] = ApiClient.convertToType(data['image_id'], 'String');
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
         }
         return obj;
@@ -74,47 +74,34 @@ class AddonsSelectorRow {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsSelectorRow</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        // validate the optional field `action`
+        if (data['action']) { // data not null
+          AddonsAction.validateJSON(data['action']);
         }
         // ensure the json data is a string
         if (data['image_id'] && !(typeof data['image_id'] === 'string' || data['image_id'] instanceof String)) {
             throw new Error("Expected the field `image_id` to be a primitive type in the JSON string but got " + data['image_id']);
         }
-        // validate the optional field `action`
-        if (data['action']) { // data not null
-          AddonsAction.validateJSON(data['action']);
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
 
         return true;
     }
 
 /**
-     * @return {String}
+     * @return {module:model/AddonsAction}
      */
-    getTitle() {
-        return this.title;
+    getAction() {
+        return this.action;
     }
 
     /**
-     * @param {String} title
+     * @param {module:model/AddonsAction} action
      */
-    setTitle(title) {
-        this['title'] = title;
-    }
-/**
-     * @return {String}
-     */
-    getImageId() {
-        return this.image_id;
-    }
-
-    /**
-     * @param {String} imageId
-     */
-    setImageId(imageId) {
-        this['image_id'] = imageId;
+    setAction(action) {
+        this['action'] = action;
     }
 /**
      * @return {Boolean}
@@ -143,17 +130,30 @@ class AddonsSelectorRow {
         this['icon_name'] = iconName;
     }
 /**
-     * @return {module:model/AddonsAction}
+     * @return {String}
      */
-    getAction() {
-        return this.action;
+    getImageId() {
+        return this.image_id;
     }
 
     /**
-     * @param {module:model/AddonsAction} action
+     * @param {String} imageId
      */
-    setAction(action) {
-        this['action'] = action;
+    setImageId(imageId) {
+        this['image_id'] = imageId;
+    }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
     }
 
 }
@@ -161,14 +161,9 @@ class AddonsSelectorRow {
 
 
 /**
- * @member {String} title
+ * @member {module:model/AddonsAction} action
  */
-AddonsSelectorRow.prototype['title'] = undefined;
-
-/**
- * @member {String} image_id
- */
-AddonsSelectorRow.prototype['image_id'] = undefined;
+AddonsSelectorRow.prototype['action'] = undefined;
 
 /**
  * @member {Boolean} has_divider
@@ -181,9 +176,14 @@ AddonsSelectorRow.prototype['has_divider'] = undefined;
 AddonsSelectorRow.prototype['icon_name'] = undefined;
 
 /**
- * @member {module:model/AddonsAction} action
+ * @member {String} image_id
  */
-AddonsSelectorRow.prototype['action'] = undefined;
+AddonsSelectorRow.prototype['image_id'] = undefined;
+
+/**
+ * @member {String} title
+ */
+AddonsSelectorRow.prototype['title'] = undefined;
 
 
 

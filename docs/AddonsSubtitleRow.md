@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**text** | **String** |  | [optional] 
 **hasDivider** | **Boolean** |  | [optional] 
+**text** | **String** |  | [optional] 
 
 

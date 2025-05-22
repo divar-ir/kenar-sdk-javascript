@@ -50,17 +50,17 @@ class ChatAPIChatBotSendMessageBody {
         if (data) {
             obj = obj || new ChatAPIChatBotSendMessageBody();
 
-            if (data.hasOwnProperty('user_id')) {
-                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
-            }
-            if (data.hasOwnProperty('text_message')) {
-                obj['text_message'] = ApiClient.convertToType(data['text_message'], 'String');
+            if (data.hasOwnProperty('buttons')) {
+                obj['buttons'] = ChatapiChatButtonGrid.constructFromObject(data['buttons']);
             }
             if (data.hasOwnProperty('media_token')) {
                 obj['media_token'] = ApiClient.convertToType(data['media_token'], 'String');
             }
-            if (data.hasOwnProperty('buttons')) {
-                obj['buttons'] = ChatapiChatButtonGrid.constructFromObject(data['buttons']);
+            if (data.hasOwnProperty('text_message')) {
+                obj['text_message'] = ApiClient.convertToType(data['text_message'], 'String');
+            }
+            if (data.hasOwnProperty('user_id')) {
+                obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
             }
         }
         return obj;
@@ -78,55 +78,38 @@ class ChatAPIChatBotSendMessageBody {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
+        // validate the optional field `buttons`
+        if (data['buttons']) { // data not null
+          ChatapiChatButtonGrid.validateJSON(data['buttons']);
+        }
         // ensure the json data is a string
-        if (data['user_id'] && !(typeof data['user_id'] === 'string' || data['user_id'] instanceof String)) {
-            throw new Error("Expected the field `user_id` to be a primitive type in the JSON string but got " + data['user_id']);
+        if (data['media_token'] && !(typeof data['media_token'] === 'string' || data['media_token'] instanceof String)) {
+            throw new Error("Expected the field `media_token` to be a primitive type in the JSON string but got " + data['media_token']);
         }
         // ensure the json data is a string
         if (data['text_message'] && !(typeof data['text_message'] === 'string' || data['text_message'] instanceof String)) {
             throw new Error("Expected the field `text_message` to be a primitive type in the JSON string but got " + data['text_message']);
         }
         // ensure the json data is a string
-        if (data['media_token'] && !(typeof data['media_token'] === 'string' || data['media_token'] instanceof String)) {
-            throw new Error("Expected the field `media_token` to be a primitive type in the JSON string but got " + data['media_token']);
-        }
-        // validate the optional field `buttons`
-        if (data['buttons']) { // data not null
-          ChatapiChatButtonGrid.validateJSON(data['buttons']);
+        if (data['user_id'] && !(typeof data['user_id'] === 'string' || data['user_id'] instanceof String)) {
+            throw new Error("Expected the field `user_id` to be a primitive type in the JSON string but got " + data['user_id']);
         }
 
         return true;
     }
 
 /**
-     * Returns Unique identifier for the user to start or continue a conversation with
-     * @return {String}
+     * @return {module:model/ChatapiChatButtonGrid}
      */
-    getUserId() {
-        return this.user_id;
+    getButtons() {
+        return this.buttons;
     }
 
     /**
-     * Sets Unique identifier for the user to start or continue a conversation with
-     * @param {String} userId Unique identifier for the user to start or continue a conversation with
+     * @param {module:model/ChatapiChatButtonGrid} buttons
      */
-    setUserId(userId) {
-        this['user_id'] = userId;
-    }
-/**
-     * Returns Text message content to be sent by the bot
-     * @return {String}
-     */
-    getTextMessage() {
-        return this.text_message;
-    }
-
-    /**
-     * Sets Text message content to be sent by the bot
-     * @param {String} textMessage Text message content to be sent by the bot
-     */
-    setTextMessage(textMessage) {
-        this['text_message'] = textMessage;
+    setButtons(buttons) {
+        this['buttons'] = buttons;
     }
 /**
      * Returns Token for attached media (if any)
@@ -144,17 +127,34 @@ class ChatAPIChatBotSendMessageBody {
         this['media_token'] = mediaToken;
     }
 /**
-     * @return {module:model/ChatapiChatButtonGrid}
+     * Returns Text message content to be sent by the bot
+     * @return {String}
      */
-    getButtons() {
-        return this.buttons;
+    getTextMessage() {
+        return this.text_message;
     }
 
     /**
-     * @param {module:model/ChatapiChatButtonGrid} buttons
+     * Sets Text message content to be sent by the bot
+     * @param {String} textMessage Text message content to be sent by the bot
      */
-    setButtons(buttons) {
-        this['buttons'] = buttons;
+    setTextMessage(textMessage) {
+        this['text_message'] = textMessage;
+    }
+/**
+     * Returns Unique identifier for the user to start or continue a conversation with
+     * @return {String}
+     */
+    getUserId() {
+        return this.user_id;
+    }
+
+    /**
+     * Sets Unique identifier for the user to start or continue a conversation with
+     * @param {String} userId Unique identifier for the user to start or continue a conversation with
+     */
+    setUserId(userId) {
+        this['user_id'] = userId;
     }
 
 }
@@ -162,16 +162,9 @@ class ChatAPIChatBotSendMessageBody {
 ChatAPIChatBotSendMessageBody.RequiredProperties = ["text_message"];
 
 /**
- * Unique identifier for the user to start or continue a conversation with
- * @member {String} user_id
+ * @member {module:model/ChatapiChatButtonGrid} buttons
  */
-ChatAPIChatBotSendMessageBody.prototype['user_id'] = undefined;
-
-/**
- * Text message content to be sent by the bot
- * @member {String} text_message
- */
-ChatAPIChatBotSendMessageBody.prototype['text_message'] = undefined;
+ChatAPIChatBotSendMessageBody.prototype['buttons'] = undefined;
 
 /**
  * Token for attached media (if any)
@@ -180,9 +173,16 @@ ChatAPIChatBotSendMessageBody.prototype['text_message'] = undefined;
 ChatAPIChatBotSendMessageBody.prototype['media_token'] = undefined;
 
 /**
- * @member {module:model/ChatapiChatButtonGrid} buttons
+ * Text message content to be sent by the bot
+ * @member {String} text_message
  */
-ChatAPIChatBotSendMessageBody.prototype['buttons'] = undefined;
+ChatAPIChatBotSendMessageBody.prototype['text_message'] = undefined;
+
+/**
+ * Unique identifier for the user to start or continue a conversation with
+ * @member {String} user_id
+ */
+ChatAPIChatBotSendMessageBody.prototype['user_id'] = undefined;
 
 
 

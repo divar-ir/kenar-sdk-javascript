@@ -50,29 +50,14 @@ class FinderSearchPostItem {
         if (data) {
             obj = obj || new FinderSearchPostItem();
 
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
             if (data.hasOwnProperty('category')) {
                 obj['category'] = ApiClient.convertToType(data['category'], 'String');
-            }
-            if (data.hasOwnProperty('last_modified_at')) {
-                obj['last_modified_at'] = ApiClient.convertToType(data['last_modified_at'], 'Date');
             }
             if (data.hasOwnProperty('city')) {
                 obj['city'] = ApiClient.convertToType(data['city'], 'String');
             }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('price')) {
-                obj['price'] = SearchPostItemPrice.constructFromObject(data['price']);
-            }
-            if (data.hasOwnProperty('real_estate_fields')) {
-                obj['real_estate_fields'] = SearchPostItemRealEstateFields.constructFromObject(data['real_estate_fields']);
-            }
-            if (data.hasOwnProperty('vehicles_fields')) {
-                obj['vehicles_fields'] = SearchPostItemVehiclesFields.constructFromObject(data['vehicles_fields']);
+            if (data.hasOwnProperty('community_fields')) {
+                obj['community_fields'] = ApiClient.convertToType(data['community_fields'], Object);
             }
             if (data.hasOwnProperty('electronic_devices_fields')) {
                 obj['electronic_devices_fields'] = ApiClient.convertToType(data['electronic_devices_fields'], Object);
@@ -80,23 +65,38 @@ class FinderSearchPostItem {
             if (data.hasOwnProperty('home_kitchen_fields')) {
                 obj['home_kitchen_fields'] = ApiClient.convertToType(data['home_kitchen_fields'], Object);
             }
-            if (data.hasOwnProperty('services_fields')) {
-                obj['services_fields'] = ApiClient.convertToType(data['services_fields'], Object);
+            if (data.hasOwnProperty('jobs_fields')) {
+                obj['jobs_fields'] = ApiClient.convertToType(data['jobs_fields'], Object);
             }
-            if (data.hasOwnProperty('personal_goods_fields')) {
-                obj['personal_goods_fields'] = ApiClient.convertToType(data['personal_goods_fields'], Object);
+            if (data.hasOwnProperty('last_modified_at')) {
+                obj['last_modified_at'] = ApiClient.convertToType(data['last_modified_at'], 'Date');
             }
             if (data.hasOwnProperty('leisure_hobbies_fields')) {
                 obj['leisure_hobbies_fields'] = ApiClient.convertToType(data['leisure_hobbies_fields'], Object);
             }
-            if (data.hasOwnProperty('community_fields')) {
-                obj['community_fields'] = ApiClient.convertToType(data['community_fields'], Object);
+            if (data.hasOwnProperty('personal_goods_fields')) {
+                obj['personal_goods_fields'] = ApiClient.convertToType(data['personal_goods_fields'], Object);
+            }
+            if (data.hasOwnProperty('price')) {
+                obj['price'] = SearchPostItemPrice.constructFromObject(data['price']);
+            }
+            if (data.hasOwnProperty('real_estate_fields')) {
+                obj['real_estate_fields'] = SearchPostItemRealEstateFields.constructFromObject(data['real_estate_fields']);
+            }
+            if (data.hasOwnProperty('services_fields')) {
+                obj['services_fields'] = ApiClient.convertToType(data['services_fields'], Object);
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
             if (data.hasOwnProperty('tools_materials_equipment_fields')) {
                 obj['tools_materials_equipment_fields'] = ApiClient.convertToType(data['tools_materials_equipment_fields'], Object);
             }
-            if (data.hasOwnProperty('jobs_fields')) {
-                obj['jobs_fields'] = ApiClient.convertToType(data['jobs_fields'], Object);
+            if (data.hasOwnProperty('vehicles_fields')) {
+                obj['vehicles_fields'] = SearchPostItemVehiclesFields.constructFromObject(data['vehicles_fields']);
             }
         }
         return obj;
@@ -109,20 +109,12 @@ class FinderSearchPostItem {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
-            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
-        }
-        // ensure the json data is a string
         if (data['category'] && !(typeof data['category'] === 'string' || data['category'] instanceof String)) {
             throw new Error("Expected the field `category` to be a primitive type in the JSON string but got " + data['category']);
         }
         // ensure the json data is a string
         if (data['city'] && !(typeof data['city'] === 'string' || data['city'] instanceof String)) {
             throw new Error("Expected the field `city` to be a primitive type in the JSON string but got " + data['city']);
-        }
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
         // validate the optional field `price`
         if (data['price']) { // data not null
@@ -131,6 +123,14 @@ class FinderSearchPostItem {
         // validate the optional field `real_estate_fields`
         if (data['real_estate_fields']) { // data not null
           SearchPostItemRealEstateFields.validateJSON(data['real_estate_fields']);
+        }
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        }
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
         }
         // validate the optional field `vehicles_fields`
         if (data['vehicles_fields']) { // data not null
@@ -143,19 +143,6 @@ class FinderSearchPostItem {
 /**
      * @return {String}
      */
-    getToken() {
-        return this.token;
-    }
-
-    /**
-     * @param {String} token
-     */
-    setToken(token) {
-        this['token'] = token;
-    }
-/**
-     * @return {String}
-     */
     getCategory() {
         return this.category;
     }
@@ -165,19 +152,6 @@ class FinderSearchPostItem {
      */
     setCategory(category) {
         this['category'] = category;
-    }
-/**
-     * @return {Date}
-     */
-    getLastModifiedAt() {
-        return this.last_modified_at;
-    }
-
-    /**
-     * @param {Date} lastModifiedAt
-     */
-    setLastModifiedAt(lastModifiedAt) {
-        this['last_modified_at'] = lastModifiedAt;
     }
 /**
      * @return {String}
@@ -193,56 +167,17 @@ class FinderSearchPostItem {
         this['city'] = city;
     }
 /**
-     * @return {String}
+     * @return {Object}
      */
-    getTitle() {
-        return this.title;
+    getCommunityFields() {
+        return this.community_fields;
     }
 
     /**
-     * @param {String} title
+     * @param {Object} communityFields
      */
-    setTitle(title) {
-        this['title'] = title;
-    }
-/**
-     * @return {module:model/SearchPostItemPrice}
-     */
-    getPrice() {
-        return this.price;
-    }
-
-    /**
-     * @param {module:model/SearchPostItemPrice} price
-     */
-    setPrice(price) {
-        this['price'] = price;
-    }
-/**
-     * @return {module:model/SearchPostItemRealEstateFields}
-     */
-    getRealEstateFields() {
-        return this.real_estate_fields;
-    }
-
-    /**
-     * @param {module:model/SearchPostItemRealEstateFields} realEstateFields
-     */
-    setRealEstateFields(realEstateFields) {
-        this['real_estate_fields'] = realEstateFields;
-    }
-/**
-     * @return {module:model/SearchPostItemVehiclesFields}
-     */
-    getVehiclesFields() {
-        return this.vehicles_fields;
-    }
-
-    /**
-     * @param {module:model/SearchPostItemVehiclesFields} vehiclesFields
-     */
-    setVehiclesFields(vehiclesFields) {
-        this['vehicles_fields'] = vehiclesFields;
+    setCommunityFields(communityFields) {
+        this['community_fields'] = communityFields;
     }
 /**
      * @return {Object}
@@ -273,28 +208,28 @@ class FinderSearchPostItem {
 /**
      * @return {Object}
      */
-    getServicesFields() {
-        return this.services_fields;
+    getJobsFields() {
+        return this.jobs_fields;
     }
 
     /**
-     * @param {Object} servicesFields
+     * @param {Object} jobsFields
      */
-    setServicesFields(servicesFields) {
-        this['services_fields'] = servicesFields;
+    setJobsFields(jobsFields) {
+        this['jobs_fields'] = jobsFields;
     }
 /**
-     * @return {Object}
+     * @return {Date}
      */
-    getPersonalGoodsFields() {
-        return this.personal_goods_fields;
+    getLastModifiedAt() {
+        return this.last_modified_at;
     }
 
     /**
-     * @param {Object} personalGoodsFields
+     * @param {Date} lastModifiedAt
      */
-    setPersonalGoodsFields(personalGoodsFields) {
-        this['personal_goods_fields'] = personalGoodsFields;
+    setLastModifiedAt(lastModifiedAt) {
+        this['last_modified_at'] = lastModifiedAt;
     }
 /**
      * @return {Object}
@@ -312,15 +247,80 @@ class FinderSearchPostItem {
 /**
      * @return {Object}
      */
-    getCommunityFields() {
-        return this.community_fields;
+    getPersonalGoodsFields() {
+        return this.personal_goods_fields;
     }
 
     /**
-     * @param {Object} communityFields
+     * @param {Object} personalGoodsFields
      */
-    setCommunityFields(communityFields) {
-        this['community_fields'] = communityFields;
+    setPersonalGoodsFields(personalGoodsFields) {
+        this['personal_goods_fields'] = personalGoodsFields;
+    }
+/**
+     * @return {module:model/SearchPostItemPrice}
+     */
+    getPrice() {
+        return this.price;
+    }
+
+    /**
+     * @param {module:model/SearchPostItemPrice} price
+     */
+    setPrice(price) {
+        this['price'] = price;
+    }
+/**
+     * @return {module:model/SearchPostItemRealEstateFields}
+     */
+    getRealEstateFields() {
+        return this.real_estate_fields;
+    }
+
+    /**
+     * @param {module:model/SearchPostItemRealEstateFields} realEstateFields
+     */
+    setRealEstateFields(realEstateFields) {
+        this['real_estate_fields'] = realEstateFields;
+    }
+/**
+     * @return {Object}
+     */
+    getServicesFields() {
+        return this.services_fields;
+    }
+
+    /**
+     * @param {Object} servicesFields
+     */
+    setServicesFields(servicesFields) {
+        this['services_fields'] = servicesFields;
+    }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
     }
 /**
      * @return {Object}
@@ -336,17 +336,17 @@ class FinderSearchPostItem {
         this['tools_materials_equipment_fields'] = toolsMaterialsEquipmentFields;
     }
 /**
-     * @return {Object}
+     * @return {module:model/SearchPostItemVehiclesFields}
      */
-    getJobsFields() {
-        return this.jobs_fields;
+    getVehiclesFields() {
+        return this.vehicles_fields;
     }
 
     /**
-     * @param {Object} jobsFields
+     * @param {module:model/SearchPostItemVehiclesFields} vehiclesFields
      */
-    setJobsFields(jobsFields) {
-        this['jobs_fields'] = jobsFields;
+    setVehiclesFields(vehiclesFields) {
+        this['vehicles_fields'] = vehiclesFields;
     }
 
 }
@@ -354,19 +354,9 @@ class FinderSearchPostItem {
 
 
 /**
- * @member {String} token
- */
-FinderSearchPostItem.prototype['token'] = undefined;
-
-/**
  * @member {String} category
  */
 FinderSearchPostItem.prototype['category'] = undefined;
-
-/**
- * @member {Date} last_modified_at
- */
-FinderSearchPostItem.prototype['last_modified_at'] = undefined;
 
 /**
  * @member {String} city
@@ -374,24 +364,9 @@ FinderSearchPostItem.prototype['last_modified_at'] = undefined;
 FinderSearchPostItem.prototype['city'] = undefined;
 
 /**
- * @member {String} title
+ * @member {Object} community_fields
  */
-FinderSearchPostItem.prototype['title'] = undefined;
-
-/**
- * @member {module:model/SearchPostItemPrice} price
- */
-FinderSearchPostItem.prototype['price'] = undefined;
-
-/**
- * @member {module:model/SearchPostItemRealEstateFields} real_estate_fields
- */
-FinderSearchPostItem.prototype['real_estate_fields'] = undefined;
-
-/**
- * @member {module:model/SearchPostItemVehiclesFields} vehicles_fields
- */
-FinderSearchPostItem.prototype['vehicles_fields'] = undefined;
+FinderSearchPostItem.prototype['community_fields'] = undefined;
 
 /**
  * @member {Object} electronic_devices_fields
@@ -404,14 +379,14 @@ FinderSearchPostItem.prototype['electronic_devices_fields'] = undefined;
 FinderSearchPostItem.prototype['home_kitchen_fields'] = undefined;
 
 /**
- * @member {Object} services_fields
+ * @member {Object} jobs_fields
  */
-FinderSearchPostItem.prototype['services_fields'] = undefined;
+FinderSearchPostItem.prototype['jobs_fields'] = undefined;
 
 /**
- * @member {Object} personal_goods_fields
+ * @member {Date} last_modified_at
  */
-FinderSearchPostItem.prototype['personal_goods_fields'] = undefined;
+FinderSearchPostItem.prototype['last_modified_at'] = undefined;
 
 /**
  * @member {Object} leisure_hobbies_fields
@@ -419,9 +394,34 @@ FinderSearchPostItem.prototype['personal_goods_fields'] = undefined;
 FinderSearchPostItem.prototype['leisure_hobbies_fields'] = undefined;
 
 /**
- * @member {Object} community_fields
+ * @member {Object} personal_goods_fields
  */
-FinderSearchPostItem.prototype['community_fields'] = undefined;
+FinderSearchPostItem.prototype['personal_goods_fields'] = undefined;
+
+/**
+ * @member {module:model/SearchPostItemPrice} price
+ */
+FinderSearchPostItem.prototype['price'] = undefined;
+
+/**
+ * @member {module:model/SearchPostItemRealEstateFields} real_estate_fields
+ */
+FinderSearchPostItem.prototype['real_estate_fields'] = undefined;
+
+/**
+ * @member {Object} services_fields
+ */
+FinderSearchPostItem.prototype['services_fields'] = undefined;
+
+/**
+ * @member {String} title
+ */
+FinderSearchPostItem.prototype['title'] = undefined;
+
+/**
+ * @member {String} token
+ */
+FinderSearchPostItem.prototype['token'] = undefined;
 
 /**
  * @member {Object} tools_materials_equipment_fields
@@ -429,9 +429,9 @@ FinderSearchPostItem.prototype['community_fields'] = undefined;
 FinderSearchPostItem.prototype['tools_materials_equipment_fields'] = undefined;
 
 /**
- * @member {Object} jobs_fields
+ * @member {module:model/SearchPostItemVehiclesFields} vehicles_fields
  */
-FinderSearchPostItem.prototype['jobs_fields'] = undefined;
+FinderSearchPostItem.prototype['vehicles_fields'] = undefined;
 
 
 

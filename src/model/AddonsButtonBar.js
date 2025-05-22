@@ -48,11 +48,11 @@ class AddonsButtonBar {
         if (data) {
             obj = obj || new AddonsButtonBar();
 
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
             if (data.hasOwnProperty('action')) {
                 obj['action'] = AddonsAction.constructFromObject(data['action']);
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
         }
         return obj;
@@ -64,31 +64,18 @@ class AddonsButtonBar {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsButtonBar</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
-        }
         // validate the optional field `action`
         if (data['action']) { // data not null
           AddonsAction.validateJSON(data['action']);
+        }
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
 
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getTitle() {
-        return this.title;
-    }
-
-    /**
-     * @param {String} title
-     */
-    setTitle(title) {
-        this['title'] = title;
-    }
 /**
      * @return {module:model/AddonsAction}
      */
@@ -102,20 +89,33 @@ class AddonsButtonBar {
     setAction(action) {
         this['action'] = action;
     }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
 
 }
 
 
 
 /**
- * @member {String} title
- */
-AddonsButtonBar.prototype['title'] = undefined;
-
-/**
  * @member {module:model/AddonsAction} action
  */
 AddonsButtonBar.prototype['action'] = undefined;
+
+/**
+ * @member {String} title
+ */
+AddonsButtonBar.prototype['title'] = undefined;
 
 
 

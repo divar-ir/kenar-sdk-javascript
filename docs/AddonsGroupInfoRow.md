@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[AddonsGroupInfoRowGroupInfoItem]**](AddonsGroupInfoRowGroupInfoItem.md) |  | [optional] 
 **hasDivider** | **Boolean** |  | [optional] 
+**items** | [**[AddonsGroupInfoRowGroupInfoItem]**](AddonsGroupInfoRowGroupInfoItem.md) |  | [optional] 
 
 

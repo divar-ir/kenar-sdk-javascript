@@ -47,17 +47,17 @@ class FinderGetUserPostsResponsePost {
         if (data) {
             obj = obj || new FinderGetUserPostsResponsePost();
 
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            if (data.hasOwnProperty('category')) {
+                obj['category'] = ApiClient.convertToType(data['category'], 'String');
             }
             if (data.hasOwnProperty('images')) {
                 obj['images'] = ApiClient.convertToType(data['images'], ['String']);
             }
-            if (data.hasOwnProperty('category')) {
-                obj['category'] = ApiClient.convertToType(data['category'], 'String');
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
         }
         return obj;
@@ -70,20 +70,20 @@ class FinderGetUserPostsResponsePost {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
-            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
-        }
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        if (data['category'] && !(typeof data['category'] === 'string' || data['category'] instanceof String)) {
+            throw new Error("Expected the field `category` to be a primitive type in the JSON string but got " + data['category']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['images'])) {
             throw new Error("Expected the field `images` to be an array in the JSON data but got " + data['images']);
         }
         // ensure the json data is a string
-        if (data['category'] && !(typeof data['category'] === 'string' || data['category'] instanceof String)) {
-            throw new Error("Expected the field `category` to be a primitive type in the JSON string but got " + data['category']);
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        }
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
         }
 
         return true;
@@ -92,28 +92,15 @@ class FinderGetUserPostsResponsePost {
 /**
      * @return {String}
      */
-    getToken() {
-        return this.token;
+    getCategory() {
+        return this.category;
     }
 
     /**
-     * @param {String} token
+     * @param {String} category
      */
-    setToken(token) {
-        this['token'] = token;
-    }
-/**
-     * @return {String}
-     */
-    getTitle() {
-        return this.title;
-    }
-
-    /**
-     * @param {String} title
-     */
-    setTitle(title) {
-        this['title'] = title;
+    setCategory(category) {
+        this['category'] = category;
     }
 /**
      * @return {Array.<String>}
@@ -131,15 +118,28 @@ class FinderGetUserPostsResponsePost {
 /**
      * @return {String}
      */
-    getCategory() {
-        return this.category;
+    getTitle() {
+        return this.title;
     }
 
     /**
-     * @param {String} category
+     * @param {String} title
      */
-    setCategory(category) {
-        this['category'] = category;
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
     }
 
 }
@@ -147,14 +147,9 @@ class FinderGetUserPostsResponsePost {
 
 
 /**
- * @member {String} token
+ * @member {String} category
  */
-FinderGetUserPostsResponsePost.prototype['token'] = undefined;
-
-/**
- * @member {String} title
- */
-FinderGetUserPostsResponsePost.prototype['title'] = undefined;
+FinderGetUserPostsResponsePost.prototype['category'] = undefined;
 
 /**
  * @member {Array.<String>} images
@@ -162,9 +157,14 @@ FinderGetUserPostsResponsePost.prototype['title'] = undefined;
 FinderGetUserPostsResponsePost.prototype['images'] = undefined;
 
 /**
- * @member {String} category
+ * @member {String} title
  */
-FinderGetUserPostsResponsePost.prototype['category'] = undefined;
+FinderGetUserPostsResponsePost.prototype['title'] = undefined;
+
+/**
+ * @member {String} token
+ */
+FinderGetUserPostsResponsePost.prototype['token'] = undefined;
 
 
 

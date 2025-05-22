@@ -48,11 +48,11 @@ class EventsRegisterEventSubscriptionRequest {
         if (data) {
             obj = obj || new EventsRegisterEventSubscriptionRequest();
 
-            if (data.hasOwnProperty('event_type')) {
-                obj['event_type'] = EventsRegisterEventSubscriptionRequestEventType.constructFromObject(data['event_type']);
-            }
             if (data.hasOwnProperty('event_resource_id')) {
                 obj['event_resource_id'] = ApiClient.convertToType(data['event_resource_id'], 'String');
+            }
+            if (data.hasOwnProperty('event_type')) {
+                obj['event_type'] = EventsRegisterEventSubscriptionRequestEventType.constructFromObject(data['event_type']);
             }
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
@@ -76,19 +76,6 @@ class EventsRegisterEventSubscriptionRequest {
     }
 
 /**
-     * @return {module:model/EventsRegisterEventSubscriptionRequestEventType}
-     */
-    getEventType() {
-        return this.event_type;
-    }
-
-    /**
-     * @param {module:model/EventsRegisterEventSubscriptionRequestEventType} eventType
-     */
-    setEventType(eventType) {
-        this['event_type'] = eventType;
-    }
-/**
      * @return {String}
      */
     getEventResourceId() {
@@ -100,6 +87,19 @@ class EventsRegisterEventSubscriptionRequest {
      */
     setEventResourceId(eventResourceId) {
         this['event_resource_id'] = eventResourceId;
+    }
+/**
+     * @return {module:model/EventsRegisterEventSubscriptionRequestEventType}
+     */
+    getEventType() {
+        return this.event_type;
+    }
+
+    /**
+     * @param {module:model/EventsRegisterEventSubscriptionRequestEventType} eventType
+     */
+    setEventType(eventType) {
+        this['event_type'] = eventType;
     }
 /**
      * @return {Object}
@@ -120,14 +120,14 @@ class EventsRegisterEventSubscriptionRequest {
 
 
 /**
- * @member {module:model/EventsRegisterEventSubscriptionRequestEventType} event_type
- */
-EventsRegisterEventSubscriptionRequest.prototype['event_type'] = undefined;
-
-/**
  * @member {String} event_resource_id
  */
 EventsRegisterEventSubscriptionRequest.prototype['event_resource_id'] = undefined;
+
+/**
+ * @member {module:model/EventsRegisterEventSubscriptionRequestEventType} event_type
+ */
+EventsRegisterEventSubscriptionRequest.prototype['event_type'] = undefined;
 
 /**
  * @member {Object} metadata

@@ -51,26 +51,26 @@ class FinderSearchQuery {
             if (data.hasOwnProperty('brand_model')) {
                 obj['brand_model'] = ApiClient.convertToType(data['brand_model'], ['String']);
             }
+            if (data.hasOwnProperty('credit')) {
+                obj['credit'] = FinderSearchQueryNumberRange.constructFromObject(data['credit']);
+            }
+            if (data.hasOwnProperty('only_with_parking')) {
+                obj['only_with_parking'] = ApiClient.convertToType(data['only_with_parking'], 'Boolean');
+            }
             if (data.hasOwnProperty('production_year')) {
                 obj['production_year'] = FinderSearchQueryNumberRange.constructFromObject(data['production_year']);
-            }
-            if (data.hasOwnProperty('usage')) {
-                obj['usage'] = FinderSearchQueryNumberRange.constructFromObject(data['usage']);
-            }
-            if (data.hasOwnProperty('rooms')) {
-                obj['rooms'] = ApiClient.convertToType(data['rooms'], ['String']);
             }
             if (data.hasOwnProperty('rent')) {
                 obj['rent'] = FinderSearchQueryNumberRange.constructFromObject(data['rent']);
             }
-            if (data.hasOwnProperty('credit')) {
-                obj['credit'] = FinderSearchQueryNumberRange.constructFromObject(data['credit']);
+            if (data.hasOwnProperty('rooms')) {
+                obj['rooms'] = ApiClient.convertToType(data['rooms'], ['String']);
             }
             if (data.hasOwnProperty('size')) {
                 obj['size'] = FinderSearchQueryNumberRange.constructFromObject(data['size']);
             }
-            if (data.hasOwnProperty('only_with_parking')) {
-                obj['only_with_parking'] = ApiClient.convertToType(data['only_with_parking'], 'Boolean');
+            if (data.hasOwnProperty('usage')) {
+                obj['usage'] = FinderSearchQueryNumberRange.constructFromObject(data['usage']);
             }
         }
         return obj;
@@ -86,29 +86,29 @@ class FinderSearchQuery {
         if (!Array.isArray(data['brand_model'])) {
             throw new Error("Expected the field `brand_model` to be an array in the JSON data but got " + data['brand_model']);
         }
+        // validate the optional field `credit`
+        if (data['credit']) { // data not null
+          FinderSearchQueryNumberRange.validateJSON(data['credit']);
+        }
         // validate the optional field `production_year`
         if (data['production_year']) { // data not null
           FinderSearchQueryNumberRange.validateJSON(data['production_year']);
-        }
-        // validate the optional field `usage`
-        if (data['usage']) { // data not null
-          FinderSearchQueryNumberRange.validateJSON(data['usage']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['rooms'])) {
-            throw new Error("Expected the field `rooms` to be an array in the JSON data but got " + data['rooms']);
         }
         // validate the optional field `rent`
         if (data['rent']) { // data not null
           FinderSearchQueryNumberRange.validateJSON(data['rent']);
         }
-        // validate the optional field `credit`
-        if (data['credit']) { // data not null
-          FinderSearchQueryNumberRange.validateJSON(data['credit']);
+        // ensure the json data is an array
+        if (!Array.isArray(data['rooms'])) {
+            throw new Error("Expected the field `rooms` to be an array in the JSON data but got " + data['rooms']);
         }
         // validate the optional field `size`
         if (data['size']) { // data not null
           FinderSearchQueryNumberRange.validateJSON(data['size']);
+        }
+        // validate the optional field `usage`
+        if (data['usage']) { // data not null
+          FinderSearchQueryNumberRange.validateJSON(data['usage']);
         }
 
         return true;
@@ -130,6 +130,32 @@ class FinderSearchQuery {
 /**
      * @return {module:model/FinderSearchQueryNumberRange}
      */
+    getCredit() {
+        return this.credit;
+    }
+
+    /**
+     * @param {module:model/FinderSearchQueryNumberRange} credit
+     */
+    setCredit(credit) {
+        this['credit'] = credit;
+    }
+/**
+     * @return {Boolean}
+     */
+    getOnlyWithParking() {
+        return this.only_with_parking;
+    }
+
+    /**
+     * @param {Boolean} onlyWithParking
+     */
+    setOnlyWithParking(onlyWithParking) {
+        this['only_with_parking'] = onlyWithParking;
+    }
+/**
+     * @return {module:model/FinderSearchQueryNumberRange}
+     */
     getProductionYear() {
         return this.production_year;
     }
@@ -143,15 +169,15 @@ class FinderSearchQuery {
 /**
      * @return {module:model/FinderSearchQueryNumberRange}
      */
-    getUsage() {
-        return this.usage;
+    getRent() {
+        return this.rent;
     }
 
     /**
-     * @param {module:model/FinderSearchQueryNumberRange} usage
+     * @param {module:model/FinderSearchQueryNumberRange} rent
      */
-    setUsage(usage) {
-        this['usage'] = usage;
+    setRent(rent) {
+        this['rent'] = rent;
     }
 /**
      * @return {Array.<String>}
@@ -169,32 +195,6 @@ class FinderSearchQuery {
 /**
      * @return {module:model/FinderSearchQueryNumberRange}
      */
-    getRent() {
-        return this.rent;
-    }
-
-    /**
-     * @param {module:model/FinderSearchQueryNumberRange} rent
-     */
-    setRent(rent) {
-        this['rent'] = rent;
-    }
-/**
-     * @return {module:model/FinderSearchQueryNumberRange}
-     */
-    getCredit() {
-        return this.credit;
-    }
-
-    /**
-     * @param {module:model/FinderSearchQueryNumberRange} credit
-     */
-    setCredit(credit) {
-        this['credit'] = credit;
-    }
-/**
-     * @return {module:model/FinderSearchQueryNumberRange}
-     */
     getSize() {
         return this.size;
     }
@@ -206,17 +206,17 @@ class FinderSearchQuery {
         this['size'] = size;
     }
 /**
-     * @return {Boolean}
+     * @return {module:model/FinderSearchQueryNumberRange}
      */
-    getOnlyWithParking() {
-        return this.only_with_parking;
+    getUsage() {
+        return this.usage;
     }
 
     /**
-     * @param {Boolean} onlyWithParking
+     * @param {module:model/FinderSearchQueryNumberRange} usage
      */
-    setOnlyWithParking(onlyWithParking) {
-        this['only_with_parking'] = onlyWithParking;
+    setUsage(usage) {
+        this['usage'] = usage;
     }
 
 }
@@ -229,19 +229,19 @@ class FinderSearchQuery {
 FinderSearchQuery.prototype['brand_model'] = undefined;
 
 /**
+ * @member {module:model/FinderSearchQueryNumberRange} credit
+ */
+FinderSearchQuery.prototype['credit'] = undefined;
+
+/**
+ * @member {Boolean} only_with_parking
+ */
+FinderSearchQuery.prototype['only_with_parking'] = undefined;
+
+/**
  * @member {module:model/FinderSearchQueryNumberRange} production_year
  */
 FinderSearchQuery.prototype['production_year'] = undefined;
-
-/**
- * @member {module:model/FinderSearchQueryNumberRange} usage
- */
-FinderSearchQuery.prototype['usage'] = undefined;
-
-/**
- * @member {Array.<String>} rooms
- */
-FinderSearchQuery.prototype['rooms'] = undefined;
 
 /**
  * @member {module:model/FinderSearchQueryNumberRange} rent
@@ -249,9 +249,9 @@ FinderSearchQuery.prototype['rooms'] = undefined;
 FinderSearchQuery.prototype['rent'] = undefined;
 
 /**
- * @member {module:model/FinderSearchQueryNumberRange} credit
+ * @member {Array.<String>} rooms
  */
-FinderSearchQuery.prototype['credit'] = undefined;
+FinderSearchQuery.prototype['rooms'] = undefined;
 
 /**
  * @member {module:model/FinderSearchQueryNumberRange} size
@@ -259,9 +259,9 @@ FinderSearchQuery.prototype['credit'] = undefined;
 FinderSearchQuery.prototype['size'] = undefined;
 
 /**
- * @member {Boolean} only_with_parking
+ * @member {module:model/FinderSearchQueryNumberRange} usage
  */
-FinderSearchQuery.prototype['only_with_parking'] = undefined;
+FinderSearchQuery.prototype['usage'] = undefined;
 
 
 

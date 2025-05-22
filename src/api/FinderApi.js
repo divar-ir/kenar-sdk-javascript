@@ -63,7 +63,7 @@ export default class FinderApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = FinderGetPostResponse;
@@ -110,7 +110,7 @@ export default class FinderApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = FinderUser;
@@ -152,7 +152,7 @@ export default class FinderApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = FinderUser;
@@ -193,7 +193,7 @@ export default class FinderApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = FinderGetUserPostsResponse;
@@ -239,7 +239,7 @@ export default class FinderApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = FinderSearchPostV2Response;

@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.ImageCarouselRowImageItem);
     });
 
-    it('should have the property imageId (base name: "image_id")', function() {
-      // uncomment below and update the code to test the property imageId
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
       //var instance = new KenarApiClient.ImageCarouselRowImageItem();
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
+    it('should have the property imageId (base name: "image_id")', function() {
+      // uncomment below and update the code to test the property imageId
       //var instance = new KenarApiClient.ImageCarouselRowImageItem();
       //expect(instance).to.be();
     });

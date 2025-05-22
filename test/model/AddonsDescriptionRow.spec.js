@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsDescriptionRow);
     });
 
-    it('should have the property text (base name: "text")', function() {
-      // uncomment below and update the code to test the property text
+    it('should have the property expandable (base name: "expandable")', function() {
+      // uncomment below and update the code to test the property expandable
       //var instance = new KenarApiClient.AddonsDescriptionRow();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property expandable (base name: "expandable")', function() {
-      // uncomment below and update the code to test the property expandable
+    it('should have the property text (base name: "text")', function() {
+      // uncomment below and update the code to test the property text
       //var instance = new KenarApiClient.AddonsDescriptionRow();
       //expect(instance).to.be();
     });

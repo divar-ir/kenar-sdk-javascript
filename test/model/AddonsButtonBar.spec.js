@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsButtonBar);
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
+    it('should have the property action (base name: "action")', function() {
+      // uncomment below and update the code to test the property action
       //var instance = new KenarApiClient.AddonsButtonBar();
       //expect(instance).to.be();
     });
 
-    it('should have the property action (base name: "action")', function() {
-      // uncomment below and update the code to test the property action
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
       //var instance = new KenarApiClient.AddonsButtonBar();
       //expect(instance).to.be();
     });

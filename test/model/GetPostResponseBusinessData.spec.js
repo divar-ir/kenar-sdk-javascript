@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.GetPostResponseBusinessData);
     });
 
-    it('should have the property businessType (base name: "business_type")', function() {
-      // uncomment below and update the code to test the property businessType
+    it('should have the property businessName (base name: "business_name")', function() {
+      // uncomment below and update the code to test the property businessName
       //var instance = new KenarApiClient.GetPostResponseBusinessData();
       //expect(instance).to.be();
     });
 
-    it('should have the property businessName (base name: "business_name")', function() {
-      // uncomment below and update the code to test the property businessName
+    it('should have the property businessType (base name: "business_type")', function() {
+      // uncomment below and update the code to test the property businessType
       //var instance = new KenarApiClient.GetPostResponseBusinessData();
       //expect(instance).to.be();
     });

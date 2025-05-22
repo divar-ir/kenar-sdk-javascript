@@ -49,14 +49,14 @@ class PaymentTransaction {
         if (data) {
             obj = obj || new PaymentTransaction();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('cost_rials')) {
                 obj['cost_rials'] = ApiClient.convertToType(data['cost_rials'], 'String');
             }
             if (data.hasOwnProperty('extra_details')) {
                 obj['extra_details'] = ApiClient.convertToType(data['extra_details'], 'String');
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('state')) {
                 obj['state'] = PaymentTransactionState.constructFromObject(data['state']);
@@ -75,10 +75,6 @@ class PaymentTransaction {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
         if (data['cost_rials'] && !(typeof data['cost_rials'] === 'string' || data['cost_rials'] instanceof String)) {
             throw new Error("Expected the field `cost_rials` to be a primitive type in the JSON string but got " + data['cost_rials']);
         }
@@ -86,25 +82,14 @@ class PaymentTransaction {
         if (data['extra_details'] && !(typeof data['extra_details'] === 'string' || data['extra_details'] instanceof String)) {
             throw new Error("Expected the field `extra_details` to be a primitive type in the JSON string but got " + data['extra_details']);
         }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
 
         return true;
     }
 
-/**
-     * Returns Same uuid when creating transaction
-     * @return {String}
-     */
-    getId() {
-        return this.id;
-    }
-
-    /**
-     * Sets Same uuid when creating transaction
-     * @param {String} id Same uuid when creating transaction
-     */
-    setId(id) {
-        this['id'] = id;
-    }
 /**
      * Returns The cost of the transaction in rials for your application
      * @return {String}
@@ -134,6 +119,21 @@ class PaymentTransaction {
      */
     setExtraDetails(extraDetails) {
         this['extra_details'] = extraDetails;
+    }
+/**
+     * Returns Same uuid when creating transaction
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * Sets Same uuid when creating transaction
+     * @param {String} id Same uuid when creating transaction
+     */
+    setId(id) {
+        this['id'] = id;
     }
 /**
      * @return {module:model/PaymentTransactionState}
@@ -167,12 +167,6 @@ class PaymentTransaction {
 
 
 /**
- * Same uuid when creating transaction
- * @member {String} id
- */
-PaymentTransaction.prototype['id'] = undefined;
-
-/**
  * The cost of the transaction in rials for your application
  * @member {String} cost_rials
  */
@@ -183,6 +177,12 @@ PaymentTransaction.prototype['cost_rials'] = undefined;
  * @member {String} extra_details
  */
 PaymentTransaction.prototype['extra_details'] = undefined;
+
+/**
+ * Same uuid when creating transaction
+ * @member {String} id
+ */
+PaymentTransaction.prototype['id'] = undefined;
 
 /**
  * @member {module:model/PaymentTransactionState} state

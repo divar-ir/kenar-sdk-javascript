@@ -47,8 +47,8 @@ class AddonsAddonSelector {
         if (data) {
             obj = obj || new AddonsAddonSelector();
 
-            if (data.hasOwnProperty('tokens')) {
-                obj['tokens'] = ApiClient.convertToType(data['tokens'], ['String']);
+            if (data.hasOwnProperty('brand_models')) {
+                obj['brand_models'] = ApiClient.convertToType(data['brand_models'], ['String']);
             }
             if (data.hasOwnProperty('categories')) {
                 obj['categories'] = ApiClient.convertToType(data['categories'], ['String']);
@@ -59,8 +59,8 @@ class AddonsAddonSelector {
             if (data.hasOwnProperty('districts')) {
                 obj['districts'] = ApiClient.convertToType(data['districts'], ['String']);
             }
-            if (data.hasOwnProperty('brand_models')) {
-                obj['brand_models'] = ApiClient.convertToType(data['brand_models'], ['String']);
+            if (data.hasOwnProperty('tokens')) {
+                obj['tokens'] = ApiClient.convertToType(data['tokens'], ['String']);
             }
         }
         return obj;
@@ -73,8 +73,8 @@ class AddonsAddonSelector {
      */
     static validateJSON(data) {
         // ensure the json data is an array
-        if (!Array.isArray(data['tokens'])) {
-            throw new Error("Expected the field `tokens` to be an array in the JSON data but got " + data['tokens']);
+        if (!Array.isArray(data['brand_models'])) {
+            throw new Error("Expected the field `brand_models` to be an array in the JSON data but got " + data['brand_models']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['categories'])) {
@@ -89,8 +89,8 @@ class AddonsAddonSelector {
             throw new Error("Expected the field `districts` to be an array in the JSON data but got " + data['districts']);
         }
         // ensure the json data is an array
-        if (!Array.isArray(data['brand_models'])) {
-            throw new Error("Expected the field `brand_models` to be an array in the JSON data but got " + data['brand_models']);
+        if (!Array.isArray(data['tokens'])) {
+            throw new Error("Expected the field `tokens` to be an array in the JSON data but got " + data['tokens']);
         }
 
         return true;
@@ -99,15 +99,15 @@ class AddonsAddonSelector {
 /**
      * @return {Array.<String>}
      */
-    getTokens() {
-        return this.tokens;
+    getBrandModels() {
+        return this.brand_models;
     }
 
     /**
-     * @param {Array.<String>} tokens
+     * @param {Array.<String>} brandModels
      */
-    setTokens(tokens) {
-        this['tokens'] = tokens;
+    setBrandModels(brandModels) {
+        this['brand_models'] = brandModels;
     }
 /**
      * @return {Array.<String>}
@@ -151,15 +151,15 @@ class AddonsAddonSelector {
 /**
      * @return {Array.<String>}
      */
-    getBrandModels() {
-        return this.brand_models;
+    getTokens() {
+        return this.tokens;
     }
 
     /**
-     * @param {Array.<String>} brandModels
+     * @param {Array.<String>} tokens
      */
-    setBrandModels(brandModels) {
-        this['brand_models'] = brandModels;
+    setTokens(tokens) {
+        this['tokens'] = tokens;
     }
 
 }
@@ -167,9 +167,9 @@ class AddonsAddonSelector {
 
 
 /**
- * @member {Array.<String>} tokens
+ * @member {Array.<String>} brand_models
  */
-AddonsAddonSelector.prototype['tokens'] = undefined;
+AddonsAddonSelector.prototype['brand_models'] = undefined;
 
 /**
  * @member {Array.<String>} categories
@@ -187,9 +187,9 @@ AddonsAddonSelector.prototype['cities'] = undefined;
 AddonsAddonSelector.prototype['districts'] = undefined;
 
 /**
- * @member {Array.<String>} brand_models
+ * @member {Array.<String>} tokens
  */
-AddonsAddonSelector.prototype['brand_models'] = undefined;
+AddonsAddonSelector.prototype['tokens'] = undefined;
 
 
 

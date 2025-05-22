@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(KenarApiClient.PaymentTransaction);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new KenarApiClient.PaymentTransaction();
-      //expect(instance).to.be();
-    });
-
     it('should have the property costRials (base name: "cost_rials")', function() {
       // uncomment below and update the code to test the property costRials
       //var instance = new KenarApiClient.PaymentTransaction();
@@ -68,6 +62,12 @@
 
     it('should have the property extraDetails (base name: "extra_details")', function() {
       // uncomment below and update the code to test the property extraDetails
+      //var instance = new KenarApiClient.PaymentTransaction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
       //var instance = new KenarApiClient.PaymentTransaction();
       //expect(instance).to.be();
     });

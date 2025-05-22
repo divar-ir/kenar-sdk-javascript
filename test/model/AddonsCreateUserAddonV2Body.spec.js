@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsCreateUserAddonV2Body);
     });
 
-    it('should have the property widgets (base name: "widgets")', function() {
-      // uncomment below and update the code to test the property widgets
+    it('should have the property categories (base name: "categories")', function() {
+      // uncomment below and update the code to test the property categories
       //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
 
-    it('should have the property semantic (base name: "semantic")', function() {
-      // uncomment below and update the code to test the property semantic
+    it('should have the property cost (base name: "cost")', function() {
+      // uncomment below and update the code to test the property cost
       //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
@@ -72,8 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property categories (base name: "categories")', function() {
-      // uncomment below and update the code to test the property categories
+    it('should have the property semantic (base name: "semantic")', function() {
+      // uncomment below and update the code to test the property semantic
       //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });
@@ -84,8 +84,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property cost (base name: "cost")', function() {
-      // uncomment below and update the code to test the property cost
+    it('should have the property widgets (base name: "widgets")', function() {
+      // uncomment below and update the code to test the property widgets
       //var instance = new KenarApiClient.AddonsCreateUserAddonV2Body();
       //expect(instance).to.be();
     });

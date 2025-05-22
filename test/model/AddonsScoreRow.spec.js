@@ -54,26 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsScoreRow);
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
+    it('should have the property action (base name: "action")', function() {
+      // uncomment below and update the code to test the property action
       //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
 
     it('should have the property descriptiveScore (base name: "descriptive_score")', function() {
       // uncomment below and update the code to test the property descriptiveScore
-      //var instance = new KenarApiClient.AddonsScoreRow();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property percentageScore (base name: "percentage_score")', function() {
-      // uncomment below and update the code to test the property percentageScore
-      //var instance = new KenarApiClient.AddonsScoreRow();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property scoreColor (base name: "score_color")', function() {
-      // uncomment below and update the code to test the property scoreColor
       //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });
@@ -90,8 +78,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property action (base name: "action")', function() {
-      // uncomment below and update the code to test the property action
+    it('should have the property percentageScore (base name: "percentage_score")', function() {
+      // uncomment below and update the code to test the property percentageScore
+      //var instance = new KenarApiClient.AddonsScoreRow();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scoreColor (base name: "score_color")', function() {
+      // uncomment below and update the code to test the property scoreColor
+      //var instance = new KenarApiClient.AddonsScoreRow();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
       //var instance = new KenarApiClient.AddonsScoreRow();
       //expect(instance).to.be();
     });

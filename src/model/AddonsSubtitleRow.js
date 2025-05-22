@@ -47,11 +47,11 @@ class AddonsSubtitleRow {
         if (data) {
             obj = obj || new AddonsSubtitleRow();
 
-            if (data.hasOwnProperty('text')) {
-                obj['text'] = ApiClient.convertToType(data['text'], 'String');
-            }
             if (data.hasOwnProperty('has_divider')) {
                 obj['has_divider'] = ApiClient.convertToType(data['has_divider'], 'Boolean');
+            }
+            if (data.hasOwnProperty('text')) {
+                obj['text'] = ApiClient.convertToType(data['text'], 'String');
             }
         }
         return obj;
@@ -72,19 +72,6 @@ class AddonsSubtitleRow {
     }
 
 /**
-     * @return {String}
-     */
-    getText() {
-        return this.text;
-    }
-
-    /**
-     * @param {String} text
-     */
-    setText(text) {
-        this['text'] = text;
-    }
-/**
      * @return {Boolean}
      */
     getHasDivider() {
@@ -97,20 +84,33 @@ class AddonsSubtitleRow {
     setHasDivider(hasDivider) {
         this['has_divider'] = hasDivider;
     }
+/**
+     * @return {String}
+     */
+    getText() {
+        return this.text;
+    }
+
+    /**
+     * @param {String} text
+     */
+    setText(text) {
+        this['text'] = text;
+    }
 
 }
 
 
 
 /**
- * @member {String} text
- */
-AddonsSubtitleRow.prototype['text'] = undefined;
-
-/**
  * @member {Boolean} has_divider
  */
 AddonsSubtitleRow.prototype['has_divider'] = undefined;
+
+/**
+ * @member {String} text
+ */
+AddonsSubtitleRow.prototype['text'] = undefined;
 
 
 

@@ -60,14 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property thumbnailLink (base name: "thumbnail_link")', function() {
-      // uncomment below and update the code to test the property thumbnailLink
+    it('should have the property sizeBytes (base name: "size_bytes")', function() {
+      // uncomment below and update the code to test the property sizeBytes
       //var instance = new KenarApiClient.MessageVideoData();
       //expect(instance).to.be();
     });
 
-    it('should have the property sizeBytes (base name: "size_bytes")', function() {
-      // uncomment below and update the code to test the property sizeBytes
+    it('should have the property thumbnailLink (base name: "thumbnail_link")', function() {
+      // uncomment below and update the code to test the property thumbnailLink
       //var instance = new KenarApiClient.MessageVideoData();
       //expect(instance).to.be();
     });

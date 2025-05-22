@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.EventsRegisterEventSubscriptionRequest);
     });
 
-    it('should have the property eventType (base name: "event_type")', function() {
-      // uncomment below and update the code to test the property eventType
+    it('should have the property eventResourceId (base name: "event_resource_id")', function() {
+      // uncomment below and update the code to test the property eventResourceId
       //var instance = new KenarApiClient.EventsRegisterEventSubscriptionRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property eventResourceId (base name: "event_resource_id")', function() {
-      // uncomment below and update the code to test the property eventResourceId
+    it('should have the property eventType (base name: "event_type")', function() {
+      // uncomment below and update the code to test the property eventType
       //var instance = new KenarApiClient.EventsRegisterEventSubscriptionRequest();
       //expect(instance).to.be();
     });

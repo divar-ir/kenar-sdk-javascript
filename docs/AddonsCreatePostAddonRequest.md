@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **String** |  | [optional] 
-**widgets** | **Object** |  | [optional] 
-**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **linkInSpec** | **String** |  | [optional] 
 **notes** | **String** |  | [optional] 
+**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **semantic** | **{String: String}** |  | [optional] 
 **semanticSensitives** | **[String]** |  | [optional] 
+**token** | **String** |  | [optional] 
+**widgets** | **Object** |  | [optional] 
 
 

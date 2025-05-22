@@ -54,20 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.FinderSearchPostItem);
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
-      //var instance = new KenarApiClient.FinderSearchPostItem();
-      //expect(instance).to.be();
-    });
-
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instance = new KenarApiClient.FinderSearchPostItem();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property lastModifiedAt (base name: "last_modified_at")', function() {
-      // uncomment below and update the code to test the property lastModifiedAt
       //var instance = new KenarApiClient.FinderSearchPostItem();
       //expect(instance).to.be();
     });
@@ -78,26 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
-      //var instance = new KenarApiClient.FinderSearchPostItem();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property price (base name: "price")', function() {
-      // uncomment below and update the code to test the property price
-      //var instance = new KenarApiClient.FinderSearchPostItem();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property realEstateFields (base name: "real_estate_fields")', function() {
-      // uncomment below and update the code to test the property realEstateFields
-      //var instance = new KenarApiClient.FinderSearchPostItem();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property vehiclesFields (base name: "vehicles_fields")', function() {
-      // uncomment below and update the code to test the property vehiclesFields
+    it('should have the property communityFields (base name: "community_fields")', function() {
+      // uncomment below and update the code to test the property communityFields
       //var instance = new KenarApiClient.FinderSearchPostItem();
       //expect(instance).to.be();
     });
@@ -114,14 +84,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property servicesFields (base name: "services_fields")', function() {
-      // uncomment below and update the code to test the property servicesFields
+    it('should have the property jobsFields (base name: "jobs_fields")', function() {
+      // uncomment below and update the code to test the property jobsFields
       //var instance = new KenarApiClient.FinderSearchPostItem();
       //expect(instance).to.be();
     });
 
-    it('should have the property personalGoodsFields (base name: "personal_goods_fields")', function() {
-      // uncomment below and update the code to test the property personalGoodsFields
+    it('should have the property lastModifiedAt (base name: "last_modified_at")', function() {
+      // uncomment below and update the code to test the property lastModifiedAt
       //var instance = new KenarApiClient.FinderSearchPostItem();
       //expect(instance).to.be();
     });
@@ -132,8 +102,38 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property communityFields (base name: "community_fields")', function() {
-      // uncomment below and update the code to test the property communityFields
+    it('should have the property personalGoodsFields (base name: "personal_goods_fields")', function() {
+      // uncomment below and update the code to test the property personalGoodsFields
+      //var instance = new KenarApiClient.FinderSearchPostItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property price (base name: "price")', function() {
+      // uncomment below and update the code to test the property price
+      //var instance = new KenarApiClient.FinderSearchPostItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property realEstateFields (base name: "real_estate_fields")', function() {
+      // uncomment below and update the code to test the property realEstateFields
+      //var instance = new KenarApiClient.FinderSearchPostItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property servicesFields (base name: "services_fields")', function() {
+      // uncomment below and update the code to test the property servicesFields
+      //var instance = new KenarApiClient.FinderSearchPostItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new KenarApiClient.FinderSearchPostItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
       //var instance = new KenarApiClient.FinderSearchPostItem();
       //expect(instance).to.be();
     });
@@ -144,8 +144,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property jobsFields (base name: "jobs_fields")', function() {
-      // uncomment below and update the code to test the property jobsFields
+    it('should have the property vehiclesFields (base name: "vehicles_fields")', function() {
+      // uncomment below and update the code to test the property vehiclesFields
       //var instance = new KenarApiClient.FinderSearchPostItem();
       //expect(instance).to.be();
     });

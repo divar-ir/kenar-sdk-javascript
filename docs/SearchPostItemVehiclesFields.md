@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**usage** | **String** |  | [optional] 
-**installmentSale** | **String** |  | [optional] 
 **customPostSubtitle** | **String** |  | [optional] 
+**installmentSale** | **String** |  | [optional] 
+**usage** | **String** |  | [optional] 
 
 

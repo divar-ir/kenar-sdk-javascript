@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsEvaluationRowSection);
     });
 
-    it('should have the property text (base name: "text")', function() {
-      // uncomment below and update the code to test the property text
+    it('should have the property sectionColor (base name: "section_color")', function() {
+      // uncomment below and update the code to test the property sectionColor
       //var instance = new KenarApiClient.AddonsEvaluationRowSection();
       //expect(instance).to.be();
     });
 
-    it('should have the property sectionColor (base name: "section_color")', function() {
-      // uncomment below and update the code to test the property sectionColor
+    it('should have the property text (base name: "text")', function() {
+      // uncomment below and update the code to test the property text
       //var instance = new KenarApiClient.AddonsEvaluationRowSection();
       //expect(instance).to.be();
     });

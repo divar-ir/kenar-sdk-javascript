@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**preset** | [**ManagementPreset**](ManagementPreset.md) |  | [optional] 
 **createdAt** | **Date** |  | [optional] 
-**token** | **String** |  | [optional] 
 **mngToken** | **String** |  | [optional] 
+**preset** | [**ManagementPreset**](ManagementPreset.md) |  | [optional] 
+**token** | **String** |  | [optional] 
 
 

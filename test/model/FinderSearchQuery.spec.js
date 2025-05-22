@@ -60,20 +60,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property credit (base name: "credit")', function() {
+      // uncomment below and update the code to test the property credit
+      //var instance = new KenarApiClient.FinderSearchQuery();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property onlyWithParking (base name: "only_with_parking")', function() {
+      // uncomment below and update the code to test the property onlyWithParking
+      //var instance = new KenarApiClient.FinderSearchQuery();
+      //expect(instance).to.be();
+    });
+
     it('should have the property productionYear (base name: "production_year")', function() {
       // uncomment below and update the code to test the property productionYear
-      //var instance = new KenarApiClient.FinderSearchQuery();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property usage (base name: "usage")', function() {
-      // uncomment below and update the code to test the property usage
-      //var instance = new KenarApiClient.FinderSearchQuery();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property rooms (base name: "rooms")', function() {
-      // uncomment below and update the code to test the property rooms
       //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
@@ -84,8 +84,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property credit (base name: "credit")', function() {
-      // uncomment below and update the code to test the property credit
+    it('should have the property rooms (base name: "rooms")', function() {
+      // uncomment below and update the code to test the property rooms
       //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });
@@ -96,8 +96,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property onlyWithParking (base name: "only_with_parking")', function() {
-      // uncomment below and update the code to test the property onlyWithParking
+    it('should have the property usage (base name: "usage")', function() {
+      // uncomment below and update the code to test the property usage
       //var instance = new KenarApiClient.FinderSearchQuery();
       //expect(instance).to.be();
     });

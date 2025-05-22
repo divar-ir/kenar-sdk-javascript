@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsEvaluationRow);
     });
 
-    it('should have the property indicatorText (base name: "indicator_text")', function() {
-      // uncomment below and update the code to test the property indicatorText
+    it('should have the property iconName (base name: "icon_name")', function() {
+      // uncomment below and update the code to test the property iconName
       //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property iconName (base name: "icon_name")', function() {
-      // uncomment below and update the code to test the property iconName
+    it('should have the property indicatorText (base name: "indicator_text")', function() {
+      // uncomment below and update the code to test the property indicatorText
       //var instance = new KenarApiClient.AddonsEvaluationRow();
       //expect(instance).to.be();
     });

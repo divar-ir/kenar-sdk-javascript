@@ -51,11 +51,11 @@ class GooglerpcStatus {
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'Number');
             }
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
             if (data.hasOwnProperty('details')) {
                 obj['details'] = ApiClient.convertToType(data['details'], [ProtobufAny]);
+            }
+            if (data.hasOwnProperty('message')) {
+                obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
         }
         return obj;
@@ -67,13 +67,13 @@ class GooglerpcStatus {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GooglerpcStatus</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
-            throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
-        }
         // ensure the json data is an array
         if (!Array.isArray(data['details'])) {
             throw new Error("Expected the field `details` to be an array in the JSON data but got " + data['details']);
+        }
+        // ensure the json data is a string
+        if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
+            throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
         }
 
         return true;
@@ -93,19 +93,6 @@ class GooglerpcStatus {
         this['code'] = code;
     }
 /**
-     * @return {String}
-     */
-    getMessage() {
-        return this.message;
-    }
-
-    /**
-     * @param {String} message
-     */
-    setMessage(message) {
-        this['message'] = message;
-    }
-/**
      * @return {Array.<module:model/ProtobufAny>}
      */
     getDetails() {
@@ -118,6 +105,19 @@ class GooglerpcStatus {
     setDetails(details) {
         this['details'] = details;
     }
+/**
+     * @return {String}
+     */
+    getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @param {String} message
+     */
+    setMessage(message) {
+        this['message'] = message;
+    }
 
 }
 
@@ -129,14 +129,14 @@ class GooglerpcStatus {
 GooglerpcStatus.prototype['code'] = undefined;
 
 /**
- * @member {String} message
- */
-GooglerpcStatus.prototype['message'] = undefined;
-
-/**
  * @member {Array.<module:model/ProtobufAny>} details
  */
 GooglerpcStatus.prototype['details'] = undefined;
+
+/**
+ * @member {String} message
+ */
+GooglerpcStatus.prototype['message'] = undefined;
 
 
 

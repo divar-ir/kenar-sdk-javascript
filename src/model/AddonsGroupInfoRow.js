@@ -48,11 +48,11 @@ class AddonsGroupInfoRow {
         if (data) {
             obj = obj || new AddonsGroupInfoRow();
 
-            if (data.hasOwnProperty('items')) {
-                obj['items'] = ApiClient.convertToType(data['items'], [AddonsGroupInfoRowGroupInfoItem]);
-            }
             if (data.hasOwnProperty('has_divider')) {
                 obj['has_divider'] = ApiClient.convertToType(data['has_divider'], 'Boolean');
+            }
+            if (data.hasOwnProperty('items')) {
+                obj['items'] = ApiClient.convertToType(data['items'], [AddonsGroupInfoRowGroupInfoItem]);
             }
         }
         return obj;
@@ -79,19 +79,6 @@ class AddonsGroupInfoRow {
     }
 
 /**
-     * @return {Array.<module:model/AddonsGroupInfoRowGroupInfoItem>}
-     */
-    getItems() {
-        return this.items;
-    }
-
-    /**
-     * @param {Array.<module:model/AddonsGroupInfoRowGroupInfoItem>} items
-     */
-    setItems(items) {
-        this['items'] = items;
-    }
-/**
      * @return {Boolean}
      */
     getHasDivider() {
@@ -104,20 +91,33 @@ class AddonsGroupInfoRow {
     setHasDivider(hasDivider) {
         this['has_divider'] = hasDivider;
     }
+/**
+     * @return {Array.<module:model/AddonsGroupInfoRowGroupInfoItem>}
+     */
+    getItems() {
+        return this.items;
+    }
+
+    /**
+     * @param {Array.<module:model/AddonsGroupInfoRowGroupInfoItem>} items
+     */
+    setItems(items) {
+        this['items'] = items;
+    }
 
 }
 
 
 
 /**
- * @member {Array.<module:model/AddonsGroupInfoRowGroupInfoItem>} items
- */
-AddonsGroupInfoRow.prototype['items'] = undefined;
-
-/**
  * @member {Boolean} has_divider
  */
 AddonsGroupInfoRow.prototype['has_divider'] = undefined;
+
+/**
+ * @member {Array.<module:model/AddonsGroupInfoRowGroupInfoItem>} items
+ */
+AddonsGroupInfoRow.prototype['items'] = undefined;
 
 
 

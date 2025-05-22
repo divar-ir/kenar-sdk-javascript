@@ -20,6 +20,12 @@ Payment tickets are designed to integrate Kenar apps with Divar internal teams. 
 
 ```javascript
 import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.PaymentTicketApi();
 let paymentTicketValidateRequest = new KenarApiClient.PaymentTicketValidateRequest(); // PaymentTicketValidateRequest | 
@@ -44,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 

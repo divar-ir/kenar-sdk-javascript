@@ -50,14 +50,14 @@ class AddonsAction {
         if (data) {
             obj = obj || new AddonsAction();
 
+            if (data.hasOwnProperty('get_dynamic_action')) {
+                obj['get_dynamic_action'] = AddonsGetDynamicAction.constructFromObject(data['get_dynamic_action']);
+            }
             if (data.hasOwnProperty('open_direct_link')) {
                 obj['open_direct_link'] = ApiClient.convertToType(data['open_direct_link'], 'String');
             }
             if (data.hasOwnProperty('open_server_link')) {
                 obj['open_server_link'] = AddonsOpenServerLink.constructFromObject(data['open_server_link']);
-            }
-            if (data.hasOwnProperty('get_dynamic_action')) {
-                obj['get_dynamic_action'] = AddonsGetDynamicAction.constructFromObject(data['get_dynamic_action']);
             }
         }
         return obj;
@@ -69,6 +69,10 @@ class AddonsAction {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsAction</code>.
      */
     static validateJSON(data) {
+        // validate the optional field `get_dynamic_action`
+        if (data['get_dynamic_action']) { // data not null
+          AddonsGetDynamicAction.validateJSON(data['get_dynamic_action']);
+        }
         // ensure the json data is a string
         if (data['open_direct_link'] && !(typeof data['open_direct_link'] === 'string' || data['open_direct_link'] instanceof String)) {
             throw new Error("Expected the field `open_direct_link` to be a primitive type in the JSON string but got " + data['open_direct_link']);
@@ -77,14 +81,23 @@ class AddonsAction {
         if (data['open_server_link']) { // data not null
           AddonsOpenServerLink.validateJSON(data['open_server_link']);
         }
-        // validate the optional field `get_dynamic_action`
-        if (data['get_dynamic_action']) { // data not null
-          AddonsGetDynamicAction.validateJSON(data['get_dynamic_action']);
-        }
 
         return true;
     }
 
+/**
+     * @return {module:model/AddonsGetDynamicAction}
+     */
+    getGetDynamicAction() {
+        return this.get_dynamic_action;
+    }
+
+    /**
+     * @param {module:model/AddonsGetDynamicAction} getDynamicAction
+     */
+    setGetDynamicAction(getDynamicAction) {
+        this['get_dynamic_action'] = getDynamicAction;
+    }
 /**
      * Returns An action to send user to your URL directly with just a resource id (if applicable)
      * @return {String}
@@ -113,23 +126,15 @@ class AddonsAction {
     setOpenServerLink(openServerLink) {
         this['open_server_link'] = openServerLink;
     }
-/**
-     * @return {module:model/AddonsGetDynamicAction}
-     */
-    getGetDynamicAction() {
-        return this.get_dynamic_action;
-    }
-
-    /**
-     * @param {module:model/AddonsGetDynamicAction} getDynamicAction
-     */
-    setGetDynamicAction(getDynamicAction) {
-        this['get_dynamic_action'] = getDynamicAction;
-    }
 
 }
 
 
+
+/**
+ * @member {module:model/AddonsGetDynamicAction} get_dynamic_action
+ */
+AddonsAction.prototype['get_dynamic_action'] = undefined;
 
 /**
  * An action to send user to your URL directly with just a resource id (if applicable)
@@ -141,11 +146,6 @@ AddonsAction.prototype['open_direct_link'] = undefined;
  * @member {module:model/AddonsOpenServerLink} open_server_link
  */
 AddonsAction.prototype['open_server_link'] = undefined;
-
-/**
- * @member {module:model/AddonsGetDynamicAction} get_dynamic_action
- */
-AddonsAction.prototype['get_dynamic_action'] = undefined;
 
 
 

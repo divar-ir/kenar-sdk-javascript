@@ -49,32 +49,32 @@ class FinderGetPostResponse {
         if (data) {
             obj = obj || new FinderGetPostResponse();
 
-            if (data.hasOwnProperty('state')) {
-                obj['state'] = FinderPostExtState.constructFromObject(data['state']);
-            }
-            if (data.hasOwnProperty('first_published_at')) {
-                obj['first_published_at'] = ApiClient.convertToType(data['first_published_at'], 'Date');
-            }
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
+            if (data.hasOwnProperty('business_data')) {
+                obj['business_data'] = GetPostResponseBusinessData.constructFromObject(data['business_data']);
             }
             if (data.hasOwnProperty('category')) {
                 obj['category'] = ApiClient.convertToType(data['category'], 'String');
             }
+            if (data.hasOwnProperty('chat_enabled')) {
+                obj['chat_enabled'] = ApiClient.convertToType(data['chat_enabled'], 'Boolean');
+            }
             if (data.hasOwnProperty('city')) {
                 obj['city'] = ApiClient.convertToType(data['city'], 'String');
-            }
-            if (data.hasOwnProperty('district')) {
-                obj['district'] = ApiClient.convertToType(data['district'], 'String');
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], Object);
             }
-            if (data.hasOwnProperty('chat_enabled')) {
-                obj['chat_enabled'] = ApiClient.convertToType(data['chat_enabled'], 'Boolean');
+            if (data.hasOwnProperty('district')) {
+                obj['district'] = ApiClient.convertToType(data['district'], 'String');
             }
-            if (data.hasOwnProperty('business_data')) {
-                obj['business_data'] = GetPostResponseBusinessData.constructFromObject(data['business_data']);
+            if (data.hasOwnProperty('first_published_at')) {
+                obj['first_published_at'] = ApiClient.convertToType(data['first_published_at'], 'Date');
+            }
+            if (data.hasOwnProperty('state')) {
+                obj['state'] = FinderPostExtState.constructFromObject(data['state']);
+            }
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
         }
         return obj;
@@ -86,9 +86,9 @@ class FinderGetPostResponse {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FinderGetPostResponse</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
-            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
+        // validate the optional field `business_data`
+        if (data['business_data']) { // data not null
+          GetPostResponseBusinessData.validateJSON(data['business_data']);
         }
         // ensure the json data is a string
         if (data['category'] && !(typeof data['category'] === 'string' || data['category'] instanceof String)) {
@@ -102,52 +102,26 @@ class FinderGetPostResponse {
         if (data['district'] && !(typeof data['district'] === 'string' || data['district'] instanceof String)) {
             throw new Error("Expected the field `district` to be a primitive type in the JSON string but got " + data['district']);
         }
-        // validate the optional field `business_data`
-        if (data['business_data']) { // data not null
-          GetPostResponseBusinessData.validateJSON(data['business_data']);
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
         }
 
         return true;
     }
 
 /**
-     * @return {module:model/FinderPostExtState}
+     * @return {module:model/GetPostResponseBusinessData}
      */
-    getState() {
-        return this.state;
+    getBusinessData() {
+        return this.business_data;
     }
 
     /**
-     * @param {module:model/FinderPostExtState} state
+     * @param {module:model/GetPostResponseBusinessData} businessData
      */
-    setState(state) {
-        this['state'] = state;
-    }
-/**
-     * @return {Date}
-     */
-    getFirstPublishedAt() {
-        return this.first_published_at;
-    }
-
-    /**
-     * @param {Date} firstPublishedAt
-     */
-    setFirstPublishedAt(firstPublishedAt) {
-        this['first_published_at'] = firstPublishedAt;
-    }
-/**
-     * @return {String}
-     */
-    getToken() {
-        return this.token;
-    }
-
-    /**
-     * @param {String} token
-     */
-    setToken(token) {
-        this['token'] = token;
+    setBusinessData(businessData) {
+        this['business_data'] = businessData;
     }
 /**
      * @return {String}
@@ -163,6 +137,19 @@ class FinderGetPostResponse {
         this['category'] = category;
     }
 /**
+     * @return {Boolean}
+     */
+    getChatEnabled() {
+        return this.chat_enabled;
+    }
+
+    /**
+     * @param {Boolean} chatEnabled
+     */
+    setChatEnabled(chatEnabled) {
+        this['chat_enabled'] = chatEnabled;
+    }
+/**
      * @return {String}
      */
     getCity() {
@@ -174,19 +161,6 @@ class FinderGetPostResponse {
      */
     setCity(city) {
         this['city'] = city;
-    }
-/**
-     * @return {String}
-     */
-    getDistrict() {
-        return this.district;
-    }
-
-    /**
-     * @param {String} district
-     */
-    setDistrict(district) {
-        this['district'] = district;
     }
 /**
      * @return {Object}
@@ -202,30 +176,56 @@ class FinderGetPostResponse {
         this['data'] = data;
     }
 /**
-     * @return {Boolean}
+     * @return {String}
      */
-    getChatEnabled() {
-        return this.chat_enabled;
+    getDistrict() {
+        return this.district;
     }
 
     /**
-     * @param {Boolean} chatEnabled
+     * @param {String} district
      */
-    setChatEnabled(chatEnabled) {
-        this['chat_enabled'] = chatEnabled;
+    setDistrict(district) {
+        this['district'] = district;
     }
 /**
-     * @return {module:model/GetPostResponseBusinessData}
+     * @return {Date}
      */
-    getBusinessData() {
-        return this.business_data;
+    getFirstPublishedAt() {
+        return this.first_published_at;
     }
 
     /**
-     * @param {module:model/GetPostResponseBusinessData} businessData
+     * @param {Date} firstPublishedAt
      */
-    setBusinessData(businessData) {
-        this['business_data'] = businessData;
+    setFirstPublishedAt(firstPublishedAt) {
+        this['first_published_at'] = firstPublishedAt;
+    }
+/**
+     * @return {module:model/FinderPostExtState}
+     */
+    getState() {
+        return this.state;
+    }
+
+    /**
+     * @param {module:model/FinderPostExtState} state
+     */
+    setState(state) {
+        this['state'] = state;
+    }
+/**
+     * @return {String}
+     */
+    getToken() {
+        return this.token;
+    }
+
+    /**
+     * @param {String} token
+     */
+    setToken(token) {
+        this['token'] = token;
     }
 
 }
@@ -233,19 +233,9 @@ class FinderGetPostResponse {
 
 
 /**
- * @member {module:model/FinderPostExtState} state
+ * @member {module:model/GetPostResponseBusinessData} business_data
  */
-FinderGetPostResponse.prototype['state'] = undefined;
-
-/**
- * @member {Date} first_published_at
- */
-FinderGetPostResponse.prototype['first_published_at'] = undefined;
-
-/**
- * @member {String} token
- */
-FinderGetPostResponse.prototype['token'] = undefined;
+FinderGetPostResponse.prototype['business_data'] = undefined;
 
 /**
  * @member {String} category
@@ -253,14 +243,14 @@ FinderGetPostResponse.prototype['token'] = undefined;
 FinderGetPostResponse.prototype['category'] = undefined;
 
 /**
+ * @member {Boolean} chat_enabled
+ */
+FinderGetPostResponse.prototype['chat_enabled'] = undefined;
+
+/**
  * @member {String} city
  */
 FinderGetPostResponse.prototype['city'] = undefined;
-
-/**
- * @member {String} district
- */
-FinderGetPostResponse.prototype['district'] = undefined;
 
 /**
  * @member {Object} data
@@ -268,14 +258,24 @@ FinderGetPostResponse.prototype['district'] = undefined;
 FinderGetPostResponse.prototype['data'] = undefined;
 
 /**
- * @member {Boolean} chat_enabled
+ * @member {String} district
  */
-FinderGetPostResponse.prototype['chat_enabled'] = undefined;
+FinderGetPostResponse.prototype['district'] = undefined;
 
 /**
- * @member {module:model/GetPostResponseBusinessData} business_data
+ * @member {Date} first_published_at
  */
-FinderGetPostResponse.prototype['business_data'] = undefined;
+FinderGetPostResponse.prototype['first_published_at'] = undefined;
+
+/**
+ * @member {module:model/FinderPostExtState} state
+ */
+FinderGetPostResponse.prototype['state'] = undefined;
+
+/**
+ * @member {String} token
+ */
+FinderGetPostResponse.prototype['token'] = undefined;
 
 
 

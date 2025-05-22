@@ -67,7 +67,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -121,7 +121,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AddonsCreateUserAddonResponseV2;
@@ -175,7 +175,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AddonsCreateUserAddonResponseV2;
@@ -224,7 +224,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -272,7 +272,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -320,7 +320,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -372,7 +372,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AddonsGetUserAddonsResponse;
@@ -426,7 +426,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AddonsGetUserAddonsResponse;

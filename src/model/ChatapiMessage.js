@@ -55,17 +55,23 @@ class ChatapiMessage {
         if (data) {
             obj = obj || new ChatapiMessage();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('conversation')) {
                 obj['conversation'] = ChatapiConversation.constructFromObject(data['conversation']);
             }
+            if (data.hasOwnProperty('file_data')) {
+                obj['file_data'] = MessageFileData.constructFromObject(data['file_data']);
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('image_data')) {
+                obj['image_data'] = MessageImageData.constructFromObject(data['image_data']);
+            }
+            if (data.hasOwnProperty('location_data')) {
+                obj['location_data'] = MessageLocationData.constructFromObject(data['location_data']);
+            }
             if (data.hasOwnProperty('sender')) {
                 obj['sender'] = MessageSender.constructFromObject(data['sender']);
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ChatapiMessageType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('sent_at')) {
                 obj['sent_at'] = ApiClient.convertToType(data['sent_at'], 'Date');
@@ -73,20 +79,14 @@ class ChatapiMessage {
             if (data.hasOwnProperty('text')) {
                 obj['text'] = ApiClient.convertToType(data['text'], 'String');
             }
-            if (data.hasOwnProperty('image_data')) {
-                obj['image_data'] = MessageImageData.constructFromObject(data['image_data']);
-            }
-            if (data.hasOwnProperty('file_data')) {
-                obj['file_data'] = MessageFileData.constructFromObject(data['file_data']);
-            }
-            if (data.hasOwnProperty('voice_data')) {
-                obj['voice_data'] = MessageVoiceData.constructFromObject(data['voice_data']);
-            }
-            if (data.hasOwnProperty('location_data')) {
-                obj['location_data'] = MessageLocationData.constructFromObject(data['location_data']);
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ChatapiMessageType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('video_data')) {
                 obj['video_data'] = MessageVideoData.constructFromObject(data['video_data']);
+            }
+            if (data.hasOwnProperty('voice_data')) {
+                obj['voice_data'] = MessageVoiceData.constructFromObject(data['voice_data']);
             }
         }
         return obj;
@@ -98,13 +98,25 @@ class ChatapiMessage {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ChatapiMessage</code>.
      */
     static validateJSON(data) {
+        // validate the optional field `conversation`
+        if (data['conversation']) { // data not null
+          ChatapiConversation.validateJSON(data['conversation']);
+        }
+        // validate the optional field `file_data`
+        if (data['file_data']) { // data not null
+          MessageFileData.validateJSON(data['file_data']);
+        }
         // ensure the json data is a string
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
-        // validate the optional field `conversation`
-        if (data['conversation']) { // data not null
-          ChatapiConversation.validateJSON(data['conversation']);
+        // validate the optional field `image_data`
+        if (data['image_data']) { // data not null
+          MessageImageData.validateJSON(data['image_data']);
+        }
+        // validate the optional field `location_data`
+        if (data['location_data']) { // data not null
+          MessageLocationData.validateJSON(data['location_data']);
         }
         // validate the optional field `sender`
         if (data['sender']) { // data not null
@@ -114,43 +126,18 @@ class ChatapiMessage {
         if (data['text'] && !(typeof data['text'] === 'string' || data['text'] instanceof String)) {
             throw new Error("Expected the field `text` to be a primitive type in the JSON string but got " + data['text']);
         }
-        // validate the optional field `image_data`
-        if (data['image_data']) { // data not null
-          MessageImageData.validateJSON(data['image_data']);
-        }
-        // validate the optional field `file_data`
-        if (data['file_data']) { // data not null
-          MessageFileData.validateJSON(data['file_data']);
+        // validate the optional field `video_data`
+        if (data['video_data']) { // data not null
+          MessageVideoData.validateJSON(data['video_data']);
         }
         // validate the optional field `voice_data`
         if (data['voice_data']) { // data not null
           MessageVoiceData.validateJSON(data['voice_data']);
         }
-        // validate the optional field `location_data`
-        if (data['location_data']) { // data not null
-          MessageLocationData.validateJSON(data['location_data']);
-        }
-        // validate the optional field `video_data`
-        if (data['video_data']) { // data not null
-          MessageVideoData.validateJSON(data['video_data']);
-        }
 
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getId() {
-        return this.id;
-    }
-
-    /**
-     * @param {String} id
-     */
-    setId(id) {
-        this['id'] = id;
-    }
 /**
      * @return {module:model/ChatapiConversation}
      */
@@ -165,6 +152,58 @@ class ChatapiMessage {
         this['conversation'] = conversation;
     }
 /**
+     * @return {module:model/MessageFileData}
+     */
+    getFileData() {
+        return this.file_data;
+    }
+
+    /**
+     * @param {module:model/MessageFileData} fileData
+     */
+    setFileData(fileData) {
+        this['file_data'] = fileData;
+    }
+/**
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * @param {String} id
+     */
+    setId(id) {
+        this['id'] = id;
+    }
+/**
+     * @return {module:model/MessageImageData}
+     */
+    getImageData() {
+        return this.image_data;
+    }
+
+    /**
+     * @param {module:model/MessageImageData} imageData
+     */
+    setImageData(imageData) {
+        this['image_data'] = imageData;
+    }
+/**
+     * @return {module:model/MessageLocationData}
+     */
+    getLocationData() {
+        return this.location_data;
+    }
+
+    /**
+     * @param {module:model/MessageLocationData} locationData
+     */
+    setLocationData(locationData) {
+        this['location_data'] = locationData;
+    }
+/**
      * @return {module:model/MessageSender}
      */
     getSender() {
@@ -176,19 +215,6 @@ class ChatapiMessage {
      */
     setSender(sender) {
         this['sender'] = sender;
-    }
-/**
-     * @return {module:model/ChatapiMessageType}
-     */
-    getType() {
-        return this.type;
-    }
-
-    /**
-     * @param {module:model/ChatapiMessageType} type
-     */
-    setType(type) {
-        this['type'] = type;
     }
 /**
      * @return {Date}
@@ -217,56 +243,17 @@ class ChatapiMessage {
         this['text'] = text;
     }
 /**
-     * @return {module:model/MessageImageData}
+     * @return {module:model/ChatapiMessageType}
      */
-    getImageData() {
-        return this.image_data;
+    getType() {
+        return this.type;
     }
 
     /**
-     * @param {module:model/MessageImageData} imageData
+     * @param {module:model/ChatapiMessageType} type
      */
-    setImageData(imageData) {
-        this['image_data'] = imageData;
-    }
-/**
-     * @return {module:model/MessageFileData}
-     */
-    getFileData() {
-        return this.file_data;
-    }
-
-    /**
-     * @param {module:model/MessageFileData} fileData
-     */
-    setFileData(fileData) {
-        this['file_data'] = fileData;
-    }
-/**
-     * @return {module:model/MessageVoiceData}
-     */
-    getVoiceData() {
-        return this.voice_data;
-    }
-
-    /**
-     * @param {module:model/MessageVoiceData} voiceData
-     */
-    setVoiceData(voiceData) {
-        this['voice_data'] = voiceData;
-    }
-/**
-     * @return {module:model/MessageLocationData}
-     */
-    getLocationData() {
-        return this.location_data;
-    }
-
-    /**
-     * @param {module:model/MessageLocationData} locationData
-     */
-    setLocationData(locationData) {
-        this['location_data'] = locationData;
+    setType(type) {
+        this['type'] = type;
     }
 /**
      * @return {module:model/MessageVideoData}
@@ -281,15 +268,23 @@ class ChatapiMessage {
     setVideoData(videoData) {
         this['video_data'] = videoData;
     }
+/**
+     * @return {module:model/MessageVoiceData}
+     */
+    getVoiceData() {
+        return this.voice_data;
+    }
+
+    /**
+     * @param {module:model/MessageVoiceData} voiceData
+     */
+    setVoiceData(voiceData) {
+        this['voice_data'] = voiceData;
+    }
 
 }
 
 
-
-/**
- * @member {String} id
- */
-ChatapiMessage.prototype['id'] = undefined;
 
 /**
  * @member {module:model/ChatapiConversation} conversation
@@ -297,14 +292,29 @@ ChatapiMessage.prototype['id'] = undefined;
 ChatapiMessage.prototype['conversation'] = undefined;
 
 /**
+ * @member {module:model/MessageFileData} file_data
+ */
+ChatapiMessage.prototype['file_data'] = undefined;
+
+/**
+ * @member {String} id
+ */
+ChatapiMessage.prototype['id'] = undefined;
+
+/**
+ * @member {module:model/MessageImageData} image_data
+ */
+ChatapiMessage.prototype['image_data'] = undefined;
+
+/**
+ * @member {module:model/MessageLocationData} location_data
+ */
+ChatapiMessage.prototype['location_data'] = undefined;
+
+/**
  * @member {module:model/MessageSender} sender
  */
 ChatapiMessage.prototype['sender'] = undefined;
-
-/**
- * @member {module:model/ChatapiMessageType} type
- */
-ChatapiMessage.prototype['type'] = undefined;
 
 /**
  * @member {Date} sent_at
@@ -317,29 +327,19 @@ ChatapiMessage.prototype['sent_at'] = undefined;
 ChatapiMessage.prototype['text'] = undefined;
 
 /**
- * @member {module:model/MessageImageData} image_data
+ * @member {module:model/ChatapiMessageType} type
  */
-ChatapiMessage.prototype['image_data'] = undefined;
-
-/**
- * @member {module:model/MessageFileData} file_data
- */
-ChatapiMessage.prototype['file_data'] = undefined;
-
-/**
- * @member {module:model/MessageVoiceData} voice_data
- */
-ChatapiMessage.prototype['voice_data'] = undefined;
-
-/**
- * @member {module:model/MessageLocationData} location_data
- */
-ChatapiMessage.prototype['location_data'] = undefined;
+ChatapiMessage.prototype['type'] = undefined;
 
 /**
  * @member {module:model/MessageVideoData} video_data
  */
 ChatapiMessage.prototype['video_data'] = undefined;
+
+/**
+ * @member {module:model/MessageVoiceData} voice_data
+ */
+ChatapiMessage.prototype['voice_data'] = undefined;
 
 
 

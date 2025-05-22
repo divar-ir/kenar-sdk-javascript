@@ -54,26 +54,26 @@
       //expect(instance).to.be.a(KenarApiClient.ChatAPIConversationSendMessageBody);
     });
 
-    it('should have the property message (base name: "message")', function() {
-      // uncomment below and update the code to test the property message
-      //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
-      //expect(instance).to.be();
-    });
-
     it('should have the property mediaToken (base name: "media_token")', function() {
       // uncomment below and update the code to test the property mediaToken
       //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
       //expect(instance).to.be();
     });
 
-    it('should have the property senderButtons (base name: "sender_buttons")', function() {
-      // uncomment below and update the code to test the property senderButtons
+    it('should have the property message (base name: "message")', function() {
+      // uncomment below and update the code to test the property message
       //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
       //expect(instance).to.be();
     });
 
     it('should have the property receiverButtons (base name: "receiver_buttons")', function() {
       // uncomment below and update the code to test the property receiverButtons
+      //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property senderButtons (base name: "sender_buttons")', function() {
+      // uncomment below and update the code to test the property senderButtons
       //var instance = new KenarApiClient.ChatAPIConversationSendMessageBody();
       //expect(instance).to.be();
     });

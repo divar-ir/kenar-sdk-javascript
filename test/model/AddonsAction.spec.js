@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsAction);
     });
 
+    it('should have the property getDynamicAction (base name: "get_dynamic_action")', function() {
+      // uncomment below and update the code to test the property getDynamicAction
+      //var instance = new KenarApiClient.AddonsAction();
+      //expect(instance).to.be();
+    });
+
     it('should have the property openDirectLink (base name: "open_direct_link")', function() {
       // uncomment below and update the code to test the property openDirectLink
       //var instance = new KenarApiClient.AddonsAction();
@@ -62,12 +68,6 @@
 
     it('should have the property openServerLink (base name: "open_server_link")', function() {
       // uncomment below and update the code to test the property openServerLink
-      //var instance = new KenarApiClient.AddonsAction();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property getDynamicAction (base name: "get_dynamic_action")', function() {
-      // uncomment below and update the code to test the property getDynamicAction
       //var instance = new KenarApiClient.AddonsAction();
       //expect(instance).to.be();
     });

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**divarUserId** | **String** |  | [optional] 
+**filters** | [**AddonsUserAddonFilters**](AddonsUserAddonFilters.md) |  | [optional] 
 **metaData** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
 **phone** | **String** |  | [optional] 
-**divarUserId** | **String** |  | [optional] 
-**widgets** | **Object** |  | [optional] 
 **semantic** | **{String: String}** |  | [optional] 
 **semanticData** | [**AddonsAddonSemantic**](AddonsAddonSemantic.md) |  | [optional] 
 **sensitiveSemantic** | **{String: String}** |  | [optional] 
+**widgets** | **Object** |  | [optional] 
 **widgetsSemantic** | **Object** |  | [optional] 
-**filters** | [**AddonsUserAddonFilters**](AddonsUserAddonFilters.md) |  | [optional] 
 
 

@@ -52,14 +52,14 @@ class ChatapiChatButton {
             if (data.hasOwnProperty('action')) {
                 obj['action'] = AddonsAction.constructFromObject(data['action']);
             }
-            if (data.hasOwnProperty('icon_name')) {
-                obj['icon_name'] = ApiClient.convertToType(data['icon_name'], 'String');
-            }
             if (data.hasOwnProperty('caption')) {
                 obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
             }
             if (data.hasOwnProperty('icon')) {
                 obj['icon'] = DivarIconsIconName.constructFromObject(data['icon']);
+            }
+            if (data.hasOwnProperty('icon_name')) {
+                obj['icon_name'] = ApiClient.convertToType(data['icon_name'], 'String');
             }
         }
         return obj;
@@ -76,12 +76,12 @@ class ChatapiChatButton {
           AddonsAction.validateJSON(data['action']);
         }
         // ensure the json data is a string
-        if (data['icon_name'] && !(typeof data['icon_name'] === 'string' || data['icon_name'] instanceof String)) {
-            throw new Error("Expected the field `icon_name` to be a primitive type in the JSON string but got " + data['icon_name']);
-        }
-        // ensure the json data is a string
         if (data['caption'] && !(typeof data['caption'] === 'string' || data['caption'] instanceof String)) {
             throw new Error("Expected the field `caption` to be a primitive type in the JSON string but got " + data['caption']);
+        }
+        // ensure the json data is a string
+        if (data['icon_name'] && !(typeof data['icon_name'] === 'string' || data['icon_name'] instanceof String)) {
+            throw new Error("Expected the field `icon_name` to be a primitive type in the JSON string but got " + data['icon_name']);
         }
 
         return true;
@@ -99,19 +99,6 @@ class ChatapiChatButton {
      */
     setAction(action) {
         this['action'] = action;
-    }
-/**
-     * @return {String}
-     */
-    getIconName() {
-        return this.icon_name;
-    }
-
-    /**
-     * @param {String} iconName
-     */
-    setIconName(iconName) {
-        this['icon_name'] = iconName;
     }
 /**
      * @return {String}
@@ -139,6 +126,19 @@ class ChatapiChatButton {
     setIcon(icon) {
         this['icon'] = icon;
     }
+/**
+     * @return {String}
+     */
+    getIconName() {
+        return this.icon_name;
+    }
+
+    /**
+     * @param {String} iconName
+     */
+    setIconName(iconName) {
+        this['icon_name'] = iconName;
+    }
 
 }
 
@@ -150,11 +150,6 @@ class ChatapiChatButton {
 ChatapiChatButton.prototype['action'] = undefined;
 
 /**
- * @member {String} icon_name
- */
-ChatapiChatButton.prototype['icon_name'] = undefined;
-
-/**
  * @member {String} caption
  */
 ChatapiChatButton.prototype['caption'] = undefined;
@@ -163,6 +158,11 @@ ChatapiChatButton.prototype['caption'] = undefined;
  * @member {module:model/DivarIconsIconName} icon
  */
 ChatapiChatButton.prototype['icon'] = undefined;
+
+/**
+ * @member {String} icon_name
+ */
+ChatapiChatButton.prototype['icon_name'] = undefined;
 
 
 

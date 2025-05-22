@@ -47,11 +47,11 @@ class PaymentReorderPostBody {
         if (data) {
             obj = obj || new PaymentReorderPostBody();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('extra_details')) {
                 obj['extra_details'] = ApiClient.convertToType(data['extra_details'], 'String');
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
         }
         return obj;
@@ -64,32 +64,17 @@ class PaymentReorderPostBody {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
         if (data['extra_details'] && !(typeof data['extra_details'] === 'string' || data['extra_details'] instanceof String)) {
             throw new Error("Expected the field `extra_details` to be a primitive type in the JSON string but got " + data['extra_details']);
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
 
         return true;
     }
 
-/**
-     * Returns A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
-     * @return {String}
-     */
-    getId() {
-        return this.id;
-    }
-
-    /**
-     * Sets A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
-     * @param {String} id A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
-     */
-    setId(id) {
-        this['id'] = id;
-    }
 /**
      * Returns Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
      * @return {String}
@@ -105,22 +90,37 @@ class PaymentReorderPostBody {
     setExtraDetails(extraDetails) {
         this['extra_details'] = extraDetails;
     }
+/**
+     * Returns A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * Sets A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     * @param {String} id A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     */
+    setId(id) {
+        this['id'] = id;
+    }
 
 }
 
 
 
 /**
- * A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
- * @member {String} id
- */
-PaymentReorderPostBody.prototype['id'] = undefined;
-
-/**
  * Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
  * @member {String} extra_details
  */
 PaymentReorderPostBody.prototype['extra_details'] = undefined;
+
+/**
+ * A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+ * @member {String} id
+ */
+PaymentReorderPostBody.prototype['id'] = undefined;
 
 
 

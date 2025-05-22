@@ -45,6 +45,8 @@ class ApiClient {
          * @type {Array.<String>}
          */
         this.authentications = {
+            'APIKey': {type: 'apiKey', 'in': 'header', name: 'X-API-Key'},
+            'OAuth': {type: 'oauth2'}
         }
 
 	/**

@@ -50,11 +50,11 @@ class MessageVideoData {
             if (data.hasOwnProperty('link')) {
                 obj['link'] = ApiClient.convertToType(data['link'], 'String');
             }
-            if (data.hasOwnProperty('thumbnail_link')) {
-                obj['thumbnail_link'] = ApiClient.convertToType(data['thumbnail_link'], 'String');
-            }
             if (data.hasOwnProperty('size_bytes')) {
                 obj['size_bytes'] = ApiClient.convertToType(data['size_bytes'], 'String');
+            }
+            if (data.hasOwnProperty('thumbnail_link')) {
+                obj['thumbnail_link'] = ApiClient.convertToType(data['thumbnail_link'], 'String');
             }
         }
         return obj;
@@ -71,12 +71,12 @@ class MessageVideoData {
             throw new Error("Expected the field `link` to be a primitive type in the JSON string but got " + data['link']);
         }
         // ensure the json data is a string
-        if (data['thumbnail_link'] && !(typeof data['thumbnail_link'] === 'string' || data['thumbnail_link'] instanceof String)) {
-            throw new Error("Expected the field `thumbnail_link` to be a primitive type in the JSON string but got " + data['thumbnail_link']);
-        }
-        // ensure the json data is a string
         if (data['size_bytes'] && !(typeof data['size_bytes'] === 'string' || data['size_bytes'] instanceof String)) {
             throw new Error("Expected the field `size_bytes` to be a primitive type in the JSON string but got " + data['size_bytes']);
+        }
+        // ensure the json data is a string
+        if (data['thumbnail_link'] && !(typeof data['thumbnail_link'] === 'string' || data['thumbnail_link'] instanceof String)) {
+            throw new Error("Expected the field `thumbnail_link` to be a primitive type in the JSON string but got " + data['thumbnail_link']);
         }
 
         return true;
@@ -98,19 +98,6 @@ class MessageVideoData {
 /**
      * @return {String}
      */
-    getThumbnailLink() {
-        return this.thumbnail_link;
-    }
-
-    /**
-     * @param {String} thumbnailLink
-     */
-    setThumbnailLink(thumbnailLink) {
-        this['thumbnail_link'] = thumbnailLink;
-    }
-/**
-     * @return {String}
-     */
     getSizeBytes() {
         return this.size_bytes;
     }
@@ -120,6 +107,19 @@ class MessageVideoData {
      */
     setSizeBytes(sizeBytes) {
         this['size_bytes'] = sizeBytes;
+    }
+/**
+     * @return {String}
+     */
+    getThumbnailLink() {
+        return this.thumbnail_link;
+    }
+
+    /**
+     * @param {String} thumbnailLink
+     */
+    setThumbnailLink(thumbnailLink) {
+        this['thumbnail_link'] = thumbnailLink;
     }
 
 }
@@ -132,14 +132,14 @@ class MessageVideoData {
 MessageVideoData.prototype['link'] = undefined;
 
 /**
- * @member {String} thumbnail_link
- */
-MessageVideoData.prototype['thumbnail_link'] = undefined;
-
-/**
  * @member {String} size_bytes
  */
 MessageVideoData.prototype['size_bytes'] = undefined;
+
+/**
+ * @member {String} thumbnail_link
+ */
+MessageVideoData.prototype['thumbnail_link'] = undefined;
 
 
 

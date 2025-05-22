@@ -49,14 +49,14 @@ class AddonsEvaluationRow {
         if (data) {
             obj = obj || new AddonsEvaluationRow();
 
-            if (data.hasOwnProperty('indicator_text')) {
-                obj['indicator_text'] = ApiClient.convertToType(data['indicator_text'], 'String');
+            if (data.hasOwnProperty('icon_name')) {
+                obj['icon_name'] = DivarIconsIconName.constructFromObject(data['icon_name']);
             }
             if (data.hasOwnProperty('indicator_percentage')) {
                 obj['indicator_percentage'] = ApiClient.convertToType(data['indicator_percentage'], 'Number');
             }
-            if (data.hasOwnProperty('icon_name')) {
-                obj['icon_name'] = DivarIconsIconName.constructFromObject(data['icon_name']);
+            if (data.hasOwnProperty('indicator_text')) {
+                obj['indicator_text'] = ApiClient.convertToType(data['indicator_text'], 'String');
             }
             if (data.hasOwnProperty('left')) {
                 obj['left'] = AddonsEvaluationRowSection.constructFromObject(data['left']);
@@ -98,17 +98,17 @@ class AddonsEvaluationRow {
     }
 
 /**
-     * @return {String}
+     * @return {module:model/DivarIconsIconName}
      */
-    getIndicatorText() {
-        return this.indicator_text;
+    getIconName() {
+        return this.icon_name;
     }
 
     /**
-     * @param {String} indicatorText
+     * @param {module:model/DivarIconsIconName} iconName
      */
-    setIndicatorText(indicatorText) {
-        this['indicator_text'] = indicatorText;
+    setIconName(iconName) {
+        this['icon_name'] = iconName;
     }
 /**
      * @return {Number}
@@ -124,17 +124,17 @@ class AddonsEvaluationRow {
         this['indicator_percentage'] = indicatorPercentage;
     }
 /**
-     * @return {module:model/DivarIconsIconName}
+     * @return {String}
      */
-    getIconName() {
-        return this.icon_name;
+    getIndicatorText() {
+        return this.indicator_text;
     }
 
     /**
-     * @param {module:model/DivarIconsIconName} iconName
+     * @param {String} indicatorText
      */
-    setIconName(iconName) {
-        this['icon_name'] = iconName;
+    setIndicatorText(indicatorText) {
+        this['indicator_text'] = indicatorText;
     }
 /**
      * @return {module:model/AddonsEvaluationRowSection}
@@ -181,9 +181,9 @@ class AddonsEvaluationRow {
 
 
 /**
- * @member {String} indicator_text
+ * @member {module:model/DivarIconsIconName} icon_name
  */
-AddonsEvaluationRow.prototype['indicator_text'] = undefined;
+AddonsEvaluationRow.prototype['icon_name'] = undefined;
 
 /**
  * @member {Number} indicator_percentage
@@ -191,9 +191,9 @@ AddonsEvaluationRow.prototype['indicator_text'] = undefined;
 AddonsEvaluationRow.prototype['indicator_percentage'] = undefined;
 
 /**
- * @member {module:model/DivarIconsIconName} icon_name
+ * @member {String} indicator_text
  */
-AddonsEvaluationRow.prototype['icon_name'] = undefined;
+AddonsEvaluationRow.prototype['indicator_text'] = undefined;
 
 /**
  * @member {module:model/AddonsEvaluationRowSection} left

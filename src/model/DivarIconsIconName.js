@@ -5563,6 +5563,13 @@ export default class DivarIconsIconName {
         "WHATS_APP" = "WHATS_APP";
 
     
+        /**
+         * value: "CHAT_SPARKLES"
+         * @const
+         */
+        "CHAT_SPARKLES" = "CHAT_SPARKLES";
+
+    
 
     /**
     * Returns a <code>DivarIconsIconName</code> enum value from a Javascript object name.

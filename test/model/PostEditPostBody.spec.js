@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(KenarApiClient.PostEditPostBody);
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
-      //var instance = new KenarApiClient.PostEditPostBody();
-      //expect(instance).to.be();
-    });
-
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
       //var instance = new KenarApiClient.PostEditPostBody();
@@ -68,6 +62,12 @@
 
     it('should have the property imagePaths (base name: "image_paths")', function() {
       // uncomment below and update the code to test the property imagePaths
+      //var instance = new KenarApiClient.PostEditPostBody();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
       //var instance = new KenarApiClient.PostEditPostBody();
       //expect(instance).to.be();
     });

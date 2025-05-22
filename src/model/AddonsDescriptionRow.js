@@ -47,14 +47,14 @@ class AddonsDescriptionRow {
         if (data) {
             obj = obj || new AddonsDescriptionRow();
 
-            if (data.hasOwnProperty('text')) {
-                obj['text'] = ApiClient.convertToType(data['text'], 'String');
+            if (data.hasOwnProperty('expandable')) {
+                obj['expandable'] = ApiClient.convertToType(data['expandable'], 'Boolean');
             }
             if (data.hasOwnProperty('has_divider')) {
                 obj['has_divider'] = ApiClient.convertToType(data['has_divider'], 'Boolean');
             }
-            if (data.hasOwnProperty('expandable')) {
-                obj['expandable'] = ApiClient.convertToType(data['expandable'], 'Boolean');
+            if (data.hasOwnProperty('text')) {
+                obj['text'] = ApiClient.convertToType(data['text'], 'String');
             }
         }
         return obj;
@@ -75,17 +75,17 @@ class AddonsDescriptionRow {
     }
 
 /**
-     * @return {String}
+     * @return {Boolean}
      */
-    getText() {
-        return this.text;
+    getExpandable() {
+        return this.expandable;
     }
 
     /**
-     * @param {String} text
+     * @param {Boolean} expandable
      */
-    setText(text) {
-        this['text'] = text;
+    setExpandable(expandable) {
+        this['expandable'] = expandable;
     }
 /**
      * @return {Boolean}
@@ -101,17 +101,17 @@ class AddonsDescriptionRow {
         this['has_divider'] = hasDivider;
     }
 /**
-     * @return {Boolean}
+     * @return {String}
      */
-    getExpandable() {
-        return this.expandable;
+    getText() {
+        return this.text;
     }
 
     /**
-     * @param {Boolean} expandable
+     * @param {String} text
      */
-    setExpandable(expandable) {
-        this['expandable'] = expandable;
+    setText(text) {
+        this['text'] = text;
     }
 
 }
@@ -119,9 +119,9 @@ class AddonsDescriptionRow {
 
 
 /**
- * @member {String} text
+ * @member {Boolean} expandable
  */
-AddonsDescriptionRow.prototype['text'] = undefined;
+AddonsDescriptionRow.prototype['expandable'] = undefined;
 
 /**
  * @member {Boolean} has_divider
@@ -129,9 +129,9 @@ AddonsDescriptionRow.prototype['text'] = undefined;
 AddonsDescriptionRow.prototype['has_divider'] = undefined;
 
 /**
- * @member {Boolean} expandable
+ * @member {String} text
  */
-AddonsDescriptionRow.prototype['expandable'] = undefined;
+AddonsDescriptionRow.prototype['text'] = undefined;
 
 
 

@@ -101,6 +101,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var KenarApiClient = require('kenar-api-client');
 
+var defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+var APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix['X-API-Key'] = "Token"
 
 var api = new KenarApiClient.AddonsApi()
 var token = "token_example"; // {String} 
@@ -305,5 +311,46 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+### APIKey
+
+
+- **Type**: API key
+- **API key parameter name**: X-API-Key
+- **Location**: HTTP header
+
+### OAuth
+
+
+- **Type**: OAuth
+- **Flow**: accessCode
+- **Authorization URL**: oauth.divar.ir/oauth2/auth
+- **Scopes**: 
+  - BUSINESS_ADDON_CREATE.{resource_id}: BUSINESS_ADDON_CREATE.{resource_id}
+  - CHAT_BOT_USER_MESSAGE_SEND: CHAT_BOT_USER_MESSAGE_SEND
+  - CHAT_CONVERSATION_READ.{resource_id}: CHAT_CONVERSATION_READ.{resource_id}
+  - CHAT_MESSAGE_SEND.{resource_id}: CHAT_MESSAGE_SEND.{resource_id}
+  - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{resource_id}: CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{resource_id}
+  - CHAT_POST_CONVERSATIONS_READ.{resource_id}: CHAT_POST_CONVERSATIONS_READ.{resource_id}
+  - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND: CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND
+  - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ: CHAT_SUPPLIER_ALL_CONVERSATIONS_READ
+  - CONVERSATION_SEND_MESSAGE.{resource_id}: CONVERSATION_SEND_MESSAGE.{resource_id}
+  - MANAGEMENT_APPS_READ.{resource_id}: MANAGEMENT_APPS_READ.{resource_id}
+  - MANAGEMENT_APPS_WRITE.{resource_id}: MANAGEMENT_APPS_WRITE.{resource_id}
+  - NOTIFICATION_ACCESS_REVOCATION: NOTIFICATION_ACCESS_REVOCATION
+  - PAYMENT_ALL_POSTS_PRICING_READ: PAYMENT_ALL_POSTS_PRICING_READ
+  - PAYMENT_ALL_POSTS_REORDER: PAYMENT_ALL_POSTS_REORDER
+  - POST_ADDON_CREATE.{resource_id}: POST_ADDON_CREATE.{resource_id}
+  - POST_EDIT.{resource_id}: POST_EDIT.{resource_id}
+  - POST_ONGOING_IMAGES_GET.{resource_id}: POST_ONGOING_IMAGES_GET.{resource_id}
+  - POST_SEMANTIC_CREATE.{resource_id}: POST_SEMANTIC_CREATE.{resource_id}
+  - USER_ADDON_CREATE: USER_ADDON_CREATE
+  - USER_ID: USER_ID
+  - USER_PHONE: USER_PHONE
+  - USER_POSTS_ADDON_CREATE: USER_POSTS_ADDON_CREATE
+  - USER_POSTS_GET: USER_POSTS_GET
+  - USER_VERIFICATION_CREATE: USER_VERIFICATION_CREATE
+  - offline_access: offline_access
+  - openid: openid
 

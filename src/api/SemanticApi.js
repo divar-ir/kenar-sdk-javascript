@@ -66,7 +66,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -120,7 +120,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SemanticCreateUserSemanticResponse;
@@ -174,7 +174,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SemanticCreateUserSemanticResponse;
@@ -227,7 +227,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -281,7 +281,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;

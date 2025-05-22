@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | [**AppsServiceType**](AppsServiceType.md) |  | [optional] 
 **display** | **String** |  | [optional] 
+**slug** | [**AppsServiceType**](AppsServiceType.md) |  | [optional] 
 
 

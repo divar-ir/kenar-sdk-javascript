@@ -56,7 +56,7 @@ export default class LimitedApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = PaymentGetBalanceResponse;
@@ -102,7 +102,7 @@ export default class LimitedApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = PaymentGetPostPricingResponse;
@@ -149,7 +149,7 @@ export default class LimitedApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = PaymentGetTransactionResponse;
@@ -200,7 +200,7 @@ export default class LimitedApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = PaymentReorderPostResponse;

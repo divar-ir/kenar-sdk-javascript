@@ -48,14 +48,14 @@ class AddonsCreatePostAddonV2Body {
         if (data) {
             obj = obj || new AddonsCreatePostAddonV2Body();
 
-            if (data.hasOwnProperty('widgets')) {
-                obj['widgets'] = ApiClient.convertToType(data['widgets'], [AddonsWidget]);
+            if (data.hasOwnProperty('notes')) {
+                obj['notes'] = ApiClient.convertToType(data['notes'], 'String');
             }
             if (data.hasOwnProperty('semantic')) {
                 obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
             }
-            if (data.hasOwnProperty('notes')) {
-                obj['notes'] = ApiClient.convertToType(data['notes'], 'String');
+            if (data.hasOwnProperty('widgets')) {
+                obj['widgets'] = ApiClient.convertToType(data['widgets'], [AddonsWidget]);
             }
         }
         return obj;
@@ -67,6 +67,10 @@ class AddonsCreatePostAddonV2Body {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsCreatePostAddonV2Body</code>.
      */
     static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['notes'] && !(typeof data['notes'] === 'string' || data['notes'] instanceof String)) {
+            throw new Error("Expected the field `notes` to be a primitive type in the JSON string but got " + data['notes']);
+        }
         if (data['widgets']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['widgets'])) {
@@ -77,26 +81,22 @@ class AddonsCreatePostAddonV2Body {
                 AddonsWidget.validateJSON(item);
             };
         }
-        // ensure the json data is a string
-        if (data['notes'] && !(typeof data['notes'] === 'string' || data['notes'] instanceof String)) {
-            throw new Error("Expected the field `notes` to be a primitive type in the JSON string but got " + data['notes']);
-        }
 
         return true;
     }
 
 /**
-     * @return {Array.<module:model/AddonsWidget>}
+     * @return {String}
      */
-    getWidgets() {
-        return this.widgets;
+    getNotes() {
+        return this.notes;
     }
 
     /**
-     * @param {Array.<module:model/AddonsWidget>} widgets
+     * @param {String} notes
      */
-    setWidgets(widgets) {
-        this['widgets'] = widgets;
+    setNotes(notes) {
+        this['notes'] = notes;
     }
 /**
      * @return {Object.<String, String>}
@@ -112,17 +112,17 @@ class AddonsCreatePostAddonV2Body {
         this['semantic'] = semantic;
     }
 /**
-     * @return {String}
+     * @return {Array.<module:model/AddonsWidget>}
      */
-    getNotes() {
-        return this.notes;
+    getWidgets() {
+        return this.widgets;
     }
 
     /**
-     * @param {String} notes
+     * @param {Array.<module:model/AddonsWidget>} widgets
      */
-    setNotes(notes) {
-        this['notes'] = notes;
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
     }
 
 }
@@ -130,9 +130,9 @@ class AddonsCreatePostAddonV2Body {
 
 
 /**
- * @member {Array.<module:model/AddonsWidget>} widgets
+ * @member {String} notes
  */
-AddonsCreatePostAddonV2Body.prototype['widgets'] = undefined;
+AddonsCreatePostAddonV2Body.prototype['notes'] = undefined;
 
 /**
  * @member {Object.<String, String>} semantic
@@ -140,9 +140,9 @@ AddonsCreatePostAddonV2Body.prototype['widgets'] = undefined;
 AddonsCreatePostAddonV2Body.prototype['semantic'] = undefined;
 
 /**
- * @member {String} notes
+ * @member {Array.<module:model/AddonsWidget>} widgets
  */
-AddonsCreatePostAddonV2Body.prototype['notes'] = undefined;
+AddonsCreatePostAddonV2Body.prototype['widgets'] = undefined;
 
 
 

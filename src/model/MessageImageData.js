@@ -47,14 +47,14 @@ class MessageImageData {
         if (data) {
             obj = obj || new MessageImageData();
 
+            if (data.hasOwnProperty('height_px')) {
+                obj['height_px'] = ApiClient.convertToType(data['height_px'], 'Number');
+            }
             if (data.hasOwnProperty('link')) {
                 obj['link'] = ApiClient.convertToType(data['link'], 'String');
             }
             if (data.hasOwnProperty('size_bytes')) {
                 obj['size_bytes'] = ApiClient.convertToType(data['size_bytes'], 'String');
-            }
-            if (data.hasOwnProperty('height_px')) {
-                obj['height_px'] = ApiClient.convertToType(data['height_px'], 'Number');
             }
             if (data.hasOwnProperty('width_px')) {
                 obj['width_px'] = ApiClient.convertToType(data['width_px'], 'Number');
@@ -81,6 +81,19 @@ class MessageImageData {
         return true;
     }
 
+/**
+     * @return {Number}
+     */
+    getHeightPx() {
+        return this.height_px;
+    }
+
+    /**
+     * @param {Number} heightPx
+     */
+    setHeightPx(heightPx) {
+        this['height_px'] = heightPx;
+    }
 /**
      * @return {String}
      */
@@ -110,19 +123,6 @@ class MessageImageData {
 /**
      * @return {Number}
      */
-    getHeightPx() {
-        return this.height_px;
-    }
-
-    /**
-     * @param {Number} heightPx
-     */
-    setHeightPx(heightPx) {
-        this['height_px'] = heightPx;
-    }
-/**
-     * @return {Number}
-     */
     getWidthPx() {
         return this.width_px;
     }
@@ -139,6 +139,11 @@ class MessageImageData {
 
 
 /**
+ * @member {Number} height_px
+ */
+MessageImageData.prototype['height_px'] = undefined;
+
+/**
  * @member {String} link
  */
 MessageImageData.prototype['link'] = undefined;
@@ -147,11 +152,6 @@ MessageImageData.prototype['link'] = undefined;
  * @member {String} size_bytes
  */
 MessageImageData.prototype['size_bytes'] = undefined;
-
-/**
- * @member {Number} height_px
- */
-MessageImageData.prototype['height_px'] = undefined;
 
 /**
  * @member {Number} width_px

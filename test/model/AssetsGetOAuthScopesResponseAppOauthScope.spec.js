@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope);
     });
 
-    it('should have the property slug (base name: "slug")', function() {
-      // uncomment below and update the code to test the property slug
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
       //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
       //expect(instance).to.be();
     });
@@ -66,14 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
+    it('should have the property lifecycleState (base name: "lifecycle_state")', function() {
+      // uncomment below and update the code to test the property lifecycleState
       //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
       //expect(instance).to.be();
     });
 
-    it('should have the property lifecycleState (base name: "lifecycle_state")', function() {
-      // uncomment below and update the code to test the property lifecycleState
+    it('should have the property slug (base name: "slug")', function() {
+      // uncomment below and update the code to test the property slug
       //var instance = new KenarApiClient.AssetsGetOAuthScopesResponseAppOauthScope();
       //expect(instance).to.be();
     });

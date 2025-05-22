@@ -50,23 +50,23 @@ class AddonsAddonMetaData {
         if (data) {
             obj = obj || new AddonsAddonMetaData();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('app')) {
                 obj['app'] = AppsApp.constructFromObject(data['app']);
             }
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
             }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('last_modified')) {
                 obj['last_modified'] = ApiClient.convertToType(data['last_modified'], 'Date');
             }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = AddonsStatus.constructFromObject(data['status']);
-            }
             if (data.hasOwnProperty('service_tags')) {
                 obj['service_tags'] = ApiClient.convertToType(data['service_tags'], [AppsServiceTag]);
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = AddonsStatus.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -78,13 +78,13 @@ class AddonsAddonMetaData {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsAddonMetaData</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
         // validate the optional field `app`
         if (data['app']) { // data not null
           AppsApp.validateJSON(data['app']);
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['service_tags'])) {
@@ -94,19 +94,6 @@ class AddonsAddonMetaData {
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getId() {
-        return this.id;
-    }
-
-    /**
-     * @param {String} id
-     */
-    setId(id) {
-        this['id'] = id;
-    }
 /**
      * @return {module:model/AppsApp}
      */
@@ -134,6 +121,19 @@ class AddonsAddonMetaData {
         this['created_at'] = createdAt;
     }
 /**
+     * @return {String}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     * @param {String} id
+     */
+    setId(id) {
+        this['id'] = id;
+    }
+/**
      * @return {Date}
      */
     getLastModified() {
@@ -145,19 +145,6 @@ class AddonsAddonMetaData {
      */
     setLastModified(lastModified) {
         this['last_modified'] = lastModified;
-    }
-/**
-     * @return {module:model/AddonsStatus}
-     */
-    getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @param {module:model/AddonsStatus} status
-     */
-    setStatus(status) {
-        this['status'] = status;
     }
 /**
      * @return {Array.<module:model/AppsServiceTag>}
@@ -172,15 +159,23 @@ class AddonsAddonMetaData {
     setServiceTags(serviceTags) {
         this['service_tags'] = serviceTags;
     }
+/**
+     * @return {module:model/AddonsStatus}
+     */
+    getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @param {module:model/AddonsStatus} status
+     */
+    setStatus(status) {
+        this['status'] = status;
+    }
 
 }
 
 
-
-/**
- * @member {String} id
- */
-AddonsAddonMetaData.prototype['id'] = undefined;
 
 /**
  * @member {module:model/AppsApp} app
@@ -193,19 +188,24 @@ AddonsAddonMetaData.prototype['app'] = undefined;
 AddonsAddonMetaData.prototype['created_at'] = undefined;
 
 /**
+ * @member {String} id
+ */
+AddonsAddonMetaData.prototype['id'] = undefined;
+
+/**
  * @member {Date} last_modified
  */
 AddonsAddonMetaData.prototype['last_modified'] = undefined;
 
 /**
- * @member {module:model/AddonsStatus} status
- */
-AddonsAddonMetaData.prototype['status'] = undefined;
-
-/**
  * @member {Array.<module:model/AppsServiceTag>} service_tags
  */
 AddonsAddonMetaData.prototype['service_tags'] = undefined;
+
+/**
+ * @member {module:model/AddonsStatus} status
+ */
+AddonsAddonMetaData.prototype['status'] = undefined;
 
 
 

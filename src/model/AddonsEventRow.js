@@ -48,23 +48,23 @@ class AddonsEventRow {
         if (data) {
             obj = obj || new AddonsEventRow();
 
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('subtitle')) {
-                obj['subtitle'] = ApiClient.convertToType(data['subtitle'], 'String');
-            }
-            if (data.hasOwnProperty('label')) {
-                obj['label'] = ApiClient.convertToType(data['label'], 'String');
-            }
-            if (data.hasOwnProperty('image_id')) {
-                obj['image_id'] = ApiClient.convertToType(data['image_id'], 'String');
-            }
             if (data.hasOwnProperty('has_divider')) {
                 obj['has_divider'] = ApiClient.convertToType(data['has_divider'], 'Boolean');
             }
             if (data.hasOwnProperty('icon_name')) {
                 obj['icon_name'] = DivarIconsIconName.constructFromObject(data['icon_name']);
+            }
+            if (data.hasOwnProperty('image_id')) {
+                obj['image_id'] = ApiClient.convertToType(data['image_id'], 'String');
+            }
+            if (data.hasOwnProperty('label')) {
+                obj['label'] = ApiClient.convertToType(data['label'], 'String');
+            }
+            if (data.hasOwnProperty('subtitle')) {
+                obj['subtitle'] = ApiClient.convertToType(data['subtitle'], 'String');
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
         }
         return obj;
@@ -77,77 +77,25 @@ class AddonsEventRow {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
-        }
-        // ensure the json data is a string
-        if (data['subtitle'] && !(typeof data['subtitle'] === 'string' || data['subtitle'] instanceof String)) {
-            throw new Error("Expected the field `subtitle` to be a primitive type in the JSON string but got " + data['subtitle']);
+        if (data['image_id'] && !(typeof data['image_id'] === 'string' || data['image_id'] instanceof String)) {
+            throw new Error("Expected the field `image_id` to be a primitive type in the JSON string but got " + data['image_id']);
         }
         // ensure the json data is a string
         if (data['label'] && !(typeof data['label'] === 'string' || data['label'] instanceof String)) {
             throw new Error("Expected the field `label` to be a primitive type in the JSON string but got " + data['label']);
         }
         // ensure the json data is a string
-        if (data['image_id'] && !(typeof data['image_id'] === 'string' || data['image_id'] instanceof String)) {
-            throw new Error("Expected the field `image_id` to be a primitive type in the JSON string but got " + data['image_id']);
+        if (data['subtitle'] && !(typeof data['subtitle'] === 'string' || data['subtitle'] instanceof String)) {
+            throw new Error("Expected the field `subtitle` to be a primitive type in the JSON string but got " + data['subtitle']);
+        }
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
 
         return true;
     }
 
-/**
-     * @return {String}
-     */
-    getTitle() {
-        return this.title;
-    }
-
-    /**
-     * @param {String} title
-     */
-    setTitle(title) {
-        this['title'] = title;
-    }
-/**
-     * @return {String}
-     */
-    getSubtitle() {
-        return this.subtitle;
-    }
-
-    /**
-     * @param {String} subtitle
-     */
-    setSubtitle(subtitle) {
-        this['subtitle'] = subtitle;
-    }
-/**
-     * @return {String}
-     */
-    getLabel() {
-        return this.label;
-    }
-
-    /**
-     * @param {String} label
-     */
-    setLabel(label) {
-        this['label'] = label;
-    }
-/**
-     * @return {String}
-     */
-    getImageId() {
-        return this.image_id;
-    }
-
-    /**
-     * @param {String} imageId
-     */
-    setImageId(imageId) {
-        this['image_id'] = imageId;
-    }
 /**
      * @return {Boolean}
      */
@@ -174,30 +122,62 @@ class AddonsEventRow {
     setIconName(iconName) {
         this['icon_name'] = iconName;
     }
+/**
+     * @return {String}
+     */
+    getImageId() {
+        return this.image_id;
+    }
+
+    /**
+     * @param {String} imageId
+     */
+    setImageId(imageId) {
+        this['image_id'] = imageId;
+    }
+/**
+     * @return {String}
+     */
+    getLabel() {
+        return this.label;
+    }
+
+    /**
+     * @param {String} label
+     */
+    setLabel(label) {
+        this['label'] = label;
+    }
+/**
+     * @return {String}
+     */
+    getSubtitle() {
+        return this.subtitle;
+    }
+
+    /**
+     * @param {String} subtitle
+     */
+    setSubtitle(subtitle) {
+        this['subtitle'] = subtitle;
+    }
+/**
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @param {String} title
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
 
 }
 
 
-
-/**
- * @member {String} title
- */
-AddonsEventRow.prototype['title'] = undefined;
-
-/**
- * @member {String} subtitle
- */
-AddonsEventRow.prototype['subtitle'] = undefined;
-
-/**
- * @member {String} label
- */
-AddonsEventRow.prototype['label'] = undefined;
-
-/**
- * @member {String} image_id
- */
-AddonsEventRow.prototype['image_id'] = undefined;
 
 /**
  * @member {Boolean} has_divider
@@ -208,6 +188,26 @@ AddonsEventRow.prototype['has_divider'] = undefined;
  * @member {module:model/DivarIconsIconName} icon_name
  */
 AddonsEventRow.prototype['icon_name'] = undefined;
+
+/**
+ * @member {String} image_id
+ */
+AddonsEventRow.prototype['image_id'] = undefined;
+
+/**
+ * @member {String} label
+ */
+AddonsEventRow.prototype['label'] = undefined;
+
+/**
+ * @member {String} subtitle
+ */
+AddonsEventRow.prototype['subtitle'] = undefined;
+
+/**
+ * @member {String} title
+ */
+AddonsEventRow.prototype['title'] = undefined;
 
 
 

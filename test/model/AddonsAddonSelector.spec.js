@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsAddonSelector);
     });
 
-    it('should have the property tokens (base name: "tokens")', function() {
-      // uncomment below and update the code to test the property tokens
+    it('should have the property brandModels (base name: "brand_models")', function() {
+      // uncomment below and update the code to test the property brandModels
       //var instance = new KenarApiClient.AddonsAddonSelector();
       //expect(instance).to.be();
     });
@@ -78,8 +78,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property brandModels (base name: "brand_models")', function() {
-      // uncomment below and update the code to test the property brandModels
+    it('should have the property tokens (base name: "tokens")', function() {
+      // uncomment below and update the code to test the property tokens
       //var instance = new KenarApiClient.AddonsAddonSelector();
       //expect(instance).to.be();
     });

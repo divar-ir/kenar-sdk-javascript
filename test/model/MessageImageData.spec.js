@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(KenarApiClient.MessageImageData);
     });
 
+    it('should have the property heightPx (base name: "height_px")', function() {
+      // uncomment below and update the code to test the property heightPx
+      //var instance = new KenarApiClient.MessageImageData();
+      //expect(instance).to.be();
+    });
+
     it('should have the property link (base name: "link")', function() {
       // uncomment below and update the code to test the property link
       //var instance = new KenarApiClient.MessageImageData();
@@ -62,12 +68,6 @@
 
     it('should have the property sizeBytes (base name: "size_bytes")', function() {
       // uncomment below and update the code to test the property sizeBytes
-      //var instance = new KenarApiClient.MessageImageData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property heightPx (base name: "height_px")', function() {
-      // uncomment below and update the code to test the property heightPx
       //var instance = new KenarApiClient.MessageImageData();
       //expect(instance).to.be();
     });

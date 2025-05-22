@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | **String** |  | [optional] 
-**display** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**display** | **String** |  | [optional] 
 **lifecycleState** | [**AssetsGetPermissionsResponseLifeCycleState**](AssetsGetPermissionsResponseLifeCycleState.md) |  | [optional] 
+**slug** | **String** |  | [optional] 
 
 

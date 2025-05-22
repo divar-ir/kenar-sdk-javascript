@@ -60,14 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property postToken (base name: "post_token")', function() {
+      // uncomment below and update the code to test the property postToken
       //var instance = new KenarApiClient.ChatapiConversation();
       //expect(instance).to.be();
     });
 
-    it('should have the property postToken (base name: "post_token")', function() {
-      // uncomment below and update the code to test the property postToken
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instance = new KenarApiClient.ChatapiConversation();
       //expect(instance).to.be();
     });

@@ -54,56 +54,8 @@
       //expect(instance).to.be.a(KenarApiClient.AddonsWidget);
     });
 
-    it('should have the property eventRow (base name: "event_row")', function() {
-      // uncomment below and update the code to test the property eventRow
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
     it('should have the property buttonBar (base name: "button_bar")', function() {
       // uncomment below and update the code to test the property buttonBar
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property titleRow (base name: "title_row")', function() {
-      // uncomment below and update the code to test the property titleRow
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property subtitleRow (base name: "subtitle_row")', function() {
-      // uncomment below and update the code to test the property subtitleRow
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property selectorRow (base name: "selector_row")', function() {
-      // uncomment below and update the code to test the property selectorRow
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property scoreRow (base name: "score_row")', function() {
-      // uncomment below and update the code to test the property scoreRow
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property imageCarouselRow (base name: "image_carousel_row")', function() {
-      // uncomment below and update the code to test the property imageCarouselRow
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property groupInfoRow (base name: "group_info_row")', function() {
-      // uncomment below and update the code to test the property groupInfoRow
-      //var instance = new KenarApiClient.AddonsWidget();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property evaluationRow (base name: "evaluation_row")', function() {
-      // uncomment below and update the code to test the property evaluationRow
       //var instance = new KenarApiClient.AddonsWidget();
       //expect(instance).to.be();
     });
@@ -114,8 +66,56 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property evaluationRow (base name: "evaluation_row")', function() {
+      // uncomment below and update the code to test the property evaluationRow
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property eventRow (base name: "event_row")', function() {
+      // uncomment below and update the code to test the property eventRow
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property groupInfoRow (base name: "group_info_row")', function() {
+      // uncomment below and update the code to test the property groupInfoRow
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property imageCarouselRow (base name: "image_carousel_row")', function() {
+      // uncomment below and update the code to test the property imageCarouselRow
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scoreRow (base name: "score_row")', function() {
+      // uncomment below and update the code to test the property scoreRow
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property selectorRow (base name: "selector_row")', function() {
+      // uncomment below and update the code to test the property selectorRow
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
     it('should have the property semanticPaths (base name: "semantic_paths")', function() {
       // uncomment below and update the code to test the property semanticPaths
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subtitleRow (base name: "subtitle_row")', function() {
+      // uncomment below and update the code to test the property subtitleRow
+      //var instance = new KenarApiClient.AddonsWidget();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property titleRow (base name: "title_row")', function() {
+      // uncomment below and update the code to test the property titleRow
       //var instance = new KenarApiClient.AddonsWidget();
       //expect(instance).to.be();
     });

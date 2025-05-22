@@ -51,11 +51,11 @@ class ChatapiConversation {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ChatapiConversationType.constructFromObject(data['type']);
-            }
             if (data.hasOwnProperty('post_token')) {
                 obj['post_token'] = ApiClient.convertToType(data['post_token'], 'String');
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ChatapiConversationType.constructFromObject(data['type']);
             }
         }
         return obj;
@@ -93,19 +93,6 @@ class ChatapiConversation {
         this['id'] = id;
     }
 /**
-     * @return {module:model/ChatapiConversationType}
-     */
-    getType() {
-        return this.type;
-    }
-
-    /**
-     * @param {module:model/ChatapiConversationType} type
-     */
-    setType(type) {
-        this['type'] = type;
-    }
-/**
      * @return {String}
      */
     getPostToken() {
@@ -118,6 +105,19 @@ class ChatapiConversation {
     setPostToken(postToken) {
         this['post_token'] = postToken;
     }
+/**
+     * @return {module:model/ChatapiConversationType}
+     */
+    getType() {
+        return this.type;
+    }
+
+    /**
+     * @param {module:model/ChatapiConversationType} type
+     */
+    setType(type) {
+        this['type'] = type;
+    }
 
 }
 
@@ -129,14 +129,14 @@ class ChatapiConversation {
 ChatapiConversation.prototype['id'] = undefined;
 
 /**
- * @member {module:model/ChatapiConversationType} type
- */
-ChatapiConversation.prototype['type'] = undefined;
-
-/**
  * @member {String} post_token
  */
 ChatapiConversation.prototype['post_token'] = undefined;
+
+/**
+ * @member {module:model/ChatapiConversationType} type
+ */
+ChatapiConversation.prototype['type'] = undefined;
 
 
 

@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.GetPostPricingResponseReorder);
     });
 
-    it('should have the property costRials (base name: "cost_rials")', function() {
-      // uncomment below and update the code to test the property costRials
+    it('should have the property available (base name: "available")', function() {
+      // uncomment below and update the code to test the property available
       //var instance = new KenarApiClient.GetPostPricingResponseReorder();
       //expect(instance).to.be();
     });
 
-    it('should have the property available (base name: "available")', function() {
-      // uncomment below and update the code to test the property available
+    it('should have the property costRials (base name: "cost_rials")', function() {
+      // uncomment below and update the code to test the property costRials
       //var instance = new KenarApiClient.GetPostPricingResponseReorder();
       //expect(instance).to.be();
     });

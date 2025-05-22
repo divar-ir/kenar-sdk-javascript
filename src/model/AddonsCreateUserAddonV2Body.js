@@ -48,23 +48,23 @@ class AddonsCreateUserAddonV2Body {
         if (data) {
             obj = obj || new AddonsCreateUserAddonV2Body();
 
-            if (data.hasOwnProperty('widgets')) {
-                obj['widgets'] = ApiClient.convertToType(data['widgets'], [AddonsWidget]);
+            if (data.hasOwnProperty('categories')) {
+                obj['categories'] = ApiClient.convertToType(data['categories'], ['String']);
             }
-            if (data.hasOwnProperty('semantic')) {
-                obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
+            if (data.hasOwnProperty('cost')) {
+                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
             }
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
             }
-            if (data.hasOwnProperty('categories')) {
-                obj['categories'] = ApiClient.convertToType(data['categories'], ['String']);
+            if (data.hasOwnProperty('semantic')) {
+                obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
             }
             if (data.hasOwnProperty('ticket_uuid')) {
                 obj['ticket_uuid'] = ApiClient.convertToType(data['ticket_uuid'], 'String');
             }
-            if (data.hasOwnProperty('cost')) {
-                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
+            if (data.hasOwnProperty('widgets')) {
+                obj['widgets'] = ApiClient.convertToType(data['widgets'], [AddonsWidget]);
             }
         }
         return obj;
@@ -76,6 +76,18 @@ class AddonsCreateUserAddonV2Body {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsCreateUserAddonV2Body</code>.
      */
     static validateJSON(data) {
+        // ensure the json data is an array
+        if (!Array.isArray(data['categories'])) {
+            throw new Error("Expected the field `categories` to be an array in the JSON data but got " + data['categories']);
+        }
+        // ensure the json data is a string
+        if (data['phone'] && !(typeof data['phone'] === 'string' || data['phone'] instanceof String)) {
+            throw new Error("Expected the field `phone` to be a primitive type in the JSON string but got " + data['phone']);
+        }
+        // ensure the json data is a string
+        if (data['ticket_uuid'] && !(typeof data['ticket_uuid'] === 'string' || data['ticket_uuid'] instanceof String)) {
+            throw new Error("Expected the field `ticket_uuid` to be a primitive type in the JSON string but got " + data['ticket_uuid']);
+        }
         if (data['widgets']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['widgets'])) {
@@ -86,34 +98,48 @@ class AddonsCreateUserAddonV2Body {
                 AddonsWidget.validateJSON(item);
             };
         }
-        // ensure the json data is a string
-        if (data['phone'] && !(typeof data['phone'] === 'string' || data['phone'] instanceof String)) {
-            throw new Error("Expected the field `phone` to be a primitive type in the JSON string but got " + data['phone']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['categories'])) {
-            throw new Error("Expected the field `categories` to be an array in the JSON data but got " + data['categories']);
-        }
-        // ensure the json data is a string
-        if (data['ticket_uuid'] && !(typeof data['ticket_uuid'] === 'string' || data['ticket_uuid'] instanceof String)) {
-            throw new Error("Expected the field `ticket_uuid` to be a primitive type in the JSON string but got " + data['ticket_uuid']);
-        }
 
         return true;
     }
 
 /**
-     * @return {Array.<module:model/AddonsWidget>}
+     * @return {Array.<String>}
      */
-    getWidgets() {
-        return this.widgets;
+    getCategories() {
+        return this.categories;
     }
 
     /**
-     * @param {Array.<module:model/AddonsWidget>} widgets
+     * @param {Array.<String>} categories
      */
-    setWidgets(widgets) {
-        this['widgets'] = widgets;
+    setCategories(categories) {
+        this['categories'] = categories;
+    }
+/**
+     * @return {Number}
+     */
+    getCost() {
+        return this.cost;
+    }
+
+    /**
+     * @param {Number} cost
+     */
+    setCost(cost) {
+        this['cost'] = cost;
+    }
+/**
+     * @return {String}
+     */
+    getPhone() {
+        return this.phone;
+    }
+
+    /**
+     * @param {String} phone
+     */
+    setPhone(phone) {
+        this['phone'] = phone;
     }
 /**
      * @return {Object.<String, String>}
@@ -131,32 +157,6 @@ class AddonsCreateUserAddonV2Body {
 /**
      * @return {String}
      */
-    getPhone() {
-        return this.phone;
-    }
-
-    /**
-     * @param {String} phone
-     */
-    setPhone(phone) {
-        this['phone'] = phone;
-    }
-/**
-     * @return {Array.<String>}
-     */
-    getCategories() {
-        return this.categories;
-    }
-
-    /**
-     * @param {Array.<String>} categories
-     */
-    setCategories(categories) {
-        this['categories'] = categories;
-    }
-/**
-     * @return {String}
-     */
     getTicketUuid() {
         return this.ticket_uuid;
     }
@@ -168,17 +168,17 @@ class AddonsCreateUserAddonV2Body {
         this['ticket_uuid'] = ticketUuid;
     }
 /**
-     * @return {Number}
+     * @return {Array.<module:model/AddonsWidget>}
      */
-    getCost() {
-        return this.cost;
+    getWidgets() {
+        return this.widgets;
     }
 
     /**
-     * @param {Number} cost
+     * @param {Array.<module:model/AddonsWidget>} widgets
      */
-    setCost(cost) {
-        this['cost'] = cost;
+    setWidgets(widgets) {
+        this['widgets'] = widgets;
     }
 
 }
@@ -186,14 +186,14 @@ class AddonsCreateUserAddonV2Body {
 
 
 /**
- * @member {Array.<module:model/AddonsWidget>} widgets
+ * @member {Array.<String>} categories
  */
-AddonsCreateUserAddonV2Body.prototype['widgets'] = undefined;
+AddonsCreateUserAddonV2Body.prototype['categories'] = undefined;
 
 /**
- * @member {Object.<String, String>} semantic
+ * @member {Number} cost
  */
-AddonsCreateUserAddonV2Body.prototype['semantic'] = undefined;
+AddonsCreateUserAddonV2Body.prototype['cost'] = undefined;
 
 /**
  * @member {String} phone
@@ -201,9 +201,9 @@ AddonsCreateUserAddonV2Body.prototype['semantic'] = undefined;
 AddonsCreateUserAddonV2Body.prototype['phone'] = undefined;
 
 /**
- * @member {Array.<String>} categories
+ * @member {Object.<String, String>} semantic
  */
-AddonsCreateUserAddonV2Body.prototype['categories'] = undefined;
+AddonsCreateUserAddonV2Body.prototype['semantic'] = undefined;
 
 /**
  * @member {String} ticket_uuid
@@ -211,9 +211,9 @@ AddonsCreateUserAddonV2Body.prototype['categories'] = undefined;
 AddonsCreateUserAddonV2Body.prototype['ticket_uuid'] = undefined;
 
 /**
- * @member {Number} cost
+ * @member {Array.<module:model/AddonsWidget>} widgets
  */
-AddonsCreateUserAddonV2Body.prototype['cost'] = undefined;
+AddonsCreateUserAddonV2Body.prototype['widgets'] = undefined;
 
 
 

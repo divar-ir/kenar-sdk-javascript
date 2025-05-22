@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**imageId** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
+**imageId** | **String** |  | [optional] 
 
 

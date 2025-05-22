@@ -59,7 +59,7 @@ export default class PaymentTicketApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = PaymentTicketValidateResponse;

@@ -47,14 +47,14 @@ class SemanticCreatePostSemanticBody {
         if (data) {
             obj = obj || new SemanticCreatePostSemanticBody();
 
+            if (data.hasOwnProperty('cost')) {
+                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
+            }
             if (data.hasOwnProperty('semantic')) {
                 obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
             }
             if (data.hasOwnProperty('ticket_uuid')) {
                 obj['ticket_uuid'] = ApiClient.convertToType(data['ticket_uuid'], 'String');
-            }
-            if (data.hasOwnProperty('cost')) {
-                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
             }
         }
         return obj;
@@ -74,6 +74,19 @@ class SemanticCreatePostSemanticBody {
         return true;
     }
 
+/**
+     * @return {Number}
+     */
+    getCost() {
+        return this.cost;
+    }
+
+    /**
+     * @param {Number} cost
+     */
+    setCost(cost) {
+        this['cost'] = cost;
+    }
 /**
      * @return {Object.<String, String>}
      */
@@ -100,23 +113,15 @@ class SemanticCreatePostSemanticBody {
     setTicketUuid(ticketUuid) {
         this['ticket_uuid'] = ticketUuid;
     }
-/**
-     * @return {Number}
-     */
-    getCost() {
-        return this.cost;
-    }
-
-    /**
-     * @param {Number} cost
-     */
-    setCost(cost) {
-        this['cost'] = cost;
-    }
 
 }
 
 
+
+/**
+ * @member {Number} cost
+ */
+SemanticCreatePostSemanticBody.prototype['cost'] = undefined;
 
 /**
  * @member {Object.<String, String>} semantic
@@ -127,11 +132,6 @@ SemanticCreatePostSemanticBody.prototype['semantic'] = undefined;
  * @member {String} ticket_uuid
  */
 SemanticCreatePostSemanticBody.prototype['ticket_uuid'] = undefined;
-
-/**
- * @member {Number} cost
- */
-SemanticCreatePostSemanticBody.prototype['cost'] = undefined;
 
 
 

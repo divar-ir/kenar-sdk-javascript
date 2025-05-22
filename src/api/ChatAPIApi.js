@@ -69,7 +69,7 @@ export default class ChatAPIApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ChatapiChatBotSendMessageResponse;
@@ -123,7 +123,7 @@ export default class ChatAPIApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ChatapiChatBotSendMessageResponse;
@@ -177,7 +177,7 @@ export default class ChatAPIApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ChatapiChatBotSendMessageResponse;
@@ -231,7 +231,7 @@ export default class ChatAPIApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ChatapiConversationSendMessageResponse;
@@ -279,7 +279,7 @@ export default class ChatAPIApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ChatapiGenerateUploadTokenResponse;
@@ -327,7 +327,7 @@ export default class ChatAPIApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ChatapiGetConversationResponse;

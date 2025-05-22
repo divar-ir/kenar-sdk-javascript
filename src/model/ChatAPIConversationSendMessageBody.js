@@ -50,17 +50,17 @@ class ChatAPIConversationSendMessageBody {
         if (data) {
             obj = obj || new ChatAPIConversationSendMessageBody();
 
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
             if (data.hasOwnProperty('media_token')) {
                 obj['media_token'] = ApiClient.convertToType(data['media_token'], 'String');
             }
-            if (data.hasOwnProperty('sender_buttons')) {
-                obj['sender_buttons'] = ChatapiChatButtonGrid.constructFromObject(data['sender_buttons']);
+            if (data.hasOwnProperty('message')) {
+                obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
             if (data.hasOwnProperty('receiver_buttons')) {
                 obj['receiver_buttons'] = ChatapiChatButtonGrid.constructFromObject(data['receiver_buttons']);
+            }
+            if (data.hasOwnProperty('sender_buttons')) {
+                obj['sender_buttons'] = ChatapiChatButtonGrid.constructFromObject(data['sender_buttons']);
             }
         }
         return obj;
@@ -79,40 +79,25 @@ class ChatAPIConversationSendMessageBody {
             }
         }
         // ensure the json data is a string
-        if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
-            throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
-        }
-        // ensure the json data is a string
         if (data['media_token'] && !(typeof data['media_token'] === 'string' || data['media_token'] instanceof String)) {
             throw new Error("Expected the field `media_token` to be a primitive type in the JSON string but got " + data['media_token']);
         }
-        // validate the optional field `sender_buttons`
-        if (data['sender_buttons']) { // data not null
-          ChatapiChatButtonGrid.validateJSON(data['sender_buttons']);
+        // ensure the json data is a string
+        if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
+            throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
         }
         // validate the optional field `receiver_buttons`
         if (data['receiver_buttons']) { // data not null
           ChatapiChatButtonGrid.validateJSON(data['receiver_buttons']);
         }
+        // validate the optional field `sender_buttons`
+        if (data['sender_buttons']) { // data not null
+          ChatapiChatButtonGrid.validateJSON(data['sender_buttons']);
+        }
 
         return true;
     }
 
-/**
-     * Returns Text message content to be sent
-     * @return {String}
-     */
-    getMessage() {
-        return this.message;
-    }
-
-    /**
-     * Sets Text message content to be sent
-     * @param {String} message Text message content to be sent
-     */
-    setMessage(message) {
-        this['message'] = message;
-    }
 /**
      * Returns Token for attached media (if any)
      * @return {String}
@@ -129,17 +114,19 @@ class ChatAPIConversationSendMessageBody {
         this['media_token'] = mediaToken;
     }
 /**
-     * @return {module:model/ChatapiChatButtonGrid}
+     * Returns Text message content to be sent
+     * @return {String}
      */
-    getSenderButtons() {
-        return this.sender_buttons;
+    getMessage() {
+        return this.message;
     }
 
     /**
-     * @param {module:model/ChatapiChatButtonGrid} senderButtons
+     * Sets Text message content to be sent
+     * @param {String} message Text message content to be sent
      */
-    setSenderButtons(senderButtons) {
-        this['sender_buttons'] = senderButtons;
+    setMessage(message) {
+        this['message'] = message;
     }
 /**
      * @return {module:model/ChatapiChatButtonGrid}
@@ -154,16 +141,23 @@ class ChatAPIConversationSendMessageBody {
     setReceiverButtons(receiverButtons) {
         this['receiver_buttons'] = receiverButtons;
     }
+/**
+     * @return {module:model/ChatapiChatButtonGrid}
+     */
+    getSenderButtons() {
+        return this.sender_buttons;
+    }
+
+    /**
+     * @param {module:model/ChatapiChatButtonGrid} senderButtons
+     */
+    setSenderButtons(senderButtons) {
+        this['sender_buttons'] = senderButtons;
+    }
 
 }
 
 ChatAPIConversationSendMessageBody.RequiredProperties = ["message"];
-
-/**
- * Text message content to be sent
- * @member {String} message
- */
-ChatAPIConversationSendMessageBody.prototype['message'] = undefined;
 
 /**
  * Token for attached media (if any)
@@ -172,14 +166,20 @@ ChatAPIConversationSendMessageBody.prototype['message'] = undefined;
 ChatAPIConversationSendMessageBody.prototype['media_token'] = undefined;
 
 /**
- * @member {module:model/ChatapiChatButtonGrid} sender_buttons
+ * Text message content to be sent
+ * @member {String} message
  */
-ChatAPIConversationSendMessageBody.prototype['sender_buttons'] = undefined;
+ChatAPIConversationSendMessageBody.prototype['message'] = undefined;
 
 /**
  * @member {module:model/ChatapiChatButtonGrid} receiver_buttons
  */
 ChatAPIConversationSendMessageBody.prototype['receiver_buttons'] = undefined;
+
+/**
+ * @member {module:model/ChatapiChatButtonGrid} sender_buttons
+ */
+ChatAPIConversationSendMessageBody.prototype['sender_buttons'] = undefined;
 
 
 

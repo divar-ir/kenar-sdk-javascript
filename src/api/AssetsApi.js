@@ -63,7 +63,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetBodyStatusesResponse;
@@ -110,7 +110,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetBrandModelsResponse;
@@ -152,7 +152,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetCategoriesResponse;
@@ -193,7 +193,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetCitiesResponse;
@@ -240,7 +240,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetColorsResponse;
@@ -286,7 +286,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetDistrictsResponse;
@@ -335,7 +335,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetDistrictsResponse;
@@ -377,7 +377,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetInternalStoragesResponse;
@@ -418,7 +418,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetOAuthScopesResponse;
@@ -459,7 +459,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetPermissionsResponse;
@@ -500,7 +500,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetRamMemoriesResponse;
@@ -541,7 +541,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['APIKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AssetsGetServiceTypesResponse;

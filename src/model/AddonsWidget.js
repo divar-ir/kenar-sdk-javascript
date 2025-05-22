@@ -57,38 +57,38 @@ class AddonsWidget {
         if (data) {
             obj = obj || new AddonsWidget();
 
-            if (data.hasOwnProperty('event_row')) {
-                obj['event_row'] = AddonsEventRow.constructFromObject(data['event_row']);
-            }
             if (data.hasOwnProperty('button_bar')) {
                 obj['button_bar'] = AddonsButtonBar.constructFromObject(data['button_bar']);
-            }
-            if (data.hasOwnProperty('title_row')) {
-                obj['title_row'] = AddonsTitleRow.constructFromObject(data['title_row']);
-            }
-            if (data.hasOwnProperty('subtitle_row')) {
-                obj['subtitle_row'] = AddonsSubtitleRow.constructFromObject(data['subtitle_row']);
-            }
-            if (data.hasOwnProperty('selector_row')) {
-                obj['selector_row'] = AddonsSelectorRow.constructFromObject(data['selector_row']);
-            }
-            if (data.hasOwnProperty('score_row')) {
-                obj['score_row'] = AddonsScoreRow.constructFromObject(data['score_row']);
-            }
-            if (data.hasOwnProperty('image_carousel_row')) {
-                obj['image_carousel_row'] = AddonsImageCarouselRow.constructFromObject(data['image_carousel_row']);
-            }
-            if (data.hasOwnProperty('group_info_row')) {
-                obj['group_info_row'] = AddonsGroupInfoRow.constructFromObject(data['group_info_row']);
-            }
-            if (data.hasOwnProperty('evaluation_row')) {
-                obj['evaluation_row'] = AddonsEvaluationRow.constructFromObject(data['evaluation_row']);
             }
             if (data.hasOwnProperty('description_row')) {
                 obj['description_row'] = AddonsDescriptionRow.constructFromObject(data['description_row']);
             }
+            if (data.hasOwnProperty('evaluation_row')) {
+                obj['evaluation_row'] = AddonsEvaluationRow.constructFromObject(data['evaluation_row']);
+            }
+            if (data.hasOwnProperty('event_row')) {
+                obj['event_row'] = AddonsEventRow.constructFromObject(data['event_row']);
+            }
+            if (data.hasOwnProperty('group_info_row')) {
+                obj['group_info_row'] = AddonsGroupInfoRow.constructFromObject(data['group_info_row']);
+            }
+            if (data.hasOwnProperty('image_carousel_row')) {
+                obj['image_carousel_row'] = AddonsImageCarouselRow.constructFromObject(data['image_carousel_row']);
+            }
+            if (data.hasOwnProperty('score_row')) {
+                obj['score_row'] = AddonsScoreRow.constructFromObject(data['score_row']);
+            }
+            if (data.hasOwnProperty('selector_row')) {
+                obj['selector_row'] = AddonsSelectorRow.constructFromObject(data['selector_row']);
+            }
             if (data.hasOwnProperty('semantic_paths')) {
                 obj['semantic_paths'] = ApiClient.convertToType(data['semantic_paths'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('subtitle_row')) {
+                obj['subtitle_row'] = AddonsSubtitleRow.constructFromObject(data['subtitle_row']);
+            }
+            if (data.hasOwnProperty('title_row')) {
+                obj['title_row'] = AddonsTitleRow.constructFromObject(data['title_row']);
             }
         }
         return obj;
@@ -100,63 +100,50 @@ class AddonsWidget {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsWidget</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `event_row`
-        if (data['event_row']) { // data not null
-          AddonsEventRow.validateJSON(data['event_row']);
-        }
         // validate the optional field `button_bar`
         if (data['button_bar']) { // data not null
           AddonsButtonBar.validateJSON(data['button_bar']);
-        }
-        // validate the optional field `title_row`
-        if (data['title_row']) { // data not null
-          AddonsTitleRow.validateJSON(data['title_row']);
-        }
-        // validate the optional field `subtitle_row`
-        if (data['subtitle_row']) { // data not null
-          AddonsSubtitleRow.validateJSON(data['subtitle_row']);
-        }
-        // validate the optional field `selector_row`
-        if (data['selector_row']) { // data not null
-          AddonsSelectorRow.validateJSON(data['selector_row']);
-        }
-        // validate the optional field `score_row`
-        if (data['score_row']) { // data not null
-          AddonsScoreRow.validateJSON(data['score_row']);
-        }
-        // validate the optional field `image_carousel_row`
-        if (data['image_carousel_row']) { // data not null
-          AddonsImageCarouselRow.validateJSON(data['image_carousel_row']);
-        }
-        // validate the optional field `group_info_row`
-        if (data['group_info_row']) { // data not null
-          AddonsGroupInfoRow.validateJSON(data['group_info_row']);
-        }
-        // validate the optional field `evaluation_row`
-        if (data['evaluation_row']) { // data not null
-          AddonsEvaluationRow.validateJSON(data['evaluation_row']);
         }
         // validate the optional field `description_row`
         if (data['description_row']) { // data not null
           AddonsDescriptionRow.validateJSON(data['description_row']);
         }
+        // validate the optional field `evaluation_row`
+        if (data['evaluation_row']) { // data not null
+          AddonsEvaluationRow.validateJSON(data['evaluation_row']);
+        }
+        // validate the optional field `event_row`
+        if (data['event_row']) { // data not null
+          AddonsEventRow.validateJSON(data['event_row']);
+        }
+        // validate the optional field `group_info_row`
+        if (data['group_info_row']) { // data not null
+          AddonsGroupInfoRow.validateJSON(data['group_info_row']);
+        }
+        // validate the optional field `image_carousel_row`
+        if (data['image_carousel_row']) { // data not null
+          AddonsImageCarouselRow.validateJSON(data['image_carousel_row']);
+        }
+        // validate the optional field `score_row`
+        if (data['score_row']) { // data not null
+          AddonsScoreRow.validateJSON(data['score_row']);
+        }
+        // validate the optional field `selector_row`
+        if (data['selector_row']) { // data not null
+          AddonsSelectorRow.validateJSON(data['selector_row']);
+        }
+        // validate the optional field `subtitle_row`
+        if (data['subtitle_row']) { // data not null
+          AddonsSubtitleRow.validateJSON(data['subtitle_row']);
+        }
+        // validate the optional field `title_row`
+        if (data['title_row']) { // data not null
+          AddonsTitleRow.validateJSON(data['title_row']);
+        }
 
         return true;
     }
 
-/**
-     * @return {module:model/AddonsEventRow}
-     */
-    getEventRow() {
-        return this.event_row;
-    }
-
-    /**
-     * @param {module:model/AddonsEventRow} eventRow
-     */
-    setEventRow(eventRow) {
-        this['event_row'] = eventRow;
-    }
 /**
      * @return {module:model/AddonsButtonBar}
      */
@@ -169,97 +156,6 @@ class AddonsWidget {
      */
     setButtonBar(buttonBar) {
         this['button_bar'] = buttonBar;
-    }
-/**
-     * @return {module:model/AddonsTitleRow}
-     */
-    getTitleRow() {
-        return this.title_row;
-    }
-
-    /**
-     * @param {module:model/AddonsTitleRow} titleRow
-     */
-    setTitleRow(titleRow) {
-        this['title_row'] = titleRow;
-    }
-/**
-     * @return {module:model/AddonsSubtitleRow}
-     */
-    getSubtitleRow() {
-        return this.subtitle_row;
-    }
-
-    /**
-     * @param {module:model/AddonsSubtitleRow} subtitleRow
-     */
-    setSubtitleRow(subtitleRow) {
-        this['subtitle_row'] = subtitleRow;
-    }
-/**
-     * @return {module:model/AddonsSelectorRow}
-     */
-    getSelectorRow() {
-        return this.selector_row;
-    }
-
-    /**
-     * @param {module:model/AddonsSelectorRow} selectorRow
-     */
-    setSelectorRow(selectorRow) {
-        this['selector_row'] = selectorRow;
-    }
-/**
-     * @return {module:model/AddonsScoreRow}
-     */
-    getScoreRow() {
-        return this.score_row;
-    }
-
-    /**
-     * @param {module:model/AddonsScoreRow} scoreRow
-     */
-    setScoreRow(scoreRow) {
-        this['score_row'] = scoreRow;
-    }
-/**
-     * @return {module:model/AddonsImageCarouselRow}
-     */
-    getImageCarouselRow() {
-        return this.image_carousel_row;
-    }
-
-    /**
-     * @param {module:model/AddonsImageCarouselRow} imageCarouselRow
-     */
-    setImageCarouselRow(imageCarouselRow) {
-        this['image_carousel_row'] = imageCarouselRow;
-    }
-/**
-     * @return {module:model/AddonsGroupInfoRow}
-     */
-    getGroupInfoRow() {
-        return this.group_info_row;
-    }
-
-    /**
-     * @param {module:model/AddonsGroupInfoRow} groupInfoRow
-     */
-    setGroupInfoRow(groupInfoRow) {
-        this['group_info_row'] = groupInfoRow;
-    }
-/**
-     * @return {module:model/AddonsEvaluationRow}
-     */
-    getEvaluationRow() {
-        return this.evaluation_row;
-    }
-
-    /**
-     * @param {module:model/AddonsEvaluationRow} evaluationRow
-     */
-    setEvaluationRow(evaluationRow) {
-        this['evaluation_row'] = evaluationRow;
     }
 /**
      * @return {module:model/AddonsDescriptionRow}
@@ -275,6 +171,84 @@ class AddonsWidget {
         this['description_row'] = descriptionRow;
     }
 /**
+     * @return {module:model/AddonsEvaluationRow}
+     */
+    getEvaluationRow() {
+        return this.evaluation_row;
+    }
+
+    /**
+     * @param {module:model/AddonsEvaluationRow} evaluationRow
+     */
+    setEvaluationRow(evaluationRow) {
+        this['evaluation_row'] = evaluationRow;
+    }
+/**
+     * @return {module:model/AddonsEventRow}
+     */
+    getEventRow() {
+        return this.event_row;
+    }
+
+    /**
+     * @param {module:model/AddonsEventRow} eventRow
+     */
+    setEventRow(eventRow) {
+        this['event_row'] = eventRow;
+    }
+/**
+     * @return {module:model/AddonsGroupInfoRow}
+     */
+    getGroupInfoRow() {
+        return this.group_info_row;
+    }
+
+    /**
+     * @param {module:model/AddonsGroupInfoRow} groupInfoRow
+     */
+    setGroupInfoRow(groupInfoRow) {
+        this['group_info_row'] = groupInfoRow;
+    }
+/**
+     * @return {module:model/AddonsImageCarouselRow}
+     */
+    getImageCarouselRow() {
+        return this.image_carousel_row;
+    }
+
+    /**
+     * @param {module:model/AddonsImageCarouselRow} imageCarouselRow
+     */
+    setImageCarouselRow(imageCarouselRow) {
+        this['image_carousel_row'] = imageCarouselRow;
+    }
+/**
+     * @return {module:model/AddonsScoreRow}
+     */
+    getScoreRow() {
+        return this.score_row;
+    }
+
+    /**
+     * @param {module:model/AddonsScoreRow} scoreRow
+     */
+    setScoreRow(scoreRow) {
+        this['score_row'] = scoreRow;
+    }
+/**
+     * @return {module:model/AddonsSelectorRow}
+     */
+    getSelectorRow() {
+        return this.selector_row;
+    }
+
+    /**
+     * @param {module:model/AddonsSelectorRow} selectorRow
+     */
+    setSelectorRow(selectorRow) {
+        this['selector_row'] = selectorRow;
+    }
+/**
      * @return {Object.<String, String>}
      */
     getSemanticPaths() {
@@ -287,15 +261,36 @@ class AddonsWidget {
     setSemanticPaths(semanticPaths) {
         this['semantic_paths'] = semanticPaths;
     }
+/**
+     * @return {module:model/AddonsSubtitleRow}
+     */
+    getSubtitleRow() {
+        return this.subtitle_row;
+    }
+
+    /**
+     * @param {module:model/AddonsSubtitleRow} subtitleRow
+     */
+    setSubtitleRow(subtitleRow) {
+        this['subtitle_row'] = subtitleRow;
+    }
+/**
+     * @return {module:model/AddonsTitleRow}
+     */
+    getTitleRow() {
+        return this.title_row;
+    }
+
+    /**
+     * @param {module:model/AddonsTitleRow} titleRow
+     */
+    setTitleRow(titleRow) {
+        this['title_row'] = titleRow;
+    }
 
 }
 
 
-
-/**
- * @member {module:model/AddonsEventRow} event_row
- */
-AddonsWidget.prototype['event_row'] = undefined;
 
 /**
  * @member {module:model/AddonsButtonBar} button_bar
@@ -303,34 +298,9 @@ AddonsWidget.prototype['event_row'] = undefined;
 AddonsWidget.prototype['button_bar'] = undefined;
 
 /**
- * @member {module:model/AddonsTitleRow} title_row
+ * @member {module:model/AddonsDescriptionRow} description_row
  */
-AddonsWidget.prototype['title_row'] = undefined;
-
-/**
- * @member {module:model/AddonsSubtitleRow} subtitle_row
- */
-AddonsWidget.prototype['subtitle_row'] = undefined;
-
-/**
- * @member {module:model/AddonsSelectorRow} selector_row
- */
-AddonsWidget.prototype['selector_row'] = undefined;
-
-/**
- * @member {module:model/AddonsScoreRow} score_row
- */
-AddonsWidget.prototype['score_row'] = undefined;
-
-/**
- * @member {module:model/AddonsImageCarouselRow} image_carousel_row
- */
-AddonsWidget.prototype['image_carousel_row'] = undefined;
-
-/**
- * @member {module:model/AddonsGroupInfoRow} group_info_row
- */
-AddonsWidget.prototype['group_info_row'] = undefined;
+AddonsWidget.prototype['description_row'] = undefined;
 
 /**
  * @member {module:model/AddonsEvaluationRow} evaluation_row
@@ -338,14 +308,44 @@ AddonsWidget.prototype['group_info_row'] = undefined;
 AddonsWidget.prototype['evaluation_row'] = undefined;
 
 /**
- * @member {module:model/AddonsDescriptionRow} description_row
+ * @member {module:model/AddonsEventRow} event_row
  */
-AddonsWidget.prototype['description_row'] = undefined;
+AddonsWidget.prototype['event_row'] = undefined;
+
+/**
+ * @member {module:model/AddonsGroupInfoRow} group_info_row
+ */
+AddonsWidget.prototype['group_info_row'] = undefined;
+
+/**
+ * @member {module:model/AddonsImageCarouselRow} image_carousel_row
+ */
+AddonsWidget.prototype['image_carousel_row'] = undefined;
+
+/**
+ * @member {module:model/AddonsScoreRow} score_row
+ */
+AddonsWidget.prototype['score_row'] = undefined;
+
+/**
+ * @member {module:model/AddonsSelectorRow} selector_row
+ */
+AddonsWidget.prototype['selector_row'] = undefined;
 
 /**
  * @member {Object.<String, String>} semantic_paths
  */
 AddonsWidget.prototype['semantic_paths'] = undefined;
+
+/**
+ * @member {module:model/AddonsSubtitleRow} subtitle_row
+ */
+AddonsWidget.prototype['subtitle_row'] = undefined;
+
+/**
+ * @member {module:model/AddonsTitleRow} title_row
+ */
+AddonsWidget.prototype['title_row'] = undefined;
 
 
 

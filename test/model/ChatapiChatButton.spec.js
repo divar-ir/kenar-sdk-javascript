@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property iconName (base name: "icon_name")', function() {
-      // uncomment below and update the code to test the property iconName
-      //var instance = new KenarApiClient.ChatapiChatButton();
-      //expect(instance).to.be();
-    });
-
     it('should have the property caption (base name: "caption")', function() {
       // uncomment below and update the code to test the property caption
       //var instance = new KenarApiClient.ChatapiChatButton();
@@ -74,6 +68,12 @@
 
     it('should have the property icon (base name: "icon")', function() {
       // uncomment below and update the code to test the property icon
+      //var instance = new KenarApiClient.ChatapiChatButton();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property iconName (base name: "icon_name")', function() {
+      // uncomment below and update the code to test the property iconName
       //var instance = new KenarApiClient.ChatapiChatButton();
       //expect(instance).to.be();
     });

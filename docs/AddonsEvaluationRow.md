@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**indicatorText** | **String** |  | [optional] 
-**indicatorPercentage** | **Number** |  | [optional] 
 **iconName** | [**DivarIconsIconName**](DivarIconsIconName.md) |  | [optional] 
+**indicatorPercentage** | **Number** |  | [optional] 
+**indicatorText** | **String** |  | [optional] 
 **left** | [**AddonsEvaluationRowSection**](AddonsEvaluationRowSection.md) |  | [optional] 
 **middle** | [**AddonsEvaluationRowSection**](AddonsEvaluationRowSection.md) |  | [optional] 
 **right** | [**AddonsEvaluationRowSection**](AddonsEvaluationRowSection.md) |  | [optional] 
