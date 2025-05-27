@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**costRials** | **String** | The cost of the transaction in rials for your application | [optional] 
-**extraDetails** | **String** | Same Additional details which you sent in the request | [optional] 
-**id** | **String** | Same uuid when creating transaction | [optional] 
+**costRials** | **String** | هزینه تراکنش به ریال برای اپلیکیشن شما | [optional] 
+**extraDetails** | **String** | همان جزئیات اضافی که در درخواست ارسال کردید | [optional] 
+**id** | **String** | همان uuid هنگام ایجاد تراکنش | [optional] 
 **state** | [**PaymentTransactionState**](PaymentTransactionState.md) |  | [optional] 
 **type** | [**PaymentTransactionType**](PaymentTransactionType.md) |  | [optional] 
 

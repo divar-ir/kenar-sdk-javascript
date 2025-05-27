@@ -76,7 +76,7 @@ class PaymentReorderPostResponse {
     }
 
 /**
-     * Returns The cost of the transaction in rials for your application
+     * Returns هزینه تراکنش به ریال برای اپلیکیشن شما
      * @return {String}
      */
     getCostRials() {
@@ -84,14 +84,14 @@ class PaymentReorderPostResponse {
     }
 
     /**
-     * Sets The cost of the transaction in rials for your application
-     * @param {String} costRials The cost of the transaction in rials for your application
+     * Sets هزینه تراکنش به ریال برای اپلیکیشن شما
+     * @param {String} costRials هزینه تراکنش به ریال برای اپلیکیشن شما
      */
     setCostRials(costRials) {
         this['cost_rials'] = costRials;
     }
 /**
-     * Returns Same uuid when creating transaction
+     * Returns همان uuid هنگام ایجاد تراکنش
      * @return {String}
      */
     getId() {
@@ -99,8 +99,8 @@ class PaymentReorderPostResponse {
     }
 
     /**
-     * Sets Same uuid when creating transaction
-     * @param {String} id Same uuid when creating transaction
+     * Sets همان uuid هنگام ایجاد تراکنش
+     * @param {String} id همان uuid هنگام ایجاد تراکنش
      */
     setId(id) {
         this['id'] = id;
@@ -111,13 +111,13 @@ class PaymentReorderPostResponse {
 
 
 /**
- * The cost of the transaction in rials for your application
+ * هزینه تراکنش به ریال برای اپلیکیشن شما
  * @member {String} cost_rials
  */
 PaymentReorderPostResponse.prototype['cost_rials'] = undefined;
 
 /**
- * Same uuid when creating transaction
+ * همان uuid هنگام ایجاد تراکنش
  * @member {String} id
  */
 PaymentReorderPostResponse.prototype['id'] = undefined;

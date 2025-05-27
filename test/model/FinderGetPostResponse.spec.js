@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property supplierChatAssistantEnabled (base name: "supplier_chat_assistant_enabled")', function() {
+      // uncomment below and update the code to test the property supplierChatAssistantEnabled
+      //var instance = new KenarApiClient.FinderGetPostResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
       //var instance = new KenarApiClient.FinderGetPostResponse();

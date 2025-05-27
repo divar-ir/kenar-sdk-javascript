@@ -73,6 +73,9 @@ class FinderGetPostResponse {
             if (data.hasOwnProperty('state')) {
                 obj['state'] = FinderPostExtState.constructFromObject(data['state']);
             }
+            if (data.hasOwnProperty('supplier_chat_assistant_enabled')) {
+                obj['supplier_chat_assistant_enabled'] = ApiClient.convertToType(data['supplier_chat_assistant_enabled'], 'Boolean');
+            }
             if (data.hasOwnProperty('token')) {
                 obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
@@ -215,6 +218,19 @@ class FinderGetPostResponse {
         this['state'] = state;
     }
 /**
+     * @return {Boolean}
+     */
+    getSupplierChatAssistantEnabled() {
+        return this.supplier_chat_assistant_enabled;
+    }
+
+    /**
+     * @param {Boolean} supplierChatAssistantEnabled
+     */
+    setSupplierChatAssistantEnabled(supplierChatAssistantEnabled) {
+        this['supplier_chat_assistant_enabled'] = supplierChatAssistantEnabled;
+    }
+/**
      * @return {String}
      */
     getToken() {
@@ -271,6 +287,11 @@ FinderGetPostResponse.prototype['first_published_at'] = undefined;
  * @member {module:model/FinderPostExtState} state
  */
 FinderGetPostResponse.prototype['state'] = undefined;
+
+/**
+ * @member {Boolean} supplier_chat_assistant_enabled
+ */
+FinderGetPostResponse.prototype['supplier_chat_assistant_enabled'] = undefined;
 
 /**
  * @member {String} token

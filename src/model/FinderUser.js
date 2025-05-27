@@ -96,7 +96,7 @@ class FinderUser {
         this['phone_number'] = phoneNumber;
     }
 /**
-     * Returns deprecated
+     * Returns منسوخ شده
      * @return {Array.<String>}
      */
     getPhoneNumbers() {
@@ -104,8 +104,8 @@ class FinderUser {
     }
 
     /**
-     * Sets deprecated
-     * @param {Array.<String>} phoneNumbers deprecated
+     * Sets منسوخ شده
+     * @param {Array.<String>} phoneNumbers منسوخ شده
      */
     setPhoneNumbers(phoneNumbers) {
         this['phone_numbers'] = phoneNumbers;
@@ -134,7 +134,7 @@ class FinderUser {
 FinderUser.prototype['phone_number'] = undefined;
 
 /**
- * deprecated
+ * منسوخ شده
  * @member {Array.<String>} phone_numbers
  */
 FinderUser.prototype['phone_numbers'] = undefined;

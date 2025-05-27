@@ -126,50 +126,51 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*KenarApiClient.AddonsApi* | [**addonsCreatePostAddonV2**](docs/AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | Attach a new Addon to a post
-*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV2**](docs/AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | Attach a new Addon to a user
-*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV22**](docs/AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | Attach a new Addon to a user
-*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon**](docs/AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | Delete an Addon from a post
-*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon2**](docs/AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | Delete an Addon from a post
-*KenarApiClient.AddonsApi* | [**addonsDeleteUserAddon**](docs/AddonsApi.md#addonsDeleteUserAddon) | **DELETE** /v1/open-platform/addons/user/{id} | Delete an UserAddon
-*KenarApiClient.AddonsApi* | [**addonsGetUserAddons**](docs/AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | Retrieve all UserAddons
-*KenarApiClient.AddonsApi* | [**addonsGetUserAddons2**](docs/AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | Retrieve all UserAddons
-*KenarApiClient.AssetsApi* | [**assetsGetBodyStatuses**](docs/AssetsApi.md#assetsGetBodyStatuses) | **GET** /v1/open-platform/assets/body-status | Get available body-status options in Divar vehicle categories
-*KenarApiClient.AssetsApi* | [**assetsGetBrandModels**](docs/AssetsApi.md#assetsGetBrandModels) | **GET** /v1/open-platform/assets/brand-model/{category} | Get brand models in a Divar category
-*KenarApiClient.AssetsApi* | [**assetsGetCategories**](docs/AssetsApi.md#assetsGetCategories) | **GET** /v1/open-platform/assets/category | Get Divar categories
-*KenarApiClient.AssetsApi* | [**assetsGetCities**](docs/AssetsApi.md#assetsGetCities) | **GET** /v1/open-platform/assets/city | Get Divar cities
-*KenarApiClient.AssetsApi* | [**assetsGetColors**](docs/AssetsApi.md#assetsGetColors) | **GET** /v1/open-platform/assets/color/{category} | Get colors in a Divar category
-*KenarApiClient.AssetsApi* | [**assetsGetDistricts**](docs/AssetsApi.md#assetsGetDistricts) | **GET** /v1/open-platform/assets/district | Get Divar districts
-*KenarApiClient.AssetsApi* | [**assetsGetDistricts2**](docs/AssetsApi.md#assetsGetDistricts2) | **GET** /v1/open-platform/assets/district/{city_slug} | Get Divar districts
-*KenarApiClient.AssetsApi* | [**assetsGetInternalStorages**](docs/AssetsApi.md#assetsGetInternalStorages) | **GET** /v1/open-platform/assets/internal-storage | Get available internal-storage options in Divar mobile/tablet/laptop categories
-*KenarApiClient.AssetsApi* | [**assetsGetOAuthScopes**](docs/AssetsApi.md#assetsGetOAuthScopes) | **GET** /v1/open-platform/assets/oauth-scope | Get KenarDivar OAuth scopes
-*KenarApiClient.AssetsApi* | [**assetsGetPermissions**](docs/AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | Get KenarDivar permissions
-*KenarApiClient.AssetsApi* | [**assetsGetRamMemories**](docs/AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | Get available ram-memory options in Divar mobile/tablet/laptop categories
-*KenarApiClient.AssetsApi* | [**assetsGetServiceTypes**](docs/AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | Get available service types in KenarDivar
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | Send a message to a ChatBot conversation
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage2**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | Send a message to a ChatBot conversation
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage3**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | Send a message to a ChatBot conversation
-*KenarApiClient.ChatAPIApi* | [**chatAPIConversationSendMessage**](docs/ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | Send a message to a conversation
-*KenarApiClient.ChatAPIApi* | [**chatAPIGenerateUploadToken**](docs/ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | Generate an upload token
-*KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | Get Conversation by it&#39;s ID
-*KenarApiClient.EventsApi* | [**eventsRegisterEventSubscription**](docs/EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | Subscribe to an event
-*KenarApiClient.FinderApi* | [**finderGetPost**](docs/FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | Get a Divar post
-*KenarApiClient.FinderApi* | [**finderGetUser**](docs/FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | Get user information
-*KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | Get user information
-*KenarApiClient.FinderApi* | [**finderGetUserPosts**](docs/FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | Get user posts
-*KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | Search Divar posts with some filters
+*KenarApiClient.AddonsApi* | [**addonsCreatePostAddonV2**](docs/AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
+*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV2**](docs/AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
+*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV22**](docs/AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
+*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon**](docs/AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
+*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon2**](docs/AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
+*KenarApiClient.AddonsApi* | [**addonsDeleteUserAddon**](docs/AddonsApi.md#addonsDeleteUserAddon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
+*KenarApiClient.AddonsApi* | [**addonsGetUserAddons**](docs/AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
+*KenarApiClient.AddonsApi* | [**addonsGetUserAddons2**](docs/AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
+*KenarApiClient.AssetsApi* | [**assetsGetBodyStatuses**](docs/AssetsApi.md#assetsGetBodyStatuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetBrandModels**](docs/AssetsApi.md#assetsGetBrandModels) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetCategories**](docs/AssetsApi.md#assetsGetCategories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetCities**](docs/AssetsApi.md#assetsGetCities) | **GET** /v1/open-platform/assets/city | دریافت شهرهای دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetColors**](docs/AssetsApi.md#assetsGetColors) | **GET** /v1/open-platform/assets/color/{category} | دریافت رنگ‌ها در دسته‌بندی دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetDistricts**](docs/AssetsApi.md#assetsGetDistricts) | **GET** /v1/open-platform/assets/district | دریافت مناطق دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetDistricts2**](docs/AssetsApi.md#assetsGetDistricts2) | **GET** /v1/open-platform/assets/district/{city_slug} | دریافت مناطق دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetInternalStorages**](docs/AssetsApi.md#assetsGetInternalStorages) | **GET** /v1/open-platform/assets/internal-storage | دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetOAuthScopes**](docs/AssetsApi.md#assetsGetOAuthScopes) | **GET** /v1/open-platform/assets/oauth-scope | دریافت دامنه‌های OAuth کنار دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetPermissions**](docs/AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetRamMemories**](docs/AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetServiceTypes**](docs/AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage2**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage3**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*KenarApiClient.ChatAPIApi* | [**chatAPIConversationSendMessage**](docs/ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
+*KenarApiClient.ChatAPIApi* | [**chatAPIGenerateUploadToken**](docs/ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
+*KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
+*KenarApiClient.EventsApi* | [**eventsRegisterEventSubscription**](docs/EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
+*KenarApiClient.FinderApi* | [**finderGetPost**](docs/FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
+*KenarApiClient.FinderApi* | [**finderGetUser**](docs/FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
+*KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
+*KenarApiClient.FinderApi* | [**finderGetUserPosts**](docs/FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
+*KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
 *KenarApiClient.LimitedApi* | [**paymentGetBalance**](docs/LimitedApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | 
-*KenarApiClient.LimitedApi* | [**paymentGetPostPricing**](docs/LimitedApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
+*KenarApiClient.LimitedApi* | [**paymentGetPostPricing**](docs/LimitedApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
 *KenarApiClient.LimitedApi* | [**paymentGetTransaction**](docs/LimitedApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | 
+*KenarApiClient.LimitedApi* | [**paymentListTransactions**](docs/LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
 *KenarApiClient.LimitedApi* | [**paymentReorderPost**](docs/LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
-*KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | Validate a payment ticket
-*KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | Edit a post
-*KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | Get image upload URL
-*KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | Create Post Semantic
-*KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | Create User Semantic
-*KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic2**](docs/SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | Create User Semantic
-*KenarApiClient.SemanticApi* | [**semanticDeleteUserSemantic**](docs/SemanticApi.md#semanticDeleteUserSemantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | Delete User Semantic
-*KenarApiClient.SemanticApi* | [**semanticDeleteUserSemantic2**](docs/SemanticApi.md#semanticDeleteUserSemantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | Delete User Semantic
+*KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
+*KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
+*KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
+*KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
+*KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
+*KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic2**](docs/SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
+*KenarApiClient.SemanticApi* | [**semanticDeleteUserSemantic**](docs/SemanticApi.md#semanticDeleteUserSemantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | حذف اطلاعات معنایی کاربر
+*KenarApiClient.SemanticApi* | [**semanticDeleteUserSemantic2**](docs/SemanticApi.md#semanticDeleteUserSemantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | حذف اطلاعات معنایی کاربر
 
 
 ## Documentation for Models
@@ -289,6 +290,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PaymentGetBalanceResponse](docs/PaymentGetBalanceResponse.md)
  - [KenarApiClient.PaymentGetPostPricingResponse](docs/PaymentGetPostPricingResponse.md)
  - [KenarApiClient.PaymentGetTransactionResponse](docs/PaymentGetTransactionResponse.md)
+ - [KenarApiClient.PaymentListTransactionsResponse](docs/PaymentListTransactionsResponse.md)
  - [KenarApiClient.PaymentReorderPostBody](docs/PaymentReorderPostBody.md)
  - [KenarApiClient.PaymentReorderPostResponse](docs/PaymentReorderPostResponse.md)
  - [KenarApiClient.PaymentTicketGenerateResponse](docs/PaymentTicketGenerateResponse.md)
@@ -307,6 +309,8 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.SemanticCreatePostSemanticBody](docs/SemanticCreatePostSemanticBody.md)
  - [KenarApiClient.SemanticCreateUserSemanticBody](docs/SemanticCreateUserSemanticBody.md)
  - [KenarApiClient.SemanticCreateUserSemanticResponse](docs/SemanticCreateUserSemanticResponse.md)
+ - [KenarApiClient.SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
+ - [KenarApiClient.SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
 
 
 ## Documentation for Authorization

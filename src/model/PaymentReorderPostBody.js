@@ -76,7 +76,7 @@ class PaymentReorderPostBody {
     }
 
 /**
-     * Returns Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
+     * Returns جزئیات اضافی که می‌خواهید به سمت کنار ارسال کنید. این فیلد اختیاری است و می‌تواند برای حل ناسازگاری‌ها در تراکنش استفاده شود.
      * @return {String}
      */
     getExtraDetails() {
@@ -84,14 +84,14 @@ class PaymentReorderPostBody {
     }
 
     /**
-     * Sets Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
-     * @param {String} extraDetails Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
+     * Sets جزئیات اضافی که می‌خواهید به سمت کنار ارسال کنید. این فیلد اختیاری است و می‌تواند برای حل ناسازگاری‌ها در تراکنش استفاده شود.
+     * @param {String} extraDetails جزئیات اضافی که می‌خواهید به سمت کنار ارسال کنید. این فیلد اختیاری است و می‌تواند برای حل ناسازگاری‌ها در تراکنش استفاده شود.
      */
     setExtraDetails(extraDetails) {
         this['extra_details'] = extraDetails;
     }
 /**
-     * Returns A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     * Returns یک uuid نسخه 4 که باید برای هر پرداخت منحصر به فرد باشد. این uuid باید در سمت شما تولید شده و در درخواست ارسال شود. اگر id ای ارسال شود که تراکنش موفق یا نیمه موفقی در سمت کنار داشته باشد، خطا دریافت خواهید کرد.
      * @return {String}
      */
     getId() {
@@ -99,8 +99,8 @@ class PaymentReorderPostBody {
     }
 
     /**
-     * Sets A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
-     * @param {String} id A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     * Sets یک uuid نسخه 4 که باید برای هر پرداخت منحصر به فرد باشد. این uuid باید در سمت شما تولید شده و در درخواست ارسال شود. اگر id ای ارسال شود که تراکنش موفق یا نیمه موفقی در سمت کنار داشته باشد، خطا دریافت خواهید کرد.
+     * @param {String} id یک uuid نسخه 4 که باید برای هر پرداخت منحصر به فرد باشد. این uuid باید در سمت شما تولید شده و در درخواست ارسال شود. اگر id ای ارسال شود که تراکنش موفق یا نیمه موفقی در سمت کنار داشته باشد، خطا دریافت خواهید کرد.
      */
     setId(id) {
         this['id'] = id;
@@ -111,13 +111,13 @@ class PaymentReorderPostBody {
 
 
 /**
- * Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
+ * جزئیات اضافی که می‌خواهید به سمت کنار ارسال کنید. این فیلد اختیاری است و می‌تواند برای حل ناسازگاری‌ها در تراکنش استفاده شود.
  * @member {String} extra_details
  */
 PaymentReorderPostBody.prototype['extra_details'] = undefined;
 
 /**
- * A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+ * یک uuid نسخه 4 که باید برای هر پرداخت منحصر به فرد باشد. این uuid باید در سمت شما تولید شده و در درخواست ارسال شود. اگر id ای ارسال شود که تراکنش موفق یا نیمه موفقی در سمت کنار داشته باشد، خطا دریافت خواهید کرد.
  * @member {String} id
  */
 PaymentReorderPostBody.prototype['id'] = undefined;

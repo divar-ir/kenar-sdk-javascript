@@ -30,7 +30,7 @@ import AddonsAddonSemanticStatus from './AddonsAddonSemanticStatus';
 class AddonsAddonSemantic {
     /**
      * Constructs a new <code>AddonsAddonSemantic</code>.
-     * This is the message extracted by OpenPlatform from service provider semantics. Guidelines:  - Always check to see if an appropriate enum field or value exists before  adding one.  - Zero value of every enum should be {ENUM_NAME}_UNSPECIFIED.  - Enum values should not correspond to any specific post or person  attribute.
+     * این پیام استخراج شده توسط OpenPlatform از اطلاعات معنایی ارائه‌دهنده سرویس است. راهنماها:  - همیشه بررسی کنید که آیا فیلد یا مقدار enum مناسبی قبل از  افزودن وجود دارد.  - مقدار صفر هر enum باید {ENUM_NAME}_UNSPECIFIED باشد.  - مقادیر Enum نباید با هیچ آگهی خاص یا صفت شخص  مطابقت داشته باشد.
      * @alias module:model/AddonsAddonSemantic
      */
     constructor() { 

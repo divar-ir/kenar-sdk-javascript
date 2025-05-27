@@ -38,8 +38,8 @@ export default class PaymentTicketApi {
 
 
     /**
-     * Validate a payment ticket
-     * Payment tickets are designed to integrate Kenar apps with Divar internal teams. Using this API you can validate a payment ticket and get the issuer payload.
+     * اعتبارسنجی بلیط پرداخت
+     * بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
      * @param {module:model/PaymentTicketValidateRequest} paymentTicketValidateRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentTicketValidateResponse} and HTTP response
      */
@@ -71,8 +71,8 @@ export default class PaymentTicketApi {
     }
 
     /**
-     * Validate a payment ticket
-     * Payment tickets are designed to integrate Kenar apps with Divar internal teams. Using this API you can validate a payment ticket and get the issuer payload.
+     * اعتبارسنجی بلیط پرداخت
+     * بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
      * @param {module:model/PaymentTicketValidateRequest} paymentTicketValidateRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentTicketValidateResponse}
      */

@@ -5,8 +5,9 @@ All URIs are relative to *https://open-api.divar.ir*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**paymentGetBalance**](LimitedApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | 
-[**paymentGetPostPricing**](LimitedApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
+[**paymentGetPostPricing**](LimitedApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
 [**paymentGetTransaction**](LimitedApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | 
+[**paymentListTransactions**](LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
 [**paymentReorderPost**](LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 
 
@@ -17,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Using this API you can retrieve current balance of your app.
+با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
 
 ### Example
 
@@ -61,9 +62,9 @@ This endpoint does not need any parameter.
 
 > PaymentGetPostPricingResponse paymentGetPostPricing(postToken)
 
-Retrieve the cost of the service
+دریافت هزینه سرویس
 
-Using this API and with user permission, you can get the price of various services like Reorder.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post).
+با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان را دریافت کنید. قیمت این API لزوماً با قیمت روی دیوار یکسان نیست و قیمت‌گذاری ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی) استفاده کنید.
 
 ### Example
 
@@ -77,7 +78,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.LimitedApi();
-let postToken = "postToken_example"; // String | An 8-9 character unique identifier for the post
+let postToken = "postToken_example"; // String | شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
 apiInstance.paymentGetPostPricing(postToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -91,7 +92,7 @@ apiInstance.paymentGetPostPricing(postToken).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postToken** | **String**| An 8-9 character unique identifier for the post | 
+ **postToken** | **String**| شناسه منحصر به فرد 8-9 کاراکتری برای آگهی | 
 
 ### Return type
 
@@ -113,7 +114,7 @@ Name | Type | Description  | Notes
 
 
 
-Using this API you can retrieve transaction details.
+با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
 ### Example
 
@@ -127,7 +128,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.LimitedApi();
-let id = "id_example"; // String | The unique identifier for the transaction, same as the id in the request
+let id = "id_example"; // String | شناسه منحصر به فرد برای تراکنش، همان id در درخواست
 apiInstance.paymentGetTransaction(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -141,11 +142,65 @@ apiInstance.paymentGetTransaction(id).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The unique identifier for the transaction, same as the id in the request | 
+ **id** | **String**| شناسه منحصر به فرد برای تراکنش، همان id در درخواست | 
 
 ### Return type
 
 [**PaymentGetTransactionResponse**](PaymentGetTransactionResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## paymentListTransactions
+
+> PaymentListTransactionsResponse paymentListTransactions(opts)
+
+
+
+Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.LimitedApi();
+let opts = {
+  'pageSize': 56, // Number | Number of transactions to return per page
+  'pageToken': "pageToken_example" // String | Token for the next page of results
+};
+apiInstance.paymentListTransactions(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | **Number**| Number of transactions to return per page | [optional] 
+ **pageToken** | **String**| Token for the next page of results | [optional] 
+
+### Return type
+
+[**PaymentListTransactionsResponse**](PaymentListTransactionsResponse.md)
 
 ### Authorization
 
@@ -163,7 +218,7 @@ Name | Type | Description  | Notes
 
 
 
-Use GetPostPricing API to get the cost of the service before calling this API.
+قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
 
 ### Example
 

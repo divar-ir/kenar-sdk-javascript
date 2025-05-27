@@ -72,7 +72,7 @@ class GetPostPricingResponseReorder {
     }
 
 /**
-     * Returns Indicates if the post can be reordered. If false, the reorder API will return an error
+     * Returns نشان می‌دهد که آیا آگهی قابل نردبان است. اگر false باشد، API نردبان خطا برمی‌گرداند
      * @return {Boolean}
      */
     getAvailable() {
@@ -80,14 +80,14 @@ class GetPostPricingResponseReorder {
     }
 
     /**
-     * Sets Indicates if the post can be reordered. If false, the reorder API will return an error
-     * @param {Boolean} available Indicates if the post can be reordered. If false, the reorder API will return an error
+     * Sets نشان می‌دهد که آیا آگهی قابل نردبان است. اگر false باشد، API نردبان خطا برمی‌گرداند
+     * @param {Boolean} available نشان می‌دهد که آیا آگهی قابل نردبان است. اگر false باشد، API نردبان خطا برمی‌گرداند
      */
     setAvailable(available) {
         this['available'] = available;
     }
 /**
-     * Returns The cost of reordering in rials
+     * Returns هزینه نردبان به ریال
      * @return {String}
      */
     getCostRials() {
@@ -95,8 +95,8 @@ class GetPostPricingResponseReorder {
     }
 
     /**
-     * Sets The cost of reordering in rials
-     * @param {String} costRials The cost of reordering in rials
+     * Sets هزینه نردبان به ریال
+     * @param {String} costRials هزینه نردبان به ریال
      */
     setCostRials(costRials) {
         this['cost_rials'] = costRials;
@@ -107,13 +107,13 @@ class GetPostPricingResponseReorder {
 
 
 /**
- * Indicates if the post can be reordered. If false, the reorder API will return an error
+ * نشان می‌دهد که آیا آگهی قابل نردبان است. اگر false باشد، API نردبان خطا برمی‌گرداند
  * @member {Boolean} available
  */
 GetPostPricingResponseReorder.prototype['available'] = undefined;
 
 /**
- * The cost of reordering in rials
+ * هزینه نردبان به ریال
  * @member {String} cost_rials
  */
 GetPostPricingResponseReorder.prototype['cost_rials'] = undefined;

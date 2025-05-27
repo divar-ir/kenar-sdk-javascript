@@ -91,7 +91,7 @@ class PaymentTransaction {
     }
 
 /**
-     * Returns The cost of the transaction in rials for your application
+     * Returns هزینه تراکنش به ریال برای اپلیکیشن شما
      * @return {String}
      */
     getCostRials() {
@@ -99,14 +99,14 @@ class PaymentTransaction {
     }
 
     /**
-     * Sets The cost of the transaction in rials for your application
-     * @param {String} costRials The cost of the transaction in rials for your application
+     * Sets هزینه تراکنش به ریال برای اپلیکیشن شما
+     * @param {String} costRials هزینه تراکنش به ریال برای اپلیکیشن شما
      */
     setCostRials(costRials) {
         this['cost_rials'] = costRials;
     }
 /**
-     * Returns Same Additional details which you sent in the request
+     * Returns همان جزئیات اضافی که در درخواست ارسال کردید
      * @return {String}
      */
     getExtraDetails() {
@@ -114,14 +114,14 @@ class PaymentTransaction {
     }
 
     /**
-     * Sets Same Additional details which you sent in the request
-     * @param {String} extraDetails Same Additional details which you sent in the request
+     * Sets همان جزئیات اضافی که در درخواست ارسال کردید
+     * @param {String} extraDetails همان جزئیات اضافی که در درخواست ارسال کردید
      */
     setExtraDetails(extraDetails) {
         this['extra_details'] = extraDetails;
     }
 /**
-     * Returns Same uuid when creating transaction
+     * Returns همان uuid هنگام ایجاد تراکنش
      * @return {String}
      */
     getId() {
@@ -129,8 +129,8 @@ class PaymentTransaction {
     }
 
     /**
-     * Sets Same uuid when creating transaction
-     * @param {String} id Same uuid when creating transaction
+     * Sets همان uuid هنگام ایجاد تراکنش
+     * @param {String} id همان uuid هنگام ایجاد تراکنش
      */
     setId(id) {
         this['id'] = id;
@@ -167,19 +167,19 @@ class PaymentTransaction {
 
 
 /**
- * The cost of the transaction in rials for your application
+ * هزینه تراکنش به ریال برای اپلیکیشن شما
  * @member {String} cost_rials
  */
 PaymentTransaction.prototype['cost_rials'] = undefined;
 
 /**
- * Same Additional details which you sent in the request
+ * همان جزئیات اضافی که در درخواست ارسال کردید
  * @member {String} extra_details
  */
 PaymentTransaction.prototype['extra_details'] = undefined;
 
 /**
- * Same uuid when creating transaction
+ * همان uuid هنگام ایجاد تراکنش
  * @member {String} id
  */
 PaymentTransaction.prototype['id'] = undefined;

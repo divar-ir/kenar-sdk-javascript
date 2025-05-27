@@ -68,7 +68,7 @@ class MessageLocationData {
     }
 
 /**
-     * Returns The latitude in degrees. It must be in the range [-90.0, +90.0].
+     * Returns عرض جغرافیایی به درجه. باید در محدوده [-90.0, +90.0] باشد.
      * @return {Number}
      */
     getLatitude() {
@@ -76,14 +76,14 @@ class MessageLocationData {
     }
 
     /**
-     * Sets The latitude in degrees. It must be in the range [-90.0, +90.0].
-     * @param {Number} latitude The latitude in degrees. It must be in the range [-90.0, +90.0].
+     * Sets عرض جغرافیایی به درجه. باید در محدوده [-90.0, +90.0] باشد.
+     * @param {Number} latitude عرض جغرافیایی به درجه. باید در محدوده [-90.0, +90.0] باشد.
      */
     setLatitude(latitude) {
         this['latitude'] = latitude;
     }
 /**
-     * Returns The longitude in degrees. It must be in the range [-180.0, +180.0].
+     * Returns طول جغرافیایی به درجه. باید در محدوده [-180.0, +180.0] باشد.
      * @return {Number}
      */
     getLongitude() {
@@ -91,8 +91,8 @@ class MessageLocationData {
     }
 
     /**
-     * Sets The longitude in degrees. It must be in the range [-180.0, +180.0].
-     * @param {Number} longitude The longitude in degrees. It must be in the range [-180.0, +180.0].
+     * Sets طول جغرافیایی به درجه. باید در محدوده [-180.0, +180.0] باشد.
+     * @param {Number} longitude طول جغرافیایی به درجه. باید در محدوده [-180.0, +180.0] باشد.
      */
     setLongitude(longitude) {
         this['longitude'] = longitude;
@@ -103,13 +103,13 @@ class MessageLocationData {
 
 
 /**
- * The latitude in degrees. It must be in the range [-90.0, +90.0].
+ * عرض جغرافیایی به درجه. باید در محدوده [-90.0, +90.0] باشد.
  * @member {Number} latitude
  */
 MessageLocationData.prototype['latitude'] = undefined;
 
 /**
- * The longitude in degrees. It must be in the range [-180.0, +180.0].
+ * طول جغرافیایی به درجه. باید در محدوده [-180.0, +180.0] باشد.
  * @member {Number} longitude
  */
 MessageLocationData.prototype['longitude'] = undefined;

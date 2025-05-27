@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**available** | **Boolean** | Indicates if the post can be reordered. If false, the reorder API will return an error | [optional] 
-**costRials** | **String** | The cost of reordering in rials | [optional] 
+**available** | **Boolean** | نشان می‌دهد که آیا آگهی قابل نردبان است. اگر false باشد، API نردبان خطا برمی‌گرداند | [optional] 
+**costRials** | **String** | هزینه نردبان به ریال | [optional] 
 
 

@@ -38,8 +38,8 @@ export default class PostApi {
 
 
     /**
-     * Edit a post
-     * This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth scope. By now you can only edit title, description, and images of a post.
+     * ویرایش آگهی
+     * این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_EDIT.{post_token}` دارد. در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.
      * @param {String} postToken 
      * @param {module:model/PostEditPostBody} postEditPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -77,8 +77,8 @@ export default class PostApi {
     }
 
     /**
-     * Edit a post
-     * This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth scope. By now you can only edit title, description, and images of a post.
+     * ویرایش آگهی
+     * این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_EDIT.{post_token}` دارد. در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.
      * @param {String} postToken 
      * @param {module:model/PostEditPostBody} postEditPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -92,8 +92,8 @@ export default class PostApi {
 
 
     /**
-     * Get image upload URL
-     * This API allows you to get an upload URL for uploading images of a post. You can upload images to the returned URL using a POST request with binary encoding.
+     * دریافت URL آپلود تصویر
+     * این API به شما امکان دریافت URL آپلود برای آپلود تصاویر آگهی را می‌دهد. می‌توانید تصاویر را با استفاده از درخواست POST با کدگذاری باینری به URL برگشتی آپلود کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostGetImageUploadURLResponse} and HTTP response
      */
     postGetImageUploadURLWithHttpInfo() {
@@ -120,8 +120,8 @@ export default class PostApi {
     }
 
     /**
-     * Get image upload URL
-     * This API allows you to get an upload URL for uploading images of a post. You can upload images to the returned URL using a POST request with binary encoding.
+     * دریافت URL آپلود تصویر
+     * این API به شما امکان دریافت URL آپلود برای آپلود تصاویر آگهی را می‌دهد. می‌توانید تصاویر را با استفاده از درخواست POST با کدگذاری باینری به URL برگشتی آپلود کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostGetImageUploadURLResponse}
      */
     postGetImageUploadURL() {

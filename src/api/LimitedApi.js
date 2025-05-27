@@ -17,6 +17,7 @@ import GooglerpcStatus from '../model/GooglerpcStatus';
 import PaymentGetBalanceResponse from '../model/PaymentGetBalanceResponse';
 import PaymentGetPostPricingResponse from '../model/PaymentGetPostPricingResponse';
 import PaymentGetTransactionResponse from '../model/PaymentGetTransactionResponse';
+import PaymentListTransactionsResponse from '../model/PaymentListTransactionsResponse';
 import PaymentReorderPostBody from '../model/PaymentReorderPostBody';
 import PaymentReorderPostResponse from '../model/PaymentReorderPostResponse';
 
@@ -41,7 +42,7 @@ export default class LimitedApi {
 
 
     /**
-     * Using this API you can retrieve current balance of your app.
+     * با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentGetBalanceResponse} and HTTP response
      */
     paymentGetBalanceWithHttpInfo() {
@@ -68,7 +69,7 @@ export default class LimitedApi {
     }
 
     /**
-     * Using this API you can retrieve current balance of your app.
+     * با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentGetBalanceResponse}
      */
     paymentGetBalance() {
@@ -80,9 +81,9 @@ export default class LimitedApi {
 
 
     /**
-     * Retrieve the cost of the service
-     * Using this API and with user permission, you can get the price of various services like Reorder.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post).
-     * @param {String} postToken An 8-9 character unique identifier for the post
+     * دریافت هزینه سرویس
+     * با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان را دریافت کنید. قیمت این API لزوماً با قیمت روی دیوار یکسان نیست و قیمت‌گذاری ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی) استفاده کنید.
+     * @param {String} postToken شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentGetPostPricingResponse} and HTTP response
      */
     paymentGetPostPricingWithHttpInfo(postToken) {
@@ -114,9 +115,9 @@ export default class LimitedApi {
     }
 
     /**
-     * Retrieve the cost of the service
-     * Using this API and with user permission, you can get the price of various services like Reorder.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post).
-     * @param {String} postToken An 8-9 character unique identifier for the post
+     * دریافت هزینه سرویس
+     * با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان را دریافت کنید. قیمت این API لزوماً با قیمت روی دیوار یکسان نیست و قیمت‌گذاری ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی) استفاده کنید.
+     * @param {String} postToken شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentGetPostPricingResponse}
      */
     paymentGetPostPricing(postToken) {
@@ -128,8 +129,8 @@ export default class LimitedApi {
 
 
     /**
-     * Using this API you can retrieve transaction details.
-     * @param {String} id The unique identifier for the transaction, same as the id in the request
+     * با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
+     * @param {String} id شناسه منحصر به فرد برای تراکنش، همان id در درخواست
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentGetTransactionResponse} and HTTP response
      */
     paymentGetTransactionWithHttpInfo(id) {
@@ -161,8 +162,8 @@ export default class LimitedApi {
     }
 
     /**
-     * Using this API you can retrieve transaction details.
-     * @param {String} id The unique identifier for the transaction, same as the id in the request
+     * با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
+     * @param {String} id شناسه منحصر به فرد برای تراکنش، همان id در درخواست
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentGetTransactionResponse}
      */
     paymentGetTransaction(id) {
@@ -174,7 +175,55 @@ export default class LimitedApi {
 
 
     /**
-     * Use GetPostPricing API to get the cost of the service before calling this API.
+     * Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+     * @param {Object} opts Optional parameters
+     * @param {Number} [pageSize] Number of transactions to return per page
+     * @param {String} [pageToken] Token for the next page of results
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentListTransactionsResponse} and HTTP response
+     */
+    paymentListTransactionsWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'page_size': opts['pageSize'],
+        'page_token': opts['pageToken']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = PaymentListTransactionsResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/transactions', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.pageSize Number of transactions to return per page
+     * @param {String} opts.pageToken Token for the next page of results
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentListTransactionsResponse}
+     */
+    paymentListTransactions(opts) {
+      return this.paymentListTransactionsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
      * @param {String} postToken 
      * @param {module:model/PaymentReorderPostBody} paymentReorderPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentReorderPostResponse} and HTTP response
@@ -212,7 +261,7 @@ export default class LimitedApi {
     }
 
     /**
-     * Use GetPostPricing API to get the cost of the service before calling this API.
+     * قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
      * @param {String} postToken 
      * @param {module:model/PaymentReorderPostBody} paymentReorderPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentReorderPostResponse}

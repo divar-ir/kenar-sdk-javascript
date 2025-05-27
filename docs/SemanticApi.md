@@ -4,11 +4,11 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**semanticCreatePostSemantic**](SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | Create Post Semantic
-[**semanticCreateUserSemantic**](SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | Create User Semantic
-[**semanticCreateUserSemantic2**](SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | Create User Semantic
-[**semanticDeleteUserSemantic**](SemanticApi.md#semanticDeleteUserSemantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | Delete User Semantic
-[**semanticDeleteUserSemantic2**](SemanticApi.md#semanticDeleteUserSemantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | Delete User Semantic
+[**semanticCreatePostSemantic**](SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
+[**semanticCreateUserSemantic**](SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
+[**semanticCreateUserSemantic2**](SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
+[**semanticDeleteUserSemantic**](SemanticApi.md#semanticDeleteUserSemantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | حذف اطلاعات معنایی کاربر
+[**semanticDeleteUserSemantic2**](SemanticApi.md#semanticDeleteUserSemantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | حذف اطلاعات معنایی کاربر
 
 
 
@@ -16,9 +16,9 @@ Method | HTTP request | Description
 
 > Object semanticCreatePostSemantic(token, semanticCreatePostSemanticBody)
 
-Create Post Semantic
+ایجاد اطلاعات معنایی آگهی
 
-In some cases, it is necessary to store information about the post in Divar without adding an addon. This API expects access token having &#x60;POST_SEMANTIC_CREATE&#x60; scope. 
+در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه &#x60;POST_SEMANTIC_CREATE&#x60; را انتظار دارد. 
 
 ### Example
 
@@ -68,9 +68,9 @@ Name | Type | Description  | Notes
 
 > SemanticCreateUserSemanticResponse semanticCreateUserSemantic(phone, semanticCreateUserSemanticBody)
 
-Create User Semantic
+ایجاد اطلاعات معنایی کاربر
 
-In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having &#x60;USER_VERIFICATION_CREATE&#x60; scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه &#x60;USER_VERIFICATION_CREATE&#x60; را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
 ### Example
 
@@ -120,9 +120,9 @@ Name | Type | Description  | Notes
 
 > SemanticCreateUserSemanticResponse semanticCreateUserSemantic2(divarUserId, semanticCreateUserSemanticBody)
 
-Create User Semantic
+ایجاد اطلاعات معنایی کاربر
 
-In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having &#x60;USER_VERIFICATION_CREATE&#x60; scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه &#x60;USER_VERIFICATION_CREATE&#x60; را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
 ### Example
 
@@ -172,9 +172,9 @@ Name | Type | Description  | Notes
 
 > Object semanticDeleteUserSemantic(phone, opts)
 
-Delete User Semantic
+حذف اطلاعات معنایی کاربر
 
-You can delete the semantic information of a user by calling this API.
+می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
 ### Example
 
@@ -226,9 +226,9 @@ Name | Type | Description  | Notes
 
 > Object semanticDeleteUserSemantic2(divarUserId, opts)
 
-Delete User Semantic
+حذف اطلاعات معنایی کاربر
 
-You can delete the semantic information of a user by calling this API.
+می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
 ### Example
 

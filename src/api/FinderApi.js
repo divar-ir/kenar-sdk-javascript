@@ -41,7 +41,7 @@ export default class FinderApi {
 
 
     /**
-     * Get a Divar post
+     * دریافت آگهی دیوار
      * This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetPostResponse} and HTTP response
@@ -75,7 +75,7 @@ export default class FinderApi {
     }
 
     /**
-     * Get a Divar post
+     * دریافت آگهی دیوار
      * This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetPostResponse}
@@ -89,8 +89,8 @@ export default class FinderApi {
 
 
     /**
-     * Get user information
-     * After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+     * دریافت اطلاعات کاربر
+     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderUser} and HTTP response
      */
@@ -122,8 +122,8 @@ export default class FinderApi {
     }
 
     /**
-     * Get user information
-     * After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+     * دریافت اطلاعات کاربر
+     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderUser}
      */
@@ -136,8 +136,8 @@ export default class FinderApi {
 
 
     /**
-     * Get user information
-     * After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+     * دریافت اطلاعات کاربر
+     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderUser} and HTTP response
      */
     finderGetUser2WithHttpInfo() {
@@ -164,8 +164,8 @@ export default class FinderApi {
     }
 
     /**
-     * Get user information
-     * After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+     * دریافت اطلاعات کاربر
+     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderUser}
      */
     finderGetUser2() {
@@ -177,8 +177,8 @@ export default class FinderApi {
 
 
     /**
-     * Get user posts
-     * This API allows you to get all posts of a user. You can use this API to show user posts in your service.
+     * دریافت آگهی‌های کاربر
+     * این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetUserPostsResponse} and HTTP response
      */
     finderGetUserPostsWithHttpInfo() {
@@ -205,8 +205,8 @@ export default class FinderApi {
     }
 
     /**
-     * Get user posts
-     * This API allows you to get all posts of a user. You can use this API to show user posts in your service.
+     * دریافت آگهی‌های کاربر
+     * این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetUserPostsResponse}
      */
     finderGetUserPosts() {
@@ -218,8 +218,8 @@ export default class FinderApi {
 
 
     /**
-     * Search Divar posts with some filters
-     * This API allows you to search Divar posts with some filters. You can search posts by category, city, district, and some other filters. Posts will be sorted by their timestamp. 
+     * جستجو آگهی‌های دیوار با فیلترهایی
+     * این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
      * @param {module:model/FinderSearchPostsV2Request} finderSearchPostsV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderSearchPostV2Response} and HTTP response
      */
@@ -251,8 +251,8 @@ export default class FinderApi {
     }
 
     /**
-     * Search Divar posts with some filters
-     * This API allows you to search Divar posts with some filters. You can search posts by category, city, district, and some other filters. Posts will be sorted by their timestamp. 
+     * جستجو آگهی‌های دیوار با فیلترهایی
+     * این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
      * @param {module:model/FinderSearchPostsV2Request} finderSearchPostsV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderSearchPostV2Response}
      */

@@ -128,6 +128,7 @@ import OAuthScopeScope from './model/OAuthScopeScope';
 import PaymentGetBalanceResponse from './model/PaymentGetBalanceResponse';
 import PaymentGetPostPricingResponse from './model/PaymentGetPostPricingResponse';
 import PaymentGetTransactionResponse from './model/PaymentGetTransactionResponse';
+import PaymentListTransactionsResponse from './model/PaymentListTransactionsResponse';
 import PaymentReorderPostBody from './model/PaymentReorderPostBody';
 import PaymentReorderPostResponse from './model/PaymentReorderPostResponse';
 import PaymentTicketGenerateResponse from './model/PaymentTicketGenerateResponse';
@@ -146,6 +147,8 @@ import SearchPostItemVehiclesFields from './model/SearchPostItemVehiclesFields';
 import SemanticCreatePostSemanticBody from './model/SemanticCreatePostSemanticBody';
 import SemanticCreateUserSemanticBody from './model/SemanticCreateUserSemanticBody';
 import SemanticCreateUserSemanticResponse from './model/SemanticCreateUserSemanticResponse';
+import SemanticPostSemanticDeleted from './model/SemanticPostSemanticDeleted';
+import SemanticUserSemanticDeleted from './model/SemanticUserSemanticDeleted';
 import AddonsApi from './api/AddonsApi';
 import AssetsApi from './api/AssetsApi';
 import ChatAPIApi from './api/ChatAPIApi';
@@ -886,6 +889,12 @@ export {
     PaymentGetTransactionResponse,
 
     /**
+     * The PaymentListTransactionsResponse model constructor.
+     * @property {module:model/PaymentListTransactionsResponse}
+     */
+    PaymentListTransactionsResponse,
+
+    /**
      * The PaymentReorderPostBody model constructor.
      * @property {module:model/PaymentReorderPostBody}
      */
@@ -992,6 +1001,18 @@ export {
      * @property {module:model/SemanticCreateUserSemanticResponse}
      */
     SemanticCreateUserSemanticResponse,
+
+    /**
+     * The SemanticPostSemanticDeleted model constructor.
+     * @property {module:model/SemanticPostSemanticDeleted}
+     */
+    SemanticPostSemanticDeleted,
+
+    /**
+     * The SemanticUserSemanticDeleted model constructor.
+     * @property {module:model/SemanticUserSemanticDeleted}
+     */
+    SemanticUserSemanticDeleted,
 
     /**
     * The AddonsApi service constructor.

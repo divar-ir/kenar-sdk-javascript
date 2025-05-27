@@ -4,11 +4,11 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**finderGetPost**](FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | Get a Divar post
-[**finderGetUser**](FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | Get user information
-[**finderGetUser2**](FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | Get user information
-[**finderGetUserPosts**](FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | Get user posts
-[**finderSearchPostV2**](FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | Search Divar posts with some filters
+[**finderGetPost**](FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
+[**finderGetUser**](FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
+[**finderGetUser2**](FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
+[**finderGetUserPosts**](FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
+[**finderSearchPostV2**](FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
 
 
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 > FinderGetPostResponse finderGetPost(token)
 
-Get a Divar post
+دریافت آگهی دیوار
 
 This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
 
@@ -66,9 +66,9 @@ Name | Type | Description  | Notes
 
 > FinderUser finderGetUser(body)
 
-Get user information
+دریافت اطلاعات کاربر
 
-After gaining an access token, you can use this API to get user information. With scope &#x60;USER_PHONE&#x60; you can get user phone number. With scope &#x60;USER_ID&#x60; you can get user id and you can rely on uniqueness of this id. 
+پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope &#x60;USER_PHONE&#x60; می‌توانید شماره تلفن کاربر را دریافت کنید. با scope &#x60;USER_ID&#x60; می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
 ### Example
 
@@ -116,9 +116,9 @@ Name | Type | Description  | Notes
 
 > FinderUser finderGetUser2()
 
-Get user information
+دریافت اطلاعات کاربر
 
-After gaining an access token, you can use this API to get user information. With scope &#x60;USER_PHONE&#x60; you can get user phone number. With scope &#x60;USER_ID&#x60; you can get user id and you can rely on uniqueness of this id. 
+پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope &#x60;USER_PHONE&#x60; می‌توانید شماره تلفن کاربر را دریافت کنید. با scope &#x60;USER_ID&#x60; می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
 ### Example
 
@@ -162,9 +162,9 @@ This endpoint does not need any parameter.
 
 > FinderGetUserPostsResponse finderGetUserPosts()
 
-Get user posts
+دریافت آگهی‌های کاربر
 
-This API allows you to get all posts of a user. You can use this API to show user posts in your service.
+این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
 
 ### Example
 
@@ -208,9 +208,9 @@ This endpoint does not need any parameter.
 
 > FinderSearchPostV2Response finderSearchPostV2(finderSearchPostsV2Request)
 
-Search Divar posts with some filters
+جستجو آگهی‌های دیوار با فیلترهایی
 
-This API allows you to search Divar posts with some filters. You can search posts by category, city, district, and some other filters. Posts will be sorted by their timestamp. 
+این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
 
 ### Example
 

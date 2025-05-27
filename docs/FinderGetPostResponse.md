@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **district** | **String** |  | [optional] 
 **firstPublishedAt** | **Date** |  | [optional] 
 **state** | [**FinderPostExtState**](FinderPostExtState.md) |  | [optional] 
+**supplierChatAssistantEnabled** | **Boolean** |  | [optional] 
 **token** | **String** |  | [optional] 
 
 

@@ -40,8 +40,8 @@ export default class AddonsApi {
 
 
     /**
-     * Attach a new Addon to a post
-     * Using this API and with user permission, you can attach a new AD to a post. You can use available widgets to design your Addon. This API need access token having one of the following scopes: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
+     * افزودن افزونه جدید به آگهی
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
      * @param {String} token 
      * @param {module:model/AddonsCreatePostAddonV2Body} addonsCreatePostAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -79,8 +79,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Attach a new Addon to a post
-     * Using this API and with user permission, you can attach a new AD to a post. You can use available widgets to design your Addon. This API need access token having one of the following scopes: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
+     * افزودن افزونه جدید به آگهی
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
      * @param {String} token 
      * @param {module:model/AddonsCreatePostAddonV2Body} addonsCreatePostAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -94,8 +94,8 @@ export default class AddonsApi {
 
 
     /**
-     * Attach a new Addon to a user
-     * Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+     * افزودن افزونه جدید به کاربر
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
      * @param {String} phone 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsCreateUserAddonResponseV2} and HTTP response
@@ -133,8 +133,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Attach a new Addon to a user
-     * Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+     * افزودن افزونه جدید به کاربر
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
      * @param {String} phone 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsCreateUserAddonResponseV2}
@@ -148,8 +148,8 @@ export default class AddonsApi {
 
 
     /**
-     * Attach a new Addon to a user
-     * Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+     * افزودن افزونه جدید به کاربر
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
      * @param {String} divarUserId 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsCreateUserAddonResponseV2} and HTTP response
@@ -187,8 +187,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Attach a new Addon to a user
-     * Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+     * افزودن افزونه جدید به کاربر
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
      * @param {String} divarUserId 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsCreateUserAddonResponseV2}
@@ -202,8 +202,8 @@ export default class AddonsApi {
 
 
     /**
-     * Delete an Addon from a post
-     * You can only delete addons which are created by your app.
+     * حذف افزونه از آگهی
+     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -236,8 +236,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Delete an Addon from a post
-     * You can only delete addons which are created by your app.
+     * حذف افزونه از آگهی
+     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -250,8 +250,8 @@ export default class AddonsApi {
 
 
     /**
-     * Delete an Addon from a post
-     * You can only delete addons which are created by your app.
+     * حذف افزونه از آگهی
+     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -284,8 +284,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Delete an Addon from a post
-     * You can only delete addons which are created by your app.
+     * حذف افزونه از آگهی
+     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -298,8 +298,8 @@ export default class AddonsApi {
 
 
     /**
-     * Delete an UserAddon
-     * This will delete all correlated Addons to all user posts. You can only delete Addons which are created by your app.
+     * حذف افزونه کاربر
+     * این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -332,8 +332,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Delete an UserAddon
-     * This will delete all correlated Addons to all user posts. You can only delete Addons which are created by your app.
+     * حذف افزونه کاربر
+     * این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -346,8 +346,8 @@ export default class AddonsApi {
 
 
     /**
-     * Retrieve all UserAddons
-     * Retrieve all UserAddons of a user.
+     * دریافت تمام افزونه‌های کاربر
+     * دریافت تمام افزونه‌های کاربر یک کاربر.
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {String} [divarUserId] 
@@ -384,8 +384,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Retrieve all UserAddons
-     * Retrieve all UserAddons of a user.
+     * دریافت تمام افزونه‌های کاربر
+     * دریافت تمام افزونه‌های کاربر یک کاربر.
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {String} opts.divarUserId 
@@ -400,8 +400,8 @@ export default class AddonsApi {
 
 
     /**
-     * Retrieve all UserAddons
-     * Retrieve all UserAddons of a user.
+     * دریافت تمام افزونه‌های کاربر
+     * دریافت تمام افزونه‌های کاربر یک کاربر.
      * @param {String} divarUserId 
      * @param {Object} opts Optional parameters
      * @param {String} [phone] 
@@ -438,8 +438,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Retrieve all UserAddons
-     * Retrieve all UserAddons of a user.
+     * دریافت تمام افزونه‌های کاربر
+     * دریافت تمام افزونه‌های کاربر یک کاربر.
      * @param {String} divarUserId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.phone 

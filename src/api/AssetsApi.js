@@ -47,8 +47,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get available body-status options in Divar vehicle categories
-     * Get all available body-status options in Divar vehicle categories.This provides persian translations for each body-status options which used in posts.
+     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+     * دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetBodyStatusesResponse} and HTTP response
      */
     assetsGetBodyStatusesWithHttpInfo() {
@@ -75,8 +75,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get available body-status options in Divar vehicle categories
-     * Get all available body-status options in Divar vehicle categories.This provides persian translations for each body-status options which used in posts.
+     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+     * دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetBodyStatusesResponse}
      */
     assetsGetBodyStatuses() {
@@ -88,8 +88,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get brand models in a Divar category
-     * Get all Divar brand models in specified category.This provides persian translations for each brand models which used in posts.
+     * دریافت مدل‌های برند در دسته‌بندی دیوار
+     * دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetBrandModelsResponse} and HTTP response
      */
@@ -122,8 +122,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get brand models in a Divar category
-     * Get all Divar brand models in specified category.This provides persian translations for each brand models which used in posts.
+     * دریافت مدل‌های برند در دسته‌بندی دیوار
+     * دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetBrandModelsResponse}
      */
@@ -136,8 +136,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get Divar categories
-     * Get all Divar categories. This provides persian translations for each category which used in posts.
+     * دریافت دسته‌بندی‌های دیوار
+     * دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetCategoriesResponse} and HTTP response
      */
     assetsGetCategoriesWithHttpInfo() {
@@ -164,8 +164,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get Divar categories
-     * Get all Divar categories. This provides persian translations for each category which used in posts.
+     * دریافت دسته‌بندی‌های دیوار
+     * دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetCategoriesResponse}
      */
     assetsGetCategories() {
@@ -177,8 +177,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get Divar cities
-     * Get all Divar cities. This provides persian translations for each city which used in posts.
+     * دریافت شهرهای دیوار
+     * دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetCitiesResponse} and HTTP response
      */
     assetsGetCitiesWithHttpInfo() {
@@ -205,8 +205,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get Divar cities
-     * Get all Divar cities. This provides persian translations for each city which used in posts.
+     * دریافت شهرهای دیوار
+     * دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetCitiesResponse}
      */
     assetsGetCities() {
@@ -218,8 +218,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get colors in a Divar category
-     * Get all Divar colors in specified category.This provides persian translations for each color which used in posts.
+     * دریافت رنگ‌ها در دسته‌بندی دیوار
+     * دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetColorsResponse} and HTTP response
      */
@@ -252,8 +252,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get colors in a Divar category
-     * Get all Divar colors in specified category.This provides persian translations for each color which used in posts.
+     * دریافت رنگ‌ها در دسته‌بندی دیوار
+     * دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetColorsResponse}
      */
@@ -266,8 +266,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get Divar districts
-     * Get all Divar districts. This provides persian translations for each district which used in posts.
+     * دریافت مناطق دیوار
+     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {Object} opts Optional parameters
      * @param {String} [citySlug] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetDistrictsResponse} and HTTP response
@@ -298,8 +298,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get Divar districts
-     * Get all Divar districts. This provides persian translations for each district which used in posts.
+     * دریافت مناطق دیوار
+     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {Object} opts Optional parameters
      * @param {String} opts.citySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetDistrictsResponse}
@@ -313,8 +313,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get Divar districts
-     * Get all Divar districts. This provides persian translations for each district which used in posts.
+     * دریافت مناطق دیوار
+     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {String} citySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetDistrictsResponse} and HTTP response
      */
@@ -347,8 +347,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get Divar districts
-     * Get all Divar districts. This provides persian translations for each district which used in posts.
+     * دریافت مناطق دیوار
+     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @param {String} citySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetDistrictsResponse}
      */
@@ -361,8 +361,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get available internal-storage options in Divar mobile/tablet/laptop categories
-     * Get all available internal-storage options in Divar mobile categories.This provides persian translations for each internal-storage options which used in posts.
+     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+     * دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetInternalStoragesResponse} and HTTP response
      */
     assetsGetInternalStoragesWithHttpInfo() {
@@ -389,8 +389,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get available internal-storage options in Divar mobile/tablet/laptop categories
-     * Get all available internal-storage options in Divar mobile categories.This provides persian translations for each internal-storage options which used in posts.
+     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+     * دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetInternalStoragesResponse}
      */
     assetsGetInternalStorages() {
@@ -402,8 +402,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get KenarDivar OAuth scopes
-     * These are available scopes for KenarDivar OAuth2.0. Use scopes in OAuth flow to request access to user data or perform actions on their behalf.
+     * دریافت دامنه‌های OAuth کنار دیوار
+     * اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetOAuthScopesResponse} and HTTP response
      */
     assetsGetOAuthScopesWithHttpInfo() {
@@ -430,8 +430,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get KenarDivar OAuth scopes
-     * These are available scopes for KenarDivar OAuth2.0. Use scopes in OAuth flow to request access to user data or perform actions on their behalf.
+     * دریافت دامنه‌های OAuth کنار دیوار
+     * اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetOAuthScopesResponse}
      */
     assetsGetOAuthScopes() {
@@ -443,8 +443,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get KenarDivar permissions
-     * These permission are used to control access in KenarDivar Apps. Don't mistake them with OAuth scopes. It's expected that apps be blind about these permissions.These are created for internal usages only, but feel free to request to be enabled for you app as needed.
+     * دریافت مجوزهای کنار دیوار
+     * این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetPermissionsResponse} and HTTP response
      */
     assetsGetPermissionsWithHttpInfo() {
@@ -471,8 +471,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get KenarDivar permissions
-     * These permission are used to control access in KenarDivar Apps. Don't mistake them with OAuth scopes. It's expected that apps be blind about these permissions.These are created for internal usages only, but feel free to request to be enabled for you app as needed.
+     * دریافت مجوزهای کنار دیوار
+     * این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetPermissionsResponse}
      */
     assetsGetPermissions() {
@@ -484,8 +484,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get available ram-memory options in Divar mobile/tablet/laptop categories
-     * Get all available ram-memory options in Divar mobile/tablet/laptop categories.This provides persian translations for each ram-memory options which used in posts.
+     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+     * دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetRamMemoriesResponse} and HTTP response
      */
     assetsGetRamMemoriesWithHttpInfo() {
@@ -512,8 +512,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get available ram-memory options in Divar mobile/tablet/laptop categories
-     * Get all available ram-memory options in Divar mobile/tablet/laptop categories.This provides persian translations for each ram-memory options which used in posts.
+     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+     * دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetRamMemoriesResponse}
      */
     assetsGetRamMemories() {
@@ -525,8 +525,8 @@ export default class AssetsApi {
 
 
     /**
-     * Get available service types in KenarDivar
-     * These service types is used to group similar services in KenarDivar. Any new idea with new service types are welcome. Feel free to request them as needed.
+     * دریافت انواع سرویس موجود در کنار دیوار
+     * این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetServiceTypesResponse} and HTTP response
      */
     assetsGetServiceTypesWithHttpInfo() {
@@ -553,8 +553,8 @@ export default class AssetsApi {
     }
 
     /**
-     * Get available service types in KenarDivar
-     * These service types is used to group similar services in KenarDivar. Any new idea with new service types are welcome. Feel free to request them as needed.
+     * دریافت انواع سرویس موجود در کنار دیوار
+     * این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetServiceTypesResponse}
      */
     assetsGetServiceTypes() {

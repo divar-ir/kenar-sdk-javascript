@@ -69,7 +69,7 @@ class PaymentGetBalanceResponse {
     }
 
 /**
-     * Returns The balance of the app in rials
+     * Returns موجودی اپلیکیشن به ریال
      * @return {String}
      */
     getBalanceRials() {
@@ -77,8 +77,8 @@ class PaymentGetBalanceResponse {
     }
 
     /**
-     * Sets The balance of the app in rials
-     * @param {String} balanceRials The balance of the app in rials
+     * Sets موجودی اپلیکیشن به ریال
+     * @param {String} balanceRials موجودی اپلیکیشن به ریال
      */
     setBalanceRials(balanceRials) {
         this['balance_rials'] = balanceRials;
@@ -89,7 +89,7 @@ class PaymentGetBalanceResponse {
 
 
 /**
- * The balance of the app in rials
+ * موجودی اپلیکیشن به ریال
  * @member {String} balance_rials
  */
 PaymentGetBalanceResponse.prototype['balance_rials'] = undefined;

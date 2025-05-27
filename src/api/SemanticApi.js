@@ -39,8 +39,8 @@ export default class SemanticApi {
 
 
     /**
-     * Create Post Semantic
-     * In some cases, it is necessary to store information about the post in Divar without adding an addon. This API expects access token having `POST_SEMANTIC_CREATE` scope. 
+     * ایجاد اطلاعات معنایی آگهی
+     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد. 
      * @param {String} token 
      * @param {module:model/SemanticCreatePostSemanticBody} semanticCreatePostSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -78,8 +78,8 @@ export default class SemanticApi {
     }
 
     /**
-     * Create Post Semantic
-     * In some cases, it is necessary to store information about the post in Divar without adding an addon. This API expects access token having `POST_SEMANTIC_CREATE` scope. 
+     * ایجاد اطلاعات معنایی آگهی
+     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد. 
      * @param {String} token 
      * @param {module:model/SemanticCreatePostSemanticBody} semanticCreatePostSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -93,8 +93,8 @@ export default class SemanticApi {
 
 
     /**
-     * Create User Semantic
-     * In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+     * ایجاد اطلاعات معنایی کاربر
+     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
      * @param {String} phone 
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SemanticCreateUserSemanticResponse} and HTTP response
@@ -132,8 +132,8 @@ export default class SemanticApi {
     }
 
     /**
-     * Create User Semantic
-     * In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+     * ایجاد اطلاعات معنایی کاربر
+     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
      * @param {String} phone 
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SemanticCreateUserSemanticResponse}
@@ -147,8 +147,8 @@ export default class SemanticApi {
 
 
     /**
-     * Create User Semantic
-     * In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+     * ایجاد اطلاعات معنایی کاربر
+     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
      * @param {String} divarUserId 
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SemanticCreateUserSemanticResponse} and HTTP response
@@ -186,8 +186,8 @@ export default class SemanticApi {
     }
 
     /**
-     * Create User Semantic
-     * In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+     * ایجاد اطلاعات معنایی کاربر
+     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
      * @param {String} divarUserId 
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SemanticCreateUserSemanticResponse}
@@ -201,8 +201,8 @@ export default class SemanticApi {
 
 
     /**
-     * Delete User Semantic
-     * You can delete the semantic information of a user by calling this API.
+     * حذف اطلاعات معنایی کاربر
+     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {String} [divarUserId] 
@@ -239,8 +239,8 @@ export default class SemanticApi {
     }
 
     /**
-     * Delete User Semantic
-     * You can delete the semantic information of a user by calling this API.
+     * حذف اطلاعات معنایی کاربر
+     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {String} opts.divarUserId 
@@ -255,8 +255,8 @@ export default class SemanticApi {
 
 
     /**
-     * Delete User Semantic
-     * You can delete the semantic information of a user by calling this API.
+     * حذف اطلاعات معنایی کاربر
+     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
      * @param {String} divarUserId 
      * @param {Object} opts Optional parameters
      * @param {String} [phone] 
@@ -293,8 +293,8 @@ export default class SemanticApi {
     }
 
     /**
-     * Delete User Semantic
-     * You can delete the semantic information of a user by calling this API.
+     * حذف اطلاعات معنایی کاربر
+     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
      * @param {String} divarUserId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.phone 

@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('paymentListTransactions', function() {
+      it('should call paymentListTransactions successfully', function(done) {
+        //uncomment below and update the code to test paymentListTransactions
+        //instance.paymentListTransactions(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('paymentReorderPost', function() {
       it('should call paymentReorderPost successfully', function(done) {
         //uncomment below and update the code to test paymentReorderPost

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**balanceRials** | **String** | The balance of the app in rials | [optional] 
+**balanceRials** | **String** | موجودی اپلیکیشن به ریال | [optional] 
 
 

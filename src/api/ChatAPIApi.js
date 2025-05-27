@@ -42,8 +42,8 @@ export default class ChatAPIApi {
 
 
     /**
-     * Send a message to a ChatBot conversation
-     * You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
      * @param {String} conversationId Unique identifier for the conversation
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -81,8 +81,8 @@ export default class ChatAPIApi {
     }
 
     /**
-     * Send a message to a ChatBot conversation
-     * You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
      * @param {String} conversationId Unique identifier for the conversation
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -96,8 +96,8 @@ export default class ChatAPIApi {
 
 
     /**
-     * Send a message to a ChatBot conversation
-     * You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
      * @param {String} userId Unique identifier for the user to start or continue a conversation with
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -135,8 +135,8 @@ export default class ChatAPIApi {
     }
 
     /**
-     * Send a message to a ChatBot conversation
-     * You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
      * @param {String} userId Unique identifier for the user to start or continue a conversation with
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -150,8 +150,8 @@ export default class ChatAPIApi {
 
 
     /**
-     * Send a message to a ChatBot conversation
-     * You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
      * @param {String} conversationId Unique identifier for the conversation
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -189,8 +189,8 @@ export default class ChatAPIApi {
     }
 
     /**
-     * Send a message to a ChatBot conversation
-     * You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
      * @param {String} conversationId Unique identifier for the conversation
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -204,8 +204,8 @@ export default class ChatAPIApi {
 
 
     /**
-     * Send a message to a conversation
-     * This API is used to send a message to a conversation. You need one of the following scopes to call this API: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
+     * ارسال پیام به مکالمه
+     * این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
      * @param {String} conversationId Unique identifier for the conversation
      * @param {module:model/ChatAPIConversationSendMessageBody} chatAPIConversationSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiConversationSendMessageResponse} and HTTP response
@@ -243,8 +243,8 @@ export default class ChatAPIApi {
     }
 
     /**
-     * Send a message to a conversation
-     * This API is used to send a message to a conversation. You need one of the following scopes to call this API: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
+     * ارسال پیام به مکالمه
+     * این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
      * @param {String} conversationId Unique identifier for the conversation
      * @param {module:model/ChatAPIConversationSendMessageBody} chatAPIConversationSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiConversationSendMessageResponse}
@@ -258,8 +258,8 @@ export default class ChatAPIApi {
 
 
     /**
-     * Generate an upload token
-     * This API is used to generate an upload token for uploading media files.
+     * تولید توکن آپلود
+     * این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiGenerateUploadTokenResponse} and HTTP response
      */
@@ -291,8 +291,8 @@ export default class ChatAPIApi {
     }
 
     /**
-     * Generate an upload token
-     * This API is used to generate an upload token for uploading media files.
+     * تولید توکن آپلود
+     * این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiGenerateUploadTokenResponse}
      */
@@ -305,8 +305,8 @@ export default class ChatAPIApi {
 
 
     /**
-     * Get Conversation by it's ID
-     * This API is used to get the conversation and messages of a conversation by it's ID.This API expects access token with `CHAT_CONVERSATION_READ` scope.
+     * دریافت مکالمه با شناسه آن
+     * این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.
      * @param {String} conversationId Unique identifier for the conversation
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiGetConversationResponse} and HTTP response
      */
@@ -339,8 +339,8 @@ export default class ChatAPIApi {
     }
 
     /**
-     * Get Conversation by it's ID
-     * This API is used to get the conversation and messages of a conversation by it's ID.This API expects access token with `CHAT_CONVERSATION_READ` scope.
+     * دریافت مکالمه با شناسه آن
+     * این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.
      * @param {String} conversationId Unique identifier for the conversation
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiGetConversationResponse}
      */

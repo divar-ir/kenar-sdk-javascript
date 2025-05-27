@@ -4,18 +4,18 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assetsGetBodyStatuses**](AssetsApi.md#assetsGetBodyStatuses) | **GET** /v1/open-platform/assets/body-status | Get available body-status options in Divar vehicle categories
-[**assetsGetBrandModels**](AssetsApi.md#assetsGetBrandModels) | **GET** /v1/open-platform/assets/brand-model/{category} | Get brand models in a Divar category
-[**assetsGetCategories**](AssetsApi.md#assetsGetCategories) | **GET** /v1/open-platform/assets/category | Get Divar categories
-[**assetsGetCities**](AssetsApi.md#assetsGetCities) | **GET** /v1/open-platform/assets/city | Get Divar cities
-[**assetsGetColors**](AssetsApi.md#assetsGetColors) | **GET** /v1/open-platform/assets/color/{category} | Get colors in a Divar category
-[**assetsGetDistricts**](AssetsApi.md#assetsGetDistricts) | **GET** /v1/open-platform/assets/district | Get Divar districts
-[**assetsGetDistricts2**](AssetsApi.md#assetsGetDistricts2) | **GET** /v1/open-platform/assets/district/{city_slug} | Get Divar districts
-[**assetsGetInternalStorages**](AssetsApi.md#assetsGetInternalStorages) | **GET** /v1/open-platform/assets/internal-storage | Get available internal-storage options in Divar mobile/tablet/laptop categories
-[**assetsGetOAuthScopes**](AssetsApi.md#assetsGetOAuthScopes) | **GET** /v1/open-platform/assets/oauth-scope | Get KenarDivar OAuth scopes
-[**assetsGetPermissions**](AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | Get KenarDivar permissions
-[**assetsGetRamMemories**](AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | Get available ram-memory options in Divar mobile/tablet/laptop categories
-[**assetsGetServiceTypes**](AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | Get available service types in KenarDivar
+[**assetsGetBodyStatuses**](AssetsApi.md#assetsGetBodyStatuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+[**assetsGetBrandModels**](AssetsApi.md#assetsGetBrandModels) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
+[**assetsGetCategories**](AssetsApi.md#assetsGetCategories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
+[**assetsGetCities**](AssetsApi.md#assetsGetCities) | **GET** /v1/open-platform/assets/city | دریافت شهرهای دیوار
+[**assetsGetColors**](AssetsApi.md#assetsGetColors) | **GET** /v1/open-platform/assets/color/{category} | دریافت رنگ‌ها در دسته‌بندی دیوار
+[**assetsGetDistricts**](AssetsApi.md#assetsGetDistricts) | **GET** /v1/open-platform/assets/district | دریافت مناطق دیوار
+[**assetsGetDistricts2**](AssetsApi.md#assetsGetDistricts2) | **GET** /v1/open-platform/assets/district/{city_slug} | دریافت مناطق دیوار
+[**assetsGetInternalStorages**](AssetsApi.md#assetsGetInternalStorages) | **GET** /v1/open-platform/assets/internal-storage | دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+[**assetsGetOAuthScopes**](AssetsApi.md#assetsGetOAuthScopes) | **GET** /v1/open-platform/assets/oauth-scope | دریافت دامنه‌های OAuth کنار دیوار
+[**assetsGetPermissions**](AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
+[**assetsGetRamMemories**](AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+[**assetsGetServiceTypes**](AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
 
 
 
@@ -23,9 +23,9 @@ Method | HTTP request | Description
 
 > AssetsGetBodyStatusesResponse assetsGetBodyStatuses()
 
-Get available body-status options in Divar vehicle categories
+دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
 
-Get all available body-status options in Divar vehicle categories.This provides persian translations for each body-status options which used in posts.
+دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -69,9 +69,9 @@ This endpoint does not need any parameter.
 
 > AssetsGetBrandModelsResponse assetsGetBrandModels(category)
 
-Get brand models in a Divar category
+دریافت مدل‌های برند در دسته‌بندی دیوار
 
-Get all Divar brand models in specified category.This provides persian translations for each brand models which used in posts.
+دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -119,9 +119,9 @@ Name | Type | Description  | Notes
 
 > AssetsGetCategoriesResponse assetsGetCategories()
 
-Get Divar categories
+دریافت دسته‌بندی‌های دیوار
 
-Get all Divar categories. This provides persian translations for each category which used in posts.
+دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -165,9 +165,9 @@ This endpoint does not need any parameter.
 
 > AssetsGetCitiesResponse assetsGetCities()
 
-Get Divar cities
+دریافت شهرهای دیوار
 
-Get all Divar cities. This provides persian translations for each city which used in posts.
+دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -211,9 +211,9 @@ This endpoint does not need any parameter.
 
 > AssetsGetColorsResponse assetsGetColors(category)
 
-Get colors in a Divar category
+دریافت رنگ‌ها در دسته‌بندی دیوار
 
-Get all Divar colors in specified category.This provides persian translations for each color which used in posts.
+دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -261,9 +261,9 @@ Name | Type | Description  | Notes
 
 > AssetsGetDistrictsResponse assetsGetDistricts(opts)
 
-Get Divar districts
+دریافت مناطق دیوار
 
-Get all Divar districts. This provides persian translations for each district which used in posts.
+دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -313,9 +313,9 @@ Name | Type | Description  | Notes
 
 > AssetsGetDistrictsResponse assetsGetDistricts2(citySlug)
 
-Get Divar districts
+دریافت مناطق دیوار
 
-Get all Divar districts. This provides persian translations for each district which used in posts.
+دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -363,9 +363,9 @@ Name | Type | Description  | Notes
 
 > AssetsGetInternalStoragesResponse assetsGetInternalStorages()
 
-Get available internal-storage options in Divar mobile/tablet/laptop categories
+دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-Get all available internal-storage options in Divar mobile categories.This provides persian translations for each internal-storage options which used in posts.
+دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -409,9 +409,9 @@ This endpoint does not need any parameter.
 
 > AssetsGetOAuthScopesResponse assetsGetOAuthScopes()
 
-Get KenarDivar OAuth scopes
+دریافت دامنه‌های OAuth کنار دیوار
 
-These are available scopes for KenarDivar OAuth2.0. Use scopes in OAuth flow to request access to user data or perform actions on their behalf.
+اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
 
 ### Example
 
@@ -455,9 +455,9 @@ This endpoint does not need any parameter.
 
 > AssetsGetPermissionsResponse assetsGetPermissions()
 
-Get KenarDivar permissions
+دریافت مجوزهای کنار دیوار
 
-These permission are used to control access in KenarDivar Apps. Don&#39;t mistake them with OAuth scopes. It&#39;s expected that apps be blind about these permissions.These are created for internal usages only, but feel free to request to be enabled for you app as needed.
+این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
 
 ### Example
 
@@ -501,9 +501,9 @@ This endpoint does not need any parameter.
 
 > AssetsGetRamMemoriesResponse assetsGetRamMemories()
 
-Get available ram-memory options in Divar mobile/tablet/laptop categories
+دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-Get all available ram-memory options in Divar mobile/tablet/laptop categories.This provides persian translations for each ram-memory options which used in posts.
+دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -547,9 +547,9 @@ This endpoint does not need any parameter.
 
 > AssetsGetServiceTypesResponse assetsGetServiceTypes()
 
-Get available service types in KenarDivar
+دریافت انواع سرویس موجود در کنار دیوار
 
-These service types is used to group similar services in KenarDivar. Any new idea with new service types are welcome. Feel free to request them as needed.
+این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
 
 ### Example
 
