@@ -113,6 +113,8 @@ import FinderSearchQueryNumberRange from './model/FinderSearchQueryNumberRange';
 import FinderUser from './model/FinderUser';
 import GetPostPricingResponseReorder from './model/GetPostPricingResponseReorder';
 import GetPostResponseBusinessData from './model/GetPostResponseBusinessData';
+import GetPostStatsResponseDailyStats from './model/GetPostStatsResponseDailyStats';
+import GetPostStatsResponsePostStats from './model/GetPostStatsResponsePostStats';
 import GetServiceTypesResponseServiceTypeData from './model/GetServiceTypesResponseServiceTypeData';
 import GooglerpcStatus from './model/GooglerpcStatus';
 import ImageCarouselRowImageItem from './model/ImageCarouselRowImageItem';
@@ -139,6 +141,7 @@ import PaymentTransactionState from './model/PaymentTransactionState';
 import PaymentTransactionType from './model/PaymentTransactionType';
 import PostEditPostBody from './model/PostEditPostBody';
 import PostGetImageUploadURLResponse from './model/PostGetImageUploadURLResponse';
+import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
 import PremiumPanelBusinessDataSubBusinessType from './model/PremiumPanelBusinessDataSubBusinessType';
 import ProtobufAny from './model/ProtobufAny';
 import SearchPostItemPrice from './model/SearchPostItemPrice';
@@ -799,6 +802,18 @@ export {
     GetPostResponseBusinessData,
 
     /**
+     * The GetPostStatsResponseDailyStats model constructor.
+     * @property {module:model/GetPostStatsResponseDailyStats}
+     */
+    GetPostStatsResponseDailyStats,
+
+    /**
+     * The GetPostStatsResponsePostStats model constructor.
+     * @property {module:model/GetPostStatsResponsePostStats}
+     */
+    GetPostStatsResponsePostStats,
+
+    /**
      * The GetServiceTypesResponseServiceTypeData model constructor.
      * @property {module:model/GetServiceTypesResponseServiceTypeData}
      */
@@ -953,6 +968,12 @@ export {
      * @property {module:model/PostGetImageUploadURLResponse}
      */
     PostGetImageUploadURLResponse,
+
+    /**
+     * The PostGetPostStatsResponse model constructor.
+     * @property {module:model/PostGetPostStatsResponse}
+     */
+    PostGetPostStatsResponse,
 
     /**
      * The PremiumPanelBusinessDataSubBusinessType model constructor.

@@ -69,6 +69,13 @@ export default class OAuthScopeScope {
 
     
         /**
+         * value: "USER_POSTS_STATS_READ"
+         * @const
+         */
+        "USER_POSTS_STATS_READ" = "USER_POSTS_STATS_READ";
+
+    
+        /**
          * value: "CHAT_POST_CONVERSATIONS_READ"
          * @const
          */

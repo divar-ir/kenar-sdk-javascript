@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import GooglerpcStatus from '../model/GooglerpcStatus';
 import PostEditPostBody from '../model/PostEditPostBody';
 import PostGetImageUploadURLResponse from '../model/PostGetImageUploadURLResponse';
+import PostGetPostStatsResponse from '../model/PostGetPostStatsResponse';
 
 /**
 * Post service.
@@ -126,6 +127,54 @@ export default class PostApi {
      */
     postGetImageUploadURL() {
       return this.postGetImageUploadURLWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get post statistics
+     * This API allows you to retrieve the statistics associated with a single post (e.g. views).
+     * @param {String} postToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostGetPostStatsResponse} and HTTP response
+     */
+    postGetPostStatsWithHttpInfo(postToken) {
+      let postBody = null;
+      // verify the required parameter 'postToken' is set
+      if (postToken === undefined || postToken === null) {
+        throw new Error("Missing the required parameter 'postToken' when calling postGetPostStats");
+      }
+
+      let pathParams = {
+        'post_token': postToken
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = PostGetPostStatsResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/posts/{post_token}/stats', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get post statistics
+     * This API allows you to retrieve the statistics associated with a single post (e.g. views).
+     * @param {String} postToken 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostGetPostStatsResponse}
+     */
+    postGetPostStats(postToken) {
+      return this.postGetPostStatsWithHttpInfo(postToken)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new KenarApiClient.PaymentTransaction();
+      //expect(instance).to.be();
+    });
+
     it('should have the property extraDetails (base name: "extra_details")', function() {
       // uncomment below and update the code to test the property extraDetails
       //var instance = new KenarApiClient.PaymentTransaction();

@@ -166,6 +166,7 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
+*KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
 *KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic2**](docs/SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
@@ -275,6 +276,8 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.FinderUser](docs/FinderUser.md)
  - [KenarApiClient.GetPostPricingResponseReorder](docs/GetPostPricingResponseReorder.md)
  - [KenarApiClient.GetPostResponseBusinessData](docs/GetPostResponseBusinessData.md)
+ - [KenarApiClient.GetPostStatsResponseDailyStats](docs/GetPostStatsResponseDailyStats.md)
+ - [KenarApiClient.GetPostStatsResponsePostStats](docs/GetPostStatsResponsePostStats.md)
  - [KenarApiClient.GetServiceTypesResponseServiceTypeData](docs/GetServiceTypesResponseServiceTypeData.md)
  - [KenarApiClient.GooglerpcStatus](docs/GooglerpcStatus.md)
  - [KenarApiClient.ImageCarouselRowImageItem](docs/ImageCarouselRowImageItem.md)
@@ -301,6 +304,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PaymentTransactionType](docs/PaymentTransactionType.md)
  - [KenarApiClient.PostEditPostBody](docs/PostEditPostBody.md)
  - [KenarApiClient.PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
+ - [KenarApiClient.PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
  - [KenarApiClient.PremiumPanelBusinessDataSubBusinessType](docs/PremiumPanelBusinessDataSubBusinessType.md)
  - [KenarApiClient.ProtobufAny](docs/ProtobufAny.md)
  - [KenarApiClient.SearchPostItemPrice](docs/SearchPostItemPrice.md)

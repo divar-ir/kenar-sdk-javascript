@@ -52,6 +52,9 @@ class PaymentTransaction {
             if (data.hasOwnProperty('cost_rials')) {
                 obj['cost_rials'] = ApiClient.convertToType(data['cost_rials'], 'String');
             }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
             if (data.hasOwnProperty('extra_details')) {
                 obj['extra_details'] = ApiClient.convertToType(data['extra_details'], 'String');
             }
@@ -104,6 +107,21 @@ class PaymentTransaction {
      */
     setCostRials(costRials) {
         this['cost_rials'] = costRials;
+    }
+/**
+     * Returns The time when the transaction was created
+     * @return {Date}
+     */
+    getCreatedAt() {
+        return this.created_at;
+    }
+
+    /**
+     * Sets The time when the transaction was created
+     * @param {Date} createdAt The time when the transaction was created
+     */
+    setCreatedAt(createdAt) {
+        this['created_at'] = createdAt;
     }
 /**
      * Returns همان جزئیات اضافی که در درخواست ارسال کردید
@@ -171,6 +189,12 @@ class PaymentTransaction {
  * @member {String} cost_rials
  */
 PaymentTransaction.prototype['cost_rials'] = undefined;
+
+/**
+ * The time when the transaction was created
+ * @member {Date} created_at
+ */
+PaymentTransaction.prototype['created_at'] = undefined;
 
 /**
  * همان جزئیات اضافی که در درخواست ارسال کردید

@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**postEditPost**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 [**postGetImageUploadURL**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
+[**postGetPostStats**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
 
 
 
@@ -96,6 +97,56 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**PostGetImageUploadURLResponse**](PostGetImageUploadURLResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## postGetPostStats
+
+> PostGetPostStatsResponse postGetPostStats(postToken)
+
+Get post statistics
+
+This API allows you to retrieve the statistics associated with a single post (e.g. views).
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.PostApi();
+let postToken = "postToken_example"; // String | 
+apiInstance.postGetPostStats(postToken).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **postToken** | **String**|  | 
+
+### Return type
+
+[**PostGetPostStatsResponse**](PostGetPostStatsResponse.md)
 
 ### Authorization
 

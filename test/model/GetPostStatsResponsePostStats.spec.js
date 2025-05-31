@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.PostApi();
+    instance = new KenarApiClient.GetPostStatsResponsePostStats();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,25 @@
       object[property] = value;
   }
 
-  describe('PostApi', function() {
-    describe('postEditPost', function() {
-      it('should call postEditPost successfully', function(done) {
-        //uncomment below and update the code to test postEditPost
-        //instance.postEditPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('GetPostStatsResponsePostStats', function() {
+    it('should create an instance of GetPostStatsResponsePostStats', function() {
+      // uncomment below and update the code to test GetPostStatsResponsePostStats
+      //var instance = new KenarApiClient.GetPostStatsResponsePostStats();
+      //expect(instance).to.be.a(KenarApiClient.GetPostStatsResponsePostStats);
     });
-    describe('postGetImageUploadURL', function() {
-      it('should call postGetImageUploadURL successfully', function(done) {
-        //uncomment below and update the code to test postGetImageUploadURL
-        //instance.postGetImageUploadURL(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property daily (base name: "daily")', function() {
+      // uncomment below and update the code to test the property daily
+      //var instance = new KenarApiClient.GetPostStatsResponsePostStats();
+      //expect(instance).to.be();
     });
-    describe('postGetPostStats', function() {
-      it('should call postGetPostStats successfully', function(done) {
-        //uncomment below and update the code to test postGetPostStats
-        //instance.postGetPostStats(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property total (base name: "total")', function() {
+      // uncomment below and update the code to test the property total
+      //var instance = new KenarApiClient.GetPostStatsResponsePostStats();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

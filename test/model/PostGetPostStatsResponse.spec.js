@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.PostApi();
+    instance = new KenarApiClient.PostGetPostStatsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,19 @@
       object[property] = value;
   }
 
-  describe('PostApi', function() {
-    describe('postEditPost', function() {
-      it('should call postEditPost successfully', function(done) {
-        //uncomment below and update the code to test postEditPost
-        //instance.postEditPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('PostGetPostStatsResponse', function() {
+    it('should create an instance of PostGetPostStatsResponse', function() {
+      // uncomment below and update the code to test PostGetPostStatsResponse
+      //var instance = new KenarApiClient.PostGetPostStatsResponse();
+      //expect(instance).to.be.a(KenarApiClient.PostGetPostStatsResponse);
     });
-    describe('postGetImageUploadURL', function() {
-      it('should call postGetImageUploadURL successfully', function(done) {
-        //uncomment below and update the code to test postGetImageUploadURL
-        //instance.postGetImageUploadURL(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property views (base name: "views")', function() {
+      // uncomment below and update the code to test the property views
+      //var instance = new KenarApiClient.PostGetPostStatsResponse();
+      //expect(instance).to.be();
     });
-    describe('postGetPostStats', function() {
-      it('should call postGetPostStats successfully', function(done) {
-        //uncomment below and update the code to test postGetPostStats
-        //instance.postGetPostStats(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));
