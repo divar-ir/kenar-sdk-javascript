@@ -5570,6 +5570,13 @@ export default class DivarIconsIconName {
         "CHAT_SPARKLES" = "CHAT_SPARKLES";
 
     
+        /**
+         * value: "PUZZLE_SPARKLES"
+         * @const
+         */
+        "PUZZLE_SPARKLES" = "PUZZLE_SPARKLES";
+
+    
 
     /**
     * Returns a <code>DivarIconsIconName</code> enum value from a Javascript object name.

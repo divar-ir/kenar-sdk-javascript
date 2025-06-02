@@ -1589,4 +1589,6 @@
 
 * `CHAT_SPARKLES` (value: `"CHAT_SPARKLES"`)
 
+* `PUZZLE_SPARKLES` (value: `"PUZZLE_SPARKLES"`)
+
 
