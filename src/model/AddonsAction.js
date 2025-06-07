@@ -13,6 +13,8 @@
 
 import ApiClient from '../ApiClient';
 import AddonsGetDynamicAction from './AddonsGetDynamicAction';
+import AddonsOpenPostManagePage from './AddonsOpenPostManagePage';
+import AddonsOpenPostPage from './AddonsOpenPostPage';
 import AddonsOpenServerLink from './AddonsOpenServerLink';
 
 /**
@@ -56,6 +58,12 @@ class AddonsAction {
             if (data.hasOwnProperty('open_direct_link')) {
                 obj['open_direct_link'] = ApiClient.convertToType(data['open_direct_link'], 'String');
             }
+            if (data.hasOwnProperty('open_post_manage_page')) {
+                obj['open_post_manage_page'] = AddonsOpenPostManagePage.constructFromObject(data['open_post_manage_page']);
+            }
+            if (data.hasOwnProperty('open_post_page')) {
+                obj['open_post_page'] = AddonsOpenPostPage.constructFromObject(data['open_post_page']);
+            }
             if (data.hasOwnProperty('open_server_link')) {
                 obj['open_server_link'] = AddonsOpenServerLink.constructFromObject(data['open_server_link']);
             }
@@ -76,6 +84,14 @@ class AddonsAction {
         // ensure the json data is a string
         if (data['open_direct_link'] && !(typeof data['open_direct_link'] === 'string' || data['open_direct_link'] instanceof String)) {
             throw new Error("Expected the field `open_direct_link` to be a primitive type in the JSON string but got " + data['open_direct_link']);
+        }
+        // validate the optional field `open_post_manage_page`
+        if (data['open_post_manage_page']) { // data not null
+          AddonsOpenPostManagePage.validateJSON(data['open_post_manage_page']);
+        }
+        // validate the optional field `open_post_page`
+        if (data['open_post_page']) { // data not null
+          AddonsOpenPostPage.validateJSON(data['open_post_page']);
         }
         // validate the optional field `open_server_link`
         if (data['open_server_link']) { // data not null
@@ -114,6 +130,32 @@ class AddonsAction {
         this['open_direct_link'] = openDirectLink;
     }
 /**
+     * @return {module:model/AddonsOpenPostManagePage}
+     */
+    getOpenPostManagePage() {
+        return this.open_post_manage_page;
+    }
+
+    /**
+     * @param {module:model/AddonsOpenPostManagePage} openPostManagePage
+     */
+    setOpenPostManagePage(openPostManagePage) {
+        this['open_post_manage_page'] = openPostManagePage;
+    }
+/**
+     * @return {module:model/AddonsOpenPostPage}
+     */
+    getOpenPostPage() {
+        return this.open_post_page;
+    }
+
+    /**
+     * @param {module:model/AddonsOpenPostPage} openPostPage
+     */
+    setOpenPostPage(openPostPage) {
+        this['open_post_page'] = openPostPage;
+    }
+/**
      * @return {module:model/AddonsOpenServerLink}
      */
     getOpenServerLink() {
@@ -141,6 +183,16 @@ AddonsAction.prototype['get_dynamic_action'] = undefined;
  * @member {String} open_direct_link
  */
 AddonsAction.prototype['open_direct_link'] = undefined;
+
+/**
+ * @member {module:model/AddonsOpenPostManagePage} open_post_manage_page
+ */
+AddonsAction.prototype['open_post_manage_page'] = undefined;
+
+/**
+ * @member {module:model/AddonsOpenPostPage} open_post_page
+ */
+AddonsAction.prototype['open_post_page'] = undefined;
 
 /**
  * @member {module:model/AddonsOpenServerLink} open_server_link

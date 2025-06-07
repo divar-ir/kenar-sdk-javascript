@@ -66,6 +66,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property openPostManagePage (base name: "open_post_manage_page")', function() {
+      // uncomment below and update the code to test the property openPostManagePage
+      //var instance = new KenarApiClient.AddonsAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property openPostPage (base name: "open_post_page")', function() {
+      // uncomment below and update the code to test the property openPostPage
+      //var instance = new KenarApiClient.AddonsAction();
+      //expect(instance).to.be();
+    });
+
     it('should have the property openServerLink (base name: "open_server_link")', function() {
       // uncomment below and update the code to test the property openServerLink
       //var instance = new KenarApiClient.AddonsAction();

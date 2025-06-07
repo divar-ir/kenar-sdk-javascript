@@ -79,6 +79,7 @@ class GetPostStatsResponsePostStats {
     }
 
 /**
+     * Returns Daily value the metric over the last seven days
      * @return {Array.<module:model/GetPostStatsResponseDailyStats>}
      */
     getDaily() {
@@ -86,12 +87,14 @@ class GetPostStatsResponsePostStats {
     }
 
     /**
-     * @param {Array.<module:model/GetPostStatsResponseDailyStats>} daily
+     * Sets Daily value the metric over the last seven days
+     * @param {Array.<module:model/GetPostStatsResponseDailyStats>} daily Daily value the metric over the last seven days
      */
     setDaily(daily) {
         this['daily'] = daily;
     }
 /**
+     * Returns Total number of the metric (e.g. view)
      * @return {Number}
      */
     getTotal() {
@@ -99,7 +102,8 @@ class GetPostStatsResponsePostStats {
     }
 
     /**
-     * @param {Number} total
+     * Sets Total number of the metric (e.g. view)
+     * @param {Number} total Total number of the metric (e.g. view)
      */
     setTotal(total) {
         this['total'] = total;
@@ -110,11 +114,13 @@ class GetPostStatsResponsePostStats {
 
 
 /**
+ * Daily value the metric over the last seven days
  * @member {Array.<module:model/GetPostStatsResponseDailyStats>} daily
  */
 GetPostStatsResponsePostStats.prototype['daily'] = undefined;
 
 /**
+ * Total number of the metric (e.g. view)
  * @member {Number} total
  */
 GetPostStatsResponsePostStats.prototype['total'] = undefined;

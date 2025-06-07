@@ -72,6 +72,7 @@ class GetPostStatsResponseDailyStats {
     }
 
 /**
+     * Returns Number of the daily metric (e.g. view)
      * @return {Number}
      */
     getCount() {
@@ -79,12 +80,14 @@ class GetPostStatsResponseDailyStats {
     }
 
     /**
-     * @param {Number} count
+     * Sets Number of the daily metric (e.g. view)
+     * @param {Number} count Number of the daily metric (e.g. view)
      */
     setCount(count) {
         this['count'] = count;
     }
 /**
+     * Returns Date in YYYY-MM-DD format
      * @return {String}
      */
     getDate() {
@@ -92,7 +95,8 @@ class GetPostStatsResponseDailyStats {
     }
 
     /**
-     * @param {String} date
+     * Sets Date in YYYY-MM-DD format
+     * @param {String} date Date in YYYY-MM-DD format
      */
     setDate(date) {
         this['date'] = date;
@@ -103,11 +107,13 @@ class GetPostStatsResponseDailyStats {
 
 
 /**
+ * Number of the daily metric (e.g. view)
  * @member {Number} count
  */
 GetPostStatsResponseDailyStats.prototype['count'] = undefined;
 
 /**
+ * Date in YYYY-MM-DD format
  * @member {String} date
  */
 GetPostStatsResponseDailyStats.prototype['date'] = undefined;

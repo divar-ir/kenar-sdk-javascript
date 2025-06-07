@@ -128,7 +128,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.PostApi();
-let postToken = "postToken_example"; // String | 
+let postToken = "postToken_example"; // String | Post token
 apiInstance.postGetPostStats(postToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -142,7 +142,7 @@ apiInstance.postGetPostStats(postToken).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postToken** | **String**|  | 
+ **postToken** | **String**| Post token | 
 
 ### Return type
 

@@ -48,6 +48,8 @@ import AddonsGetUserPostAddonsResponse from './model/AddonsGetUserPostAddonsResp
 import AddonsGroupInfoRow from './model/AddonsGroupInfoRow';
 import AddonsGroupInfoRowGroupInfoItem from './model/AddonsGroupInfoRowGroupInfoItem';
 import AddonsImageCarouselRow from './model/AddonsImageCarouselRow';
+import AddonsOpenPostManagePage from './model/AddonsOpenPostManagePage';
+import AddonsOpenPostPage from './model/AddonsOpenPostPage';
 import AddonsOpenServerLink from './model/AddonsOpenServerLink';
 import AddonsPostAddon from './model/AddonsPostAddon';
 import AddonsScoreRow from './model/AddonsScoreRow';
@@ -410,6 +412,18 @@ export {
      * @property {module:model/AddonsImageCarouselRow}
      */
     AddonsImageCarouselRow,
+
+    /**
+     * The AddonsOpenPostManagePage model constructor.
+     * @property {module:model/AddonsOpenPostManagePage}
+     */
+    AddonsOpenPostManagePage,
+
+    /**
+     * The AddonsOpenPostPage model constructor.
+     * @property {module:model/AddonsOpenPostPage}
+     */
+    AddonsOpenPostPage,
 
     /**
      * The AddonsOpenServerLink model constructor.

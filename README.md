@@ -213,6 +213,8 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AddonsGroupInfoRow](docs/AddonsGroupInfoRow.md)
  - [KenarApiClient.AddonsGroupInfoRowGroupInfoItem](docs/AddonsGroupInfoRowGroupInfoItem.md)
  - [KenarApiClient.AddonsImageCarouselRow](docs/AddonsImageCarouselRow.md)
+ - [KenarApiClient.AddonsOpenPostManagePage](docs/AddonsOpenPostManagePage.md)
+ - [KenarApiClient.AddonsOpenPostPage](docs/AddonsOpenPostPage.md)
  - [KenarApiClient.AddonsOpenServerLink](docs/AddonsOpenServerLink.md)
  - [KenarApiClient.AddonsPostAddon](docs/AddonsPostAddon.md)
  - [KenarApiClient.AddonsScoreRow](docs/AddonsScoreRow.md)
