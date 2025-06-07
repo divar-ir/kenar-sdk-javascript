@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **data** | **Object** |  | [optional] 
 **district** | **String** |  | [optional] 
 **firstPublishedAt** | **Date** |  | [optional] 
+**isPhoneHidden** | **Boolean** |  | [optional] 
 **state** | [**FinderPostExtState**](FinderPostExtState.md) |  | [optional] 
 **supplierChatAssistantEnabled** | **Boolean** |  | [optional] 
 **token** | **String** |  | [optional] 

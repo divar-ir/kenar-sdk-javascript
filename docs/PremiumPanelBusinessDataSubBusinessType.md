@@ -13,4 +13,6 @@
 
 * `SERVICES` (value: `"SERVICES"`)
 
+* `PERSONAL` (value: `"PERSONAL"`)
+
 

@@ -74,7 +74,7 @@ export default class ChatAPIApi {
       let accepts = ['application/json'];
       let returnType = ChatapiChatBotSendMessageResponse;
       return this.apiClient.callApi(
-        '/experimental/open-platform/chatbot-conversations/{conversation_id}/messages', 'POST',
+        '/v1/open-platform/chat/bot/conversations/{conversation_id}/messages', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
@@ -128,7 +128,7 @@ export default class ChatAPIApi {
       let accepts = ['application/json'];
       let returnType = ChatapiChatBotSendMessageResponse;
       return this.apiClient.callApi(
-        '/experimental/open-platform/chat/bot/users/{user_id}/messages', 'POST',
+        '/v1/open-platform/chat/bot/users/{user_id}/messages', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
@@ -182,7 +182,7 @@ export default class ChatAPIApi {
       let accepts = ['application/json'];
       let returnType = ChatapiChatBotSendMessageResponse;
       return this.apiClient.callApi(
-        '/experimental/open-platform/chat/bot/conversations/{conversation_id}/messages', 'POST',
+        '/experimental/open-platform/chatbot-conversations/{conversation_id}/messages', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
@@ -197,6 +197,114 @@ export default class ChatAPIApi {
      */
     chatAPIChatBotSendMessage3(conversationId, chatAPIChatBotSendMessageBody) {
       return this.chatAPIChatBotSendMessage3WithHttpInfo(conversationId, chatAPIChatBotSendMessageBody)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+     * @param {String} userId Unique identifier for the user to start or continue a conversation with
+     * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
+     */
+    chatAPIChatBotSendMessage4WithHttpInfo(userId, chatAPIChatBotSendMessageBody) {
+      let postBody = chatAPIChatBotSendMessageBody;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling chatAPIChatBotSendMessage4");
+      }
+      // verify the required parameter 'chatAPIChatBotSendMessageBody' is set
+      if (chatAPIChatBotSendMessageBody === undefined || chatAPIChatBotSendMessageBody === null) {
+        throw new Error("Missing the required parameter 'chatAPIChatBotSendMessageBody' when calling chatAPIChatBotSendMessage4");
+      }
+
+      let pathParams = {
+        'user_id': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ChatapiChatBotSendMessageResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/chat/bot/users/{user_id}/messages', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+     * @param {String} userId Unique identifier for the user to start or continue a conversation with
+     * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
+     */
+    chatAPIChatBotSendMessage4(userId, chatAPIChatBotSendMessageBody) {
+      return this.chatAPIChatBotSendMessage4WithHttpInfo(userId, chatAPIChatBotSendMessageBody)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+     * @param {String} conversationId Unique identifier for the conversation
+     * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
+     */
+    chatAPIChatBotSendMessage5WithHttpInfo(conversationId, chatAPIChatBotSendMessageBody) {
+      let postBody = chatAPIChatBotSendMessageBody;
+      // verify the required parameter 'conversationId' is set
+      if (conversationId === undefined || conversationId === null) {
+        throw new Error("Missing the required parameter 'conversationId' when calling chatAPIChatBotSendMessage5");
+      }
+      // verify the required parameter 'chatAPIChatBotSendMessageBody' is set
+      if (chatAPIChatBotSendMessageBody === undefined || chatAPIChatBotSendMessageBody === null) {
+        throw new Error("Missing the required parameter 'chatAPIChatBotSendMessageBody' when calling chatAPIChatBotSendMessage5");
+      }
+
+      let pathParams = {
+        'conversation_id': conversationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ChatapiChatBotSendMessageResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/chat/bot/conversations/{conversation_id}/messages', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * ارسال پیام به مکالمه ChatBot
+     * می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+     * @param {String} conversationId Unique identifier for the conversation
+     * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
+     */
+    chatAPIChatBotSendMessage5(conversationId, chatAPIChatBotSendMessageBody) {
+      return this.chatAPIChatBotSendMessage5WithHttpInfo(conversationId, chatAPIChatBotSendMessageBody)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

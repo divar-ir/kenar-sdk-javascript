@@ -54,6 +54,13 @@ export default class PremiumPanelBusinessDataSubBusinessType {
         "SERVICES" = "SERVICES";
 
     
+        /**
+         * value: "PERSONAL"
+         * @const
+         */
+        "PERSONAL" = "PERSONAL";
+
+    
 
     /**
     * Returns a <code>PremiumPanelBusinessDataSubBusinessType</code> enum value from a Javascript object name.

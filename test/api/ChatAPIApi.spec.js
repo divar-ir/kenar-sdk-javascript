@@ -78,6 +78,26 @@
         done();
       });
     });
+    describe('chatAPIChatBotSendMessage4', function() {
+      it('should call chatAPIChatBotSendMessage4 successfully', function(done) {
+        //uncomment below and update the code to test chatAPIChatBotSendMessage4
+        //instance.chatAPIChatBotSendMessage4(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('chatAPIChatBotSendMessage5', function() {
+      it('should call chatAPIChatBotSendMessage5 successfully', function(done) {
+        //uncomment below and update the code to test chatAPIChatBotSendMessage5
+        //instance.chatAPIChatBotSendMessage5(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('chatAPIConversationSendMessage', function() {
       it('should call chatAPIConversationSendMessage successfully', function(done) {
         //uncomment below and update the code to test chatAPIConversationSendMessage

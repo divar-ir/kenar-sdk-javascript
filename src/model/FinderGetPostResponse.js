@@ -70,6 +70,9 @@ class FinderGetPostResponse {
             if (data.hasOwnProperty('first_published_at')) {
                 obj['first_published_at'] = ApiClient.convertToType(data['first_published_at'], 'Date');
             }
+            if (data.hasOwnProperty('is_phone_hidden')) {
+                obj['is_phone_hidden'] = ApiClient.convertToType(data['is_phone_hidden'], 'Boolean');
+            }
             if (data.hasOwnProperty('state')) {
                 obj['state'] = FinderPostExtState.constructFromObject(data['state']);
             }
@@ -205,6 +208,19 @@ class FinderGetPostResponse {
         this['first_published_at'] = firstPublishedAt;
     }
 /**
+     * @return {Boolean}
+     */
+    getIsPhoneHidden() {
+        return this.is_phone_hidden;
+    }
+
+    /**
+     * @param {Boolean} isPhoneHidden
+     */
+    setIsPhoneHidden(isPhoneHidden) {
+        this['is_phone_hidden'] = isPhoneHidden;
+    }
+/**
      * @return {module:model/FinderPostExtState}
      */
     getState() {
@@ -282,6 +298,11 @@ FinderGetPostResponse.prototype['district'] = undefined;
  * @member {Date} first_published_at
  */
 FinderGetPostResponse.prototype['first_published_at'] = undefined;
+
+/**
+ * @member {Boolean} is_phone_hidden
+ */
+FinderGetPostResponse.prototype['is_phone_hidden'] = undefined;
 
 /**
  * @member {module:model/FinderPostExtState} state

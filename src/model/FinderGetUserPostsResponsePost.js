@@ -53,6 +53,9 @@ class FinderGetUserPostsResponsePost {
             if (data.hasOwnProperty('images')) {
                 obj['images'] = ApiClient.convertToType(data['images'], ['String']);
             }
+            if (data.hasOwnProperty('is_phone_hidden')) {
+                obj['is_phone_hidden'] = ApiClient.convertToType(data['is_phone_hidden'], 'Boolean');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -116,6 +119,19 @@ class FinderGetUserPostsResponsePost {
         this['images'] = images;
     }
 /**
+     * @return {Boolean}
+     */
+    getIsPhoneHidden() {
+        return this.is_phone_hidden;
+    }
+
+    /**
+     * @param {Boolean} isPhoneHidden
+     */
+    setIsPhoneHidden(isPhoneHidden) {
+        this['is_phone_hidden'] = isPhoneHidden;
+    }
+/**
      * @return {String}
      */
     getTitle() {
@@ -155,6 +171,11 @@ FinderGetUserPostsResponsePost.prototype['category'] = undefined;
  * @member {Array.<String>} images
  */
 FinderGetUserPostsResponsePost.prototype['images'] = undefined;
+
+/**
+ * @member {Boolean} is_phone_hidden
+ */
+FinderGetUserPostsResponsePost.prototype['is_phone_hidden'] = undefined;
 
 /**
  * @member {String} title

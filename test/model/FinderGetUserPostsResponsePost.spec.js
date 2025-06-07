@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isPhoneHidden (base name: "is_phone_hidden")', function() {
+      // uncomment below and update the code to test the property isPhoneHidden
+      //var instance = new KenarApiClient.FinderGetUserPostsResponsePost();
+      //expect(instance).to.be();
+    });
+
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
       //var instance = new KenarApiClient.FinderGetUserPostsResponsePost();
