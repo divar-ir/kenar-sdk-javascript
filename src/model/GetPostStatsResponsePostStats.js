@@ -79,7 +79,7 @@ class GetPostStatsResponsePostStats {
     }
 
 /**
-     * Returns Daily value the metric over the last seven days
+     * Returns مقدار آمار مورد نظر در هفت روز اخیر
      * @return {Array.<module:model/GetPostStatsResponseDailyStats>}
      */
     getDaily() {
@@ -87,14 +87,14 @@ class GetPostStatsResponsePostStats {
     }
 
     /**
-     * Sets Daily value the metric over the last seven days
-     * @param {Array.<module:model/GetPostStatsResponseDailyStats>} daily Daily value the metric over the last seven days
+     * Sets مقدار آمار مورد نظر در هفت روز اخیر
+     * @param {Array.<module:model/GetPostStatsResponseDailyStats>} daily مقدار آمار مورد نظر در هفت روز اخیر
      */
     setDaily(daily) {
         this['daily'] = daily;
     }
 /**
-     * Returns Total number of the metric (e.g. view)
+     * Returns تعداد کلی آمار (مثلا بازدید)
      * @return {Number}
      */
     getTotal() {
@@ -102,8 +102,8 @@ class GetPostStatsResponsePostStats {
     }
 
     /**
-     * Sets Total number of the metric (e.g. view)
-     * @param {Number} total Total number of the metric (e.g. view)
+     * Sets تعداد کلی آمار (مثلا بازدید)
+     * @param {Number} total تعداد کلی آمار (مثلا بازدید)
      */
     setTotal(total) {
         this['total'] = total;
@@ -114,13 +114,13 @@ class GetPostStatsResponsePostStats {
 
 
 /**
- * Daily value the metric over the last seven days
+ * مقدار آمار مورد نظر در هفت روز اخیر
  * @member {Array.<module:model/GetPostStatsResponseDailyStats>} daily
  */
 GetPostStatsResponsePostStats.prototype['daily'] = undefined;
 
 /**
- * Total number of the metric (e.g. view)
+ * تعداد کلی آمار (مثلا بازدید)
  * @member {Number} total
  */
 GetPostStatsResponsePostStats.prototype['total'] = undefined;

@@ -32,6 +32,8 @@ import AddonsAddonSemanticPaymentMethod from './model/AddonsAddonSemanticPayment
 import AddonsAddonSemanticStatus from './model/AddonsAddonSemanticStatus';
 import AddonsBusinessAddon from './model/AddonsBusinessAddon';
 import AddonsButtonBar from './model/AddonsButtonBar';
+import AddonsCreateBusinessAddonBody from './model/AddonsCreateBusinessAddonBody';
+import AddonsCreateBusinessAddonResponse from './model/AddonsCreateBusinessAddonResponse';
 import AddonsCreatePostAddonRequest from './model/AddonsCreatePostAddonRequest';
 import AddonsCreatePostAddonV2Body from './model/AddonsCreatePostAddonV2Body';
 import AddonsCreateUserAddonResponseV2 from './model/AddonsCreateUserAddonResponseV2';
@@ -316,6 +318,18 @@ export {
      * @property {module:model/AddonsButtonBar}
      */
     AddonsButtonBar,
+
+    /**
+     * The AddonsCreateBusinessAddonBody model constructor.
+     * @property {module:model/AddonsCreateBusinessAddonBody}
+     */
+    AddonsCreateBusinessAddonBody,
+
+    /**
+     * The AddonsCreateBusinessAddonResponse model constructor.
+     * @property {module:model/AddonsCreateBusinessAddonResponse}
+     */
+    AddonsCreateBusinessAddonResponse,
 
     /**
      * The AddonsCreatePostAddonRequest model constructor.

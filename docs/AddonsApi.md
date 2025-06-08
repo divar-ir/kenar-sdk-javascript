@@ -4,6 +4,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**addonsCreateBusinessAddon**](AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
 [**addonsCreatePostAddonV2**](AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 [**addonsCreateUserAddonV2**](AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 [**addonsCreateUserAddonV22**](AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
@@ -13,6 +14,58 @@ Method | HTTP request | Description
 [**addonsGetUserAddons**](AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
 [**addonsGetUserAddons2**](AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
 
+
+
+## addonsCreateBusinessAddon
+
+> AddonsCreateBusinessAddonResponse addonsCreateBusinessAddon(businessToken, addonsCreateBusinessAddonBody)
+
+Create a BusinessAddon
+
+This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.AddonsApi();
+let businessToken = "businessToken_example"; // String | 
+let addonsCreateBusinessAddonBody = new KenarApiClient.AddonsCreateBusinessAddonBody(); // AddonsCreateBusinessAddonBody | 
+apiInstance.addonsCreateBusinessAddon(businessToken, addonsCreateBusinessAddonBody).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **businessToken** | **String**|  | 
+ **addonsCreateBusinessAddonBody** | [**AddonsCreateBusinessAddonBody**](AddonsCreateBusinessAddonBody.md)|  | 
+
+### Return type
+
+[**AddonsCreateBusinessAddonResponse**](AddonsCreateBusinessAddonResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## addonsCreatePostAddonV2

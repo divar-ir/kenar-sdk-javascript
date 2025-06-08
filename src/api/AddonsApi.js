@@ -13,6 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import AddonsCreateBusinessAddonBody from '../model/AddonsCreateBusinessAddonBody';
+import AddonsCreateBusinessAddonResponse from '../model/AddonsCreateBusinessAddonResponse';
 import AddonsCreatePostAddonV2Body from '../model/AddonsCreatePostAddonV2Body';
 import AddonsCreateUserAddonResponseV2 from '../model/AddonsCreateUserAddonResponseV2';
 import AddonsCreateUserAddonV2Body from '../model/AddonsCreateUserAddonV2Body';
@@ -37,6 +39,60 @@ export default class AddonsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Create a BusinessAddon
+     * This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+     * @param {String} businessToken 
+     * @param {module:model/AddonsCreateBusinessAddonBody} addonsCreateBusinessAddonBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsCreateBusinessAddonResponse} and HTTP response
+     */
+    addonsCreateBusinessAddonWithHttpInfo(businessToken, addonsCreateBusinessAddonBody) {
+      let postBody = addonsCreateBusinessAddonBody;
+      // verify the required parameter 'businessToken' is set
+      if (businessToken === undefined || businessToken === null) {
+        throw new Error("Missing the required parameter 'businessToken' when calling addonsCreateBusinessAddon");
+      }
+      // verify the required parameter 'addonsCreateBusinessAddonBody' is set
+      if (addonsCreateBusinessAddonBody === undefined || addonsCreateBusinessAddonBody === null) {
+        throw new Error("Missing the required parameter 'addonsCreateBusinessAddonBody' when calling addonsCreateBusinessAddon");
+      }
+
+      let pathParams = {
+        'business_token': businessToken
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = AddonsCreateBusinessAddonResponse;
+      return this.apiClient.callApi(
+        '/v1/open-platform/addons/business/{business_token}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Create a BusinessAddon
+     * This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+     * @param {String} businessToken 
+     * @param {module:model/AddonsCreateBusinessAddonBody} addonsCreateBusinessAddonBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsCreateBusinessAddonResponse}
+     */
+    addonsCreateBusinessAddon(businessToken, addonsCreateBusinessAddonBody) {
+      return this.addonsCreateBusinessAddonWithHttpInfo(businessToken, addonsCreateBusinessAddonBody)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

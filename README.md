@@ -109,9 +109,9 @@ APIKey.apiKey = "YOUR API KEY"
 //APIKey.apiKeyPrefix['X-API-Key'] = "Token"
 
 var api = new KenarApiClient.AddonsApi()
-var token = "token_example"; // {String} 
-var addonsCreatePostAddonV2Body = new KenarApiClient.AddonsCreatePostAddonV2Body(); // {AddonsCreatePostAddonV2Body} 
-api.addonsCreatePostAddonV2(token, addonsCreatePostAddonV2Body).then(function(data) {
+var businessToken = "businessToken_example"; // {String} 
+var addonsCreateBusinessAddonBody = new KenarApiClient.AddonsCreateBusinessAddonBody(); // {AddonsCreateBusinessAddonBody} 
+api.addonsCreateBusinessAddon(businessToken, addonsCreateBusinessAddonBody).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -126,6 +126,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*KenarApiClient.AddonsApi* | [**addonsCreateBusinessAddon**](docs/AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
 *KenarApiClient.AddonsApi* | [**addonsCreatePostAddonV2**](docs/AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 *KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV2**](docs/AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 *KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV22**](docs/AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
@@ -168,7 +169,7 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
-*KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
+*KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic2**](docs/SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
@@ -197,6 +198,8 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AddonsAddonSemanticStatus](docs/AddonsAddonSemanticStatus.md)
  - [KenarApiClient.AddonsBusinessAddon](docs/AddonsBusinessAddon.md)
  - [KenarApiClient.AddonsButtonBar](docs/AddonsButtonBar.md)
+ - [KenarApiClient.AddonsCreateBusinessAddonBody](docs/AddonsCreateBusinessAddonBody.md)
+ - [KenarApiClient.AddonsCreateBusinessAddonResponse](docs/AddonsCreateBusinessAddonResponse.md)
  - [KenarApiClient.AddonsCreatePostAddonRequest](docs/AddonsCreatePostAddonRequest.md)
  - [KenarApiClient.AddonsCreatePostAddonV2Body](docs/AddonsCreatePostAddonV2Body.md)
  - [KenarApiClient.AddonsCreateUserAddonResponseV2](docs/AddonsCreateUserAddonResponseV2.md)

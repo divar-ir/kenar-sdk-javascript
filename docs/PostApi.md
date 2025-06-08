@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**postEditPost**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 [**postGetImageUploadURL**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
-[**postGetPostStats**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
+[**postGetPostStats**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 
 
 
@@ -112,9 +112,9 @@ This endpoint does not need any parameter.
 
 > PostGetPostStatsResponse postGetPostStats(postToken)
 
-Get post statistics
+دریافت آمارهای آگهی
 
-This API allows you to retrieve the statistics associated with a single post (e.g. views).
+از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید. 
 
 ### Example
 
@@ -128,7 +128,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.PostApi();
-let postToken = "postToken_example"; // String | Post token
+let postToken = "postToken_example"; // String | توکن آگهی
 apiInstance.postGetPostStats(postToken).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -142,7 +142,7 @@ apiInstance.postGetPostStats(postToken).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postToken** | **String**| Post token | 
+ **postToken** | **String**| توکن آگهی | 
 
 ### Return type
 

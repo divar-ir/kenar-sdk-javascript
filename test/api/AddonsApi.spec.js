@@ -48,6 +48,16 @@
   }
 
   describe('AddonsApi', function() {
+    describe('addonsCreateBusinessAddon', function() {
+      it('should call addonsCreateBusinessAddon successfully', function(done) {
+        //uncomment below and update the code to test addonsCreateBusinessAddon
+        //instance.addonsCreateBusinessAddon(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('addonsCreatePostAddonV2', function() {
       it('should call addonsCreatePostAddonV2 successfully', function(done) {
         //uncomment below and update the code to test addonsCreatePostAddonV2

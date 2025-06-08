@@ -134,9 +134,9 @@ export default class PostApi {
 
 
     /**
-     * Get post statistics
-     * This API allows you to retrieve the statistics associated with a single post (e.g. views).
-     * @param {String} postToken Post token
+     * دریافت آمارهای آگهی
+     * از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید. 
+     * @param {String} postToken توکن آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostGetPostStatsResponse} and HTTP response
      */
     postGetPostStatsWithHttpInfo(postToken) {
@@ -168,9 +168,9 @@ export default class PostApi {
     }
 
     /**
-     * Get post statistics
-     * This API allows you to retrieve the statistics associated with a single post (e.g. views).
-     * @param {String} postToken Post token
+     * دریافت آمارهای آگهی
+     * از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید. 
+     * @param {String} postToken توکن آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostGetPostStatsResponse}
      */
     postGetPostStats(postToken) {

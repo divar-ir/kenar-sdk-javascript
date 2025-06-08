@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **Number** | Number of the daily metric (e.g. view) | [optional] 
-**date** | **String** | Date in YYYY-MM-DD format | [optional] 
+**count** | **Number** | تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید) | [optional] 
+**date** | **String** | تاریخ به فرمت YYYY-MM-DD | [optional] 
 
 

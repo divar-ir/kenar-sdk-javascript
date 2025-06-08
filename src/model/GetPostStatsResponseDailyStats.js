@@ -72,7 +72,7 @@ class GetPostStatsResponseDailyStats {
     }
 
 /**
-     * Returns Number of the daily metric (e.g. view)
+     * Returns تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
      * @return {Number}
      */
     getCount() {
@@ -80,14 +80,14 @@ class GetPostStatsResponseDailyStats {
     }
 
     /**
-     * Sets Number of the daily metric (e.g. view)
-     * @param {Number} count Number of the daily metric (e.g. view)
+     * Sets تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
+     * @param {Number} count تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
      */
     setCount(count) {
         this['count'] = count;
     }
 /**
-     * Returns Date in YYYY-MM-DD format
+     * Returns تاریخ به فرمت YYYY-MM-DD
      * @return {String}
      */
     getDate() {
@@ -95,8 +95,8 @@ class GetPostStatsResponseDailyStats {
     }
 
     /**
-     * Sets Date in YYYY-MM-DD format
-     * @param {String} date Date in YYYY-MM-DD format
+     * Sets تاریخ به فرمت YYYY-MM-DD
+     * @param {String} date تاریخ به فرمت YYYY-MM-DD
      */
     setDate(date) {
         this['date'] = date;
@@ -107,13 +107,13 @@ class GetPostStatsResponseDailyStats {
 
 
 /**
- * Number of the daily metric (e.g. view)
+ * تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
  * @member {Number} count
  */
 GetPostStatsResponseDailyStats.prototype['count'] = undefined;
 
 /**
- * Date in YYYY-MM-DD format
+ * تاریخ به فرمت YYYY-MM-DD
  * @member {String} date
  */
 GetPostStatsResponseDailyStats.prototype['date'] = undefined;

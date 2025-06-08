@@ -175,7 +175,7 @@ export default class LimitedApi {
 
 
     /**
-     * Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+     * با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
      * @param {Object} opts Optional parameters
      * @param {Number} [pageSize] Number of transactions to return per page
      * @param {String} [pageToken] Token for the next page of results
@@ -208,7 +208,7 @@ export default class LimitedApi {
     }
 
     /**
-     * Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+     * با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageSize Number of transactions to return per page
      * @param {String} opts.pageToken Token for the next page of results
