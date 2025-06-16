@@ -42,8 +42,8 @@ export default class AddonsApi {
 
 
     /**
-     * Create a BusinessAddon
-     * This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}
      * @param {String} businessToken 
      * @param {module:model/AddonsCreateBusinessAddonBody} addonsCreateBusinessAddonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsCreateBusinessAddonResponse} and HTTP response
@@ -81,8 +81,8 @@ export default class AddonsApi {
     }
 
     /**
-     * Create a BusinessAddon
-     * This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
+     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}
      * @param {String} businessToken 
      * @param {module:model/AddonsCreateBusinessAddonBody} addonsCreateBusinessAddonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsCreateBusinessAddonResponse}

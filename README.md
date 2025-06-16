@@ -126,7 +126,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*KenarApiClient.AddonsApi* | [**addonsCreateBusinessAddon**](docs/AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
+*KenarApiClient.AddonsApi* | [**addonsCreateBusinessAddon**](docs/AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 *KenarApiClient.AddonsApi* | [**addonsCreatePostAddonV2**](docs/AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 *KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV2**](docs/AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 *KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV22**](docs/AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
