@@ -57,11 +57,11 @@ npm run build
 
 #### git
 
-If the library is hosted at a git repository, e.g.https://github.com/GIT_USER_ID/GIT_REPO_ID
+If the library is hosted at a git repository, e.g.https://github.com/divar-ir/kenar-sdk-javascript
 then install it via:
 
 ```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
+    npm install divar-ir/kenar-sdk-javascript --save
 ```
 
 ### For browser
