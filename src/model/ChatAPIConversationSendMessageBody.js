@@ -50,11 +50,11 @@ class ChatAPIConversationSendMessageBody {
         if (data) {
             obj = obj || new ChatAPIConversationSendMessageBody();
 
-            if (data.hasOwnProperty('media_token')) {
-                obj['media_token'] = ApiClient.convertToType(data['media_token'], 'String');
-            }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
+            }
+            if (data.hasOwnProperty('media_token')) {
+                obj['media_token'] = ApiClient.convertToType(data['media_token'], 'String');
             }
             if (data.hasOwnProperty('receiver_buttons')) {
                 obj['receiver_buttons'] = ChatapiChatButtonGrid.constructFromObject(data['receiver_buttons']);
@@ -79,12 +79,12 @@ class ChatAPIConversationSendMessageBody {
             }
         }
         // ensure the json data is a string
-        if (data['media_token'] && !(typeof data['media_token'] === 'string' || data['media_token'] instanceof String)) {
-            throw new Error("Expected the field `media_token` to be a primitive type in the JSON string but got " + data['media_token']);
-        }
-        // ensure the json data is a string
         if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
             throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
+        }
+        // ensure the json data is a string
+        if (data['media_token'] && !(typeof data['media_token'] === 'string' || data['media_token'] instanceof String)) {
+            throw new Error("Expected the field `media_token` to be a primitive type in the JSON string but got " + data['media_token']);
         }
         // validate the optional field `receiver_buttons`
         if (data['receiver_buttons']) { // data not null
@@ -99,21 +99,6 @@ class ChatAPIConversationSendMessageBody {
     }
 
 /**
-     * Returns Token for attached media (if any)
-     * @return {String}
-     */
-    getMediaToken() {
-        return this.media_token;
-    }
-
-    /**
-     * Sets Token for attached media (if any)
-     * @param {String} mediaToken Token for attached media (if any)
-     */
-    setMediaToken(mediaToken) {
-        this['media_token'] = mediaToken;
-    }
-/**
      * Returns Text message content to be sent
      * @return {String}
      */
@@ -127,6 +112,21 @@ class ChatAPIConversationSendMessageBody {
      */
     setMessage(message) {
         this['message'] = message;
+    }
+/**
+     * Returns Token for attached media (if any)
+     * @return {String}
+     */
+    getMediaToken() {
+        return this.media_token;
+    }
+
+    /**
+     * Sets Token for attached media (if any)
+     * @param {String} mediaToken Token for attached media (if any)
+     */
+    setMediaToken(mediaToken) {
+        this['media_token'] = mediaToken;
     }
 /**
      * @return {module:model/ChatapiChatButtonGrid}
@@ -160,16 +160,16 @@ class ChatAPIConversationSendMessageBody {
 ChatAPIConversationSendMessageBody.RequiredProperties = ["message"];
 
 /**
- * Token for attached media (if any)
- * @member {String} media_token
- */
-ChatAPIConversationSendMessageBody.prototype['media_token'] = undefined;
-
-/**
  * Text message content to be sent
  * @member {String} message
  */
 ChatAPIConversationSendMessageBody.prototype['message'] = undefined;
+
+/**
+ * Token for attached media (if any)
+ * @member {String} media_token
+ */
+ChatAPIConversationSendMessageBody.prototype['media_token'] = undefined;
 
 /**
  * @member {module:model/ChatapiChatButtonGrid} receiver_buttons
