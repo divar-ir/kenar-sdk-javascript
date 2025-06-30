@@ -1,6 +1,6 @@
 {
   "name": "kenar-api-client",
-  "version": "0.52.0",
+  "version": "0.53.0",
   "description": "JavaScript SDK for Kenar API - A comprehensive client library for interacting with Kenar services",
   "license": "MIT",
   "main": "dist/index.js",
