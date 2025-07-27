@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**postEditPost**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 [**postGetImageUploadURL**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 [**postGetPostStats**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
+[**postSubmitEmergencyResidencePost**](PostApi.md#postSubmitEmergencyResidencePost) | **POST** /experimental/open-platform/posts/emergency-residence | Submit an emergency residence post
+[**postSubmitPost**](PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | Submit a post
 
 
 
@@ -155,5 +157,103 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## postSubmitEmergencyResidencePost
+
+> PostSubmitEmergencyResidencePostResponse postSubmitEmergencyResidencePost(postSubmitEmergencyResidencePostRequest)
+
+Submit an emergency residence post
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.PostApi();
+let postSubmitEmergencyResidencePostRequest = new KenarApiClient.PostSubmitEmergencyResidencePostRequest(); // PostSubmitEmergencyResidencePostRequest | 
+apiInstance.postSubmitEmergencyResidencePost(postSubmitEmergencyResidencePostRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **postSubmitEmergencyResidencePostRequest** | [**PostSubmitEmergencyResidencePostRequest**](PostSubmitEmergencyResidencePostRequest.md)|  | 
+
+### Return type
+
+[**PostSubmitEmergencyResidencePostResponse**](PostSubmitEmergencyResidencePostResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## postSubmitPost
+
+> PostSubmitPostResponse postSubmitPost(postSubmitPostRequest)
+
+Submit a post
+
+This API allows you to submit a post. This needs &#x60;POST_SUBMIT&#x60; OAuth scope. You can submit a post with title, description, and images and other fields. There are general fields and category specific fields.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.PostApi();
+let postSubmitPostRequest = new KenarApiClient.PostSubmitPostRequest(); // PostSubmitPostRequest | 
+apiInstance.postSubmitPost(postSubmitPostRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **postSubmitPostRequest** | [**PostSubmitPostRequest**](PostSubmitPostRequest.md)|  | 
+
+### Return type
+
+[**PostSubmitPostResponse**](PostSubmitPostResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

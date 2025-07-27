@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.EventsEventButton();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,25 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('EventsEventButton', function() {
+    it('should create an instance of EventsEventButton', function() {
+      // uncomment below and update the code to test EventsEventButton
+      //var instance = new KenarApiClient.EventsEventButton();
+      //expect(instance).to.be.a(KenarApiClient.EventsEventButton);
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property action (base name: "action")', function() {
+      // uncomment below and update the code to test the property action
+      //var instance = new KenarApiClient.EventsEventButton();
+      //expect(instance).to.be();
     });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new KenarApiClient.EventsEventButton();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lastModifiedAt (base name: "last_modified_at")', function() {
+      // uncomment below and update the code to test the property lastModifiedAt
+      //var instance = new KenarApiClient.FinderGetPostResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
       //var instance = new KenarApiClient.FinderGetPostResponse();

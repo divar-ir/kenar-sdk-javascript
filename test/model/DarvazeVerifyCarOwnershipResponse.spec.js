@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.DarvazeVerifyCarOwnershipResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,19 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('DarvazeVerifyCarOwnershipResponse', function() {
+    it('should create an instance of DarvazeVerifyCarOwnershipResponse', function() {
+      // uncomment below and update the code to test DarvazeVerifyCarOwnershipResponse
+      //var instance = new KenarApiClient.DarvazeVerifyCarOwnershipResponse();
+      //expect(instance).to.be.a(KenarApiClient.DarvazeVerifyCarOwnershipResponse);
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new KenarApiClient.DarvazeVerifyCarOwnershipResponse();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

@@ -83,4 +83,109 @@ export default class EventsApi {
     }
 
 
+    /**
+     * Send an event to a user
+     * Using this API, you can send an event to a user. The event can be specific to a post or general. The event can include buttons with custom actions allowing users to interact with your app.
+     * @param {String} primaryButtonActionOpenPostPagePostToken Token of the post to open
+     * @param {String} primaryButtonActionOpenPostManagePagePostToken Token of the post to redirect to its management page
+     * @param {String} secondaryButtonActionOpenPostPagePostToken Token of the post to open
+     * @param {String} secondaryButtonActionOpenPostManagePagePostToken Token of the post to redirect to its management page
+     * @param {Object} opts Optional parameters
+     * @param {String} [message] The event message to display to the user
+     * @param {String} [primaryButtonTitle] The text to display on the button
+     * @param {String} [primaryButtonActionOpenDirectLink] An action to send user to your URL directly with just a resource id (if applicable)
+     * @param {Object.<String, Object>} [primaryButtonActionOpenServerLinkData] A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {Object.<String, Object>} [primaryButtonActionGetDynamicActionData] A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {String} [secondaryButtonTitle] The text to display on the button
+     * @param {String} [secondaryButtonActionOpenDirectLink] An action to send user to your URL directly with just a resource id (if applicable)
+     * @param {Object.<String, Object>} [secondaryButtonActionOpenServerLinkData] A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {Object.<String, Object>} [secondaryButtonActionGetDynamicActionData] A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {module:model/String} [targetType] Target of the event; USER or POST
+     * @param {String} [targetResourceId] id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    eventsSendEventWithHttpInfo(primaryButtonActionOpenPostPagePostToken, primaryButtonActionOpenPostManagePagePostToken, secondaryButtonActionOpenPostPagePostToken, secondaryButtonActionOpenPostManagePagePostToken, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'primaryButtonActionOpenPostPagePostToken' is set
+      if (primaryButtonActionOpenPostPagePostToken === undefined || primaryButtonActionOpenPostPagePostToken === null) {
+        throw new Error("Missing the required parameter 'primaryButtonActionOpenPostPagePostToken' when calling eventsSendEvent");
+      }
+      // verify the required parameter 'primaryButtonActionOpenPostManagePagePostToken' is set
+      if (primaryButtonActionOpenPostManagePagePostToken === undefined || primaryButtonActionOpenPostManagePagePostToken === null) {
+        throw new Error("Missing the required parameter 'primaryButtonActionOpenPostManagePagePostToken' when calling eventsSendEvent");
+      }
+      // verify the required parameter 'secondaryButtonActionOpenPostPagePostToken' is set
+      if (secondaryButtonActionOpenPostPagePostToken === undefined || secondaryButtonActionOpenPostPagePostToken === null) {
+        throw new Error("Missing the required parameter 'secondaryButtonActionOpenPostPagePostToken' when calling eventsSendEvent");
+      }
+      // verify the required parameter 'secondaryButtonActionOpenPostManagePagePostToken' is set
+      if (secondaryButtonActionOpenPostManagePagePostToken === undefined || secondaryButtonActionOpenPostManagePagePostToken === null) {
+        throw new Error("Missing the required parameter 'secondaryButtonActionOpenPostManagePagePostToken' when calling eventsSendEvent");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'message': opts['message'],
+        'primary_button.title': opts['primaryButtonTitle'],
+        'primary_button.action.open_direct_link': opts['primaryButtonActionOpenDirectLink'],
+        'primary_button.action.open_server_link.data': opts['primaryButtonActionOpenServerLinkData'],
+        'primary_button.action.get_dynamic_action.data': opts['primaryButtonActionGetDynamicActionData'],
+        'primary_button.action.open_post_page.post_token': primaryButtonActionOpenPostPagePostToken,
+        'primary_button.action.open_post_manage_page.post_token': primaryButtonActionOpenPostManagePagePostToken,
+        'secondary_button.title': opts['secondaryButtonTitle'],
+        'secondary_button.action.open_direct_link': opts['secondaryButtonActionOpenDirectLink'],
+        'secondary_button.action.open_server_link.data': opts['secondaryButtonActionOpenServerLinkData'],
+        'secondary_button.action.get_dynamic_action.data': opts['secondaryButtonActionGetDynamicActionData'],
+        'secondary_button.action.open_post_page.post_token': secondaryButtonActionOpenPostPagePostToken,
+        'secondary_button.action.open_post_manage_page.post_token': secondaryButtonActionOpenPostManagePagePostToken,
+        'target_type': opts['targetType'],
+        'target_resource_id': opts['targetResourceId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/events/send', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Send an event to a user
+     * Using this API, you can send an event to a user. The event can be specific to a post or general. The event can include buttons with custom actions allowing users to interact with your app.
+     * @param {String} primaryButtonActionOpenPostPagePostToken Token of the post to open
+     * @param {String} primaryButtonActionOpenPostManagePagePostToken Token of the post to redirect to its management page
+     * @param {String} secondaryButtonActionOpenPostPagePostToken Token of the post to open
+     * @param {String} secondaryButtonActionOpenPostManagePagePostToken Token of the post to redirect to its management page
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.message The event message to display to the user
+     * @param {String} opts.primaryButtonTitle The text to display on the button
+     * @param {String} opts.primaryButtonActionOpenDirectLink An action to send user to your URL directly with just a resource id (if applicable)
+     * @param {Object.<String, Object>} opts.primaryButtonActionOpenServerLinkData A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {Object.<String, Object>} opts.primaryButtonActionGetDynamicActionData A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {String} opts.secondaryButtonTitle The text to display on the button
+     * @param {String} opts.secondaryButtonActionOpenDirectLink An action to send user to your URL directly with just a resource id (if applicable)
+     * @param {Object.<String, Object>} opts.secondaryButtonActionOpenServerLinkData A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {Object.<String, Object>} opts.secondaryButtonActionGetDynamicActionData A data that you can set and will be returned to you upon user click to recognize the action
+     * @param {module:model/String} opts.targetType Target of the event; USER or POST
+     * @param {String} opts.targetResourceId id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    eventsSendEvent(primaryButtonActionOpenPostPagePostToken, primaryButtonActionOpenPostManagePagePostToken, secondaryButtonActionOpenPostPagePostToken, secondaryButtonActionOpenPostManagePagePostToken, opts) {
+      return this.eventsSendEventWithHttpInfo(primaryButtonActionOpenPostPagePostToken, primaryButtonActionOpenPostManagePagePostToken, secondaryButtonActionOpenPostPagePostToken, secondaryButtonActionOpenPostManagePagePostToken, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
 }

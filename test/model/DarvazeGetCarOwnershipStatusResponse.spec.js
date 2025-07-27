@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.DarvazeGetCarOwnershipStatusResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,25 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('DarvazeGetCarOwnershipStatusResponse', function() {
+    it('should create an instance of DarvazeGetCarOwnershipStatusResponse', function() {
+      // uncomment below and update the code to test DarvazeGetCarOwnershipStatusResponse
+      //var instance = new KenarApiClient.DarvazeGetCarOwnershipStatusResponse();
+      //expect(instance).to.be.a(KenarApiClient.DarvazeGetCarOwnershipStatusResponse);
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new KenarApiClient.DarvazeGetCarOwnershipStatusResponse();
+      //expect(instance).to.be();
     });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new KenarApiClient.DarvazeGetCarOwnershipStatusResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

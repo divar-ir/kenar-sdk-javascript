@@ -5577,6 +5577,83 @@ export default class DivarIconsIconName {
         "PUZZLE_SPARKLES" = "PUZZLE_SPARKLES";
 
     
+        /**
+         * value: "AI_STARS"
+         * @const
+         */
+        "AI_STARS" = "AI_STARS";
+
+    
+        /**
+         * value: "CRISIS_SUPPORT"
+         * @const
+         */
+        "CRISIS_SUPPORT" = "CRISIS_SUPPORT";
+
+    
+        /**
+         * value: "TEMPORARY_SHELTER"
+         * @const
+         */
+        "TEMPORARY_SHELTER" = "TEMPORARY_SHELTER";
+
+    
+        /**
+         * value: "VOLUNTEER_AID"
+         * @const
+         */
+        "VOLUNTEER_AID" = "VOLUNTEER_AID";
+
+    
+        /**
+         * value: "EMERGENCY_EQUIPMENT"
+         * @const
+         */
+        "EMERGENCY_EQUIPMENT" = "EMERGENCY_EQUIPMENT";
+
+    
+        /**
+         * value: "RIDE_SHARING"
+         * @const
+         */
+        "RIDE_SHARING" = "RIDE_SHARING";
+
+    
+        /**
+         * value: "LINK"
+         * @const
+         */
+        "LINK" = "LINK";
+
+    
+        /**
+         * value: "BUSINESS_SERVICES"
+         * @const
+         */
+        "BUSINESS_SERVICES" = "BUSINESS_SERVICES";
+
+    
+        /**
+         * value: "BELL"
+         * @const
+         */
+        "BELL" = "BELL";
+
+    
+        /**
+         * value: "THUMB_DOWN_BORDER"
+         * @const
+         */
+        "THUMB_DOWN_BORDER" = "THUMB_DOWN_BORDER";
+
+    
+        /**
+         * value: "THUMB_UP_BORDER"
+         * @const
+         */
+        "THUMB_UP_BORDER" = "THUMB_UP_BORDER";
+
+    
 
     /**
     * Returns a <code>DivarIconsIconName</code> enum value from a Javascript object name.

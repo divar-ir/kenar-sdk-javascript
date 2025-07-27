@@ -101,7 +101,17 @@ import ChatapiMessage from './model/ChatapiMessage';
 import ChatapiMessageSenderSide from './model/ChatapiMessageSenderSide';
 import ChatapiMessageSenderType from './model/ChatapiMessageSenderType';
 import ChatapiMessageType from './model/ChatapiMessageType';
+import DarvazeGetCarOwnershipStatusResponse from './model/DarvazeGetCarOwnershipStatusResponse';
+import DarvazeGetCarOwnershipStatusResponseStatus from './model/DarvazeGetCarOwnershipStatusResponseStatus';
+import DarvazeIranianCarPlate from './model/DarvazeIranianCarPlate';
+import DarvazeRequestCarOwnershipDelegationResponse from './model/DarvazeRequestCarOwnershipDelegationResponse';
+import DarvazeRequestForPostCodeValidationResponse from './model/DarvazeRequestForPostCodeValidationResponse';
+import DarvazeVerifyCarOwnershipDelegationResponse from './model/DarvazeVerifyCarOwnershipDelegationResponse';
+import DarvazeVerifyCarOwnershipResponse from './model/DarvazeVerifyCarOwnershipResponse';
+import DarvazeVerifyPostCodeValidationResponse from './model/DarvazeVerifyPostCodeValidationResponse';
+import DarvazeVerifyPostCodeValidationResponseStatus from './model/DarvazeVerifyPostCodeValidationResponseStatus';
 import DivarIconsIconName from './model/DivarIconsIconName';
+import EventsEventButton from './model/EventsEventButton';
 import EventsRegisterEventSubscriptionRequest from './model/EventsRegisterEventSubscriptionRequest';
 import EventsRegisterEventSubscriptionRequestEventType from './model/EventsRegisterEventSubscriptionRequestEventType';
 import FinderGetAllDevelopmentPostsResponse from './model/FinderGetAllDevelopmentPostsResponse';
@@ -146,6 +156,11 @@ import PaymentTransactionType from './model/PaymentTransactionType';
 import PostEditPostBody from './model/PostEditPostBody';
 import PostGetImageUploadURLResponse from './model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
+import PostSubmitEmergencyResidencePostRequest from './model/PostSubmitEmergencyResidencePostRequest';
+import PostSubmitEmergencyResidencePostResponse from './model/PostSubmitEmergencyResidencePostResponse';
+import PostSubmitPostRequest from './model/PostSubmitPostRequest';
+import PostSubmitPostResponse from './model/PostSubmitPostResponse';
+import PostTemporaryResidenceFields from './model/PostTemporaryResidenceFields';
 import PremiumPanelBusinessDataSubBusinessType from './model/PremiumPanelBusinessDataSubBusinessType';
 import ProtobufAny from './model/ProtobufAny';
 import SearchPostItemPrice from './model/SearchPostItemPrice';
@@ -156,6 +171,8 @@ import SemanticCreateUserSemanticBody from './model/SemanticCreateUserSemanticBo
 import SemanticCreateUserSemanticResponse from './model/SemanticCreateUserSemanticResponse';
 import SemanticPostSemanticDeleted from './model/SemanticPostSemanticDeleted';
 import SemanticUserSemanticDeleted from './model/SemanticUserSemanticDeleted';
+import SendEventRequestTargetType from './model/SendEventRequestTargetType';
+import TemporaryResidenceFieldsRoomsCount from './model/TemporaryResidenceFieldsRoomsCount';
 import AddonsApi from './api/AddonsApi';
 import AssetsApi from './api/AssetsApi';
 import ChatAPIApi from './api/ChatAPIApi';
@@ -734,10 +751,70 @@ export {
     ChatapiMessageType,
 
     /**
+     * The DarvazeGetCarOwnershipStatusResponse model constructor.
+     * @property {module:model/DarvazeGetCarOwnershipStatusResponse}
+     */
+    DarvazeGetCarOwnershipStatusResponse,
+
+    /**
+     * The DarvazeGetCarOwnershipStatusResponseStatus model constructor.
+     * @property {module:model/DarvazeGetCarOwnershipStatusResponseStatus}
+     */
+    DarvazeGetCarOwnershipStatusResponseStatus,
+
+    /**
+     * The DarvazeIranianCarPlate model constructor.
+     * @property {module:model/DarvazeIranianCarPlate}
+     */
+    DarvazeIranianCarPlate,
+
+    /**
+     * The DarvazeRequestCarOwnershipDelegationResponse model constructor.
+     * @property {module:model/DarvazeRequestCarOwnershipDelegationResponse}
+     */
+    DarvazeRequestCarOwnershipDelegationResponse,
+
+    /**
+     * The DarvazeRequestForPostCodeValidationResponse model constructor.
+     * @property {module:model/DarvazeRequestForPostCodeValidationResponse}
+     */
+    DarvazeRequestForPostCodeValidationResponse,
+
+    /**
+     * The DarvazeVerifyCarOwnershipDelegationResponse model constructor.
+     * @property {module:model/DarvazeVerifyCarOwnershipDelegationResponse}
+     */
+    DarvazeVerifyCarOwnershipDelegationResponse,
+
+    /**
+     * The DarvazeVerifyCarOwnershipResponse model constructor.
+     * @property {module:model/DarvazeVerifyCarOwnershipResponse}
+     */
+    DarvazeVerifyCarOwnershipResponse,
+
+    /**
+     * The DarvazeVerifyPostCodeValidationResponse model constructor.
+     * @property {module:model/DarvazeVerifyPostCodeValidationResponse}
+     */
+    DarvazeVerifyPostCodeValidationResponse,
+
+    /**
+     * The DarvazeVerifyPostCodeValidationResponseStatus model constructor.
+     * @property {module:model/DarvazeVerifyPostCodeValidationResponseStatus}
+     */
+    DarvazeVerifyPostCodeValidationResponseStatus,
+
+    /**
      * The DivarIconsIconName model constructor.
      * @property {module:model/DivarIconsIconName}
      */
     DivarIconsIconName,
+
+    /**
+     * The EventsEventButton model constructor.
+     * @property {module:model/EventsEventButton}
+     */
+    EventsEventButton,
 
     /**
      * The EventsRegisterEventSubscriptionRequest model constructor.
@@ -1004,6 +1081,36 @@ export {
     PostGetPostStatsResponse,
 
     /**
+     * The PostSubmitEmergencyResidencePostRequest model constructor.
+     * @property {module:model/PostSubmitEmergencyResidencePostRequest}
+     */
+    PostSubmitEmergencyResidencePostRequest,
+
+    /**
+     * The PostSubmitEmergencyResidencePostResponse model constructor.
+     * @property {module:model/PostSubmitEmergencyResidencePostResponse}
+     */
+    PostSubmitEmergencyResidencePostResponse,
+
+    /**
+     * The PostSubmitPostRequest model constructor.
+     * @property {module:model/PostSubmitPostRequest}
+     */
+    PostSubmitPostRequest,
+
+    /**
+     * The PostSubmitPostResponse model constructor.
+     * @property {module:model/PostSubmitPostResponse}
+     */
+    PostSubmitPostResponse,
+
+    /**
+     * The PostTemporaryResidenceFields model constructor.
+     * @property {module:model/PostTemporaryResidenceFields}
+     */
+    PostTemporaryResidenceFields,
+
+    /**
      * The PremiumPanelBusinessDataSubBusinessType model constructor.
      * @property {module:model/PremiumPanelBusinessDataSubBusinessType}
      */
@@ -1062,6 +1169,18 @@ export {
      * @property {module:model/SemanticUserSemanticDeleted}
      */
     SemanticUserSemanticDeleted,
+
+    /**
+     * The SendEventRequestTargetType model constructor.
+     * @property {module:model/SendEventRequestTargetType}
+     */
+    SendEventRequestTargetType,
+
+    /**
+     * The TemporaryResidenceFieldsRoomsCount model constructor.
+     * @property {module:model/TemporaryResidenceFieldsRoomsCount}
+     */
+    TemporaryResidenceFieldsRoomsCount,
 
     /**
     * The AddonsApi service constructor.

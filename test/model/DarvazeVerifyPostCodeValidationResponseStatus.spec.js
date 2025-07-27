@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +46,13 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('DarvazeVerifyPostCodeValidationResponseStatus', function() {
+    it('should create an instance of DarvazeVerifyPostCodeValidationResponseStatus', function() {
+      // uncomment below and update the code to test DarvazeVerifyPostCodeValidationResponseStatus
+      //var instance = new KenarApiClient.DarvazeVerifyPostCodeValidationResponseStatus();
+      //expect(instance).to.be.a(KenarApiClient.DarvazeVerifyPostCodeValidationResponseStatus);
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

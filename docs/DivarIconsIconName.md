@@ -1591,4 +1591,26 @@
 
 * `PUZZLE_SPARKLES` (value: `"PUZZLE_SPARKLES"`)
 
+* `AI_STARS` (value: `"AI_STARS"`)
+
+* `CRISIS_SUPPORT` (value: `"CRISIS_SUPPORT"`)
+
+* `TEMPORARY_SHELTER` (value: `"TEMPORARY_SHELTER"`)
+
+* `VOLUNTEER_AID` (value: `"VOLUNTEER_AID"`)
+
+* `EMERGENCY_EQUIPMENT` (value: `"EMERGENCY_EQUIPMENT"`)
+
+* `RIDE_SHARING` (value: `"RIDE_SHARING"`)
+
+* `LINK` (value: `"LINK"`)
+
+* `BUSINESS_SERVICES` (value: `"BUSINESS_SERVICES"`)
+
+* `BELL` (value: `"BELL"`)
+
+* `THUMB_DOWN_BORDER` (value: `"THUMB_DOWN_BORDER"`)
+
+* `THUMB_UP_BORDER` (value: `"THUMB_UP_BORDER"`)
+
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.PostSubmitPostResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,19 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('PostSubmitPostResponse', function() {
+    it('should create an instance of PostSubmitPostResponse', function() {
+      // uncomment below and update the code to test PostSubmitPostResponse
+      //var instance = new KenarApiClient.PostSubmitPostResponse();
+      //expect(instance).to.be.a(KenarApiClient.PostSubmitPostResponse);
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property postToken (base name: "post_token")', function() {
+      // uncomment below and update the code to test the property postToken
+      //var instance = new KenarApiClient.PostSubmitPostResponse();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

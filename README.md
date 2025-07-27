@@ -156,6 +156,7 @@ Class | Method | HTTP request | Description
 *KenarApiClient.ChatAPIApi* | [**chatAPIGenerateUploadToken**](docs/ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 *KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
 *KenarApiClient.EventsApi* | [**eventsRegisterEventSubscription**](docs/EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
+*KenarApiClient.EventsApi* | [**eventsSendEvent**](docs/EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | Send an event to a user
 *KenarApiClient.FinderApi* | [**finderGetPost**](docs/FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 *KenarApiClient.FinderApi* | [**finderGetUser**](docs/FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 *KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
@@ -170,6 +171,8 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 *KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
+*KenarApiClient.PostApi* | [**postSubmitEmergencyResidencePost**](docs/PostApi.md#postSubmitEmergencyResidencePost) | **POST** /experimental/open-platform/posts/emergency-residence | Submit an emergency residence post
+*KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | Submit a post
 *KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic2**](docs/SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
@@ -267,7 +270,17 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.ChatapiMessageSenderSide](docs/ChatapiMessageSenderSide.md)
  - [KenarApiClient.ChatapiMessageSenderType](docs/ChatapiMessageSenderType.md)
  - [KenarApiClient.ChatapiMessageType](docs/ChatapiMessageType.md)
+ - [KenarApiClient.DarvazeGetCarOwnershipStatusResponse](docs/DarvazeGetCarOwnershipStatusResponse.md)
+ - [KenarApiClient.DarvazeGetCarOwnershipStatusResponseStatus](docs/DarvazeGetCarOwnershipStatusResponseStatus.md)
+ - [KenarApiClient.DarvazeIranianCarPlate](docs/DarvazeIranianCarPlate.md)
+ - [KenarApiClient.DarvazeRequestCarOwnershipDelegationResponse](docs/DarvazeRequestCarOwnershipDelegationResponse.md)
+ - [KenarApiClient.DarvazeRequestForPostCodeValidationResponse](docs/DarvazeRequestForPostCodeValidationResponse.md)
+ - [KenarApiClient.DarvazeVerifyCarOwnershipDelegationResponse](docs/DarvazeVerifyCarOwnershipDelegationResponse.md)
+ - [KenarApiClient.DarvazeVerifyCarOwnershipResponse](docs/DarvazeVerifyCarOwnershipResponse.md)
+ - [KenarApiClient.DarvazeVerifyPostCodeValidationResponse](docs/DarvazeVerifyPostCodeValidationResponse.md)
+ - [KenarApiClient.DarvazeVerifyPostCodeValidationResponseStatus](docs/DarvazeVerifyPostCodeValidationResponseStatus.md)
  - [KenarApiClient.DivarIconsIconName](docs/DivarIconsIconName.md)
+ - [KenarApiClient.EventsEventButton](docs/EventsEventButton.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequestEventType](docs/EventsRegisterEventSubscriptionRequestEventType.md)
  - [KenarApiClient.FinderGetAllDevelopmentPostsResponse](docs/FinderGetAllDevelopmentPostsResponse.md)
@@ -312,6 +325,11 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PostEditPostBody](docs/PostEditPostBody.md)
  - [KenarApiClient.PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [KenarApiClient.PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
+ - [KenarApiClient.PostSubmitEmergencyResidencePostRequest](docs/PostSubmitEmergencyResidencePostRequest.md)
+ - [KenarApiClient.PostSubmitEmergencyResidencePostResponse](docs/PostSubmitEmergencyResidencePostResponse.md)
+ - [KenarApiClient.PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
+ - [KenarApiClient.PostSubmitPostResponse](docs/PostSubmitPostResponse.md)
+ - [KenarApiClient.PostTemporaryResidenceFields](docs/PostTemporaryResidenceFields.md)
  - [KenarApiClient.PremiumPanelBusinessDataSubBusinessType](docs/PremiumPanelBusinessDataSubBusinessType.md)
  - [KenarApiClient.ProtobufAny](docs/ProtobufAny.md)
  - [KenarApiClient.SearchPostItemPrice](docs/SearchPostItemPrice.md)
@@ -322,6 +340,8 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.SemanticCreateUserSemanticResponse](docs/SemanticCreateUserSemanticResponse.md)
  - [KenarApiClient.SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
  - [KenarApiClient.SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
+ - [KenarApiClient.SendEventRequestTargetType](docs/SendEventRequestTargetType.md)
+ - [KenarApiClient.TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
 
 
 ## Documentation for Authorization

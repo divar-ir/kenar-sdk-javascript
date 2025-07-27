@@ -208,6 +208,13 @@ export default class OAuthScopeScope {
         "NOTIFICATION_ACCESS_REVOCATION" = "NOTIFICATION_ACCESS_REVOCATION";
 
     
+        /**
+         * value: "SEND_EVENT"
+         * @const
+         */
+        "SEND_EVENT" = "SEND_EVENT";
+
+    
 
     /**
     * Returns a <code>OAuthScopeScope</code> enum value from a Javascript object name.
