@@ -270,6 +270,8 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.ChatapiMessageSenderSide](docs/ChatapiMessageSenderSide.md)
  - [KenarApiClient.ChatapiMessageSenderType](docs/ChatapiMessageSenderType.md)
  - [KenarApiClient.ChatapiMessageType](docs/ChatapiMessageType.md)
+ - [KenarApiClient.DarvazeGenerateOrderForPostCodeValidationResponse](docs/DarvazeGenerateOrderForPostCodeValidationResponse.md)
+ - [KenarApiClient.DarvazeGenerateOrderForPostCodeValidationResponseStatus](docs/DarvazeGenerateOrderForPostCodeValidationResponseStatus.md)
  - [KenarApiClient.DarvazeGetCarOwnershipStatusResponse](docs/DarvazeGetCarOwnershipStatusResponse.md)
  - [KenarApiClient.DarvazeGetCarOwnershipStatusResponseStatus](docs/DarvazeGetCarOwnershipStatusResponseStatus.md)
  - [KenarApiClient.DarvazeIranianCarPlate](docs/DarvazeIranianCarPlate.md)

@@ -5654,6 +5654,27 @@ export default class DivarIconsIconName {
         "THUMB_UP_BORDER" = "THUMB_UP_BORDER";
 
     
+        /**
+         * value: "CALL_MADE"
+         * @const
+         */
+        "CALL_MADE" = "CALL_MADE";
+
+    
+        /**
+         * value: "CALL_RECEIVED"
+         * @const
+         */
+        "CALL_RECEIVED" = "CALL_RECEIVED";
+
+    
+        /**
+         * value: "CALL_O"
+         * @const
+         */
+        "CALL_O" = "CALL_O";
+
+    
 
     /**
     * Returns a <code>DivarIconsIconName</code> enum value from a Javascript object name.

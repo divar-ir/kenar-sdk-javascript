@@ -151,7 +151,7 @@ class PostTemporaryResidenceFields {
         this['has_own_image'] = hasOwnImage;
     }
 /**
-     * Returns Cost per extra person per night in Rial
+     * Returns Cost per extra person per night in Toman
      * @return {String}
      */
     getPriceCostPerExtraPerson() {
@@ -159,14 +159,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Cost per extra person per night in Rial
-     * @param {String} priceCostPerExtraPerson Cost per extra person per night in Rial
+     * Sets Cost per extra person per night in Toman
+     * @param {String} priceCostPerExtraPerson Cost per extra person per night in Toman
      */
     setPriceCostPerExtraPerson(priceCostPerExtraPerson) {
         this['price_cost_per_extra_person'] = priceCostPerExtraPerson;
     }
 /**
-     * Returns Price of the residence for regular days (Saturday to Tuesday) in Rial
+     * Returns Price of the residence for regular days (Saturday to Tuesday) in Toman
      * @return {String}
      */
     getPriceRegularDays() {
@@ -174,14 +174,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Price of the residence for regular days (Saturday to Tuesday) in Rial
-     * @param {String} priceRegularDays Price of the residence for regular days (Saturday to Tuesday) in Rial
+     * Sets Price of the residence for regular days (Saturday to Tuesday) in Toman
+     * @param {String} priceRegularDays Price of the residence for regular days (Saturday to Tuesday) in Toman
      */
     setPriceRegularDays(priceRegularDays) {
         this['price_regular_days'] = priceRegularDays;
     }
 /**
-     * Returns Price of the residence for special days (holidays and occasions) in Rial
+     * Returns Price of the residence for special days (holidays and occasions) in Toman
      * @return {String}
      */
     getPriceSpecialDays() {
@@ -189,14 +189,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Price of the residence for special days (holidays and occasions) in Rial
-     * @param {String} priceSpecialDays Price of the residence for special days (holidays and occasions) in Rial
+     * Sets Price of the residence for special days (holidays and occasions) in Toman
+     * @param {String} priceSpecialDays Price of the residence for special days (holidays and occasions) in Toman
      */
     setPriceSpecialDays(priceSpecialDays) {
         this['price_special_days'] = priceSpecialDays;
     }
 /**
-     * Returns Price of the residence for weekends (Wednesday to Friday) in Rial
+     * Returns Price of the residence for weekends (Wednesday to Friday) in Toman
      * @return {String}
      */
     getPriceWeekends() {
@@ -204,8 +204,8 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Price of the residence for weekends (Wednesday to Friday) in Rial
-     * @param {String} priceWeekends Price of the residence for weekends (Wednesday to Friday) in Rial
+     * Sets Price of the residence for weekends (Wednesday to Friday) in Toman
+     * @param {String} priceWeekends Price of the residence for weekends (Wednesday to Friday) in Toman
      */
     setPriceWeekends(priceWeekends) {
         this['price_weekends'] = priceWeekends;
@@ -262,25 +262,25 @@ PostTemporaryResidenceFields.prototype['extra_person_capacity'] = undefined;
 PostTemporaryResidenceFields.prototype['has_own_image'] = undefined;
 
 /**
- * Cost per extra person per night in Rial
+ * Cost per extra person per night in Toman
  * @member {String} price_cost_per_extra_person
  */
 PostTemporaryResidenceFields.prototype['price_cost_per_extra_person'] = undefined;
 
 /**
- * Price of the residence for regular days (Saturday to Tuesday) in Rial
+ * Price of the residence for regular days (Saturday to Tuesday) in Toman
  * @member {String} price_regular_days
  */
 PostTemporaryResidenceFields.prototype['price_regular_days'] = undefined;
 
 /**
- * Price of the residence for special days (holidays and occasions) in Rial
+ * Price of the residence for special days (holidays and occasions) in Toman
  * @member {String} price_special_days
  */
 PostTemporaryResidenceFields.prototype['price_special_days'] = undefined;
 
 /**
- * Price of the residence for weekends (Wednesday to Friday) in Rial
+ * Price of the residence for weekends (Wednesday to Friday) in Toman
  * @member {String} price_weekends
  */
 PostTemporaryResidenceFields.prototype['price_weekends'] = undefined;

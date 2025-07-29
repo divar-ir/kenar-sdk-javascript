@@ -1613,4 +1613,10 @@
 
 * `THUMB_UP_BORDER` (value: `"THUMB_UP_BORDER"`)
 
+* `CALL_MADE` (value: `"CALL_MADE"`)
+
+* `CALL_RECEIVED` (value: `"CALL_RECEIVED"`)
+
+* `CALL_O` (value: `"CALL_O"`)
+
 

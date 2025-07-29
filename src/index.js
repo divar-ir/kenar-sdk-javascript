@@ -101,6 +101,8 @@ import ChatapiMessage from './model/ChatapiMessage';
 import ChatapiMessageSenderSide from './model/ChatapiMessageSenderSide';
 import ChatapiMessageSenderType from './model/ChatapiMessageSenderType';
 import ChatapiMessageType from './model/ChatapiMessageType';
+import DarvazeGenerateOrderForPostCodeValidationResponse from './model/DarvazeGenerateOrderForPostCodeValidationResponse';
+import DarvazeGenerateOrderForPostCodeValidationResponseStatus from './model/DarvazeGenerateOrderForPostCodeValidationResponseStatus';
 import DarvazeGetCarOwnershipStatusResponse from './model/DarvazeGetCarOwnershipStatusResponse';
 import DarvazeGetCarOwnershipStatusResponseStatus from './model/DarvazeGetCarOwnershipStatusResponseStatus';
 import DarvazeIranianCarPlate from './model/DarvazeIranianCarPlate';
@@ -749,6 +751,18 @@ export {
      * @property {module:model/ChatapiMessageType}
      */
     ChatapiMessageType,
+
+    /**
+     * The DarvazeGenerateOrderForPostCodeValidationResponse model constructor.
+     * @property {module:model/DarvazeGenerateOrderForPostCodeValidationResponse}
+     */
+    DarvazeGenerateOrderForPostCodeValidationResponse,
+
+    /**
+     * The DarvazeGenerateOrderForPostCodeValidationResponseStatus model constructor.
+     * @property {module:model/DarvazeGenerateOrderForPostCodeValidationResponseStatus}
+     */
+    DarvazeGenerateOrderForPostCodeValidationResponseStatus,
 
     /**
      * The DarvazeGetCarOwnershipStatusResponse model constructor.
