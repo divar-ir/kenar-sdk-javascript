@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**postGetImageUploadURL**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 [**postGetPostStats**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 [**postSubmitEmergencyResidencePost**](PostApi.md#postSubmitEmergencyResidencePost) | **POST** /experimental/open-platform/posts/emergency-residence | Submit an emergency residence post
-[**postSubmitPost**](PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | Submit a post
+[**postSubmitPost**](PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
 
 
 
@@ -212,9 +212,9 @@ Name | Type | Description  | Notes
 
 > PostSubmitPostResponse postSubmitPost(postSubmitPostRequest)
 
-Submit a post
+ثبت آگهی
 
-This API allows you to submit a post. This needs &#x60;POST_SUBMIT&#x60; OAuth scope. You can submit a post with title, description, and images and other fields. There are general fields and category specific fields.
+این API به شما امکان ثبت آگهی را می‌دهد. این نیاز به دامنه OAuth &#x60;POST_SUBMIT&#x60; دارد. می‌توانید آگهی را با عنوان، توضیحات، تصاویر و سایر فیلدها ثبت کنید. فیلدهای عمومی و فیلدهای مخصوص دسته‌بندی وجود دارند.
 
 ### Example
 

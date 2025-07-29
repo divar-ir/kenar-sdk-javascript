@@ -172,7 +172,7 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 *KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 *KenarApiClient.PostApi* | [**postSubmitEmergencyResidencePost**](docs/PostApi.md#postSubmitEmergencyResidencePost) | **POST** /experimental/open-platform/posts/emergency-residence | Submit an emergency residence post
-*KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | Submit a post
+*KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic2**](docs/SemanticApi.md#semanticCreateUserSemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر

@@ -231,8 +231,8 @@ export default class PostApi {
 
 
     /**
-     * Submit a post
-     * This API allows you to submit a post. This needs `POST_SUBMIT` OAuth scope. You can submit a post with title, description, and images and other fields. There are general fields and category specific fields.
+     * ثبت آگهی
+     * این API به شما امکان ثبت آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_SUBMIT` دارد. می‌توانید آگهی را با عنوان، توضیحات، تصاویر و سایر فیلدها ثبت کنید. فیلدهای عمومی و فیلدهای مخصوص دسته‌بندی وجود دارند.
      * @param {module:model/PostSubmitPostRequest} postSubmitPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
      */
@@ -264,8 +264,8 @@ export default class PostApi {
     }
 
     /**
-     * Submit a post
-     * This API allows you to submit a post. This needs `POST_SUBMIT` OAuth scope. You can submit a post with title, description, and images and other fields. There are general fields and category specific fields.
+     * ثبت آگهی
+     * این API به شما امکان ثبت آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_SUBMIT` دارد. می‌توانید آگهی را با عنوان، توضیحات، تصاویر و سایر فیلدها ثبت کنید. فیلدهای عمومی و فیلدهای مخصوص دسته‌بندی وجود دارند.
      * @param {module:model/PostSubmitPostRequest} postSubmitPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
      */
