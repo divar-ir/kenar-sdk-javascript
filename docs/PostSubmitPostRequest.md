@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chatEnabled** | **Boolean** | Whether to enable chat | [optional] 
-**city** | **String** | City of the post | [optional] 
-**description** | **String** | Description of the post | [optional] 
-**district** | **String** | District of the post | [optional] 
-**hidePhone** | **Boolean** | Whether to hide the phone number from demand users | [optional] 
+**chatEnabled** | **Boolean** | امکان چت فعال باشد | [optional] 
+**city** | **String** | شهر آگهی | [optional] 
+**description** | **String** | توضیحات آگهی | [optional] 
+**district** | **String** | محله آگهی | [optional] 
+**hidePhone** | **Boolean** | عدم نمایش شماره تماس به کاربران | [optional] 
 **images** | **[String]** |  | [optional] 
-**latitude** | **Number** | Latitude of the post | [optional] 
-**longitude** | **Number** | Longitude of the post | [optional] 
+**latitude** | **Number** | عرض جغرافیایی آگهی | [optional] 
+**longitude** | **Number** | طول جغرافیایی آگهی | [optional] 
 **temporaryResidence** | [**PostTemporaryResidenceFields**](PostTemporaryResidenceFields.md) |  | [optional] 
-**title** | **String** | Title of the post | [optional] 
+**title** | **String** | عنوان آگهی | [optional] 
 
 

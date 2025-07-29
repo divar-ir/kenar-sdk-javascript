@@ -117,7 +117,7 @@ class PostSubmitPostRequest {
     }
 
 /**
-     * Returns Whether to enable chat
+     * Returns امکان چت فعال باشد
      * @return {Boolean}
      */
     getChatEnabled() {
@@ -125,14 +125,14 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets Whether to enable chat
-     * @param {Boolean} chatEnabled Whether to enable chat
+     * Sets امکان چت فعال باشد
+     * @param {Boolean} chatEnabled امکان چت فعال باشد
      */
     setChatEnabled(chatEnabled) {
         this['chat_enabled'] = chatEnabled;
     }
 /**
-     * Returns City of the post
+     * Returns شهر آگهی
      * @return {String}
      */
     getCity() {
@@ -140,14 +140,14 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets City of the post
-     * @param {String} city City of the post
+     * Sets شهر آگهی
+     * @param {String} city شهر آگهی
      */
     setCity(city) {
         this['city'] = city;
     }
 /**
-     * Returns Description of the post
+     * Returns توضیحات آگهی
      * @return {String}
      */
     getDescription() {
@@ -155,14 +155,14 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets Description of the post
-     * @param {String} description Description of the post
+     * Sets توضیحات آگهی
+     * @param {String} description توضیحات آگهی
      */
     setDescription(description) {
         this['description'] = description;
     }
 /**
-     * Returns District of the post
+     * Returns محله آگهی
      * @return {String}
      */
     getDistrict() {
@@ -170,14 +170,14 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets District of the post
-     * @param {String} district District of the post
+     * Sets محله آگهی
+     * @param {String} district محله آگهی
      */
     setDistrict(district) {
         this['district'] = district;
     }
 /**
-     * Returns Whether to hide the phone number from demand users
+     * Returns عدم نمایش شماره تماس به کاربران
      * @return {Boolean}
      */
     getHidePhone() {
@@ -185,8 +185,8 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets Whether to hide the phone number from demand users
-     * @param {Boolean} hidePhone Whether to hide the phone number from demand users
+     * Sets عدم نمایش شماره تماس به کاربران
+     * @param {Boolean} hidePhone عدم نمایش شماره تماس به کاربران
      */
     setHidePhone(hidePhone) {
         this['hide_phone'] = hidePhone;
@@ -205,7 +205,7 @@ class PostSubmitPostRequest {
         this['images'] = images;
     }
 /**
-     * Returns Latitude of the post
+     * Returns عرض جغرافیایی آگهی
      * @return {Number}
      */
     getLatitude() {
@@ -213,14 +213,14 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets Latitude of the post
-     * @param {Number} latitude Latitude of the post
+     * Sets عرض جغرافیایی آگهی
+     * @param {Number} latitude عرض جغرافیایی آگهی
      */
     setLatitude(latitude) {
         this['latitude'] = latitude;
     }
 /**
-     * Returns Longitude of the post
+     * Returns طول جغرافیایی آگهی
      * @return {Number}
      */
     getLongitude() {
@@ -228,8 +228,8 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets Longitude of the post
-     * @param {Number} longitude Longitude of the post
+     * Sets طول جغرافیایی آگهی
+     * @param {Number} longitude طول جغرافیایی آگهی
      */
     setLongitude(longitude) {
         this['longitude'] = longitude;
@@ -248,7 +248,7 @@ class PostSubmitPostRequest {
         this['temporary_residence'] = temporaryResidence;
     }
 /**
-     * Returns Title of the post
+     * Returns عنوان آگهی
      * @return {String}
      */
     getTitle() {
@@ -256,8 +256,8 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets Title of the post
-     * @param {String} title Title of the post
+     * Sets عنوان آگهی
+     * @param {String} title عنوان آگهی
      */
     setTitle(title) {
         this['title'] = title;
@@ -268,31 +268,31 @@ class PostSubmitPostRequest {
 
 
 /**
- * Whether to enable chat
+ * امکان چت فعال باشد
  * @member {Boolean} chat_enabled
  */
 PostSubmitPostRequest.prototype['chat_enabled'] = undefined;
 
 /**
- * City of the post
+ * شهر آگهی
  * @member {String} city
  */
 PostSubmitPostRequest.prototype['city'] = undefined;
 
 /**
- * Description of the post
+ * توضیحات آگهی
  * @member {String} description
  */
 PostSubmitPostRequest.prototype['description'] = undefined;
 
 /**
- * District of the post
+ * محله آگهی
  * @member {String} district
  */
 PostSubmitPostRequest.prototype['district'] = undefined;
 
 /**
- * Whether to hide the phone number from demand users
+ * عدم نمایش شماره تماس به کاربران
  * @member {Boolean} hide_phone
  */
 PostSubmitPostRequest.prototype['hide_phone'] = undefined;
@@ -303,13 +303,13 @@ PostSubmitPostRequest.prototype['hide_phone'] = undefined;
 PostSubmitPostRequest.prototype['images'] = undefined;
 
 /**
- * Latitude of the post
+ * عرض جغرافیایی آگهی
  * @member {Number} latitude
  */
 PostSubmitPostRequest.prototype['latitude'] = undefined;
 
 /**
- * Longitude of the post
+ * طول جغرافیایی آگهی
  * @member {Number} longitude
  */
 PostSubmitPostRequest.prototype['longitude'] = undefined;
@@ -320,7 +320,7 @@ PostSubmitPostRequest.prototype['longitude'] = undefined;
 PostSubmitPostRequest.prototype['temporary_residence'] = undefined;
 
 /**
- * Title of the post
+ * عنوان آگهی
  * @member {String} title
  */
 PostSubmitPostRequest.prototype['title'] = undefined;

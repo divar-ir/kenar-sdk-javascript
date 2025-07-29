@@ -106,7 +106,7 @@ class PostTemporaryResidenceFields {
     }
 
 /**
-     * Returns Area of the residence in square meters
+     * Returns متراژ اقامتگاه به متر مربع
      * @return {Number}
      */
     getArea() {
@@ -114,14 +114,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Area of the residence in square meters
-     * @param {Number} area Area of the residence in square meters
+     * Sets متراژ اقامتگاه به متر مربع
+     * @param {Number} area متراژ اقامتگاه به متر مربع
      */
     setArea(area) {
         this['area'] = area;
     }
 /**
-     * Returns Number of allowed extra people that can stay in the residence
+     * Returns تعداد افراد اضافه مجاز در اقامتگاه
      * @return {Number}
      */
     getExtraPersonCapacity() {
@@ -129,14 +129,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Number of allowed extra people that can stay in the residence
-     * @param {Number} extraPersonCapacity Number of allowed extra people that can stay in the residence
+     * Sets تعداد افراد اضافه مجاز در اقامتگاه
+     * @param {Number} extraPersonCapacity تعداد افراد اضافه مجاز در اقامتگاه
      */
     setExtraPersonCapacity(extraPersonCapacity) {
         this['extra_person_capacity'] = extraPersonCapacity;
     }
 /**
-     * Returns Whether the images are of the property itself and not decorative/stock photos.
+     * Returns تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
      * @return {Boolean}
      */
     getHasOwnImage() {
@@ -144,14 +144,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Whether the images are of the property itself and not decorative/stock photos.
-     * @param {Boolean} hasOwnImage Whether the images are of the property itself and not decorative/stock photos.
+     * Sets تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * @param {Boolean} hasOwnImage تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
      */
     setHasOwnImage(hasOwnImage) {
         this['has_own_image'] = hasOwnImage;
     }
 /**
-     * Returns Cost per extra person per night in Toman
+     * Returns هزینه هر نفر اضافه به ازای هر شب به تومان
      * @return {String}
      */
     getPriceCostPerExtraPerson() {
@@ -159,14 +159,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Cost per extra person per night in Toman
-     * @param {String} priceCostPerExtraPerson Cost per extra person per night in Toman
+     * Sets هزینه هر نفر اضافه به ازای هر شب به تومان
+     * @param {String} priceCostPerExtraPerson هزینه هر نفر اضافه به ازای هر شب به تومان
      */
     setPriceCostPerExtraPerson(priceCostPerExtraPerson) {
         this['price_cost_per_extra_person'] = priceCostPerExtraPerson;
     }
 /**
-     * Returns Price of the residence for regular days (Saturday to Tuesday) in Toman
+     * Returns قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان
      * @return {String}
      */
     getPriceRegularDays() {
@@ -174,14 +174,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Price of the residence for regular days (Saturday to Tuesday) in Toman
-     * @param {String} priceRegularDays Price of the residence for regular days (Saturday to Tuesday) in Toman
+     * Sets قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان
+     * @param {String} priceRegularDays قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان
      */
     setPriceRegularDays(priceRegularDays) {
         this['price_regular_days'] = priceRegularDays;
     }
 /**
-     * Returns Price of the residence for special days (holidays and occasions) in Toman
+     * Returns قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان
      * @return {String}
      */
     getPriceSpecialDays() {
@@ -189,14 +189,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Price of the residence for special days (holidays and occasions) in Toman
-     * @param {String} priceSpecialDays Price of the residence for special days (holidays and occasions) in Toman
+     * Sets قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان
+     * @param {String} priceSpecialDays قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان
      */
     setPriceSpecialDays(priceSpecialDays) {
         this['price_special_days'] = priceSpecialDays;
     }
 /**
-     * Returns Price of the residence for weekends (Wednesday to Friday) in Toman
+     * Returns قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان
      * @return {String}
      */
     getPriceWeekends() {
@@ -204,14 +204,14 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Price of the residence for weekends (Wednesday to Friday) in Toman
-     * @param {String} priceWeekends Price of the residence for weekends (Wednesday to Friday) in Toman
+     * Sets قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان
+     * @param {String} priceWeekends قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان
      */
     setPriceWeekends(priceWeekends) {
         this['price_weekends'] = priceWeekends;
     }
 /**
-     * Returns Number of allowed regular people that can stay in the residence
+     * Returns ظرفیت استاندارد افراد در اقامتگاه
      * @return {Number}
      */
     getRegularPersonCapacity() {
@@ -219,8 +219,8 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets Number of allowed regular people that can stay in the residence
-     * @param {Number} regularPersonCapacity Number of allowed regular people that can stay in the residence
+     * Sets ظرفیت استاندارد افراد در اقامتگاه
+     * @param {Number} regularPersonCapacity ظرفیت استاندارد افراد در اقامتگاه
      */
     setRegularPersonCapacity(regularPersonCapacity) {
         this['regular_person_capacity'] = regularPersonCapacity;
@@ -244,49 +244,49 @@ class PostTemporaryResidenceFields {
 
 
 /**
- * Area of the residence in square meters
+ * متراژ اقامتگاه به متر مربع
  * @member {Number} area
  */
 PostTemporaryResidenceFields.prototype['area'] = undefined;
 
 /**
- * Number of allowed extra people that can stay in the residence
+ * تعداد افراد اضافه مجاز در اقامتگاه
  * @member {Number} extra_person_capacity
  */
 PostTemporaryResidenceFields.prototype['extra_person_capacity'] = undefined;
 
 /**
- * Whether the images are of the property itself and not decorative/stock photos.
+ * تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
  * @member {Boolean} has_own_image
  */
 PostTemporaryResidenceFields.prototype['has_own_image'] = undefined;
 
 /**
- * Cost per extra person per night in Toman
+ * هزینه هر نفر اضافه به ازای هر شب به تومان
  * @member {String} price_cost_per_extra_person
  */
 PostTemporaryResidenceFields.prototype['price_cost_per_extra_person'] = undefined;
 
 /**
- * Price of the residence for regular days (Saturday to Tuesday) in Toman
+ * قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان
  * @member {String} price_regular_days
  */
 PostTemporaryResidenceFields.prototype['price_regular_days'] = undefined;
 
 /**
- * Price of the residence for special days (holidays and occasions) in Toman
+ * قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان
  * @member {String} price_special_days
  */
 PostTemporaryResidenceFields.prototype['price_special_days'] = undefined;
 
 /**
- * Price of the residence for weekends (Wednesday to Friday) in Toman
+ * قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان
  * @member {String} price_weekends
  */
 PostTemporaryResidenceFields.prototype['price_weekends'] = undefined;
 
 /**
- * Number of allowed regular people that can stay in the residence
+ * ظرفیت استاندارد افراد در اقامتگاه
  * @member {Number} regular_person_capacity
  */
 PostTemporaryResidenceFields.prototype['regular_person_capacity'] = undefined;
