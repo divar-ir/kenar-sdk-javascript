@@ -48,6 +48,9 @@ class ManagementDevelopmentPost {
         if (data) {
             obj = obj || new ManagementDevelopmentPost();
 
+            if (data.hasOwnProperty('category')) {
+                obj['category'] = ApiClient.convertToType(data['category'], 'String');
+            }
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
             }
@@ -71,6 +74,10 @@ class ManagementDevelopmentPost {
      */
     static validateJSON(data) {
         // ensure the json data is a string
+        if (data['category'] && !(typeof data['category'] === 'string' || data['category'] instanceof String)) {
+            throw new Error("Expected the field `category` to be a primitive type in the JSON string but got " + data['category']);
+        }
+        // ensure the json data is a string
         if (data['mng_token'] && !(typeof data['mng_token'] === 'string' || data['mng_token'] instanceof String)) {
             throw new Error("Expected the field `mng_token` to be a primitive type in the JSON string but got " + data['mng_token']);
         }
@@ -82,6 +89,19 @@ class ManagementDevelopmentPost {
         return true;
     }
 
+/**
+     * @return {String}
+     */
+    getCategory() {
+        return this.category;
+    }
+
+    /**
+     * @param {String} category
+     */
+    setCategory(category) {
+        this['category'] = category;
+    }
 /**
      * @return {Date}
      */
@@ -138,6 +158,11 @@ class ManagementDevelopmentPost {
 }
 
 
+
+/**
+ * @member {String} category
+ */
+ManagementDevelopmentPost.prototype['category'] = undefined;
 
 /**
  * @member {Date} created_at

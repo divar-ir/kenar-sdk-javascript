@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**position** | [**AddonSecondaryLinkagePosition**](AddonSecondaryLinkagePosition.md) |  | [optional] 
+**position** | [**AddonsAddonSecondaryLinkagePosition**](AddonsAddonSecondaryLinkagePosition.md) |  | [optional] 
 **widgets** | **Object** |  | [optional] 
 
 

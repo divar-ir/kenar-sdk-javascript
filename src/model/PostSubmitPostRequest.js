@@ -12,7 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import OpenPlatformpostServicesFields from './OpenPlatformpostServicesFields';
 import PostTemporaryResidenceFields from './PostTemporaryResidenceFields';
+import SubmitPostRequestLocationType from './SubmitPostRequestLocationType';
 
 /**
  * The PostSubmitPostRequest model module.
@@ -69,8 +71,14 @@ class PostSubmitPostRequest {
             if (data.hasOwnProperty('latitude')) {
                 obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
             }
+            if (data.hasOwnProperty('location_type')) {
+                obj['location_type'] = SubmitPostRequestLocationType.constructFromObject(data['location_type']);
+            }
             if (data.hasOwnProperty('longitude')) {
                 obj['longitude'] = ApiClient.convertToType(data['longitude'], 'Number');
+            }
+            if (data.hasOwnProperty('services')) {
+                obj['services'] = OpenPlatformpostServicesFields.constructFromObject(data['services']);
             }
             if (data.hasOwnProperty('temporary_residence')) {
                 obj['temporary_residence'] = PostTemporaryResidenceFields.constructFromObject(data['temporary_residence']);
@@ -103,6 +111,10 @@ class PostSubmitPostRequest {
         // ensure the json data is an array
         if (!Array.isArray(data['images'])) {
             throw new Error("Expected the field `images` to be an array in the JSON data but got " + data['images']);
+        }
+        // validate the optional field `services`
+        if (data['services']) { // data not null
+          OpenPlatformpostServicesFields.validateJSON(data['services']);
         }
         // validate the optional field `temporary_residence`
         if (data['temporary_residence']) { // data not null
@@ -220,6 +232,19 @@ class PostSubmitPostRequest {
         this['latitude'] = latitude;
     }
 /**
+     * @return {module:model/SubmitPostRequestLocationType}
+     */
+    getLocationType() {
+        return this.location_type;
+    }
+
+    /**
+     * @param {module:model/SubmitPostRequestLocationType} locationType
+     */
+    setLocationType(locationType) {
+        this['location_type'] = locationType;
+    }
+/**
      * Returns طول جغرافیایی آگهی
      * @return {Number}
      */
@@ -233,6 +258,19 @@ class PostSubmitPostRequest {
      */
     setLongitude(longitude) {
         this['longitude'] = longitude;
+    }
+/**
+     * @return {module:model/OpenPlatformpostServicesFields}
+     */
+    getServices() {
+        return this.services;
+    }
+
+    /**
+     * @param {module:model/OpenPlatformpostServicesFields} services
+     */
+    setServices(services) {
+        this['services'] = services;
     }
 /**
      * @return {module:model/PostTemporaryResidenceFields}
@@ -309,10 +347,20 @@ PostSubmitPostRequest.prototype['images'] = undefined;
 PostSubmitPostRequest.prototype['latitude'] = undefined;
 
 /**
+ * @member {module:model/SubmitPostRequestLocationType} location_type
+ */
+PostSubmitPostRequest.prototype['location_type'] = undefined;
+
+/**
  * طول جغرافیایی آگهی
  * @member {Number} longitude
  */
 PostSubmitPostRequest.prototype['longitude'] = undefined;
+
+/**
+ * @member {module:model/OpenPlatformpostServicesFields} services
+ */
+PostSubmitPostRequest.prototype['services'] = undefined;
 
 /**
  * @member {module:model/PostTemporaryResidenceFields} temporary_residence

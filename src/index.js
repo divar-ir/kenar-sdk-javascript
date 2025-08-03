@@ -13,7 +13,6 @@
 
 
 import ApiClient from './ApiClient';
-import AddonSecondaryLinkagePosition from './model/AddonSecondaryLinkagePosition';
 import AddonSemanticCarVerificationStage from './model/AddonSemanticCarVerificationStage';
 import AddonSemanticIdentityVerificationResult from './model/AddonSemanticIdentityVerificationResult';
 import AddonSemanticIdentityVerificationStage from './model/AddonSemanticIdentityVerificationStage';
@@ -25,6 +24,7 @@ import AddonsAction from './model/AddonsAction';
 import AddonsAddonLinkage from './model/AddonsAddonLinkage';
 import AddonsAddonMetaData from './model/AddonsAddonMetaData';
 import AddonsAddonSecondaryLinkage from './model/AddonsAddonSecondaryLinkage';
+import AddonsAddonSecondaryLinkagePosition from './model/AddonsAddonSecondaryLinkagePosition';
 import AddonsAddonSecondaryLinks from './model/AddonsAddonSecondaryLinks';
 import AddonsAddonSelector from './model/AddonsAddonSelector';
 import AddonsAddonSemantic from './model/AddonsAddonSemantic';
@@ -45,7 +45,6 @@ import AddonsEventRow from './model/AddonsEventRow';
 import AddonsGetBusinessAddonsResponse from './model/AddonsGetBusinessAddonsResponse';
 import AddonsGetDynamicAction from './model/AddonsGetDynamicAction';
 import AddonsGetPostAddonsResponse from './model/AddonsGetPostAddonsResponse';
-import AddonsGetUserAddonsResponse from './model/AddonsGetUserAddonsResponse';
 import AddonsGetUserPostAddonsResponse from './model/AddonsGetUserPostAddonsResponse';
 import AddonsGroupInfoRow from './model/AddonsGroupInfoRow';
 import AddonsGroupInfoRowGroupInfoItem from './model/AddonsGroupInfoRowGroupInfoItem';
@@ -101,17 +100,6 @@ import ChatapiMessage from './model/ChatapiMessage';
 import ChatapiMessageSenderSide from './model/ChatapiMessageSenderSide';
 import ChatapiMessageSenderType from './model/ChatapiMessageSenderType';
 import ChatapiMessageType from './model/ChatapiMessageType';
-import DarvazeGenerateOrderForPostCodeValidationResponse from './model/DarvazeGenerateOrderForPostCodeValidationResponse';
-import DarvazeGenerateOrderForPostCodeValidationResponseStatus from './model/DarvazeGenerateOrderForPostCodeValidationResponseStatus';
-import DarvazeGetCarOwnershipStatusResponse from './model/DarvazeGetCarOwnershipStatusResponse';
-import DarvazeGetCarOwnershipStatusResponseStatus from './model/DarvazeGetCarOwnershipStatusResponseStatus';
-import DarvazeIranianCarPlate from './model/DarvazeIranianCarPlate';
-import DarvazeRequestCarOwnershipDelegationResponse from './model/DarvazeRequestCarOwnershipDelegationResponse';
-import DarvazeRequestForPostCodeValidationResponse from './model/DarvazeRequestForPostCodeValidationResponse';
-import DarvazeVerifyCarOwnershipDelegationResponse from './model/DarvazeVerifyCarOwnershipDelegationResponse';
-import DarvazeVerifyCarOwnershipResponse from './model/DarvazeVerifyCarOwnershipResponse';
-import DarvazeVerifyPostCodeValidationResponse from './model/DarvazeVerifyPostCodeValidationResponse';
-import DarvazeVerifyPostCodeValidationResponseStatus from './model/DarvazeVerifyPostCodeValidationResponseStatus';
 import DivarIconsIconName from './model/DivarIconsIconName';
 import EventsEventButton from './model/EventsEventButton';
 import EventsRegisterEventSubscriptionRequest from './model/EventsRegisterEventSubscriptionRequest';
@@ -143,6 +131,7 @@ import MessageSender from './model/MessageSender';
 import MessageVideoData from './model/MessageVideoData';
 import MessageVoiceData from './model/MessageVoiceData';
 import OAuthScopeScope from './model/OAuthScopeScope';
+import OpenPlatformpostServicesFields from './model/OpenPlatformpostServicesFields';
 import PaymentGetBalanceResponse from './model/PaymentGetBalanceResponse';
 import PaymentGetPostPricingResponse from './model/PaymentGetPostPricingResponse';
 import PaymentGetTransactionResponse from './model/PaymentGetTransactionResponse';
@@ -158,6 +147,7 @@ import PaymentTransactionType from './model/PaymentTransactionType';
 import PostEditPostBody from './model/PostEditPostBody';
 import PostGetImageUploadURLResponse from './model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
+import PostServicesFieldsCategory from './model/PostServicesFieldsCategory';
 import PostSubmitEmergencyResidencePostRequest from './model/PostSubmitEmergencyResidencePostRequest';
 import PostSubmitEmergencyResidencePostResponse from './model/PostSubmitEmergencyResidencePostResponse';
 import PostSubmitPostRequest from './model/PostSubmitPostRequest';
@@ -174,6 +164,7 @@ import SemanticCreateUserSemanticResponse from './model/SemanticCreateUserSemant
 import SemanticPostSemanticDeleted from './model/SemanticPostSemanticDeleted';
 import SemanticUserSemanticDeleted from './model/SemanticUserSemanticDeleted';
 import SendEventRequestTargetType from './model/SendEventRequestTargetType';
+import SubmitPostRequestLocationType from './model/SubmitPostRequestLocationType';
 import TemporaryResidenceFieldsRoomsCount from './model/TemporaryResidenceFieldsRoomsCount';
 import AddonsApi from './api/AddonsApi';
 import AssetsApi from './api/AssetsApi';
@@ -223,12 +214,6 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
-
-    /**
-     * The AddonSecondaryLinkagePosition model constructor.
-     * @property {module:model/AddonSecondaryLinkagePosition}
-     */
-    AddonSecondaryLinkagePosition,
 
     /**
      * The AddonSemanticCarVerificationStage model constructor.
@@ -295,6 +280,12 @@ export {
      * @property {module:model/AddonsAddonSecondaryLinkage}
      */
     AddonsAddonSecondaryLinkage,
+
+    /**
+     * The AddonsAddonSecondaryLinkagePosition model constructor.
+     * @property {module:model/AddonsAddonSecondaryLinkagePosition}
+     */
+    AddonsAddonSecondaryLinkagePosition,
 
     /**
      * The AddonsAddonSecondaryLinks model constructor.
@@ -415,12 +406,6 @@ export {
      * @property {module:model/AddonsGetPostAddonsResponse}
      */
     AddonsGetPostAddonsResponse,
-
-    /**
-     * The AddonsGetUserAddonsResponse model constructor.
-     * @property {module:model/AddonsGetUserAddonsResponse}
-     */
-    AddonsGetUserAddonsResponse,
 
     /**
      * The AddonsGetUserPostAddonsResponse model constructor.
@@ -753,72 +738,6 @@ export {
     ChatapiMessageType,
 
     /**
-     * The DarvazeGenerateOrderForPostCodeValidationResponse model constructor.
-     * @property {module:model/DarvazeGenerateOrderForPostCodeValidationResponse}
-     */
-    DarvazeGenerateOrderForPostCodeValidationResponse,
-
-    /**
-     * The DarvazeGenerateOrderForPostCodeValidationResponseStatus model constructor.
-     * @property {module:model/DarvazeGenerateOrderForPostCodeValidationResponseStatus}
-     */
-    DarvazeGenerateOrderForPostCodeValidationResponseStatus,
-
-    /**
-     * The DarvazeGetCarOwnershipStatusResponse model constructor.
-     * @property {module:model/DarvazeGetCarOwnershipStatusResponse}
-     */
-    DarvazeGetCarOwnershipStatusResponse,
-
-    /**
-     * The DarvazeGetCarOwnershipStatusResponseStatus model constructor.
-     * @property {module:model/DarvazeGetCarOwnershipStatusResponseStatus}
-     */
-    DarvazeGetCarOwnershipStatusResponseStatus,
-
-    /**
-     * The DarvazeIranianCarPlate model constructor.
-     * @property {module:model/DarvazeIranianCarPlate}
-     */
-    DarvazeIranianCarPlate,
-
-    /**
-     * The DarvazeRequestCarOwnershipDelegationResponse model constructor.
-     * @property {module:model/DarvazeRequestCarOwnershipDelegationResponse}
-     */
-    DarvazeRequestCarOwnershipDelegationResponse,
-
-    /**
-     * The DarvazeRequestForPostCodeValidationResponse model constructor.
-     * @property {module:model/DarvazeRequestForPostCodeValidationResponse}
-     */
-    DarvazeRequestForPostCodeValidationResponse,
-
-    /**
-     * The DarvazeVerifyCarOwnershipDelegationResponse model constructor.
-     * @property {module:model/DarvazeVerifyCarOwnershipDelegationResponse}
-     */
-    DarvazeVerifyCarOwnershipDelegationResponse,
-
-    /**
-     * The DarvazeVerifyCarOwnershipResponse model constructor.
-     * @property {module:model/DarvazeVerifyCarOwnershipResponse}
-     */
-    DarvazeVerifyCarOwnershipResponse,
-
-    /**
-     * The DarvazeVerifyPostCodeValidationResponse model constructor.
-     * @property {module:model/DarvazeVerifyPostCodeValidationResponse}
-     */
-    DarvazeVerifyPostCodeValidationResponse,
-
-    /**
-     * The DarvazeVerifyPostCodeValidationResponseStatus model constructor.
-     * @property {module:model/DarvazeVerifyPostCodeValidationResponseStatus}
-     */
-    DarvazeVerifyPostCodeValidationResponseStatus,
-
-    /**
      * The DivarIconsIconName model constructor.
      * @property {module:model/DivarIconsIconName}
      */
@@ -1005,6 +924,12 @@ export {
     OAuthScopeScope,
 
     /**
+     * The OpenPlatformpostServicesFields model constructor.
+     * @property {module:model/OpenPlatformpostServicesFields}
+     */
+    OpenPlatformpostServicesFields,
+
+    /**
      * The PaymentGetBalanceResponse model constructor.
      * @property {module:model/PaymentGetBalanceResponse}
      */
@@ -1093,6 +1018,12 @@ export {
      * @property {module:model/PostGetPostStatsResponse}
      */
     PostGetPostStatsResponse,
+
+    /**
+     * The PostServicesFieldsCategory model constructor.
+     * @property {module:model/PostServicesFieldsCategory}
+     */
+    PostServicesFieldsCategory,
 
     /**
      * The PostSubmitEmergencyResidencePostRequest model constructor.
@@ -1189,6 +1120,12 @@ export {
      * @property {module:model/SendEventRequestTargetType}
      */
     SendEventRequestTargetType,
+
+    /**
+     * The SubmitPostRequestLocationType model constructor.
+     * @property {module:model/SubmitPostRequestLocationType}
+     */
+    SubmitPostRequestLocationType,
 
     /**
      * The TemporaryResidenceFieldsRoomsCount model constructor.

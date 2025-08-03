@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.ManagementDevelopmentPost();
+    instance = new KenarApiClient.OpenPlatformpostServicesFields();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,46 @@
       object[property] = value;
   }
 
-  describe('ManagementDevelopmentPost', function() {
-    it('should create an instance of ManagementDevelopmentPost', function() {
-      // uncomment below and update the code to test ManagementDevelopmentPost
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
-      //expect(instance).to.be.a(KenarApiClient.ManagementDevelopmentPost);
+  describe('OpenPlatformpostServicesFields', function() {
+    it('should create an instance of OpenPlatformpostServicesFields', function() {
+      // uncomment below and update the code to test OpenPlatformpostServicesFields
+      //var instance = new KenarApiClient.OpenPlatformpostServicesFields();
+      //expect(instance).to.be.a(KenarApiClient.OpenPlatformpostServicesFields);
     });
 
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
+      //var instance = new KenarApiClient.OpenPlatformpostServicesFields();
       //expect(instance).to.be();
     });
 
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
+    it('should have the property expertiseIds (base name: "expertise_ids")', function() {
+      // uncomment below and update the code to test the property expertiseIds
+      //var instance = new KenarApiClient.OpenPlatformpostServicesFields();
       //expect(instance).to.be();
     });
 
-    it('should have the property mngToken (base name: "mng_token")', function() {
-      // uncomment below and update the code to test the property mngToken
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
+    it('should have the property workHoursEnd (base name: "work_hours_end")', function() {
+      // uncomment below and update the code to test the property workHoursEnd
+      //var instance = new KenarApiClient.OpenPlatformpostServicesFields();
       //expect(instance).to.be();
     });
 
-    it('should have the property preset (base name: "preset")', function() {
-      // uncomment below and update the code to test the property preset
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
+    it('should have the property workHoursStart (base name: "work_hours_start")', function() {
+      // uncomment below and update the code to test the property workHoursStart
+      //var instance = new KenarApiClient.OpenPlatformpostServicesFields();
       //expect(instance).to.be();
     });
 
-    it('should have the property token (base name: "token")', function() {
-      // uncomment below and update the code to test the property token
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
+    it('should have the property workOnHolidays (base name: "work_on_holidays")', function() {
+      // uncomment below and update the code to test the property workOnHolidays
+      //var instance = new KenarApiClient.OpenPlatformpostServicesFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property works247 (base name: "works_24_7")', function() {
+      // uncomment below and update the code to test the property works247
+      //var instance = new KenarApiClient.OpenPlatformpostServicesFields();
       //expect(instance).to.be();
     });
 

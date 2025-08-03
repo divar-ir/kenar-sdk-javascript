@@ -96,8 +96,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property locationType (base name: "location_type")', function() {
+      // uncomment below and update the code to test the property locationType
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property longitude (base name: "longitude")', function() {
       // uncomment below and update the code to test the property longitude
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property services (base name: "services")', function() {
+      // uncomment below and update the code to test the property services
       //var instance = new KenarApiClient.PostSubmitPostRequest();
       //expect(instance).to.be();
     });

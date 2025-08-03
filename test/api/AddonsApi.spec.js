@@ -118,26 +118,6 @@
         done();
       });
     });
-    describe('addonsGetUserAddons', function() {
-      it('should call addonsGetUserAddons successfully', function(done) {
-        //uncomment below and update the code to test addonsGetUserAddons
-        //instance.addonsGetUserAddons(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('addonsGetUserAddons2', function() {
-      it('should call addonsGetUserAddons2 successfully', function(done) {
-        //uncomment below and update the code to test addonsGetUserAddons2
-        //instance.addonsGetUserAddons2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
   });
 
 }));

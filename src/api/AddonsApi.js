@@ -18,7 +18,6 @@ import AddonsCreateBusinessAddonResponse from '../model/AddonsCreateBusinessAddo
 import AddonsCreatePostAddonV2Body from '../model/AddonsCreatePostAddonV2Body';
 import AddonsCreateUserAddonResponseV2 from '../model/AddonsCreateUserAddonResponseV2';
 import AddonsCreateUserAddonV2Body from '../model/AddonsCreateUserAddonV2Body';
-import AddonsGetUserAddonsResponse from '../model/AddonsGetUserAddonsResponse';
 import GooglerpcStatus from '../model/GooglerpcStatus';
 
 /**
@@ -395,114 +394,6 @@ export default class AddonsApi {
      */
     addonsDeleteUserAddon(id) {
       return this.addonsDeleteUserAddonWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * دریافت تمام افزونه‌های کاربر
-     * دریافت تمام افزونه‌های کاربر یک کاربر.
-     * @param {String} phone 
-     * @param {Object} opts Optional parameters
-     * @param {String} [divarUserId] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsGetUserAddonsResponse} and HTTP response
-     */
-    addonsGetUserAddonsWithHttpInfo(phone, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'phone' is set
-      if (phone === undefined || phone === null) {
-        throw new Error("Missing the required parameter 'phone' when calling addonsGetUserAddons");
-      }
-
-      let pathParams = {
-        'phone': phone
-      };
-      let queryParams = {
-        'divar_user_id': opts['divarUserId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['APIKey'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = AddonsGetUserAddonsResponse;
-      return this.apiClient.callApi(
-        '/v1/open-platform/addons/user/{phone}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * دریافت تمام افزونه‌های کاربر
-     * دریافت تمام افزونه‌های کاربر یک کاربر.
-     * @param {String} phone 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.divarUserId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsGetUserAddonsResponse}
-     */
-    addonsGetUserAddons(phone, opts) {
-      return this.addonsGetUserAddonsWithHttpInfo(phone, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * دریافت تمام افزونه‌های کاربر
-     * دریافت تمام افزونه‌های کاربر یک کاربر.
-     * @param {String} divarUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} [phone] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsGetUserAddonsResponse} and HTTP response
-     */
-    addonsGetUserAddons2WithHttpInfo(divarUserId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'divarUserId' is set
-      if (divarUserId === undefined || divarUserId === null) {
-        throw new Error("Missing the required parameter 'divarUserId' when calling addonsGetUserAddons2");
-      }
-
-      let pathParams = {
-        'divar_user_id': divarUserId
-      };
-      let queryParams = {
-        'phone': opts['phone']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['APIKey'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = AddonsGetUserAddonsResponse;
-      return this.apiClient.callApi(
-        '/v2/open-platform/addons/users/{divar_user_id}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * دریافت تمام افزونه‌های کاربر
-     * دریافت تمام افزونه‌های کاربر یک کاربر.
-     * @param {String} divarUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.phone 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsGetUserAddonsResponse}
-     */
-    addonsGetUserAddons2(divarUserId, opts) {
-      return this.addonsGetUserAddons2WithHttpInfo(divarUserId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

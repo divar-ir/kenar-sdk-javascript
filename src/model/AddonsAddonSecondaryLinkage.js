@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AddonSecondaryLinkagePosition from './AddonSecondaryLinkagePosition';
+import AddonsAddonSecondaryLinkagePosition from './AddonsAddonSecondaryLinkagePosition';
 
 /**
  * The AddonsAddonSecondaryLinkage model module.
@@ -49,7 +49,7 @@ class AddonsAddonSecondaryLinkage {
             obj = obj || new AddonsAddonSecondaryLinkage();
 
             if (data.hasOwnProperty('position')) {
-                obj['position'] = AddonSecondaryLinkagePosition.constructFromObject(data['position']);
+                obj['position'] = AddonsAddonSecondaryLinkagePosition.constructFromObject(data['position']);
             }
             if (data.hasOwnProperty('widgets')) {
                 obj['widgets'] = ApiClient.convertToType(data['widgets'], Object);
@@ -69,14 +69,14 @@ class AddonsAddonSecondaryLinkage {
     }
 
 /**
-     * @return {module:model/AddonSecondaryLinkagePosition}
+     * @return {module:model/AddonsAddonSecondaryLinkagePosition}
      */
     getPosition() {
         return this.position;
     }
 
     /**
-     * @param {module:model/AddonSecondaryLinkagePosition} position
+     * @param {module:model/AddonsAddonSecondaryLinkagePosition} position
      */
     setPosition(position) {
         this['position'] = position;
@@ -100,7 +100,7 @@ class AddonsAddonSecondaryLinkage {
 
 
 /**
- * @member {module:model/AddonSecondaryLinkagePosition} position
+ * @member {module:model/AddonsAddonSecondaryLinkagePosition} position
  */
 AddonsAddonSecondaryLinkage.prototype['position'] = undefined;
 

@@ -11,8 +11,6 @@ Method | HTTP request | Description
 [**addonsDeletePostAddon**](AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
 [**addonsDeletePostAddon2**](AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
 [**addonsDeleteUserAddon**](AddonsApi.md#addonsDeleteUserAddon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
-[**addonsGetUserAddons**](AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
-[**addonsGetUserAddons2**](AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
 
 
 
@@ -363,114 +361,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
-
-### Authorization
-
-[APIKey](../README.md#APIKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## addonsGetUserAddons
-
-> AddonsGetUserAddonsResponse addonsGetUserAddons(phone, opts)
-
-دریافت تمام افزونه‌های کاربر
-
-دریافت تمام افزونه‌های کاربر یک کاربر.
-
-### Example
-
-```javascript
-import KenarApiClient from 'kenar-api-client';
-let defaultClient = KenarApiClient.ApiClient.instance;
-// Configure API key authorization: APIKey
-let APIKey = defaultClient.authentications['APIKey'];
-APIKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKey.apiKeyPrefix = 'Token';
-
-let apiInstance = new KenarApiClient.AddonsApi();
-let phone = "phone_example"; // String | 
-let opts = {
-  'divarUserId': "divarUserId_example" // String | 
-};
-apiInstance.addonsGetUserAddons(phone, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **phone** | **String**|  | 
- **divarUserId** | **String**|  | [optional] 
-
-### Return type
-
-[**AddonsGetUserAddonsResponse**](AddonsGetUserAddonsResponse.md)
-
-### Authorization
-
-[APIKey](../README.md#APIKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## addonsGetUserAddons2
-
-> AddonsGetUserAddonsResponse addonsGetUserAddons2(divarUserId, opts)
-
-دریافت تمام افزونه‌های کاربر
-
-دریافت تمام افزونه‌های کاربر یک کاربر.
-
-### Example
-
-```javascript
-import KenarApiClient from 'kenar-api-client';
-let defaultClient = KenarApiClient.ApiClient.instance;
-// Configure API key authorization: APIKey
-let APIKey = defaultClient.authentications['APIKey'];
-APIKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKey.apiKeyPrefix = 'Token';
-
-let apiInstance = new KenarApiClient.AddonsApi();
-let divarUserId = "divarUserId_example"; // String | 
-let opts = {
-  'phone': "phone_example" // String | 
-};
-apiInstance.addonsGetUserAddons2(divarUserId, opts).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **divarUserId** | **String**|  | 
- **phone** | **String**|  | [optional] 
-
-### Return type
-
-[**AddonsGetUserAddonsResponse**](AddonsGetUserAddonsResponse.md)
 
 ### Authorization
 

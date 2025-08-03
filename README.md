@@ -133,8 +133,6 @@ Class | Method | HTTP request | Description
 *KenarApiClient.AddonsApi* | [**addonsDeletePostAddon**](docs/AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
 *KenarApiClient.AddonsApi* | [**addonsDeletePostAddon2**](docs/AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
 *KenarApiClient.AddonsApi* | [**addonsDeleteUserAddon**](docs/AddonsApi.md#addonsDeleteUserAddon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
-*KenarApiClient.AddonsApi* | [**addonsGetUserAddons**](docs/AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
-*KenarApiClient.AddonsApi* | [**addonsGetUserAddons2**](docs/AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
 *KenarApiClient.AssetsApi* | [**assetsGetBodyStatuses**](docs/AssetsApi.md#assetsGetBodyStatuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
 *KenarApiClient.AssetsApi* | [**assetsGetBrandModels**](docs/AssetsApi.md#assetsGetBrandModels) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
 *KenarApiClient.AssetsApi* | [**assetsGetCategories**](docs/AssetsApi.md#assetsGetCategories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
@@ -182,7 +180,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [KenarApiClient.AddonSecondaryLinkagePosition](docs/AddonSecondaryLinkagePosition.md)
  - [KenarApiClient.AddonSemanticCarVerificationStage](docs/AddonSemanticCarVerificationStage.md)
  - [KenarApiClient.AddonSemanticIdentityVerificationResult](docs/AddonSemanticIdentityVerificationResult.md)
  - [KenarApiClient.AddonSemanticIdentityVerificationStage](docs/AddonSemanticIdentityVerificationStage.md)
@@ -194,6 +191,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AddonsAddonLinkage](docs/AddonsAddonLinkage.md)
  - [KenarApiClient.AddonsAddonMetaData](docs/AddonsAddonMetaData.md)
  - [KenarApiClient.AddonsAddonSecondaryLinkage](docs/AddonsAddonSecondaryLinkage.md)
+ - [KenarApiClient.AddonsAddonSecondaryLinkagePosition](docs/AddonsAddonSecondaryLinkagePosition.md)
  - [KenarApiClient.AddonsAddonSecondaryLinks](docs/AddonsAddonSecondaryLinks.md)
  - [KenarApiClient.AddonsAddonSelector](docs/AddonsAddonSelector.md)
  - [KenarApiClient.AddonsAddonSemantic](docs/AddonsAddonSemantic.md)
@@ -214,7 +212,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AddonsGetBusinessAddonsResponse](docs/AddonsGetBusinessAddonsResponse.md)
  - [KenarApiClient.AddonsGetDynamicAction](docs/AddonsGetDynamicAction.md)
  - [KenarApiClient.AddonsGetPostAddonsResponse](docs/AddonsGetPostAddonsResponse.md)
- - [KenarApiClient.AddonsGetUserAddonsResponse](docs/AddonsGetUserAddonsResponse.md)
  - [KenarApiClient.AddonsGetUserPostAddonsResponse](docs/AddonsGetUserPostAddonsResponse.md)
  - [KenarApiClient.AddonsGroupInfoRow](docs/AddonsGroupInfoRow.md)
  - [KenarApiClient.AddonsGroupInfoRowGroupInfoItem](docs/AddonsGroupInfoRowGroupInfoItem.md)
@@ -270,17 +267,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.ChatapiMessageSenderSide](docs/ChatapiMessageSenderSide.md)
  - [KenarApiClient.ChatapiMessageSenderType](docs/ChatapiMessageSenderType.md)
  - [KenarApiClient.ChatapiMessageType](docs/ChatapiMessageType.md)
- - [KenarApiClient.DarvazeGenerateOrderForPostCodeValidationResponse](docs/DarvazeGenerateOrderForPostCodeValidationResponse.md)
- - [KenarApiClient.DarvazeGenerateOrderForPostCodeValidationResponseStatus](docs/DarvazeGenerateOrderForPostCodeValidationResponseStatus.md)
- - [KenarApiClient.DarvazeGetCarOwnershipStatusResponse](docs/DarvazeGetCarOwnershipStatusResponse.md)
- - [KenarApiClient.DarvazeGetCarOwnershipStatusResponseStatus](docs/DarvazeGetCarOwnershipStatusResponseStatus.md)
- - [KenarApiClient.DarvazeIranianCarPlate](docs/DarvazeIranianCarPlate.md)
- - [KenarApiClient.DarvazeRequestCarOwnershipDelegationResponse](docs/DarvazeRequestCarOwnershipDelegationResponse.md)
- - [KenarApiClient.DarvazeRequestForPostCodeValidationResponse](docs/DarvazeRequestForPostCodeValidationResponse.md)
- - [KenarApiClient.DarvazeVerifyCarOwnershipDelegationResponse](docs/DarvazeVerifyCarOwnershipDelegationResponse.md)
- - [KenarApiClient.DarvazeVerifyCarOwnershipResponse](docs/DarvazeVerifyCarOwnershipResponse.md)
- - [KenarApiClient.DarvazeVerifyPostCodeValidationResponse](docs/DarvazeVerifyPostCodeValidationResponse.md)
- - [KenarApiClient.DarvazeVerifyPostCodeValidationResponseStatus](docs/DarvazeVerifyPostCodeValidationResponseStatus.md)
  - [KenarApiClient.DivarIconsIconName](docs/DivarIconsIconName.md)
  - [KenarApiClient.EventsEventButton](docs/EventsEventButton.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
@@ -312,6 +298,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.MessageVideoData](docs/MessageVideoData.md)
  - [KenarApiClient.MessageVoiceData](docs/MessageVoiceData.md)
  - [KenarApiClient.OAuthScopeScope](docs/OAuthScopeScope.md)
+ - [KenarApiClient.OpenPlatformpostServicesFields](docs/OpenPlatformpostServicesFields.md)
  - [KenarApiClient.PaymentGetBalanceResponse](docs/PaymentGetBalanceResponse.md)
  - [KenarApiClient.PaymentGetPostPricingResponse](docs/PaymentGetPostPricingResponse.md)
  - [KenarApiClient.PaymentGetTransactionResponse](docs/PaymentGetTransactionResponse.md)
@@ -327,6 +314,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PostEditPostBody](docs/PostEditPostBody.md)
  - [KenarApiClient.PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [KenarApiClient.PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
+ - [KenarApiClient.PostServicesFieldsCategory](docs/PostServicesFieldsCategory.md)
  - [KenarApiClient.PostSubmitEmergencyResidencePostRequest](docs/PostSubmitEmergencyResidencePostRequest.md)
  - [KenarApiClient.PostSubmitEmergencyResidencePostResponse](docs/PostSubmitEmergencyResidencePostResponse.md)
  - [KenarApiClient.PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
@@ -343,6 +331,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
  - [KenarApiClient.SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
  - [KenarApiClient.SendEventRequestTargetType](docs/SendEventRequestTargetType.md)
+ - [KenarApiClient.SubmitPostRequestLocationType](docs/SubmitPostRequestLocationType.md)
  - [KenarApiClient.TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
 
 

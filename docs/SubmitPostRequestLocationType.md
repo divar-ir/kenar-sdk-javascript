@@ -1,0 +1,10 @@
+# KenarApiClient.SubmitPostRequestLocationType
+
+## Enum
+
+
+* `LOCATION_TYPE_EXACT` (value: `"LOCATION_TYPE_EXACT"`)
+
+* `LOCATION_TYPE_APPROXIMATE` (value: `"LOCATION_TYPE_APPROXIMATE"`)
+
+

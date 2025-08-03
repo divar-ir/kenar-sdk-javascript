@@ -1619,4 +1619,6 @@
 
 * `CALL_O` (value: `"CALL_O"`)
 
+* `AI_STARS_F` (value: `"AI_STARS_F"`)
+
 

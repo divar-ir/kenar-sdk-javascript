@@ -5675,6 +5675,13 @@ export default class DivarIconsIconName {
         "CALL_O" = "CALL_O";
 
     
+        /**
+         * value: "AI_STARS_F"
+         * @const
+         */
+        "AI_STARS_F" = "AI_STARS_F";
+
+    
 
     /**
     * Returns a <code>DivarIconsIconName</code> enum value from a Javascript object name.
