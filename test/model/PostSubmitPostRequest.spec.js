@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property landlineNumbers (base name: "landline_numbers")', function() {
+      // uncomment below and update the code to test the property landlineNumbers
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property latitude (base name: "latitude")', function() {
       // uncomment below and update the code to test the property latitude
       //var instance = new KenarApiClient.PostSubmitPostRequest();

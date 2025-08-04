@@ -68,6 +68,9 @@ class PostSubmitPostRequest {
             if (data.hasOwnProperty('images')) {
                 obj['images'] = ApiClient.convertToType(data['images'], ['String']);
             }
+            if (data.hasOwnProperty('landline_numbers')) {
+                obj['landline_numbers'] = ApiClient.convertToType(data['landline_numbers'], ['String']);
+            }
             if (data.hasOwnProperty('latitude')) {
                 obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
             }
@@ -111,6 +114,10 @@ class PostSubmitPostRequest {
         // ensure the json data is an array
         if (!Array.isArray(data['images'])) {
             throw new Error("Expected the field `images` to be an array in the JSON data but got " + data['images']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['landline_numbers'])) {
+            throw new Error("Expected the field `landline_numbers` to be an array in the JSON data but got " + data['landline_numbers']);
         }
         // validate the optional field `services`
         if (data['services']) { // data not null
@@ -215,6 +222,21 @@ class PostSubmitPostRequest {
      */
     setImages(images) {
         this['images'] = images;
+    }
+/**
+     * Returns Landline numbers to be added to the post
+     * @return {Array.<String>}
+     */
+    getLandlineNumbers() {
+        return this.landline_numbers;
+    }
+
+    /**
+     * Sets Landline numbers to be added to the post
+     * @param {Array.<String>} landlineNumbers Landline numbers to be added to the post
+     */
+    setLandlineNumbers(landlineNumbers) {
+        this['landline_numbers'] = landlineNumbers;
     }
 /**
      * Returns عرض جغرافیایی آگهی
@@ -339,6 +361,12 @@ PostSubmitPostRequest.prototype['hide_phone'] = undefined;
  * @member {Array.<String>} images
  */
 PostSubmitPostRequest.prototype['images'] = undefined;
+
+/**
+ * Landline numbers to be added to the post
+ * @member {Array.<String>} landline_numbers
+ */
+PostSubmitPostRequest.prototype['landline_numbers'] = undefined;
 
 /**
  * عرض جغرافیایی آگهی

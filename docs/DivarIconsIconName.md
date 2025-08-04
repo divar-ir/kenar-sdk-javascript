@@ -1621,4 +1621,6 @@
 
 * `AI_STARS_F` (value: `"AI_STARS_F"`)
 
+* `CHEVRON_DOWN` (value: `"CHEVRON_DOWN"`)
+
 

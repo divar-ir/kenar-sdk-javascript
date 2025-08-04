@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **district** | **String** | محله آگهی | [optional] 
 **hidePhone** | **Boolean** | عدم نمایش شماره تماس به کاربران | [optional] 
 **images** | **[String]** |  | [optional] 
+**landlineNumbers** | **[String]** | Landline numbers to be added to the post | [optional] 
 **latitude** | **Number** | عرض جغرافیایی آگهی | [optional] 
 **locationType** | [**SubmitPostRequestLocationType**](SubmitPostRequestLocationType.md) |  | [optional] 
 **longitude** | **Number** | طول جغرافیایی آگهی | [optional] 
