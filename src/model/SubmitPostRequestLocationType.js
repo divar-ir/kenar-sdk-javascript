@@ -20,6 +20,13 @@ import ApiClient from '../ApiClient';
 export default class SubmitPostRequestLocationType {
     
         /**
+         * value: "LOCATION_TYPE_EMPTY"
+         * @const
+         */
+        "LOCATION_TYPE_EMPTY" = "LOCATION_TYPE_EMPTY";
+
+    
+        /**
          * value: "LOCATION_TYPE_EXACT"
          * @const
          */
