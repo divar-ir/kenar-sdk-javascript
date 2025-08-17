@@ -5689,6 +5689,20 @@ export default class DivarIconsIconName {
         "CHEVRON_DOWN" = "CHEVRON_DOWN";
 
     
+        /**
+         * value: "TAG_O"
+         * @const
+         */
+        "TAG_O" = "TAG_O";
+
+    
+        /**
+         * value: "PHONE_SPARKLES"
+         * @const
+         */
+        "PHONE_SPARKLES" = "PHONE_SPARKLES";
+
+    
 
     /**
     * Returns a <code>DivarIconsIconName</code> enum value from a Javascript object name.

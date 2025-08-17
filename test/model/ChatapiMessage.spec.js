@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(KenarApiClient.ChatapiMessage);
     });
 
+    it('should have the property contactData (base name: "contact_data")', function() {
+      // uncomment below and update the code to test the property contactData
+      //var instance = new KenarApiClient.ChatapiMessage();
+      //expect(instance).to.be();
+    });
+
     it('should have the property conversation (base name: "conversation")', function() {
       // uncomment below and update the code to test the property conversation
       //var instance = new KenarApiClient.ChatapiMessage();

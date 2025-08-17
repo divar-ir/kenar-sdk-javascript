@@ -15,4 +15,6 @@
 
 * `VIDEO` (value: `"VIDEO"`)
 
+* `CONTACT` (value: `"CONTACT"`)
+
 

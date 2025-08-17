@@ -61,6 +61,13 @@ export default class ChatapiMessageType {
         "VIDEO" = "VIDEO";
 
     
+        /**
+         * value: "CONTACT"
+         * @const
+         */
+        "CONTACT" = "CONTACT";
+
+    
 
     /**
     * Returns a <code>ChatapiMessageType</code> enum value from a Javascript object name.

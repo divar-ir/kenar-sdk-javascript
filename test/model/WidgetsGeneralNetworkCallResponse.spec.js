@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.WidgetsGeneralNetworkCallResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,25 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsGetEventAction', function() {
-      it('should call eventsGetEventAction successfully', function(done) {
-        //uncomment below and update the code to test eventsGetEventAction
-        //instance.eventsGetEventAction(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('WidgetsGeneralNetworkCallResponse', function() {
+    it('should create an instance of WidgetsGeneralNetworkCallResponse', function() {
+      // uncomment below and update the code to test WidgetsGeneralNetworkCallResponse
+      //var instance = new KenarApiClient.WidgetsGeneralNetworkCallResponse();
+      //expect(instance).to.be.a(KenarApiClient.WidgetsGeneralNetworkCallResponse);
     });
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property nextAction (base name: "next_action")', function() {
+      // uncomment below and update the code to test the property nextAction
+      //var instance = new KenarApiClient.WidgetsGeneralNetworkCallResponse();
+      //expect(instance).to.be();
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property toastMessage (base name: "toast_message")', function() {
+      // uncomment below and update the code to test the property toastMessage
+      //var instance = new KenarApiClient.WidgetsGeneralNetworkCallResponse();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

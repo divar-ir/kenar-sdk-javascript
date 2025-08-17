@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.WidgetsAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,31 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsGetEventAction', function() {
-      it('should call eventsGetEventAction successfully', function(done) {
-        //uncomment below and update the code to test eventsGetEventAction
-        //instance.eventsGetEventAction(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('WidgetsAction', function() {
+    it('should create an instance of WidgetsAction', function() {
+      // uncomment below and update the code to test WidgetsAction
+      //var instance = new KenarApiClient.WidgetsAction();
+      //expect(instance).to.be.a(KenarApiClient.WidgetsAction);
     });
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property pagePopLink (base name: "page_pop_link")', function() {
+      // uncomment below and update the code to test the property pagePopLink
+      //var instance = new KenarApiClient.WidgetsAction();
+      //expect(instance).to.be();
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property payload (base name: "payload")', function() {
+      // uncomment below and update the code to test the property payload
+      //var instance = new KenarApiClient.WidgetsAction();
+      //expect(instance).to.be();
     });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instance = new KenarApiClient.WidgetsAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

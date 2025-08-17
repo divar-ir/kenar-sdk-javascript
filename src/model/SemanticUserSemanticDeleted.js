@@ -50,6 +50,9 @@ class SemanticUserSemanticDeleted {
             if (data.hasOwnProperty('app_slug')) {
                 obj['app_slug'] = ApiClient.convertToType(data['app_slug'], 'String');
             }
+            if (data.hasOwnProperty('divar_user_id')) {
+                obj['divar_user_id'] = ApiClient.convertToType(data['divar_user_id'], 'String');
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -69,6 +72,10 @@ class SemanticUserSemanticDeleted {
         // ensure the json data is a string
         if (data['app_slug'] && !(typeof data['app_slug'] === 'string' || data['app_slug'] instanceof String)) {
             throw new Error("Expected the field `app_slug` to be a primitive type in the JSON string but got " + data['app_slug']);
+        }
+        // ensure the json data is a string
+        if (data['divar_user_id'] && !(typeof data['divar_user_id'] === 'string' || data['divar_user_id'] instanceof String)) {
+            throw new Error("Expected the field `divar_user_id` to be a primitive type in the JSON string but got " + data['divar_user_id']);
         }
         // ensure the json data is a string
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
@@ -94,6 +101,19 @@ class SemanticUserSemanticDeleted {
      */
     setAppSlug(appSlug) {
         this['app_slug'] = appSlug;
+    }
+/**
+     * @return {String}
+     */
+    getDivarUserId() {
+        return this.divar_user_id;
+    }
+
+    /**
+     * @param {String} divarUserId
+     */
+    setDivarUserId(divarUserId) {
+        this['divar_user_id'] = divarUserId;
     }
 /**
      * @return {String}
@@ -130,6 +150,11 @@ class SemanticUserSemanticDeleted {
  * @member {String} app_slug
  */
 SemanticUserSemanticDeleted.prototype['app_slug'] = undefined;
+
+/**
+ * @member {String} divar_user_id
+ */
+SemanticUserSemanticDeleted.prototype['divar_user_id'] = undefined;
 
 /**
  * @member {String} id

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**contactData** | [**MessageContactData**](MessageContactData.md) |  | [optional] 
 **conversation** | [**ChatapiConversation**](ChatapiConversation.md) |  | [optional] 
 **fileData** | [**MessageFileData**](MessageFileData.md) |  | [optional] 
 **id** | **String** |  | [optional] 

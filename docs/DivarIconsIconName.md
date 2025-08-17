@@ -1623,4 +1623,8 @@
 
 * `CHEVRON_DOWN` (value: `"CHEVRON_DOWN"`)
 
+* `TAG_O` (value: `"TAG_O"`)
+
+* `PHONE_SPARKLES` (value: `"PHONE_SPARKLES"`)
+
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.MessageContactData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,25 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsGetEventAction', function() {
-      it('should call eventsGetEventAction successfully', function(done) {
-        //uncomment below and update the code to test eventsGetEventAction
-        //instance.eventsGetEventAction(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('MessageContactData', function() {
+    it('should create an instance of MessageContactData', function() {
+      // uncomment below and update the code to test MessageContactData
+      //var instance = new KenarApiClient.MessageContactData();
+      //expect(instance).to.be.a(KenarApiClient.MessageContactData);
     });
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new KenarApiClient.MessageContactData();
+      //expect(instance).to.be();
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property phone (base name: "phone")', function() {
+      // uncomment below and update the code to test the property phone
+      //var instance = new KenarApiClient.MessageContactData();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

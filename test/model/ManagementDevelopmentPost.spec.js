@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property preset (base name: "preset")', function() {
-      // uncomment below and update the code to test the property preset
-      //var instance = new KenarApiClient.ManagementDevelopmentPost();
-      //expect(instance).to.be();
-    });
-
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
       //var instance = new KenarApiClient.ManagementDevelopmentPost();

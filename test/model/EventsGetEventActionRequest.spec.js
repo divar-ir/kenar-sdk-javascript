@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
+    instance = new KenarApiClient.EventsGetEventActionRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,19 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsGetEventAction', function() {
-      it('should call eventsGetEventAction successfully', function(done) {
-        //uncomment below and update the code to test eventsGetEventAction
-        //instance.eventsGetEventAction(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('EventsGetEventActionRequest', function() {
+    it('should create an instance of EventsGetEventActionRequest', function() {
+      // uncomment below and update the code to test EventsGetEventActionRequest
+      //var instance = new KenarApiClient.EventsGetEventActionRequest();
+      //expect(instance).to.be.a(KenarApiClient.EventsGetEventActionRequest);
     });
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property requestData (base name: "request_data")', function() {
+      // uncomment below and update the code to test the property requestData
+      //var instance = new KenarApiClient.EventsGetEventActionRequest();
+      //expect(instance).to.be();
     });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

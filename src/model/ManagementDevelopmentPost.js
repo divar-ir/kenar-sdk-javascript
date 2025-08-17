@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import ManagementPreset from './ManagementPreset';
 
 /**
  * The ManagementDevelopmentPost model module.
@@ -56,9 +55,6 @@ class ManagementDevelopmentPost {
             }
             if (data.hasOwnProperty('mng_token')) {
                 obj['mng_token'] = ApiClient.convertToType(data['mng_token'], 'String');
-            }
-            if (data.hasOwnProperty('preset')) {
-                obj['preset'] = ManagementPreset.constructFromObject(data['preset']);
             }
             if (data.hasOwnProperty('token')) {
                 obj['token'] = ApiClient.convertToType(data['token'], 'String');
@@ -129,19 +125,6 @@ class ManagementDevelopmentPost {
         this['mng_token'] = mngToken;
     }
 /**
-     * @return {module:model/ManagementPreset}
-     */
-    getPreset() {
-        return this.preset;
-    }
-
-    /**
-     * @param {module:model/ManagementPreset} preset
-     */
-    setPreset(preset) {
-        this['preset'] = preset;
-    }
-/**
      * @return {String}
      */
     getToken() {
@@ -173,11 +156,6 @@ ManagementDevelopmentPost.prototype['created_at'] = undefined;
  * @member {String} mng_token
  */
 ManagementDevelopmentPost.prototype['mng_token'] = undefined;
-
-/**
- * @member {module:model/ManagementPreset} preset
- */
-ManagementDevelopmentPost.prototype['preset'] = undefined;
 
 /**
  * @member {String} token

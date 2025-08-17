@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property divarUserId (base name: "divar_user_id")', function() {
+      // uncomment below and update the code to test the property divarUserId
+      //var instance = new KenarApiClient.SemanticUserSemanticDeleted();
+      //expect(instance).to.be();
+    });
+
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new KenarApiClient.SemanticUserSemanticDeleted();

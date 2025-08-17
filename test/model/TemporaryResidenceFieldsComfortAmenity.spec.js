@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +46,13 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsGetEventAction', function() {
-      it('should call eventsGetEventAction successfully', function(done) {
-        //uncomment below and update the code to test eventsGetEventAction
-        //instance.eventsGetEventAction(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('TemporaryResidenceFieldsComfortAmenity', function() {
+    it('should create an instance of TemporaryResidenceFieldsComfortAmenity', function() {
+      // uncomment below and update the code to test TemporaryResidenceFieldsComfortAmenity
+      //var instance = new KenarApiClient.TemporaryResidenceFieldsComfortAmenity();
+      //expect(instance).to.be.a(KenarApiClient.TemporaryResidenceFieldsComfortAmenity);
     });
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('eventsSendEvent', function() {
-      it('should call eventsSendEvent successfully', function(done) {
-        //uncomment below and update the code to test eventsSendEvent
-        //instance.eventsSendEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

@@ -102,6 +102,8 @@ import ChatapiMessageSenderType from './model/ChatapiMessageSenderType';
 import ChatapiMessageType from './model/ChatapiMessageType';
 import DivarIconsIconName from './model/DivarIconsIconName';
 import EventsEventButton from './model/EventsEventButton';
+import EventsGetEventActionRequest from './model/EventsGetEventActionRequest';
+import EventsGetEventActionRequestRequestData from './model/EventsGetEventActionRequestRequestData';
 import EventsRegisterEventSubscriptionRequest from './model/EventsRegisterEventSubscriptionRequest';
 import EventsRegisterEventSubscriptionRequestEventType from './model/EventsRegisterEventSubscriptionRequestEventType';
 import FinderGetAllDevelopmentPostsResponse from './model/FinderGetAllDevelopmentPostsResponse';
@@ -123,7 +125,7 @@ import GetServiceTypesResponseServiceTypeData from './model/GetServiceTypesRespo
 import GooglerpcStatus from './model/GooglerpcStatus';
 import ImageCarouselRowImageItem from './model/ImageCarouselRowImageItem';
 import ManagementDevelopmentPost from './model/ManagementDevelopmentPost';
-import ManagementPreset from './model/ManagementPreset';
+import MessageContactData from './model/MessageContactData';
 import MessageFileData from './model/MessageFileData';
 import MessageImageData from './model/MessageImageData';
 import MessageLocationData from './model/MessageLocationData';
@@ -165,7 +167,14 @@ import SemanticPostSemanticDeleted from './model/SemanticPostSemanticDeleted';
 import SemanticUserSemanticDeleted from './model/SemanticUserSemanticDeleted';
 import SendEventRequestTargetType from './model/SendEventRequestTargetType';
 import SubmitPostRequestLocationType from './model/SubmitPostRequestLocationType';
+import TemporaryResidenceFieldsComfortAmenity from './model/TemporaryResidenceFieldsComfortAmenity';
+import TemporaryResidenceFieldsHeatingCoolingSystem from './model/TemporaryResidenceFieldsHeatingCoolingSystem';
+import TemporaryResidenceFieldsPetsAllowed from './model/TemporaryResidenceFieldsPetsAllowed';
+import TemporaryResidenceFieldsRentalPeriod from './model/TemporaryResidenceFieldsRentalPeriod';
 import TemporaryResidenceFieldsRoomsCount from './model/TemporaryResidenceFieldsRoomsCount';
+import WidgetsAction from './model/WidgetsAction';
+import WidgetsActionType from './model/WidgetsActionType';
+import WidgetsGeneralNetworkCallResponse from './model/WidgetsGeneralNetworkCallResponse';
 import AddonsApi from './api/AddonsApi';
 import AssetsApi from './api/AssetsApi';
 import ChatAPIApi from './api/ChatAPIApi';
@@ -750,6 +759,18 @@ export {
     EventsEventButton,
 
     /**
+     * The EventsGetEventActionRequest model constructor.
+     * @property {module:model/EventsGetEventActionRequest}
+     */
+    EventsGetEventActionRequest,
+
+    /**
+     * The EventsGetEventActionRequestRequestData model constructor.
+     * @property {module:model/EventsGetEventActionRequestRequestData}
+     */
+    EventsGetEventActionRequestRequestData,
+
+    /**
      * The EventsRegisterEventSubscriptionRequest model constructor.
      * @property {module:model/EventsRegisterEventSubscriptionRequest}
      */
@@ -876,10 +897,10 @@ export {
     ManagementDevelopmentPost,
 
     /**
-     * The ManagementPreset model constructor.
-     * @property {module:model/ManagementPreset}
+     * The MessageContactData model constructor.
+     * @property {module:model/MessageContactData}
      */
-    ManagementPreset,
+    MessageContactData,
 
     /**
      * The MessageFileData model constructor.
@@ -1128,10 +1149,52 @@ export {
     SubmitPostRequestLocationType,
 
     /**
+     * The TemporaryResidenceFieldsComfortAmenity model constructor.
+     * @property {module:model/TemporaryResidenceFieldsComfortAmenity}
+     */
+    TemporaryResidenceFieldsComfortAmenity,
+
+    /**
+     * The TemporaryResidenceFieldsHeatingCoolingSystem model constructor.
+     * @property {module:model/TemporaryResidenceFieldsHeatingCoolingSystem}
+     */
+    TemporaryResidenceFieldsHeatingCoolingSystem,
+
+    /**
+     * The TemporaryResidenceFieldsPetsAllowed model constructor.
+     * @property {module:model/TemporaryResidenceFieldsPetsAllowed}
+     */
+    TemporaryResidenceFieldsPetsAllowed,
+
+    /**
+     * The TemporaryResidenceFieldsRentalPeriod model constructor.
+     * @property {module:model/TemporaryResidenceFieldsRentalPeriod}
+     */
+    TemporaryResidenceFieldsRentalPeriod,
+
+    /**
      * The TemporaryResidenceFieldsRoomsCount model constructor.
      * @property {module:model/TemporaryResidenceFieldsRoomsCount}
      */
     TemporaryResidenceFieldsRoomsCount,
+
+    /**
+     * The WidgetsAction model constructor.
+     * @property {module:model/WidgetsAction}
+     */
+    WidgetsAction,
+
+    /**
+     * The WidgetsActionType model constructor.
+     * @property {module:model/WidgetsActionType}
+     */
+    WidgetsActionType,
+
+    /**
+     * The WidgetsGeneralNetworkCallResponse model constructor.
+     * @property {module:model/WidgetsGeneralNetworkCallResponse}
+     */
+    WidgetsGeneralNetworkCallResponse,
 
     /**
     * The AddonsApi service constructor.

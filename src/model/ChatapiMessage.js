@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import ChatapiConversation from './ChatapiConversation';
 import ChatapiMessageType from './ChatapiMessageType';
+import MessageContactData from './MessageContactData';
 import MessageFileData from './MessageFileData';
 import MessageImageData from './MessageImageData';
 import MessageLocationData from './MessageLocationData';
@@ -55,6 +56,9 @@ class ChatapiMessage {
         if (data) {
             obj = obj || new ChatapiMessage();
 
+            if (data.hasOwnProperty('contact_data')) {
+                obj['contact_data'] = MessageContactData.constructFromObject(data['contact_data']);
+            }
             if (data.hasOwnProperty('conversation')) {
                 obj['conversation'] = ChatapiConversation.constructFromObject(data['conversation']);
             }
@@ -98,6 +102,10 @@ class ChatapiMessage {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ChatapiMessage</code>.
      */
     static validateJSON(data) {
+        // validate the optional field `contact_data`
+        if (data['contact_data']) { // data not null
+          MessageContactData.validateJSON(data['contact_data']);
+        }
         // validate the optional field `conversation`
         if (data['conversation']) { // data not null
           ChatapiConversation.validateJSON(data['conversation']);
@@ -138,6 +146,19 @@ class ChatapiMessage {
         return true;
     }
 
+/**
+     * @return {module:model/MessageContactData}
+     */
+    getContactData() {
+        return this.contact_data;
+    }
+
+    /**
+     * @param {module:model/MessageContactData} contactData
+     */
+    setContactData(contactData) {
+        this['contact_data'] = contactData;
+    }
 /**
      * @return {module:model/ChatapiConversation}
      */
@@ -285,6 +306,11 @@ class ChatapiMessage {
 }
 
 
+
+/**
+ * @member {module:model/MessageContactData} contact_data
+ */
+ChatapiMessage.prototype['contact_data'] = undefined;
 
 /**
  * @member {module:model/ChatapiConversation} conversation
