@@ -48,16 +48,6 @@
   }
 
   describe('EventsApi', function() {
-    describe('eventsGetEventAction', function() {
-      it('should call eventsGetEventAction successfully', function(done) {
-        //uncomment below and update the code to test eventsGetEventAction
-        //instance.eventsGetEventAction(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('eventsRegisterEventSubscription', function() {
       it('should call eventsRegisterEventSubscription successfully', function(done) {
         //uncomment below and update the code to test eventsRegisterEventSubscription

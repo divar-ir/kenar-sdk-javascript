@@ -13,10 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import EventsGetEventActionRequest from '../model/EventsGetEventActionRequest';
 import EventsRegisterEventSubscriptionRequest from '../model/EventsRegisterEventSubscriptionRequest';
 import GooglerpcStatus from '../model/GooglerpcStatus';
-import WidgetsGeneralNetworkCallResponse from '../model/WidgetsGeneralNetworkCallResponse';
 
 /**
 * Events service.
@@ -36,49 +34,6 @@ export default class EventsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
-    /**
-     * @param {module:model/EventsGetEventActionRequest} eventsGetEventActionRequest 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WidgetsGeneralNetworkCallResponse} and HTTP response
-     */
-    eventsGetEventActionWithHttpInfo(eventsGetEventActionRequest) {
-      let postBody = eventsGetEventActionRequest;
-      // verify the required parameter 'eventsGetEventActionRequest' is set
-      if (eventsGetEventActionRequest === undefined || eventsGetEventActionRequest === null) {
-        throw new Error("Missing the required parameter 'eventsGetEventActionRequest' when calling eventsGetEventAction");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['APIKey'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = WidgetsGeneralNetworkCallResponse;
-      return this.apiClient.callApi(
-        '/v1/open-platform/events/get-action', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * @param {module:model/EventsGetEventActionRequest} eventsGetEventActionRequest 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WidgetsGeneralNetworkCallResponse}
-     */
-    eventsGetEventAction(eventsGetEventActionRequest) {
-      return this.eventsGetEventActionWithHttpInfo(eventsGetEventActionRequest)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
 
 
     /**

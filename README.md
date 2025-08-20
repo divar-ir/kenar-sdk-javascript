@@ -153,7 +153,6 @@ Class | Method | HTTP request | Description
 *KenarApiClient.ChatAPIApi* | [**chatAPIConversationSendMessage**](docs/ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
 *KenarApiClient.ChatAPIApi* | [**chatAPIGenerateUploadToken**](docs/ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 *KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
-*KenarApiClient.EventsApi* | [**eventsGetEventAction**](docs/EventsApi.md#eventsGetEventAction) | **POST** /v1/open-platform/events/get-action | 
 *KenarApiClient.EventsApi* | [**eventsRegisterEventSubscription**](docs/EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
 *KenarApiClient.EventsApi* | [**eventsSendEvent**](docs/EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | Send an event to a user
 *KenarApiClient.FinderApi* | [**finderGetPost**](docs/FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
@@ -270,8 +269,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.ChatapiMessageType](docs/ChatapiMessageType.md)
  - [KenarApiClient.DivarIconsIconName](docs/DivarIconsIconName.md)
  - [KenarApiClient.EventsEventButton](docs/EventsEventButton.md)
- - [KenarApiClient.EventsGetEventActionRequest](docs/EventsGetEventActionRequest.md)
- - [KenarApiClient.EventsGetEventActionRequestRequestData](docs/EventsGetEventActionRequestRequestData.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequestEventType](docs/EventsRegisterEventSubscriptionRequestEventType.md)
  - [KenarApiClient.FinderGetAllDevelopmentPostsResponse](docs/FinderGetAllDevelopmentPostsResponse.md)
@@ -340,9 +337,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.TemporaryResidenceFieldsPetsAllowed](docs/TemporaryResidenceFieldsPetsAllowed.md)
  - [KenarApiClient.TemporaryResidenceFieldsRentalPeriod](docs/TemporaryResidenceFieldsRentalPeriod.md)
  - [KenarApiClient.TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
- - [KenarApiClient.WidgetsAction](docs/WidgetsAction.md)
- - [KenarApiClient.WidgetsActionType](docs/WidgetsActionType.md)
- - [KenarApiClient.WidgetsGeneralNetworkCallResponse](docs/WidgetsGeneralNetworkCallResponse.md)
 
 
 ## Documentation for Authorization

@@ -4,58 +4,9 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**eventsGetEventAction**](EventsApi.md#eventsGetEventAction) | **POST** /v1/open-platform/events/get-action | 
 [**eventsRegisterEventSubscription**](EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
 [**eventsSendEvent**](EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | Send an event to a user
 
-
-
-## eventsGetEventAction
-
-> WidgetsGeneralNetworkCallResponse eventsGetEventAction(eventsGetEventActionRequest)
-
-
-
-### Example
-
-```javascript
-import KenarApiClient from 'kenar-api-client';
-let defaultClient = KenarApiClient.ApiClient.instance;
-// Configure API key authorization: APIKey
-let APIKey = defaultClient.authentications['APIKey'];
-APIKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKey.apiKeyPrefix = 'Token';
-
-let apiInstance = new KenarApiClient.EventsApi();
-let eventsGetEventActionRequest = new KenarApiClient.EventsGetEventActionRequest(); // EventsGetEventActionRequest | 
-apiInstance.eventsGetEventAction(eventsGetEventActionRequest).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventsGetEventActionRequest** | [**EventsGetEventActionRequest**](EventsGetEventActionRequest.md)|  | 
-
-### Return type
-
-[**WidgetsGeneralNetworkCallResponse**](WidgetsGeneralNetworkCallResponse.md)
-
-### Authorization
-
-[APIKey](../README.md#APIKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
 
 
 ## eventsRegisterEventSubscription

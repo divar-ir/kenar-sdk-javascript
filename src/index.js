@@ -102,8 +102,6 @@ import ChatapiMessageSenderType from './model/ChatapiMessageSenderType';
 import ChatapiMessageType from './model/ChatapiMessageType';
 import DivarIconsIconName from './model/DivarIconsIconName';
 import EventsEventButton from './model/EventsEventButton';
-import EventsGetEventActionRequest from './model/EventsGetEventActionRequest';
-import EventsGetEventActionRequestRequestData from './model/EventsGetEventActionRequestRequestData';
 import EventsRegisterEventSubscriptionRequest from './model/EventsRegisterEventSubscriptionRequest';
 import EventsRegisterEventSubscriptionRequestEventType from './model/EventsRegisterEventSubscriptionRequestEventType';
 import FinderGetAllDevelopmentPostsResponse from './model/FinderGetAllDevelopmentPostsResponse';
@@ -172,9 +170,6 @@ import TemporaryResidenceFieldsHeatingCoolingSystem from './model/TemporaryResid
 import TemporaryResidenceFieldsPetsAllowed from './model/TemporaryResidenceFieldsPetsAllowed';
 import TemporaryResidenceFieldsRentalPeriod from './model/TemporaryResidenceFieldsRentalPeriod';
 import TemporaryResidenceFieldsRoomsCount from './model/TemporaryResidenceFieldsRoomsCount';
-import WidgetsAction from './model/WidgetsAction';
-import WidgetsActionType from './model/WidgetsActionType';
-import WidgetsGeneralNetworkCallResponse from './model/WidgetsGeneralNetworkCallResponse';
 import AddonsApi from './api/AddonsApi';
 import AssetsApi from './api/AssetsApi';
 import ChatAPIApi from './api/ChatAPIApi';
@@ -759,18 +754,6 @@ export {
     EventsEventButton,
 
     /**
-     * The EventsGetEventActionRequest model constructor.
-     * @property {module:model/EventsGetEventActionRequest}
-     */
-    EventsGetEventActionRequest,
-
-    /**
-     * The EventsGetEventActionRequestRequestData model constructor.
-     * @property {module:model/EventsGetEventActionRequestRequestData}
-     */
-    EventsGetEventActionRequestRequestData,
-
-    /**
      * The EventsRegisterEventSubscriptionRequest model constructor.
      * @property {module:model/EventsRegisterEventSubscriptionRequest}
      */
@@ -1177,24 +1160,6 @@ export {
      * @property {module:model/TemporaryResidenceFieldsRoomsCount}
      */
     TemporaryResidenceFieldsRoomsCount,
-
-    /**
-     * The WidgetsAction model constructor.
-     * @property {module:model/WidgetsAction}
-     */
-    WidgetsAction,
-
-    /**
-     * The WidgetsActionType model constructor.
-     * @property {module:model/WidgetsActionType}
-     */
-    WidgetsActionType,
-
-    /**
-     * The WidgetsGeneralNetworkCallResponse model constructor.
-     * @property {module:model/WidgetsGeneralNetworkCallResponse}
-     */
-    WidgetsGeneralNetworkCallResponse,
 
     /**
     * The AddonsApi service constructor.
