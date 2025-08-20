@@ -209,7 +209,6 @@ class PostTemporaryResidenceFields {
         this['check_out_time'] = checkOutTime;
     }
 /**
-     * Returns List of comfort amenities available in the residence
      * @return {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>}
      */
     getComfortAmenities() {
@@ -217,8 +216,7 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets List of comfort amenities available in the residence
-     * @param {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>} comfortAmenities List of comfort amenities available in the residence
+     * @param {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>} comfortAmenities
      */
     setComfortAmenities(comfortAmenities) {
         this['comfort_amenities'] = comfortAmenities;
@@ -284,7 +282,6 @@ class PostTemporaryResidenceFields {
         this['has_own_image'] = hasOwnImage;
     }
 /**
-     * Returns List of heating and cooling systems available
      * @return {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>}
      */
     getHeatingCoolingSystem() {
@@ -292,8 +289,7 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets List of heating and cooling systems available
-     * @param {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>} heatingCoolingSystem List of heating and cooling systems available
+     * @param {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>} heatingCoolingSystem
      */
     setHeatingCoolingSystem(heatingCoolingSystem) {
         this['heating_cooling_system'] = heatingCoolingSystem;
@@ -466,7 +462,6 @@ PostTemporaryResidenceFields.prototype['check_in_time'] = undefined;
 PostTemporaryResidenceFields.prototype['check_out_time'] = undefined;
 
 /**
- * List of comfort amenities available in the residence
  * @member {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>} comfort_amenities
  */
 PostTemporaryResidenceFields.prototype['comfort_amenities'] = undefined;
@@ -496,7 +491,6 @@ PostTemporaryResidenceFields.prototype['fully_furnished'] = undefined;
 PostTemporaryResidenceFields.prototype['has_own_image'] = undefined;
 
 /**
- * List of heating and cooling systems available
  * @member {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>} heating_cooling_system
  */
 PostTemporaryResidenceFields.prototype['heating_cooling_system'] = undefined;
