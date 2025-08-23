@@ -169,7 +169,6 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 *KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
-*KenarApiClient.PostApi* | [**postSubmitEmergencyResidencePost**](docs/PostApi.md#postSubmitEmergencyResidencePost) | **POST** /experimental/open-platform/posts/emergency-residence | Submit an emergency residence post
 *KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
@@ -315,8 +314,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [KenarApiClient.PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
  - [KenarApiClient.PostServicesFieldsCategory](docs/PostServicesFieldsCategory.md)
- - [KenarApiClient.PostSubmitEmergencyResidencePostRequest](docs/PostSubmitEmergencyResidencePostRequest.md)
- - [KenarApiClient.PostSubmitEmergencyResidencePostResponse](docs/PostSubmitEmergencyResidencePostResponse.md)
  - [KenarApiClient.PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
  - [KenarApiClient.PostSubmitPostResponse](docs/PostSubmitPostResponse.md)
  - [KenarApiClient.PostTemporaryResidenceFields](docs/PostTemporaryResidenceFields.md)

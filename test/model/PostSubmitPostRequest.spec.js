@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property district (base name: "district")', function() {
-      // uncomment below and update the code to test the property district
-      //var instance = new KenarApiClient.PostSubmitPostRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property hidePhone (base name: "hide_phone")', function() {
       // uncomment below and update the code to test the property hidePhone
       //var instance = new KenarApiClient.PostSubmitPostRequest();
@@ -90,6 +84,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property locationType (base name: "location_type")', function() {
+      // uncomment below and update the code to test the property locationType
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property district (base name: "district")', function() {
+      // uncomment below and update the code to test the property district
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property landlineNumbers (base name: "landline_numbers")', function() {
       // uncomment below and update the code to test the property landlineNumbers
       //var instance = new KenarApiClient.PostSubmitPostRequest();
@@ -98,12 +110,6 @@
 
     it('should have the property latitude (base name: "latitude")', function() {
       // uncomment below and update the code to test the property latitude
-      //var instance = new KenarApiClient.PostSubmitPostRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property locationType (base name: "location_type")', function() {
-      // uncomment below and update the code to test the property locationType
       //var instance = new KenarApiClient.PostSubmitPostRequest();
       //expect(instance).to.be();
     });
@@ -122,12 +128,6 @@
 
     it('should have the property temporaryResidence (base name: "temporary_residence")', function() {
       // uncomment below and update the code to test the property temporaryResidence
-      //var instance = new KenarApiClient.PostSubmitPostRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
       //var instance = new KenarApiClient.PostSubmitPostRequest();
       //expect(instance).to.be();
     });

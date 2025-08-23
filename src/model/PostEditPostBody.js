@@ -22,10 +22,12 @@ class PostEditPostBody {
     /**
      * Constructs a new <code>PostEditPostBody</code>.
      * @alias module:model/PostEditPostBody
+     * @param description {String} 
+     * @param title {String} 
      */
-    constructor() { 
+    constructor(description, title) { 
         
-        PostEditPostBody.initialize(this);
+        PostEditPostBody.initialize(this, description, title);
     }
 
     /**
@@ -33,7 +35,9 @@ class PostEditPostBody {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, description, title) { 
+        obj['description'] = description;
+        obj['title'] = title;
     }
 
     /**
@@ -50,11 +54,11 @@ class PostEditPostBody {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('image_paths')) {
-                obj['image_paths'] = ApiClient.convertToType(data['image_paths'], ['String']);
-            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('image_paths')) {
+                obj['image_paths'] = ApiClient.convertToType(data['image_paths'], ['String']);
             }
         }
         return obj;
@@ -66,17 +70,23 @@ class PostEditPostBody {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PostEditPostBody</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of PostEditPostBody.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
-        // ensure the json data is an array
-        if (!Array.isArray(data['image_paths'])) {
-            throw new Error("Expected the field `image_paths` to be an array in the JSON data but got " + data['image_paths']);
-        }
         // ensure the json data is a string
         if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
             throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['image_paths'])) {
+            throw new Error("Expected the field `image_paths` to be an array in the JSON data but got " + data['image_paths']);
         }
 
         return true;
@@ -96,19 +106,6 @@ class PostEditPostBody {
         this['description'] = description;
     }
 /**
-     * @return {Array.<String>}
-     */
-    getImagePaths() {
-        return this.image_paths;
-    }
-
-    /**
-     * @param {Array.<String>} imagePaths
-     */
-    setImagePaths(imagePaths) {
-        this['image_paths'] = imagePaths;
-    }
-/**
      * @return {String}
      */
     getTitle() {
@@ -121,10 +118,23 @@ class PostEditPostBody {
     setTitle(title) {
         this['title'] = title;
     }
+/**
+     * @return {Array.<String>}
+     */
+    getImagePaths() {
+        return this.image_paths;
+    }
+
+    /**
+     * @param {Array.<String>} imagePaths
+     */
+    setImagePaths(imagePaths) {
+        this['image_paths'] = imagePaths;
+    }
 
 }
 
-
+PostEditPostBody.RequiredProperties = ["description", "title"];
 
 /**
  * @member {String} description
@@ -132,14 +142,14 @@ class PostEditPostBody {
 PostEditPostBody.prototype['description'] = undefined;
 
 /**
- * @member {Array.<String>} image_paths
- */
-PostEditPostBody.prototype['image_paths'] = undefined;
-
-/**
  * @member {String} title
  */
 PostEditPostBody.prototype['title'] = undefined;
+
+/**
+ * @member {Array.<String>} image_paths
+ */
+PostEditPostBody.prototype['image_paths'] = undefined;
 
 
 

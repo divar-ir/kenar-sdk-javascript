@@ -60,68 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property checkInTime (base name: "check_in_time")', function() {
-      // uncomment below and update the code to test the property checkInTime
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property checkOutTime (base name: "check_out_time")', function() {
-      // uncomment below and update the code to test the property checkOutTime
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property comfortAmenities (base name: "comfort_amenities")', function() {
-      // uncomment below and update the code to test the property comfortAmenities
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property damageDeposit (base name: "damage_deposit")', function() {
-      // uncomment below and update the code to test the property damageDeposit
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
     it('should have the property extraPersonCapacity (base name: "extra_person_capacity")', function() {
       // uncomment below and update the code to test the property extraPersonCapacity
       //var instance = new KenarApiClient.PostTemporaryResidenceFields();
       //expect(instance).to.be();
     });
 
-    it('should have the property fullyFurnished (base name: "fully_furnished")', function() {
-      // uncomment below and update the code to test the property fullyFurnished
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
     it('should have the property hasOwnImage (base name: "has_own_image")', function() {
       // uncomment below and update the code to test the property hasOwnImage
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property heatingCoolingSystem (base name: "heating_cooling_system")', function() {
-      // uncomment below and update the code to test the property heatingCoolingSystem
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property houseRules (base name: "house_rules")', function() {
-      // uncomment below and update the code to test the property houseRules
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property minimumStay (base name: "minimum_stay")', function() {
-      // uncomment below and update the code to test the property minimumStay
-      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property petsAllowed (base name: "pets_allowed")', function() {
-      // uncomment below and update the code to test the property petsAllowed
       //var instance = new KenarApiClient.PostTemporaryResidenceFields();
       //expect(instance).to.be();
     });
@@ -156,14 +102,68 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property rentalPeriod (base name: "rental_period")', function() {
-      // uncomment below and update the code to test the property rentalPeriod
+    it('should have the property roomsCount (base name: "rooms_count")', function() {
+      // uncomment below and update the code to test the property roomsCount
       //var instance = new KenarApiClient.PostTemporaryResidenceFields();
       //expect(instance).to.be();
     });
 
-    it('should have the property roomsCount (base name: "rooms_count")', function() {
-      // uncomment below and update the code to test the property roomsCount
+    it('should have the property checkInTime (base name: "check_in_time")', function() {
+      // uncomment below and update the code to test the property checkInTime
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property checkOutTime (base name: "check_out_time")', function() {
+      // uncomment below and update the code to test the property checkOutTime
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property comfortAmenities (base name: "comfort_amenities")', function() {
+      // uncomment below and update the code to test the property comfortAmenities
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property damageDeposit (base name: "damage_deposit")', function() {
+      // uncomment below and update the code to test the property damageDeposit
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fullyFurnished (base name: "fully_furnished")', function() {
+      // uncomment below and update the code to test the property fullyFurnished
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property heatingCoolingSystem (base name: "heating_cooling_system")', function() {
+      // uncomment below and update the code to test the property heatingCoolingSystem
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property houseRules (base name: "house_rules")', function() {
+      // uncomment below and update the code to test the property houseRules
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property minimumStay (base name: "minimum_stay")', function() {
+      // uncomment below and update the code to test the property minimumStay
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property petsAllowed (base name: "pets_allowed")', function() {
+      // uncomment below and update the code to test the property petsAllowed
+      //var instance = new KenarApiClient.PostTemporaryResidenceFields();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property rentalPeriod (base name: "rental_period")', function() {
+      // uncomment below and update the code to test the property rentalPeriod
       //var instance = new KenarApiClient.PostTemporaryResidenceFields();
       //expect(instance).to.be();
     });

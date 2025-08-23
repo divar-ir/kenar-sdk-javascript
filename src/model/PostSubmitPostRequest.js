@@ -25,10 +25,17 @@ class PostSubmitPostRequest {
     /**
      * Constructs a new <code>PostSubmitPostRequest</code>.
      * @alias module:model/PostSubmitPostRequest
+     * @param chatEnabled {Boolean} امکان چت فعال باشد
+     * @param city {String} شهر آگهی
+     * @param description {String} توضیحات آگهی
+     * @param hidePhone {Boolean} عدم نمایش شماره تماس به کاربران
+     * @param images {Array.<String>} 
+     * @param locationType {module:model/SubmitPostRequestLocationType} 
+     * @param title {String} عنوان آگهی
      */
-    constructor() { 
+    constructor(chatEnabled, city, description, hidePhone, images, locationType, title) { 
         
-        PostSubmitPostRequest.initialize(this);
+        PostSubmitPostRequest.initialize(this, chatEnabled, city, description, hidePhone, images, locationType, title);
     }
 
     /**
@@ -36,7 +43,14 @@ class PostSubmitPostRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, chatEnabled, city, description, hidePhone, images, locationType, title) { 
+        obj['chat_enabled'] = chatEnabled;
+        obj['city'] = city;
+        obj['description'] = description;
+        obj['hide_phone'] = hidePhone;
+        obj['images'] = images;
+        obj['location_type'] = locationType;
+        obj['title'] = title;
     }
 
     /**
@@ -59,23 +73,26 @@ class PostSubmitPostRequest {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('district')) {
-                obj['district'] = ApiClient.convertToType(data['district'], 'String');
-            }
             if (data.hasOwnProperty('hide_phone')) {
                 obj['hide_phone'] = ApiClient.convertToType(data['hide_phone'], 'Boolean');
             }
             if (data.hasOwnProperty('images')) {
                 obj['images'] = ApiClient.convertToType(data['images'], ['String']);
             }
+            if (data.hasOwnProperty('location_type')) {
+                obj['location_type'] = SubmitPostRequestLocationType.constructFromObject(data['location_type']);
+            }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('district')) {
+                obj['district'] = ApiClient.convertToType(data['district'], 'String');
+            }
             if (data.hasOwnProperty('landline_numbers')) {
                 obj['landline_numbers'] = ApiClient.convertToType(data['landline_numbers'], ['String']);
             }
             if (data.hasOwnProperty('latitude')) {
                 obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
-            }
-            if (data.hasOwnProperty('location_type')) {
-                obj['location_type'] = SubmitPostRequestLocationType.constructFromObject(data['location_type']);
             }
             if (data.hasOwnProperty('longitude')) {
                 obj['longitude'] = ApiClient.convertToType(data['longitude'], 'Number');
@@ -85,9 +102,6 @@ class PostSubmitPostRequest {
             }
             if (data.hasOwnProperty('temporary_residence')) {
                 obj['temporary_residence'] = PostTemporaryResidenceFields.constructFromObject(data['temporary_residence']);
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
         }
         return obj;
@@ -99,6 +113,12 @@ class PostSubmitPostRequest {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PostSubmitPostRequest</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of PostSubmitPostRequest.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['city'] && !(typeof data['city'] === 'string' || data['city'] instanceof String)) {
             throw new Error("Expected the field `city` to be a primitive type in the JSON string but got " + data['city']);
@@ -107,13 +127,17 @@ class PostSubmitPostRequest {
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
-        // ensure the json data is a string
-        if (data['district'] && !(typeof data['district'] === 'string' || data['district'] instanceof String)) {
-            throw new Error("Expected the field `district` to be a primitive type in the JSON string but got " + data['district']);
-        }
         // ensure the json data is an array
         if (!Array.isArray(data['images'])) {
             throw new Error("Expected the field `images` to be an array in the JSON data but got " + data['images']);
+        }
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        }
+        // ensure the json data is a string
+        if (data['district'] && !(typeof data['district'] === 'string' || data['district'] instanceof String)) {
+            throw new Error("Expected the field `district` to be a primitive type in the JSON string but got " + data['district']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['landline_numbers'])) {
@@ -126,10 +150,6 @@ class PostSubmitPostRequest {
         // validate the optional field `temporary_residence`
         if (data['temporary_residence']) { // data not null
           PostTemporaryResidenceFields.validateJSON(data['temporary_residence']);
-        }
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
 
         return true;
@@ -181,21 +201,6 @@ class PostSubmitPostRequest {
         this['description'] = description;
     }
 /**
-     * Returns محله آگهی
-     * @return {String}
-     */
-    getDistrict() {
-        return this.district;
-    }
-
-    /**
-     * Sets محله آگهی
-     * @param {String} district محله آگهی
-     */
-    setDistrict(district) {
-        this['district'] = district;
-    }
-/**
      * Returns عدم نمایش شماره تماس به کاربران
      * @return {Boolean}
      */
@@ -222,6 +227,49 @@ class PostSubmitPostRequest {
      */
     setImages(images) {
         this['images'] = images;
+    }
+/**
+     * @return {module:model/SubmitPostRequestLocationType}
+     */
+    getLocationType() {
+        return this.location_type;
+    }
+
+    /**
+     * @param {module:model/SubmitPostRequestLocationType} locationType
+     */
+    setLocationType(locationType) {
+        this['location_type'] = locationType;
+    }
+/**
+     * Returns عنوان آگهی
+     * @return {String}
+     */
+    getTitle() {
+        return this.title;
+    }
+
+    /**
+     * Sets عنوان آگهی
+     * @param {String} title عنوان آگهی
+     */
+    setTitle(title) {
+        this['title'] = title;
+    }
+/**
+     * Returns محله آگهی
+     * @return {String}
+     */
+    getDistrict() {
+        return this.district;
+    }
+
+    /**
+     * Sets محله آگهی
+     * @param {String} district محله آگهی
+     */
+    setDistrict(district) {
+        this['district'] = district;
     }
 /**
      * Returns Landline numbers to be added to the post
@@ -252,19 +300,6 @@ class PostSubmitPostRequest {
      */
     setLatitude(latitude) {
         this['latitude'] = latitude;
-    }
-/**
-     * @return {module:model/SubmitPostRequestLocationType}
-     */
-    getLocationType() {
-        return this.location_type;
-    }
-
-    /**
-     * @param {module:model/SubmitPostRequestLocationType} locationType
-     */
-    setLocationType(locationType) {
-        this['location_type'] = locationType;
     }
 /**
      * Returns طول جغرافیایی آگهی
@@ -307,25 +342,10 @@ class PostSubmitPostRequest {
     setTemporaryResidence(temporaryResidence) {
         this['temporary_residence'] = temporaryResidence;
     }
-/**
-     * Returns عنوان آگهی
-     * @return {String}
-     */
-    getTitle() {
-        return this.title;
-    }
-
-    /**
-     * Sets عنوان آگهی
-     * @param {String} title عنوان آگهی
-     */
-    setTitle(title) {
-        this['title'] = title;
-    }
 
 }
 
-
+PostSubmitPostRequest.RequiredProperties = ["chat_enabled", "city", "description", "hide_phone", "images", "location_type", "title"];
 
 /**
  * امکان چت فعال باشد
@@ -346,12 +366,6 @@ PostSubmitPostRequest.prototype['city'] = undefined;
 PostSubmitPostRequest.prototype['description'] = undefined;
 
 /**
- * محله آگهی
- * @member {String} district
- */
-PostSubmitPostRequest.prototype['district'] = undefined;
-
-/**
  * عدم نمایش شماره تماس به کاربران
  * @member {Boolean} hide_phone
  */
@@ -361,6 +375,23 @@ PostSubmitPostRequest.prototype['hide_phone'] = undefined;
  * @member {Array.<String>} images
  */
 PostSubmitPostRequest.prototype['images'] = undefined;
+
+/**
+ * @member {module:model/SubmitPostRequestLocationType} location_type
+ */
+PostSubmitPostRequest.prototype['location_type'] = undefined;
+
+/**
+ * عنوان آگهی
+ * @member {String} title
+ */
+PostSubmitPostRequest.prototype['title'] = undefined;
+
+/**
+ * محله آگهی
+ * @member {String} district
+ */
+PostSubmitPostRequest.prototype['district'] = undefined;
 
 /**
  * Landline numbers to be added to the post
@@ -373,11 +404,6 @@ PostSubmitPostRequest.prototype['landline_numbers'] = undefined;
  * @member {Number} latitude
  */
 PostSubmitPostRequest.prototype['latitude'] = undefined;
-
-/**
- * @member {module:model/SubmitPostRequestLocationType} location_type
- */
-PostSubmitPostRequest.prototype['location_type'] = undefined;
 
 /**
  * طول جغرافیایی آگهی
@@ -394,12 +420,6 @@ PostSubmitPostRequest.prototype['services'] = undefined;
  * @member {module:model/PostTemporaryResidenceFields} temporary_residence
  */
 PostSubmitPostRequest.prototype['temporary_residence'] = undefined;
-
-/**
- * عنوان آگهی
- * @member {String} title
- */
-PostSubmitPostRequest.prototype['title'] = undefined;
 
 
 

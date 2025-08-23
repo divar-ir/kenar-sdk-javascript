@@ -148,8 +148,6 @@ import PostEditPostBody from './model/PostEditPostBody';
 import PostGetImageUploadURLResponse from './model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
 import PostServicesFieldsCategory from './model/PostServicesFieldsCategory';
-import PostSubmitEmergencyResidencePostRequest from './model/PostSubmitEmergencyResidencePostRequest';
-import PostSubmitEmergencyResidencePostResponse from './model/PostSubmitEmergencyResidencePostResponse';
 import PostSubmitPostRequest from './model/PostSubmitPostRequest';
 import PostSubmitPostResponse from './model/PostSubmitPostResponse';
 import PostTemporaryResidenceFields from './model/PostTemporaryResidenceFields';
@@ -1028,18 +1026,6 @@ export {
      * @property {module:model/PostServicesFieldsCategory}
      */
     PostServicesFieldsCategory,
-
-    /**
-     * The PostSubmitEmergencyResidencePostRequest model constructor.
-     * @property {module:model/PostSubmitEmergencyResidencePostRequest}
-     */
-    PostSubmitEmergencyResidencePostRequest,
-
-    /**
-     * The PostSubmitEmergencyResidencePostResponse model constructor.
-     * @property {module:model/PostSubmitEmergencyResidencePostResponse}
-     */
-    PostSubmitEmergencyResidencePostResponse,
 
     /**
      * The PostSubmitPostRequest model constructor.

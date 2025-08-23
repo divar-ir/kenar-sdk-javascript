@@ -17,8 +17,6 @@ import GooglerpcStatus from '../model/GooglerpcStatus';
 import PostEditPostBody from '../model/PostEditPostBody';
 import PostGetImageUploadURLResponse from '../model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from '../model/PostGetPostStatsResponse';
-import PostSubmitEmergencyResidencePostRequest from '../model/PostSubmitEmergencyResidencePostRequest';
-import PostSubmitEmergencyResidencePostResponse from '../model/PostSubmitEmergencyResidencePostResponse';
 import PostSubmitPostRequest from '../model/PostSubmitPostRequest';
 import PostSubmitPostResponse from '../model/PostSubmitPostResponse';
 
@@ -179,51 +177,6 @@ export default class PostApi {
      */
     postGetPostStats(postToken) {
       return this.postGetPostStatsWithHttpInfo(postToken)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Submit an emergency residence post
-     * @param {module:model/PostSubmitEmergencyResidencePostRequest} postSubmitEmergencyResidencePostRequest 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitEmergencyResidencePostResponse} and HTTP response
-     */
-    postSubmitEmergencyResidencePostWithHttpInfo(postSubmitEmergencyResidencePostRequest) {
-      let postBody = postSubmitEmergencyResidencePostRequest;
-      // verify the required parameter 'postSubmitEmergencyResidencePostRequest' is set
-      if (postSubmitEmergencyResidencePostRequest === undefined || postSubmitEmergencyResidencePostRequest === null) {
-        throw new Error("Missing the required parameter 'postSubmitEmergencyResidencePostRequest' when calling postSubmitEmergencyResidencePost");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['APIKey'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = PostSubmitEmergencyResidencePostResponse;
-      return this.apiClient.callApi(
-        '/experimental/open-platform/posts/emergency-residence', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Submit an emergency residence post
-     * @param {module:model/PostSubmitEmergencyResidencePostRequest} postSubmitEmergencyResidencePostRequest 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitEmergencyResidencePostResponse}
-     */
-    postSubmitEmergencyResidencePost(postSubmitEmergencyResidencePostRequest) {
-      return this.postSubmitEmergencyResidencePostWithHttpInfo(postSubmitEmergencyResidencePostRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

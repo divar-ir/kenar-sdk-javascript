@@ -23,10 +23,16 @@ class OpenPlatformpostServicesFields {
     /**
      * Constructs a new <code>OpenPlatformpostServicesFields</code>.
      * @alias module:model/OpenPlatformpostServicesFields
+     * @param category {module:model/PostServicesFieldsCategory} 
+     * @param expertiseIds {Array.<String>} List of expertise ids
+     * @param workHoursEnd {Number} End hour of work in 24-hour format (e.g. 18 for 18:00). Only applicable if `works_24_7` is false.
+     * @param workHoursStart {Number} Start hour of work in 24-hour format (e.g. 9 for 9:00). Only applicable if `works_24_7` is false.
+     * @param workOnHolidays {Boolean} Whether the service provider works on holidays
+     * @param works247 {Boolean} Whether the service provider is available 24/7. If true, `work_hours_start` and `work_hours_end` are ignored.
      */
-    constructor() { 
+    constructor(category, expertiseIds, workHoursEnd, workHoursStart, workOnHolidays, works247) { 
         
-        OpenPlatformpostServicesFields.initialize(this);
+        OpenPlatformpostServicesFields.initialize(this, category, expertiseIds, workHoursEnd, workHoursStart, workOnHolidays, works247);
     }
 
     /**
@@ -34,7 +40,13 @@ class OpenPlatformpostServicesFields {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, category, expertiseIds, workHoursEnd, workHoursStart, workOnHolidays, works247) { 
+        obj['category'] = category;
+        obj['expertise_ids'] = expertiseIds;
+        obj['work_hours_end'] = workHoursEnd;
+        obj['work_hours_start'] = workHoursStart;
+        obj['work_on_holidays'] = workOnHolidays;
+        obj['works_24_7'] = works247;
     }
 
     /**
@@ -76,6 +88,12 @@ class OpenPlatformpostServicesFields {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OpenPlatformpostServicesFields</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of OpenPlatformpostServicesFields.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is an array
         if (!Array.isArray(data['expertise_ids'])) {
             throw new Error("Expected the field `expertise_ids` to be an array in the JSON data but got " + data['expertise_ids']);
@@ -175,7 +193,7 @@ class OpenPlatformpostServicesFields {
 
 }
 
-
+OpenPlatformpostServicesFields.RequiredProperties = ["category", "expertise_ids", "work_hours_end", "work_hours_start", "work_on_holidays", "works_24_7"];
 
 /**
  * @member {module:model/PostServicesFieldsCategory} category

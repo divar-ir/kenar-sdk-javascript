@@ -78,16 +78,6 @@
         done();
       });
     });
-    describe('postSubmitEmergencyResidencePost', function() {
-      it('should call postSubmitEmergencyResidencePost successfully', function(done) {
-        //uncomment below and update the code to test postSubmitEmergencyResidencePost
-        //instance.postSubmitEmergencyResidencePost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('postSubmitPost', function() {
       it('should call postSubmitPost successfully', function(done) {
         //uncomment below and update the code to test postSubmitPost

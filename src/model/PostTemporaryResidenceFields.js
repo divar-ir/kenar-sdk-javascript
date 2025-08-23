@@ -27,10 +27,19 @@ class PostTemporaryResidenceFields {
     /**
      * Constructs a new <code>PostTemporaryResidenceFields</code>.
      * @alias module:model/PostTemporaryResidenceFields
+     * @param area {Number} متراژ اقامتگاه به متر مربع
+     * @param extraPersonCapacity {Number} تعداد افراد اضافه مجاز در اقامتگاه
+     * @param hasOwnImage {Boolean} تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * @param priceCostPerExtraPerson {String} هزینه هر نفر اضافه به ازای هر شب به تومان
+     * @param priceRegularDays {String} قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان
+     * @param priceSpecialDays {String} قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان
+     * @param priceWeekends {String} قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان
+     * @param regularPersonCapacity {Number} ظرفیت استاندارد افراد در اقامتگاه
+     * @param roomsCount {module:model/TemporaryResidenceFieldsRoomsCount} 
      */
-    constructor() { 
+    constructor(area, extraPersonCapacity, hasOwnImage, priceCostPerExtraPerson, priceRegularDays, priceSpecialDays, priceWeekends, regularPersonCapacity, roomsCount) { 
         
-        PostTemporaryResidenceFields.initialize(this);
+        PostTemporaryResidenceFields.initialize(this, area, extraPersonCapacity, hasOwnImage, priceCostPerExtraPerson, priceRegularDays, priceSpecialDays, priceWeekends, regularPersonCapacity, roomsCount);
     }
 
     /**
@@ -38,7 +47,16 @@ class PostTemporaryResidenceFields {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, area, extraPersonCapacity, hasOwnImage, priceCostPerExtraPerson, priceRegularDays, priceSpecialDays, priceWeekends, regularPersonCapacity, roomsCount) { 
+        obj['area'] = area;
+        obj['extra_person_capacity'] = extraPersonCapacity;
+        obj['has_own_image'] = hasOwnImage;
+        obj['price_cost_per_extra_person'] = priceCostPerExtraPerson;
+        obj['price_regular_days'] = priceRegularDays;
+        obj['price_special_days'] = priceSpecialDays;
+        obj['price_weekends'] = priceWeekends;
+        obj['regular_person_capacity'] = regularPersonCapacity;
+        obj['rooms_count'] = roomsCount;
     }
 
     /**
@@ -55,38 +73,11 @@ class PostTemporaryResidenceFields {
             if (data.hasOwnProperty('area')) {
                 obj['area'] = ApiClient.convertToType(data['area'], 'Number');
             }
-            if (data.hasOwnProperty('check_in_time')) {
-                obj['check_in_time'] = ApiClient.convertToType(data['check_in_time'], 'String');
-            }
-            if (data.hasOwnProperty('check_out_time')) {
-                obj['check_out_time'] = ApiClient.convertToType(data['check_out_time'], 'String');
-            }
-            if (data.hasOwnProperty('comfort_amenities')) {
-                obj['comfort_amenities'] = ApiClient.convertToType(data['comfort_amenities'], [TemporaryResidenceFieldsComfortAmenity]);
-            }
-            if (data.hasOwnProperty('damage_deposit')) {
-                obj['damage_deposit'] = ApiClient.convertToType(data['damage_deposit'], 'String');
-            }
             if (data.hasOwnProperty('extra_person_capacity')) {
                 obj['extra_person_capacity'] = ApiClient.convertToType(data['extra_person_capacity'], 'Number');
             }
-            if (data.hasOwnProperty('fully_furnished')) {
-                obj['fully_furnished'] = ApiClient.convertToType(data['fully_furnished'], 'Boolean');
-            }
             if (data.hasOwnProperty('has_own_image')) {
                 obj['has_own_image'] = ApiClient.convertToType(data['has_own_image'], 'Boolean');
-            }
-            if (data.hasOwnProperty('heating_cooling_system')) {
-                obj['heating_cooling_system'] = ApiClient.convertToType(data['heating_cooling_system'], [TemporaryResidenceFieldsHeatingCoolingSystem]);
-            }
-            if (data.hasOwnProperty('house_rules')) {
-                obj['house_rules'] = ApiClient.convertToType(data['house_rules'], 'String');
-            }
-            if (data.hasOwnProperty('minimum_stay')) {
-                obj['minimum_stay'] = ApiClient.convertToType(data['minimum_stay'], 'Number');
-            }
-            if (data.hasOwnProperty('pets_allowed')) {
-                obj['pets_allowed'] = TemporaryResidenceFieldsPetsAllowed.constructFromObject(data['pets_allowed']);
             }
             if (data.hasOwnProperty('price_cost_per_extra_person')) {
                 obj['price_cost_per_extra_person'] = ApiClient.convertToType(data['price_cost_per_extra_person'], 'String');
@@ -103,11 +94,38 @@ class PostTemporaryResidenceFields {
             if (data.hasOwnProperty('regular_person_capacity')) {
                 obj['regular_person_capacity'] = ApiClient.convertToType(data['regular_person_capacity'], 'Number');
             }
-            if (data.hasOwnProperty('rental_period')) {
-                obj['rental_period'] = TemporaryResidenceFieldsRentalPeriod.constructFromObject(data['rental_period']);
-            }
             if (data.hasOwnProperty('rooms_count')) {
                 obj['rooms_count'] = TemporaryResidenceFieldsRoomsCount.constructFromObject(data['rooms_count']);
+            }
+            if (data.hasOwnProperty('check_in_time')) {
+                obj['check_in_time'] = ApiClient.convertToType(data['check_in_time'], 'String');
+            }
+            if (data.hasOwnProperty('check_out_time')) {
+                obj['check_out_time'] = ApiClient.convertToType(data['check_out_time'], 'String');
+            }
+            if (data.hasOwnProperty('comfort_amenities')) {
+                obj['comfort_amenities'] = ApiClient.convertToType(data['comfort_amenities'], [TemporaryResidenceFieldsComfortAmenity]);
+            }
+            if (data.hasOwnProperty('damage_deposit')) {
+                obj['damage_deposit'] = ApiClient.convertToType(data['damage_deposit'], 'String');
+            }
+            if (data.hasOwnProperty('fully_furnished')) {
+                obj['fully_furnished'] = ApiClient.convertToType(data['fully_furnished'], 'Boolean');
+            }
+            if (data.hasOwnProperty('heating_cooling_system')) {
+                obj['heating_cooling_system'] = ApiClient.convertToType(data['heating_cooling_system'], [TemporaryResidenceFieldsHeatingCoolingSystem]);
+            }
+            if (data.hasOwnProperty('house_rules')) {
+                obj['house_rules'] = ApiClient.convertToType(data['house_rules'], 'String');
+            }
+            if (data.hasOwnProperty('minimum_stay')) {
+                obj['minimum_stay'] = ApiClient.convertToType(data['minimum_stay'], 'Number');
+            }
+            if (data.hasOwnProperty('pets_allowed')) {
+                obj['pets_allowed'] = TemporaryResidenceFieldsPetsAllowed.constructFromObject(data['pets_allowed']);
+            }
+            if (data.hasOwnProperty('rental_period')) {
+                obj['rental_period'] = TemporaryResidenceFieldsRentalPeriod.constructFromObject(data['rental_period']);
             }
         }
         return obj;
@@ -119,6 +137,28 @@ class PostTemporaryResidenceFields {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PostTemporaryResidenceFields</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of PostTemporaryResidenceFields.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['price_cost_per_extra_person'] && !(typeof data['price_cost_per_extra_person'] === 'string' || data['price_cost_per_extra_person'] instanceof String)) {
+            throw new Error("Expected the field `price_cost_per_extra_person` to be a primitive type in the JSON string but got " + data['price_cost_per_extra_person']);
+        }
+        // ensure the json data is a string
+        if (data['price_regular_days'] && !(typeof data['price_regular_days'] === 'string' || data['price_regular_days'] instanceof String)) {
+            throw new Error("Expected the field `price_regular_days` to be a primitive type in the JSON string but got " + data['price_regular_days']);
+        }
+        // ensure the json data is a string
+        if (data['price_special_days'] && !(typeof data['price_special_days'] === 'string' || data['price_special_days'] instanceof String)) {
+            throw new Error("Expected the field `price_special_days` to be a primitive type in the JSON string but got " + data['price_special_days']);
+        }
+        // ensure the json data is a string
+        if (data['price_weekends'] && !(typeof data['price_weekends'] === 'string' || data['price_weekends'] instanceof String)) {
+            throw new Error("Expected the field `price_weekends` to be a primitive type in the JSON string but got " + data['price_weekends']);
+        }
         // ensure the json data is a string
         if (data['check_in_time'] && !(typeof data['check_in_time'] === 'string' || data['check_in_time'] instanceof String)) {
             throw new Error("Expected the field `check_in_time` to be a primitive type in the JSON string but got " + data['check_in_time']);
@@ -143,22 +183,6 @@ class PostTemporaryResidenceFields {
         if (data['house_rules'] && !(typeof data['house_rules'] === 'string' || data['house_rules'] instanceof String)) {
             throw new Error("Expected the field `house_rules` to be a primitive type in the JSON string but got " + data['house_rules']);
         }
-        // ensure the json data is a string
-        if (data['price_cost_per_extra_person'] && !(typeof data['price_cost_per_extra_person'] === 'string' || data['price_cost_per_extra_person'] instanceof String)) {
-            throw new Error("Expected the field `price_cost_per_extra_person` to be a primitive type in the JSON string but got " + data['price_cost_per_extra_person']);
-        }
-        // ensure the json data is a string
-        if (data['price_regular_days'] && !(typeof data['price_regular_days'] === 'string' || data['price_regular_days'] instanceof String)) {
-            throw new Error("Expected the field `price_regular_days` to be a primitive type in the JSON string but got " + data['price_regular_days']);
-        }
-        // ensure the json data is a string
-        if (data['price_special_days'] && !(typeof data['price_special_days'] === 'string' || data['price_special_days'] instanceof String)) {
-            throw new Error("Expected the field `price_special_days` to be a primitive type in the JSON string but got " + data['price_special_days']);
-        }
-        // ensure the json data is a string
-        if (data['price_weekends'] && !(typeof data['price_weekends'] === 'string' || data['price_weekends'] instanceof String)) {
-            throw new Error("Expected the field `price_weekends` to be a primitive type in the JSON string but got " + data['price_weekends']);
-        }
 
         return true;
     }
@@ -179,64 +203,6 @@ class PostTemporaryResidenceFields {
         this['area'] = area;
     }
 /**
-     * Returns Check-in time
-     * @return {String}
-     */
-    getCheckInTime() {
-        return this.check_in_time;
-    }
-
-    /**
-     * Sets Check-in time
-     * @param {String} checkInTime Check-in time
-     */
-    setCheckInTime(checkInTime) {
-        this['check_in_time'] = checkInTime;
-    }
-/**
-     * Returns Check-out time
-     * @return {String}
-     */
-    getCheckOutTime() {
-        return this.check_out_time;
-    }
-
-    /**
-     * Sets Check-out time
-     * @param {String} checkOutTime Check-out time
-     */
-    setCheckOutTime(checkOutTime) {
-        this['check_out_time'] = checkOutTime;
-    }
-/**
-     * @return {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>}
-     */
-    getComfortAmenities() {
-        return this.comfort_amenities;
-    }
-
-    /**
-     * @param {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>} comfortAmenities
-     */
-    setComfortAmenities(comfortAmenities) {
-        this['comfort_amenities'] = comfortAmenities;
-    }
-/**
-     * Returns Damage deposit amount in Toman
-     * @return {String}
-     */
-    getDamageDeposit() {
-        return this.damage_deposit;
-    }
-
-    /**
-     * Sets Damage deposit amount in Toman
-     * @param {String} damageDeposit Damage deposit amount in Toman
-     */
-    setDamageDeposit(damageDeposit) {
-        this['damage_deposit'] = damageDeposit;
-    }
-/**
      * Returns تعداد افراد اضافه مجاز در اقامتگاه
      * @return {Number}
      */
@@ -252,21 +218,6 @@ class PostTemporaryResidenceFields {
         this['extra_person_capacity'] = extraPersonCapacity;
     }
 /**
-     * Returns Whether the residence is fully furnished
-     * @return {Boolean}
-     */
-    getFullyFurnished() {
-        return this.fully_furnished;
-    }
-
-    /**
-     * Sets Whether the residence is fully furnished
-     * @param {Boolean} fullyFurnished Whether the residence is fully furnished
-     */
-    setFullyFurnished(fullyFurnished) {
-        this['fully_furnished'] = fullyFurnished;
-    }
-/**
      * Returns تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
      * @return {Boolean}
      */
@@ -280,62 +231,6 @@ class PostTemporaryResidenceFields {
      */
     setHasOwnImage(hasOwnImage) {
         this['has_own_image'] = hasOwnImage;
-    }
-/**
-     * @return {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>}
-     */
-    getHeatingCoolingSystem() {
-        return this.heating_cooling_system;
-    }
-
-    /**
-     * @param {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>} heatingCoolingSystem
-     */
-    setHeatingCoolingSystem(heatingCoolingSystem) {
-        this['heating_cooling_system'] = heatingCoolingSystem;
-    }
-/**
-     * Returns House rules and regulations
-     * @return {String}
-     */
-    getHouseRules() {
-        return this.house_rules;
-    }
-
-    /**
-     * Sets House rules and regulations
-     * @param {String} houseRules House rules and regulations
-     */
-    setHouseRules(houseRules) {
-        this['house_rules'] = houseRules;
-    }
-/**
-     * Returns Minimum number of days required for stay
-     * @return {Number}
-     */
-    getMinimumStay() {
-        return this.minimum_stay;
-    }
-
-    /**
-     * Sets Minimum number of days required for stay
-     * @param {Number} minimumStay Minimum number of days required for stay
-     */
-    setMinimumStay(minimumStay) {
-        this['minimum_stay'] = minimumStay;
-    }
-/**
-     * @return {module:model/TemporaryResidenceFieldsPetsAllowed}
-     */
-    getPetsAllowed() {
-        return this.pets_allowed;
-    }
-
-    /**
-     * @param {module:model/TemporaryResidenceFieldsPetsAllowed} petsAllowed
-     */
-    setPetsAllowed(petsAllowed) {
-        this['pets_allowed'] = petsAllowed;
     }
 /**
      * Returns هزینه هر نفر اضافه به ازای هر شب به تومان
@@ -413,19 +308,6 @@ class PostTemporaryResidenceFields {
         this['regular_person_capacity'] = regularPersonCapacity;
     }
 /**
-     * @return {module:model/TemporaryResidenceFieldsRentalPeriod}
-     */
-    getRentalPeriod() {
-        return this.rental_period;
-    }
-
-    /**
-     * @param {module:model/TemporaryResidenceFieldsRentalPeriod} rentalPeriod
-     */
-    setRentalPeriod(rentalPeriod) {
-        this['rental_period'] = rentalPeriod;
-    }
-/**
      * @return {module:model/TemporaryResidenceFieldsRoomsCount}
      */
     getRoomsCount() {
@@ -438,10 +320,152 @@ class PostTemporaryResidenceFields {
     setRoomsCount(roomsCount) {
         this['rooms_count'] = roomsCount;
     }
+/**
+     * Returns Check-in time
+     * @return {String}
+     */
+    getCheckInTime() {
+        return this.check_in_time;
+    }
+
+    /**
+     * Sets Check-in time
+     * @param {String} checkInTime Check-in time
+     */
+    setCheckInTime(checkInTime) {
+        this['check_in_time'] = checkInTime;
+    }
+/**
+     * Returns Check-out time
+     * @return {String}
+     */
+    getCheckOutTime() {
+        return this.check_out_time;
+    }
+
+    /**
+     * Sets Check-out time
+     * @param {String} checkOutTime Check-out time
+     */
+    setCheckOutTime(checkOutTime) {
+        this['check_out_time'] = checkOutTime;
+    }
+/**
+     * @return {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>}
+     */
+    getComfortAmenities() {
+        return this.comfort_amenities;
+    }
+
+    /**
+     * @param {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>} comfortAmenities
+     */
+    setComfortAmenities(comfortAmenities) {
+        this['comfort_amenities'] = comfortAmenities;
+    }
+/**
+     * Returns Damage deposit amount in Toman
+     * @return {String}
+     */
+    getDamageDeposit() {
+        return this.damage_deposit;
+    }
+
+    /**
+     * Sets Damage deposit amount in Toman
+     * @param {String} damageDeposit Damage deposit amount in Toman
+     */
+    setDamageDeposit(damageDeposit) {
+        this['damage_deposit'] = damageDeposit;
+    }
+/**
+     * Returns Whether the residence is fully furnished
+     * @return {Boolean}
+     */
+    getFullyFurnished() {
+        return this.fully_furnished;
+    }
+
+    /**
+     * Sets Whether the residence is fully furnished
+     * @param {Boolean} fullyFurnished Whether the residence is fully furnished
+     */
+    setFullyFurnished(fullyFurnished) {
+        this['fully_furnished'] = fullyFurnished;
+    }
+/**
+     * @return {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>}
+     */
+    getHeatingCoolingSystem() {
+        return this.heating_cooling_system;
+    }
+
+    /**
+     * @param {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>} heatingCoolingSystem
+     */
+    setHeatingCoolingSystem(heatingCoolingSystem) {
+        this['heating_cooling_system'] = heatingCoolingSystem;
+    }
+/**
+     * Returns House rules and regulations
+     * @return {String}
+     */
+    getHouseRules() {
+        return this.house_rules;
+    }
+
+    /**
+     * Sets House rules and regulations
+     * @param {String} houseRules House rules and regulations
+     */
+    setHouseRules(houseRules) {
+        this['house_rules'] = houseRules;
+    }
+/**
+     * Returns Minimum number of days required for stay
+     * @return {Number}
+     */
+    getMinimumStay() {
+        return this.minimum_stay;
+    }
+
+    /**
+     * Sets Minimum number of days required for stay
+     * @param {Number} minimumStay Minimum number of days required for stay
+     */
+    setMinimumStay(minimumStay) {
+        this['minimum_stay'] = minimumStay;
+    }
+/**
+     * @return {module:model/TemporaryResidenceFieldsPetsAllowed}
+     */
+    getPetsAllowed() {
+        return this.pets_allowed;
+    }
+
+    /**
+     * @param {module:model/TemporaryResidenceFieldsPetsAllowed} petsAllowed
+     */
+    setPetsAllowed(petsAllowed) {
+        this['pets_allowed'] = petsAllowed;
+    }
+/**
+     * @return {module:model/TemporaryResidenceFieldsRentalPeriod}
+     */
+    getRentalPeriod() {
+        return this.rental_period;
+    }
+
+    /**
+     * @param {module:model/TemporaryResidenceFieldsRentalPeriod} rentalPeriod
+     */
+    setRentalPeriod(rentalPeriod) {
+        this['rental_period'] = rentalPeriod;
+    }
 
 }
 
-
+PostTemporaryResidenceFields.RequiredProperties = ["area", "extra_person_capacity", "has_own_image", "price_cost_per_extra_person", "price_regular_days", "price_special_days", "price_weekends", "regular_person_capacity", "rooms_count"];
 
 /**
  * متراژ اقامتگاه به متر مربع
@@ -450,67 +474,16 @@ class PostTemporaryResidenceFields {
 PostTemporaryResidenceFields.prototype['area'] = undefined;
 
 /**
- * Check-in time
- * @member {String} check_in_time
- */
-PostTemporaryResidenceFields.prototype['check_in_time'] = undefined;
-
-/**
- * Check-out time
- * @member {String} check_out_time
- */
-PostTemporaryResidenceFields.prototype['check_out_time'] = undefined;
-
-/**
- * @member {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>} comfort_amenities
- */
-PostTemporaryResidenceFields.prototype['comfort_amenities'] = undefined;
-
-/**
- * Damage deposit amount in Toman
- * @member {String} damage_deposit
- */
-PostTemporaryResidenceFields.prototype['damage_deposit'] = undefined;
-
-/**
  * تعداد افراد اضافه مجاز در اقامتگاه
  * @member {Number} extra_person_capacity
  */
 PostTemporaryResidenceFields.prototype['extra_person_capacity'] = undefined;
 
 /**
- * Whether the residence is fully furnished
- * @member {Boolean} fully_furnished
- */
-PostTemporaryResidenceFields.prototype['fully_furnished'] = undefined;
-
-/**
  * تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
  * @member {Boolean} has_own_image
  */
 PostTemporaryResidenceFields.prototype['has_own_image'] = undefined;
-
-/**
- * @member {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>} heating_cooling_system
- */
-PostTemporaryResidenceFields.prototype['heating_cooling_system'] = undefined;
-
-/**
- * House rules and regulations
- * @member {String} house_rules
- */
-PostTemporaryResidenceFields.prototype['house_rules'] = undefined;
-
-/**
- * Minimum number of days required for stay
- * @member {Number} minimum_stay
- */
-PostTemporaryResidenceFields.prototype['minimum_stay'] = undefined;
-
-/**
- * @member {module:model/TemporaryResidenceFieldsPetsAllowed} pets_allowed
- */
-PostTemporaryResidenceFields.prototype['pets_allowed'] = undefined;
 
 /**
  * هزینه هر نفر اضافه به ازای هر شب به تومان
@@ -543,14 +516,65 @@ PostTemporaryResidenceFields.prototype['price_weekends'] = undefined;
 PostTemporaryResidenceFields.prototype['regular_person_capacity'] = undefined;
 
 /**
- * @member {module:model/TemporaryResidenceFieldsRentalPeriod} rental_period
- */
-PostTemporaryResidenceFields.prototype['rental_period'] = undefined;
-
-/**
  * @member {module:model/TemporaryResidenceFieldsRoomsCount} rooms_count
  */
 PostTemporaryResidenceFields.prototype['rooms_count'] = undefined;
+
+/**
+ * Check-in time
+ * @member {String} check_in_time
+ */
+PostTemporaryResidenceFields.prototype['check_in_time'] = undefined;
+
+/**
+ * Check-out time
+ * @member {String} check_out_time
+ */
+PostTemporaryResidenceFields.prototype['check_out_time'] = undefined;
+
+/**
+ * @member {Array.<module:model/TemporaryResidenceFieldsComfortAmenity>} comfort_amenities
+ */
+PostTemporaryResidenceFields.prototype['comfort_amenities'] = undefined;
+
+/**
+ * Damage deposit amount in Toman
+ * @member {String} damage_deposit
+ */
+PostTemporaryResidenceFields.prototype['damage_deposit'] = undefined;
+
+/**
+ * Whether the residence is fully furnished
+ * @member {Boolean} fully_furnished
+ */
+PostTemporaryResidenceFields.prototype['fully_furnished'] = undefined;
+
+/**
+ * @member {Array.<module:model/TemporaryResidenceFieldsHeatingCoolingSystem>} heating_cooling_system
+ */
+PostTemporaryResidenceFields.prototype['heating_cooling_system'] = undefined;
+
+/**
+ * House rules and regulations
+ * @member {String} house_rules
+ */
+PostTemporaryResidenceFields.prototype['house_rules'] = undefined;
+
+/**
+ * Minimum number of days required for stay
+ * @member {Number} minimum_stay
+ */
+PostTemporaryResidenceFields.prototype['minimum_stay'] = undefined;
+
+/**
+ * @member {module:model/TemporaryResidenceFieldsPetsAllowed} pets_allowed
+ */
+PostTemporaryResidenceFields.prototype['pets_allowed'] = undefined;
+
+/**
+ * @member {module:model/TemporaryResidenceFieldsRentalPeriod} rental_period
+ */
+PostTemporaryResidenceFields.prototype['rental_period'] = undefined;
 
 
 
