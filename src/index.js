@@ -18,6 +18,7 @@ import AddonSemanticIdentityVerificationResult from './model/AddonSemanticIdenti
 import AddonSemanticIdentityVerificationStage from './model/AddonSemanticIdentityVerificationStage';
 import AddonSemanticInspectionResult from './model/AddonSemanticInspectionResult';
 import AddonSemanticNewFaceVerificationResult from './model/AddonSemanticNewFaceVerificationResult';
+import AddonSemanticOnlineReservationCapability from './model/AddonSemanticOnlineReservationCapability';
 import AddonSemanticOwnershipResult from './model/AddonSemanticOwnershipResult';
 import AddonSemanticPostVerificationResult from './model/AddonSemanticPostVerificationResult';
 import AddonsAction from './model/AddonsAction';
@@ -121,6 +122,10 @@ import GetPostStatsResponseDailyStats from './model/GetPostStatsResponseDailySta
 import GetPostStatsResponsePostStats from './model/GetPostStatsResponsePostStats';
 import GetServiceTypesResponseServiceTypeData from './model/GetServiceTypesResponseServiceTypeData';
 import GooglerpcStatus from './model/GooglerpcStatus';
+import HomePresellFieldsConstructionPhase from './model/HomePresellFieldsConstructionPhase';
+import HomePresellFieldsDeliveryMonth from './model/HomePresellFieldsDeliveryMonth';
+import HomePresellFieldsDeliveryYear from './model/HomePresellFieldsDeliveryYear';
+import HomePresellFieldsUnitType from './model/HomePresellFieldsUnitType';
 import ImageCarouselRowImageItem from './model/ImageCarouselRowImageItem';
 import ManagementDevelopmentPost from './model/ManagementDevelopmentPost';
 import MessageContactData from './model/MessageContactData';
@@ -132,21 +137,31 @@ import MessageVideoData from './model/MessageVideoData';
 import MessageVoiceData from './model/MessageVoiceData';
 import OAuthScopeScope from './model/OAuthScopeScope';
 import OpenPlatformpostServicesFields from './model/OpenPlatformpostServicesFields';
+import PaymentCommitWalletTransactionRequest from './model/PaymentCommitWalletTransactionRequest';
+import PaymentCommitWalletTransactionResponse from './model/PaymentCommitWalletTransactionResponse';
+import PaymentCreateWalletPaymentRequest from './model/PaymentCreateWalletPaymentRequest';
+import PaymentCreateWalletPaymentResponse from './model/PaymentCreateWalletPaymentResponse';
 import PaymentGetBalanceResponse from './model/PaymentGetBalanceResponse';
 import PaymentGetPostPricingResponse from './model/PaymentGetPostPricingResponse';
 import PaymentGetTransactionResponse from './model/PaymentGetTransactionResponse';
 import PaymentListTransactionsResponse from './model/PaymentListTransactionsResponse';
 import PaymentReorderPostBody from './model/PaymentReorderPostBody';
 import PaymentReorderPostResponse from './model/PaymentReorderPostResponse';
+import PaymentRetrieveWalletTransactionResponse from './model/PaymentRetrieveWalletTransactionResponse';
 import PaymentTicketGenerateResponse from './model/PaymentTicketGenerateResponse';
 import PaymentTicketValidateRequest from './model/PaymentTicketValidateRequest';
 import PaymentTicketValidateResponse from './model/PaymentTicketValidateResponse';
 import PaymentTransaction from './model/PaymentTransaction';
 import PaymentTransactionState from './model/PaymentTransactionState';
 import PaymentTransactionType from './model/PaymentTransactionType';
+import PaymentWalletTransaction from './model/PaymentWalletTransaction';
+import PaymentWalletTransactionStatus from './model/PaymentWalletTransactionStatus';
+import PostApartmentSellFields from './model/PostApartmentSellFields';
 import PostEditPostBody from './model/PostEditPostBody';
 import PostGetImageUploadURLResponse from './model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
+import PostHomePresellFields from './model/PostHomePresellFields';
+import PostRoomsCount from './model/PostRoomsCount';
 import PostServicesFieldsCategory from './model/PostServicesFieldsCategory';
 import PostSubmitPostRequest from './model/PostSubmitPostRequest';
 import PostSubmitPostResponse from './model/PostSubmitPostResponse';
@@ -167,7 +182,6 @@ import TemporaryResidenceFieldsComfortAmenity from './model/TemporaryResidenceFi
 import TemporaryResidenceFieldsHeatingCoolingSystem from './model/TemporaryResidenceFieldsHeatingCoolingSystem';
 import TemporaryResidenceFieldsPetsAllowed from './model/TemporaryResidenceFieldsPetsAllowed';
 import TemporaryResidenceFieldsRentalPeriod from './model/TemporaryResidenceFieldsRentalPeriod';
-import TemporaryResidenceFieldsRoomsCount from './model/TemporaryResidenceFieldsRoomsCount';
 import AddonsApi from './api/AddonsApi';
 import AssetsApi from './api/AssetsApi';
 import ChatAPIApi from './api/ChatAPIApi';
@@ -246,6 +260,12 @@ export {
      * @property {module:model/AddonSemanticNewFaceVerificationResult}
      */
     AddonSemanticNewFaceVerificationResult,
+
+    /**
+     * The AddonSemanticOnlineReservationCapability model constructor.
+     * @property {module:model/AddonSemanticOnlineReservationCapability}
+     */
+    AddonSemanticOnlineReservationCapability,
 
     /**
      * The AddonSemanticOwnershipResult model constructor.
@@ -866,6 +886,30 @@ export {
     GooglerpcStatus,
 
     /**
+     * The HomePresellFieldsConstructionPhase model constructor.
+     * @property {module:model/HomePresellFieldsConstructionPhase}
+     */
+    HomePresellFieldsConstructionPhase,
+
+    /**
+     * The HomePresellFieldsDeliveryMonth model constructor.
+     * @property {module:model/HomePresellFieldsDeliveryMonth}
+     */
+    HomePresellFieldsDeliveryMonth,
+
+    /**
+     * The HomePresellFieldsDeliveryYear model constructor.
+     * @property {module:model/HomePresellFieldsDeliveryYear}
+     */
+    HomePresellFieldsDeliveryYear,
+
+    /**
+     * The HomePresellFieldsUnitType model constructor.
+     * @property {module:model/HomePresellFieldsUnitType}
+     */
+    HomePresellFieldsUnitType,
+
+    /**
      * The ImageCarouselRowImageItem model constructor.
      * @property {module:model/ImageCarouselRowImageItem}
      */
@@ -932,6 +976,30 @@ export {
     OpenPlatformpostServicesFields,
 
     /**
+     * The PaymentCommitWalletTransactionRequest model constructor.
+     * @property {module:model/PaymentCommitWalletTransactionRequest}
+     */
+    PaymentCommitWalletTransactionRequest,
+
+    /**
+     * The PaymentCommitWalletTransactionResponse model constructor.
+     * @property {module:model/PaymentCommitWalletTransactionResponse}
+     */
+    PaymentCommitWalletTransactionResponse,
+
+    /**
+     * The PaymentCreateWalletPaymentRequest model constructor.
+     * @property {module:model/PaymentCreateWalletPaymentRequest}
+     */
+    PaymentCreateWalletPaymentRequest,
+
+    /**
+     * The PaymentCreateWalletPaymentResponse model constructor.
+     * @property {module:model/PaymentCreateWalletPaymentResponse}
+     */
+    PaymentCreateWalletPaymentResponse,
+
+    /**
      * The PaymentGetBalanceResponse model constructor.
      * @property {module:model/PaymentGetBalanceResponse}
      */
@@ -966,6 +1034,12 @@ export {
      * @property {module:model/PaymentReorderPostResponse}
      */
     PaymentReorderPostResponse,
+
+    /**
+     * The PaymentRetrieveWalletTransactionResponse model constructor.
+     * @property {module:model/PaymentRetrieveWalletTransactionResponse}
+     */
+    PaymentRetrieveWalletTransactionResponse,
 
     /**
      * The PaymentTicketGenerateResponse model constructor.
@@ -1004,6 +1078,24 @@ export {
     PaymentTransactionType,
 
     /**
+     * The PaymentWalletTransaction model constructor.
+     * @property {module:model/PaymentWalletTransaction}
+     */
+    PaymentWalletTransaction,
+
+    /**
+     * The PaymentWalletTransactionStatus model constructor.
+     * @property {module:model/PaymentWalletTransactionStatus}
+     */
+    PaymentWalletTransactionStatus,
+
+    /**
+     * The PostApartmentSellFields model constructor.
+     * @property {module:model/PostApartmentSellFields}
+     */
+    PostApartmentSellFields,
+
+    /**
      * The PostEditPostBody model constructor.
      * @property {module:model/PostEditPostBody}
      */
@@ -1020,6 +1112,18 @@ export {
      * @property {module:model/PostGetPostStatsResponse}
      */
     PostGetPostStatsResponse,
+
+    /**
+     * The PostHomePresellFields model constructor.
+     * @property {module:model/PostHomePresellFields}
+     */
+    PostHomePresellFields,
+
+    /**
+     * The PostRoomsCount model constructor.
+     * @property {module:model/PostRoomsCount}
+     */
+    PostRoomsCount,
 
     /**
      * The PostServicesFieldsCategory model constructor.
@@ -1140,12 +1244,6 @@ export {
      * @property {module:model/TemporaryResidenceFieldsRentalPeriod}
      */
     TemporaryResidenceFieldsRentalPeriod,
-
-    /**
-     * The TemporaryResidenceFieldsRoomsCount model constructor.
-     * @property {module:model/TemporaryResidenceFieldsRoomsCount}
-     */
-    TemporaryResidenceFieldsRoomsCount,
 
     /**
     * The AddonsApi service constructor.

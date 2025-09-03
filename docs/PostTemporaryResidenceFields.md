@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **priceSpecialDays** | **String** | قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان | 
 **priceWeekends** | **String** | قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان | 
 **regularPersonCapacity** | **Number** | ظرفیت استاندارد افراد در اقامتگاه | 
-**roomsCount** | [**TemporaryResidenceFieldsRoomsCount**](TemporaryResidenceFieldsRoomsCount.md) |  | 
+**roomsCount** | [**PostRoomsCount**](PostRoomsCount.md) |  | 
 **checkInTime** | **String** | Check-in time | [optional] 
 **checkOutTime** | **String** | Check-out time | [optional] 
 **comfortAmenities** | [**[TemporaryResidenceFieldsComfortAmenity]**](TemporaryResidenceFieldsComfortAmenity.md) |  | [optional] 

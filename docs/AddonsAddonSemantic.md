@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **identityVerificationResult** | [**AddonSemanticIdentityVerificationResult**](AddonSemanticIdentityVerificationResult.md) |  | [optional] 
 **inspectionResult** | [**AddonSemanticInspectionResult**](AddonSemanticInspectionResult.md) |  | [optional] 
 **newFaceVerificationResult** | [**AddonSemanticNewFaceVerificationResult**](AddonSemanticNewFaceVerificationResult.md) |  | [optional] 
+**onlineReservationCapability** | [**AddonSemanticOnlineReservationCapability**](AddonSemanticOnlineReservationCapability.md) |  | [optional] 
 **ownershipResult** | [**AddonSemanticOwnershipResult**](AddonSemanticOwnershipResult.md) |  | [optional] 
 **paymentMethod** | [**AddonsAddonSemanticPaymentMethod**](AddonsAddonSemanticPaymentMethod.md) |  | [optional] 
 **postVerificationResult** | [**AddonSemanticPostVerificationResult**](AddonSemanticPostVerificationResult.md) |  | [optional] 

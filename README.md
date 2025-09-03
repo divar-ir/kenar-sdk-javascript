@@ -160,11 +160,14 @@ Class | Method | HTTP request | Description
 *KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
 *KenarApiClient.FinderApi* | [**finderGetUserPosts**](docs/FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 *KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
+*KenarApiClient.LimitedApi* | [**paymentCommitWalletTransaction**](docs/LimitedApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
+*KenarApiClient.LimitedApi* | [**paymentCreateWalletPayment**](docs/LimitedApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | 
 *KenarApiClient.LimitedApi* | [**paymentGetBalance**](docs/LimitedApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | 
 *KenarApiClient.LimitedApi* | [**paymentGetPostPricing**](docs/LimitedApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
 *KenarApiClient.LimitedApi* | [**paymentGetTransaction**](docs/LimitedApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | 
 *KenarApiClient.LimitedApi* | [**paymentListTransactions**](docs/LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
 *KenarApiClient.LimitedApi* | [**paymentReorderPost**](docs/LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
+*KenarApiClient.LimitedApi* | [**paymentRetrieveWalletTransaction**](docs/LimitedApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
@@ -184,6 +187,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AddonSemanticIdentityVerificationStage](docs/AddonSemanticIdentityVerificationStage.md)
  - [KenarApiClient.AddonSemanticInspectionResult](docs/AddonSemanticInspectionResult.md)
  - [KenarApiClient.AddonSemanticNewFaceVerificationResult](docs/AddonSemanticNewFaceVerificationResult.md)
+ - [KenarApiClient.AddonSemanticOnlineReservationCapability](docs/AddonSemanticOnlineReservationCapability.md)
  - [KenarApiClient.AddonSemanticOwnershipResult](docs/AddonSemanticOwnershipResult.md)
  - [KenarApiClient.AddonSemanticPostVerificationResult](docs/AddonSemanticPostVerificationResult.md)
  - [KenarApiClient.AddonsAction](docs/AddonsAction.md)
@@ -287,6 +291,10 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.GetPostStatsResponsePostStats](docs/GetPostStatsResponsePostStats.md)
  - [KenarApiClient.GetServiceTypesResponseServiceTypeData](docs/GetServiceTypesResponseServiceTypeData.md)
  - [KenarApiClient.GooglerpcStatus](docs/GooglerpcStatus.md)
+ - [KenarApiClient.HomePresellFieldsConstructionPhase](docs/HomePresellFieldsConstructionPhase.md)
+ - [KenarApiClient.HomePresellFieldsDeliveryMonth](docs/HomePresellFieldsDeliveryMonth.md)
+ - [KenarApiClient.HomePresellFieldsDeliveryYear](docs/HomePresellFieldsDeliveryYear.md)
+ - [KenarApiClient.HomePresellFieldsUnitType](docs/HomePresellFieldsUnitType.md)
  - [KenarApiClient.ImageCarouselRowImageItem](docs/ImageCarouselRowImageItem.md)
  - [KenarApiClient.ManagementDevelopmentPost](docs/ManagementDevelopmentPost.md)
  - [KenarApiClient.MessageContactData](docs/MessageContactData.md)
@@ -298,21 +306,31 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.MessageVoiceData](docs/MessageVoiceData.md)
  - [KenarApiClient.OAuthScopeScope](docs/OAuthScopeScope.md)
  - [KenarApiClient.OpenPlatformpostServicesFields](docs/OpenPlatformpostServicesFields.md)
+ - [KenarApiClient.PaymentCommitWalletTransactionRequest](docs/PaymentCommitWalletTransactionRequest.md)
+ - [KenarApiClient.PaymentCommitWalletTransactionResponse](docs/PaymentCommitWalletTransactionResponse.md)
+ - [KenarApiClient.PaymentCreateWalletPaymentRequest](docs/PaymentCreateWalletPaymentRequest.md)
+ - [KenarApiClient.PaymentCreateWalletPaymentResponse](docs/PaymentCreateWalletPaymentResponse.md)
  - [KenarApiClient.PaymentGetBalanceResponse](docs/PaymentGetBalanceResponse.md)
  - [KenarApiClient.PaymentGetPostPricingResponse](docs/PaymentGetPostPricingResponse.md)
  - [KenarApiClient.PaymentGetTransactionResponse](docs/PaymentGetTransactionResponse.md)
  - [KenarApiClient.PaymentListTransactionsResponse](docs/PaymentListTransactionsResponse.md)
  - [KenarApiClient.PaymentReorderPostBody](docs/PaymentReorderPostBody.md)
  - [KenarApiClient.PaymentReorderPostResponse](docs/PaymentReorderPostResponse.md)
+ - [KenarApiClient.PaymentRetrieveWalletTransactionResponse](docs/PaymentRetrieveWalletTransactionResponse.md)
  - [KenarApiClient.PaymentTicketGenerateResponse](docs/PaymentTicketGenerateResponse.md)
  - [KenarApiClient.PaymentTicketValidateRequest](docs/PaymentTicketValidateRequest.md)
  - [KenarApiClient.PaymentTicketValidateResponse](docs/PaymentTicketValidateResponse.md)
  - [KenarApiClient.PaymentTransaction](docs/PaymentTransaction.md)
  - [KenarApiClient.PaymentTransactionState](docs/PaymentTransactionState.md)
  - [KenarApiClient.PaymentTransactionType](docs/PaymentTransactionType.md)
+ - [KenarApiClient.PaymentWalletTransaction](docs/PaymentWalletTransaction.md)
+ - [KenarApiClient.PaymentWalletTransactionStatus](docs/PaymentWalletTransactionStatus.md)
+ - [KenarApiClient.PostApartmentSellFields](docs/PostApartmentSellFields.md)
  - [KenarApiClient.PostEditPostBody](docs/PostEditPostBody.md)
  - [KenarApiClient.PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [KenarApiClient.PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
+ - [KenarApiClient.PostHomePresellFields](docs/PostHomePresellFields.md)
+ - [KenarApiClient.PostRoomsCount](docs/PostRoomsCount.md)
  - [KenarApiClient.PostServicesFieldsCategory](docs/PostServicesFieldsCategory.md)
  - [KenarApiClient.PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
  - [KenarApiClient.PostSubmitPostResponse](docs/PostSubmitPostResponse.md)
@@ -333,7 +351,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.TemporaryResidenceFieldsHeatingCoolingSystem](docs/TemporaryResidenceFieldsHeatingCoolingSystem.md)
  - [KenarApiClient.TemporaryResidenceFieldsPetsAllowed](docs/TemporaryResidenceFieldsPetsAllowed.md)
  - [KenarApiClient.TemporaryResidenceFieldsRentalPeriod](docs/TemporaryResidenceFieldsRentalPeriod.md)
- - [KenarApiClient.TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
 
 
 ## Documentation for Authorization

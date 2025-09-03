@@ -4,12 +4,115 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**paymentCommitWalletTransaction**](LimitedApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
+[**paymentCreateWalletPayment**](LimitedApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | 
 [**paymentGetBalance**](LimitedApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | 
 [**paymentGetPostPricing**](LimitedApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
 [**paymentGetTransaction**](LimitedApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | 
 [**paymentListTransactions**](LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
 [**paymentReorderPost**](LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
+[**paymentRetrieveWalletTransaction**](LimitedApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
 
+
+
+## paymentCommitWalletTransaction
+
+> PaymentCommitWalletTransactionResponse paymentCommitWalletTransaction(paymentCommitWalletTransactionRequest)
+
+
+
+Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.LimitedApi();
+let paymentCommitWalletTransactionRequest = new KenarApiClient.PaymentCommitWalletTransactionRequest(); // PaymentCommitWalletTransactionRequest | 
+apiInstance.paymentCommitWalletTransaction(paymentCommitWalletTransactionRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **paymentCommitWalletTransactionRequest** | [**PaymentCommitWalletTransactionRequest**](PaymentCommitWalletTransactionRequest.md)|  | 
+
+### Return type
+
+[**PaymentCommitWalletTransactionResponse**](PaymentCommitWalletTransactionResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## paymentCreateWalletPayment
+
+> PaymentCreateWalletPaymentResponse paymentCreateWalletPayment(paymentCreateWalletPaymentRequest)
+
+
+
+Using this API you can start a payment transaction from the users wallet.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.LimitedApi();
+let paymentCreateWalletPaymentRequest = new KenarApiClient.PaymentCreateWalletPaymentRequest(); // PaymentCreateWalletPaymentRequest | 
+apiInstance.paymentCreateWalletPayment(paymentCreateWalletPaymentRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **paymentCreateWalletPaymentRequest** | [**PaymentCreateWalletPaymentRequest**](PaymentCreateWalletPaymentRequest.md)|  | 
+
+### Return type
+
+[**PaymentCreateWalletPaymentResponse**](PaymentCreateWalletPaymentResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## paymentGetBalance
@@ -261,5 +364,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## paymentRetrieveWalletTransaction
+
+> PaymentRetrieveWalletTransactionResponse paymentRetrieveWalletTransaction(token)
+
+
+
+Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.LimitedApi();
+let token = "token_example"; // String | Token of the transaction you want to retrieve
+apiInstance.paymentRetrieveWalletTransaction(token).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **String**| Token of the transaction you want to retrieve | 
+
+### Return type
+
+[**PaymentRetrieveWalletTransactionResponse**](PaymentRetrieveWalletTransactionResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 

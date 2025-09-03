@@ -59,4 +59,6 @@
 
 * `SEND_EVENT` (value: `"SEND_EVENT"`)
 
+* `CREATE_WALLET_PAYMENT` (value: `"CREATE_WALLET_PAYMENT"`)
+
 

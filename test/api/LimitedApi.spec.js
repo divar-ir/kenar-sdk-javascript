@@ -48,6 +48,26 @@
   }
 
   describe('LimitedApi', function() {
+    describe('paymentCommitWalletTransaction', function() {
+      it('should call paymentCommitWalletTransaction successfully', function(done) {
+        //uncomment below and update the code to test paymentCommitWalletTransaction
+        //instance.paymentCommitWalletTransaction(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('paymentCreateWalletPayment', function() {
+      it('should call paymentCreateWalletPayment successfully', function(done) {
+        //uncomment below and update the code to test paymentCreateWalletPayment
+        //instance.paymentCreateWalletPayment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('paymentGetBalance', function() {
       it('should call paymentGetBalance successfully', function(done) {
         //uncomment below and update the code to test paymentGetBalance
@@ -92,6 +112,16 @@
       it('should call paymentReorderPost successfully', function(done) {
         //uncomment below and update the code to test paymentReorderPost
         //instance.paymentReorderPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('paymentRetrieveWalletTransaction', function() {
+      it('should call paymentRetrieveWalletTransaction successfully', function(done) {
+        //uncomment below and update the code to test paymentRetrieveWalletTransaction
+        //instance.paymentRetrieveWalletTransaction(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

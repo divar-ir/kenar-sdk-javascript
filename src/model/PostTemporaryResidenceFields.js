@@ -12,11 +12,11 @@
  */
 
 import ApiClient from '../ApiClient';
+import PostRoomsCount from './PostRoomsCount';
 import TemporaryResidenceFieldsComfortAmenity from './TemporaryResidenceFieldsComfortAmenity';
 import TemporaryResidenceFieldsHeatingCoolingSystem from './TemporaryResidenceFieldsHeatingCoolingSystem';
 import TemporaryResidenceFieldsPetsAllowed from './TemporaryResidenceFieldsPetsAllowed';
 import TemporaryResidenceFieldsRentalPeriod from './TemporaryResidenceFieldsRentalPeriod';
-import TemporaryResidenceFieldsRoomsCount from './TemporaryResidenceFieldsRoomsCount';
 
 /**
  * The PostTemporaryResidenceFields model module.
@@ -35,7 +35,7 @@ class PostTemporaryResidenceFields {
      * @param priceSpecialDays {String} قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان
      * @param priceWeekends {String} قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان
      * @param regularPersonCapacity {Number} ظرفیت استاندارد افراد در اقامتگاه
-     * @param roomsCount {module:model/TemporaryResidenceFieldsRoomsCount} 
+     * @param roomsCount {module:model/PostRoomsCount} 
      */
     constructor(area, extraPersonCapacity, hasOwnImage, priceCostPerExtraPerson, priceRegularDays, priceSpecialDays, priceWeekends, regularPersonCapacity, roomsCount) { 
         
@@ -95,7 +95,7 @@ class PostTemporaryResidenceFields {
                 obj['regular_person_capacity'] = ApiClient.convertToType(data['regular_person_capacity'], 'Number');
             }
             if (data.hasOwnProperty('rooms_count')) {
-                obj['rooms_count'] = TemporaryResidenceFieldsRoomsCount.constructFromObject(data['rooms_count']);
+                obj['rooms_count'] = PostRoomsCount.constructFromObject(data['rooms_count']);
             }
             if (data.hasOwnProperty('check_in_time')) {
                 obj['check_in_time'] = ApiClient.convertToType(data['check_in_time'], 'String');
@@ -308,14 +308,14 @@ class PostTemporaryResidenceFields {
         this['regular_person_capacity'] = regularPersonCapacity;
     }
 /**
-     * @return {module:model/TemporaryResidenceFieldsRoomsCount}
+     * @return {module:model/PostRoomsCount}
      */
     getRoomsCount() {
         return this.rooms_count;
     }
 
     /**
-     * @param {module:model/TemporaryResidenceFieldsRoomsCount} roomsCount
+     * @param {module:model/PostRoomsCount} roomsCount
      */
     setRoomsCount(roomsCount) {
         this['rooms_count'] = roomsCount;
@@ -516,7 +516,7 @@ PostTemporaryResidenceFields.prototype['price_weekends'] = undefined;
 PostTemporaryResidenceFields.prototype['regular_person_capacity'] = undefined;
 
 /**
- * @member {module:model/TemporaryResidenceFieldsRoomsCount} rooms_count
+ * @member {module:model/PostRoomsCount} rooms_count
  */
 PostTemporaryResidenceFields.prototype['rooms_count'] = undefined;
 

@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **images** | **[String]** |  | 
 **locationType** | [**SubmitPostRequestLocationType**](SubmitPostRequestLocationType.md) |  | 
 **title** | **String** | عنوان آگهی | 
+**apartmentSell** | [**PostApartmentSellFields**](PostApartmentSellFields.md) |  | [optional] 
 **district** | **String** | محله آگهی | [optional] 
+**homePresell** | [**PostHomePresellFields**](PostHomePresellFields.md) |  | [optional] 
 **landlineNumbers** | **[String]** | Landline numbers to be added to the post | [optional] 
 **latitude** | **Number** | عرض جغرافیایی آگهی | [optional] 
 **longitude** | **Number** | طول جغرافیایی آگهی | [optional] 

@@ -96,6 +96,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property onlineReservationCapability (base name: "online_reservation_capability")', function() {
+      // uncomment below and update the code to test the property onlineReservationCapability
+      //var instance = new KenarApiClient.AddonsAddonSemantic();
+      //expect(instance).to.be();
+    });
+
     it('should have the property ownershipResult (base name: "ownership_result")', function() {
       // uncomment below and update the code to test the property ownershipResult
       //var instance = new KenarApiClient.AddonsAddonSemantic();

@@ -13,6 +13,8 @@
 
 import ApiClient from '../ApiClient';
 import OpenPlatformpostServicesFields from './OpenPlatformpostServicesFields';
+import PostApartmentSellFields from './PostApartmentSellFields';
+import PostHomePresellFields from './PostHomePresellFields';
 import PostTemporaryResidenceFields from './PostTemporaryResidenceFields';
 import SubmitPostRequestLocationType from './SubmitPostRequestLocationType';
 
@@ -85,8 +87,14 @@ class PostSubmitPostRequest {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
+            if (data.hasOwnProperty('apartment_sell')) {
+                obj['apartment_sell'] = PostApartmentSellFields.constructFromObject(data['apartment_sell']);
+            }
             if (data.hasOwnProperty('district')) {
                 obj['district'] = ApiClient.convertToType(data['district'], 'String');
+            }
+            if (data.hasOwnProperty('home_presell')) {
+                obj['home_presell'] = PostHomePresellFields.constructFromObject(data['home_presell']);
             }
             if (data.hasOwnProperty('landline_numbers')) {
                 obj['landline_numbers'] = ApiClient.convertToType(data['landline_numbers'], ['String']);
@@ -135,9 +143,17 @@ class PostSubmitPostRequest {
         if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
             throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
+        // validate the optional field `apartment_sell`
+        if (data['apartment_sell']) { // data not null
+          PostApartmentSellFields.validateJSON(data['apartment_sell']);
+        }
         // ensure the json data is a string
         if (data['district'] && !(typeof data['district'] === 'string' || data['district'] instanceof String)) {
             throw new Error("Expected the field `district` to be a primitive type in the JSON string but got " + data['district']);
+        }
+        // validate the optional field `home_presell`
+        if (data['home_presell']) { // data not null
+          PostHomePresellFields.validateJSON(data['home_presell']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['landline_numbers'])) {
@@ -257,6 +273,19 @@ class PostSubmitPostRequest {
         this['title'] = title;
     }
 /**
+     * @return {module:model/PostApartmentSellFields}
+     */
+    getApartmentSell() {
+        return this.apartment_sell;
+    }
+
+    /**
+     * @param {module:model/PostApartmentSellFields} apartmentSell
+     */
+    setApartmentSell(apartmentSell) {
+        this['apartment_sell'] = apartmentSell;
+    }
+/**
      * Returns محله آگهی
      * @return {String}
      */
@@ -270,6 +299,19 @@ class PostSubmitPostRequest {
      */
     setDistrict(district) {
         this['district'] = district;
+    }
+/**
+     * @return {module:model/PostHomePresellFields}
+     */
+    getHomePresell() {
+        return this.home_presell;
+    }
+
+    /**
+     * @param {module:model/PostHomePresellFields} homePresell
+     */
+    setHomePresell(homePresell) {
+        this['home_presell'] = homePresell;
     }
 /**
      * Returns Landline numbers to be added to the post
@@ -388,10 +430,20 @@ PostSubmitPostRequest.prototype['location_type'] = undefined;
 PostSubmitPostRequest.prototype['title'] = undefined;
 
 /**
+ * @member {module:model/PostApartmentSellFields} apartment_sell
+ */
+PostSubmitPostRequest.prototype['apartment_sell'] = undefined;
+
+/**
  * محله آگهی
  * @member {String} district
  */
 PostSubmitPostRequest.prototype['district'] = undefined;
+
+/**
+ * @member {module:model/PostHomePresellFields} home_presell
+ */
+PostSubmitPostRequest.prototype['home_presell'] = undefined;
 
 /**
  * Landline numbers to be added to the post

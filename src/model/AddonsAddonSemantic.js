@@ -17,6 +17,7 @@ import AddonSemanticIdentityVerificationResult from './AddonSemanticIdentityVeri
 import AddonSemanticIdentityVerificationStage from './AddonSemanticIdentityVerificationStage';
 import AddonSemanticInspectionResult from './AddonSemanticInspectionResult';
 import AddonSemanticNewFaceVerificationResult from './AddonSemanticNewFaceVerificationResult';
+import AddonSemanticOnlineReservationCapability from './AddonSemanticOnlineReservationCapability';
 import AddonSemanticOwnershipResult from './AddonSemanticOwnershipResult';
 import AddonSemanticPostVerificationResult from './AddonSemanticPostVerificationResult';
 import AddonsAddonSemanticPaymentMethod from './AddonsAddonSemanticPaymentMethod';
@@ -77,6 +78,9 @@ class AddonsAddonSemantic {
             }
             if (data.hasOwnProperty('new_face_verification_result')) {
                 obj['new_face_verification_result'] = AddonSemanticNewFaceVerificationResult.constructFromObject(data['new_face_verification_result']);
+            }
+            if (data.hasOwnProperty('online_reservation_capability')) {
+                obj['online_reservation_capability'] = AddonSemanticOnlineReservationCapability.constructFromObject(data['online_reservation_capability']);
             }
             if (data.hasOwnProperty('ownership_result')) {
                 obj['ownership_result'] = AddonSemanticOwnershipResult.constructFromObject(data['ownership_result']);
@@ -196,6 +200,19 @@ class AddonsAddonSemantic {
         this['new_face_verification_result'] = newFaceVerificationResult;
     }
 /**
+     * @return {module:model/AddonSemanticOnlineReservationCapability}
+     */
+    getOnlineReservationCapability() {
+        return this.online_reservation_capability;
+    }
+
+    /**
+     * @param {module:model/AddonSemanticOnlineReservationCapability} onlineReservationCapability
+     */
+    setOnlineReservationCapability(onlineReservationCapability) {
+        this['online_reservation_capability'] = onlineReservationCapability;
+    }
+/**
      * @return {module:model/AddonSemanticOwnershipResult}
      */
     getOwnershipResult() {
@@ -286,6 +303,11 @@ AddonsAddonSemantic.prototype['inspection_result'] = undefined;
  * @member {module:model/AddonSemanticNewFaceVerificationResult} new_face_verification_result
  */
 AddonsAddonSemantic.prototype['new_face_verification_result'] = undefined;
+
+/**
+ * @member {module:model/AddonSemanticOnlineReservationCapability} online_reservation_capability
+ */
+AddonsAddonSemantic.prototype['online_reservation_capability'] = undefined;
 
 /**
  * @member {module:model/AddonSemanticOwnershipResult} ownership_result

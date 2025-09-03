@@ -215,6 +215,13 @@ export default class OAuthScopeScope {
         "SEND_EVENT" = "SEND_EVENT";
 
     
+        /**
+         * value: "CREATE_WALLET_PAYMENT"
+         * @const
+         */
+        "CREATE_WALLET_PAYMENT" = "CREATE_WALLET_PAYMENT";
+
+    
 
     /**
     * Returns a <code>OAuthScopeScope</code> enum value from a Javascript object name.

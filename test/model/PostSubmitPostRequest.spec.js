@@ -96,8 +96,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property apartmentSell (base name: "apartment_sell")', function() {
+      // uncomment below and update the code to test the property apartmentSell
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property district (base name: "district")', function() {
       // uncomment below and update the code to test the property district
+      //var instance = new KenarApiClient.PostSubmitPostRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property homePresell (base name: "home_presell")', function() {
+      // uncomment below and update the code to test the property homePresell
       //var instance = new KenarApiClient.PostSubmitPostRequest();
       //expect(instance).to.be();
     });

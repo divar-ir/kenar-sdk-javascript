@@ -14,12 +14,17 @@
 
 import ApiClient from "../ApiClient";
 import GooglerpcStatus from '../model/GooglerpcStatus';
+import PaymentCommitWalletTransactionRequest from '../model/PaymentCommitWalletTransactionRequest';
+import PaymentCommitWalletTransactionResponse from '../model/PaymentCommitWalletTransactionResponse';
+import PaymentCreateWalletPaymentRequest from '../model/PaymentCreateWalletPaymentRequest';
+import PaymentCreateWalletPaymentResponse from '../model/PaymentCreateWalletPaymentResponse';
 import PaymentGetBalanceResponse from '../model/PaymentGetBalanceResponse';
 import PaymentGetPostPricingResponse from '../model/PaymentGetPostPricingResponse';
 import PaymentGetTransactionResponse from '../model/PaymentGetTransactionResponse';
 import PaymentListTransactionsResponse from '../model/PaymentListTransactionsResponse';
 import PaymentReorderPostBody from '../model/PaymentReorderPostBody';
 import PaymentReorderPostResponse from '../model/PaymentReorderPostResponse';
+import PaymentRetrieveWalletTransactionResponse from '../model/PaymentRetrieveWalletTransactionResponse';
 
 /**
 * Limited service.
@@ -39,6 +44,96 @@ export default class LimitedApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+     * @param {module:model/PaymentCommitWalletTransactionRequest} paymentCommitWalletTransactionRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentCommitWalletTransactionResponse} and HTTP response
+     */
+    paymentCommitWalletTransactionWithHttpInfo(paymentCommitWalletTransactionRequest) {
+      let postBody = paymentCommitWalletTransactionRequest;
+      // verify the required parameter 'paymentCommitWalletTransactionRequest' is set
+      if (paymentCommitWalletTransactionRequest === undefined || paymentCommitWalletTransactionRequest === null) {
+        throw new Error("Missing the required parameter 'paymentCommitWalletTransactionRequest' when calling paymentCommitWalletTransaction");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = PaymentCommitWalletTransactionResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/wallet/payments/commit', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+     * @param {module:model/PaymentCommitWalletTransactionRequest} paymentCommitWalletTransactionRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentCommitWalletTransactionResponse}
+     */
+    paymentCommitWalletTransaction(paymentCommitWalletTransactionRequest) {
+      return this.paymentCommitWalletTransactionWithHttpInfo(paymentCommitWalletTransactionRequest)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Using this API you can start a payment transaction from the users wallet.
+     * @param {module:model/PaymentCreateWalletPaymentRequest} paymentCreateWalletPaymentRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentCreateWalletPaymentResponse} and HTTP response
+     */
+    paymentCreateWalletPaymentWithHttpInfo(paymentCreateWalletPaymentRequest) {
+      let postBody = paymentCreateWalletPaymentRequest;
+      // verify the required parameter 'paymentCreateWalletPaymentRequest' is set
+      if (paymentCreateWalletPaymentRequest === undefined || paymentCreateWalletPaymentRequest === null) {
+        throw new Error("Missing the required parameter 'paymentCreateWalletPaymentRequest' when calling paymentCreateWalletPayment");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = PaymentCreateWalletPaymentResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/wallet/payments/create', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Using this API you can start a payment transaction from the users wallet.
+     * @param {module:model/PaymentCreateWalletPaymentRequest} paymentCreateWalletPaymentRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentCreateWalletPaymentResponse}
+     */
+    paymentCreateWalletPayment(paymentCreateWalletPaymentRequest) {
+      return this.paymentCreateWalletPaymentWithHttpInfo(paymentCreateWalletPaymentRequest)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**
@@ -268,6 +363,52 @@ export default class LimitedApi {
      */
     paymentReorderPost(postToken, paymentReorderPostBody) {
       return this.paymentReorderPostWithHttpInfo(postToken, paymentReorderPostBody)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+     * @param {String} token Token of the transaction you want to retrieve
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentRetrieveWalletTransactionResponse} and HTTP response
+     */
+    paymentRetrieveWalletTransactionWithHttpInfo(token) {
+      let postBody = null;
+      // verify the required parameter 'token' is set
+      if (token === undefined || token === null) {
+        throw new Error("Missing the required parameter 'token' when calling paymentRetrieveWalletTransaction");
+      }
+
+      let pathParams = {
+        'token': token
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = PaymentRetrieveWalletTransactionResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/wallet/payments/{token}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+     * @param {String} token Token of the transaction you want to retrieve
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentRetrieveWalletTransactionResponse}
+     */
+    paymentRetrieveWalletTransaction(token) {
+      return this.paymentRetrieveWalletTransactionWithHttpInfo(token)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
