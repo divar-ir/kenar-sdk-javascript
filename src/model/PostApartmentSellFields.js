@@ -23,15 +23,15 @@ class PostApartmentSellFields {
     /**
      * Constructs a new <code>PostApartmentSellFields</code>.
      * @alias module:model/PostApartmentSellFields
-     * @param floor {Number} Floor of the property. Use -1 for under ground floor and 0 for ground floor. Use 1 for first floor and so on.
-     * @param hasElevator {Boolean} Whether the property has an elevator
+     * @param floor {Number} طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.
+     * @param hasElevator {Boolean} آیا ملک آسانسور دارد
      * @param hasOwnImage {Boolean} تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
-     * @param hasParking {Boolean} Whether the property has a parking
-     * @param hasWarehouse {Boolean} Whether the property has a warehouse
-     * @param price {String} Price of the property in Toman
+     * @param hasParking {Boolean} آیا ملک پارکینگ دارد
+     * @param hasWarehouse {Boolean} آیا ملک انباری دارد
+     * @param price {String} قیمت ملک به تومان
      * @param roomsCount {module:model/PostRoomsCount} 
-     * @param size {Number} Size of the property in square meters
-     * @param yearBuilt {Number} Year the property was built (Persian/Shamsi calendar)
+     * @param size {Number} مساحت ملک بر حسب متر مربع
+     * @param yearBuilt {Number} سال ساخت ملک (تقویم شمسی)
      */
     constructor(floor, hasElevator, hasOwnImage, hasParking, hasWarehouse, price, roomsCount, size, yearBuilt) { 
         
@@ -118,7 +118,7 @@ class PostApartmentSellFields {
     }
 
 /**
-     * Returns Floor of the property. Use -1 for under ground floor and 0 for ground floor. Use 1 for first floor and so on.
+     * Returns طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.
      * @return {Number}
      */
     getFloor() {
@@ -126,14 +126,14 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets Floor of the property. Use -1 for under ground floor and 0 for ground floor. Use 1 for first floor and so on.
-     * @param {Number} floor Floor of the property. Use -1 for under ground floor and 0 for ground floor. Use 1 for first floor and so on.
+     * Sets طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.
+     * @param {Number} floor طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.
      */
     setFloor(floor) {
         this['floor'] = floor;
     }
 /**
-     * Returns Whether the property has an elevator
+     * Returns آیا ملک آسانسور دارد
      * @return {Boolean}
      */
     getHasElevator() {
@@ -141,8 +141,8 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets Whether the property has an elevator
-     * @param {Boolean} hasElevator Whether the property has an elevator
+     * Sets آیا ملک آسانسور دارد
+     * @param {Boolean} hasElevator آیا ملک آسانسور دارد
      */
     setHasElevator(hasElevator) {
         this['has_elevator'] = hasElevator;
@@ -163,7 +163,7 @@ class PostApartmentSellFields {
         this['has_own_image'] = hasOwnImage;
     }
 /**
-     * Returns Whether the property has a parking
+     * Returns آیا ملک پارکینگ دارد
      * @return {Boolean}
      */
     getHasParking() {
@@ -171,14 +171,14 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets Whether the property has a parking
-     * @param {Boolean} hasParking Whether the property has a parking
+     * Sets آیا ملک پارکینگ دارد
+     * @param {Boolean} hasParking آیا ملک پارکینگ دارد
      */
     setHasParking(hasParking) {
         this['has_parking'] = hasParking;
     }
 /**
-     * Returns Whether the property has a warehouse
+     * Returns آیا ملک انباری دارد
      * @return {Boolean}
      */
     getHasWarehouse() {
@@ -186,14 +186,14 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets Whether the property has a warehouse
-     * @param {Boolean} hasWarehouse Whether the property has a warehouse
+     * Sets آیا ملک انباری دارد
+     * @param {Boolean} hasWarehouse آیا ملک انباری دارد
      */
     setHasWarehouse(hasWarehouse) {
         this['has_warehouse'] = hasWarehouse;
     }
 /**
-     * Returns Price of the property in Toman
+     * Returns قیمت ملک به تومان
      * @return {String}
      */
     getPrice() {
@@ -201,8 +201,8 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets Price of the property in Toman
-     * @param {String} price Price of the property in Toman
+     * Sets قیمت ملک به تومان
+     * @param {String} price قیمت ملک به تومان
      */
     setPrice(price) {
         this['price'] = price;
@@ -221,7 +221,7 @@ class PostApartmentSellFields {
         this['rooms_count'] = roomsCount;
     }
 /**
-     * Returns Size of the property in square meters
+     * Returns مساحت ملک بر حسب متر مربع
      * @return {Number}
      */
     getSize() {
@@ -229,14 +229,14 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets Size of the property in square meters
-     * @param {Number} size Size of the property in square meters
+     * Sets مساحت ملک بر حسب متر مربع
+     * @param {Number} size مساحت ملک بر حسب متر مربع
      */
     setSize(size) {
         this['size'] = size;
     }
 /**
-     * Returns Year the property was built (Persian/Shamsi calendar)
+     * Returns سال ساخت ملک (تقویم شمسی)
      * @return {Number}
      */
     getYearBuilt() {
@@ -244,8 +244,8 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets Year the property was built (Persian/Shamsi calendar)
-     * @param {Number} yearBuilt Year the property was built (Persian/Shamsi calendar)
+     * Sets سال ساخت ملک (تقویم شمسی)
+     * @param {Number} yearBuilt سال ساخت ملک (تقویم شمسی)
      */
     setYearBuilt(yearBuilt) {
         this['year_built'] = yearBuilt;
@@ -256,13 +256,13 @@ class PostApartmentSellFields {
 PostApartmentSellFields.RequiredProperties = ["floor", "has_elevator", "has_own_image", "has_parking", "has_warehouse", "price", "rooms_count", "size", "year_built"];
 
 /**
- * Floor of the property. Use -1 for under ground floor and 0 for ground floor. Use 1 for first floor and so on.
+ * طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.
  * @member {Number} floor
  */
 PostApartmentSellFields.prototype['floor'] = undefined;
 
 /**
- * Whether the property has an elevator
+ * آیا ملک آسانسور دارد
  * @member {Boolean} has_elevator
  */
 PostApartmentSellFields.prototype['has_elevator'] = undefined;
@@ -274,19 +274,19 @@ PostApartmentSellFields.prototype['has_elevator'] = undefined;
 PostApartmentSellFields.prototype['has_own_image'] = undefined;
 
 /**
- * Whether the property has a parking
+ * آیا ملک پارکینگ دارد
  * @member {Boolean} has_parking
  */
 PostApartmentSellFields.prototype['has_parking'] = undefined;
 
 /**
- * Whether the property has a warehouse
+ * آیا ملک انباری دارد
  * @member {Boolean} has_warehouse
  */
 PostApartmentSellFields.prototype['has_warehouse'] = undefined;
 
 /**
- * Price of the property in Toman
+ * قیمت ملک به تومان
  * @member {String} price
  */
 PostApartmentSellFields.prototype['price'] = undefined;
@@ -297,13 +297,13 @@ PostApartmentSellFields.prototype['price'] = undefined;
 PostApartmentSellFields.prototype['rooms_count'] = undefined;
 
 /**
- * Size of the property in square meters
+ * مساحت ملک بر حسب متر مربع
  * @member {Number} size
  */
 PostApartmentSellFields.prototype['size'] = undefined;
 
 /**
- * Year the property was built (Persian/Shamsi calendar)
+ * سال ساخت ملک (تقویم شمسی)
  * @member {Number} year_built
  */
 PostApartmentSellFields.prototype['year_built'] = undefined;

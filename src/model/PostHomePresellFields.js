@@ -141,7 +141,7 @@ class PostHomePresellFields {
         this['has_own_image'] = hasOwnImage;
     }
 /**
-     * Returns Base price per square meter in Toman
+     * Returns قیمت پایه هر متر مربع به تومان
      * @return {String}
      */
     getBasePricePerSquareMeter() {
@@ -149,8 +149,8 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets Base price per square meter in Toman
-     * @param {String} basePricePerSquareMeter Base price per square meter in Toman
+     * Sets قیمت پایه هر متر مربع به تومان
+     * @param {String} basePricePerSquareMeter قیمت پایه هر متر مربع به تومان
      */
     setBasePricePerSquareMeter(basePricePerSquareMeter) {
         this['base_price_per_square_meter'] = basePricePerSquareMeter;
@@ -182,7 +182,7 @@ class PostHomePresellFields {
         this['delivery_month'] = deliveryMonth;
     }
 /**
-     * Returns Payment percentage required upon delivery
+     * Returns درصد پرداخت مورد نیاز در زمان تحویل
      * @return {Number}
      */
     getDeliveryPaymentPercentage() {
@@ -190,8 +190,8 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets Payment percentage required upon delivery
-     * @param {Number} deliveryPaymentPercentage Payment percentage required upon delivery
+     * Sets درصد پرداخت مورد نیاز در زمان تحویل
+     * @param {Number} deliveryPaymentPercentage درصد پرداخت مورد نیاز در زمان تحویل
      */
     setDeliveryPaymentPercentage(deliveryPaymentPercentage) {
         this['delivery_payment_percentage'] = deliveryPaymentPercentage;
@@ -210,7 +210,7 @@ class PostHomePresellFields {
         this['delivery_year'] = deliveryYear;
     }
 /**
-     * Returns Name of the developer company
+     * Returns نام شرکت سازنده
      * @return {String}
      */
     getDeveloperCompanyName() {
@@ -218,14 +218,14 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets Name of the developer company
-     * @param {String} developerCompanyName Name of the developer company
+     * Sets نام شرکت سازنده
+     * @param {String} developerCompanyName نام شرکت سازنده
      */
     setDeveloperCompanyName(developerCompanyName) {
         this['developer_company_name'] = developerCompanyName;
     }
 /**
-     * Returns Down payment percentage required
+     * Returns درصد پیش پرداخت اولیه
      * @return {Number}
      */
     getDownPaymentPercentage() {
@@ -233,14 +233,14 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets Down payment percentage required
-     * @param {Number} downPaymentPercentage Down payment percentage required
+     * Sets درصد پیش پرداخت اولیه
+     * @param {Number} downPaymentPercentage درصد پیش پرداخت اولیه
      */
     setDownPaymentPercentage(downPaymentPercentage) {
         this['down_payment_percentage'] = downPaymentPercentage;
     }
 /**
-     * Returns Minimum unit size in square meters
+     * Returns حداقل مساحت واحد بر حسب متر مربع
      * @return {Number}
      */
     getMinUnitSize() {
@@ -248,14 +248,14 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets Minimum unit size in square meters
-     * @param {Number} minUnitSize Minimum unit size in square meters
+     * Sets حداقل مساحت واحد بر حسب متر مربع
+     * @param {Number} minUnitSize حداقل مساحت واحد بر حسب متر مربع
      */
     setMinUnitSize(minUnitSize) {
         this['min_unit_size'] = minUnitSize;
     }
 /**
-     * Returns Name of the home presell project
+     * Returns نام پروژه پیش‌فروش مسکن
      * @return {String}
      */
     getProjectName() {
@@ -263,14 +263,14 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets Name of the home presell project
-     * @param {String} projectName Name of the home presell project
+     * Sets نام پروژه پیش‌فروش مسکن
+     * @param {String} projectName نام پروژه پیش‌فروش مسکن
      */
     setProjectName(projectName) {
         this['project_name'] = projectName;
     }
 /**
-     * Returns Physical progress percentage of the project
+     * Returns درصد پیشرفت فیزیکی پروژه
      * @return {Number}
      */
     getProjectPhysicalProgressPercentage() {
@@ -278,14 +278,14 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets Physical progress percentage of the project
-     * @param {Number} projectPhysicalProgressPercentage Physical progress percentage of the project
+     * Sets درصد پیشرفت فیزیکی پروژه
+     * @param {Number} projectPhysicalProgressPercentage درصد پیشرفت فیزیکی پروژه
      */
     setProjectPhysicalProgressPercentage(projectPhysicalProgressPercentage) {
         this['project_physical_progress_percentage'] = projectPhysicalProgressPercentage;
     }
 /**
-     * Returns List of unit types offered in the project
+     * Returns فهرست انواع واحد ارائه شده در پروژه
      * @return {Array.<module:model/HomePresellFieldsUnitType>}
      */
     getUnitTypesOffered() {
@@ -293,8 +293,8 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets List of unit types offered in the project
-     * @param {Array.<module:model/HomePresellFieldsUnitType>} unitTypesOffered List of unit types offered in the project
+     * Sets فهرست انواع واحد ارائه شده در پروژه
+     * @param {Array.<module:model/HomePresellFieldsUnitType>} unitTypesOffered فهرست انواع واحد ارائه شده در پروژه
      */
     setUnitTypesOffered(unitTypesOffered) {
         this['unit_types_offered'] = unitTypesOffered;
@@ -311,7 +311,7 @@ PostHomePresellFields.RequiredProperties = ["has_own_image"];
 PostHomePresellFields.prototype['has_own_image'] = undefined;
 
 /**
- * Base price per square meter in Toman
+ * قیمت پایه هر متر مربع به تومان
  * @member {String} base_price_per_square_meter
  */
 PostHomePresellFields.prototype['base_price_per_square_meter'] = undefined;
@@ -327,7 +327,7 @@ PostHomePresellFields.prototype['construction_phase'] = undefined;
 PostHomePresellFields.prototype['delivery_month'] = undefined;
 
 /**
- * Payment percentage required upon delivery
+ * درصد پرداخت مورد نیاز در زمان تحویل
  * @member {Number} delivery_payment_percentage
  */
 PostHomePresellFields.prototype['delivery_payment_percentage'] = undefined;
@@ -338,37 +338,37 @@ PostHomePresellFields.prototype['delivery_payment_percentage'] = undefined;
 PostHomePresellFields.prototype['delivery_year'] = undefined;
 
 /**
- * Name of the developer company
+ * نام شرکت سازنده
  * @member {String} developer_company_name
  */
 PostHomePresellFields.prototype['developer_company_name'] = undefined;
 
 /**
- * Down payment percentage required
+ * درصد پیش پرداخت اولیه
  * @member {Number} down_payment_percentage
  */
 PostHomePresellFields.prototype['down_payment_percentage'] = undefined;
 
 /**
- * Minimum unit size in square meters
+ * حداقل مساحت واحد بر حسب متر مربع
  * @member {Number} min_unit_size
  */
 PostHomePresellFields.prototype['min_unit_size'] = undefined;
 
 /**
- * Name of the home presell project
+ * نام پروژه پیش‌فروش مسکن
  * @member {String} project_name
  */
 PostHomePresellFields.prototype['project_name'] = undefined;
 
 /**
- * Physical progress percentage of the project
+ * درصد پیشرفت فیزیکی پروژه
  * @member {Number} project_physical_progress_percentage
  */
 PostHomePresellFields.prototype['project_physical_progress_percentage'] = undefined;
 
 /**
- * List of unit types offered in the project
+ * فهرست انواع واحد ارائه شده در پروژه
  * @member {Array.<module:model/HomePresellFieldsUnitType>} unit_types_offered
  */
 PostHomePresellFields.prototype['unit_types_offered'] = undefined;

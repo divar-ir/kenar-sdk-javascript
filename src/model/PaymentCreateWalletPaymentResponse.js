@@ -76,7 +76,7 @@ class PaymentCreateWalletPaymentResponse {
     }
 
 /**
-     * Returns The address you should redirect the user to
+     * Returns آدرسی که باید کاربر را به آن هدایت کنید
      * @return {String}
      */
     getPaymentUrl() {
@@ -84,14 +84,14 @@ class PaymentCreateWalletPaymentResponse {
     }
 
     /**
-     * Sets The address you should redirect the user to
-     * @param {String} paymentUrl The address you should redirect the user to
+     * Sets آدرسی که باید کاربر را به آن هدایت کنید
+     * @param {String} paymentUrl آدرسی که باید کاربر را به آن هدایت کنید
      */
     setPaymentUrl(paymentUrl) {
         this['payment_url'] = paymentUrl;
     }
 /**
-     * Returns Token of the transaction. used for next operations
+     * Returns توکن تراکنش. برای عملیات‌های بعدی استفاده می‌شود
      * @return {String}
      */
     getToken() {
@@ -99,8 +99,8 @@ class PaymentCreateWalletPaymentResponse {
     }
 
     /**
-     * Sets Token of the transaction. used for next operations
-     * @param {String} token Token of the transaction. used for next operations
+     * Sets توکن تراکنش. برای عملیات‌های بعدی استفاده می‌شود
+     * @param {String} token توکن تراکنش. برای عملیات‌های بعدی استفاده می‌شود
      */
     setToken(token) {
         this['token'] = token;
@@ -111,13 +111,13 @@ class PaymentCreateWalletPaymentResponse {
 
 
 /**
- * The address you should redirect the user to
+ * آدرسی که باید کاربر را به آن هدایت کنید
  * @member {String} payment_url
  */
 PaymentCreateWalletPaymentResponse.prototype['payment_url'] = undefined;
 
 /**
- * Token of the transaction. used for next operations
+ * توکن تراکنش. برای عملیات‌های بعدی استفاده می‌شود
  * @member {String} token
  */
 PaymentCreateWalletPaymentResponse.prototype['token'] = undefined;

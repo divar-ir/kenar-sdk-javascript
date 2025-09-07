@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paymentUrl** | **String** | The address you should redirect the user to | [optional] 
-**token** | **String** | Token of the transaction. used for next operations | [optional] 
+**paymentUrl** | **String** | آدرسی که باید کاربر را به آن هدایت کنید | [optional] 
+**token** | **String** | توکن تراکنش. برای عملیات‌های بعدی استفاده می‌شود | [optional] 
 
 

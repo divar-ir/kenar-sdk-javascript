@@ -5,16 +5,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hasOwnImage** | **Boolean** | تصاویر مربوط به خود ملک بوده و تزئینی نیستند. | 
-**basePricePerSquareMeter** | **String** | Base price per square meter in Toman | [optional] 
+**basePricePerSquareMeter** | **String** | قیمت پایه هر متر مربع به تومان | [optional] 
 **constructionPhase** | [**HomePresellFieldsConstructionPhase**](HomePresellFieldsConstructionPhase.md) |  | [optional] 
 **deliveryMonth** | [**HomePresellFieldsDeliveryMonth**](HomePresellFieldsDeliveryMonth.md) |  | [optional] 
-**deliveryPaymentPercentage** | **Number** | Payment percentage required upon delivery | [optional] 
+**deliveryPaymentPercentage** | **Number** | درصد پرداخت مورد نیاز در زمان تحویل | [optional] 
 **deliveryYear** | [**HomePresellFieldsDeliveryYear**](HomePresellFieldsDeliveryYear.md) |  | [optional] 
-**developerCompanyName** | **String** | Name of the developer company | [optional] 
-**downPaymentPercentage** | **Number** | Down payment percentage required | [optional] 
-**minUnitSize** | **Number** | Minimum unit size in square meters | [optional] 
-**projectName** | **String** | Name of the home presell project | [optional] 
-**projectPhysicalProgressPercentage** | **Number** | Physical progress percentage of the project | [optional] 
-**unitTypesOffered** | [**[HomePresellFieldsUnitType]**](HomePresellFieldsUnitType.md) | List of unit types offered in the project | [optional] 
+**developerCompanyName** | **String** | نام شرکت سازنده | [optional] 
+**downPaymentPercentage** | **Number** | درصد پیش پرداخت اولیه | [optional] 
+**minUnitSize** | **Number** | حداقل مساحت واحد بر حسب متر مربع | [optional] 
+**projectName** | **String** | نام پروژه پیش‌فروش مسکن | [optional] 
+**projectPhysicalProgressPercentage** | **Number** | درصد پیشرفت فیزیکی پروژه | [optional] 
+**unitTypesOffered** | [**[HomePresellFieldsUnitType]**](HomePresellFieldsUnitType.md) | فهرست انواع واحد ارائه شده در پروژه | [optional] 
 
 

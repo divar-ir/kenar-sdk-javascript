@@ -69,7 +69,7 @@ class PaymentCommitWalletTransactionRequest {
     }
 
 /**
-     * Returns Token of the transaction you want to commit
+     * Returns توکن تراکنشی که می‌خواهید commit کنید
      * @return {String}
      */
     getToken() {
@@ -77,8 +77,8 @@ class PaymentCommitWalletTransactionRequest {
     }
 
     /**
-     * Sets Token of the transaction you want to commit
-     * @param {String} token Token of the transaction you want to commit
+     * Sets توکن تراکنشی که می‌خواهید commit کنید
+     * @param {String} token توکن تراکنشی که می‌خواهید commit کنید
      */
     setToken(token) {
         this['token'] = token;
@@ -89,7 +89,7 @@ class PaymentCommitWalletTransactionRequest {
 
 
 /**
- * Token of the transaction you want to commit
+ * توکن تراکنشی که می‌خواهید commit کنید
  * @member {String} token
  */
 PaymentCommitWalletTransactionRequest.prototype['token'] = undefined;

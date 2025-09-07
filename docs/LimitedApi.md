@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 
-Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
 
 ### Example
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 
 
-Using this API you can start a payment transaction from the users wallet.
+با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
 
 ### Example
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 
 
-Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
 ### Example
 
@@ -387,7 +387,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.LimitedApi();
-let token = "token_example"; // String | Token of the transaction you want to retrieve
+let token = "token_example"; // String | توکن تراکنشی که می‌خواهید بازیابی کنید
 apiInstance.paymentRetrieveWalletTransaction(token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -401,7 +401,7 @@ apiInstance.paymentRetrieveWalletTransaction(token).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **String**| Token of the transaction you want to retrieve | 
+ **token** | **String**| توکن تراکنشی که می‌خواهید بازیابی کنید | 
 
 ### Return type
 

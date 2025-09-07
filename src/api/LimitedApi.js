@@ -47,7 +47,7 @@ export default class LimitedApi {
 
 
     /**
-     * Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+     * با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
      * @param {module:model/PaymentCommitWalletTransactionRequest} paymentCommitWalletTransactionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentCommitWalletTransactionResponse} and HTTP response
      */
@@ -79,7 +79,7 @@ export default class LimitedApi {
     }
 
     /**
-     * Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+     * با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
      * @param {module:model/PaymentCommitWalletTransactionRequest} paymentCommitWalletTransactionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentCommitWalletTransactionResponse}
      */
@@ -92,7 +92,7 @@ export default class LimitedApi {
 
 
     /**
-     * Using this API you can start a payment transaction from the users wallet.
+     * با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
      * @param {module:model/PaymentCreateWalletPaymentRequest} paymentCreateWalletPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentCreateWalletPaymentResponse} and HTTP response
      */
@@ -124,7 +124,7 @@ export default class LimitedApi {
     }
 
     /**
-     * Using this API you can start a payment transaction from the users wallet.
+     * با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
      * @param {module:model/PaymentCreateWalletPaymentRequest} paymentCreateWalletPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentCreateWalletPaymentResponse}
      */
@@ -370,8 +370,8 @@ export default class LimitedApi {
 
 
     /**
-     * Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
-     * @param {String} token Token of the transaction you want to retrieve
+     * با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+     * @param {String} token توکن تراکنشی که می‌خواهید بازیابی کنید
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentRetrieveWalletTransactionResponse} and HTTP response
      */
     paymentRetrieveWalletTransactionWithHttpInfo(token) {
@@ -403,8 +403,8 @@ export default class LimitedApi {
     }
 
     /**
-     * Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
-     * @param {String} token Token of the transaction you want to retrieve
+     * با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+     * @param {String} token توکن تراکنشی که می‌خواهید بازیابی کنید
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentRetrieveWalletTransactionResponse}
      */
     paymentRetrieveWalletTransaction(token) {

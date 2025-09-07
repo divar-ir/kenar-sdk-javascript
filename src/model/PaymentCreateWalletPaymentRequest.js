@@ -22,9 +22,9 @@ class PaymentCreateWalletPaymentRequest {
     /**
      * Constructs a new <code>PaymentCreateWalletPaymentRequest</code>.
      * @alias module:model/PaymentCreateWalletPaymentRequest
-     * @param amountRials {String} Transaction amount in rials
-     * @param description {String} A description of the transaction
-     * @param redirectUrl {String} The address user should be redirected to after paying the amount
+     * @param amountRials {String} مبلغ تراکنش به ریال
+     * @param description {String} توضیحات تراکنش
+     * @param redirectUrl {String} آدرسی که کاربر باید بعد از پرداخت مبلغ به آن هدایت شود
      */
     constructor(amountRials, description, redirectUrl) { 
         
@@ -95,7 +95,7 @@ class PaymentCreateWalletPaymentRequest {
     }
 
 /**
-     * Returns Transaction amount in rials
+     * Returns مبلغ تراکنش به ریال
      * @return {String}
      */
     getAmountRials() {
@@ -103,14 +103,14 @@ class PaymentCreateWalletPaymentRequest {
     }
 
     /**
-     * Sets Transaction amount in rials
-     * @param {String} amountRials Transaction amount in rials
+     * Sets مبلغ تراکنش به ریال
+     * @param {String} amountRials مبلغ تراکنش به ریال
      */
     setAmountRials(amountRials) {
         this['amount_rials'] = amountRials;
     }
 /**
-     * Returns A description of the transaction
+     * Returns توضیحات تراکنش
      * @return {String}
      */
     getDescription() {
@@ -118,14 +118,14 @@ class PaymentCreateWalletPaymentRequest {
     }
 
     /**
-     * Sets A description of the transaction
-     * @param {String} description A description of the transaction
+     * Sets توضیحات تراکنش
+     * @param {String} description توضیحات تراکنش
      */
     setDescription(description) {
         this['description'] = description;
     }
 /**
-     * Returns The address user should be redirected to after paying the amount
+     * Returns آدرسی که کاربر باید بعد از پرداخت مبلغ به آن هدایت شود
      * @return {String}
      */
     getRedirectUrl() {
@@ -133,8 +133,8 @@ class PaymentCreateWalletPaymentRequest {
     }
 
     /**
-     * Sets The address user should be redirected to after paying the amount
-     * @param {String} redirectUrl The address user should be redirected to after paying the amount
+     * Sets آدرسی که کاربر باید بعد از پرداخت مبلغ به آن هدایت شود
+     * @param {String} redirectUrl آدرسی که کاربر باید بعد از پرداخت مبلغ به آن هدایت شود
      */
     setRedirectUrl(redirectUrl) {
         this['redirect_url'] = redirectUrl;
@@ -145,19 +145,19 @@ class PaymentCreateWalletPaymentRequest {
 PaymentCreateWalletPaymentRequest.RequiredProperties = ["amount_rials", "description", "redirect_url"];
 
 /**
- * Transaction amount in rials
+ * مبلغ تراکنش به ریال
  * @member {String} amount_rials
  */
 PaymentCreateWalletPaymentRequest.prototype['amount_rials'] = undefined;
 
 /**
- * A description of the transaction
+ * توضیحات تراکنش
  * @member {String} description
  */
 PaymentCreateWalletPaymentRequest.prototype['description'] = undefined;
 
 /**
- * The address user should be redirected to after paying the amount
+ * آدرسی که کاربر باید بعد از پرداخت مبلغ به آن هدایت شود
  * @member {String} redirect_url
  */
 PaymentCreateWalletPaymentRequest.prototype['redirect_url'] = undefined;
