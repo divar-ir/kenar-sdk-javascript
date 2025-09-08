@@ -24,6 +24,7 @@ import AssetsGetOAuthScopesResponse from '../model/AssetsGetOAuthScopesResponse'
 import AssetsGetPermissionsResponse from '../model/AssetsGetPermissionsResponse';
 import AssetsGetRamMemoriesResponse from '../model/AssetsGetRamMemoriesResponse';
 import AssetsGetServiceTypesResponse from '../model/AssetsGetServiceTypesResponse';
+import AssetsGetSubmitSchemaResponse from '../model/AssetsGetSubmitSchemaResponse';
 import GooglerpcStatus from '../model/GooglerpcStatus';
 
 /**
@@ -559,6 +560,54 @@ export default class AssetsApi {
      */
     assetsGetServiceTypes() {
       return this.assetsGetServiceTypesWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get submit schema
+     * This API allows you to get the submit schema for a given category slug. Response is in JSON Schema format.  The schema defines the structure and validation rules for form fields when submitting posts in a specific category. Each field in the schema can have one of the following types:  **Basic Types:** - `string`: Text input fields (e.g., titles, descriptions, time values) - `integer`: Numeric input fields for whole numbers (e.g., prices, counts, sizes) - `float`: Numeric input fields for decimal numbers - `boolean`: True/false checkbox fields - `array`: Multi-select fields that allow multiple values  **Enum Fields:** Fields with predefined options use `enum` and `enumNames` properties: - `enum`: Array of internal values used for API communication - `enumNames`: Array of display labels shown to users (usually in Persian) - These are used for single-select dropdowns (e.g., floor selection, parking availability)  **Array Fields with Enums:** Multi-select fields combine `type: \"array\"` with enum properties: - `items.enum`: Available options for selection - `items.enumNames`: Display labels for each option - Users can select multiple values (e.g., comfort amenities, heating systems)  **Field Properties:** - `title`: Persian display name for the field - `required`: Array of field names that must be provided - `type`: Data type of the field  **Example Usage:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
+     * @param {String} categorySlug 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetSubmitSchemaResponse} and HTTP response
+     */
+    assetsGetSubmitSchemaWithHttpInfo(categorySlug) {
+      let postBody = null;
+      // verify the required parameter 'categorySlug' is set
+      if (categorySlug === undefined || categorySlug === null) {
+        throw new Error("Missing the required parameter 'categorySlug' when calling assetsGetSubmitSchema");
+      }
+
+      let pathParams = {
+        'category_slug': categorySlug
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = AssetsGetSubmitSchemaResponse;
+      return this.apiClient.callApi(
+        '/v1/open-platform/assets/submit-schema/{category_slug}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get submit schema
+     * This API allows you to get the submit schema for a given category slug. Response is in JSON Schema format.  The schema defines the structure and validation rules for form fields when submitting posts in a specific category. Each field in the schema can have one of the following types:  **Basic Types:** - `string`: Text input fields (e.g., titles, descriptions, time values) - `integer`: Numeric input fields for whole numbers (e.g., prices, counts, sizes) - `float`: Numeric input fields for decimal numbers - `boolean`: True/false checkbox fields - `array`: Multi-select fields that allow multiple values  **Enum Fields:** Fields with predefined options use `enum` and `enumNames` properties: - `enum`: Array of internal values used for API communication - `enumNames`: Array of display labels shown to users (usually in Persian) - These are used for single-select dropdowns (e.g., floor selection, parking availability)  **Array Fields with Enums:** Multi-select fields combine `type: \"array\"` with enum properties: - `items.enum`: Available options for selection - `items.enumNames`: Display labels for each option - Users can select multiple values (e.g., comfort amenities, heating systems)  **Field Properties:** - `title`: Persian display name for the field - `required`: Array of field names that must be provided - `type`: Data type of the field  **Example Usage:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
+     * @param {String} categorySlug 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetSubmitSchemaResponse}
+     */
+    assetsGetSubmitSchema(categorySlug) {
+      return this.assetsGetSubmitSchemaWithHttpInfo(categorySlug)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

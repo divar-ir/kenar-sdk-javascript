@@ -84,6 +84,7 @@ import AssetsGetPermissionsResponseLifeCycleState from './model/AssetsGetPermiss
 import AssetsGetPermissionsResponsePermission from './model/AssetsGetPermissionsResponsePermission';
 import AssetsGetRamMemoriesResponse from './model/AssetsGetRamMemoriesResponse';
 import AssetsGetServiceTypesResponse from './model/AssetsGetServiceTypesResponse';
+import AssetsGetSubmitSchemaResponse from './model/AssetsGetSubmitSchemaResponse';
 import AuthorizationAPICallerInfo from './model/AuthorizationAPICallerInfo';
 import AuthorizationOAuthScope from './model/AuthorizationOAuthScope';
 import ChatAPIChatBotSendMessageBody from './model/ChatAPIChatBotSendMessageBody';
@@ -656,6 +657,12 @@ export {
      * @property {module:model/AssetsGetServiceTypesResponse}
      */
     AssetsGetServiceTypesResponse,
+
+    /**
+     * The AssetsGetSubmitSchemaResponse model constructor.
+     * @property {module:model/AssetsGetSubmitSchemaResponse}
+     */
+    AssetsGetSubmitSchemaResponse,
 
     /**
      * The AuthorizationAPICallerInfo model constructor.

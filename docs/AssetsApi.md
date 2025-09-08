@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**assetsGetPermissions**](AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
 [**assetsGetRamMemories**](AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 [**assetsGetServiceTypes**](AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
+[**assetsGetSubmitSchema**](AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | Get submit schema
 
 
 
@@ -578,6 +579,56 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**AssetsGetServiceTypesResponse**](AssetsGetServiceTypesResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## assetsGetSubmitSchema
+
+> AssetsGetSubmitSchemaResponse assetsGetSubmitSchema(categorySlug)
+
+Get submit schema
+
+This API allows you to get the submit schema for a given category slug. Response is in JSON Schema format.  The schema defines the structure and validation rules for form fields when submitting posts in a specific category. Each field in the schema can have one of the following types:  **Basic Types:** - &#x60;string&#x60;: Text input fields (e.g., titles, descriptions, time values) - &#x60;integer&#x60;: Numeric input fields for whole numbers (e.g., prices, counts, sizes) - &#x60;float&#x60;: Numeric input fields for decimal numbers - &#x60;boolean&#x60;: True/false checkbox fields - &#x60;array&#x60;: Multi-select fields that allow multiple values  **Enum Fields:** Fields with predefined options use &#x60;enum&#x60; and &#x60;enumNames&#x60; properties: - &#x60;enum&#x60;: Array of internal values used for API communication - &#x60;enumNames&#x60;: Array of display labels shown to users (usually in Persian) - These are used for single-select dropdowns (e.g., floor selection, parking availability)  **Array Fields with Enums:** Multi-select fields combine &#x60;type: \&quot;array\&quot;&#x60; with enum properties: - &#x60;items.enum&#x60;: Available options for selection - &#x60;items.enumNames&#x60;: Display labels for each option - Users can select multiple values (e.g., comfort amenities, heating systems)  **Field Properties:** - &#x60;title&#x60;: Persian display name for the field - &#x60;required&#x60;: Array of field names that must be provided - &#x60;type&#x60;: Data type of the field  **Example Usage:** &#x60;&#x60;&#x60;json {   \&quot;properties\&quot;: {     \&quot;size\&quot;: {       \&quot;title\&quot;: \&quot;متراژ (متر مربع)\&quot;,       \&quot;type\&quot;: \&quot;integer\&quot;     },     \&quot;elevator\&quot;: {       \&quot;enum\&quot;: [\&quot;دارد\&quot;, \&quot;ندارد\&quot;],       \&quot;enumNames\&quot;: [\&quot;دارد\&quot;, \&quot;ندارد\&quot;],       \&quot;title\&quot;: \&quot;آسانسور\&quot;,       \&quot;type\&quot;: \&quot;string\&quot;     },     \&quot;comfort_amenities\&quot;: {       \&quot;items\&quot;: {         \&quot;enum\&quot;: [\&quot;اینترنت_پرسرعت\&quot;, \&quot;تلویزیون\&quot;],         \&quot;enumNames\&quot;: [\&quot;اینترنت پرسرعت\&quot;, \&quot;تلویزیون\&quot;],         \&quot;type\&quot;: \&quot;string\&quot;       },       \&quot;title\&quot;: \&quot;امکانات رفاهی\&quot;,       \&quot;type\&quot;: \&quot;array\&quot;     }   } } &#x60;&#x60;&#x60;
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.AssetsApi();
+let categorySlug = "categorySlug_example"; // String | 
+apiInstance.assetsGetSubmitSchema(categorySlug).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **categorySlug** | **String**|  | 
+
+### Return type
+
+[**AssetsGetSubmitSchemaResponse**](AssetsGetSubmitSchemaResponse.md)
 
 ### Authorization
 

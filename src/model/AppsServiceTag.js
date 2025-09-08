@@ -82,6 +82,13 @@ export default class AppsServiceTag {
         "MOBILE_EXPERT_INSPECTED" = "MOBILE_EXPERT_INSPECTED";
 
     
+        /**
+         * value: "ONLINE_RESERVATION"
+         * @const
+         */
+        "ONLINE_RESERVATION" = "ONLINE_RESERVATION";
+
+    
 
     /**
     * Returns a <code>AppsServiceTag</code> enum value from a Javascript object name.

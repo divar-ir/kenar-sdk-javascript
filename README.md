@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *KenarApiClient.AssetsApi* | [**assetsGetPermissions**](docs/AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
 *KenarApiClient.AssetsApi* | [**assetsGetRamMemories**](docs/AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 *KenarApiClient.AssetsApi* | [**assetsGetServiceTypes**](docs/AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetSubmitSchema**](docs/AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | Get submit schema
 *KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
 *KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage2**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
 *KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage3**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
@@ -253,6 +254,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AssetsGetPermissionsResponsePermission](docs/AssetsGetPermissionsResponsePermission.md)
  - [KenarApiClient.AssetsGetRamMemoriesResponse](docs/AssetsGetRamMemoriesResponse.md)
  - [KenarApiClient.AssetsGetServiceTypesResponse](docs/AssetsGetServiceTypesResponse.md)
+ - [KenarApiClient.AssetsGetSubmitSchemaResponse](docs/AssetsGetSubmitSchemaResponse.md)
  - [KenarApiClient.AuthorizationAPICallerInfo](docs/AuthorizationAPICallerInfo.md)
  - [KenarApiClient.AuthorizationOAuthScope](docs/AuthorizationOAuthScope.md)
  - [KenarApiClient.ChatAPIChatBotSendMessageBody](docs/ChatAPIChatBotSendMessageBody.md)

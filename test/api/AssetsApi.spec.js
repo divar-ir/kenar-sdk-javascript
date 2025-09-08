@@ -168,6 +168,16 @@
         done();
       });
     });
+    describe('assetsGetSubmitSchema', function() {
+      it('should call assetsGetSubmitSchema successfully', function(done) {
+        //uncomment below and update the code to test assetsGetSubmitSchema
+        //instance.assetsGetSubmitSchema(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));
