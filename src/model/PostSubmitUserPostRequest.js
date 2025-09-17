@@ -23,7 +23,7 @@ class PostSubmitUserPostRequest {
     /**
      * Constructs a new <code>PostSubmitUserPostRequest</code>.
      * @alias module:model/PostSubmitUserPostRequest
-     * @param categoryFields {Object} فیلدهای ویژه هر دسته‌بندی که باید مطابق ساختار مشخص شده تکمیل شوند. ساختار را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
+     * @param categoryFields {Object} فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
      * @param generalData {module:model/PostSubmitPostGeneralData} 
      */
     constructor(categoryFields, generalData) { 
@@ -83,7 +83,7 @@ class PostSubmitUserPostRequest {
     }
 
 /**
-     * Returns فیلدهای ویژه هر دسته‌بندی که باید مطابق ساختار مشخص شده تکمیل شوند. ساختار را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
+     * Returns فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
      * @return {Object}
      */
     getCategoryFields() {
@@ -91,8 +91,8 @@ class PostSubmitUserPostRequest {
     }
 
     /**
-     * Sets فیلدهای ویژه هر دسته‌بندی که باید مطابق ساختار مشخص شده تکمیل شوند. ساختار را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
-     * @param {Object} categoryFields فیلدهای ویژه هر دسته‌بندی که باید مطابق ساختار مشخص شده تکمیل شوند. ساختار را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
+     * Sets فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
+     * @param {Object} categoryFields فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
      */
     setCategoryFields(categoryFields) {
         this['category_fields'] = categoryFields;
@@ -116,7 +116,7 @@ class PostSubmitUserPostRequest {
 PostSubmitUserPostRequest.RequiredProperties = ["category_fields", "general_data"];
 
 /**
- * فیلدهای ویژه هر دسته‌بندی که باید مطابق ساختار مشخص شده تکمیل شوند. ساختار را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
+ * فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/
  * @member {Object} category_fields
  */
 PostSubmitUserPostRequest.prototype['category_fields'] = undefined;
