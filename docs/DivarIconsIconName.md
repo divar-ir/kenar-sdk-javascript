@@ -1627,4 +1627,8 @@
 
 * `PHONE_SPARKLES` (value: `"PHONE_SPARKLES"`)
 
+* `PAINT_BRUSH` (value: `"PAINT_BRUSH"`)
+
+* `VIDEO_LIBRARY` (value: `"VIDEO_LIBRARY"`)
+
 

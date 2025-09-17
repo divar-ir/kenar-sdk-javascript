@@ -5703,6 +5703,20 @@ export default class DivarIconsIconName {
         "PHONE_SPARKLES" = "PHONE_SPARKLES";
 
     
+        /**
+         * value: "PAINT_BRUSH"
+         * @const
+         */
+        "PAINT_BRUSH" = "PAINT_BRUSH";
+
+    
+        /**
+         * value: "VIDEO_LIBRARY"
+         * @const
+         */
+        "VIDEO_LIBRARY" = "VIDEO_LIBRARY";
+
+    
 
     /**
     * Returns a <code>DivarIconsIconName</code> enum value from a Javascript object name.

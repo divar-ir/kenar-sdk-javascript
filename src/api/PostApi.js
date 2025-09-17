@@ -19,6 +19,8 @@ import PostGetImageUploadURLResponse from '../model/PostGetImageUploadURLRespons
 import PostGetPostStatsResponse from '../model/PostGetPostStatsResponse';
 import PostSubmitPostRequest from '../model/PostSubmitPostRequest';
 import PostSubmitPostResponse from '../model/PostSubmitPostResponse';
+import PostSubmitPostV2Request from '../model/PostSubmitPostV2Request';
+import PostSubmitUserPostRequest from '../model/PostSubmitUserPostRequest';
 
 /**
 * Post service.
@@ -224,6 +226,100 @@ export default class PostApi {
      */
     postSubmitPost(postSubmitPostRequest) {
       return this.postSubmitPostWithHttpInfo(postSubmitPostRequest)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+     * این API به شما امکان ثبت آگهی با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به مجوز `POST_SUBMIT` نیاز دارد. شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+     * @param {module:model/PostSubmitPostV2Request} postSubmitPostV2Request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
+     */
+    postSubmitPostV2WithHttpInfo(postSubmitPostV2Request) {
+      let postBody = postSubmitPostV2Request;
+      // verify the required parameter 'postSubmitPostV2Request' is set
+      if (postSubmitPostV2Request === undefined || postSubmitPostV2Request === null) {
+        throw new Error("Missing the required parameter 'postSubmitPostV2Request' when calling postSubmitPostV2");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = PostSubmitPostResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/posts/new-v2', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+     * این API به شما امکان ثبت آگهی با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به مجوز `POST_SUBMIT` نیاز دارد. شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+     * @param {module:model/PostSubmitPostV2Request} postSubmitPostV2Request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
+     */
+    postSubmitPostV2(postSubmitPostV2Request) {
+      return this.postSubmitPostV2WithHttpInfo(postSubmitPostV2Request)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * ثبت آگهی به عنوان کاربر
+     * این API به شما امکان ثبت آگهی از طرف یک کاربر احراز هویت شده با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به احراز هویت OAuth با توکن دسترسی معتبر و دامنه OAuth `SUBMIT_USER_POST` نیاز دارد. بر خلاف SubmitPostV2 که آگهی‌ها را به عنوان ارائه‌دهنده ثبت می‌کند، این نقطه پایانی آگهی‌ها را به عنوان کاربر مرتبط با توکن دسترسی ارائه شده ثبت می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود. شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+     * @param {module:model/PostSubmitUserPostRequest} postSubmitUserPostRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
+     */
+    postSubmitUserPostWithHttpInfo(postSubmitUserPostRequest) {
+      let postBody = postSubmitUserPostRequest;
+      // verify the required parameter 'postSubmitUserPostRequest' is set
+      if (postSubmitUserPostRequest === undefined || postSubmitUserPostRequest === null) {
+        throw new Error("Missing the required parameter 'postSubmitUserPostRequest' when calling postSubmitUserPost");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = PostSubmitPostResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/user-posts/new', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * ثبت آگهی به عنوان کاربر
+     * این API به شما امکان ثبت آگهی از طرف یک کاربر احراز هویت شده با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به احراز هویت OAuth با توکن دسترسی معتبر و دامنه OAuth `SUBMIT_USER_POST` نیاز دارد. بر خلاف SubmitPostV2 که آگهی‌ها را به عنوان ارائه‌دهنده ثبت می‌کند، این نقطه پایانی آگهی‌ها را به عنوان کاربر مرتبط با توکن دسترسی ارائه شده ثبت می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود. شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+     * @param {module:model/PostSubmitUserPostRequest} postSubmitUserPostRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
+     */
+    postSubmitUserPost(postSubmitUserPostRequest) {
+      return this.postSubmitUserPostWithHttpInfo(postSubmitUserPostRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

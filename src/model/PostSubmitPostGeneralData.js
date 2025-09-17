@@ -12,21 +12,18 @@
  */
 
 import ApiClient from '../ApiClient';
-import OpenPlatformpostServicesFields from './OpenPlatformpostServicesFields';
-import PostApartmentSellFields from './PostApartmentSellFields';
-import PostHomePresellFields from './PostHomePresellFields';
 import PostLocationType from './PostLocationType';
-import PostTemporaryResidenceFields from './PostTemporaryResidenceFields';
 
 /**
- * The PostSubmitPostRequest model module.
- * @module model/PostSubmitPostRequest
+ * The PostSubmitPostGeneralData model module.
+ * @module model/PostSubmitPostGeneralData
  * @version 0.1.0
  */
-class PostSubmitPostRequest {
+class PostSubmitPostGeneralData {
     /**
-     * Constructs a new <code>PostSubmitPostRequest</code>.
-     * @alias module:model/PostSubmitPostRequest
+     * Constructs a new <code>PostSubmitPostGeneralData</code>.
+     * @alias module:model/PostSubmitPostGeneralData
+     * @param categorySlug {String} نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-categories/
      * @param chatEnabled {Boolean} امکان چت فعال باشد
      * @param city {String} شهر آگهی
      * @param description {String} توضیحات آگهی
@@ -35,9 +32,9 @@ class PostSubmitPostRequest {
      * @param locationType {module:model/PostLocationType} 
      * @param title {String} عنوان آگهی
      */
-    constructor(chatEnabled, city, description, hidePhone, images, locationType, title) { 
+    constructor(categorySlug, chatEnabled, city, description, hidePhone, images, locationType, title) { 
         
-        PostSubmitPostRequest.initialize(this, chatEnabled, city, description, hidePhone, images, locationType, title);
+        PostSubmitPostGeneralData.initialize(this, categorySlug, chatEnabled, city, description, hidePhone, images, locationType, title);
     }
 
     /**
@@ -45,7 +42,8 @@ class PostSubmitPostRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, chatEnabled, city, description, hidePhone, images, locationType, title) { 
+    static initialize(obj, categorySlug, chatEnabled, city, description, hidePhone, images, locationType, title) { 
+        obj['category_slug'] = categorySlug;
         obj['chat_enabled'] = chatEnabled;
         obj['city'] = city;
         obj['description'] = description;
@@ -56,16 +54,19 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Constructs a <code>PostSubmitPostRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>PostSubmitPostGeneralData</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/PostSubmitPostRequest} obj Optional instance to populate.
-     * @return {module:model/PostSubmitPostRequest} The populated <code>PostSubmitPostRequest</code> instance.
+     * @param {module:model/PostSubmitPostGeneralData} obj Optional instance to populate.
+     * @return {module:model/PostSubmitPostGeneralData} The populated <code>PostSubmitPostGeneralData</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PostSubmitPostRequest();
+            obj = obj || new PostSubmitPostGeneralData();
 
+            if (data.hasOwnProperty('category_slug')) {
+                obj['category_slug'] = ApiClient.convertToType(data['category_slug'], 'String');
+            }
             if (data.hasOwnProperty('chat_enabled')) {
                 obj['chat_enabled'] = ApiClient.convertToType(data['chat_enabled'], 'Boolean');
             }
@@ -87,17 +88,8 @@ class PostSubmitPostRequest {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
-            if (data.hasOwnProperty('apartment_sell')) {
-                obj['apartment_sell'] = PostApartmentSellFields.constructFromObject(data['apartment_sell']);
-            }
             if (data.hasOwnProperty('district')) {
                 obj['district'] = ApiClient.convertToType(data['district'], 'String');
-            }
-            if (data.hasOwnProperty('home_presell')) {
-                obj['home_presell'] = PostHomePresellFields.constructFromObject(data['home_presell']);
-            }
-            if (data.hasOwnProperty('landline_numbers')) {
-                obj['landline_numbers'] = ApiClient.convertToType(data['landline_numbers'], ['String']);
             }
             if (data.hasOwnProperty('latitude')) {
                 obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
@@ -105,27 +97,25 @@ class PostSubmitPostRequest {
             if (data.hasOwnProperty('longitude')) {
                 obj['longitude'] = ApiClient.convertToType(data['longitude'], 'Number');
             }
-            if (data.hasOwnProperty('services')) {
-                obj['services'] = OpenPlatformpostServicesFields.constructFromObject(data['services']);
-            }
-            if (data.hasOwnProperty('temporary_residence')) {
-                obj['temporary_residence'] = PostTemporaryResidenceFields.constructFromObject(data['temporary_residence']);
-            }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>PostSubmitPostRequest</code>.
+     * Validates the JSON data with respect to <code>PostSubmitPostGeneralData</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PostSubmitPostRequest</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PostSubmitPostGeneralData</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of PostSubmitPostRequest.RequiredProperties) {
+        for (const property of PostSubmitPostGeneralData.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
+        }
+        // ensure the json data is a string
+        if (data['category_slug'] && !(typeof data['category_slug'] === 'string' || data['category_slug'] instanceof String)) {
+            throw new Error("Expected the field `category_slug` to be a primitive type in the JSON string but got " + data['category_slug']);
         }
         // ensure the json data is a string
         if (data['city'] && !(typeof data['city'] === 'string' || data['city'] instanceof String)) {
@@ -143,34 +133,29 @@ class PostSubmitPostRequest {
         if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
             throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
-        // validate the optional field `apartment_sell`
-        if (data['apartment_sell']) { // data not null
-          PostApartmentSellFields.validateJSON(data['apartment_sell']);
-        }
         // ensure the json data is a string
         if (data['district'] && !(typeof data['district'] === 'string' || data['district'] instanceof String)) {
             throw new Error("Expected the field `district` to be a primitive type in the JSON string but got " + data['district']);
-        }
-        // validate the optional field `home_presell`
-        if (data['home_presell']) { // data not null
-          PostHomePresellFields.validateJSON(data['home_presell']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['landline_numbers'])) {
-            throw new Error("Expected the field `landline_numbers` to be an array in the JSON data but got " + data['landline_numbers']);
-        }
-        // validate the optional field `services`
-        if (data['services']) { // data not null
-          OpenPlatformpostServicesFields.validateJSON(data['services']);
-        }
-        // validate the optional field `temporary_residence`
-        if (data['temporary_residence']) { // data not null
-          PostTemporaryResidenceFields.validateJSON(data['temporary_residence']);
         }
 
         return true;
     }
 
+/**
+     * Returns نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-categories/
+     * @return {String}
+     */
+    getCategorySlug() {
+        return this.category_slug;
+    }
+
+    /**
+     * Sets نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-categories/
+     * @param {String} categorySlug نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-categories/
+     */
+    setCategorySlug(categorySlug) {
+        this['category_slug'] = categorySlug;
+    }
 /**
      * Returns امکان چت فعال باشد
      * @return {Boolean}
@@ -273,19 +258,6 @@ class PostSubmitPostRequest {
         this['title'] = title;
     }
 /**
-     * @return {module:model/PostApartmentSellFields}
-     */
-    getApartmentSell() {
-        return this.apartment_sell;
-    }
-
-    /**
-     * @param {module:model/PostApartmentSellFields} apartmentSell
-     */
-    setApartmentSell(apartmentSell) {
-        this['apartment_sell'] = apartmentSell;
-    }
-/**
      * Returns محله آگهی
      * @return {String}
      */
@@ -299,34 +271,6 @@ class PostSubmitPostRequest {
      */
     setDistrict(district) {
         this['district'] = district;
-    }
-/**
-     * @return {module:model/PostHomePresellFields}
-     */
-    getHomePresell() {
-        return this.home_presell;
-    }
-
-    /**
-     * @param {module:model/PostHomePresellFields} homePresell
-     */
-    setHomePresell(homePresell) {
-        this['home_presell'] = homePresell;
-    }
-/**
-     * Returns Landline numbers to be added to the post
-     * @return {Array.<String>}
-     */
-    getLandlineNumbers() {
-        return this.landline_numbers;
-    }
-
-    /**
-     * Sets Landline numbers to be added to the post
-     * @param {Array.<String>} landlineNumbers Landline numbers to be added to the post
-     */
-    setLandlineNumbers(landlineNumbers) {
-        this['landline_numbers'] = landlineNumbers;
     }
 /**
      * Returns عرض جغرافیایی آگهی
@@ -358,125 +302,79 @@ class PostSubmitPostRequest {
     setLongitude(longitude) {
         this['longitude'] = longitude;
     }
-/**
-     * @return {module:model/OpenPlatformpostServicesFields}
-     */
-    getServices() {
-        return this.services;
-    }
-
-    /**
-     * @param {module:model/OpenPlatformpostServicesFields} services
-     */
-    setServices(services) {
-        this['services'] = services;
-    }
-/**
-     * @return {module:model/PostTemporaryResidenceFields}
-     */
-    getTemporaryResidence() {
-        return this.temporary_residence;
-    }
-
-    /**
-     * @param {module:model/PostTemporaryResidenceFields} temporaryResidence
-     */
-    setTemporaryResidence(temporaryResidence) {
-        this['temporary_residence'] = temporaryResidence;
-    }
 
 }
 
-PostSubmitPostRequest.RequiredProperties = ["chat_enabled", "city", "description", "hide_phone", "images", "location_type", "title"];
+PostSubmitPostGeneralData.RequiredProperties = ["category_slug", "chat_enabled", "city", "description", "hide_phone", "images", "location_type", "title"];
+
+/**
+ * نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-categories/
+ * @member {String} category_slug
+ */
+PostSubmitPostGeneralData.prototype['category_slug'] = undefined;
 
 /**
  * امکان چت فعال باشد
  * @member {Boolean} chat_enabled
  */
-PostSubmitPostRequest.prototype['chat_enabled'] = undefined;
+PostSubmitPostGeneralData.prototype['chat_enabled'] = undefined;
 
 /**
  * شهر آگهی
  * @member {String} city
  */
-PostSubmitPostRequest.prototype['city'] = undefined;
+PostSubmitPostGeneralData.prototype['city'] = undefined;
 
 /**
  * توضیحات آگهی
  * @member {String} description
  */
-PostSubmitPostRequest.prototype['description'] = undefined;
+PostSubmitPostGeneralData.prototype['description'] = undefined;
 
 /**
  * عدم نمایش شماره تماس به کاربران
  * @member {Boolean} hide_phone
  */
-PostSubmitPostRequest.prototype['hide_phone'] = undefined;
+PostSubmitPostGeneralData.prototype['hide_phone'] = undefined;
 
 /**
  * @member {Array.<String>} images
  */
-PostSubmitPostRequest.prototype['images'] = undefined;
+PostSubmitPostGeneralData.prototype['images'] = undefined;
 
 /**
  * @member {module:model/PostLocationType} location_type
  */
-PostSubmitPostRequest.prototype['location_type'] = undefined;
+PostSubmitPostGeneralData.prototype['location_type'] = undefined;
 
 /**
  * عنوان آگهی
  * @member {String} title
  */
-PostSubmitPostRequest.prototype['title'] = undefined;
-
-/**
- * @member {module:model/PostApartmentSellFields} apartment_sell
- */
-PostSubmitPostRequest.prototype['apartment_sell'] = undefined;
+PostSubmitPostGeneralData.prototype['title'] = undefined;
 
 /**
  * محله آگهی
  * @member {String} district
  */
-PostSubmitPostRequest.prototype['district'] = undefined;
-
-/**
- * @member {module:model/PostHomePresellFields} home_presell
- */
-PostSubmitPostRequest.prototype['home_presell'] = undefined;
-
-/**
- * Landline numbers to be added to the post
- * @member {Array.<String>} landline_numbers
- */
-PostSubmitPostRequest.prototype['landline_numbers'] = undefined;
+PostSubmitPostGeneralData.prototype['district'] = undefined;
 
 /**
  * عرض جغرافیایی آگهی
  * @member {Number} latitude
  */
-PostSubmitPostRequest.prototype['latitude'] = undefined;
+PostSubmitPostGeneralData.prototype['latitude'] = undefined;
 
 /**
  * طول جغرافیایی آگهی
  * @member {Number} longitude
  */
-PostSubmitPostRequest.prototype['longitude'] = undefined;
-
-/**
- * @member {module:model/OpenPlatformpostServicesFields} services
- */
-PostSubmitPostRequest.prototype['services'] = undefined;
-
-/**
- * @member {module:model/PostTemporaryResidenceFields} temporary_residence
- */
-PostSubmitPostRequest.prototype['temporary_residence'] = undefined;
+PostSubmitPostGeneralData.prototype['longitude'] = undefined;
 
 
 
 
 
 
-export default PostSubmitPostRequest;
+export default PostSubmitPostGeneralData;
 

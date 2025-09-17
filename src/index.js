@@ -162,10 +162,14 @@ import PostEditPostBody from './model/PostEditPostBody';
 import PostGetImageUploadURLResponse from './model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
 import PostHomePresellFields from './model/PostHomePresellFields';
+import PostLocationType from './model/PostLocationType';
 import PostRoomsCount from './model/PostRoomsCount';
 import PostServicesFieldsCategory from './model/PostServicesFieldsCategory';
+import PostSubmitPostGeneralData from './model/PostSubmitPostGeneralData';
 import PostSubmitPostRequest from './model/PostSubmitPostRequest';
 import PostSubmitPostResponse from './model/PostSubmitPostResponse';
+import PostSubmitPostV2Request from './model/PostSubmitPostV2Request';
+import PostSubmitUserPostRequest from './model/PostSubmitUserPostRequest';
 import PostTemporaryResidenceFields from './model/PostTemporaryResidenceFields';
 import PremiumPanelBusinessDataSubBusinessType from './model/PremiumPanelBusinessDataSubBusinessType';
 import ProtobufAny from './model/ProtobufAny';
@@ -178,7 +182,6 @@ import SemanticCreateUserSemanticResponse from './model/SemanticCreateUserSemant
 import SemanticPostSemanticDeleted from './model/SemanticPostSemanticDeleted';
 import SemanticUserSemanticDeleted from './model/SemanticUserSemanticDeleted';
 import SendEventRequestTargetType from './model/SendEventRequestTargetType';
-import SubmitPostRequestLocationType from './model/SubmitPostRequestLocationType';
 import TemporaryResidenceFieldsComfortAmenity from './model/TemporaryResidenceFieldsComfortAmenity';
 import TemporaryResidenceFieldsHeatingCoolingSystem from './model/TemporaryResidenceFieldsHeatingCoolingSystem';
 import TemporaryResidenceFieldsPetsAllowed from './model/TemporaryResidenceFieldsPetsAllowed';
@@ -1127,6 +1130,12 @@ export {
     PostHomePresellFields,
 
     /**
+     * The PostLocationType model constructor.
+     * @property {module:model/PostLocationType}
+     */
+    PostLocationType,
+
+    /**
      * The PostRoomsCount model constructor.
      * @property {module:model/PostRoomsCount}
      */
@@ -1139,6 +1148,12 @@ export {
     PostServicesFieldsCategory,
 
     /**
+     * The PostSubmitPostGeneralData model constructor.
+     * @property {module:model/PostSubmitPostGeneralData}
+     */
+    PostSubmitPostGeneralData,
+
+    /**
      * The PostSubmitPostRequest model constructor.
      * @property {module:model/PostSubmitPostRequest}
      */
@@ -1149,6 +1164,18 @@ export {
      * @property {module:model/PostSubmitPostResponse}
      */
     PostSubmitPostResponse,
+
+    /**
+     * The PostSubmitPostV2Request model constructor.
+     * @property {module:model/PostSubmitPostV2Request}
+     */
+    PostSubmitPostV2Request,
+
+    /**
+     * The PostSubmitUserPostRequest model constructor.
+     * @property {module:model/PostSubmitUserPostRequest}
+     */
+    PostSubmitUserPostRequest,
 
     /**
      * The PostTemporaryResidenceFields model constructor.
@@ -1221,12 +1248,6 @@ export {
      * @property {module:model/SendEventRequestTargetType}
      */
     SendEventRequestTargetType,
-
-    /**
-     * The SubmitPostRequestLocationType model constructor.
-     * @property {module:model/SubmitPostRequestLocationType}
-     */
-    SubmitPostRequestLocationType,
 
     /**
      * The TemporaryResidenceFieldsComfortAmenity model constructor.

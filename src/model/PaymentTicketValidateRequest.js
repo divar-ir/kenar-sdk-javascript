@@ -86,7 +86,6 @@ class PaymentTicketValidateRequest {
     }
 
 /**
-     * Returns منسوخ شده. از divar_user_id استفاده کنید.
      * @return {String}
      */
     getPhoneNumber() {
@@ -94,8 +93,7 @@ class PaymentTicketValidateRequest {
     }
 
     /**
-     * Sets منسوخ شده. از divar_user_id استفاده کنید.
-     * @param {String} phoneNumber منسوخ شده. از divar_user_id استفاده کنید.
+     * @param {String} phoneNumber
      */
     setPhoneNumber(phoneNumber) {
         this['phone_number'] = phoneNumber;
@@ -145,7 +143,6 @@ class PaymentTicketValidateRequest {
 
 
 /**
- * منسوخ شده. از divar_user_id استفاده کنید.
  * @member {String} phone_number
  */
 PaymentTicketValidateRequest.prototype['phone_number'] = undefined;

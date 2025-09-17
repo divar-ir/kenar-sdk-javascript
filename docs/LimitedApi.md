@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**paymentListTransactions**](LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
 [**paymentReorderPost**](LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 [**paymentRetrieveWalletTransaction**](LimitedApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
+[**paymentSubmitUserPayment**](LimitedApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | Submit a user payment
 
 
 
@@ -406,6 +407,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PaymentRetrieveWalletTransactionResponse**](PaymentRetrieveWalletTransactionResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## paymentSubmitUserPayment
+
+> Object paymentSubmitUserPayment(opts)
+
+Submit a user payment
+
+Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having &#x60;SUBMIT_USER_PAYMENT&#x60; scope.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.LimitedApi();
+let opts = {
+  'amountRials': "amountRials_example", // String | Total amount paid by the user, in rials.
+  'profitRials': "profitRials_example", // String | Profit or commission gained from this transaction, in rials.
+  'services': ["null"], // [String] | List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+  'referenceId': "referenceId_example" // String | Reference ID of the invoice or transaction.
+};
+apiInstance.paymentSubmitUserPayment(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **amountRials** | **String**| Total amount paid by the user, in rials. | [optional] 
+ **profitRials** | **String**| Profit or commission gained from this transaction, in rials. | [optional] 
+ **services** | [**[String]**](String.md)| List of service slugs the user paid for (e.g. &#39;banner&#39;, &#39;title_refinement&#39;). | [optional] 
+ **referenceId** | **String**| Reference ID of the invoice or transaction. | [optional] 
+
+### Return type
+
+**Object**
 
 ### Authorization
 

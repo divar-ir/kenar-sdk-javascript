@@ -88,6 +88,26 @@
         done();
       });
     });
+    describe('postSubmitPostV2', function() {
+      it('should call postSubmitPostV2 successfully', function(done) {
+        //uncomment below and update the code to test postSubmitPostV2
+        //instance.postSubmitPostV2(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('postSubmitUserPost', function() {
+      it('should call postSubmitUserPost successfully', function(done) {
+        //uncomment below and update the code to test postSubmitUserPost
+        //instance.postSubmitUserPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

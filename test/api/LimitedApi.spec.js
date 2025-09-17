@@ -128,6 +128,16 @@
         done();
       });
     });
+    describe('paymentSubmitUserPayment', function() {
+      it('should call paymentSubmitUserPayment successfully', function(done) {
+        //uncomment below and update the code to test paymentSubmitUserPayment
+        //instance.paymentSubmitUserPayment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

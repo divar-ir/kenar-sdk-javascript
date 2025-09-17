@@ -415,4 +415,60 @@ export default class LimitedApi {
     }
 
 
+    /**
+     * Submit a user payment
+     * Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+     * @param {Object} opts Optional parameters
+     * @param {String} [amountRials] Total amount paid by the user, in rials.
+     * @param {String} [profitRials] Profit or commission gained from this transaction, in rials.
+     * @param {Array.<String>} [services] List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+     * @param {String} [referenceId] Reference ID of the invoice or transaction.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+    paymentSubmitUserPaymentWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'amount_rials': opts['amountRials'],
+        'profit_rials': opts['profitRials'],
+        'services': this.apiClient.buildCollectionParam(opts['services'], 'multi'),
+        'reference_id': opts['referenceId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/v1/open-platform/user-payments', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Submit a user payment
+     * Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.amountRials Total amount paid by the user, in rials.
+     * @param {String} opts.profitRials Profit or commission gained from this transaction, in rials.
+     * @param {Array.<String>} opts.services List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+     * @param {String} opts.referenceId Reference ID of the invoice or transaction.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+    paymentSubmitUserPayment(opts) {
+      return this.paymentSubmitUserPaymentWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
 }
