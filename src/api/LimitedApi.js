@@ -416,7 +416,7 @@ export default class LimitedApi {
 
 
     /**
-     * Submit a user payment
+     * ثبت پرداخت کاربر
      * این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
      * @param {Object} opts Optional parameters
      * @param {String} [amountRials] میزان پول پرداختی توسط کاربر به ریال
@@ -454,7 +454,7 @@ export default class LimitedApi {
     }
 
     /**
-     * Submit a user payment
+     * ثبت پرداخت کاربر
      * این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
      * @param {Object} opts Optional parameters
      * @param {String} opts.amountRials میزان پول پرداختی توسط کاربر به ریال

@@ -169,7 +169,7 @@ Class | Method | HTTP request | Description
 *KenarApiClient.LimitedApi* | [**paymentListTransactions**](docs/LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
 *KenarApiClient.LimitedApi* | [**paymentReorderPost**](docs/LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 *KenarApiClient.LimitedApi* | [**paymentRetrieveWalletTransaction**](docs/LimitedApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
-*KenarApiClient.LimitedApi* | [**paymentSubmitUserPayment**](docs/LimitedApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | Submit a user payment
+*KenarApiClient.LimitedApi* | [**paymentSubmitUserPayment**](docs/LimitedApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر

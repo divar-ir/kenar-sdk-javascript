@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**paymentListTransactions**](LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
 [**paymentReorderPost**](LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 [**paymentRetrieveWalletTransaction**](LimitedApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
-[**paymentSubmitUserPayment**](LimitedApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | Submit a user payment
+[**paymentSubmitUserPayment**](LimitedApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 
 
 
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
 
 > Object paymentSubmitUserPayment(opts)
 
-Submit a user payment
+ثبت پرداخت کاربر
 
 این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
