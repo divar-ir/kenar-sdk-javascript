@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 Submit a user payment
 
-Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having &#x60;SUBMIT_USER_PAYMENT&#x60; scope.
+این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
 ### Example
 
@@ -439,9 +439,9 @@ APIKey.apiKey = 'YOUR API KEY';
 
 let apiInstance = new KenarApiClient.LimitedApi();
 let opts = {
-  'amountRials': "amountRials_example", // String | Total amount paid by the user, in rials.
-  'profitRials': "profitRials_example", // String | Profit or commission gained from this transaction, in rials.
-  'services': ["null"], // [String] | List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+  'amountRials': "amountRials_example", // String | میزان پول پرداختی توسط کاربر به ریال
+  'profitRials': "profitRials_example", // String | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
+  'services': ["null"], // [String] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
   'referenceId': "referenceId_example" // String | Reference ID of the invoice or transaction.
 };
 apiInstance.paymentSubmitUserPayment(opts).then((data) => {
@@ -457,9 +457,9 @@ apiInstance.paymentSubmitUserPayment(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **amountRials** | **String**| Total amount paid by the user, in rials. | [optional] 
- **profitRials** | **String**| Profit or commission gained from this transaction, in rials. | [optional] 
- **services** | [**[String]**](String.md)| List of service slugs the user paid for (e.g. &#39;banner&#39;, &#39;title_refinement&#39;). | [optional] 
+ **amountRials** | **String**| میزان پول پرداختی توسط کاربر به ریال | [optional] 
+ **profitRials** | **String**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال | [optional] 
+ **services** | [**[String]**](String.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) | [optional] 
  **referenceId** | **String**| Reference ID of the invoice or transaction. | [optional] 
 
 ### Return type

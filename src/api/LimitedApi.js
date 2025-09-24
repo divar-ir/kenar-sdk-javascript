@@ -417,11 +417,11 @@ export default class LimitedApi {
 
     /**
      * Submit a user payment
-     * Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+     * این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
      * @param {Object} opts Optional parameters
-     * @param {String} [amountRials] Total amount paid by the user, in rials.
-     * @param {String} [profitRials] Profit or commission gained from this transaction, in rials.
-     * @param {Array.<String>} [services] List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+     * @param {String} [amountRials] میزان پول پرداختی توسط کاربر به ریال
+     * @param {String} [profitRials] بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
+     * @param {Array.<String>} [services] لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
      * @param {String} [referenceId] Reference ID of the invoice or transaction.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -455,11 +455,11 @@ export default class LimitedApi {
 
     /**
      * Submit a user payment
-     * Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+     * این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.amountRials Total amount paid by the user, in rials.
-     * @param {String} opts.profitRials Profit or commission gained from this transaction, in rials.
-     * @param {Array.<String>} opts.services List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+     * @param {String} opts.amountRials میزان پول پرداختی توسط کاربر به ریال
+     * @param {String} opts.profitRials بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
+     * @param {Array.<String>} opts.services لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
      * @param {String} opts.referenceId Reference ID of the invoice or transaction.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */

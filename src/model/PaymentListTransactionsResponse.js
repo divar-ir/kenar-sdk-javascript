@@ -98,7 +98,7 @@ class PaymentListTransactionsResponse {
         this['next_page_token'] = nextPageToken;
     }
 /**
-     * Returns List of transactions matching the request
+     * Returns شناسه مرجع فاکتور یا تراکنش
      * @return {Array.<module:model/PaymentTransaction>}
      */
     getTransactions() {
@@ -106,8 +106,8 @@ class PaymentListTransactionsResponse {
     }
 
     /**
-     * Sets List of transactions matching the request
-     * @param {Array.<module:model/PaymentTransaction>} transactions List of transactions matching the request
+     * Sets شناسه مرجع فاکتور یا تراکنش
+     * @param {Array.<module:model/PaymentTransaction>} transactions شناسه مرجع فاکتور یا تراکنش
      */
     setTransactions(transactions) {
         this['transactions'] = transactions;
@@ -124,7 +124,7 @@ class PaymentListTransactionsResponse {
 PaymentListTransactionsResponse.prototype['next_page_token'] = undefined;
 
 /**
- * List of transactions matching the request
+ * شناسه مرجع فاکتور یا تراکنش
  * @member {Array.<module:model/PaymentTransaction>} transactions
  */
 PaymentListTransactionsResponse.prototype['transactions'] = undefined;
