@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ثبت پرداخت کاربر
 
-این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
+باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
 ### Example
 
@@ -439,8 +439,8 @@ APIKey.apiKey = 'YOUR API KEY';
 
 let apiInstance = new KenarApiClient.LimitedApi();
 let opts = {
-  'amountRials': "amountRials_example", // String | میزان پول پرداختی توسط کاربر به ریال
-  'profitRials': "profitRials_example", // String | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
+  'amountRials': "amountRials_example", // String | کل مبلغ پرداختی توسط کاربر، به ریال
+  'profitRials': "profitRials_example", // String | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
   'services': ["null"], // [String] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
   'referenceId': "referenceId_example" // String | Reference ID of the invoice or transaction.
 };
@@ -457,8 +457,8 @@ apiInstance.paymentSubmitUserPayment(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **amountRials** | **String**| میزان پول پرداختی توسط کاربر به ریال | [optional] 
- **profitRials** | **String**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال | [optional] 
+ **amountRials** | **String**| کل مبلغ پرداختی توسط کاربر، به ریال | [optional] 
+ **profitRials** | **String**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال | [optional] 
  **services** | [**[String]**](String.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) | [optional] 
  **referenceId** | **String**| Reference ID of the invoice or transaction. | [optional] 
 

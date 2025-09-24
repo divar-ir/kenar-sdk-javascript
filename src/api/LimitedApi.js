@@ -417,10 +417,10 @@ export default class LimitedApi {
 
     /**
      * ثبت پرداخت کاربر
-     * این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
+     * باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
      * @param {Object} opts Optional parameters
-     * @param {String} [amountRials] میزان پول پرداختی توسط کاربر به ریال
-     * @param {String} [profitRials] بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
+     * @param {String} [amountRials] کل مبلغ پرداختی توسط کاربر، به ریال
+     * @param {String} [profitRials] بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
      * @param {Array.<String>} [services] لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
      * @param {String} [referenceId] Reference ID of the invoice or transaction.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -455,10 +455,10 @@ export default class LimitedApi {
 
     /**
      * ثبت پرداخت کاربر
-     * این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
+     * باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.amountRials میزان پول پرداختی توسط کاربر به ریال
-     * @param {String} opts.profitRials بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
+     * @param {String} opts.amountRials کل مبلغ پرداختی توسط کاربر، به ریال
+     * @param {String} opts.profitRials بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
      * @param {Array.<String>} opts.services لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
      * @param {String} opts.referenceId Reference ID of the invoice or transaction.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
