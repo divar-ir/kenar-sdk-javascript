@@ -442,7 +442,7 @@ let opts = {
   'amountRials': "amountRials_example", // String | کل مبلغ پرداختی توسط کاربر، به ریال
   'profitRials': "profitRials_example", // String | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
   'services': ["null"], // [String] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
-  'referenceId': "referenceId_example" // String | Reference ID of the invoice or transaction.
+  'referenceId': "referenceId_example" // String | شناسه مرجع فاکتور یا تراکنش
 };
 apiInstance.paymentSubmitUserPayment(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
  **amountRials** | **String**| کل مبلغ پرداختی توسط کاربر، به ریال | [optional] 
  **profitRials** | **String**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال | [optional] 
  **services** | [**[String]**](String.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) | [optional] 
- **referenceId** | **String**| Reference ID of the invoice or transaction. | [optional] 
+ **referenceId** | **String**| شناسه مرجع فاکتور یا تراکنش | [optional] 
 
 ### Return type
 

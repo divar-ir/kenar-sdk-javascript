@@ -422,7 +422,7 @@ export default class LimitedApi {
      * @param {String} [amountRials] کل مبلغ پرداختی توسط کاربر، به ریال
      * @param {String} [profitRials] بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
      * @param {Array.<String>} [services] لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
-     * @param {String} [referenceId] Reference ID of the invoice or transaction.
+     * @param {String} [referenceId] شناسه مرجع فاکتور یا تراکنش
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     paymentSubmitUserPaymentWithHttpInfo(opts) {
@@ -460,7 +460,7 @@ export default class LimitedApi {
      * @param {String} opts.amountRials کل مبلغ پرداختی توسط کاربر، به ریال
      * @param {String} opts.profitRials بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
      * @param {Array.<String>} opts.services لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
-     * @param {String} opts.referenceId Reference ID of the invoice or transaction.
+     * @param {String} opts.referenceId شناسه مرجع فاکتور یا تراکنش
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     paymentSubmitUserPayment(opts) {
