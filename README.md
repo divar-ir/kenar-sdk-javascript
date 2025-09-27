@@ -161,15 +161,15 @@ Class | Method | HTTP request | Description
 *KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
 *KenarApiClient.FinderApi* | [**finderGetUserPosts**](docs/FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 *KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
-*KenarApiClient.LimitedApi* | [**paymentCommitWalletTransaction**](docs/LimitedApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
-*KenarApiClient.LimitedApi* | [**paymentCreateWalletPayment**](docs/LimitedApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | 
-*KenarApiClient.LimitedApi* | [**paymentGetBalance**](docs/LimitedApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | 
-*KenarApiClient.LimitedApi* | [**paymentGetPostPricing**](docs/LimitedApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
-*KenarApiClient.LimitedApi* | [**paymentGetTransaction**](docs/LimitedApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | 
-*KenarApiClient.LimitedApi* | [**paymentListTransactions**](docs/LimitedApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
-*KenarApiClient.LimitedApi* | [**paymentReorderPost**](docs/LimitedApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
-*KenarApiClient.LimitedApi* | [**paymentRetrieveWalletTransaction**](docs/LimitedApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
-*KenarApiClient.LimitedApi* | [**paymentSubmitUserPayment**](docs/LimitedApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
+*KenarApiClient.PaymentApi* | [**paymentCommitWalletTransaction**](docs/PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
+*KenarApiClient.PaymentApi* | [**paymentCreateWalletPayment**](docs/PaymentApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | 
+*KenarApiClient.PaymentApi* | [**paymentGetBalance**](docs/PaymentApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | 
+*KenarApiClient.PaymentApi* | [**paymentGetPostPricing**](docs/PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
+*KenarApiClient.PaymentApi* | [**paymentGetTransaction**](docs/PaymentApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | 
+*KenarApiClient.PaymentApi* | [**paymentListTransactions**](docs/PaymentApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
+*KenarApiClient.PaymentApi* | [**paymentReorderPost**](docs/PaymentApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
+*KenarApiClient.PaymentApi* | [**paymentRetrieveWalletTransaction**](docs/PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
+*KenarApiClient.PaymentApi* | [**paymentSubmitUserPayment**](docs/PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر

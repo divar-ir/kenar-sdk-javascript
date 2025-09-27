@@ -192,7 +192,7 @@ import AssetsApi from './api/AssetsApi';
 import ChatAPIApi from './api/ChatAPIApi';
 import EventsApi from './api/EventsApi';
 import FinderApi from './api/FinderApi';
-import LimitedApi from './api/LimitedApi';
+import PaymentApi from './api/PaymentApi';
 import PaymentTicketApi from './api/PaymentTicketApi';
 import PostApi from './api/PostApi';
 import SemanticApi from './api/SemanticApi';
@@ -1311,10 +1311,10 @@ export {
     FinderApi,
 
     /**
-    * The LimitedApi service constructor.
-    * @property {module:api/LimitedApi}
+    * The PaymentApi service constructor.
+    * @property {module:api/PaymentApi}
     */
-    LimitedApi,
+    PaymentApi,
 
     /**
     * The PaymentTicketApi service constructor.
