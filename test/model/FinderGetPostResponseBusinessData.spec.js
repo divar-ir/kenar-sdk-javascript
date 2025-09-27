@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.PaymentGetPostPricingResponse();
+    instance = new KenarApiClient.FinderGetPostResponseBusinessData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('PaymentGetPostPricingResponse', function() {
-    it('should create an instance of PaymentGetPostPricingResponse', function() {
-      // uncomment below and update the code to test PaymentGetPostPricingResponse
-      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
-      //expect(instance).to.be.a(KenarApiClient.PaymentGetPostPricingResponse);
+  describe('FinderGetPostResponseBusinessData', function() {
+    it('should create an instance of FinderGetPostResponseBusinessData', function() {
+      // uncomment below and update the code to test FinderGetPostResponseBusinessData
+      //var instance = new KenarApiClient.FinderGetPostResponseBusinessData();
+      //expect(instance).to.be.a(KenarApiClient.FinderGetPostResponseBusinessData);
     });
 
-    it('should have the property reorder (base name: "reorder")', function() {
-      // uncomment below and update the code to test the property reorder
-      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
+    it('should have the property businessName (base name: "business_name")', function() {
+      // uncomment below and update the code to test the property businessName
+      //var instance = new KenarApiClient.FinderGetPostResponseBusinessData();
       //expect(instance).to.be();
     });
 
-    it('should have the property submit (base name: "submit")', function() {
-      // uncomment below and update the code to test the property submit
-      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
+    it('should have the property businessType (base name: "business_type")', function() {
+      // uncomment below and update the code to test the property businessType
+      //var instance = new KenarApiClient.FinderGetPostResponseBusinessData();
       //expect(instance).to.be();
     });
 

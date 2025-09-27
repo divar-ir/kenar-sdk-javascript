@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**businessData** | [**GetPostResponseBusinessData**](GetPostResponseBusinessData.md) |  | [optional] 
+**businessData** | [**FinderGetPostResponseBusinessData**](FinderGetPostResponseBusinessData.md) |  | [optional] 
 **category** | **String** |  | [optional] 
 **chatEnabled** | **Boolean** |  | [optional] 
 **city** | **String** |  | [optional] 

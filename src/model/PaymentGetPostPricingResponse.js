@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import GetPostPricingResponseReorder from './GetPostPricingResponseReorder';
+import GetPostPricingResponseSubmit from './GetPostPricingResponseSubmit';
 
 /**
  * The PaymentGetPostPricingResponse model module.
@@ -51,6 +52,9 @@ class PaymentGetPostPricingResponse {
             if (data.hasOwnProperty('reorder')) {
                 obj['reorder'] = GetPostPricingResponseReorder.constructFromObject(data['reorder']);
             }
+            if (data.hasOwnProperty('submit')) {
+                obj['submit'] = GetPostPricingResponseSubmit.constructFromObject(data['submit']);
+            }
         }
         return obj;
     }
@@ -64,6 +68,10 @@ class PaymentGetPostPricingResponse {
         // validate the optional field `reorder`
         if (data['reorder']) { // data not null
           GetPostPricingResponseReorder.validateJSON(data['reorder']);
+        }
+        // validate the optional field `submit`
+        if (data['submit']) { // data not null
+          GetPostPricingResponseSubmit.validateJSON(data['submit']);
         }
 
         return true;
@@ -82,6 +90,19 @@ class PaymentGetPostPricingResponse {
     setReorder(reorder) {
         this['reorder'] = reorder;
     }
+/**
+     * @return {module:model/GetPostPricingResponseSubmit}
+     */
+    getSubmit() {
+        return this.submit;
+    }
+
+    /**
+     * @param {module:model/GetPostPricingResponseSubmit} submit
+     */
+    setSubmit(submit) {
+        this['submit'] = submit;
+    }
 
 }
 
@@ -91,6 +112,11 @@ class PaymentGetPostPricingResponse {
  * @member {module:model/GetPostPricingResponseReorder} reorder
  */
 PaymentGetPostPricingResponse.prototype['reorder'] = undefined;
+
+/**
+ * @member {module:model/GetPostPricingResponseSubmit} submit
+ */
+PaymentGetPostPricingResponse.prototype['submit'] = undefined;
 
 
 

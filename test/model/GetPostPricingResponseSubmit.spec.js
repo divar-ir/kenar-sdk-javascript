@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.PaymentGetPostPricingResponse();
+    instance = new KenarApiClient.GetPostPricingResponseSubmit();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('PaymentGetPostPricingResponse', function() {
-    it('should create an instance of PaymentGetPostPricingResponse', function() {
-      // uncomment below and update the code to test PaymentGetPostPricingResponse
-      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
-      //expect(instance).to.be.a(KenarApiClient.PaymentGetPostPricingResponse);
+  describe('GetPostPricingResponseSubmit', function() {
+    it('should create an instance of GetPostPricingResponseSubmit', function() {
+      // uncomment below and update the code to test GetPostPricingResponseSubmit
+      //var instance = new KenarApiClient.GetPostPricingResponseSubmit();
+      //expect(instance).to.be.a(KenarApiClient.GetPostPricingResponseSubmit);
     });
 
-    it('should have the property reorder (base name: "reorder")', function() {
-      // uncomment below and update the code to test the property reorder
-      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
+    it('should have the property available (base name: "available")', function() {
+      // uncomment below and update the code to test the property available
+      //var instance = new KenarApiClient.GetPostPricingResponseSubmit();
       //expect(instance).to.be();
     });
 
-    it('should have the property submit (base name: "submit")', function() {
-      // uncomment below and update the code to test the property submit
-      //var instance = new KenarApiClient.PaymentGetPostPricingResponse();
+    it('should have the property costRials (base name: "cost_rials")', function() {
+      // uncomment below and update the code to test the property costRials
+      //var instance = new KenarApiClient.GetPostPricingResponseSubmit();
       //expect(instance).to.be();
     });
 

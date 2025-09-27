@@ -108,6 +108,7 @@ import EventsRegisterEventSubscriptionRequest from './model/EventsRegisterEventS
 import EventsRegisterEventSubscriptionRequestEventType from './model/EventsRegisterEventSubscriptionRequestEventType';
 import FinderGetAllDevelopmentPostsResponse from './model/FinderGetAllDevelopmentPostsResponse';
 import FinderGetPostResponse from './model/FinderGetPostResponse';
+import FinderGetPostResponseBusinessData from './model/FinderGetPostResponseBusinessData';
 import FinderGetUserPostsResponse from './model/FinderGetUserPostsResponse';
 import FinderGetUserPostsResponsePost from './model/FinderGetUserPostsResponsePost';
 import FinderPostExtState from './model/FinderPostExtState';
@@ -118,7 +119,7 @@ import FinderSearchQuery from './model/FinderSearchQuery';
 import FinderSearchQueryNumberRange from './model/FinderSearchQueryNumberRange';
 import FinderUser from './model/FinderUser';
 import GetPostPricingResponseReorder from './model/GetPostPricingResponseReorder';
-import GetPostResponseBusinessData from './model/GetPostResponseBusinessData';
+import GetPostPricingResponseSubmit from './model/GetPostPricingResponseSubmit';
 import GetPostStatsResponseDailyStats from './model/GetPostStatsResponseDailyStats';
 import GetPostStatsResponsePostStats from './model/GetPostStatsResponsePostStats';
 import GetServiceTypesResponseServiceTypeData from './model/GetServiceTypesResponseServiceTypeData';
@@ -806,6 +807,12 @@ export {
     FinderGetPostResponse,
 
     /**
+     * The FinderGetPostResponseBusinessData model constructor.
+     * @property {module:model/FinderGetPostResponseBusinessData}
+     */
+    FinderGetPostResponseBusinessData,
+
+    /**
      * The FinderGetUserPostsResponse model constructor.
      * @property {module:model/FinderGetUserPostsResponse}
      */
@@ -866,10 +873,10 @@ export {
     GetPostPricingResponseReorder,
 
     /**
-     * The GetPostResponseBusinessData model constructor.
-     * @property {module:model/GetPostResponseBusinessData}
+     * The GetPostPricingResponseSubmit model constructor.
+     * @property {module:model/GetPostPricingResponseSubmit}
      */
-    GetPostResponseBusinessData,
+    GetPostPricingResponseSubmit,
 
     /**
      * The GetPostStatsResponseDailyStats model constructor.

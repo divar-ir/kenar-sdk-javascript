@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import FinderGetPostResponseBusinessData from './FinderGetPostResponseBusinessData';
 import FinderPostExtState from './FinderPostExtState';
-import GetPostResponseBusinessData from './GetPostResponseBusinessData';
 
 /**
  * The FinderGetPostResponse model module.
@@ -50,7 +50,7 @@ class FinderGetPostResponse {
             obj = obj || new FinderGetPostResponse();
 
             if (data.hasOwnProperty('business_data')) {
-                obj['business_data'] = GetPostResponseBusinessData.constructFromObject(data['business_data']);
+                obj['business_data'] = FinderGetPostResponseBusinessData.constructFromObject(data['business_data']);
             }
             if (data.hasOwnProperty('category')) {
                 obj['category'] = ApiClient.convertToType(data['category'], 'String');
@@ -97,7 +97,7 @@ class FinderGetPostResponse {
     static validateJSON(data) {
         // validate the optional field `business_data`
         if (data['business_data']) { // data not null
-          GetPostResponseBusinessData.validateJSON(data['business_data']);
+          FinderGetPostResponseBusinessData.validateJSON(data['business_data']);
         }
         // ensure the json data is a string
         if (data['category'] && !(typeof data['category'] === 'string' || data['category'] instanceof String)) {
@@ -120,14 +120,14 @@ class FinderGetPostResponse {
     }
 
 /**
-     * @return {module:model/GetPostResponseBusinessData}
+     * @return {module:model/FinderGetPostResponseBusinessData}
      */
     getBusinessData() {
         return this.business_data;
     }
 
     /**
-     * @param {module:model/GetPostResponseBusinessData} businessData
+     * @param {module:model/FinderGetPostResponseBusinessData} businessData
      */
     setBusinessData(businessData) {
         this['business_data'] = businessData;
@@ -281,7 +281,7 @@ class FinderGetPostResponse {
 
 
 /**
- * @member {module:model/GetPostResponseBusinessData} business_data
+ * @member {module:model/FinderGetPostResponseBusinessData} business_data
  */
 FinderGetPostResponse.prototype['business_data'] = undefined;
 
