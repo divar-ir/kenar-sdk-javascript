@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 
-(Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+(محدود) با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
 
 ### Example
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 
 
-(Limited) Using this API you can start a payment transaction from the users wallet.
+(محدود) با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
 
 ### Example
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 
 
-(Limited) Using this API you can retrieve current balance of your app.
+(محدود) با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
 
 ### Example
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 
 
-(Limited) Using this API you can retrieve transaction details.
+با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
 
 ### Example
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 
 
-(Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+(محدود) با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
 
 ### Example
 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 
 
-(Limited) Use GetPostPricing API to get the cost of the service before calling this API.
+(محدود) قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
 
 ### Example
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 
 
 
-(Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
 ### Example
 
