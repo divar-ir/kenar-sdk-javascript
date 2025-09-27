@@ -224,7 +224,7 @@ export default class PaymentApi {
 
 
     /**
-     * با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
+     * (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
      * @param {String} id شناسه منحصر به فرد برای تراکنش، همان id در درخواست
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentGetTransactionResponse} and HTTP response
      */
@@ -257,7 +257,7 @@ export default class PaymentApi {
     }
 
     /**
-     * با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
+     * (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
      * @param {String} id شناسه منحصر به فرد برای تراکنش، همان id در درخواست
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentGetTransactionResponse}
      */
@@ -370,7 +370,7 @@ export default class PaymentApi {
 
 
     /**
-     * با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+     * (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
      * @param {String} token توکن تراکنشی که می‌خواهید بازیابی کنید
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentRetrieveWalletTransactionResponse} and HTTP response
      */
@@ -403,7 +403,7 @@ export default class PaymentApi {
     }
 
     /**
-     * با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+     * (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
      * @param {String} token توکن تراکنشی که می‌خواهید بازیابی کنید
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentRetrieveWalletTransactionResponse}
      */
