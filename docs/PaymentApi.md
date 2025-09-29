@@ -441,7 +441,7 @@ let apiInstance = new KenarApiClient.PaymentApi();
 let opts = {
   'amountRials': "amountRials_example", // String | کل مبلغ پرداختی توسط کاربر، به ریال
   'profitRials': "profitRials_example", // String | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
-  'services': ["null"], // [String] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
+  'services': ["null"], // [String] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
   'referenceId': "referenceId_example" // String | شناسه مرجع فاکتور یا تراکنش
 };
 apiInstance.paymentSubmitUserPayment(opts).then((data) => {
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **amountRials** | **String**| کل مبلغ پرداختی توسط کاربر، به ریال | [optional] 
  **profitRials** | **String**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال | [optional] 
- **services** | [**[String]**](String.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) | [optional] 
+ **services** | [**[String]**](String.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود. | [optional] 
  **referenceId** | **String**| شناسه مرجع فاکتور یا تراکنش | [optional] 
 
 ### Return type
