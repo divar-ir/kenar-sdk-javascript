@@ -48,6 +48,16 @@
   }
 
   describe('PostApi', function() {
+    describe('postCanUserSubmitPost', function() {
+      it('should call postCanUserSubmitPost successfully', function(done) {
+        //uncomment below and update the code to test postCanUserSubmitPost
+        //instance.postCanUserSubmitPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('postEditPost', function() {
       it('should call postEditPost successfully', function(done) {
         //uncomment below and update the code to test postEditPost

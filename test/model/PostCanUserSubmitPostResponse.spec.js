@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.AddonsGetUserAddonsResponse();
+    instance = new KenarApiClient.PostCanUserSubmitPostResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('AddonsGetUserAddonsResponse', function() {
-    it('should create an instance of AddonsGetUserAddonsResponse', function() {
-      // uncomment below and update the code to test AddonsGetUserAddonsResponse
-      //var instance = new KenarApiClient.AddonsGetUserAddonsResponse();
-      //expect(instance).to.be.a(KenarApiClient.AddonsGetUserAddonsResponse);
+  describe('PostCanUserSubmitPostResponse', function() {
+    it('should create an instance of PostCanUserSubmitPostResponse', function() {
+      // uncomment below and update the code to test PostCanUserSubmitPostResponse
+      //var instance = new KenarApiClient.PostCanUserSubmitPostResponse();
+      //expect(instance).to.be.a(KenarApiClient.PostCanUserSubmitPostResponse);
     });
 
-    it('should have the property userAddons (base name: "user_addons")', function() {
-      // uncomment below and update the code to test the property userAddons
-      //var instance = new KenarApiClient.AddonsGetUserAddonsResponse();
+    it('should have the property canSubmit (base name: "can_submit")', function() {
+      // uncomment below and update the code to test the property canSubmit
+      //var instance = new KenarApiClient.PostCanUserSubmitPostResponse();
       //expect(instance).to.be();
     });
 

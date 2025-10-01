@@ -48,8 +48,8 @@ class AddonsGetUserAddonsResponse {
         if (data) {
             obj = obj || new AddonsGetUserAddonsResponse();
 
-            if (data.hasOwnProperty('addons')) {
-                obj['addons'] = ApiClient.convertToType(data['addons'], [AddonsUserAddon]);
+            if (data.hasOwnProperty('user_addons')) {
+                obj['user_addons'] = ApiClient.convertToType(data['user_addons'], [AddonsUserAddon]);
             }
         }
         return obj;
@@ -61,13 +61,13 @@ class AddonsGetUserAddonsResponse {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AddonsGetUserAddonsResponse</code>.
      */
     static validateJSON(data) {
-        if (data['addons']) { // data not null
+        if (data['user_addons']) { // data not null
             // ensure the json data is an array
-            if (!Array.isArray(data['addons'])) {
-                throw new Error("Expected the field `addons` to be an array in the JSON data but got " + data['addons']);
+            if (!Array.isArray(data['user_addons'])) {
+                throw new Error("Expected the field `user_addons` to be an array in the JSON data but got " + data['user_addons']);
             }
-            // validate the optional field `addons` (array)
-            for (const item of data['addons']) {
+            // validate the optional field `user_addons` (array)
+            for (const item of data['user_addons']) {
                 AddonsUserAddon.validateJSON(item);
             };
         }
@@ -78,15 +78,15 @@ class AddonsGetUserAddonsResponse {
 /**
      * @return {Array.<module:model/AddonsUserAddon>}
      */
-    getAddons() {
-        return this.addons;
+    getUserAddons() {
+        return this.user_addons;
     }
 
     /**
-     * @param {Array.<module:model/AddonsUserAddon>} addons
+     * @param {Array.<module:model/AddonsUserAddon>} userAddons
      */
-    setAddons(addons) {
-        this['addons'] = addons;
+    setUserAddons(userAddons) {
+        this['user_addons'] = userAddons;
     }
 
 }
@@ -94,9 +94,9 @@ class AddonsGetUserAddonsResponse {
 
 
 /**
- * @member {Array.<module:model/AddonsUserAddon>} addons
+ * @member {Array.<module:model/AddonsUserAddon>} user_addons
  */
-AddonsGetUserAddonsResponse.prototype['addons'] = undefined;
+AddonsGetUserAddonsResponse.prototype['user_addons'] = undefined;
 
 
 

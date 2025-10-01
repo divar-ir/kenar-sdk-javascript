@@ -4,6 +4,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**postCanUserSubmitPost**](PostApi.md#postCanUserSubmitPost) | **GET** /experimental/open-platform/user-posts/can-submit | Check if user can submit post
 [**postEditPost**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 [**postGetImageUploadURL**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 [**postGetPostStats**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
@@ -11,6 +12,52 @@ Method | HTTP request | Description
 [**postSubmitPostV2**](PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
 [**postSubmitUserPost**](PostApi.md#postSubmitUserPost) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 
+
+
+## postCanUserSubmitPost
+
+> PostCanUserSubmitPostResponse postCanUserSubmitPost()
+
+Check if user can submit post
+
+This API allows you to check if a user can submit a post.This API expects the user&#39;s access token in the request headers with the &#x60;SUBMIT_USER_POST&#x60; OAuth scope.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.PostApi();
+apiInstance.postCanUserSubmitPost().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PostCanUserSubmitPostResponse**](PostCanUserSubmitPostResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## postEditPost

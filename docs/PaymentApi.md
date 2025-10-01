@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 ## paymentSubmitUserPayment
 
-> Object paymentSubmitUserPayment(opts)
+> Object paymentSubmitUserPayment(paymentSubmitUserPaymentRequest)
 
 ثبت پرداخت کاربر
 
@@ -438,13 +438,8 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.PaymentApi();
-let opts = {
-  'amountRials': "amountRials_example", // String | کل مبلغ پرداختی توسط کاربر، به ریال
-  'profitRials': "profitRials_example", // String | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
-  'services': ["null"], // [String] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
-  'referenceId': "referenceId_example" // String | شناسه مرجع فاکتور یا تراکنش
-};
-apiInstance.paymentSubmitUserPayment(opts).then((data) => {
+let paymentSubmitUserPaymentRequest = new KenarApiClient.PaymentSubmitUserPaymentRequest(); // PaymentSubmitUserPaymentRequest | 
+apiInstance.paymentSubmitUserPayment(paymentSubmitUserPaymentRequest).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -457,10 +452,7 @@ apiInstance.paymentSubmitUserPayment(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **amountRials** | **String**| کل مبلغ پرداختی توسط کاربر، به ریال | [optional] 
- **profitRials** | **String**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال | [optional] 
- **services** | [**[String]**](String.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود. | [optional] 
- **referenceId** | **String**| شناسه مرجع فاکتور یا تراکنش | [optional] 
+ **paymentSubmitUserPaymentRequest** | [**PaymentSubmitUserPaymentRequest**](PaymentSubmitUserPaymentRequest.md)|  | 
 
 ### Return type
 
@@ -472,6 +464,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

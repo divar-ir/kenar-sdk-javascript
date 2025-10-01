@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addons** | [**[AddonsUserAddon]**](AddonsUserAddon.md) |  | [optional] 
+**userAddons** | [**[AddonsUserAddon]**](AddonsUserAddon.md) |  | [optional] 
 
 

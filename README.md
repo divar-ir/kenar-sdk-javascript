@@ -171,6 +171,7 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PaymentApi* | [**paymentRetrieveWalletTransaction**](docs/PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
 *KenarApiClient.PaymentApi* | [**paymentSubmitUserPayment**](docs/PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
+*KenarApiClient.PostApi* | [**postCanUserSubmitPost**](docs/PostApi.md#postCanUserSubmitPost) | **GET** /experimental/open-platform/user-posts/can-submit | Check if user can submit post
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 *KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
@@ -219,6 +220,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AddonsGetBusinessAddonsResponse](docs/AddonsGetBusinessAddonsResponse.md)
  - [KenarApiClient.AddonsGetDynamicAction](docs/AddonsGetDynamicAction.md)
  - [KenarApiClient.AddonsGetPostAddonsResponse](docs/AddonsGetPostAddonsResponse.md)
+ - [KenarApiClient.AddonsGetUserAddonsResponse](docs/AddonsGetUserAddonsResponse.md)
  - [KenarApiClient.AddonsGetUserPostAddonsResponse](docs/AddonsGetUserPostAddonsResponse.md)
  - [KenarApiClient.AddonsGroupInfoRow](docs/AddonsGroupInfoRow.md)
  - [KenarApiClient.AddonsGroupInfoRowGroupInfoItem](docs/AddonsGroupInfoRowGroupInfoItem.md)
@@ -323,6 +325,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PaymentReorderPostBody](docs/PaymentReorderPostBody.md)
  - [KenarApiClient.PaymentReorderPostResponse](docs/PaymentReorderPostResponse.md)
  - [KenarApiClient.PaymentRetrieveWalletTransactionResponse](docs/PaymentRetrieveWalletTransactionResponse.md)
+ - [KenarApiClient.PaymentSubmitUserPaymentRequest](docs/PaymentSubmitUserPaymentRequest.md)
  - [KenarApiClient.PaymentTicketGenerateResponse](docs/PaymentTicketGenerateResponse.md)
  - [KenarApiClient.PaymentTicketValidateRequest](docs/PaymentTicketValidateRequest.md)
  - [KenarApiClient.PaymentTicketValidateResponse](docs/PaymentTicketValidateResponse.md)
@@ -332,6 +335,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PaymentWalletTransaction](docs/PaymentWalletTransaction.md)
  - [KenarApiClient.PaymentWalletTransactionStatus](docs/PaymentWalletTransactionStatus.md)
  - [KenarApiClient.PostApartmentSellFields](docs/PostApartmentSellFields.md)
+ - [KenarApiClient.PostCanUserSubmitPostResponse](docs/PostCanUserSubmitPostResponse.md)
  - [KenarApiClient.PostEditPostBody](docs/PostEditPostBody.md)
  - [KenarApiClient.PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [KenarApiClient.PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)

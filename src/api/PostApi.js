@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import GooglerpcStatus from '../model/GooglerpcStatus';
+import PostCanUserSubmitPostResponse from '../model/PostCanUserSubmitPostResponse';
 import PostEditPostBody from '../model/PostEditPostBody';
 import PostGetImageUploadURLResponse from '../model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from '../model/PostGetPostStatsResponse';
@@ -40,6 +41,47 @@ export default class PostApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Check if user can submit post
+     * This API allows you to check if a user can submit a post.This API expects the user's access token in the request headers with the `SUBMIT_USER_POST` OAuth scope.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostCanUserSubmitPostResponse} and HTTP response
+     */
+    postCanUserSubmitPostWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = PostCanUserSubmitPostResponse;
+      return this.apiClient.callApi(
+        '/experimental/open-platform/user-posts/can-submit', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Check if user can submit post
+     * This API allows you to check if a user can submit a post.This API expects the user's access token in the request headers with the `SUBMIT_USER_POST` OAuth scope.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostCanUserSubmitPostResponse}
+     */
+    postCanUserSubmitPost() {
+      return this.postCanUserSubmitPostWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

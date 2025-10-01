@@ -25,6 +25,7 @@ import PaymentListTransactionsResponse from '../model/PaymentListTransactionsRes
 import PaymentReorderPostBody from '../model/PaymentReorderPostBody';
 import PaymentReorderPostResponse from '../model/PaymentReorderPostResponse';
 import PaymentRetrieveWalletTransactionResponse from '../model/PaymentRetrieveWalletTransactionResponse';
+import PaymentSubmitUserPaymentRequest from '../model/PaymentSubmitUserPaymentRequest';
 
 /**
 * Payment service.
@@ -418,24 +419,19 @@ export default class PaymentApi {
     /**
      * ثبت پرداخت کاربر
      * باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
-     * @param {Object} opts Optional parameters
-     * @param {String} [amountRials] کل مبلغ پرداختی توسط کاربر، به ریال
-     * @param {String} [profitRials] بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
-     * @param {Array.<String>} [services] لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
-     * @param {String} [referenceId] شناسه مرجع فاکتور یا تراکنش
+     * @param {module:model/PaymentSubmitUserPaymentRequest} paymentSubmitUserPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    paymentSubmitUserPaymentWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = null;
+    paymentSubmitUserPaymentWithHttpInfo(paymentSubmitUserPaymentRequest) {
+      let postBody = paymentSubmitUserPaymentRequest;
+      // verify the required parameter 'paymentSubmitUserPaymentRequest' is set
+      if (paymentSubmitUserPaymentRequest === undefined || paymentSubmitUserPaymentRequest === null) {
+        throw new Error("Missing the required parameter 'paymentSubmitUserPaymentRequest' when calling paymentSubmitUserPayment");
+      }
 
       let pathParams = {
       };
       let queryParams = {
-        'amount_rials': opts['amountRials'],
-        'profit_rials': opts['profitRials'],
-        'services': this.apiClient.buildCollectionParam(opts['services'], 'multi'),
-        'reference_id': opts['referenceId']
       };
       let headerParams = {
       };
@@ -443,7 +439,7 @@ export default class PaymentApi {
       };
 
       let authNames = ['APIKey'];
-      let contentTypes = [];
+      let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
@@ -456,15 +452,11 @@ export default class PaymentApi {
     /**
      * ثبت پرداخت کاربر
      * باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.amountRials کل مبلغ پرداختی توسط کاربر، به ریال
-     * @param {String} opts.profitRials بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
-     * @param {Array.<String>} opts.services لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
-     * @param {String} opts.referenceId شناسه مرجع فاکتور یا تراکنش
+     * @param {module:model/PaymentSubmitUserPaymentRequest} paymentSubmitUserPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    paymentSubmitUserPayment(opts) {
-      return this.paymentSubmitUserPaymentWithHttpInfo(opts)
+    paymentSubmitUserPayment(paymentSubmitUserPaymentRequest) {
+      return this.paymentSubmitUserPaymentWithHttpInfo(paymentSubmitUserPaymentRequest)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -46,6 +46,7 @@ import AddonsEventRow from './model/AddonsEventRow';
 import AddonsGetBusinessAddonsResponse from './model/AddonsGetBusinessAddonsResponse';
 import AddonsGetDynamicAction from './model/AddonsGetDynamicAction';
 import AddonsGetPostAddonsResponse from './model/AddonsGetPostAddonsResponse';
+import AddonsGetUserAddonsResponse from './model/AddonsGetUserAddonsResponse';
 import AddonsGetUserPostAddonsResponse from './model/AddonsGetUserPostAddonsResponse';
 import AddonsGroupInfoRow from './model/AddonsGroupInfoRow';
 import AddonsGroupInfoRowGroupInfoItem from './model/AddonsGroupInfoRowGroupInfoItem';
@@ -150,6 +151,7 @@ import PaymentListTransactionsResponse from './model/PaymentListTransactionsResp
 import PaymentReorderPostBody from './model/PaymentReorderPostBody';
 import PaymentReorderPostResponse from './model/PaymentReorderPostResponse';
 import PaymentRetrieveWalletTransactionResponse from './model/PaymentRetrieveWalletTransactionResponse';
+import PaymentSubmitUserPaymentRequest from './model/PaymentSubmitUserPaymentRequest';
 import PaymentTicketGenerateResponse from './model/PaymentTicketGenerateResponse';
 import PaymentTicketValidateRequest from './model/PaymentTicketValidateRequest';
 import PaymentTicketValidateResponse from './model/PaymentTicketValidateResponse';
@@ -159,6 +161,7 @@ import PaymentTransactionType from './model/PaymentTransactionType';
 import PaymentWalletTransaction from './model/PaymentWalletTransaction';
 import PaymentWalletTransactionStatus from './model/PaymentWalletTransactionStatus';
 import PostApartmentSellFields from './model/PostApartmentSellFields';
+import PostCanUserSubmitPostResponse from './model/PostCanUserSubmitPostResponse';
 import PostEditPostBody from './model/PostEditPostBody';
 import PostGetImageUploadURLResponse from './model/PostGetImageUploadURLResponse';
 import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
@@ -433,6 +436,12 @@ export {
      * @property {module:model/AddonsGetPostAddonsResponse}
      */
     AddonsGetPostAddonsResponse,
+
+    /**
+     * The AddonsGetUserAddonsResponse model constructor.
+     * @property {module:model/AddonsGetUserAddonsResponse}
+     */
+    AddonsGetUserAddonsResponse,
 
     /**
      * The AddonsGetUserPostAddonsResponse model constructor.
@@ -1059,6 +1068,12 @@ export {
     PaymentRetrieveWalletTransactionResponse,
 
     /**
+     * The PaymentSubmitUserPaymentRequest model constructor.
+     * @property {module:model/PaymentSubmitUserPaymentRequest}
+     */
+    PaymentSubmitUserPaymentRequest,
+
+    /**
      * The PaymentTicketGenerateResponse model constructor.
      * @property {module:model/PaymentTicketGenerateResponse}
      */
@@ -1111,6 +1126,12 @@ export {
      * @property {module:model/PostApartmentSellFields}
      */
     PostApartmentSellFields,
+
+    /**
+     * The PostCanUserSubmitPostResponse model constructor.
+     * @property {module:model/PostCanUserSubmitPostResponse}
+     */
+    PostCanUserSubmitPostResponse,
 
     /**
      * The PostEditPostBody model constructor.
