@@ -35,7 +35,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
+let conversationId = "conversationId_example"; // String | شناسه منحصر به فرد برای مکالمه
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage(conversationId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -50,7 +50,7 @@ apiInstance.chatAPIChatBotSendMessage(conversationId, chatAPIChatBotSendMessageB
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**| Unique identifier for the conversation | 
+ **conversationId** | **String**| شناسه منحصر به فرد برای مکالمه | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -87,7 +87,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let userId = "userId_example"; // String | Unique identifier for the user to start or continue a conversation with
+let userId = "userId_example"; // String | شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage2(userId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -102,7 +102,7 @@ apiInstance.chatAPIChatBotSendMessage2(userId, chatAPIChatBotSendMessageBody).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **String**| Unique identifier for the user to start or continue a conversation with | 
+ **userId** | **String**| شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -139,7 +139,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
+let conversationId = "conversationId_example"; // String | شناسه منحصر به فرد برای مکالمه
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage3(conversationId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -154,7 +154,7 @@ apiInstance.chatAPIChatBotSendMessage3(conversationId, chatAPIChatBotSendMessage
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**| Unique identifier for the conversation | 
+ **conversationId** | **String**| شناسه منحصر به فرد برای مکالمه | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -191,7 +191,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let userId = "userId_example"; // String | Unique identifier for the user to start or continue a conversation with
+let userId = "userId_example"; // String | شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage4(userId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -206,7 +206,7 @@ apiInstance.chatAPIChatBotSendMessage4(userId, chatAPIChatBotSendMessageBody).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **String**| Unique identifier for the user to start or continue a conversation with | 
+ **userId** | **String**| شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -243,7 +243,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
+let conversationId = "conversationId_example"; // String | شناسه منحصر به فرد برای مکالمه
 let chatAPIChatBotSendMessageBody = new KenarApiClient.ChatAPIChatBotSendMessageBody(); // ChatAPIChatBotSendMessageBody | 
 apiInstance.chatAPIChatBotSendMessage5(conversationId, chatAPIChatBotSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -258,7 +258,7 @@ apiInstance.chatAPIChatBotSendMessage5(conversationId, chatAPIChatBotSendMessage
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**| Unique identifier for the conversation | 
+ **conversationId** | **String**| شناسه منحصر به فرد برای مکالمه | 
  **chatAPIChatBotSendMessageBody** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -295,7 +295,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
+let conversationId = "conversationId_example"; // String | شناسه منحصر به فرد برای مکالمه
 let chatAPIConversationSendMessageBody = new KenarApiClient.ChatAPIConversationSendMessageBody(); // ChatAPIConversationSendMessageBody | 
 apiInstance.chatAPIConversationSendMessage(conversationId, chatAPIConversationSendMessageBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -310,7 +310,7 @@ apiInstance.chatAPIConversationSendMessage(conversationId, chatAPIConversationSe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**| Unique identifier for the conversation | 
+ **conversationId** | **String**| شناسه منحصر به فرد برای مکالمه | 
  **chatAPIConversationSendMessageBody** | [**ChatAPIConversationSendMessageBody**](ChatAPIConversationSendMessageBody.md)|  | 
 
 ### Return type
@@ -397,7 +397,7 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.ChatAPIApi();
-let conversationId = "conversationId_example"; // String | Unique identifier for the conversation
+let conversationId = "conversationId_example"; // String | شناسه منحصر به فرد برای مکالمه
 apiInstance.chatAPIGetConversation(conversationId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -411,7 +411,7 @@ apiInstance.chatAPIGetConversation(conversationId).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversationId** | **String**| Unique identifier for the conversation | 
+ **conversationId** | **String**| شناسه منحصر به فرد برای مکالمه | 
 
 ### Return type
 

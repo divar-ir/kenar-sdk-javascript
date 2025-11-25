@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**textMessage** | **String** | Text message content to be sent by the bot | 
+**textMessage** | **String** | محتوای پیام متنی برای ارسال توسط ربات | 
 **buttons** | [**ChatapiChatButtonGrid**](ChatapiChatButtonGrid.md) |  | [optional] 
-**mediaToken** | **String** | Token for attached media (if any) | [optional] 
-**userId** | **String** | Unique identifier for the user to start or continue a conversation with | [optional] 
+**mediaToken** | **String** | توکن برای مدیای ضمیمه شده (در صورت وجود) | [optional] 
+**userId** | **String** | شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه | [optional] 
 
 

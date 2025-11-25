@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**finderGetPost**](FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 [**finderGetUser**](FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 [**finderGetUser2**](FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
+[**finderGetUserIDByPhone**](FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه دیوار کاربر با شماره تلفن
 [**finderGetUserPosts**](FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 [**finderSearchPostV2**](FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
 
@@ -18,7 +19,7 @@ Method | HTTP request | Description
 
 دریافت آگهی دیوار
 
-This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
+این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد. می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید
 
 ### Example
 
@@ -155,6 +156,56 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## finderGetUserIDByPhone
+
+> FinderGetUserIDByPhoneResponse finderGetUserIDByPhone(finderGetUserIDByPhoneRequest)
+
+دریافت شناسه دیوار کاربر با شماره تلفن
+
+با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+
+let apiInstance = new KenarApiClient.FinderApi();
+let finderGetUserIDByPhoneRequest = new KenarApiClient.FinderGetUserIDByPhoneRequest(); // FinderGetUserIDByPhoneRequest | 
+apiInstance.finderGetUserIDByPhone(finderGetUserIDByPhoneRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **finderGetUserIDByPhoneRequest** | [**FinderGetUserIDByPhoneRequest**](FinderGetUserIDByPhoneRequest.md)|  | 
+
+### Return type
+
+[**FinderGetUserIDByPhoneResponse**](FinderGetUserIDByPhoneResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

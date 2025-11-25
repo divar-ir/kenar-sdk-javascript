@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**postToken** | **String** | Token of the post to open | 
+**postToken** | **String** | توکن آگهی برای باز کردن | 
 
 

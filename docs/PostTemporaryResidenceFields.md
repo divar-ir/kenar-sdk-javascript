@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 **priceWeekends** | **String** | قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان | 
 **regularPersonCapacity** | **Number** | ظرفیت استاندارد افراد در اقامتگاه | 
 **roomsCount** | [**PostRoomsCount**](PostRoomsCount.md) |  | 
-**checkInTime** | **String** | Check-in time | [optional] 
-**checkOutTime** | **String** | Check-out time | [optional] 
+**checkInTime** | **String** | زمان ورود | [optional] 
+**checkOutTime** | **String** | زمان خروج | [optional] 
 **comfortAmenities** | [**[TemporaryResidenceFieldsComfortAmenity]**](TemporaryResidenceFieldsComfortAmenity.md) |  | [optional] 
-**damageDeposit** | **String** | Damage deposit amount in Toman | [optional] 
-**fullyFurnished** | **Boolean** | Whether the residence is fully furnished | [optional] 
+**damageDeposit** | **String** | مبلغ ودیعه خسارت به تومان | [optional] 
+**fullyFurnished** | **Boolean** | آیا اقامتگاه کاملاً مبله است | [optional] 
 **heatingCoolingSystem** | [**[TemporaryResidenceFieldsHeatingCoolingSystem]**](TemporaryResidenceFieldsHeatingCoolingSystem.md) |  | [optional] 
-**houseRules** | **String** | House rules and regulations | [optional] 
-**minimumStay** | **Number** | Minimum number of days required for stay | [optional] 
+**houseRules** | **String** | قوانین و مقررات خانه | [optional] 
+**minimumStay** | **Number** | حداقل تعداد روزهای مورد نیاز برای اقامت | [optional] 
 **petsAllowed** | [**TemporaryResidenceFieldsPetsAllowed**](TemporaryResidenceFieldsPetsAllowed.md) |  | [optional] 
 **rentalPeriod** | [**TemporaryResidenceFieldsRentalPeriod**](TemporaryResidenceFieldsRentalPeriod.md) |  | [optional] 
 

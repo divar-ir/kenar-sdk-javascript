@@ -155,26 +155,37 @@ Class | Method | HTTP request | Description
 *KenarApiClient.ChatAPIApi* | [**chatAPIGenerateUploadToken**](docs/ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 *KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
 *KenarApiClient.EventsApi* | [**eventsRegisterEventSubscription**](docs/EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
-*KenarApiClient.EventsApi* | [**eventsSendEvent**](docs/EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | Send an event to a user
+*KenarApiClient.EventsApi* | [**eventsSendEvent**](docs/EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر با استفاده از API
 *KenarApiClient.FinderApi* | [**finderGetPost**](docs/FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 *KenarApiClient.FinderApi* | [**finderGetUser**](docs/FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 *KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
+*KenarApiClient.FinderApi* | [**finderGetUserIDByPhone**](docs/FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه دیوار کاربر با شماره تلفن
 *KenarApiClient.FinderApi* | [**finderGetUserPosts**](docs/FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 *KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
-*KenarApiClient.PaymentApi* | [**paymentCommitWalletTransaction**](docs/PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
-*KenarApiClient.PaymentApi* | [**paymentCreateWalletPayment**](docs/PaymentApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | 
-*KenarApiClient.PaymentApi* | [**paymentGetBalance**](docs/PaymentApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | 
+*KenarApiClient.PaymentApi* | [**paymentCommitWalletTransaction**](docs/PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
+*KenarApiClient.PaymentApi* | [**paymentCreateWalletPayment**](docs/PaymentApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
+*KenarApiClient.PaymentApi* | [**paymentGetBalance**](docs/PaymentApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
 *KenarApiClient.PaymentApi* | [**paymentGetPostPricing**](docs/PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
-*KenarApiClient.PaymentApi* | [**paymentGetTransaction**](docs/PaymentApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | 
-*KenarApiClient.PaymentApi* | [**paymentListTransactions**](docs/PaymentApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | 
-*KenarApiClient.PaymentApi* | [**paymentReorderPost**](docs/PaymentApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
-*KenarApiClient.PaymentApi* | [**paymentRetrieveWalletTransaction**](docs/PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
+*KenarApiClient.PaymentApi* | [**paymentGetTransaction**](docs/PaymentApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
+*KenarApiClient.PaymentApi* | [**paymentListTransactions**](docs/PaymentApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
+*KenarApiClient.PaymentApi* | [**paymentPublishUserPost**](docs/PaymentApi.md#paymentPublishUserPost) | **POST** /experimental/open-platform/post/{post_token}/publish | پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+*KenarApiClient.PaymentApi* | [**paymentRenewPost**](docs/PaymentApi.md#paymentRenewPost) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
+*KenarApiClient.PaymentApi* | [**paymentReorderPost**](docs/PaymentApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
+*KenarApiClient.PaymentApi* | [**paymentRetrieveWalletTransaction**](docs/PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
 *KenarApiClient.PaymentApi* | [**paymentSubmitUserPayment**](docs/PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
-*KenarApiClient.PostApi* | [**postCanUserSubmitPost**](docs/PostApi.md#postCanUserSubmitPost) | **GET** /experimental/open-platform/user-posts/can-submit | Check if user can submit post
+*KenarApiClient.PostApi* | [**postCanUserSubmitPost**](docs/PostApi.md#postCanUserSubmitPost) | **GET** /experimental/open-platform/user-posts/can-submit | بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
+*KenarApiClient.PostApi* | [**postCreateBusinessCustomizedButton**](docs/PostApi.md#postCreateBusinessCustomizedButton) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
+*KenarApiClient.PostApi* | [**postDeleteBusinessCustomizedButton**](docs/PostApi.md#postDeleteBusinessCustomizedButton) | **DELETE** /experimental/open-platform/business/{business_token}/customized-button | حذف دکمه اختصاصی از آگهی‌های کسب‌و‌کار
+*KenarApiClient.PostApi* | [**postDeletePostCustomizedButton**](docs/PostApi.md#postDeletePostCustomizedButton) | **DELETE** /experimental/open-platform/posts/{post_token}/customized-button | حذف دکمه اختصاصی از آگهی
+*KenarApiClient.PostApi* | [**postDeleteUserPost**](docs/PostApi.md#postDeleteUserPost) | **DELETE** /v1/open-platform/post/{post_token} | حذف آگهی
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
-*KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
+*KenarApiClient.PostApi* | [**postEditPostV2**](docs/PostApi.md#postEditPostV2) | **PUT** /v2/open-platform/post/{post_token} | ویرایش آگهی با پشتیبانی از فیلد ماسک
+*KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت آدرس اپلود تصاویر آگهی (منسوخ شده)
 *KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
+*KenarApiClient.PostApi* | [**postGetUploadURLsV2**](docs/PostApi.md#postGetUploadURLsV2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود برای تصاویر و ویدیو‌ی آگهی‌ها
+*KenarApiClient.PostApi* | [**postGetUserPost**](docs/PostApi.md#postGetUserPost) | **GET** /v1/open-platform/user-post/{token} | دریافت آگهی با توکن
+*KenarApiClient.PostApi* | [**postSetPostCustomizedButton**](docs/PostApi.md#postSetPostCustomizedButton) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی بر روی آگهی ثبت شده
 *KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
 *KenarApiClient.PostApi* | [**postSubmitPostV2**](docs/PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
 *KenarApiClient.PostApi* | [**postSubmitUserPost**](docs/PostApi.md#postSubmitUserPost) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
@@ -279,11 +290,14 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.ChatapiMessageType](docs/ChatapiMessageType.md)
  - [KenarApiClient.DivarIconsIconName](docs/DivarIconsIconName.md)
  - [KenarApiClient.EventsEventButton](docs/EventsEventButton.md)
+ - [KenarApiClient.EventsEventButtonList](docs/EventsEventButtonList.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequestEventType](docs/EventsRegisterEventSubscriptionRequestEventType.md)
  - [KenarApiClient.FinderGetAllDevelopmentPostsResponse](docs/FinderGetAllDevelopmentPostsResponse.md)
  - [KenarApiClient.FinderGetPostResponse](docs/FinderGetPostResponse.md)
  - [KenarApiClient.FinderGetPostResponseBusinessData](docs/FinderGetPostResponseBusinessData.md)
+ - [KenarApiClient.FinderGetUserIDByPhoneRequest](docs/FinderGetUserIDByPhoneRequest.md)
+ - [KenarApiClient.FinderGetUserIDByPhoneResponse](docs/FinderGetUserIDByPhoneResponse.md)
  - [KenarApiClient.FinderGetUserPostsResponse](docs/FinderGetUserPostsResponse.md)
  - [KenarApiClient.FinderGetUserPostsResponsePost](docs/FinderGetUserPostsResponsePost.md)
  - [KenarApiClient.FinderPostExtState](docs/FinderPostExtState.md)
@@ -293,11 +307,13 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.FinderSearchQuery](docs/FinderSearchQuery.md)
  - [KenarApiClient.FinderSearchQueryNumberRange](docs/FinderSearchQueryNumberRange.md)
  - [KenarApiClient.FinderUser](docs/FinderUser.md)
+ - [KenarApiClient.GetPostPricingResponseRenew](docs/GetPostPricingResponseRenew.md)
  - [KenarApiClient.GetPostPricingResponseReorder](docs/GetPostPricingResponseReorder.md)
  - [KenarApiClient.GetPostPricingResponseSubmit](docs/GetPostPricingResponseSubmit.md)
  - [KenarApiClient.GetPostStatsResponseDailyStats](docs/GetPostStatsResponseDailyStats.md)
  - [KenarApiClient.GetPostStatsResponsePostStats](docs/GetPostStatsResponsePostStats.md)
  - [KenarApiClient.GetServiceTypesResponseServiceTypeData](docs/GetServiceTypesResponseServiceTypeData.md)
+ - [KenarApiClient.GetUploadURLsV2ResponseUploadFormat](docs/GetUploadURLsV2ResponseUploadFormat.md)
  - [KenarApiClient.GooglerpcStatus](docs/GooglerpcStatus.md)
  - [KenarApiClient.HomePresellFieldsConstructionPhase](docs/HomePresellFieldsConstructionPhase.md)
  - [KenarApiClient.HomePresellFieldsDeliveryMonth](docs/HomePresellFieldsDeliveryMonth.md)
@@ -313,6 +329,8 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.MessageVideoData](docs/MessageVideoData.md)
  - [KenarApiClient.MessageVoiceData](docs/MessageVoiceData.md)
  - [KenarApiClient.OAuthScopeScope](docs/OAuthScopeScope.md)
+ - [KenarApiClient.OpenPlatformpostHTTPMethod](docs/OpenPlatformpostHTTPMethod.md)
+ - [KenarApiClient.OpenPlatformpostPostState](docs/OpenPlatformpostPostState.md)
  - [KenarApiClient.OpenPlatformpostServicesFields](docs/OpenPlatformpostServicesFields.md)
  - [KenarApiClient.PaymentCommitWalletTransactionRequest](docs/PaymentCommitWalletTransactionRequest.md)
  - [KenarApiClient.PaymentCommitWalletTransactionResponse](docs/PaymentCommitWalletTransactionResponse.md)
@@ -322,6 +340,10 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PaymentGetPostPricingResponse](docs/PaymentGetPostPricingResponse.md)
  - [KenarApiClient.PaymentGetTransactionResponse](docs/PaymentGetTransactionResponse.md)
  - [KenarApiClient.PaymentListTransactionsResponse](docs/PaymentListTransactionsResponse.md)
+ - [KenarApiClient.PaymentPublishUserPostBody](docs/PaymentPublishUserPostBody.md)
+ - [KenarApiClient.PaymentPublishUserPostResponse](docs/PaymentPublishUserPostResponse.md)
+ - [KenarApiClient.PaymentRenewPostBody](docs/PaymentRenewPostBody.md)
+ - [KenarApiClient.PaymentRenewPostResponse](docs/PaymentRenewPostResponse.md)
  - [KenarApiClient.PaymentReorderPostBody](docs/PaymentReorderPostBody.md)
  - [KenarApiClient.PaymentReorderPostResponse](docs/PaymentReorderPostResponse.md)
  - [KenarApiClient.PaymentRetrieveWalletTransactionResponse](docs/PaymentRetrieveWalletTransactionResponse.md)
@@ -336,14 +358,23 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PaymentWalletTransactionStatus](docs/PaymentWalletTransactionStatus.md)
  - [KenarApiClient.PostApartmentSellFields](docs/PostApartmentSellFields.md)
  - [KenarApiClient.PostCanUserSubmitPostResponse](docs/PostCanUserSubmitPostResponse.md)
+ - [KenarApiClient.PostCreateBusinessCustomizedButtonBody](docs/PostCreateBusinessCustomizedButtonBody.md)
+ - [KenarApiClient.PostCustomizedButton](docs/PostCustomizedButton.md)
+ - [KenarApiClient.PostCustomizedButtonType](docs/PostCustomizedButtonType.md)
  - [KenarApiClient.PostEditPostBody](docs/PostEditPostBody.md)
+ - [KenarApiClient.PostEditPostV2Body](docs/PostEditPostV2Body.md)
+ - [KenarApiClient.PostGeneralDataPostVideo](docs/PostGeneralDataPostVideo.md)
+ - [KenarApiClient.PostGetBusinessCustomizedButtonResponse](docs/PostGetBusinessCustomizedButtonResponse.md)
  - [KenarApiClient.PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [KenarApiClient.PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
+ - [KenarApiClient.PostGetUploadURLsV2Response](docs/PostGetUploadURLsV2Response.md)
+ - [KenarApiClient.PostGetUserPostResponse](docs/PostGetUserPostResponse.md)
+ - [KenarApiClient.PostGetUserPostResponseBusinessData](docs/PostGetUserPostResponseBusinessData.md)
  - [KenarApiClient.PostHomePresellFields](docs/PostHomePresellFields.md)
  - [KenarApiClient.PostLocationType](docs/PostLocationType.md)
+ - [KenarApiClient.PostPostGeneralData](docs/PostPostGeneralData.md)
  - [KenarApiClient.PostRoomsCount](docs/PostRoomsCount.md)
- - [KenarApiClient.PostServicesFieldsCategory](docs/PostServicesFieldsCategory.md)
- - [KenarApiClient.PostSubmitPostGeneralData](docs/PostSubmitPostGeneralData.md)
+ - [KenarApiClient.PostSetPostCustomizedButtonBody](docs/PostSetPostCustomizedButtonBody.md)
  - [KenarApiClient.PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
  - [KenarApiClient.PostSubmitPostResponse](docs/PostSubmitPostResponse.md)
  - [KenarApiClient.PostSubmitPostV2Request](docs/PostSubmitPostV2Request.md)
@@ -360,6 +391,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
  - [KenarApiClient.SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
  - [KenarApiClient.SendEventRequestTargetType](docs/SendEventRequestTargetType.md)
+ - [KenarApiClient.ServicesFieldsCategory](docs/ServicesFieldsCategory.md)
  - [KenarApiClient.TemporaryResidenceFieldsComfortAmenity](docs/TemporaryResidenceFieldsComfortAmenity.md)
  - [KenarApiClient.TemporaryResidenceFieldsHeatingCoolingSystem](docs/TemporaryResidenceFieldsHeatingCoolingSystem.md)
  - [KenarApiClient.TemporaryResidenceFieldsPetsAllowed](docs/TemporaryResidenceFieldsPetsAllowed.md)
@@ -385,6 +417,7 @@ Authentication schemes defined for the API:
 - **Authorization URL**: oauth.divar.ir/oauth2/auth
 - **Scopes**: 
   - BUSINESS_ADDON_CREATE.resource_id: BUSINESS_ADDON_CREATE.resource_id
+  - BUSINESS_CREATE_CUSTOMIZED_BUTTON.resource_id: BUSINESS_CREATE_CUSTOMIZED_BUTTON.resource_id
   - CHAT_BOT_USER_MESSAGE_SEND: CHAT_BOT_USER_MESSAGE_SEND
   - CHAT_CONVERSATION_READ.resource_id: CHAT_CONVERSATION_READ.resource_id
   - CHAT_MESSAGE_SEND.resource_id: CHAT_MESSAGE_SEND.resource_id
@@ -393,20 +426,29 @@ Authentication schemes defined for the API:
   - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND: CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND
   - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ: CHAT_SUPPLIER_ALL_CONVERSATIONS_READ
   - CONVERSATION_SEND_MESSAGE.resource_id: CONVERSATION_SEND_MESSAGE.resource_id
+  - CREATE_WALLET_PAYMENT: CREATE_WALLET_PAYMENT
+  - DELETE_USER_POST: DELETE_USER_POST
+  - EDIT_USER_POST: EDIT_USER_POST
   - MANAGEMENT_APPS_READ.resource_id: MANAGEMENT_APPS_READ.resource_id
   - MANAGEMENT_APPS_WRITE.resource_id: MANAGEMENT_APPS_WRITE.resource_id
   - NOTIFICATION_ACCESS_REVOCATION: NOTIFICATION_ACCESS_REVOCATION
   - PAYMENT_ALL_POSTS_PRICING_READ: PAYMENT_ALL_POSTS_PRICING_READ
+  - PAYMENT_ALL_POSTS_RENEW: PAYMENT_ALL_POSTS_RENEW
   - PAYMENT_ALL_POSTS_REORDER: PAYMENT_ALL_POSTS_REORDER
   - POST_ADDON_CREATE.resource_id: POST_ADDON_CREATE.resource_id
   - POST_EDIT.resource_id: POST_EDIT.resource_id
   - POST_ONGOING_IMAGES_GET.resource_id: POST_ONGOING_IMAGES_GET.resource_id
   - POST_SEMANTIC_CREATE.resource_id: POST_SEMANTIC_CREATE.resource_id
+  - SEND_EVENT: SEND_EVENT
+  - SUBMIT_USER_PAYMENT: SUBMIT_USER_PAYMENT
+  - SUBMIT_USER_POST: SUBMIT_USER_POST
   - USER_ADDON_CREATE: USER_ADDON_CREATE
   - USER_ID: USER_ID
   - USER_PHONE: USER_PHONE
   - USER_POSTS_ADDON_CREATE: USER_POSTS_ADDON_CREATE
   - USER_POSTS_GET: USER_POSTS_GET
+  - USER_POSTS_STATS_READ: USER_POSTS_STATS_READ
+  - USER_SET_CUSTOMIZED_BUTTON: USER_SET_CUSTOMIZED_BUTTON
   - USER_VERIFICATION_CREATE: USER_VERIFICATION_CREATE
   - offline_access: offline_access
   - openid: openid

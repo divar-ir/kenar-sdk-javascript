@@ -5,7 +5,7 @@ All URIs are relative to *https://open-api.divar.ir*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**eventsRegisterEventSubscription**](EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
-[**eventsSendEvent**](EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | Send an event to a user
+[**eventsSendEvent**](EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر با استفاده از API
 
 
 
@@ -61,11 +61,11 @@ Name | Type | Description  | Notes
 
 ## eventsSendEvent
 
-> Object eventsSendEvent(primaryButtonActionOpenPostPagePostToken, primaryButtonActionOpenPostManagePagePostToken, opts)
+> Object eventsSendEvent(opts)
 
-Send an event to a user
+ارسال رویداد به کاربر با استفاده از API
 
-Using this API, you can send an event to a user. The event can be specific to a post or general. The event can include buttons with custom actions allowing users to interact with your app.
+با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.
 
 ### Example
 
@@ -79,18 +79,12 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.EventsApi();
-let primaryButtonActionOpenPostPagePostToken = "primaryButtonActionOpenPostPagePostToken_example"; // String | Token of the post to open
-let primaryButtonActionOpenPostManagePagePostToken = "primaryButtonActionOpenPostManagePagePostToken_example"; // String | Token of the post to redirect to its management page
 let opts = {
-  'message': "message_example", // String | The event message to display to the user
-  'primaryButtonTitle': "primaryButtonTitle_example", // String | The text to display on the button
-  'primaryButtonActionOpenDirectLink': "primaryButtonActionOpenDirectLink_example", // String | An action to send user to your URL directly with just a resource id (if applicable)
-  'primaryButtonActionOpenServerLinkData': {key: null}, // Object | A data that you can set and will be returned to you upon user click to recognize the action
-  'primaryButtonActionGetDynamicActionData': {key: null}, // Object | A data that you can set and will be returned to you upon user click to recognize the action
-  'targetType': "targetType_example", // String | Target of the event; USER or POST
-  'targetResourceId': "targetResourceId_example" // String | id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. 
+  'message': "message_example", // String | پیام رویداد برای نمایش به کاربر
+  'targetType': "targetType_example", // String | هدف رویداد؛ USER یا POST
+  'targetResourceId': "targetResourceId_example" // String | شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.
 };
-apiInstance.eventsSendEvent(primaryButtonActionOpenPostPagePostToken, primaryButtonActionOpenPostManagePagePostToken, opts).then((data) => {
+apiInstance.eventsSendEvent(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -103,15 +97,9 @@ apiInstance.eventsSendEvent(primaryButtonActionOpenPostPagePostToken, primaryBut
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **primaryButtonActionOpenPostPagePostToken** | **String**| Token of the post to open | 
- **primaryButtonActionOpenPostManagePagePostToken** | **String**| Token of the post to redirect to its management page | 
- **message** | **String**| The event message to display to the user | [optional] 
- **primaryButtonTitle** | **String**| The text to display on the button | [optional] 
- **primaryButtonActionOpenDirectLink** | **String**| An action to send user to your URL directly with just a resource id (if applicable) | [optional] 
- **primaryButtonActionOpenServerLinkData** | [**Object**](.md)| A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
- **primaryButtonActionGetDynamicActionData** | [**Object**](.md)| A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
- **targetType** | **String**| Target of the event; USER or POST | [optional] 
- **targetResourceId** | **String**| id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token.  | [optional] 
+ **message** | **String**| پیام رویداد برای نمایش به کاربر | [optional] 
+ **targetType** | **String**| هدف رویداد؛ USER یا POST | [optional] 
+ **targetResourceId** | **String**| شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد. | [optional] 
 
 ### Return type
 

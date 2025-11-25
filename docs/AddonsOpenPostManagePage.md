@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**postToken** | **String** | Token of the post to redirect to its management page | 
+**postToken** | **String** | توکن آگهی برای هدایت به صفحه مدیریت آن | 
 
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **Object** | A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
+**data** | **Object** | داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود | [optional] 
 
 
