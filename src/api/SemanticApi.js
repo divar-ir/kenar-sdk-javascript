@@ -40,7 +40,7 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی آگهی
-     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد. 
+     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
      * @param {String} token 
      * @param {module:model/SemanticCreatePostSemanticBody} semanticCreatePostSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -79,7 +79,7 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی آگهی
-     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد. 
+     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
      * @param {String} token 
      * @param {module:model/SemanticCreatePostSemanticBody} semanticCreatePostSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -94,7 +94,7 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
      * @param {String} phone 
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SemanticCreateUserSemanticResponse} and HTTP response
@@ -133,7 +133,7 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
      * @param {String} phone 
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SemanticCreateUserSemanticResponse}
@@ -202,7 +202,7 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {String} [divarUserId] 
@@ -240,7 +240,7 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {String} opts.divarUserId 

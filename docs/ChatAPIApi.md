@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ارسال پیام به مکالمه ChatBot
 
-می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.  مجوزهای مورد نیاز: CHAT_BOT_SEND_MESSAGE.
 
 ### Example
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ارسال پیام به مکالمه
 
-این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
+این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token}   مجوزهای مورد نیاز: CHAT_SEND_MESSAGE_OAUTH.
 
 ### Example
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 تولید توکن آپلود
 
-این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
+این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.  مجوزهای مورد نیاز: CHAT_UPLOAD_MEDIA.
 
 ### Example
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 دریافت مکالمه با شناسه آن
 
-این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه &#x60;CHAT_CONVERSATION_READ&#x60; را انتظار دارد.
+این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه &#x60;CHAT_CONVERSATION_READ&#x60; را انتظار دارد.  مجوزهای مورد نیاز: CHAT_READ_CONVERSATION.
 
 ### Example
 

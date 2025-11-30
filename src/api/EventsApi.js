@@ -38,7 +38,7 @@ export default class EventsApi {
 
     /**
      * اشتراک در رویداد
-     * این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).
+     * این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).  مجوزهای مورد نیاز: EVENTS_REGISTER_SUBSCRIPTION.
      * @param {module:model/EventsRegisterEventSubscriptionRequest} eventsRegisterEventSubscriptionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -71,7 +71,7 @@ export default class EventsApi {
 
     /**
      * اشتراک در رویداد
-     * این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).
+     * این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).  مجوزهای مورد نیاز: EVENTS_REGISTER_SUBSCRIPTION.
      * @param {module:model/EventsRegisterEventSubscriptionRequest} eventsRegisterEventSubscriptionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -85,7 +85,7 @@ export default class EventsApi {
 
     /**
      * ارسال رویداد به کاربر با استفاده از API
-     * با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.
+     * با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.  مجوزهای مورد نیاز: EVENTS_SEND.
      * @param {Object} opts Optional parameters
      * @param {String} [message] پیام رویداد برای نمایش به کاربر
      * @param {module:model/String} [targetType] هدف رویداد؛ USER یا POST
@@ -121,7 +121,7 @@ export default class EventsApi {
 
     /**
      * ارسال رویداد به کاربر با استفاده از API
-     * با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.
+     * با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.  مجوزهای مورد نیاز: EVENTS_SEND.
      * @param {Object} opts Optional parameters
      * @param {String} opts.message پیام رویداد برای نمایش به کاربر
      * @param {module:model/String} opts.targetType هدف رویداد؛ USER یا POST

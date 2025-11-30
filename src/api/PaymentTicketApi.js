@@ -39,7 +39,7 @@ export default class PaymentTicketApi {
 
     /**
      * اعتبارسنجی بلیط پرداخت
-     * بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
+     * بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.  مجوزهای مورد نیاز: PAYMENT_TICKET_VALIDATE.
      * @param {module:model/PaymentTicketValidateRequest} paymentTicketValidateRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentTicketValidateResponse} and HTTP response
      */
@@ -72,7 +72,7 @@ export default class PaymentTicketApi {
 
     /**
      * اعتبارسنجی بلیط پرداخت
-     * بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
+     * بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.  مجوزهای مورد نیاز: PAYMENT_TICKET_VALIDATE.
      * @param {module:model/PaymentTicketValidateRequest} paymentTicketValidateRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentTicketValidateResponse}
      */

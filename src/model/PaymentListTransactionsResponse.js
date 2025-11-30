@@ -98,7 +98,7 @@ class PaymentListTransactionsResponse {
         this['next_page_token'] = nextPageToken;
     }
 /**
-     * Returns شناسه مرجع فاکتور یا تراکنش
+     * Returns فهرست تراکنش‌هایی که با درخواست مطابقت دارند
      * @return {Array.<module:model/PaymentTransaction>}
      */
     getTransactions() {
@@ -106,8 +106,8 @@ class PaymentListTransactionsResponse {
     }
 
     /**
-     * Sets شناسه مرجع فاکتور یا تراکنش
-     * @param {Array.<module:model/PaymentTransaction>} transactions شناسه مرجع فاکتور یا تراکنش
+     * Sets فهرست تراکنش‌هایی که با درخواست مطابقت دارند
+     * @param {Array.<module:model/PaymentTransaction>} transactions فهرست تراکنش‌هایی که با درخواست مطابقت دارند
      */
     setTransactions(transactions) {
         this['transactions'] = transactions;
@@ -124,7 +124,7 @@ class PaymentListTransactionsResponse {
 PaymentListTransactionsResponse.prototype['next_page_token'] = undefined;
 
 /**
- * شناسه مرجع فاکتور یا تراکنش
+ * فهرست تراکنش‌هایی که با درخواست مطابقت دارند
  * @member {Array.<module:model/PaymentTransaction>} transactions
  */
 PaymentListTransactionsResponse.prototype['transactions'] = undefined;

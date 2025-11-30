@@ -44,7 +44,7 @@ export default class FinderApi {
 
     /**
      * دریافت آگهی دیوار
-     * این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد. می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید
+     * این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد. می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید  مجوزهای مورد نیاز: GET_POST.
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetPostResponse} and HTTP response
      */
@@ -78,7 +78,7 @@ export default class FinderApi {
 
     /**
      * دریافت آگهی دیوار
-     * این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد. می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید
+     * این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد. می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید  مجوزهای مورد نیاز: GET_POST.
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetPostResponse}
      */
@@ -92,7 +92,7 @@ export default class FinderApi {
 
     /**
      * دریافت اطلاعات کاربر
-     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
+     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.   مجوزهای مورد نیاز: USER_RETRIEVE.
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderUser} and HTTP response
      */
@@ -125,7 +125,7 @@ export default class FinderApi {
 
     /**
      * دریافت اطلاعات کاربر
-     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
+     * پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.   مجوزهای مورد نیاز: USER_RETRIEVE.
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderUser}
      */
@@ -180,7 +180,7 @@ export default class FinderApi {
 
     /**
      * دریافت شناسه دیوار کاربر با شماره تلفن
-     * با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.
+     * با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.  مجوزهای مورد نیاز: GET_USER_ID_BY_PHONE.
      * @param {module:model/FinderGetUserIDByPhoneRequest} finderGetUserIDByPhoneRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetUserIDByPhoneResponse} and HTTP response
      */
@@ -213,7 +213,7 @@ export default class FinderApi {
 
     /**
      * دریافت شناسه دیوار کاربر با شماره تلفن
-     * با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.
+     * با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.  مجوزهای مورد نیاز: GET_USER_ID_BY_PHONE.
      * @param {module:model/FinderGetUserIDByPhoneRequest} finderGetUserIDByPhoneRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetUserIDByPhoneResponse}
      */
@@ -227,7 +227,7 @@ export default class FinderApi {
 
     /**
      * دریافت آگهی‌های کاربر
-     * این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
+     * این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.  مجوزهای مورد نیاز: GET_USER_POSTS.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetUserPostsResponse} and HTTP response
      */
     finderGetUserPostsWithHttpInfo() {
@@ -255,7 +255,7 @@ export default class FinderApi {
 
     /**
      * دریافت آگهی‌های کاربر
-     * این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
+     * این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.  مجوزهای مورد نیاز: GET_USER_POSTS.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetUserPostsResponse}
      */
     finderGetUserPosts() {
@@ -268,7 +268,7 @@ export default class FinderApi {
 
     /**
      * جستجو آگهی‌های دیوار با فیلترهایی
-     * این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
+     * این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند.   مجوزهای مورد نیاز: SEARCH_POST.
      * @param {module:model/FinderSearchPostsV2Request} finderSearchPostsV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderSearchPostV2Response} and HTTP response
      */
@@ -301,7 +301,7 @@ export default class FinderApi {
 
     /**
      * جستجو آگهی‌های دیوار با فیلترهایی
-     * این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
+     * این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند.   مجوزهای مورد نیاز: SEARCH_POST.
      * @param {module:model/FinderSearchPostsV2Request} finderSearchPostsV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderSearchPostV2Response}
      */
