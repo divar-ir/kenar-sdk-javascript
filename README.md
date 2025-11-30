@@ -165,14 +165,14 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PaymentApi* | [**paymentCommitWalletTransaction**](docs/PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
 *KenarApiClient.PaymentApi* | [**paymentCreateWalletPayment**](docs/PaymentApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
 *KenarApiClient.PaymentApi* | [**paymentGetBalance**](docs/PaymentApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
-*KenarApiClient.PaymentApi* | [**paymentGetPostPricing**](docs/PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Get post service pricing
+*KenarApiClient.PaymentApi* | [**paymentGetPostPricing**](docs/PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
 *KenarApiClient.PaymentApi* | [**paymentGetTransaction**](docs/PaymentApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
 *KenarApiClient.PaymentApi* | [**paymentListTransactions**](docs/PaymentApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
-*KenarApiClient.PaymentApi* | [**paymentPublishUserPost**](docs/PaymentApi.md#paymentPublishUserPost) | **POST** /experimental/open-platform/post/{post_token}/publish | Publish user post (provider pays)
+*KenarApiClient.PaymentApi* | [**paymentPublishUserPost**](docs/PaymentApi.md#paymentPublishUserPost) | **POST** /experimental/open-platform/post/{post_token}/publish | Pay for user post submission on behalf of provider
 *KenarApiClient.PaymentApi* | [**paymentRenewPost**](docs/PaymentApi.md#paymentRenewPost) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
 *KenarApiClient.PaymentApi* | [**paymentReorderPost**](docs/PaymentApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
 *KenarApiClient.PaymentApi* | [**paymentRetrieveWalletTransaction**](docs/PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
-*KenarApiClient.PaymentApi* | [**paymentSubmitUserPayment**](docs/PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | Submit user payment record
+*KenarApiClient.PaymentApi* | [**paymentSubmitUserPayment**](docs/PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | Submit a user payment
 *KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *KenarApiClient.PostApi* | [**postCanUserSubmitPost**](docs/PostApi.md#postCanUserSubmitPost) | **GET** /experimental/open-platform/user-posts/can-submit | بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
 *KenarApiClient.PostApi* | [**postCreateBusinessCustomizedButton**](docs/PostApi.md#postCreateBusinessCustomizedButton) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
