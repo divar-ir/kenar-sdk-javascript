@@ -41,8 +41,8 @@ export default class AddonsApi {
 
 
     /**
-     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}  مجوزهای مورد نیاز: BUSINESS_ADDON_CREATE.
+     * ایجاد افزونه کسب‌وکار
+     * این API امکان ایجاد افزونه کسب‌وکار را فراهم می‌کند که روی تمام آگهی‌های منتشر شده یک کسب‌وکار نمایش داده می‌شود.  **نکات مهم**: - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند - مالکیت کسب‌وکار قبل از ایجاد افزونه بررسی می‌شود  مجوزهای مورد نیاز: `BUSINESS_ADDON_CREATE`. OAuth scope موردنیاز: `BUSINESS_ADDON_CREATE.business_token`
      * @param {String} businessToken 
      * @param {module:model/AddonsCreateBusinessAddonBody} addonsCreateBusinessAddonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsCreateBusinessAddonResponse} and HTTP response
@@ -68,7 +68,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AddonsCreateBusinessAddonResponse;
@@ -80,8 +80,8 @@ export default class AddonsApi {
     }
 
     /**
-     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}  مجوزهای مورد نیاز: BUSINESS_ADDON_CREATE.
+     * ایجاد افزونه کسب‌وکار
+     * این API امکان ایجاد افزونه کسب‌وکار را فراهم می‌کند که روی تمام آگهی‌های منتشر شده یک کسب‌وکار نمایش داده می‌شود.  **نکات مهم**: - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند - مالکیت کسب‌وکار قبل از ایجاد افزونه بررسی می‌شود  مجوزهای مورد نیاز: `BUSINESS_ADDON_CREATE`. OAuth scope موردنیاز: `BUSINESS_ADDON_CREATE.business_token`
      * @param {String} businessToken 
      * @param {module:model/AddonsCreateBusinessAddonBody} addonsCreateBusinessAddonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsCreateBusinessAddonResponse}
@@ -95,8 +95,8 @@ export default class AddonsApi {
 
 
     /**
-     * افزودن افزونه جدید به آگهی
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}  مجوزهای مورد نیاز: ADD_ON_CREATE.
+     * ایجاد افزونه آگهی
+     * این API امکان ایجاد افزونه متصل به یک آگهی خاص را فراهم می‌کند. افزونه در صفحه جزئیات آگهی نمایش داده می‌شود.  **نکات مهم**: - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند - مسیرهای معنایی از ویجت‌ها برای دسته‌بندی استخراج می‌شوند  مجوزهای مورد نیاز: `ADD_ON_CREATE`. OAuth scope موردنیاز: `POST_ADDON_CREATE.post_token` یا `USER_POSTS_ADDON_CREATE`
      * @param {String} token 
      * @param {module:model/AddonsCreatePostAddonV2Body} addonsCreatePostAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -122,7 +122,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -134,8 +134,8 @@ export default class AddonsApi {
     }
 
     /**
-     * افزودن افزونه جدید به آگهی
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}  مجوزهای مورد نیاز: ADD_ON_CREATE.
+     * ایجاد افزونه آگهی
+     * این API امکان ایجاد افزونه متصل به یک آگهی خاص را فراهم می‌کند. افزونه در صفحه جزئیات آگهی نمایش داده می‌شود.  **نکات مهم**: - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند - مسیرهای معنایی از ویجت‌ها برای دسته‌بندی استخراج می‌شوند  مجوزهای مورد نیاز: `ADD_ON_CREATE`. OAuth scope موردنیاز: `POST_ADDON_CREATE.post_token` یا `USER_POSTS_ADDON_CREATE`
      * @param {String} token 
      * @param {module:model/AddonsCreatePostAddonV2Body} addonsCreatePostAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -149,8 +149,8 @@ export default class AddonsApi {
 
 
     /**
-     * افزودن افزونه جدید به کاربر
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد  مجوزهای مورد نیاز: USER_ADDON_CREATE.
+     * ایجاد افزونه کاربر
+     * این API امکان ایجاد افزونه کاربر را فراهم می‌کند که به صورت خودکار به تمام آگهی‌های کاربر متصل می‌شود. افزونه برای آگهی‌های آینده اعمال شده و همچنین تا 30 آگهی اخیر به عقب برمی‌گردد.  **نکات مهم**: - می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند  مجوزهای مورد نیاز: `USER_ADDON_CREATE`. OAuth scope موردنیاز: `USER_ADDON_CREATE`
      * @param {String} phone 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsCreateUserAddonResponseV2} and HTTP response
@@ -176,7 +176,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AddonsCreateUserAddonResponseV2;
@@ -188,8 +188,8 @@ export default class AddonsApi {
     }
 
     /**
-     * افزودن افزونه جدید به کاربر
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد  مجوزهای مورد نیاز: USER_ADDON_CREATE.
+     * ایجاد افزونه کاربر
+     * این API امکان ایجاد افزونه کاربر را فراهم می‌کند که به صورت خودکار به تمام آگهی‌های کاربر متصل می‌شود. افزونه برای آگهی‌های آینده اعمال شده و همچنین تا 30 آگهی اخیر به عقب برمی‌گردد.  **نکات مهم**: - می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند  مجوزهای مورد نیاز: `USER_ADDON_CREATE`. OAuth scope موردنیاز: `USER_ADDON_CREATE`
      * @param {String} phone 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsCreateUserAddonResponseV2}
@@ -203,8 +203,8 @@ export default class AddonsApi {
 
 
     /**
-     * افزودن افزونه جدید به کاربر
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
+     * ایجاد افزونه کاربر
+     * این API امکان ایجاد افزونه کاربر را فراهم می‌کند که به صورت خودکار به تمام آگهی‌های کاربر متصل می‌شود. افزونه برای آگهی‌های آینده اعمال شده و همچنین تا 30 آگهی اخیر به عقب برمی‌گردد.  **نکات مهم**: - می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند  OAuth scope موردنیاز: `USER_ADDON_CREATE`
      * @param {String} divarUserId 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AddonsCreateUserAddonResponseV2} and HTTP response
@@ -230,7 +230,7 @@ export default class AddonsApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AddonsCreateUserAddonResponseV2;
@@ -242,8 +242,8 @@ export default class AddonsApi {
     }
 
     /**
-     * افزودن افزونه جدید به کاربر
-     * با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
+     * ایجاد افزونه کاربر
+     * این API امکان ایجاد افزونه کاربر را فراهم می‌کند که به صورت خودکار به تمام آگهی‌های کاربر متصل می‌شود. افزونه برای آگهی‌های آینده اعمال شده و همچنین تا 30 آگهی اخیر به عقب برمی‌گردد.  **نکات مهم**: - می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند  OAuth scope موردنیاز: `USER_ADDON_CREATE`
      * @param {String} divarUserId 
      * @param {module:model/AddonsCreateUserAddonV2Body} addonsCreateUserAddonV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AddonsCreateUserAddonResponseV2}
@@ -257,8 +257,8 @@ export default class AddonsApi {
 
 
     /**
-     * حذف افزونه از آگهی
-     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.  مجوزهای مورد نیاز: ADD_ON_DELETE.
+     * حذف افزونه آگهی
+     * این API امکان حذف افزونه از یک آگهی را فراهم می‌کند. تمام افزونه‌های ایجاد شده توسط اپلیکیشن شما برای توکن آگهی مشخص شده حذف می‌شوند.  **نکات مهم**: - فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند   مجوزهای مورد نیاز: `ADD_ON_DELETE`
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -291,8 +291,8 @@ export default class AddonsApi {
     }
 
     /**
-     * حذف افزونه از آگهی
-     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.  مجوزهای مورد نیاز: ADD_ON_DELETE.
+     * حذف افزونه آگهی
+     * این API امکان حذف افزونه از یک آگهی را فراهم می‌کند. تمام افزونه‌های ایجاد شده توسط اپلیکیشن شما برای توکن آگهی مشخص شده حذف می‌شوند.  **نکات مهم**: - فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند   مجوزهای مورد نیاز: `ADD_ON_DELETE`
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -305,8 +305,8 @@ export default class AddonsApi {
 
 
     /**
-     * حذف افزونه از آگهی
-     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
+     * حذف افزونه آگهی
+     * این API امکان حذف افزونه از یک آگهی را فراهم می‌کند. تمام افزونه‌های ایجاد شده توسط اپلیکیشن شما برای توکن آگهی مشخص شده حذف می‌شوند.  **نکات مهم**: - فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند 
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -339,8 +339,8 @@ export default class AddonsApi {
     }
 
     /**
-     * حذف افزونه از آگهی
-     * فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
+     * حذف افزونه آگهی
+     * این API امکان حذف افزونه از یک آگهی را فراهم می‌کند. تمام افزونه‌های ایجاد شده توسط اپلیکیشن شما برای توکن آگهی مشخص شده حذف می‌شوند.  **نکات مهم**: - فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند 
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -354,7 +354,7 @@ export default class AddonsApi {
 
     /**
      * حذف افزونه کاربر
-     * این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.  مجوزهای مورد نیاز: USER_ADDON_DELETE.
+     * این API امکان حذف افزونه کاربر با شناسه را فراهم می‌کند. این کار افزونه کاربر و تمام افزونه‌های آگهی مرتبط را حذف می‌کند.  **نکات مهم**: - فقط افزونه‌های کاربر ایجاد شده توسط اپلیکیشن شما قابل حذف هستند   مجوزهای مورد نیاز: `USER_ADDON_DELETE`
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -388,7 +388,7 @@ export default class AddonsApi {
 
     /**
      * حذف افزونه کاربر
-     * این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.  مجوزهای مورد نیاز: USER_ADDON_DELETE.
+     * این API امکان حذف افزونه کاربر با شناسه را فراهم می‌کند. این کار افزونه کاربر و تمام افزونه‌های آگهی مرتبط را حذف می‌کند.  **نکات مهم**: - فقط افزونه‌های کاربر ایجاد شده توسط اپلیکیشن شما قابل حذف هستند   مجوزهای مورد نیاز: `USER_ADDON_DELETE`
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */

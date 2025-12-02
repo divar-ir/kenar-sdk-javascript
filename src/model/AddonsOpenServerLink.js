@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class AddonsOpenServerLink {
     /**
      * Constructs a new <code>AddonsOpenServerLink</code>.
-     * عملیاتی برای ارسال داده‌های کامل نشست و دریافت مکان هدایت از سرور شما در هر عملیات کاربر
+     * عملیاتی برای ارسال داده‌های کامل session و دریافت آدرس redirect از سرور شما
      * @alias module:model/AddonsOpenServerLink
      */
     constructor() { 
@@ -66,7 +66,7 @@ class AddonsOpenServerLink {
     }
 
 /**
-     * Returns داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
+     * Returns داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
      * @return {Object}
      */
     getData() {
@@ -74,8 +74,8 @@ class AddonsOpenServerLink {
     }
 
     /**
-     * Sets داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
-     * @param {Object} data داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
+     * Sets داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
+     * @param {Object} data داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
      */
     setData(data) {
         this['data'] = data;
@@ -86,7 +86,7 @@ class AddonsOpenServerLink {
 
 
 /**
- * داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
+ * داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
  * @member {Object} data
  */
 AddonsOpenServerLink.prototype['data'] = undefined;

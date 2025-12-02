@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**issuerPayload** | **Object** |  | [optional] 
+**issuerPayload** | **Object** | داده payload ارائه شده توسط صادرکننده تیکت | [optional] 
 
 

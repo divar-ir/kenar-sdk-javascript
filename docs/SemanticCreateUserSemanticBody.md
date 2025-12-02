@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cost** | **Number** |  | [optional] 
-**phone** | **String** |  | [optional] 
-**semantic** | **{String: String}** |  | [optional] 
-**ticketUuid** | **String** |  | [optional] 
+**phone** | **String** | شماره موبایل کاربر | 
+**semantic** | **{String: String}** | مپ key-value اطلاعات معنایی برای ذخیره | 
+**cost** | **Number** | هزینه مرتبط با عملیات | [optional] 
+**ticketUuid** | **String** | UUID تیکت پرداخت (اختیاری) | [optional] 
 
 

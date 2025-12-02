@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hasOwnImage** | **Boolean** | تصاویر مربوط به خود ملک بوده و تزئینی نیستند. | 
+**hasOwnImage** | **Boolean** | آیا تصاویر واقعی ملک هستند (نه تزئینی) | 
 **basePricePerSquareMeter** | **String** | قیمت پایه هر متر مربع به تومان | [optional] 
 **constructionPhase** | [**HomePresellFieldsConstructionPhase**](HomePresellFieldsConstructionPhase.md) |  | [optional] 
 **deliveryMonth** | [**HomePresellFieldsDeliveryMonth**](HomePresellFieldsDeliveryMonth.md) |  | [optional] 

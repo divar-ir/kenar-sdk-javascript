@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
-**title** | **String** | متن برای نمایش روی دکمه | [optional] 
+**title** | **String** | متن دکمه | [optional] 
 
 

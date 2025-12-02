@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ایجاد اطلاعات معنایی آگهی
 
-در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه &#x60;POST_SEMANTIC_CREATE&#x60; را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
+این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.  مجوزهای مورد نیاز: &#x60;POST_SEMANTIC_CREATE&#x60;. OAuth scope موردنیاز: &#x60;POST_SEMANTIC_CREATE.post_token&#x60;
 
 ### Example
 
@@ -30,9 +30,12 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.SemanticApi();
-let token = "token_example"; // String | 
+let token = "token_example"; // String | توکن آگهی
 let semanticCreatePostSemanticBody = new KenarApiClient.SemanticCreatePostSemanticBody(); // SemanticCreatePostSemanticBody | 
 apiInstance.semanticCreatePostSemantic(token, semanticCreatePostSemanticBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -47,7 +50,7 @@ apiInstance.semanticCreatePostSemantic(token, semanticCreatePostSemanticBody).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **String**|  | 
+ **token** | **String**| توکن آگهی | 
  **semanticCreatePostSemanticBody** | [**SemanticCreatePostSemanticBody**](SemanticCreatePostSemanticBody.md)|  | 
 
 ### Return type
@@ -56,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -70,7 +73,7 @@ Name | Type | Description  | Notes
 
 ایجاد اطلاعات معنایی کاربر
 
-در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه &#x60;USER_VERIFICATION_CREATE&#x60; را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
+این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  مجوزهای مورد نیاز: &#x60;USER_SEMANTIC_CREATE&#x60;. OAuth scope موردنیاز: &#x60;USER_VERIFICATION_CREATE&#x60;
 
 ### Example
 
@@ -82,9 +85,12 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.SemanticApi();
-let phone = "phone_example"; // String | 
+let phone = "phone_example"; // String | شماره موبایل کاربر
 let semanticCreateUserSemanticBody = new KenarApiClient.SemanticCreateUserSemanticBody(); // SemanticCreateUserSemanticBody | 
 apiInstance.semanticCreateUserSemantic(phone, semanticCreateUserSemanticBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -99,7 +105,7 @@ apiInstance.semanticCreateUserSemantic(phone, semanticCreateUserSemanticBody).th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone** | **String**|  | 
+ **phone** | **String**| شماره موبایل کاربر | 
  **semanticCreateUserSemanticBody** | [**SemanticCreateUserSemanticBody**](SemanticCreateUserSemanticBody.md)|  | 
 
 ### Return type
@@ -108,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -122,7 +128,7 @@ Name | Type | Description  | Notes
 
 ایجاد اطلاعات معنایی کاربر
 
-در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه &#x60;USER_VERIFICATION_CREATE&#x60; را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  OAuth scope موردنیاز: &#x60;USER_VERIFICATION_CREATE&#x60;
 
 ### Example
 
@@ -134,9 +140,12 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.SemanticApi();
-let divarUserId = "divarUserId_example"; // String | 
+let divarUserId = "divarUserId_example"; // String | شناسه کاربر دیوار
 let semanticCreateUserSemanticBody = new KenarApiClient.SemanticCreateUserSemanticBody(); // SemanticCreateUserSemanticBody | 
 apiInstance.semanticCreateUserSemantic2(divarUserId, semanticCreateUserSemanticBody).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -151,7 +160,7 @@ apiInstance.semanticCreateUserSemantic2(divarUserId, semanticCreateUserSemanticB
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **divarUserId** | **String**|  | 
+ **divarUserId** | **String**| شناسه کاربر دیوار | 
  **semanticCreateUserSemanticBody** | [**SemanticCreateUserSemanticBody**](SemanticCreateUserSemanticBody.md)|  | 
 
 ### Return type
@@ -160,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -174,7 +183,7 @@ Name | Type | Description  | Notes
 
 حذف اطلاعات معنایی کاربر
 
-می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
+این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  مجوزهای مورد نیاز: &#x60;USER_SEMANTIC_DELETE&#x60;
 
 ### Example
 
@@ -188,9 +197,9 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.SemanticApi();
-let phone = "phone_example"; // String | 
+let phone = "phone_example"; // String | شماره موبایل کاربر
 let opts = {
-  'divarUserId': "divarUserId_example" // String | 
+  'divarUserId': "divarUserId_example" // String | شناسه کاربر دیوار
 };
 apiInstance.semanticDeleteUserSemantic(phone, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -205,8 +214,8 @@ apiInstance.semanticDeleteUserSemantic(phone, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone** | **String**|  | 
- **divarUserId** | **String**|  | [optional] 
+ **phone** | **String**| شماره موبایل کاربر | 
+ **divarUserId** | **String**| شناسه کاربر دیوار | [optional] 
 
 ### Return type
 
@@ -224,11 +233,11 @@ Name | Type | Description  | Notes
 
 ## semanticDeleteUserSemantic2
 
-> Object semanticDeleteUserSemantic2(divarUserId, opts)
+> Object semanticDeleteUserSemantic2(divarUserId, phone)
 
 حذف اطلاعات معنایی کاربر
 
-می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
 
 ### Example
 
@@ -242,11 +251,9 @@ APIKey.apiKey = 'YOUR API KEY';
 //APIKey.apiKeyPrefix = 'Token';
 
 let apiInstance = new KenarApiClient.SemanticApi();
-let divarUserId = "divarUserId_example"; // String | 
-let opts = {
-  'phone': "phone_example" // String | 
-};
-apiInstance.semanticDeleteUserSemantic2(divarUserId, opts).then((data) => {
+let divarUserId = "divarUserId_example"; // String | شناسه کاربر دیوار
+let phone = "phone_example"; // String | شماره موبایل کاربر
+apiInstance.semanticDeleteUserSemantic2(divarUserId, phone).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -259,8 +266,8 @@ apiInstance.semanticDeleteUserSemantic2(divarUserId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **divarUserId** | **String**|  | 
- **phone** | **String**|  | [optional] 
+ **divarUserId** | **String**| شناسه کاربر دیوار | 
+ **phone** | **String**| شماره موبایل کاربر | 
 
 ### Return type
 

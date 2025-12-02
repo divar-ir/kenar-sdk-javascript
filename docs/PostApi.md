@@ -5,19 +5,19 @@ All URIs are relative to *https://open-api.divar.ir*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**postCanUserSubmitPost**](PostApi.md#postCanUserSubmitPost) | **GET** /experimental/open-platform/user-posts/can-submit | بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
-[**postCreateBusinessCustomizedButton**](PostApi.md#postCreateBusinessCustomizedButton) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
+[**postCreateBusinessCustomizedButton**](PostApi.md#postCreateBusinessCustomizedButton) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌وکار
 [**postDeleteBusinessCustomizedButton**](PostApi.md#postDeleteBusinessCustomizedButton) | **DELETE** /experimental/open-platform/business/{business_token}/customized-button | حذف دکمه اختصاصی از آگهی‌های کسب‌و‌کار
 [**postDeletePostCustomizedButton**](PostApi.md#postDeletePostCustomizedButton) | **DELETE** /experimental/open-platform/posts/{post_token}/customized-button | حذف دکمه اختصاصی از آگهی
 [**postDeleteUserPost**](PostApi.md#postDeleteUserPost) | **DELETE** /v1/open-platform/post/{post_token} | حذف آگهی
 [**postEditPost**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
-[**postEditPostV2**](PostApi.md#postEditPostV2) | **PUT** /v2/open-platform/post/{post_token} | ویرایش آگهی با پشتیبانی از فیلد ماسک
+[**postEditPostV2**](PostApi.md#postEditPostV2) | **PUT** /v2/open-platform/post/{post_token} | ویرایش آگهی (پیشرفته)
 [**postGetImageUploadURL**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت آدرس اپلود تصاویر آگهی (منسوخ شده)
 [**postGetPostStats**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
-[**postGetUploadURLsV2**](PostApi.md#postGetUploadURLsV2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود برای تصاویر و ویدیو‌ی آگهی‌ها
+[**postGetUploadURLsV2**](PostApi.md#postGetUploadURLsV2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود تصاویر و ویدیو
 [**postGetUserPost**](PostApi.md#postGetUserPost) | **GET** /v1/open-platform/user-post/{token} | دریافت آگهی با توکن
-[**postSetPostCustomizedButton**](PostApi.md#postSetPostCustomizedButton) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی بر روی آگهی ثبت شده
-[**postSubmitPost**](PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
-[**postSubmitPostV2**](PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
+[**postSetPostCustomizedButton**](PostApi.md#postSetPostCustomizedButton) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی روی آگهی
+[**postSubmitPost**](PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی (منسوخ شده)
+[**postSubmitPostV2**](PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی
 [**postSubmitUserPost**](PostApi.md#postSubmitUserPost) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 
 
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
 
-با این API میتوانید بررسی کنید آیا کاربر می‌تواند آگهی ارسال کند یا خیر.این API انتظار دارد توکن کاربر در درخواست با اسکوپ &#x60;SUBMIT_USER_POST&#x60; موجود باشد.  مجوزهای مورد نیاز: CAN_USER_SUBMIT_POST.
+این API بررسی می‌کند که آیا کاربر واجد شرایط ثبت آگهی است. تایید می‌کند که کاربر در لیست سیاه نیست، متخلف نیست و احراز هویت شده است.  مجوزهای مورد نیاز: &#x60;CAN_USER_SUBMIT_POST&#x60;. OAuth scope موردنیاز: &#x60;SUBMIT_USER_POST&#x60;
 
 ### Example
 
@@ -40,6 +40,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 apiInstance.postCanUserSubmitPost().then((data) => {
@@ -60,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -72,9 +75,9 @@ This endpoint does not need any parameter.
 
 > Object postCreateBusinessCustomizedButton(businessToken, postCreateBusinessCustomizedButtonBody)
 
-ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
+ایجاد دکمه اختصاصی برای آگهی‌های کسب‌وکار
 
-این API برای ایجاد دکمه اختصاصی برای تمام آگهی‌های کسب‌وکار استفاده می‌شود. این API به مجوز &#x60;BUSINESS_CUSTOMIZED_BUTTON_CREATE&#x60; و دامنه OAuth &#x60;BUSINESS_CREATE_CUSTOMIZED_BUTTON.{business_ref}&#x60; نیاز دارد.   مجوزهای مورد نیاز: BUSINESS_CUSTOMIZED_BUTTON_CREATE.
+این API تنظیمات دکمه اختصاصی را برای تمام آگهی‌های کسب‌وکار ایجاد می‌کند.  مجوزهای مورد نیاز: &#x60;BUSINESS_CUSTOMIZED_BUTTON_CREATE&#x60;. OAuth scope موردنیاز: &#x60;BUSINESS_CREATE_CUSTOMIZED_BUTTON.business_token&#x60;
 
 ### Example
 
@@ -86,6 +89,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let businessToken = "businessToken_example"; // String | 
@@ -112,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -126,7 +132,7 @@ Name | Type | Description  | Notes
 
 حذف دکمه اختصاصی از آگهی‌های کسب‌و‌کار
 
-این API دکمه اختصاصی را از تمام آگهی‌های کسب‌وکار حذف می‌کند. این API به مجوز &#x60;BUSINESS_CUSTOMIZED_BUTTON_CREATE&#x60; نیاز دارد.   مجوزهای مورد نیاز: BUSINESS_CUSTOMIZED_BUTTON_CREATE.
+این API تنظیمات دکمه اختصاصی را از تمام آگهی‌های کسب‌وکار حذف می‌کند.  مجوزهای مورد نیاز: &#x60;BUSINESS_CUSTOMIZED_BUTTON_CREATE&#x60;
 
 ### Example
 
@@ -176,7 +182,7 @@ Name | Type | Description  | Notes
 
 حذف دکمه اختصاصی از آگهی
 
-این API دکمه اختصاصی را از آگهی ثبت شده توسط سرویس شما حذف می‌کند. این API نیاز به مجوز &#x60;SET_CUSTOMIZED_BUTTON&#x60; دارد.   مجوزهای مورد نیاز: SET_CUSTOMIZED_BUTTON.
+این API تنظیمات دکمه اختصاصی را از یک آگهی حذف می‌کند.  مجوزهای مورد نیاز: &#x60;SET_CUSTOMIZED_BUTTON&#x60;. OAuth scope موردنیاز: &#x60;USER_SET_CUSTOMIZED_BUTTON&#x60;
 
 ### Example
 
@@ -188,6 +194,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let postToken = "postToken_example"; // String | 
@@ -212,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -226,7 +235,7 @@ Name | Type | Description  | Notes
 
 حذف آگهی
 
-این API به شما امکان حذف آگهی را می‌دهد. این نیاز به اسکوپ OAuth &#x60;DELETE_USER_POST&#x60; دارد.  مجوزهای مورد نیاز: DELETE_USER_POST.
+این API امکان حذف آگهی را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل حذف هستند.  مجوزهای مورد نیاز: &#x60;DELETE_USER_POST&#x60;. OAuth scope موردنیاز: &#x60;DELETE_USER_POST&#x60;
 
 ### Example
 
@@ -238,6 +247,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let postToken = "postToken_example"; // String | توکن آگهی برای حذف
@@ -262,7 +274,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -276,7 +288,7 @@ Name | Type | Description  | Notes
 
 ویرایش آگهی
 
-این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth &#x60;POST_EDIT.{post_token}&#x60; دارد. در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.  مجوزهای مورد نیاز: EDIT_POST.
+این API امکان ویرایش آگهی را فراهم می‌کند. می‌توانید عنوان، توضیحات و تصاویر آگهی را به‌روزرسانی کنید.  **نکات مهم**: - عنوان باید بین 3 تا 50 کاراکتر باشد - آگهی نباید منقضی شده باشد  مجوزهای مورد نیاز: &#x60;EDIT_POST&#x60;. OAuth scope موردنیاز: &#x60;POST_EDIT.post_token&#x60;
 
 ### Example
 
@@ -288,6 +300,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let postToken = "postToken_example"; // String | 
@@ -314,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -326,9 +341,9 @@ Name | Type | Description  | Notes
 
 > Object postEditPostV2(postToken, postEditPostV2Body)
 
-ویرایش آگهی با پشتیبانی از فیلد ماسک
+ویرایش آگهی (پیشرفته)
 
-این API به شما امکان ویرایش آگهی با استفاده از احراز هویت OAuth را می‌دهد. توکن دسترسی از یک کاربر با اسکوپ OAuth &#x60;POST_EDIT.{post_token}&#x60; یا &#x60;EDIT_USER_POST&#x60; مورد نیاز است.  می‌توانید عنوان، توضیحات، تصاویر، موقعیت، فیلدهای مخصوص دسته‌بندی و سایر ویژگی‌های آگهی را ویرایش کنید. فیلدهای مخصوص دسته‌بندی باید از قالب دسته‌بندی آگهی پیروی کنند. قالب را از اینجا دریافت کنید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/  از فیلد update_mask برای مشخص کردن فیلدهایی که می‌خواهید به‌روزرسانی کنید استفاده کنید.  مجوزهای مورد نیاز: EDIT_POST.
+این API امکان ویرایش آگهی با پشتیبانی از field mask را فراهم می‌کند. می‌توانید عنوان، توضیحات، تصاویر، موقعیت، فیلدهای ویژه دسته‌بندی و سایر ویژگی‌ها را به‌روزرسانی کنید.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - از &#x60;update_mask&#x60; برای مشخص کردن فیلدهای مورد به‌روزرسانی استفاده کنید - هنگام استفاده از scope &#x60;EDIT_USER_POST&#x60;، آگهی باید متعلق به کاربر احراز هویت شده باشد - آگهی نباید منقضی شده باشد  مجوزهای مورد نیاز: &#x60;EDIT_POST&#x60;. OAuth scope موردنیاز: &#x60;EDIT_USER_POST&#x60; یا &#x60;POST_EDIT.post_token&#x60;
 
 ### Example
 
@@ -340,6 +355,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let postToken = "postToken_example"; // String | توکن آگهی
@@ -366,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -380,7 +398,7 @@ Name | Type | Description  | Notes
 
 دریافت آدرس اپلود تصاویر آگهی (منسوخ شده)
 
-این API به شما اجازه می‌دهد یک آدرس اینترنتی برای بارگذاری تصاویر یک پست دریافت کنید. می‌توانید تصاویر را با یک درخواست POST و رمزگذاری باینری به آدرس برگشتی بارگذاری کنید. به جای آن از https://kenar.divar.dev/openapi-doc/post-get-upload-urls-v2/ استفاده کنید  مجوزهای مورد نیاز: UPLOAD_POST_IMAGE.
+این API آدرس آپلود برای بارگذاری تصاویر آگهی را برمی‌گرداند.  مجوزهای مورد نیاز: &#x60;UPLOAD_POST_IMAGE&#x60;
 
 ### Example
 
@@ -426,7 +444,7 @@ This endpoint does not need any parameter.
 
 دریافت آمارهای آگهی
 
-از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید.   مجوزهای مورد نیاز: POST_STATS_RETRIEVE.
+این API امکان دریافت آمار یک آگهی شامل بازدیدها، نمایش‌ها و چت‌ها را فراهم می‌کند. آمار روزانه برای 7 روز اخیر و تعداد کل برمی‌گردد.  **نکات مهم**: - فقط آمار آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شود  مجوزهای مورد نیاز: &#x60;POST_STATS_RETRIEVE&#x60;. OAuth scope موردنیاز: &#x60;USER_POSTS_STATS_READ&#x60;
 
 ### Example
 
@@ -438,6 +456,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let postToken = "postToken_example"; // String | توکن آگهی
@@ -462,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -474,9 +495,9 @@ Name | Type | Description  | Notes
 
 > PostGetUploadURLsV2Response postGetUploadURLsV2()
 
-دریافت آدرس آپلود برای تصاویر و ویدیو‌ی آگهی‌ها
+دریافت آدرس آپلود تصاویر و ویدیو
 
-این API به شما امکان دریافت URL آپلود برای آپلود تصاویر و ویدیوهای آگهی را می‌دهد. می‌توانید تصاویر/ویدیوها را با استفاده از درخواست POST یا PUT با کدگذاری باینری به URL برگشتی آپلود کنید. آدرس برگشتی این API به api-key شما برای آپلود نیاز دارد. لطفاً توجه داشته باشید که آدرس برگشتی ممکن است بدون اطلاع قبلی تغییر کند.  مجوزهای مورد نیاز: UPLOAD_POST_IMAGE.
+این API امکان دریافت آدرس‌های آپلود برای بارگذاری تصاویر و ویدیوهای آگهی را فراهم می‌کند. می‌توانید تصاویر/ویدیوها را با درخواست POST یا PUT با کدگذاری باینری به آدرس برگشتی آپلود کنید.  **نکات مهم**: - آدرس برگشتی برای آپلود نیاز به api-key شما دارد  مجوزهای مورد نیاز: &#x60;UPLOAD_POST_IMAGE&#x60;
 
 ### Example
 
@@ -522,7 +543,7 @@ This endpoint does not need any parameter.
 
 دریافت آگهی با توکن
 
-این API به شما امکان دریافت اطلاعات دقیق درباره یک آگهی خاص با استفاده از توکن آن را می‌دهد. این نقطه پایانی آگهی‌های ثبت شده توسط کاربران احراز هویت شده از طریق پلتفرم باز را برمی‌گرداند، شامل داده‌های کسب‌وکار، وضعیت و دلایل رد. این API به مجوز &#x60;GET_USER_POST&#x60; نیاز دارد. این API به دامنه OAuth &#x60;USER_POSTS_GET&#x60; نیاز دارد.  مجوزهای مورد نیاز: GET_USER_POST.
+این API امکان دریافت اطلاعات دقیق یک آگهی شامل داده‌های عمومی، داده‌های دسته‌بندی، داده‌های کسب‌وکار، وضعیت و دلیل رد را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل دریافت هستند.  مجوزهای مورد نیاز: &#x60;GET_USER_POST&#x60;. OAuth scope موردنیاز: &#x60;USER_POSTS_GET&#x60;
 
 ### Example
 
@@ -534,6 +555,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let token = "token_example"; // String | 
@@ -558,7 +582,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -570,9 +594,9 @@ Name | Type | Description  | Notes
 
 > Object postSetPostCustomizedButton(postToken, postSetPostCustomizedButtonBody)
 
-تنظیم دکمه اختصاصی بر روی آگهی ثبت شده
+تنظیم دکمه اختصاصی روی آگهی
 
-این API برای تنظیم دکمه اختصاصی برای یک آگهی استفاده می‌شود. اگر دکمه‌ای وجود نداشته باشد، ایجاد خواهد شد. اگر از قبل وجود داشته باشد، داده‌های آن به‌روزرسانی خواهد شد. این API به مجوز &#x60;SET_CUSTOMIZED_BUTTON&#x60; نیاز دارد. اگر این آگهی توسط کاربر ثبت شده باشد، این API به توکن دسترسی کاربر در هدرهای درخواست با دامنه OAuth &#x60;USER_SET_CUSTOMIZED_BUTTON&#x60; نیاز دارد.  مجوزهای مورد نیاز: SET_CUSTOMIZED_BUTTON.
+این API تنظیمات دکمه اختصاصی را برای یک آگهی تعیین می‌کند. اگر دکمه وجود نداشته باشد، ایجاد می‌شود. اگر از قبل وجود داشته باشد، داده‌های آن به‌روزرسانی می‌شوند.  مجوزهای مورد نیاز: &#x60;SET_CUSTOMIZED_BUTTON&#x60;. OAuth scope موردنیاز: &#x60;USER_SET_CUSTOMIZED_BUTTON&#x60;
 
 ### Example
 
@@ -584,6 +608,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let postToken = "postToken_example"; // String | 
@@ -610,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -622,9 +649,9 @@ Name | Type | Description  | Notes
 
 > PostSubmitPostResponse postSubmitPost(postSubmitPostRequest)
 
-ثبت آگهی
+ثبت آگهی (منسوخ شده)
 
-این API به شما امکان ثبت آگهی را می‌دهد. این نیاز به دامنه OAuth &#x60;SUBMIT_POST&#x60; دارد. می‌توانید آگهی را با عنوان، توضیحات، تصاویر و سایر فیلدها ثبت کنید. فیلدهای عمومی و فیلدهای مخصوص دسته‌بندی وجود دارند.  مجوزهای مورد نیاز: SUBMIT_POST.
+این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  مجوزهای مورد نیاز: &#x60;SUBMIT_POST&#x60;
 
 ### Example
 
@@ -672,9 +699,9 @@ Name | Type | Description  | Notes
 
 > PostSubmitPostResponse postSubmitPostV2(postSubmitPostV2Request)
 
-ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
+ثبت آگهی
 
-این API به شما امکان ثبت آگهی با استفاده از اعتبارسنجی قالب JSON را می‌دهد. این به مجوز &#x60;SUBMIT_POST&#x60; نیاز دارد. شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به قالب ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.  مجوزهای مورد نیاز: SUBMIT_POST.
+این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  مجوزهای مورد نیاز: &#x60;SUBMIT_POST&#x60;
 
 ### Example
 
@@ -724,7 +751,7 @@ Name | Type | Description  | Notes
 
 ثبت آگهی به عنوان کاربر
 
-این API به شما امکان ثبت آگهی از طرف یک کاربر احراز هویت شده با استفاده از اعتبارسنجی قالب JSON را می‌دهد. این به احراز هویت OAuth با توکن دسترسی معتبر و دامنه OAuth &#x60;SUBMIT_USER_POST&#x60; نیاز دارد. بر خلاف SubmitPostV2 که آگهی‌ها را به عنوان ارائه‌دهنده ثبت می‌کند، این نقطه پایانی آگهی‌ها را به عنوان کاربر مرتبط با توکن دسترسی ارائه شده ثبت می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود. شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به قالب ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.  مجوزهای مورد نیاز: SUBMIT_USER_POST.
+این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  مجوزهای مورد نیاز: &#x60;SUBMIT_USER_POST&#x60;. OAuth scope موردنیاز: &#x60;SUBMIT_USER_POST&#x60;
 
 ### Example
 
@@ -736,6 +763,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PostApi();
 let postSubmitUserPostRequest = new KenarApiClient.PostSubmitUserPostRequest(); // PostSubmitUserPostRequest | 
@@ -760,7 +790,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 

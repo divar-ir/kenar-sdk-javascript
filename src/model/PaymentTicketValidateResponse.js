@@ -65,6 +65,7 @@ class PaymentTicketValidateResponse {
     }
 
 /**
+     * Returns داده payload ارائه شده توسط صادرکننده تیکت
      * @return {Object}
      */
     getIssuerPayload() {
@@ -72,7 +73,8 @@ class PaymentTicketValidateResponse {
     }
 
     /**
-     * @param {Object} issuerPayload
+     * Sets داده payload ارائه شده توسط صادرکننده تیکت
+     * @param {Object} issuerPayload داده payload ارائه شده توسط صادرکننده تیکت
      */
     setIssuerPayload(issuerPayload) {
         this['issuer_payload'] = issuerPayload;
@@ -83,6 +85,7 @@ class PaymentTicketValidateResponse {
 
 
 /**
+ * داده payload ارائه شده توسط صادرکننده تیکت
  * @member {Object} issuer_payload
  */
 PaymentTicketValidateResponse.prototype['issuer_payload'] = undefined;

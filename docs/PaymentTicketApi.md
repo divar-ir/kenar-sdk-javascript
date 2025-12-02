@@ -4,7 +4,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**paymentTicketValidate**](PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
+[**paymentTicketValidate**](PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی تیکت پرداخت
 
 
 
@@ -12,9 +12,9 @@ Method | HTTP request | Description
 
 > PaymentTicketValidateResponse paymentTicketValidate(paymentTicketValidateRequest)
 
-اعتبارسنجی بلیط پرداخت
+اعتبارسنجی تیکت پرداخت
 
-بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.  مجوزهای مورد نیاز: PAYMENT_TICKET_VALIDATE.
+این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  مجوزهای مورد نیاز: &#x60;PAYMENT_TICKET_VALIDATE&#x60;
 
 ### Example
 

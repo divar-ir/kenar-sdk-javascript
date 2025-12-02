@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class AddonsGetDynamicAction {
     /**
      * Constructs a new <code>AddonsGetDynamicAction</code>.
-     * نمایان‌گر یک اکشن پویا که می‌تواند در دستگاه کاربر دریافت و اجرا شود
+     * نمایانگر یک Action پویا که می‌تواند در دستگاه کاربر دریافت و اجرا شود
      * @alias module:model/AddonsGetDynamicAction
      */
     constructor() { 
@@ -66,7 +66,7 @@ class AddonsGetDynamicAction {
     }
 
 /**
-     * Returns داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
+     * Returns داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
      * @return {Object}
      */
     getData() {
@@ -74,8 +74,8 @@ class AddonsGetDynamicAction {
     }
 
     /**
-     * Sets داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
-     * @param {Object} data داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
+     * Sets داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
+     * @param {Object} data داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
      */
     setData(data) {
         this['data'] = data;
@@ -86,7 +86,7 @@ class AddonsGetDynamicAction {
 
 
 /**
- * داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود
+ * داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود
  * @member {Object} data
  */
 AddonsGetDynamicAction.prototype['data'] = undefined;

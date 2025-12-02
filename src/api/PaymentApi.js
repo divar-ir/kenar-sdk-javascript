@@ -52,8 +52,8 @@ export default class PaymentApi {
 
 
     /**
-     * تایید تراکنش کیف پول
-     * (Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+     * نهایی کردن تراکنش کیف پول
+     * این API تراکنش پرداخت کیف پول را پس از پرداخت موفق نهایی می‌کند.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - فقط تراکنش‌هایی که در وضعیت PAID هستند را نهایی کنید  مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
      * @param {module:model/PaymentCommitWalletTransactionRequest} paymentCommitWalletTransactionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentCommitWalletTransactionResponse} and HTTP response
      */
@@ -73,7 +73,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = PaymentCommitWalletTransactionResponse;
@@ -85,8 +85,8 @@ export default class PaymentApi {
     }
 
     /**
-     * تایید تراکنش کیف پول
-     * (Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+     * نهایی کردن تراکنش کیف پول
+     * این API تراکنش پرداخت کیف پول را پس از پرداخت موفق نهایی می‌کند.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - فقط تراکنش‌هایی که در وضعیت PAID هستند را نهایی کنید  مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
      * @param {module:model/PaymentCommitWalletTransactionRequest} paymentCommitWalletTransactionRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentCommitWalletTransactionResponse}
      */
@@ -100,7 +100,7 @@ export default class PaymentApi {
 
     /**
      * ایجاد پرداخت کیف پول
-     * (Limited) Using this API you can start a payment transaction from the users wallet.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+     * این API امکان شروع تراکنش پرداخت از کیف پول دیوار کاربر را فراهم می‌کند. کاربر برای تکمیل پرداخت هدایت می‌شود و می‌توانید وضعیت تراکنش را پیگیری کنید.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - کاربر برای تکمیل تراکنش به آدرس پرداخت هدایت می‌شود - پس از پرداخت، کاربر به `redirect_url` مشخص شده شما هدایت می‌شود - از `RetrieveWalletTransaction` برای بررسی وضعیت پرداخت استفاده کنید - از `CommitWalletTransaction` برای نهایی کردن تراکنش پس از پرداخت موفق استفاده کنید   مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
      * @param {module:model/PaymentCreateWalletPaymentRequest} paymentCreateWalletPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentCreateWalletPaymentResponse} and HTTP response
      */
@@ -120,7 +120,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = PaymentCreateWalletPaymentResponse;
@@ -133,7 +133,7 @@ export default class PaymentApi {
 
     /**
      * ایجاد پرداخت کیف پول
-     * (Limited) Using this API you can start a payment transaction from the users wallet.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+     * این API امکان شروع تراکنش پرداخت از کیف پول دیوار کاربر را فراهم می‌کند. کاربر برای تکمیل پرداخت هدایت می‌شود و می‌توانید وضعیت تراکنش را پیگیری کنید.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - کاربر برای تکمیل تراکنش به آدرس پرداخت هدایت می‌شود - پس از پرداخت، کاربر به `redirect_url` مشخص شده شما هدایت می‌شود - از `RetrieveWalletTransaction` برای بررسی وضعیت پرداخت استفاده کنید - از `CommitWalletTransaction` برای نهایی کردن تراکنش پس از پرداخت موفق استفاده کنید   مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
      * @param {module:model/PaymentCreateWalletPaymentRequest} paymentCreateWalletPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentCreateWalletPaymentResponse}
      */
@@ -147,7 +147,7 @@ export default class PaymentApi {
 
     /**
      * دریافت موجودی اپلیکیشن
-     * (Limited) Using this API you can retrieve current balance of your app.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
+     * این API امکان دریافت موجودی فعلی اپلیکیشن شما به ریال را فراهم می‌کند. برای نظارت بر موجودی حساب قبل از انجام عملیات‌های پولی استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - موجودی به ریال ایران برگردانده می‌شود  مجوزهای مورد نیاز: `BALANCE_RETRIEVE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentGetBalanceResponse} and HTTP response
      */
     paymentGetBalanceWithHttpInfo() {
@@ -175,7 +175,7 @@ export default class PaymentApi {
 
     /**
      * دریافت موجودی اپلیکیشن
-     * (Limited) Using this API you can retrieve current balance of your app.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
+     * این API امکان دریافت موجودی فعلی اپلیکیشن شما به ریال را فراهم می‌کند. برای نظارت بر موجودی حساب قبل از انجام عملیات‌های پولی استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - موجودی به ریال ایران برگردانده می‌شود  مجوزهای مورد نیاز: `BALANCE_RETRIEVE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentGetBalanceResponse}
      */
     paymentGetBalance() {
@@ -187,8 +187,8 @@ export default class PaymentApi {
 
 
     /**
-     * Retrieve the cost of the service
-     * Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
+     * دریافت قیمت خدمات آگهی
+     * این API امکان دریافت اطلاعات قیمت‌گذاری برای خدمات مرتبط با آگهی را فراهم می‌کند. قبل از انجام عملیات‌های پولی مانند نردبان، تمدید یا ثبت آگهی از این برای بررسی هزینه‌ها استفاده کنید.  **نکات مهم**: - قیمت‌گذاری مختص اپلیکیشن شما است و ممکن است با قیمت‌گذاری استاندارد دیوار متفاوت باشد - قیمت‌ها ممکن است بر اساس دسته‌بندی و شهر آگهی متفاوت باشند - فلگ `available` نشان می‌دهد که آیا سرویس برای این آگهی قابل اعمال است  مجوزهای مورد نیاز: `POST_PRICING_RETRIEVE`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_PRICING_READ`
      * @param {String} postToken شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentGetPostPricingResponse} and HTTP response
      */
@@ -209,7 +209,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = PaymentGetPostPricingResponse;
@@ -221,8 +221,8 @@ export default class PaymentApi {
     }
 
     /**
-     * Retrieve the cost of the service
-     * Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
+     * دریافت قیمت خدمات آگهی
+     * این API امکان دریافت اطلاعات قیمت‌گذاری برای خدمات مرتبط با آگهی را فراهم می‌کند. قبل از انجام عملیات‌های پولی مانند نردبان، تمدید یا ثبت آگهی از این برای بررسی هزینه‌ها استفاده کنید.  **نکات مهم**: - قیمت‌گذاری مختص اپلیکیشن شما است و ممکن است با قیمت‌گذاری استاندارد دیوار متفاوت باشد - قیمت‌ها ممکن است بر اساس دسته‌بندی و شهر آگهی متفاوت باشند - فلگ `available` نشان می‌دهد که آیا سرویس برای این آگهی قابل اعمال است  مجوزهای مورد نیاز: `POST_PRICING_RETRIEVE`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_PRICING_READ`
      * @param {String} postToken شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentGetPostPricingResponse}
      */
@@ -236,7 +236,7 @@ export default class PaymentApi {
 
     /**
      * دریافت جزئیات تراکنش
-     * (Limited) Using this API you can retrieve transaction details.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
+     * این API امکان دریافت اطلاعات دقیق یک تراکنش خاص با شناسه آن را فراهم می‌کند. برای پیگیری وضعیت تراکنش، هزینه‌ها و متادیتا استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - شناسه تراکنش همان UUID است که هنگام ایجاد تراکنش ارسال کردید - وضعیت‌های تراکنش: PENDING، COMPLETED، FAILED، REFUNDED - انواع تراکنش: REORDER، SUBMIT، RENEW - برای تایید تکمیل تراکنش پس از عملیات‌های پولی استفاده کنید  مجوزهای مورد نیاز: `TRANSACTION_RETRIEVE`
      * @param {String} id شناسه منحصر به فرد برای تراکنش، همان id در درخواست
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentGetTransactionResponse} and HTTP response
      */
@@ -270,7 +270,7 @@ export default class PaymentApi {
 
     /**
      * دریافت جزئیات تراکنش
-     * (Limited) Using this API you can retrieve transaction details.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
+     * این API امکان دریافت اطلاعات دقیق یک تراکنش خاص با شناسه آن را فراهم می‌کند. برای پیگیری وضعیت تراکنش، هزینه‌ها و متادیتا استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - شناسه تراکنش همان UUID است که هنگام ایجاد تراکنش ارسال کردید - وضعیت‌های تراکنش: PENDING، COMPLETED، FAILED، REFUNDED - انواع تراکنش: REORDER، SUBMIT، RENEW - برای تایید تکمیل تراکنش پس از عملیات‌های پولی استفاده کنید  مجوزهای مورد نیاز: `TRANSACTION_RETRIEVE`
      * @param {String} id شناسه منحصر به فرد برای تراکنش، همان id در درخواست
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentGetTransactionResponse}
      */
@@ -284,9 +284,9 @@ export default class PaymentApi {
 
     /**
      * لیست تراکنش‌ها
-     * (Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.  مجوزهای مورد نیاز: TRANSACTION_LIST.
+     * این API امکان دریافت لیست صفحه‌بندی شده از تراکنش‌های اپلیکیشن شما را فراهم می‌کند. برای تاریخچه تراکنش، ممیزی و تسویه حساب استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - نتایج صفحه‌بندی شده هستند - از `page_size` برای کنترل تعداد آیتم‌ها در هر صفحه استفاده کنید - از `page_token` در پاسخ برای دریافت صفحه بعدی استفاده کنید - تراکنش‌ها بر اساس زمان ایجاد مرتب می‌شوند (جدیدترین اول)  مجوزهای مورد نیاز: `TRANSACTION_LIST`
      * @param {Object} opts Optional parameters
-     * @param {Number} [pageSize] تعداد تراکنش‌ها برای برگرداندن در هر صفحه
+     * @param {Number} [pageSize] تعداد تراکنش‌ها در هر صفحه
      * @param {String} [pageToken] توکن برای صفحه بعدی نتایج
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentListTransactionsResponse} and HTTP response
      */
@@ -318,9 +318,9 @@ export default class PaymentApi {
 
     /**
      * لیست تراکنش‌ها
-     * (Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.  مجوزهای مورد نیاز: TRANSACTION_LIST.
+     * این API امکان دریافت لیست صفحه‌بندی شده از تراکنش‌های اپلیکیشن شما را فراهم می‌کند. برای تاریخچه تراکنش، ممیزی و تسویه حساب استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - نتایج صفحه‌بندی شده هستند - از `page_size` برای کنترل تعداد آیتم‌ها در هر صفحه استفاده کنید - از `page_token` در پاسخ برای دریافت صفحه بعدی استفاده کنید - تراکنش‌ها بر اساس زمان ایجاد مرتب می‌شوند (جدیدترین اول)  مجوزهای مورد نیاز: `TRANSACTION_LIST`
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.pageSize تعداد تراکنش‌ها برای برگرداندن در هر صفحه
+     * @param {Number} opts.pageSize تعداد تراکنش‌ها در هر صفحه
      * @param {String} opts.pageToken توکن برای صفحه بعدی نتایج
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentListTransactionsResponse}
      */
@@ -333,8 +333,8 @@ export default class PaymentApi {
 
 
     /**
-     * Pay for user post submission on behalf of provider
-     * This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
+     * انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
+     * این API امکان پرداخت هزینه انتشار آگهی ثبت شده توسط کاربر از طرف اپلیکیشن شما را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود و آگهی منتشر می‌شود.  **نکات مهم**: - ابتدا آگهی باید با API `SubmitUserPost` ایجاد شده باشد - یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت نیازمند پرداخت (WAITING_FOR_PAYMENT) باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است  مجوزهای مورد نیاز: `PUBLISH_USER_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
      * @param {String} postToken توکن آگهی دریافت شده از RPC SubmitUserPost. شناسه منحصر به فرد 8-9 کاراکتری برای آگهی ثبت شده توسط کاربر.
      * @param {module:model/PaymentPublishUserPostBody} paymentPublishUserPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentPublishUserPostResponse} and HTTP response
@@ -360,7 +360,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = PaymentPublishUserPostResponse;
@@ -372,8 +372,8 @@ export default class PaymentApi {
     }
 
     /**
-     * Pay for user post submission on behalf of provider
-     * This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
+     * انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
+     * این API امکان پرداخت هزینه انتشار آگهی ثبت شده توسط کاربر از طرف اپلیکیشن شما را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود و آگهی منتشر می‌شود.  **نکات مهم**: - ابتدا آگهی باید با API `SubmitUserPost` ایجاد شده باشد - یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت نیازمند پرداخت (WAITING_FOR_PAYMENT) باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است  مجوزهای مورد نیاز: `PUBLISH_USER_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
      * @param {String} postToken توکن آگهی دریافت شده از RPC SubmitUserPost. شناسه منحصر به فرد 8-9 کاراکتری برای آگهی ثبت شده توسط کاربر.
      * @param {module:model/PaymentPublishUserPostBody} paymentPublishUserPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentPublishUserPostResponse}
@@ -388,7 +388,7 @@ export default class PaymentApi {
 
     /**
      * تمدید آگهی
-     * (Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_RENEW.
+     * این API امکان تمدید آگهی را فراهم می‌کند که دوره نمایش آن در دیوار را افزایش می‌دهد. هزینه از موجودی اپلیکیشن شما کسر می‌شود.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - قبل از تمدید، از `GetPostPricing` برای بررسی هزینه استفاده کنید - یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت PUBLISHED و واجد شرایط تمدید باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است - تمدید، نمایش آگهی را افزایش داده و عمر آن را بازنشانی می‌کند  مجوزهای مورد نیاز: `POST_RENEW`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_RENEW`
      * @param {String} postToken 
      * @param {module:model/PaymentRenewPostBody} paymentRenewPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentRenewPostResponse} and HTTP response
@@ -414,7 +414,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = PaymentRenewPostResponse;
@@ -427,7 +427,7 @@ export default class PaymentApi {
 
     /**
      * تمدید آگهی
-     * (Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_RENEW.
+     * این API امکان تمدید آگهی را فراهم می‌کند که دوره نمایش آن در دیوار را افزایش می‌دهد. هزینه از موجودی اپلیکیشن شما کسر می‌شود.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - قبل از تمدید، از `GetPostPricing` برای بررسی هزینه استفاده کنید - یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت PUBLISHED و واجد شرایط تمدید باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است - تمدید، نمایش آگهی را افزایش داده و عمر آن را بازنشانی می‌کند  مجوزهای مورد نیاز: `POST_RENEW`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_RENEW`
      * @param {String} postToken 
      * @param {module:model/PaymentRenewPostBody} paymentRenewPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentRenewPostResponse}
@@ -442,7 +442,7 @@ export default class PaymentApi {
 
     /**
      * نردبان آگهی
-     * (Limited) Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_REORDER.
+     * این API امکان نردبان کردن آگهی به بالای لیست را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - قبل از نردبان، از `GetPostPricing` برای بررسی هزینه استفاده کنید - یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت PUBLISHED باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است  مجوزهای مورد نیاز: `POST_REORDER`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_REORDER`
      * @param {String} postToken 
      * @param {module:model/PaymentReorderPostBody} paymentReorderPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentReorderPostResponse} and HTTP response
@@ -468,7 +468,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = PaymentReorderPostResponse;
@@ -481,7 +481,7 @@ export default class PaymentApi {
 
     /**
      * نردبان آگهی
-     * (Limited) Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_REORDER.
+     * این API امکان نردبان کردن آگهی به بالای لیست را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - قبل از نردبان، از `GetPostPricing` برای بررسی هزینه استفاده کنید - یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت PUBLISHED باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است  مجوزهای مورد نیاز: `POST_REORDER`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_REORDER`
      * @param {String} postToken 
      * @param {module:model/PaymentReorderPostBody} paymentReorderPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentReorderPostResponse}
@@ -495,9 +495,9 @@ export default class PaymentApi {
 
 
     /**
-     * بازیابی تراکنش کیف پول
-     * (Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.  مجوزهای مورد نیاز: WALLET_PAYMENT.
-     * @param {String} token توکن تراکنشی که می‌خواهید بازیابی کنید
+     * دریافت تراکنش کیف پول
+     * این API امکان دریافت وضعیت فعلی و جزئیات تراکنش پرداخت کیف پول را فراهم می‌کند. برای تایید تکمیل پرداخت قبل از commit کردن تراکنش استفاده کنید.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - وضعیت‌های تراکنش: UNKNOWN، CREATED، EXPIRED، PAID، COMMITTED  مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
+     * @param {String} token توکن تراکنشی که می‌خواهید دریافت کنید
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentRetrieveWalletTransactionResponse} and HTTP response
      */
     paymentRetrieveWalletTransactionWithHttpInfo(token) {
@@ -517,7 +517,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = PaymentRetrieveWalletTransactionResponse;
@@ -529,9 +529,9 @@ export default class PaymentApi {
     }
 
     /**
-     * بازیابی تراکنش کیف پول
-     * (Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.  مجوزهای مورد نیاز: WALLET_PAYMENT.
-     * @param {String} token توکن تراکنشی که می‌خواهید بازیابی کنید
+     * دریافت تراکنش کیف پول
+     * این API امکان دریافت وضعیت فعلی و جزئیات تراکنش پرداخت کیف پول را فراهم می‌کند. برای تایید تکمیل پرداخت قبل از commit کردن تراکنش استفاده کنید.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - وضعیت‌های تراکنش: UNKNOWN، CREATED، EXPIRED، PAID، COMMITTED  مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
+     * @param {String} token توکن تراکنشی که می‌خواهید دریافت کنید
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentRetrieveWalletTransactionResponse}
      */
     paymentRetrieveWalletTransaction(token) {
@@ -543,8 +543,8 @@ export default class PaymentApi {
 
 
     /**
-     * Submit a user payment
-     * Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the `SUBMIT_USER_PAYMENT` OAuth scope.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
+     * ثبت رکورد پرداخت کاربر
+     * این API امکان گزارش پرداخت انجام شده توسط کاربر به سرویس شما را فراهم می‌کند. از این برای اطلاع‌رسانی دیوار درباره تراکنش‌هایی که کاربران از طریق پلتفرم شما پرداخت می‌کنند استفاده کنید.  **نکات مهم**: - باید پرداخت‌ها را در بازه زمانی توافق شده گزارش دهید - `reference_id` باید برای هر تراکنش منحصر به فرد باشد (برای تسویه حساب استفاده می‌شود) - شناسه خدماتی که کاربر برای آنها پرداخت کرده را لیست کنید (مثلاً 'banner', 'title_refinement') - این داده‌ها برای تقسیم درآمد و گزارش مالی استفاده می‌شوند   مجوزهای مورد نیاز: `SUBMIT_USER_PAYMENT`. OAuth scope موردنیاز: `SUBMIT_USER_PAYMENT`
      * @param {module:model/PaymentSubmitUserPaymentRequest} paymentSubmitUserPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -564,7 +564,7 @@ export default class PaymentApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -576,8 +576,8 @@ export default class PaymentApi {
     }
 
     /**
-     * Submit a user payment
-     * Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the `SUBMIT_USER_PAYMENT` OAuth scope.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
+     * ثبت رکورد پرداخت کاربر
+     * این API امکان گزارش پرداخت انجام شده توسط کاربر به سرویس شما را فراهم می‌کند. از این برای اطلاع‌رسانی دیوار درباره تراکنش‌هایی که کاربران از طریق پلتفرم شما پرداخت می‌کنند استفاده کنید.  **نکات مهم**: - باید پرداخت‌ها را در بازه زمانی توافق شده گزارش دهید - `reference_id` باید برای هر تراکنش منحصر به فرد باشد (برای تسویه حساب استفاده می‌شود) - شناسه خدماتی که کاربر برای آنها پرداخت کرده را لیست کنید (مثلاً 'banner', 'title_refinement') - این داده‌ها برای تقسیم درآمد و گزارش مالی استفاده می‌شوند   مجوزهای مورد نیاز: `SUBMIT_USER_PAYMENT`. OAuth scope موردنیاز: `SUBMIT_USER_PAYMENT`
      * @param {module:model/PaymentSubmitUserPaymentRequest} paymentSubmitUserPaymentRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */

@@ -127,7 +127,7 @@ class ChatAPIChatBotSendMessageBody {
         this['buttons'] = buttons;
     }
 /**
-     * Returns توکن برای مدیای ضمیمه شده (در صورت وجود)
+     * Returns توکن فایل ضمیمه شده (در صورت وجود)
      * @return {String}
      */
     getMediaToken() {
@@ -135,8 +135,8 @@ class ChatAPIChatBotSendMessageBody {
     }
 
     /**
-     * Sets توکن برای مدیای ضمیمه شده (در صورت وجود)
-     * @param {String} mediaToken توکن برای مدیای ضمیمه شده (در صورت وجود)
+     * Sets توکن فایل ضمیمه شده (در صورت وجود)
+     * @param {String} mediaToken توکن فایل ضمیمه شده (در صورت وجود)
      */
     setMediaToken(mediaToken) {
         this['media_token'] = mediaToken;
@@ -173,7 +173,7 @@ ChatAPIChatBotSendMessageBody.prototype['text_message'] = undefined;
 ChatAPIChatBotSendMessageBody.prototype['buttons'] = undefined;
 
 /**
- * توکن برای مدیای ضمیمه شده (در صورت وجود)
+ * توکن فایل ضمیمه شده (در صورت وجود)
  * @member {String} media_token
  */
 ChatAPIChatBotSendMessageBody.prototype['media_token'] = undefined;

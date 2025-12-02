@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(KenarApiClient.SemanticCreatePostSemanticBody);
     });
 
-    it('should have the property cost (base name: "cost")', function() {
-      // uncomment below and update the code to test the property cost
+    it('should have the property semantic (base name: "semantic")', function() {
+      // uncomment below and update the code to test the property semantic
       //var instance = new KenarApiClient.SemanticCreatePostSemanticBody();
       //expect(instance).to.be();
     });
 
-    it('should have the property semantic (base name: "semantic")', function() {
-      // uncomment below and update the code to test the property semantic
+    it('should have the property cost (base name: "cost")', function() {
+      // uncomment below and update the code to test the property cost
       //var instance = new KenarApiClient.SemanticCreatePostSemanticBody();
       //expect(instance).to.be();
     });

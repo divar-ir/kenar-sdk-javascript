@@ -5,7 +5,7 @@ All URIs are relative to *https://open-api.divar.ir*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**eventsRegisterEventSubscription**](EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
-[**eventsSendEvent**](EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر با استفاده از API
+[**eventsSendEvent**](EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 اشتراک در رویداد
 
-این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در &#x60;NEW_MESSAGE_ON_POST&#x60; به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در &#x60;POST_UPDATE&#x60; به دامنه &#x60;USER_POSTS_GET&#x60; نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).  مجوزهای مورد نیاز: EVENTS_REGISTER_SUBSCRIPTION.
+این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد &#x60;NEW_MESSAGE_ON_POST&#x60;: نیاز به scope &#x60;CHAT_POST_CONVERSATIONS_READ.post_token&#x60; یا &#x60;CHAT_SUPPLIER_ALL_CONVERSATIONS_READ&#x60; - برای رویداد &#x60;POST_UPDATE&#x60;: نیاز به scope &#x60;USER_POSTS_GET&#x60; - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  مجوزهای مورد نیاز: &#x60;EVENTS_REGISTER_SUBSCRIPTION&#x60;. OAuth scope موردنیاز: &#x60;CHAT_POST_CONVERSATIONS_READ.post_token&#x60; یا &#x60;CHAT_SUPPLIER_ALL_CONVERSATIONS_READ&#x60; یا &#x60;USER_POSTS_GET&#x60;
 
 ### Example
 
@@ -27,6 +27,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.EventsApi();
 let eventsRegisterEventSubscriptionRequest = new KenarApiClient.EventsRegisterEventSubscriptionRequest(); // EventsRegisterEventSubscriptionRequest | 
@@ -51,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -63,9 +66,9 @@ Name | Type | Description  | Notes
 
 > Object eventsSendEvent(opts)
 
-ارسال رویداد به کاربر با استفاده از API
+ارسال رویداد به کاربر
 
-با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.  مجوزهای مورد نیاز: EVENTS_SEND.
+این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  مجوزهای مورد نیاز: &#x60;EVENTS_SEND&#x60;. OAuth scope موردنیاز: &#x60;SEND_EVENT&#x60;
 
 ### Example
 
@@ -77,12 +80,15 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.EventsApi();
 let opts = {
   'message': "message_example", // String | پیام رویداد برای نمایش به کاربر
   'targetType': "targetType_example", // String | هدف رویداد؛ USER یا POST
-  'targetResourceId': "targetResourceId_example" // String | شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.
+  'targetResourceId': "targetResourceId_example" // String | شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد.
 };
 apiInstance.eventsSendEvent(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -99,7 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message** | **String**| پیام رویداد برای نمایش به کاربر | [optional] 
  **targetType** | **String**| هدف رویداد؛ USER یا POST | [optional] 
- **targetResourceId** | **String**| شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد. | [optional] 
+ **targetResourceId** | **String**| شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد. | [optional] 
 
 ### Return type
 
@@ -107,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 

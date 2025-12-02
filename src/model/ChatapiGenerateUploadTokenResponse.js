@@ -69,7 +69,7 @@ class ChatapiGenerateUploadTokenResponse {
     }
 
 /**
-     * Returns توکن کدگذاری شده base64 ایمن برای URL که می‌تواند در نقطه پایانی آپلود استفاده شود
+     * Returns توکن با کدگذاری base64 که می‌توان در endpoint آپلود از آن استفاده کرد
      * @return {String}
      */
     getToken() {
@@ -77,8 +77,8 @@ class ChatapiGenerateUploadTokenResponse {
     }
 
     /**
-     * Sets توکن کدگذاری شده base64 ایمن برای URL که می‌تواند در نقطه پایانی آپلود استفاده شود
-     * @param {String} token توکن کدگذاری شده base64 ایمن برای URL که می‌تواند در نقطه پایانی آپلود استفاده شود
+     * Sets توکن با کدگذاری base64 که می‌توان در endpoint آپلود از آن استفاده کرد
+     * @param {String} token توکن با کدگذاری base64 که می‌توان در endpoint آپلود از آن استفاده کرد
      */
     setToken(token) {
         this['token'] = token;
@@ -89,7 +89,7 @@ class ChatapiGenerateUploadTokenResponse {
 
 
 /**
- * توکن کدگذاری شده base64 ایمن برای URL که می‌تواند در نقطه پایانی آپلود استفاده شود
+ * توکن با کدگذاری base64 که می‌توان در endpoint آپلود از آن استفاده کرد
  * @member {String} token
  */
 ChatapiGenerateUploadTokenResponse.prototype['token'] = undefined;

@@ -72,7 +72,7 @@ class GetPostStatsResponseDailyStats {
     }
 
 /**
-     * Returns تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
+     * Returns تعداد روزانه آمار (مثلاً بازدید)
      * @return {Number}
      */
     getCount() {
@@ -80,8 +80,8 @@ class GetPostStatsResponseDailyStats {
     }
 
     /**
-     * Sets تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
-     * @param {Number} count تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
+     * Sets تعداد روزانه آمار (مثلاً بازدید)
+     * @param {Number} count تعداد روزانه آمار (مثلاً بازدید)
      */
     setCount(count) {
         this['count'] = count;
@@ -107,7 +107,7 @@ class GetPostStatsResponseDailyStats {
 
 
 /**
- * تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)
+ * تعداد روزانه آمار (مثلاً بازدید)
  * @member {Number} count
  */
 GetPostStatsResponseDailyStats.prototype['count'] = undefined;

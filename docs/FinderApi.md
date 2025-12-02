@@ -7,9 +7,9 @@ Method | HTTP request | Description
 [**finderGetPost**](FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 [**finderGetUser**](FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 [**finderGetUser2**](FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
-[**finderGetUserIDByPhone**](FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه دیوار کاربر با شماره تلفن
+[**finderGetUserIDByPhone**](FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر دیوار با شماره تلفن
 [**finderGetUserPosts**](FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
-[**finderSearchPostV2**](FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
+[**finderSearchPostV2**](FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجوی آگهی‌های دیوار
 
 
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 دریافت آگهی دیوار
 
-این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد. می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید  مجوزهای مورد نیاز: GET_POST.
+این API امکان دریافت داده‌های عمومی آگهی با توکن را فراهم می‌کند. جزئیات آگهی شامل داده‌های دسته‌بندی، موقعیت، وضعیت، زمان‌ها و اطلاعات کسب‌وکار برمی‌گردد.  **نکات مهم**: - فقط داده‌های عمومی آگهی برگردانده می‌شوند (فیلدهای خصوصی حذف می‌شوند) - می‌توان هر آگهی منتشر شده‌ای را دریافت کرد، محدود به آگهی‌های خود کاربر نیست  مجوزهای مورد نیاز: &#x60;GET_POST&#x60;
 
 ### Example
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 دریافت اطلاعات کاربر
 
-پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope &#x60;USER_PHONE&#x60; می‌توانید شماره تلفن کاربر را دریافت کنید. با scope &#x60;USER_ID&#x60; می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.   مجوزهای مورد نیاز: USER_RETRIEVE.
+این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth scopeهای اعطا شده بستگی دارد.  **نکات مهم**: - با scope &#x60;USER_PHONE&#x60;: شماره تلفن کاربر برمی‌گردد - با scope &#x60;USER_ID&#x60;: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  مجوزهای مورد نیاز: &#x60;USER_RETRIEVE&#x60;. OAuth scope موردنیاز: &#x60;USER_ID&#x60; یا &#x60;USER_PHONE&#x60;
 
 ### Example
 
@@ -81,6 +81,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.FinderApi();
 let body = {key: null}; // Object | 
@@ -105,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -119,7 +122,7 @@ Name | Type | Description  | Notes
 
 دریافت اطلاعات کاربر
 
-پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope &#x60;USER_PHONE&#x60; می‌توانید شماره تلفن کاربر را دریافت کنید. با scope &#x60;USER_ID&#x60; می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
+این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth scopeهای اعطا شده بستگی دارد.  **نکات مهم**: - با scope &#x60;USER_PHONE&#x60;: شماره تلفن کاربر برمی‌گردد - با scope &#x60;USER_ID&#x60;: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  OAuth scope موردنیاز: &#x60;USER_ID&#x60; یا &#x60;USER_PHONE&#x60;
 
 ### Example
 
@@ -131,6 +134,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.FinderApi();
 apiInstance.finderGetUser2().then((data) => {
@@ -151,7 +157,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -163,9 +169,9 @@ This endpoint does not need any parameter.
 
 > FinderGetUserIDByPhoneResponse finderGetUserIDByPhone(finderGetUserIDByPhoneRequest)
 
-دریافت شناسه دیوار کاربر با شماره تلفن
+دریافت شناسه کاربر دیوار با شماره تلفن
 
-با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.  مجوزهای مورد نیاز: GET_USER_ID_BY_PHONE.
+این API امکان پیدا کردن شناسه کاربر با شماره تلفن را می‌دهد. مناسب برای یکپارچه‌سازی با سیستم‌های CRM یا پشتیبانی.  **نکات مهم**: - شناسه مبهم‌شده برمی‌گردد (یکتا برای هر اپلیکیشن، نه شناسه واقعی کاربر دیوار)   مجوزهای مورد نیاز: &#x60;GET_USER_ID_BY_PHONE&#x60;
 
 ### Example
 
@@ -215,7 +221,7 @@ Name | Type | Description  | Notes
 
 دریافت آگهی‌های کاربر
 
-این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.  مجوزهای مورد نیاز: GET_USER_POSTS.
+این API امکان دریافت لیست آگهی‌های متعلق به کاربر احراز هویت شده را فراهم می‌کند. اطلاعات پایه شامل توکن، عنوان، تصاویر، دسته‌بندی و وضعیت نمایش شماره تلفن برمی‌گردد.  **نکات مهم**: - فقط آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شوند - آگهی‌ها در وضعیت‌های مختلف برگردانده می‌شوند: منتشر شده، در انتظار پرداخت، در انتظار بررسی یا نیازمند اصلاح  مجوزهای مورد نیاز: &#x60;GET_USER_POSTS&#x60;. OAuth scope موردنیاز: &#x60;USER_POSTS_GET&#x60;
 
 ### Example
 
@@ -227,6 +233,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.FinderApi();
 apiInstance.finderGetUserPosts().then((data) => {
@@ -247,7 +256,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -259,9 +268,9 @@ This endpoint does not need any parameter.
 
 > FinderSearchPostV2Response finderSearchPostV2(finderSearchPostsV2Request)
 
-جستجو آگهی‌های دیوار با فیلترهایی
+جستجوی آگهی‌های دیوار
 
-این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند.   مجوزهای مورد نیاز: SEARCH_POST.
+این API امکان جستجوی آگهی‌های منتشر شده دیوار با فیلتر را فراهم می‌کند. می‌توانید بر اساس دسته‌بندی، شهر، محله و فیلدهای ویژه دسته‌بندی مانند محدوده قیمت، متراژ، تعداد اتاق و سال تولید فیلتر کنید.  **نکات مهم**: - آگهی‌ها بر اساس زمان آخرین تغییر مرتب می‌شوند - فقط آگهی‌های منتشر شده برگردانده می‌شوند  مجوزهای مورد نیاز: &#x60;SEARCH_POST&#x60;
 
 ### Example
 

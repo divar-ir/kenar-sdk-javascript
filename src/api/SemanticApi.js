@@ -40,8 +40,8 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی آگهی
-     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
-     * @param {String} token 
+     * این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.  مجوزهای مورد نیاز: `POST_SEMANTIC_CREATE`. OAuth scope موردنیاز: `POST_SEMANTIC_CREATE.post_token`
+     * @param {String} token توکن آگهی
      * @param {module:model/SemanticCreatePostSemanticBody} semanticCreatePostSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -66,7 +66,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -79,8 +79,8 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی آگهی
-     * در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
-     * @param {String} token 
+     * این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.  مجوزهای مورد نیاز: `POST_SEMANTIC_CREATE`. OAuth scope موردنیاز: `POST_SEMANTIC_CREATE.post_token`
+     * @param {String} token توکن آگهی
      * @param {module:model/SemanticCreatePostSemanticBody} semanticCreatePostSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -94,8 +94,8 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
-     * @param {String} phone 
+     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  مجوزهای مورد نیاز: `USER_SEMANTIC_CREATE`. OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
+     * @param {String} phone شماره موبایل کاربر
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SemanticCreateUserSemanticResponse} and HTTP response
      */
@@ -120,7 +120,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SemanticCreateUserSemanticResponse;
@@ -133,8 +133,8 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
-     * @param {String} phone 
+     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  مجوزهای مورد نیاز: `USER_SEMANTIC_CREATE`. OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
+     * @param {String} phone شماره موبایل کاربر
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SemanticCreateUserSemanticResponse}
      */
@@ -148,8 +148,8 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
-     * @param {String} divarUserId 
+     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
+     * @param {String} divarUserId شناسه کاربر دیوار
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SemanticCreateUserSemanticResponse} and HTTP response
      */
@@ -174,7 +174,7 @@ export default class SemanticApi {
       let formParams = {
       };
 
-      let authNames = ['APIKey'];
+      let authNames = ['APIKey', 'OAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SemanticCreateUserSemanticResponse;
@@ -187,8 +187,8 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
-     * @param {String} divarUserId 
+     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
+     * @param {String} divarUserId شناسه کاربر دیوار
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SemanticCreateUserSemanticResponse}
      */
@@ -202,10 +202,10 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
-     * @param {String} phone 
+     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  مجوزهای مورد نیاز: `USER_SEMANTIC_DELETE`
+     * @param {String} phone شماره موبایل کاربر
      * @param {Object} opts Optional parameters
-     * @param {String} [divarUserId] 
+     * @param {String} [divarUserId] شناسه کاربر دیوار
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
     semanticDeleteUserSemanticWithHttpInfo(phone, opts) {
@@ -240,10 +240,10 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
-     * @param {String} phone 
+     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  مجوزهای مورد نیاز: `USER_SEMANTIC_DELETE`
+     * @param {String} phone شماره موبایل کاربر
      * @param {Object} opts Optional parameters
-     * @param {String} opts.divarUserId 
+     * @param {String} opts.divarUserId شناسه کاربر دیوار
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
     semanticDeleteUserSemantic(phone, opts) {
@@ -256,25 +256,27 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
-     * @param {String} divarUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} [phone] 
+     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+     * @param {String} divarUserId شناسه کاربر دیوار
+     * @param {String} phone شماره موبایل کاربر
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    semanticDeleteUserSemantic2WithHttpInfo(divarUserId, opts) {
-      opts = opts || {};
+    semanticDeleteUserSemantic2WithHttpInfo(divarUserId, phone) {
       let postBody = null;
       // verify the required parameter 'divarUserId' is set
       if (divarUserId === undefined || divarUserId === null) {
         throw new Error("Missing the required parameter 'divarUserId' when calling semanticDeleteUserSemantic2");
+      }
+      // verify the required parameter 'phone' is set
+      if (phone === undefined || phone === null) {
+        throw new Error("Missing the required parameter 'phone' when calling semanticDeleteUserSemantic2");
       }
 
       let pathParams = {
         'divar_user_id': divarUserId
       };
       let queryParams = {
-        'phone': opts['phone']
+        'phone': phone
       };
       let headerParams = {
       };
@@ -294,14 +296,13 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
-     * @param {String} divarUserId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.phone 
+     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+     * @param {String} divarUserId شناسه کاربر دیوار
+     * @param {String} phone شماره موبایل کاربر
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    semanticDeleteUserSemantic2(divarUserId, opts) {
-      return this.semanticDeleteUserSemantic2WithHttpInfo(divarUserId, opts)
+    semanticDeleteUserSemantic2(divarUserId, phone) {
+      return this.semanticDeleteUserSemantic2WithHttpInfo(divarUserId, phone)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

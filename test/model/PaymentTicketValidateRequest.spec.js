@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(KenarApiClient.PaymentTicketValidateRequest);
     });
 
-    it('should have the property phoneNumber (base name: "phone_number")', function() {
-      // uncomment below and update the code to test the property phoneNumber
-      //var instance = new KenarApiClient.PaymentTicketValidateRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property serviceCost (base name: "service_cost")', function() {
       // uncomment below and update the code to test the property serviceCost
       //var instance = new KenarApiClient.PaymentTicketValidateRequest();
@@ -68,6 +62,12 @@
 
     it('should have the property ticketUuid (base name: "ticket_uuid")', function() {
       // uncomment below and update the code to test the property ticketUuid
+      //var instance = new KenarApiClient.PaymentTicketValidateRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property phoneNumber (base name: "phone_number")', function() {
+      // uncomment below and update the code to test the property phoneNumber
       //var instance = new KenarApiClient.PaymentTicketValidateRequest();
       //expect(instance).to.be();
     });

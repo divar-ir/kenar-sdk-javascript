@@ -22,10 +22,12 @@ class SemanticCreateUserSemanticBody {
     /**
      * Constructs a new <code>SemanticCreateUserSemanticBody</code>.
      * @alias module:model/SemanticCreateUserSemanticBody
+     * @param phone {String} شماره موبایل کاربر
+     * @param semantic {Object.<String, String>} مپ key-value اطلاعات معنایی برای ذخیره
      */
-    constructor() { 
+    constructor(phone, semantic) { 
         
-        SemanticCreateUserSemanticBody.initialize(this);
+        SemanticCreateUserSemanticBody.initialize(this, phone, semantic);
     }
 
     /**
@@ -33,7 +35,9 @@ class SemanticCreateUserSemanticBody {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, phone, semantic) { 
+        obj['phone'] = phone;
+        obj['semantic'] = semantic;
     }
 
     /**
@@ -47,14 +51,14 @@ class SemanticCreateUserSemanticBody {
         if (data) {
             obj = obj || new SemanticCreateUserSemanticBody();
 
-            if (data.hasOwnProperty('cost')) {
-                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
-            }
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
             }
             if (data.hasOwnProperty('semantic')) {
                 obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('cost')) {
+                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
             }
             if (data.hasOwnProperty('ticket_uuid')) {
                 obj['ticket_uuid'] = ApiClient.convertToType(data['ticket_uuid'], 'String');
@@ -69,6 +73,12 @@ class SemanticCreateUserSemanticBody {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SemanticCreateUserSemanticBody</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of SemanticCreateUserSemanticBody.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['phone'] && !(typeof data['phone'] === 'string' || data['phone'] instanceof String)) {
             throw new Error("Expected the field `phone` to be a primitive type in the JSON string but got " + data['phone']);
@@ -82,19 +92,7 @@ class SemanticCreateUserSemanticBody {
     }
 
 /**
-     * @return {Number}
-     */
-    getCost() {
-        return this.cost;
-    }
-
-    /**
-     * @param {Number} cost
-     */
-    setCost(cost) {
-        this['cost'] = cost;
-    }
-/**
+     * Returns شماره موبایل کاربر
      * @return {String}
      */
     getPhone() {
@@ -102,12 +100,14 @@ class SemanticCreateUserSemanticBody {
     }
 
     /**
-     * @param {String} phone
+     * Sets شماره موبایل کاربر
+     * @param {String} phone شماره موبایل کاربر
      */
     setPhone(phone) {
         this['phone'] = phone;
     }
 /**
+     * Returns مپ key-value اطلاعات معنایی برای ذخیره
      * @return {Object.<String, String>}
      */
     getSemantic() {
@@ -115,12 +115,29 @@ class SemanticCreateUserSemanticBody {
     }
 
     /**
-     * @param {Object.<String, String>} semantic
+     * Sets مپ key-value اطلاعات معنایی برای ذخیره
+     * @param {Object.<String, String>} semantic مپ key-value اطلاعات معنایی برای ذخیره
      */
     setSemantic(semantic) {
         this['semantic'] = semantic;
     }
 /**
+     * Returns هزینه مرتبط با عملیات
+     * @return {Number}
+     */
+    getCost() {
+        return this.cost;
+    }
+
+    /**
+     * Sets هزینه مرتبط با عملیات
+     * @param {Number} cost هزینه مرتبط با عملیات
+     */
+    setCost(cost) {
+        this['cost'] = cost;
+    }
+/**
+     * Returns UUID تیکت پرداخت (اختیاری)
      * @return {String}
      */
     getTicketUuid() {
@@ -128,7 +145,8 @@ class SemanticCreateUserSemanticBody {
     }
 
     /**
-     * @param {String} ticketUuid
+     * Sets UUID تیکت پرداخت (اختیاری)
+     * @param {String} ticketUuid UUID تیکت پرداخت (اختیاری)
      */
     setTicketUuid(ticketUuid) {
         this['ticket_uuid'] = ticketUuid;
@@ -136,24 +154,28 @@ class SemanticCreateUserSemanticBody {
 
 }
 
-
-
-/**
- * @member {Number} cost
- */
-SemanticCreateUserSemanticBody.prototype['cost'] = undefined;
+SemanticCreateUserSemanticBody.RequiredProperties = ["phone", "semantic"];
 
 /**
+ * شماره موبایل کاربر
  * @member {String} phone
  */
 SemanticCreateUserSemanticBody.prototype['phone'] = undefined;
 
 /**
+ * مپ key-value اطلاعات معنایی برای ذخیره
  * @member {Object.<String, String>} semantic
  */
 SemanticCreateUserSemanticBody.prototype['semantic'] = undefined;
 
 /**
+ * هزینه مرتبط با عملیات
+ * @member {Number} cost
+ */
+SemanticCreateUserSemanticBody.prototype['cost'] = undefined;
+
+/**
+ * UUID تیکت پرداخت (اختیاری)
  * @member {String} ticket_uuid
  */
 SemanticCreateUserSemanticBody.prototype['ticket_uuid'] = undefined;

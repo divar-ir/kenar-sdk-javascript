@@ -23,7 +23,7 @@ class PostSubmitPostV2Request {
     /**
      * Constructs a new <code>PostSubmitPostV2Request</code>.
      * @alias module:model/PostSubmitPostV2Request
-     * @param categoryFields {Object} فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+     * @param categoryFields {Object} فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
      * @param generalData {module:model/PostPostGeneralData} 
      */
     constructor(categoryFields, generalData) { 
@@ -90,7 +90,7 @@ class PostSubmitPostV2Request {
     }
 
 /**
-     * Returns فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+     * Returns فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
      * @return {Object}
      */
     getCategoryFields() {
@@ -98,8 +98,8 @@ class PostSubmitPostV2Request {
     }
 
     /**
-     * Sets فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
-     * @param {Object} categoryFields فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+     * Sets فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+     * @param {Object} categoryFields فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
      */
     setCategoryFields(categoryFields) {
         this['category_fields'] = categoryFields;
@@ -138,7 +138,7 @@ class PostSubmitPostV2Request {
 PostSubmitPostV2Request.RequiredProperties = ["category_fields", "general_data"];
 
 /**
- * فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+ * فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
  * @member {Object} category_fields
  */
 PostSubmitPostV2Request.prototype['category_fields'] = undefined;

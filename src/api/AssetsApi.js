@@ -48,8 +48,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
-     * دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست گزینه‌های وضعیت بدنه
+     * این API امکان دریافت گزینه‌های وضعیت بدنه موجود برای دسته‌بندی‌های خودرو را فراهم می‌کند.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetBodyStatusesResponse} and HTTP response
      */
     assetsGetBodyStatusesWithHttpInfo() {
@@ -76,8 +76,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
-     * دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست گزینه‌های وضعیت بدنه
+     * این API امکان دریافت گزینه‌های وضعیت بدنه موجود برای دسته‌بندی‌های خودرو را فراهم می‌کند.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetBodyStatusesResponse}
      */
     assetsGetBodyStatuses() {
@@ -89,8 +89,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت مدل‌های برند در دسته‌بندی دیوار
-     * دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست مدل برندها بر اساس دسته‌بندی
+     * این API امکان دریافت مدل برندها برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - مدل برندها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetBrandModelsResponse} and HTTP response
      */
@@ -123,8 +123,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت مدل‌های برند در دسته‌بندی دیوار
-     * دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست مدل برندها بر اساس دسته‌بندی
+     * این API امکان دریافت مدل برندها برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - مدل برندها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetBrandModelsResponse}
      */
@@ -137,8 +137,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت دسته‌بندی‌های دیوار
-     * دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست همه دسته‌بندی‌ها
+     * این API امکان دریافت همه دسته‌بندی‌های دیوار را فراهم می‌کند. شناسه دسته‌بندی‌ها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetCategoriesResponse} and HTTP response
      */
     assetsGetCategoriesWithHttpInfo() {
@@ -165,8 +165,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت دسته‌بندی‌های دیوار
-     * دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست همه دسته‌بندی‌ها
+     * این API امکان دریافت همه دسته‌بندی‌های دیوار را فراهم می‌کند. شناسه دسته‌بندی‌ها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetCategoriesResponse}
      */
     assetsGetCategories() {
@@ -178,8 +178,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت شهرهای دیوار
-     * دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست همه شهرها
+     * این API امکان دریافت همه شهرهای دیوار را فراهم می‌کند. شناسه شهرها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetCitiesResponse} and HTTP response
      */
     assetsGetCitiesWithHttpInfo() {
@@ -206,8 +206,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت شهرهای دیوار
-     * دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست همه شهرها
+     * این API امکان دریافت همه شهرهای دیوار را فراهم می‌کند. شناسه شهرها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetCitiesResponse}
      */
     assetsGetCities() {
@@ -219,8 +219,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت رنگ‌ها در دسته‌بندی دیوار
-     * دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست رنگ‌ها بر اساس دسته‌بندی
+     * این API امکان دریافت رنگ‌های موجود برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - رنگ‌ها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetColorsResponse} and HTTP response
      */
@@ -253,8 +253,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت رنگ‌ها در دسته‌بندی دیوار
-     * دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست رنگ‌ها بر اساس دسته‌بندی
+     * این API امکان دریافت رنگ‌های موجود برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - رنگ‌ها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
      * @param {String} category 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetColorsResponse}
      */
@@ -267,8 +267,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت مناطق دیوار
-     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست محله‌ها
+     * این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
      * @param {Object} opts Optional parameters
      * @param {String} [citySlug] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetDistrictsResponse} and HTTP response
@@ -299,8 +299,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت مناطق دیوار
-     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست محله‌ها
+     * این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
      * @param {Object} opts Optional parameters
      * @param {String} opts.citySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetDistrictsResponse}
@@ -314,8 +314,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت مناطق دیوار
-     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست محله‌ها
+     * این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
      * @param {String} citySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetDistrictsResponse} and HTTP response
      */
@@ -348,8 +348,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت مناطق دیوار
-     * دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست محله‌ها
+     * این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
      * @param {String} citySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetDistrictsResponse}
      */
@@ -362,8 +362,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-     * دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست گزینه‌های حافظه داخلی
+     * این API امکان دریافت گزینه‌های حافظه داخلی موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetInternalStoragesResponse} and HTTP response
      */
     assetsGetInternalStoragesWithHttpInfo() {
@@ -390,8 +390,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-     * دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست گزینه‌های حافظه داخلی
+     * این API امکان دریافت گزینه‌های حافظه داخلی موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetInternalStoragesResponse}
      */
     assetsGetInternalStorages() {
@@ -403,8 +403,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت دامنه‌های OAuth کنار دیوار
-     * اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
+     * لیست دامنه‌های OAuth
+     * این API لیست OAuth scopeهای موجود برای کنار دیوار را برمی‌گرداند. از این scopeها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر scope شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی scopeها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetOAuthScopesResponse} and HTTP response
      */
     assetsGetOAuthScopesWithHttpInfo() {
@@ -431,8 +431,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت دامنه‌های OAuth کنار دیوار
-     * اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
+     * لیست دامنه‌های OAuth
+     * این API لیست OAuth scopeهای موجود برای کنار دیوار را برمی‌گرداند. از این scopeها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر scope شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی scopeها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetOAuthScopesResponse}
      */
     assetsGetOAuthScopes() {
@@ -444,8 +444,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت مجوزهای کنار دیوار
-     * این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
+     * لیست مجوزهای کنار دیوار
+     * این API امکان دریافت مجوزهای موجود کنار دیوار را فراهم می‌کند. این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند و با دامنه‌های OAuth متفاوت هستند.  **نکات مهم**: - مجوزها برای استفاده داخلی هستند و اپلیکیشن‌ها نباید مستقیماً به آنها وابسته باشند - هر مجوز شامل وضعیت چرخه حیات آن است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetPermissionsResponse} and HTTP response
      */
     assetsGetPermissionsWithHttpInfo() {
@@ -472,8 +472,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت مجوزهای کنار دیوار
-     * این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
+     * لیست مجوزهای کنار دیوار
+     * این API امکان دریافت مجوزهای موجود کنار دیوار را فراهم می‌کند. این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند و با دامنه‌های OAuth متفاوت هستند.  **نکات مهم**: - مجوزها برای استفاده داخلی هستند و اپلیکیشن‌ها نباید مستقیماً به آنها وابسته باشند - هر مجوز شامل وضعیت چرخه حیات آن است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetPermissionsResponse}
      */
     assetsGetPermissions() {
@@ -485,8 +485,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-     * دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست گزینه‌های حافظه RAM
+     * این API امکان دریافت گزینه‌های حافظه RAM موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetRamMemoriesResponse} and HTTP response
      */
     assetsGetRamMemoriesWithHttpInfo() {
@@ -513,8 +513,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-     * دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+     * لیست گزینه‌های حافظه RAM
+     * این API امکان دریافت گزینه‌های حافظه RAM موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetRamMemoriesResponse}
      */
     assetsGetRamMemories() {
@@ -526,8 +526,8 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت انواع سرویس موجود در کنار دیوار
-     * این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
+     * لیست انواع سرویس
+     * این API امکان دریافت انواع سرویس موجود در کنار دیوار را فراهم می‌کند. انواع سرویس برای گروه‌بندی سرویس‌های مشابه استفاده می‌شوند.  **نکات مهم**: - می‌توان انواع سرویس جدید را در صورت نیاز درخواست داد
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetServiceTypesResponse} and HTTP response
      */
     assetsGetServiceTypesWithHttpInfo() {
@@ -554,8 +554,8 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت انواع سرویس موجود در کنار دیوار
-     * این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
+     * لیست انواع سرویس
+     * این API امکان دریافت انواع سرویس موجود در کنار دیوار را فراهم می‌کند. انواع سرویس برای گروه‌بندی سرویس‌های مشابه استفاده می‌شوند.  **نکات مهم**: - می‌توان انواع سرویس جدید را در صورت نیاز درخواست داد
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetServiceTypesResponse}
      */
     assetsGetServiceTypes() {
@@ -567,7 +567,7 @@ export default class AssetsApi {
 
 
     /**
-     * دریافت قالب ثبت
+     * دریافت schema ثبت آگهی برای دسته‌بندی
      * این API به شما امکان دریافت قالب ثبت آگهی برای یک دسته‌بندی مشخص را می‌دهد. پاسخ در قالب JSON Schema است.  قالب تعریف کننده ساختار و قوانین برای فیلدهای فرم زمانی که آگهی در یک دسته‌بندی مشخص ثبت می‌شود. هر فیلد در قالب می‌تواند یکی از انواع زیر را داشته باشد:  **انواع اصلی:** - `string`: فیلدهای ورودی متنی (مانند عنوان، توضیحات، مقادیر زمانی) - `integer`: فیلدهای ورودی عددی برای اعداد صحیح (مانند قیمت، تعداد، اندازه) - `float`: فیلدهای ورودی عددی برای اعداد اعشاری - `boolean`: فیلدهای ورودی بولین (صحیح/غلط) - `array`: فیلدهای ورودی چندگانه که امکان انتخاب چند مقدار را دارند  **فیلدهای Enum:** فیلدها با گزینه‌های پیش‌تعریف شده از `enum` و `enumNames` استفاده می‌کنند: - `enum`: آرایه از مقادیر داخلی استفاده شده برای ارتباط API - `enumNames`: آرایه از برچسب‌های نمایشی نشان داده شده به کاربر (معمولاً به زبان فارسی) - اینها برای فیلدهای ورودی چندگانه (مانند انتخاب طبقه، امکان استفاده از پارکینگ) استفاده می‌شوند  **فیلدهای آرایه با Enum:** فیلدهای ورودی چندگانه ترکیب `type: \"array\"` با کلید Enum را دارند: - `items.enum`: گزینه‌های موجود برای انتخاب - `items.enumNames`: برچسب‌های نمایشی برای هر گزینه - کاربران می‌توانند چند مقدار را انتخاب کنند (مانند امکانات رفاهی، سیستم‌های گرمایش)  **ویژگی‌های فیلد:** - `title`: نام نمایشی فارسی برای فیلد - `required`: آرایه از نام فیلدهای اجباری که باید ارائه شوند - `type`: نوع داده فیلد  **مثال استفاده:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
      * @param {String} categorySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetSubmitSchemaResponse} and HTTP response
@@ -601,7 +601,7 @@ export default class AssetsApi {
     }
 
     /**
-     * دریافت قالب ثبت
+     * دریافت schema ثبت آگهی برای دسته‌بندی
      * این API به شما امکان دریافت قالب ثبت آگهی برای یک دسته‌بندی مشخص را می‌دهد. پاسخ در قالب JSON Schema است.  قالب تعریف کننده ساختار و قوانین برای فیلدهای فرم زمانی که آگهی در یک دسته‌بندی مشخص ثبت می‌شود. هر فیلد در قالب می‌تواند یکی از انواع زیر را داشته باشد:  **انواع اصلی:** - `string`: فیلدهای ورودی متنی (مانند عنوان، توضیحات، مقادیر زمانی) - `integer`: فیلدهای ورودی عددی برای اعداد صحیح (مانند قیمت، تعداد، اندازه) - `float`: فیلدهای ورودی عددی برای اعداد اعشاری - `boolean`: فیلدهای ورودی بولین (صحیح/غلط) - `array`: فیلدهای ورودی چندگانه که امکان انتخاب چند مقدار را دارند  **فیلدهای Enum:** فیلدها با گزینه‌های پیش‌تعریف شده از `enum` و `enumNames` استفاده می‌کنند: - `enum`: آرایه از مقادیر داخلی استفاده شده برای ارتباط API - `enumNames`: آرایه از برچسب‌های نمایشی نشان داده شده به کاربر (معمولاً به زبان فارسی) - اینها برای فیلدهای ورودی چندگانه (مانند انتخاب طبقه، امکان استفاده از پارکینگ) استفاده می‌شوند  **فیلدهای آرایه با Enum:** فیلدهای ورودی چندگانه ترکیب `type: \"array\"` با کلید Enum را دارند: - `items.enum`: گزینه‌های موجود برای انتخاب - `items.enumNames`: برچسب‌های نمایشی برای هر گزینه - کاربران می‌توانند چند مقدار را انتخاب کنند (مانند امکانات رفاهی، سیستم‌های گرمایش)  **ویژگی‌های فیلد:** - `title`: نام نمایشی فارسی برای فیلد - `required`: آرایه از نام فیلدهای اجباری که باید ارائه شوند - `type`: نوع داده فیلد  **مثال استفاده:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
      * @param {String} categorySlug 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetSubmitSchemaResponse}

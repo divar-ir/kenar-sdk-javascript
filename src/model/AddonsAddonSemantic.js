@@ -31,7 +31,7 @@ import AddonsAddonSemanticStatus from './AddonsAddonSemanticStatus';
 class AddonsAddonSemantic {
     /**
      * Constructs a new <code>AddonsAddonSemantic</code>.
-     * این پیام استخراج شده توسط OpenPlatform از اطلاعات معنایی ارائه‌دهنده سرویس است. راهنماها:  - همیشه بررسی کنید که آیا فیلد یا مقدار enum مناسبی قبل از  افزودن وجود دارد.  - مقدار صفر هر enum باید {ENUM_NAME}_UNSPECIFIED باشد.  - مقادیر Enum نباید با هیچ آگهی خاص یا صفت شخص  مطابقت داشته باشد.
+     * پیام استخراج‌شده توسط OpenPlatform از semantic ارائه‌دهنده سرویس. راهنما: - قبل از افزودن enum جدید، بررسی کنید که آیا مقدار مناسبی وجود دارد. - مقدار صفر هر enum باید {ENUM_NAME}_UNSPECIFIED باشد. - مقادیر Enum نباید مختص آگهی یا شخص خاصی باشند.
      * @alias module:model/AddonsAddonSemantic
      */
     constructor() { 

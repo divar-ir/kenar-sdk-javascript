@@ -24,11 +24,11 @@ class PostPostGeneralData {
     /**
      * Constructs a new <code>PostPostGeneralData</code>.
      * @alias module:model/PostPostGeneralData
-     * @param categorySlug {String} نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://kenar.divar.dev/openapi-doc/assets-get-categories/
-     * @param chatEnabled {Boolean} امکان چت فعال باشد
+     * @param categorySlug {String} slug دسته‌بندی. لیست دسته‌بندی‌ها: https://kenar.divar.dev/openapi-doc/assets-get-categories/
+     * @param chatEnabled {Boolean} فعال بودن چت
      * @param city {String} شهر آگهی
      * @param description {String} توضیحات آگهی
-     * @param hidePhone {Boolean} عدم نمایش شماره تماس به کاربران
+     * @param hidePhone {Boolean} مخفی کردن شماره تماس از کاربران
      * @param images {Array.<String>} 
      * @param locationType {module:model/PostLocationType} 
      * @param title {String} عنوان آگهی
@@ -150,7 +150,7 @@ class PostPostGeneralData {
     }
 
 /**
-     * Returns نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://kenar.divar.dev/openapi-doc/assets-get-categories/
+     * Returns slug دسته‌بندی. لیست دسته‌بندی‌ها: https://kenar.divar.dev/openapi-doc/assets-get-categories/
      * @return {String}
      */
     getCategorySlug() {
@@ -158,14 +158,14 @@ class PostPostGeneralData {
     }
 
     /**
-     * Sets نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://kenar.divar.dev/openapi-doc/assets-get-categories/
-     * @param {String} categorySlug نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://kenar.divar.dev/openapi-doc/assets-get-categories/
+     * Sets slug دسته‌بندی. لیست دسته‌بندی‌ها: https://kenar.divar.dev/openapi-doc/assets-get-categories/
+     * @param {String} categorySlug slug دسته‌بندی. لیست دسته‌بندی‌ها: https://kenar.divar.dev/openapi-doc/assets-get-categories/
      */
     setCategorySlug(categorySlug) {
         this['category_slug'] = categorySlug;
     }
 /**
-     * Returns امکان چت فعال باشد
+     * Returns فعال بودن چت
      * @return {Boolean}
      */
     getChatEnabled() {
@@ -173,8 +173,8 @@ class PostPostGeneralData {
     }
 
     /**
-     * Sets امکان چت فعال باشد
-     * @param {Boolean} chatEnabled امکان چت فعال باشد
+     * Sets فعال بودن چت
+     * @param {Boolean} chatEnabled فعال بودن چت
      */
     setChatEnabled(chatEnabled) {
         this['chat_enabled'] = chatEnabled;
@@ -210,7 +210,7 @@ class PostPostGeneralData {
         this['description'] = description;
     }
 /**
-     * Returns عدم نمایش شماره تماس به کاربران
+     * Returns مخفی کردن شماره تماس از کاربران
      * @return {Boolean}
      */
     getHidePhone() {
@@ -218,8 +218,8 @@ class PostPostGeneralData {
     }
 
     /**
-     * Sets عدم نمایش شماره تماس به کاربران
-     * @param {Boolean} hidePhone عدم نمایش شماره تماس به کاربران
+     * Sets مخفی کردن شماره تماس از کاربران
+     * @param {Boolean} hidePhone مخفی کردن شماره تماس از کاربران
      */
     setHidePhone(hidePhone) {
         this['hide_phone'] = hidePhone;
@@ -329,13 +329,13 @@ class PostPostGeneralData {
 PostPostGeneralData.RequiredProperties = ["category_slug", "chat_enabled", "city", "description", "hide_phone", "images", "location_type", "title"];
 
 /**
- * نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://kenar.divar.dev/openapi-doc/assets-get-categories/
+ * slug دسته‌بندی. لیست دسته‌بندی‌ها: https://kenar.divar.dev/openapi-doc/assets-get-categories/
  * @member {String} category_slug
  */
 PostPostGeneralData.prototype['category_slug'] = undefined;
 
 /**
- * امکان چت فعال باشد
+ * فعال بودن چت
  * @member {Boolean} chat_enabled
  */
 PostPostGeneralData.prototype['chat_enabled'] = undefined;
@@ -353,7 +353,7 @@ PostPostGeneralData.prototype['city'] = undefined;
 PostPostGeneralData.prototype['description'] = undefined;
 
 /**
- * عدم نمایش شماره تماس به کاربران
+ * مخفی کردن شماره تماس از کاربران
  * @member {Boolean} hide_phone
  */
 PostPostGeneralData.prototype['hide_phone'] = undefined;

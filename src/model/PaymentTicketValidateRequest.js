@@ -22,10 +22,12 @@ class PaymentTicketValidateRequest {
     /**
      * Constructs a new <code>PaymentTicketValidateRequest</code>.
      * @alias module:model/PaymentTicketValidateRequest
+     * @param serviceCost {Number} هزینه سرویس به ریال
+     * @param ticketUuid {String} شناسه منحصر به فرد تیکت پرداخت
      */
-    constructor() { 
+    constructor(serviceCost, ticketUuid) { 
         
-        PaymentTicketValidateRequest.initialize(this);
+        PaymentTicketValidateRequest.initialize(this, serviceCost, ticketUuid);
     }
 
     /**
@@ -33,7 +35,9 @@ class PaymentTicketValidateRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, serviceCost, ticketUuid) { 
+        obj['service_cost'] = serviceCost;
+        obj['ticket_uuid'] = ticketUuid;
     }
 
     /**
@@ -47,14 +51,14 @@ class PaymentTicketValidateRequest {
         if (data) {
             obj = obj || new PaymentTicketValidateRequest();
 
-            if (data.hasOwnProperty('phone_number')) {
-                obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
-            }
             if (data.hasOwnProperty('service_cost')) {
                 obj['service_cost'] = ApiClient.convertToType(data['service_cost'], 'Number');
             }
             if (data.hasOwnProperty('ticket_uuid')) {
                 obj['ticket_uuid'] = ApiClient.convertToType(data['ticket_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('phone_number')) {
+                obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
             if (data.hasOwnProperty('user_id')) {
                 obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
@@ -69,13 +73,19 @@ class PaymentTicketValidateRequest {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PaymentTicketValidateRequest</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['phone_number'] && !(typeof data['phone_number'] === 'string' || data['phone_number'] instanceof String)) {
-            throw new Error("Expected the field `phone_number` to be a primitive type in the JSON string but got " + data['phone_number']);
+        // check to make sure all required properties are present in the JSON string
+        for (const property of PaymentTicketValidateRequest.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
         }
         // ensure the json data is a string
         if (data['ticket_uuid'] && !(typeof data['ticket_uuid'] === 'string' || data['ticket_uuid'] instanceof String)) {
             throw new Error("Expected the field `ticket_uuid` to be a primitive type in the JSON string but got " + data['ticket_uuid']);
+        }
+        // ensure the json data is a string
+        if (data['phone_number'] && !(typeof data['phone_number'] === 'string' || data['phone_number'] instanceof String)) {
+            throw new Error("Expected the field `phone_number` to be a primitive type in the JSON string but got " + data['phone_number']);
         }
         // ensure the json data is a string
         if (data['user_id'] && !(typeof data['user_id'] === 'string' || data['user_id'] instanceof String)) {
@@ -86,19 +96,7 @@ class PaymentTicketValidateRequest {
     }
 
 /**
-     * @return {String}
-     */
-    getPhoneNumber() {
-        return this.phone_number;
-    }
-
-    /**
-     * @param {String} phoneNumber
-     */
-    setPhoneNumber(phoneNumber) {
-        this['phone_number'] = phoneNumber;
-    }
-/**
+     * Returns هزینه سرویس به ریال
      * @return {Number}
      */
     getServiceCost() {
@@ -106,12 +104,14 @@ class PaymentTicketValidateRequest {
     }
 
     /**
-     * @param {Number} serviceCost
+     * Sets هزینه سرویس به ریال
+     * @param {Number} serviceCost هزینه سرویس به ریال
      */
     setServiceCost(serviceCost) {
         this['service_cost'] = serviceCost;
     }
 /**
+     * Returns شناسه منحصر به فرد تیکت پرداخت
      * @return {String}
      */
     getTicketUuid() {
@@ -119,12 +119,29 @@ class PaymentTicketValidateRequest {
     }
 
     /**
-     * @param {String} ticketUuid
+     * Sets شناسه منحصر به فرد تیکت پرداخت
+     * @param {String} ticketUuid شناسه منحصر به فرد تیکت پرداخت
      */
     setTicketUuid(ticketUuid) {
         this['ticket_uuid'] = ticketUuid;
     }
 /**
+     * Returns شماره تلفن کاربر (به جای آن از user_id استفاده کنید)
+     * @return {String}
+     */
+    getPhoneNumber() {
+        return this.phone_number;
+    }
+
+    /**
+     * Sets شماره تلفن کاربر (به جای آن از user_id استفاده کنید)
+     * @param {String} phoneNumber شماره تلفن کاربر (به جای آن از user_id استفاده کنید)
+     */
+    setPhoneNumber(phoneNumber) {
+        this['phone_number'] = phoneNumber;
+    }
+/**
+     * Returns شناسه منحصر به فرد کاربر
      * @return {String}
      */
     getUserId() {
@@ -132,7 +149,8 @@ class PaymentTicketValidateRequest {
     }
 
     /**
-     * @param {String} userId
+     * Sets شناسه منحصر به فرد کاربر
+     * @param {String} userId شناسه منحصر به فرد کاربر
      */
     setUserId(userId) {
         this['user_id'] = userId;
@@ -140,24 +158,28 @@ class PaymentTicketValidateRequest {
 
 }
 
-
-
-/**
- * @member {String} phone_number
- */
-PaymentTicketValidateRequest.prototype['phone_number'] = undefined;
+PaymentTicketValidateRequest.RequiredProperties = ["service_cost", "ticket_uuid"];
 
 /**
+ * هزینه سرویس به ریال
  * @member {Number} service_cost
  */
 PaymentTicketValidateRequest.prototype['service_cost'] = undefined;
 
 /**
+ * شناسه منحصر به فرد تیکت پرداخت
  * @member {String} ticket_uuid
  */
 PaymentTicketValidateRequest.prototype['ticket_uuid'] = undefined;
 
 /**
+ * شماره تلفن کاربر (به جای آن از user_id استفاده کنید)
+ * @member {String} phone_number
+ */
+PaymentTicketValidateRequest.prototype['phone_number'] = undefined;
+
+/**
+ * شناسه منحصر به فرد کاربر
  * @member {String} user_id
  */
 PaymentTicketValidateRequest.prototype['user_id'] = undefined;

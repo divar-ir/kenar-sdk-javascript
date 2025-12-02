@@ -26,7 +26,7 @@ class PostHomePresellFields {
     /**
      * Constructs a new <code>PostHomePresellFields</code>.
      * @alias module:model/PostHomePresellFields
-     * @param hasOwnImage {Boolean} تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * @param hasOwnImage {Boolean} آیا تصاویر واقعی ملک هستند (نه تزئینی)
      */
     constructor(hasOwnImage) { 
         
@@ -126,7 +126,7 @@ class PostHomePresellFields {
     }
 
 /**
-     * Returns تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * Returns آیا تصاویر واقعی ملک هستند (نه تزئینی)
      * @return {Boolean}
      */
     getHasOwnImage() {
@@ -134,8 +134,8 @@ class PostHomePresellFields {
     }
 
     /**
-     * Sets تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
-     * @param {Boolean} hasOwnImage تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * Sets آیا تصاویر واقعی ملک هستند (نه تزئینی)
+     * @param {Boolean} hasOwnImage آیا تصاویر واقعی ملک هستند (نه تزئینی)
      */
     setHasOwnImage(hasOwnImage) {
         this['has_own_image'] = hasOwnImage;
@@ -305,7 +305,7 @@ class PostHomePresellFields {
 PostHomePresellFields.RequiredProperties = ["has_own_image"];
 
 /**
- * تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+ * آیا تصاویر واقعی ملک هستند (نه تزئینی)
  * @member {Boolean} has_own_image
  */
 PostHomePresellFields.prototype['has_own_image'] = undefined;

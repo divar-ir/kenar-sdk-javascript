@@ -29,7 +29,7 @@ class PostTemporaryResidenceFields {
      * @alias module:model/PostTemporaryResidenceFields
      * @param area {Number} متراژ اقامتگاه به متر مربع
      * @param extraPersonCapacity {Number} تعداد افراد اضافه مجاز در اقامتگاه
-     * @param hasOwnImage {Boolean} تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * @param hasOwnImage {Boolean} آیا تصاویر واقعی ملک هستند (نه تزئینی)
      * @param priceCostPerExtraPerson {String} هزینه هر نفر اضافه به ازای هر شب به تومان
      * @param priceRegularDays {String} قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان
      * @param priceSpecialDays {String} قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان
@@ -218,7 +218,7 @@ class PostTemporaryResidenceFields {
         this['extra_person_capacity'] = extraPersonCapacity;
     }
 /**
-     * Returns تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * Returns آیا تصاویر واقعی ملک هستند (نه تزئینی)
      * @return {Boolean}
      */
     getHasOwnImage() {
@@ -226,8 +226,8 @@ class PostTemporaryResidenceFields {
     }
 
     /**
-     * Sets تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
-     * @param {Boolean} hasOwnImage تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * Sets آیا تصاویر واقعی ملک هستند (نه تزئینی)
+     * @param {Boolean} hasOwnImage آیا تصاویر واقعی ملک هستند (نه تزئینی)
      */
     setHasOwnImage(hasOwnImage) {
         this['has_own_image'] = hasOwnImage;
@@ -480,7 +480,7 @@ PostTemporaryResidenceFields.prototype['area'] = undefined;
 PostTemporaryResidenceFields.prototype['extra_person_capacity'] = undefined;
 
 /**
- * تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+ * آیا تصاویر واقعی ملک هستند (نه تزئینی)
  * @member {Boolean} has_own_image
  */
 PostTemporaryResidenceFields.prototype['has_own_image'] = undefined;

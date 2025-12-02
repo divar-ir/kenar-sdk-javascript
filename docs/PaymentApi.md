@@ -4,17 +4,17 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**paymentCommitWalletTransaction**](PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
+[**paymentCommitWalletTransaction**](PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | نهایی کردن تراکنش کیف پول
 [**paymentCreateWalletPayment**](PaymentApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
 [**paymentGetBalance**](PaymentApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
-[**paymentGetPostPricing**](PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
+[**paymentGetPostPricing**](PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت قیمت خدمات آگهی
 [**paymentGetTransaction**](PaymentApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
 [**paymentListTransactions**](PaymentApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
-[**paymentPublishUserPost**](PaymentApi.md#paymentPublishUserPost) | **POST** /experimental/open-platform/post/{post_token}/publish | Pay for user post submission on behalf of provider
+[**paymentPublishUserPost**](PaymentApi.md#paymentPublishUserPost) | **POST** /experimental/open-platform/post/{post_token}/publish | انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
 [**paymentRenewPost**](PaymentApi.md#paymentRenewPost) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
 [**paymentReorderPost**](PaymentApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
-[**paymentRetrieveWalletTransaction**](PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
-[**paymentSubmitUserPayment**](PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | Submit a user payment
+[**paymentRetrieveWalletTransaction**](PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | دریافت تراکنش کیف پول
+[**paymentSubmitUserPayment**](PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت رکورد پرداخت کاربر
 
 
 
@@ -22,9 +22,9 @@ Method | HTTP request | Description
 
 > PaymentCommitWalletTransactionResponse paymentCommitWalletTransaction(paymentCommitWalletTransactionRequest)
 
-تایید تراکنش کیف پول
+نهایی کردن تراکنش کیف پول
 
-(Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+این API تراکنش پرداخت کیف پول را پس از پرداخت موفق نهایی می‌کند.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - فقط تراکنش‌هایی که در وضعیت PAID هستند را نهایی کنید  مجوزهای مورد نیاز: &#x60;WALLET_PAYMENT&#x60;. OAuth scope موردنیاز: &#x60;CREATE_WALLET_PAYMENT&#x60;
 
 ### Example
 
@@ -36,6 +36,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let paymentCommitWalletTransactionRequest = new KenarApiClient.PaymentCommitWalletTransactionRequest(); // PaymentCommitWalletTransactionRequest | 
@@ -60,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -74,7 +77,7 @@ Name | Type | Description  | Notes
 
 ایجاد پرداخت کیف پول
 
-(Limited) Using this API you can start a payment transaction from the users wallet.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+این API امکان شروع تراکنش پرداخت از کیف پول دیوار کاربر را فراهم می‌کند. کاربر برای تکمیل پرداخت هدایت می‌شود و می‌توانید وضعیت تراکنش را پیگیری کنید.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - کاربر برای تکمیل تراکنش به آدرس پرداخت هدایت می‌شود - پس از پرداخت، کاربر به &#x60;redirect_url&#x60; مشخص شده شما هدایت می‌شود - از &#x60;RetrieveWalletTransaction&#x60; برای بررسی وضعیت پرداخت استفاده کنید - از &#x60;CommitWalletTransaction&#x60; برای نهایی کردن تراکنش پس از پرداخت موفق استفاده کنید   مجوزهای مورد نیاز: &#x60;WALLET_PAYMENT&#x60;. OAuth scope موردنیاز: &#x60;CREATE_WALLET_PAYMENT&#x60;
 
 ### Example
 
@@ -86,6 +89,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let paymentCreateWalletPaymentRequest = new KenarApiClient.PaymentCreateWalletPaymentRequest(); // PaymentCreateWalletPaymentRequest | 
@@ -110,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -124,7 +130,7 @@ Name | Type | Description  | Notes
 
 دریافت موجودی اپلیکیشن
 
-(Limited) Using this API you can retrieve current balance of your app.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
+این API امکان دریافت موجودی فعلی اپلیکیشن شما به ریال را فراهم می‌کند. برای نظارت بر موجودی حساب قبل از انجام عملیات‌های پولی استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - موجودی به ریال ایران برگردانده می‌شود  مجوزهای مورد نیاز: &#x60;BALANCE_RETRIEVE&#x60;
 
 ### Example
 
@@ -168,9 +174,9 @@ This endpoint does not need any parameter.
 
 > PaymentGetPostPricingResponse paymentGetPostPricing(postToken)
 
-Retrieve the cost of the service
+دریافت قیمت خدمات آگهی
 
-Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
+این API امکان دریافت اطلاعات قیمت‌گذاری برای خدمات مرتبط با آگهی را فراهم می‌کند. قبل از انجام عملیات‌های پولی مانند نردبان، تمدید یا ثبت آگهی از این برای بررسی هزینه‌ها استفاده کنید.  **نکات مهم**: - قیمت‌گذاری مختص اپلیکیشن شما است و ممکن است با قیمت‌گذاری استاندارد دیوار متفاوت باشد - قیمت‌ها ممکن است بر اساس دسته‌بندی و شهر آگهی متفاوت باشند - فلگ &#x60;available&#x60; نشان می‌دهد که آیا سرویس برای این آگهی قابل اعمال است  مجوزهای مورد نیاز: &#x60;POST_PRICING_RETRIEVE&#x60;. OAuth scope موردنیاز: &#x60;PAYMENT_ALL_POSTS_PRICING_READ&#x60;
 
 ### Example
 
@@ -182,6 +188,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let postToken = "postToken_example"; // String | شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
@@ -206,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -220,7 +229,7 @@ Name | Type | Description  | Notes
 
 دریافت جزئیات تراکنش
 
-(Limited) Using this API you can retrieve transaction details.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
+این API امکان دریافت اطلاعات دقیق یک تراکنش خاص با شناسه آن را فراهم می‌کند. برای پیگیری وضعیت تراکنش، هزینه‌ها و متادیتا استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - شناسه تراکنش همان UUID است که هنگام ایجاد تراکنش ارسال کردید - وضعیت‌های تراکنش: PENDING، COMPLETED، FAILED، REFUNDED - انواع تراکنش: REORDER، SUBMIT، RENEW - برای تایید تکمیل تراکنش پس از عملیات‌های پولی استفاده کنید  مجوزهای مورد نیاز: &#x60;TRANSACTION_RETRIEVE&#x60;
 
 ### Example
 
@@ -270,7 +279,7 @@ Name | Type | Description  | Notes
 
 لیست تراکنش‌ها
 
-(Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.  مجوزهای مورد نیاز: TRANSACTION_LIST.
+این API امکان دریافت لیست صفحه‌بندی شده از تراکنش‌های اپلیکیشن شما را فراهم می‌کند. برای تاریخچه تراکنش، ممیزی و تسویه حساب استفاده کنید.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - نتایج صفحه‌بندی شده هستند - از &#x60;page_size&#x60; برای کنترل تعداد آیتم‌ها در هر صفحه استفاده کنید - از &#x60;page_token&#x60; در پاسخ برای دریافت صفحه بعدی استفاده کنید - تراکنش‌ها بر اساس زمان ایجاد مرتب می‌شوند (جدیدترین اول)  مجوزهای مورد نیاز: &#x60;TRANSACTION_LIST&#x60;
 
 ### Example
 
@@ -285,7 +294,7 @@ APIKey.apiKey = 'YOUR API KEY';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let opts = {
-  'pageSize': 56, // Number | تعداد تراکنش‌ها برای برگرداندن در هر صفحه
+  'pageSize': 56, // Number | تعداد تراکنش‌ها در هر صفحه
   'pageToken': "pageToken_example" // String | توکن برای صفحه بعدی نتایج
 };
 apiInstance.paymentListTransactions(opts).then((data) => {
@@ -301,7 +310,7 @@ apiInstance.paymentListTransactions(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **Number**| تعداد تراکنش‌ها برای برگرداندن در هر صفحه | [optional] 
+ **pageSize** | **Number**| تعداد تراکنش‌ها در هر صفحه | [optional] 
  **pageToken** | **String**| توکن برای صفحه بعدی نتایج | [optional] 
 
 ### Return type
@@ -322,9 +331,9 @@ Name | Type | Description  | Notes
 
 > PaymentPublishUserPostResponse paymentPublishUserPost(postToken, paymentPublishUserPostBody)
 
-Pay for user post submission on behalf of provider
+انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
 
-This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
+این API امکان پرداخت هزینه انتشار آگهی ثبت شده توسط کاربر از طرف اپلیکیشن شما را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود و آگهی منتشر می‌شود.  **نکات مهم**: - ابتدا آگهی باید با API &#x60;SubmitUserPost&#x60; ایجاد شده باشد - یک &#x60;id&#x60; منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت نیازمند پرداخت (WAITING_FOR_PAYMENT) باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است  مجوزهای مورد نیاز: &#x60;PUBLISH_USER_POST&#x60;. OAuth scope موردنیاز: &#x60;SUBMIT_USER_POST&#x60;
 
 ### Example
 
@@ -336,6 +345,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let postToken = "postToken_example"; // String | توکن آگهی دریافت شده از RPC SubmitUserPost. شناسه منحصر به فرد 8-9 کاراکتری برای آگهی ثبت شده توسط کاربر.
@@ -362,7 +374,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -376,7 +388,7 @@ Name | Type | Description  | Notes
 
 تمدید آگهی
 
-(Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_RENEW.
+این API امکان تمدید آگهی را فراهم می‌کند که دوره نمایش آن در دیوار را افزایش می‌دهد. هزینه از موجودی اپلیکیشن شما کسر می‌شود.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - قبل از تمدید، از &#x60;GetPostPricing&#x60; برای بررسی هزینه استفاده کنید - یک &#x60;id&#x60; منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت PUBLISHED و واجد شرایط تمدید باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است - تمدید، نمایش آگهی را افزایش داده و عمر آن را بازنشانی می‌کند  مجوزهای مورد نیاز: &#x60;POST_RENEW&#x60;. OAuth scope موردنیاز: &#x60;PAYMENT_ALL_POSTS_RENEW&#x60;
 
 ### Example
 
@@ -388,6 +400,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let postToken = "postToken_example"; // String | 
@@ -414,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -428,7 +443,7 @@ Name | Type | Description  | Notes
 
 نردبان آگهی
 
-(Limited) Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_REORDER.
+این API امکان نردبان کردن آگهی به بالای لیست را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود.  **نکات مهم**: - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است - قبل از نردبان، از &#x60;GetPostPricing&#x60; برای بررسی هزینه استفاده کنید - یک &#x60;id&#x60; منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید - آگهی باید در وضعیت PUBLISHED باشد - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است  مجوزهای مورد نیاز: &#x60;POST_REORDER&#x60;. OAuth scope موردنیاز: &#x60;PAYMENT_ALL_POSTS_REORDER&#x60;
 
 ### Example
 
@@ -440,6 +455,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let postToken = "postToken_example"; // String | 
@@ -466,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -478,9 +496,9 @@ Name | Type | Description  | Notes
 
 > PaymentRetrieveWalletTransactionResponse paymentRetrieveWalletTransaction(token)
 
-بازیابی تراکنش کیف پول
+دریافت تراکنش کیف پول
 
-(Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+این API امکان دریافت وضعیت فعلی و جزئیات تراکنش پرداخت کیف پول را فراهم می‌کند. برای تایید تکمیل پرداخت قبل از commit کردن تراکنش استفاده کنید.  **نکات مهم**: - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است - وضعیت‌های تراکنش: UNKNOWN، CREATED، EXPIRED، PAID، COMMITTED  مجوزهای مورد نیاز: &#x60;WALLET_PAYMENT&#x60;. OAuth scope موردنیاز: &#x60;CREATE_WALLET_PAYMENT&#x60;
 
 ### Example
 
@@ -492,9 +510,12 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
-let token = "token_example"; // String | توکن تراکنشی که می‌خواهید بازیابی کنید
+let token = "token_example"; // String | توکن تراکنشی که می‌خواهید دریافت کنید
 apiInstance.paymentRetrieveWalletTransaction(token).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -508,7 +529,7 @@ apiInstance.paymentRetrieveWalletTransaction(token).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **String**| توکن تراکنشی که می‌خواهید بازیابی کنید | 
+ **token** | **String**| توکن تراکنشی که می‌خواهید دریافت کنید | 
 
 ### Return type
 
@@ -516,7 +537,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -528,9 +549,9 @@ Name | Type | Description  | Notes
 
 > Object paymentSubmitUserPayment(paymentSubmitUserPaymentRequest)
 
-Submit a user payment
+ثبت رکورد پرداخت کاربر
 
-Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the &#x60;SUBMIT_USER_PAYMENT&#x60; OAuth scope.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
+این API امکان گزارش پرداخت انجام شده توسط کاربر به سرویس شما را فراهم می‌کند. از این برای اطلاع‌رسانی دیوار درباره تراکنش‌هایی که کاربران از طریق پلتفرم شما پرداخت می‌کنند استفاده کنید.  **نکات مهم**: - باید پرداخت‌ها را در بازه زمانی توافق شده گزارش دهید - &#x60;reference_id&#x60; باید برای هر تراکنش منحصر به فرد باشد (برای تسویه حساب استفاده می‌شود) - شناسه خدماتی که کاربر برای آنها پرداخت کرده را لیست کنید (مثلاً &#39;banner&#39;, &#39;title_refinement&#39;) - این داده‌ها برای تقسیم درآمد و گزارش مالی استفاده می‌شوند   مجوزهای مورد نیاز: &#x60;SUBMIT_USER_PAYMENT&#x60;. OAuth scope موردنیاز: &#x60;SUBMIT_USER_PAYMENT&#x60;
 
 ### Example
 
@@ -542,6 +563,9 @@ let APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new KenarApiClient.PaymentApi();
 let paymentSubmitUserPaymentRequest = new KenarApiClient.PaymentSubmitUserPaymentRequest(); // PaymentSubmitUserPaymentRequest | 
@@ -566,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 

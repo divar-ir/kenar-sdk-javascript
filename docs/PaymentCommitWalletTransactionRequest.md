@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **String** | توکن تراکنشی که می‌خواهید commit کنید | [optional] 
+**token** | **String** | توکن تراکنشی که می‌خواهید نهایی کنید | [optional] 
 
 

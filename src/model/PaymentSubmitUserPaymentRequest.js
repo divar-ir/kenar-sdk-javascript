@@ -22,10 +22,10 @@ class PaymentSubmitUserPaymentRequest {
     /**
      * Constructs a new <code>PaymentSubmitUserPaymentRequest</code>.
      * @alias module:model/PaymentSubmitUserPaymentRequest
-     * @param amountRials {String} کل مبلغ پرداختی توسط کاربر، به ریال
-     * @param profitRials {String} بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد، به ریال. به عنوان مثال در افزونه‌های پرداخت امن بخش اعظم مبلغ پرداختی سهم فروشنده آگهی هست و این پارامتر باید برابر بخشی از مبلغ پرداختی که مربوط به کمیسیون سرویس‌دهنده پرداخت امن است قرار بگیرد. در صورتی که چنین مفهومی در فرایند پرداخت شما وجود ندارد مقدار این پارامتر را دقیقا برابر amount_rials ارسال کنید.
+     * @param amountRials {String} مبلغ کل پرداختی کاربر به ریال
+     * @param profitRials {String} سود یا کمیسیون شما از این تراکنش، به ریال. اگر چنین مفهومی در فرایند پرداخت شما وجود ندارد، مقدار این پارامتر را برابر amount_rials قرار دهید.
      * @param referenceId {String} شناسه منحصر به فرد بین دیوار و ارائه‌دهنده برای فاکتور یا تراکنش. این شناسه مرجع درگاه پرداخت نیست.
-     * @param services {Array.<String>} لیست شناسه خدماتی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه خدمت استفاده شود.
+     * @param services {Array.<String>} لیست slug خدماتی که کاربر برای آنها پرداخت کرده (مثلاً 'banner'، 'title_refinement')
      */
     constructor(amountRials, profitRials, referenceId, services) { 
         
@@ -104,7 +104,7 @@ class PaymentSubmitUserPaymentRequest {
     }
 
 /**
-     * Returns کل مبلغ پرداختی توسط کاربر، به ریال
+     * Returns مبلغ کل پرداختی کاربر به ریال
      * @return {String}
      */
     getAmountRials() {
@@ -112,14 +112,14 @@ class PaymentSubmitUserPaymentRequest {
     }
 
     /**
-     * Sets کل مبلغ پرداختی توسط کاربر، به ریال
-     * @param {String} amountRials کل مبلغ پرداختی توسط کاربر، به ریال
+     * Sets مبلغ کل پرداختی کاربر به ریال
+     * @param {String} amountRials مبلغ کل پرداختی کاربر به ریال
      */
     setAmountRials(amountRials) {
         this['amount_rials'] = amountRials;
     }
 /**
-     * Returns بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد، به ریال. به عنوان مثال در افزونه‌های پرداخت امن بخش اعظم مبلغ پرداختی سهم فروشنده آگهی هست و این پارامتر باید برابر بخشی از مبلغ پرداختی که مربوط به کمیسیون سرویس‌دهنده پرداخت امن است قرار بگیرد. در صورتی که چنین مفهومی در فرایند پرداخت شما وجود ندارد مقدار این پارامتر را دقیقا برابر amount_rials ارسال کنید.
+     * Returns سود یا کمیسیون شما از این تراکنش، به ریال. اگر چنین مفهومی در فرایند پرداخت شما وجود ندارد، مقدار این پارامتر را برابر amount_rials قرار دهید.
      * @return {String}
      */
     getProfitRials() {
@@ -127,8 +127,8 @@ class PaymentSubmitUserPaymentRequest {
     }
 
     /**
-     * Sets بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد، به ریال. به عنوان مثال در افزونه‌های پرداخت امن بخش اعظم مبلغ پرداختی سهم فروشنده آگهی هست و این پارامتر باید برابر بخشی از مبلغ پرداختی که مربوط به کمیسیون سرویس‌دهنده پرداخت امن است قرار بگیرد. در صورتی که چنین مفهومی در فرایند پرداخت شما وجود ندارد مقدار این پارامتر را دقیقا برابر amount_rials ارسال کنید.
-     * @param {String} profitRials بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد، به ریال. به عنوان مثال در افزونه‌های پرداخت امن بخش اعظم مبلغ پرداختی سهم فروشنده آگهی هست و این پارامتر باید برابر بخشی از مبلغ پرداختی که مربوط به کمیسیون سرویس‌دهنده پرداخت امن است قرار بگیرد. در صورتی که چنین مفهومی در فرایند پرداخت شما وجود ندارد مقدار این پارامتر را دقیقا برابر amount_rials ارسال کنید.
+     * Sets سود یا کمیسیون شما از این تراکنش، به ریال. اگر چنین مفهومی در فرایند پرداخت شما وجود ندارد، مقدار این پارامتر را برابر amount_rials قرار دهید.
+     * @param {String} profitRials سود یا کمیسیون شما از این تراکنش، به ریال. اگر چنین مفهومی در فرایند پرداخت شما وجود ندارد، مقدار این پارامتر را برابر amount_rials قرار دهید.
      */
     setProfitRials(profitRials) {
         this['profit_rials'] = profitRials;
@@ -149,7 +149,7 @@ class PaymentSubmitUserPaymentRequest {
         this['reference_id'] = referenceId;
     }
 /**
-     * Returns لیست شناسه خدماتی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه خدمت استفاده شود.
+     * Returns لیست slug خدماتی که کاربر برای آنها پرداخت کرده (مثلاً 'banner'، 'title_refinement')
      * @return {Array.<String>}
      */
     getServices() {
@@ -157,8 +157,8 @@ class PaymentSubmitUserPaymentRequest {
     }
 
     /**
-     * Sets لیست شناسه خدماتی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه خدمت استفاده شود.
-     * @param {Array.<String>} services لیست شناسه خدماتی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه خدمت استفاده شود.
+     * Sets لیست slug خدماتی که کاربر برای آنها پرداخت کرده (مثلاً 'banner'، 'title_refinement')
+     * @param {Array.<String>} services لیست slug خدماتی که کاربر برای آنها پرداخت کرده (مثلاً 'banner'، 'title_refinement')
      */
     setServices(services) {
         this['services'] = services;
@@ -169,13 +169,13 @@ class PaymentSubmitUserPaymentRequest {
 PaymentSubmitUserPaymentRequest.RequiredProperties = ["amount_rials", "profit_rials", "reference_id", "services"];
 
 /**
- * کل مبلغ پرداختی توسط کاربر، به ریال
+ * مبلغ کل پرداختی کاربر به ریال
  * @member {String} amount_rials
  */
 PaymentSubmitUserPaymentRequest.prototype['amount_rials'] = undefined;
 
 /**
- * بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد، به ریال. به عنوان مثال در افزونه‌های پرداخت امن بخش اعظم مبلغ پرداختی سهم فروشنده آگهی هست و این پارامتر باید برابر بخشی از مبلغ پرداختی که مربوط به کمیسیون سرویس‌دهنده پرداخت امن است قرار بگیرد. در صورتی که چنین مفهومی در فرایند پرداخت شما وجود ندارد مقدار این پارامتر را دقیقا برابر amount_rials ارسال کنید.
+ * سود یا کمیسیون شما از این تراکنش، به ریال. اگر چنین مفهومی در فرایند پرداخت شما وجود ندارد، مقدار این پارامتر را برابر amount_rials قرار دهید.
  * @member {String} profit_rials
  */
 PaymentSubmitUserPaymentRequest.prototype['profit_rials'] = undefined;
@@ -187,7 +187,7 @@ PaymentSubmitUserPaymentRequest.prototype['profit_rials'] = undefined;
 PaymentSubmitUserPaymentRequest.prototype['reference_id'] = undefined;
 
 /**
- * لیست شناسه خدماتی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه خدمت استفاده شود.
+ * لیست slug خدماتی که کاربر برای آنها پرداخت کرده (مثلاً 'banner'، 'title_refinement')
  * @member {Array.<String>} services
  */
 PaymentSubmitUserPaymentRequest.prototype['services'] = undefined;

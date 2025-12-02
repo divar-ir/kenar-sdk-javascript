@@ -90,7 +90,7 @@ class EventsEventButton {
         this['action'] = action;
     }
 /**
-     * Returns متن برای نمایش روی دکمه
+     * Returns متن دکمه
      * @return {String}
      */
     getTitle() {
@@ -98,8 +98,8 @@ class EventsEventButton {
     }
 
     /**
-     * Sets متن برای نمایش روی دکمه
-     * @param {String} title متن برای نمایش روی دکمه
+     * Sets متن دکمه
+     * @param {String} title متن دکمه
      */
     setTitle(title) {
         this['title'] = title;
@@ -115,7 +115,7 @@ class EventsEventButton {
 EventsEventButton.prototype['action'] = undefined;
 
 /**
- * متن برای نمایش روی دکمه
+ * متن دکمه
  * @member {String} title
  */
 EventsEventButton.prototype['title'] = undefined;

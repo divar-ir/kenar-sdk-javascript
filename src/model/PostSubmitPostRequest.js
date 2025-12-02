@@ -27,10 +27,10 @@ class PostSubmitPostRequest {
     /**
      * Constructs a new <code>PostSubmitPostRequest</code>.
      * @alias module:model/PostSubmitPostRequest
-     * @param chatEnabled {Boolean} امکان چت فعال باشد
+     * @param chatEnabled {Boolean} فعال بودن چت
      * @param city {String} شهر آگهی
      * @param description {String} توضیحات آگهی
-     * @param hidePhone {Boolean} عدم نمایش شماره تماس به کاربران
+     * @param hidePhone {Boolean} مخفی کردن شماره تماس از کاربران
      * @param images {Array.<String>} 
      * @param locationType {module:model/PostLocationType} 
      * @param title {String} عنوان آگهی
@@ -172,7 +172,7 @@ class PostSubmitPostRequest {
     }
 
 /**
-     * Returns امکان چت فعال باشد
+     * Returns فعال بودن چت
      * @return {Boolean}
      */
     getChatEnabled() {
@@ -180,8 +180,8 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets امکان چت فعال باشد
-     * @param {Boolean} chatEnabled امکان چت فعال باشد
+     * Sets فعال بودن چت
+     * @param {Boolean} chatEnabled فعال بودن چت
      */
     setChatEnabled(chatEnabled) {
         this['chat_enabled'] = chatEnabled;
@@ -217,7 +217,7 @@ class PostSubmitPostRequest {
         this['description'] = description;
     }
 /**
-     * Returns عدم نمایش شماره تماس به کاربران
+     * Returns مخفی کردن شماره تماس از کاربران
      * @return {Boolean}
      */
     getHidePhone() {
@@ -225,8 +225,8 @@ class PostSubmitPostRequest {
     }
 
     /**
-     * Sets عدم نمایش شماره تماس به کاربران
-     * @param {Boolean} hidePhone عدم نمایش شماره تماس به کاربران
+     * Sets مخفی کردن شماره تماس از کاربران
+     * @param {Boolean} hidePhone مخفی کردن شماره تماس از کاربران
      */
     setHidePhone(hidePhone) {
         this['hide_phone'] = hidePhone;
@@ -390,7 +390,7 @@ class PostSubmitPostRequest {
 PostSubmitPostRequest.RequiredProperties = ["chat_enabled", "city", "description", "hide_phone", "images", "location_type", "title"];
 
 /**
- * امکان چت فعال باشد
+ * فعال بودن چت
  * @member {Boolean} chat_enabled
  */
 PostSubmitPostRequest.prototype['chat_enabled'] = undefined;
@@ -408,7 +408,7 @@ PostSubmitPostRequest.prototype['city'] = undefined;
 PostSubmitPostRequest.prototype['description'] = undefined;
 
 /**
- * عدم نمایش شماره تماس به کاربران
+ * مخفی کردن شماره تماس از کاربران
  * @member {Boolean} hide_phone
  */
 PostSubmitPostRequest.prototype['hide_phone'] = undefined;

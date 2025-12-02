@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chatEnabled** | **Boolean** | امکان چت فعال باشد | 
+**chatEnabled** | **Boolean** | فعال بودن چت | 
 **city** | **String** | شهر آگهی | 
 **description** | **String** | توضیحات آگهی | 
-**hidePhone** | **Boolean** | عدم نمایش شماره تماس به کاربران | 
+**hidePhone** | **Boolean** | مخفی کردن شماره تماس از کاربران | 
 **images** | **[String]** |  | 
 **locationType** | [**PostLocationType**](PostLocationType.md) |  | 
 **title** | **String** | عنوان آگهی | 

@@ -23,8 +23,8 @@ class PostGeneralDataPostVideo {
      * Constructs a new <code>PostGeneralDataPostVideo</code>.
      * @alias module:model/PostGeneralDataPostVideo
      * @param duration {String} زمان ویدیو به ثانیه
-     * @param name {String} Name of the video, retrieved from `video_name` field in the response of upload video endpoint
-     * @param thumbnailName {String} کاور ویدیو. این مقدار را از روی فیلد `thumbnail_name` در پاسخ به درخواست آپلود ویدیو پر کنید. این تصویر، فریم اول ویدیو‌ی آپلود شده است.
+     * @param name {String} نام ویدیو (از فیلد `video_name` در پاسخ آپلود)
+     * @param thumbnailName {String} کاور ویدیو (از فیلد `thumbnail_name` در پاسخ آپلود). فریم اول ویدیوی آپلود‌شده است.
      */
     constructor(duration, name, thumbnailName) { 
         
@@ -110,7 +110,7 @@ class PostGeneralDataPostVideo {
         this['duration'] = duration;
     }
 /**
-     * Returns Name of the video, retrieved from `video_name` field in the response of upload video endpoint
+     * Returns نام ویدیو (از فیلد `video_name` در پاسخ آپلود)
      * @return {String}
      */
     getName() {
@@ -118,14 +118,14 @@ class PostGeneralDataPostVideo {
     }
 
     /**
-     * Sets Name of the video, retrieved from `video_name` field in the response of upload video endpoint
-     * @param {String} name Name of the video, retrieved from `video_name` field in the response of upload video endpoint
+     * Sets نام ویدیو (از فیلد `video_name` در پاسخ آپلود)
+     * @param {String} name نام ویدیو (از فیلد `video_name` در پاسخ آپلود)
      */
     setName(name) {
         this['name'] = name;
     }
 /**
-     * Returns کاور ویدیو. این مقدار را از روی فیلد `thumbnail_name` در پاسخ به درخواست آپلود ویدیو پر کنید. این تصویر، فریم اول ویدیو‌ی آپلود شده است.
+     * Returns کاور ویدیو (از فیلد `thumbnail_name` در پاسخ آپلود). فریم اول ویدیوی آپلود‌شده است.
      * @return {String}
      */
     getThumbnailName() {
@@ -133,8 +133,8 @@ class PostGeneralDataPostVideo {
     }
 
     /**
-     * Sets کاور ویدیو. این مقدار را از روی فیلد `thumbnail_name` در پاسخ به درخواست آپلود ویدیو پر کنید. این تصویر، فریم اول ویدیو‌ی آپلود شده است.
-     * @param {String} thumbnailName کاور ویدیو. این مقدار را از روی فیلد `thumbnail_name` در پاسخ به درخواست آپلود ویدیو پر کنید. این تصویر، فریم اول ویدیو‌ی آپلود شده است.
+     * Sets کاور ویدیو (از فیلد `thumbnail_name` در پاسخ آپلود). فریم اول ویدیوی آپلود‌شده است.
+     * @param {String} thumbnailName کاور ویدیو (از فیلد `thumbnail_name` در پاسخ آپلود). فریم اول ویدیوی آپلود‌شده است.
      */
     setThumbnailName(thumbnailName) {
         this['thumbnail_name'] = thumbnailName;
@@ -151,13 +151,13 @@ PostGeneralDataPostVideo.RequiredProperties = ["duration", "name", "thumbnail_na
 PostGeneralDataPostVideo.prototype['duration'] = undefined;
 
 /**
- * Name of the video, retrieved from `video_name` field in the response of upload video endpoint
+ * نام ویدیو (از فیلد `video_name` در پاسخ آپلود)
  * @member {String} name
  */
 PostGeneralDataPostVideo.prototype['name'] = undefined;
 
 /**
- * کاور ویدیو. این مقدار را از روی فیلد `thumbnail_name` در پاسخ به درخواست آپلود ویدیو پر کنید. این تصویر، فریم اول ویدیو‌ی آپلود شده است.
+ * کاور ویدیو (از فیلد `thumbnail_name` در پاسخ آپلود). فریم اول ویدیوی آپلود‌شده است.
  * @member {String} thumbnail_name
  */
 PostGeneralDataPostVideo.prototype['thumbnail_name'] = undefined;

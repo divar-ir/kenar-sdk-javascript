@@ -25,7 +25,7 @@ class PostApartmentSellFields {
      * @alias module:model/PostApartmentSellFields
      * @param floor {Number} طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.
      * @param hasElevator {Boolean} آیا ملک آسانسور دارد
-     * @param hasOwnImage {Boolean} تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * @param hasOwnImage {Boolean} آیا تصاویر واقعی ملک هستند (نه تزئینی)
      * @param hasParking {Boolean} آیا ملک پارکینگ دارد
      * @param hasWarehouse {Boolean} آیا ملک انباری دارد
      * @param price {String} قیمت ملک به تومان
@@ -148,7 +148,7 @@ class PostApartmentSellFields {
         this['has_elevator'] = hasElevator;
     }
 /**
-     * Returns تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * Returns آیا تصاویر واقعی ملک هستند (نه تزئینی)
      * @return {Boolean}
      */
     getHasOwnImage() {
@@ -156,8 +156,8 @@ class PostApartmentSellFields {
     }
 
     /**
-     * Sets تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
-     * @param {Boolean} hasOwnImage تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+     * Sets آیا تصاویر واقعی ملک هستند (نه تزئینی)
+     * @param {Boolean} hasOwnImage آیا تصاویر واقعی ملک هستند (نه تزئینی)
      */
     setHasOwnImage(hasOwnImage) {
         this['has_own_image'] = hasOwnImage;
@@ -268,7 +268,7 @@ PostApartmentSellFields.prototype['floor'] = undefined;
 PostApartmentSellFields.prototype['has_elevator'] = undefined;
 
 /**
- * تصاویر مربوط به خود ملک بوده و تزئینی نیستند.
+ * آیا تصاویر واقعی ملک هستند (نه تزئینی)
  * @member {Boolean} has_own_image
  */
 PostApartmentSellFields.prototype['has_own_image'] = undefined;

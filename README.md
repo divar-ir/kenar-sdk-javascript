@@ -107,6 +107,9 @@ var APIKey = defaultClient.authentications['APIKey'];
 APIKey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKey.apiKeyPrefix['X-API-Key'] = "Token"
+// Configure OAuth2 access token for authorization: OAuth
+var OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = "YOUR ACCESS TOKEN"
 
 var api = new KenarApiClient.AddonsApi()
 var businessToken = "businessToken_example"; // {String} 
@@ -126,26 +129,26 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*KenarApiClient.AddonsApi* | [**addonsCreateBusinessAddon**](docs/AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
-*KenarApiClient.AddonsApi* | [**addonsCreatePostAddonV2**](docs/AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
-*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV2**](docs/AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
-*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV22**](docs/AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
-*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon**](docs/AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
-*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon2**](docs/AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
+*KenarApiClient.AddonsApi* | [**addonsCreateBusinessAddon**](docs/AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | ایجاد افزونه کسب‌وکار
+*KenarApiClient.AddonsApi* | [**addonsCreatePostAddonV2**](docs/AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | ایجاد افزونه آگهی
+*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV2**](docs/AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | ایجاد افزونه کاربر
+*KenarApiClient.AddonsApi* | [**addonsCreateUserAddonV22**](docs/AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | ایجاد افزونه کاربر
+*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon**](docs/AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه آگهی
+*KenarApiClient.AddonsApi* | [**addonsDeletePostAddon2**](docs/AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه آگهی
 *KenarApiClient.AddonsApi* | [**addonsDeleteUserAddon**](docs/AddonsApi.md#addonsDeleteUserAddon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
-*KenarApiClient.AssetsApi* | [**assetsGetBodyStatuses**](docs/AssetsApi.md#assetsGetBodyStatuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetBrandModels**](docs/AssetsApi.md#assetsGetBrandModels) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetCategories**](docs/AssetsApi.md#assetsGetCategories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetCities**](docs/AssetsApi.md#assetsGetCities) | **GET** /v1/open-platform/assets/city | دریافت شهرهای دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetColors**](docs/AssetsApi.md#assetsGetColors) | **GET** /v1/open-platform/assets/color/{category} | دریافت رنگ‌ها در دسته‌بندی دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetDistricts**](docs/AssetsApi.md#assetsGetDistricts) | **GET** /v1/open-platform/assets/district | دریافت مناطق دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetDistricts2**](docs/AssetsApi.md#assetsGetDistricts2) | **GET** /v1/open-platform/assets/district/{city_slug} | دریافت مناطق دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetInternalStorages**](docs/AssetsApi.md#assetsGetInternalStorages) | **GET** /v1/open-platform/assets/internal-storage | دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetOAuthScopes**](docs/AssetsApi.md#assetsGetOAuthScopes) | **GET** /v1/open-platform/assets/oauth-scope | دریافت دامنه‌های OAuth کنار دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetPermissions**](docs/AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetRamMemories**](docs/AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetServiceTypes**](docs/AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
-*KenarApiClient.AssetsApi* | [**assetsGetSubmitSchema**](docs/AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت قالب ثبت
+*KenarApiClient.AssetsApi* | [**assetsGetBodyStatuses**](docs/AssetsApi.md#assetsGetBodyStatuses) | **GET** /v1/open-platform/assets/body-status | لیست گزینه‌های وضعیت بدنه
+*KenarApiClient.AssetsApi* | [**assetsGetBrandModels**](docs/AssetsApi.md#assetsGetBrandModels) | **GET** /v1/open-platform/assets/brand-model/{category} | لیست مدل برندها بر اساس دسته‌بندی
+*KenarApiClient.AssetsApi* | [**assetsGetCategories**](docs/AssetsApi.md#assetsGetCategories) | **GET** /v1/open-platform/assets/category | لیست همه دسته‌بندی‌ها
+*KenarApiClient.AssetsApi* | [**assetsGetCities**](docs/AssetsApi.md#assetsGetCities) | **GET** /v1/open-platform/assets/city | لیست همه شهرها
+*KenarApiClient.AssetsApi* | [**assetsGetColors**](docs/AssetsApi.md#assetsGetColors) | **GET** /v1/open-platform/assets/color/{category} | لیست رنگ‌ها بر اساس دسته‌بندی
+*KenarApiClient.AssetsApi* | [**assetsGetDistricts**](docs/AssetsApi.md#assetsGetDistricts) | **GET** /v1/open-platform/assets/district | لیست محله‌ها
+*KenarApiClient.AssetsApi* | [**assetsGetDistricts2**](docs/AssetsApi.md#assetsGetDistricts2) | **GET** /v1/open-platform/assets/district/{city_slug} | لیست محله‌ها
+*KenarApiClient.AssetsApi* | [**assetsGetInternalStorages**](docs/AssetsApi.md#assetsGetInternalStorages) | **GET** /v1/open-platform/assets/internal-storage | لیست گزینه‌های حافظه داخلی
+*KenarApiClient.AssetsApi* | [**assetsGetOAuthScopes**](docs/AssetsApi.md#assetsGetOAuthScopes) | **GET** /v1/open-platform/assets/oauth-scope | لیست دامنه‌های OAuth
+*KenarApiClient.AssetsApi* | [**assetsGetPermissions**](docs/AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | لیست مجوزهای کنار دیوار
+*KenarApiClient.AssetsApi* | [**assetsGetRamMemories**](docs/AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | لیست گزینه‌های حافظه RAM
+*KenarApiClient.AssetsApi* | [**assetsGetServiceTypes**](docs/AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | لیست انواع سرویس
+*KenarApiClient.AssetsApi* | [**assetsGetSubmitSchema**](docs/AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت schema ثبت آگهی برای دسته‌بندی
 *KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
 *KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage2**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
 *KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage3**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
@@ -153,41 +156,41 @@ Class | Method | HTTP request | Description
 *KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage5**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage5) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
 *KenarApiClient.ChatAPIApi* | [**chatAPIConversationSendMessage**](docs/ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
 *KenarApiClient.ChatAPIApi* | [**chatAPIGenerateUploadToken**](docs/ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
-*KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
+*KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه
 *KenarApiClient.EventsApi* | [**eventsRegisterEventSubscription**](docs/EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
-*KenarApiClient.EventsApi* | [**eventsSendEvent**](docs/EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر با استفاده از API
+*KenarApiClient.EventsApi* | [**eventsSendEvent**](docs/EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر
 *KenarApiClient.FinderApi* | [**finderGetPost**](docs/FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 *KenarApiClient.FinderApi* | [**finderGetUser**](docs/FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 *KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
-*KenarApiClient.FinderApi* | [**finderGetUserIDByPhone**](docs/FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه دیوار کاربر با شماره تلفن
+*KenarApiClient.FinderApi* | [**finderGetUserIDByPhone**](docs/FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر دیوار با شماره تلفن
 *KenarApiClient.FinderApi* | [**finderGetUserPosts**](docs/FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
-*KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
-*KenarApiClient.PaymentApi* | [**paymentCommitWalletTransaction**](docs/PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
+*KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجوی آگهی‌های دیوار
+*KenarApiClient.PaymentApi* | [**paymentCommitWalletTransaction**](docs/PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | نهایی کردن تراکنش کیف پول
 *KenarApiClient.PaymentApi* | [**paymentCreateWalletPayment**](docs/PaymentApi.md#paymentCreateWalletPayment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
 *KenarApiClient.PaymentApi* | [**paymentGetBalance**](docs/PaymentApi.md#paymentGetBalance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
-*KenarApiClient.PaymentApi* | [**paymentGetPostPricing**](docs/PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
+*KenarApiClient.PaymentApi* | [**paymentGetPostPricing**](docs/PaymentApi.md#paymentGetPostPricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت قیمت خدمات آگهی
 *KenarApiClient.PaymentApi* | [**paymentGetTransaction**](docs/PaymentApi.md#paymentGetTransaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
 *KenarApiClient.PaymentApi* | [**paymentListTransactions**](docs/PaymentApi.md#paymentListTransactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
-*KenarApiClient.PaymentApi* | [**paymentPublishUserPost**](docs/PaymentApi.md#paymentPublishUserPost) | **POST** /experimental/open-platform/post/{post_token}/publish | Pay for user post submission on behalf of provider
+*KenarApiClient.PaymentApi* | [**paymentPublishUserPost**](docs/PaymentApi.md#paymentPublishUserPost) | **POST** /experimental/open-platform/post/{post_token}/publish | انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
 *KenarApiClient.PaymentApi* | [**paymentRenewPost**](docs/PaymentApi.md#paymentRenewPost) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
 *KenarApiClient.PaymentApi* | [**paymentReorderPost**](docs/PaymentApi.md#paymentReorderPost) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
-*KenarApiClient.PaymentApi* | [**paymentRetrieveWalletTransaction**](docs/PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
-*KenarApiClient.PaymentApi* | [**paymentSubmitUserPayment**](docs/PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | Submit a user payment
-*KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
+*KenarApiClient.PaymentApi* | [**paymentRetrieveWalletTransaction**](docs/PaymentApi.md#paymentRetrieveWalletTransaction) | **GET** /experimental/open-platform/wallet/payments/{token} | دریافت تراکنش کیف پول
+*KenarApiClient.PaymentApi* | [**paymentSubmitUserPayment**](docs/PaymentApi.md#paymentSubmitUserPayment) | **POST** /v1/open-platform/user-payments | ثبت رکورد پرداخت کاربر
+*KenarApiClient.PaymentTicketApi* | [**paymentTicketValidate**](docs/PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی تیکت پرداخت
 *KenarApiClient.PostApi* | [**postCanUserSubmitPost**](docs/PostApi.md#postCanUserSubmitPost) | **GET** /experimental/open-platform/user-posts/can-submit | بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
-*KenarApiClient.PostApi* | [**postCreateBusinessCustomizedButton**](docs/PostApi.md#postCreateBusinessCustomizedButton) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
+*KenarApiClient.PostApi* | [**postCreateBusinessCustomizedButton**](docs/PostApi.md#postCreateBusinessCustomizedButton) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌وکار
 *KenarApiClient.PostApi* | [**postDeleteBusinessCustomizedButton**](docs/PostApi.md#postDeleteBusinessCustomizedButton) | **DELETE** /experimental/open-platform/business/{business_token}/customized-button | حذف دکمه اختصاصی از آگهی‌های کسب‌و‌کار
 *KenarApiClient.PostApi* | [**postDeletePostCustomizedButton**](docs/PostApi.md#postDeletePostCustomizedButton) | **DELETE** /experimental/open-platform/posts/{post_token}/customized-button | حذف دکمه اختصاصی از آگهی
 *KenarApiClient.PostApi* | [**postDeleteUserPost**](docs/PostApi.md#postDeleteUserPost) | **DELETE** /v1/open-platform/post/{post_token} | حذف آگهی
 *KenarApiClient.PostApi* | [**postEditPost**](docs/PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
-*KenarApiClient.PostApi* | [**postEditPostV2**](docs/PostApi.md#postEditPostV2) | **PUT** /v2/open-platform/post/{post_token} | ویرایش آگهی با پشتیبانی از فیلد ماسک
+*KenarApiClient.PostApi* | [**postEditPostV2**](docs/PostApi.md#postEditPostV2) | **PUT** /v2/open-platform/post/{post_token} | ویرایش آگهی (پیشرفته)
 *KenarApiClient.PostApi* | [**postGetImageUploadURL**](docs/PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت آدرس اپلود تصاویر آگهی (منسوخ شده)
 *KenarApiClient.PostApi* | [**postGetPostStats**](docs/PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
-*KenarApiClient.PostApi* | [**postGetUploadURLsV2**](docs/PostApi.md#postGetUploadURLsV2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود برای تصاویر و ویدیو‌ی آگهی‌ها
+*KenarApiClient.PostApi* | [**postGetUploadURLsV2**](docs/PostApi.md#postGetUploadURLsV2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود تصاویر و ویدیو
 *KenarApiClient.PostApi* | [**postGetUserPost**](docs/PostApi.md#postGetUserPost) | **GET** /v1/open-platform/user-post/{token} | دریافت آگهی با توکن
-*KenarApiClient.PostApi* | [**postSetPostCustomizedButton**](docs/PostApi.md#postSetPostCustomizedButton) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی بر روی آگهی ثبت شده
-*KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
-*KenarApiClient.PostApi* | [**postSubmitPostV2**](docs/PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
+*KenarApiClient.PostApi* | [**postSetPostCustomizedButton**](docs/PostApi.md#postSetPostCustomizedButton) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی روی آگهی
+*KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی (منسوخ شده)
+*KenarApiClient.PostApi* | [**postSubmitPostV2**](docs/PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی
 *KenarApiClient.PostApi* | [**postSubmitUserPost**](docs/PostApi.md#postSubmitUserPost) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 *KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *KenarApiClient.SemanticApi* | [**semanticCreateUserSemantic**](docs/SemanticApi.md#semanticCreateUserSemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر

@@ -22,10 +22,11 @@ class SemanticCreatePostSemanticBody {
     /**
      * Constructs a new <code>SemanticCreatePostSemanticBody</code>.
      * @alias module:model/SemanticCreatePostSemanticBody
+     * @param semantic {Object.<String, String>} مپ key-value اطلاعات معنایی برای ذخیره
      */
-    constructor() { 
+    constructor(semantic) { 
         
-        SemanticCreatePostSemanticBody.initialize(this);
+        SemanticCreatePostSemanticBody.initialize(this, semantic);
     }
 
     /**
@@ -33,7 +34,8 @@ class SemanticCreatePostSemanticBody {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, semantic) { 
+        obj['semantic'] = semantic;
     }
 
     /**
@@ -47,11 +49,11 @@ class SemanticCreatePostSemanticBody {
         if (data) {
             obj = obj || new SemanticCreatePostSemanticBody();
 
-            if (data.hasOwnProperty('cost')) {
-                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
-            }
             if (data.hasOwnProperty('semantic')) {
                 obj['semantic'] = ApiClient.convertToType(data['semantic'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('cost')) {
+                obj['cost'] = ApiClient.convertToType(data['cost'], 'Number');
             }
             if (data.hasOwnProperty('ticket_uuid')) {
                 obj['ticket_uuid'] = ApiClient.convertToType(data['ticket_uuid'], 'String');
@@ -66,6 +68,12 @@ class SemanticCreatePostSemanticBody {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SemanticCreatePostSemanticBody</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of SemanticCreatePostSemanticBody.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['ticket_uuid'] && !(typeof data['ticket_uuid'] === 'string' || data['ticket_uuid'] instanceof String)) {
             throw new Error("Expected the field `ticket_uuid` to be a primitive type in the JSON string but got " + data['ticket_uuid']);
@@ -75,19 +83,7 @@ class SemanticCreatePostSemanticBody {
     }
 
 /**
-     * @return {Number}
-     */
-    getCost() {
-        return this.cost;
-    }
-
-    /**
-     * @param {Number} cost
-     */
-    setCost(cost) {
-        this['cost'] = cost;
-    }
-/**
+     * Returns مپ key-value اطلاعات معنایی برای ذخیره
      * @return {Object.<String, String>}
      */
     getSemantic() {
@@ -95,12 +91,29 @@ class SemanticCreatePostSemanticBody {
     }
 
     /**
-     * @param {Object.<String, String>} semantic
+     * Sets مپ key-value اطلاعات معنایی برای ذخیره
+     * @param {Object.<String, String>} semantic مپ key-value اطلاعات معنایی برای ذخیره
      */
     setSemantic(semantic) {
         this['semantic'] = semantic;
     }
 /**
+     * Returns هزینه مرتبط با عملیات
+     * @return {Number}
+     */
+    getCost() {
+        return this.cost;
+    }
+
+    /**
+     * Sets هزینه مرتبط با عملیات
+     * @param {Number} cost هزینه مرتبط با عملیات
+     */
+    setCost(cost) {
+        this['cost'] = cost;
+    }
+/**
+     * Returns UUID تیکت پرداخت (اختیاری)
      * @return {String}
      */
     getTicketUuid() {
@@ -108,7 +121,8 @@ class SemanticCreatePostSemanticBody {
     }
 
     /**
-     * @param {String} ticketUuid
+     * Sets UUID تیکت پرداخت (اختیاری)
+     * @param {String} ticketUuid UUID تیکت پرداخت (اختیاری)
      */
     setTicketUuid(ticketUuid) {
         this['ticket_uuid'] = ticketUuid;
@@ -116,19 +130,22 @@ class SemanticCreatePostSemanticBody {
 
 }
 
-
-
-/**
- * @member {Number} cost
- */
-SemanticCreatePostSemanticBody.prototype['cost'] = undefined;
+SemanticCreatePostSemanticBody.RequiredProperties = ["semantic"];
 
 /**
+ * مپ key-value اطلاعات معنایی برای ذخیره
  * @member {Object.<String, String>} semantic
  */
 SemanticCreatePostSemanticBody.prototype['semantic'] = undefined;
 
 /**
+ * هزینه مرتبط با عملیات
+ * @member {Number} cost
+ */
+SemanticCreatePostSemanticBody.prototype['cost'] = undefined;
+
+/**
+ * UUID تیکت پرداخت (اختیاری)
  * @member {String} ticket_uuid
  */
 SemanticCreatePostSemanticBody.prototype['ticket_uuid'] = undefined;

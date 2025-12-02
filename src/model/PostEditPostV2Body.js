@@ -23,7 +23,7 @@ class PostEditPostV2Body {
     /**
      * Constructs a new <code>PostEditPostV2Body</code>.
      * @alias module:model/PostEditPostV2Body
-     * @param updateMask {Array.<String>} فیلد ماسک مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تو در تو برای هر دو general_data و category_data استفاده کنید (مثلاً، 'general_data.title'، 'category_data.price'). این امکان تمایز بین حذف یک فیلد و به‌روزرسانی نکردن آن را فراهم می‌کند.
+     * @param updateMask {Array.<String>} مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تودرتو مانند 'general_data.title' یا 'category_data.price' استفاده کنید. این کار تمایز بین پاک کردن یک فیلد و تغییر ندادن آن را ممکن می‌سازد.
      */
     constructor(updateMask) { 
         
@@ -88,7 +88,7 @@ class PostEditPostV2Body {
     }
 
 /**
-     * Returns فیلد ماسک مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تو در تو برای هر دو general_data و category_data استفاده کنید (مثلاً، 'general_data.title'، 'category_data.price'). این امکان تمایز بین حذف یک فیلد و به‌روزرسانی نکردن آن را فراهم می‌کند.
+     * Returns مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تودرتو مانند 'general_data.title' یا 'category_data.price' استفاده کنید. این کار تمایز بین پاک کردن یک فیلد و تغییر ندادن آن را ممکن می‌سازد.
      * @return {Array.<String>}
      */
     getUpdateMask() {
@@ -96,14 +96,14 @@ class PostEditPostV2Body {
     }
 
     /**
-     * Sets فیلد ماسک مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تو در تو برای هر دو general_data و category_data استفاده کنید (مثلاً، 'general_data.title'، 'category_data.price'). این امکان تمایز بین حذف یک فیلد و به‌روزرسانی نکردن آن را فراهم می‌کند.
-     * @param {Array.<String>} updateMask فیلد ماسک مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تو در تو برای هر دو general_data و category_data استفاده کنید (مثلاً، 'general_data.title'، 'category_data.price'). این امکان تمایز بین حذف یک فیلد و به‌روزرسانی نکردن آن را فراهم می‌کند.
+     * Sets مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تودرتو مانند 'general_data.title' یا 'category_data.price' استفاده کنید. این کار تمایز بین پاک کردن یک فیلد و تغییر ندادن آن را ممکن می‌سازد.
+     * @param {Array.<String>} updateMask مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تودرتو مانند 'general_data.title' یا 'category_data.price' استفاده کنید. این کار تمایز بین پاک کردن یک فیلد و تغییر ندادن آن را ممکن می‌سازد.
      */
     setUpdateMask(updateMask) {
         this['update_mask'] = updateMask;
     }
 /**
-     * Returns فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+     * Returns فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
      * @return {Object}
      */
     getCategoryData() {
@@ -111,8 +111,8 @@ class PostEditPostV2Body {
     }
 
     /**
-     * Sets فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
-     * @param {Object} categoryData فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+     * Sets فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+     * @param {Object} categoryData فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
      */
     setCategoryData(categoryData) {
         this['category_data'] = categoryData;
@@ -136,13 +136,13 @@ class PostEditPostV2Body {
 PostEditPostV2Body.RequiredProperties = ["update_mask"];
 
 /**
- * فیلد ماسک مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تو در تو برای هر دو general_data و category_data استفاده کنید (مثلاً، 'general_data.title'، 'category_data.price'). این امکان تمایز بین حذف یک فیلد و به‌روزرسانی نکردن آن را فراهم می‌کند.
+ * مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تودرتو مانند 'general_data.title' یا 'category_data.price' استفاده کنید. این کار تمایز بین پاک کردن یک فیلد و تغییر ندادن آن را ممکن می‌سازد.
  * @member {Array.<String>} update_mask
  */
 PostEditPostV2Body.prototype['update_mask'] = undefined;
 
 /**
- * فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
+ * فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
  * @member {Object} category_data
  */
 PostEditPostV2Body.prototype['category_data'] = undefined;

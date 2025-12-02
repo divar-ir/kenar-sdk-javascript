@@ -79,7 +79,7 @@ class GetPostStatsResponsePostStats {
     }
 
 /**
-     * Returns مقدار آمار مورد نظر در هفت روز اخیر
+     * Returns مقدار روزانه آمار در هفت روز گذشته
      * @return {Array.<module:model/GetPostStatsResponseDailyStats>}
      */
     getDaily() {
@@ -87,14 +87,14 @@ class GetPostStatsResponsePostStats {
     }
 
     /**
-     * Sets مقدار آمار مورد نظر در هفت روز اخیر
-     * @param {Array.<module:model/GetPostStatsResponseDailyStats>} daily مقدار آمار مورد نظر در هفت روز اخیر
+     * Sets مقدار روزانه آمار در هفت روز گذشته
+     * @param {Array.<module:model/GetPostStatsResponseDailyStats>} daily مقدار روزانه آمار در هفت روز گذشته
      */
     setDaily(daily) {
         this['daily'] = daily;
     }
 /**
-     * Returns تعداد کلی آمار (مثلا بازدید)
+     * Returns مجموع آمار (مثلاً بازدید)
      * @return {Number}
      */
     getTotal() {
@@ -102,8 +102,8 @@ class GetPostStatsResponsePostStats {
     }
 
     /**
-     * Sets تعداد کلی آمار (مثلا بازدید)
-     * @param {Number} total تعداد کلی آمار (مثلا بازدید)
+     * Sets مجموع آمار (مثلاً بازدید)
+     * @param {Number} total مجموع آمار (مثلاً بازدید)
      */
     setTotal(total) {
         this['total'] = total;
@@ -114,13 +114,13 @@ class GetPostStatsResponsePostStats {
 
 
 /**
- * مقدار آمار مورد نظر در هفت روز اخیر
+ * مقدار روزانه آمار در هفت روز گذشته
  * @member {Array.<module:model/GetPostStatsResponseDailyStats>} daily
  */
 GetPostStatsResponsePostStats.prototype['daily'] = undefined;
 
 /**
- * تعداد کلی آمار (مثلا بازدید)
+ * مجموع آمار (مثلاً بازدید)
  * @member {Number} total
  */
 GetPostStatsResponsePostStats.prototype['total'] = undefined;

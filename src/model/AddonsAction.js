@@ -25,7 +25,7 @@ import AddonsOpenServerLink from './AddonsOpenServerLink';
 class AddonsAction {
     /**
      * Constructs a new <code>AddonsAction</code>.
-     * نمایان‌گر یک عملیات که می‌تواند انجام شود
+     * نمایانگر یک Action که می‌تواند انجام شود
      * @alias module:model/AddonsAction
      */
     constructor() { 
@@ -115,7 +115,7 @@ class AddonsAction {
         this['get_dynamic_action'] = getDynamicAction;
     }
 /**
-     * Returns عملیاتی برای ارسال کاربر به URL شما به صورت مستقیم با فقط یک شناسه منبع (در صورت وجود)
+     * Returns عملیاتی برای هدایت مستقیم کاربر به URL شما (در صورت وجود resource id)
      * @return {String}
      */
     getOpenDirectLink() {
@@ -123,8 +123,8 @@ class AddonsAction {
     }
 
     /**
-     * Sets عملیاتی برای ارسال کاربر به URL شما به صورت مستقیم با فقط یک شناسه منبع (در صورت وجود)
-     * @param {String} openDirectLink عملیاتی برای ارسال کاربر به URL شما به صورت مستقیم با فقط یک شناسه منبع (در صورت وجود)
+     * Sets عملیاتی برای هدایت مستقیم کاربر به URL شما (در صورت وجود resource id)
+     * @param {String} openDirectLink عملیاتی برای هدایت مستقیم کاربر به URL شما (در صورت وجود resource id)
      */
     setOpenDirectLink(openDirectLink) {
         this['open_direct_link'] = openDirectLink;
@@ -179,7 +179,7 @@ class AddonsAction {
 AddonsAction.prototype['get_dynamic_action'] = undefined;
 
 /**
- * عملیاتی برای ارسال کاربر به URL شما به صورت مستقیم با فقط یک شناسه منبع (در صورت وجود)
+ * عملیاتی برای هدایت مستقیم کاربر به URL شما (در صورت وجود resource id)
  * @member {String} open_direct_link
  */
 AddonsAction.prototype['open_direct_link'] = undefined;
