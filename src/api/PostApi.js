@@ -50,7 +50,7 @@ export default class PostApi {
 
     /**
      * بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
-     * این API بررسی می‌کند که آیا کاربر واجد شرایط ثبت آگهی است. تایید می‌کند که کاربر در لیست سیاه نیست، متخلف نیست و احراز هویت شده است.  مجوزهای مورد نیاز: `CAN_USER_SUBMIT_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
+     * این API بررسی می‌کند که آیا کاربر واجد شرایط ثبت آگهی است. تایید می‌کند که کاربر در لیست سیاه نیست، متخلف نیست و احراز هویت شده است.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CAN_USER_SUBMIT_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostCanUserSubmitPostResponse} and HTTP response
      */
     postCanUserSubmitPostWithHttpInfo() {
@@ -78,7 +78,7 @@ export default class PostApi {
 
     /**
      * بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
-     * این API بررسی می‌کند که آیا کاربر واجد شرایط ثبت آگهی است. تایید می‌کند که کاربر در لیست سیاه نیست، متخلف نیست و احراز هویت شده است.  مجوزهای مورد نیاز: `CAN_USER_SUBMIT_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
+     * این API بررسی می‌کند که آیا کاربر واجد شرایط ثبت آگهی است. تایید می‌کند که کاربر در لیست سیاه نیست، متخلف نیست و احراز هویت شده است.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CAN_USER_SUBMIT_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostCanUserSubmitPostResponse}
      */
     postCanUserSubmitPost() {
@@ -91,7 +91,7 @@ export default class PostApi {
 
     /**
      * ایجاد دکمه اختصاصی برای آگهی‌های کسب‌وکار
-     * این API تنظیمات دکمه اختصاصی را برای تمام آگهی‌های کسب‌وکار ایجاد می‌کند.  مجوزهای مورد نیاز: `BUSINESS_CUSTOMIZED_BUTTON_CREATE`. OAuth scope موردنیاز: `BUSINESS_CREATE_CUSTOMIZED_BUTTON.business_token`
+     * این API تنظیمات دکمه اختصاصی را برای تمام آگهی‌های کسب‌وکار ایجاد می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `BUSINESS_CUSTOMIZED_BUTTON_CREATE`  ##### OAuth اسکوپ موردنیاز:  - `BUSINESS_CREATE_CUSTOMIZED_BUTTON.business_token`
      * @param {String} businessToken 
      * @param {module:model/PostCreateBusinessCustomizedButtonBody} postCreateBusinessCustomizedButtonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -130,7 +130,7 @@ export default class PostApi {
 
     /**
      * ایجاد دکمه اختصاصی برای آگهی‌های کسب‌وکار
-     * این API تنظیمات دکمه اختصاصی را برای تمام آگهی‌های کسب‌وکار ایجاد می‌کند.  مجوزهای مورد نیاز: `BUSINESS_CUSTOMIZED_BUTTON_CREATE`. OAuth scope موردنیاز: `BUSINESS_CREATE_CUSTOMIZED_BUTTON.business_token`
+     * این API تنظیمات دکمه اختصاصی را برای تمام آگهی‌های کسب‌وکار ایجاد می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `BUSINESS_CUSTOMIZED_BUTTON_CREATE`  ##### OAuth اسکوپ موردنیاز:  - `BUSINESS_CREATE_CUSTOMIZED_BUTTON.business_token`
      * @param {String} businessToken 
      * @param {module:model/PostCreateBusinessCustomizedButtonBody} postCreateBusinessCustomizedButtonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -145,7 +145,7 @@ export default class PostApi {
 
     /**
      * حذف دکمه اختصاصی از آگهی‌های کسب‌و‌کار
-     * این API تنظیمات دکمه اختصاصی را از تمام آگهی‌های کسب‌وکار حذف می‌کند.  مجوزهای مورد نیاز: `BUSINESS_CUSTOMIZED_BUTTON_CREATE`
+     * این API تنظیمات دکمه اختصاصی را از تمام آگهی‌های کسب‌وکار حذف می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `BUSINESS_CUSTOMIZED_BUTTON_CREATE`
      * @param {String} businessToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -179,7 +179,7 @@ export default class PostApi {
 
     /**
      * حذف دکمه اختصاصی از آگهی‌های کسب‌و‌کار
-     * این API تنظیمات دکمه اختصاصی را از تمام آگهی‌های کسب‌وکار حذف می‌کند.  مجوزهای مورد نیاز: `BUSINESS_CUSTOMIZED_BUTTON_CREATE`
+     * این API تنظیمات دکمه اختصاصی را از تمام آگهی‌های کسب‌وکار حذف می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `BUSINESS_CUSTOMIZED_BUTTON_CREATE`
      * @param {String} businessToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -193,7 +193,7 @@ export default class PostApi {
 
     /**
      * حذف دکمه اختصاصی از آگهی
-     * این API تنظیمات دکمه اختصاصی را از یک آگهی حذف می‌کند.  مجوزهای مورد نیاز: `SET_CUSTOMIZED_BUTTON`. OAuth scope موردنیاز: `USER_SET_CUSTOMIZED_BUTTON`
+     * این API تنظیمات دکمه اختصاصی را از یک آگهی حذف می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SET_CUSTOMIZED_BUTTON`  ##### OAuth اسکوپ موردنیاز:  - `USER_SET_CUSTOMIZED_BUTTON`
      * @param {String} postToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -227,7 +227,7 @@ export default class PostApi {
 
     /**
      * حذف دکمه اختصاصی از آگهی
-     * این API تنظیمات دکمه اختصاصی را از یک آگهی حذف می‌کند.  مجوزهای مورد نیاز: `SET_CUSTOMIZED_BUTTON`. OAuth scope موردنیاز: `USER_SET_CUSTOMIZED_BUTTON`
+     * این API تنظیمات دکمه اختصاصی را از یک آگهی حذف می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SET_CUSTOMIZED_BUTTON`  ##### OAuth اسکوپ موردنیاز:  - `USER_SET_CUSTOMIZED_BUTTON`
      * @param {String} postToken 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -241,7 +241,7 @@ export default class PostApi {
 
     /**
      * حذف آگهی
-     * این API امکان حذف آگهی را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل حذف هستند.  مجوزهای مورد نیاز: `DELETE_USER_POST`. OAuth scope موردنیاز: `DELETE_USER_POST`
+     * این API امکان حذف آگهی را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل حذف هستند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `DELETE_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `DELETE_USER_POST`
      * @param {String} postToken توکن آگهی برای حذف
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
@@ -275,7 +275,7 @@ export default class PostApi {
 
     /**
      * حذف آگهی
-     * این API امکان حذف آگهی را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل حذف هستند.  مجوزهای مورد نیاز: `DELETE_USER_POST`. OAuth scope موردنیاز: `DELETE_USER_POST`
+     * این API امکان حذف آگهی را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل حذف هستند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `DELETE_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `DELETE_USER_POST`
      * @param {String} postToken توکن آگهی برای حذف
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
@@ -289,7 +289,7 @@ export default class PostApi {
 
     /**
      * ویرایش آگهی
-     * این API امکان ویرایش آگهی را فراهم می‌کند. می‌توانید عنوان، توضیحات و تصاویر آگهی را به‌روزرسانی کنید.  **نکات مهم**: - عنوان باید بین 3 تا 50 کاراکتر باشد - آگهی نباید منقضی شده باشد  مجوزهای مورد نیاز: `EDIT_POST`. OAuth scope موردنیاز: `POST_EDIT.post_token`
+     * این API امکان ویرایش آگهی را فراهم می‌کند. می‌توانید عنوان، توضیحات و تصاویر آگهی را به‌روزرسانی کنید.  **نکات مهم**: - عنوان باید بین 3 تا 50 کاراکتر باشد - آگهی نباید منقضی شده باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EDIT_POST`  ##### OAuth اسکوپ موردنیاز:  - `POST_EDIT.post_token`
      * @param {String} postToken 
      * @param {module:model/PostEditPostBody} postEditPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -328,7 +328,7 @@ export default class PostApi {
 
     /**
      * ویرایش آگهی
-     * این API امکان ویرایش آگهی را فراهم می‌کند. می‌توانید عنوان، توضیحات و تصاویر آگهی را به‌روزرسانی کنید.  **نکات مهم**: - عنوان باید بین 3 تا 50 کاراکتر باشد - آگهی نباید منقضی شده باشد  مجوزهای مورد نیاز: `EDIT_POST`. OAuth scope موردنیاز: `POST_EDIT.post_token`
+     * این API امکان ویرایش آگهی را فراهم می‌کند. می‌توانید عنوان، توضیحات و تصاویر آگهی را به‌روزرسانی کنید.  **نکات مهم**: - عنوان باید بین 3 تا 50 کاراکتر باشد - آگهی نباید منقضی شده باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EDIT_POST`  ##### OAuth اسکوپ موردنیاز:  - `POST_EDIT.post_token`
      * @param {String} postToken 
      * @param {module:model/PostEditPostBody} postEditPostBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -343,7 +343,7 @@ export default class PostApi {
 
     /**
      * ویرایش آگهی (پیشرفته)
-     * این API امکان ویرایش آگهی با پشتیبانی از field mask را فراهم می‌کند. می‌توانید عنوان، توضیحات، تصاویر، موقعیت، فیلدهای ویژه دسته‌بندی و سایر ویژگی‌ها را به‌روزرسانی کنید.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - از `update_mask` برای مشخص کردن فیلدهای مورد به‌روزرسانی استفاده کنید - هنگام استفاده از scope `EDIT_USER_POST`، آگهی باید متعلق به کاربر احراز هویت شده باشد - آگهی نباید منقضی شده باشد  مجوزهای مورد نیاز: `EDIT_POST`. OAuth scope موردنیاز: `EDIT_USER_POST` یا `POST_EDIT.post_token`
+     * این API امکان ویرایش آگهی با پشتیبانی از field mask را فراهم می‌کند. می‌توانید عنوان، توضیحات، تصاویر، موقعیت، فیلدهای ویژه دسته‌بندی و سایر ویژگی‌ها را به‌روزرسانی کنید.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - از `update_mask` برای مشخص کردن فیلدهای مورد به‌روزرسانی استفاده کنید - هنگام استفاده از اسکوپ `EDIT_USER_POST`، آگهی باید متعلق به کاربر احراز هویت شده باشد - آگهی نباید منقضی شده باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EDIT_POST`  ##### OAuth اسکوپ موردنیاز:  - `EDIT_USER_POST` یا `POST_EDIT.post_token`
      * @param {String} postToken توکن آگهی
      * @param {module:model/PostEditPostV2Body} postEditPostV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -382,7 +382,7 @@ export default class PostApi {
 
     /**
      * ویرایش آگهی (پیشرفته)
-     * این API امکان ویرایش آگهی با پشتیبانی از field mask را فراهم می‌کند. می‌توانید عنوان، توضیحات، تصاویر، موقعیت، فیلدهای ویژه دسته‌بندی و سایر ویژگی‌ها را به‌روزرسانی کنید.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - از `update_mask` برای مشخص کردن فیلدهای مورد به‌روزرسانی استفاده کنید - هنگام استفاده از scope `EDIT_USER_POST`، آگهی باید متعلق به کاربر احراز هویت شده باشد - آگهی نباید منقضی شده باشد  مجوزهای مورد نیاز: `EDIT_POST`. OAuth scope موردنیاز: `EDIT_USER_POST` یا `POST_EDIT.post_token`
+     * این API امکان ویرایش آگهی با پشتیبانی از field mask را فراهم می‌کند. می‌توانید عنوان، توضیحات، تصاویر، موقعیت، فیلدهای ویژه دسته‌بندی و سایر ویژگی‌ها را به‌روزرسانی کنید.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - از `update_mask` برای مشخص کردن فیلدهای مورد به‌روزرسانی استفاده کنید - هنگام استفاده از اسکوپ `EDIT_USER_POST`، آگهی باید متعلق به کاربر احراز هویت شده باشد - آگهی نباید منقضی شده باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EDIT_POST`  ##### OAuth اسکوپ موردنیاز:  - `EDIT_USER_POST` یا `POST_EDIT.post_token`
      * @param {String} postToken توکن آگهی
      * @param {module:model/PostEditPostV2Body} postEditPostV2Body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -397,7 +397,7 @@ export default class PostApi {
 
     /**
      * دریافت آدرس اپلود تصاویر آگهی (منسوخ شده)
-     * این API آدرس آپلود برای بارگذاری تصاویر آگهی را برمی‌گرداند.  مجوزهای مورد نیاز: `UPLOAD_POST_IMAGE`
+     * این API آدرس آپلود برای بارگذاری تصاویر آگهی را برمی‌گرداند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `UPLOAD_POST_IMAGE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostGetImageUploadURLResponse} and HTTP response
      */
     postGetImageUploadURLWithHttpInfo() {
@@ -425,7 +425,7 @@ export default class PostApi {
 
     /**
      * دریافت آدرس اپلود تصاویر آگهی (منسوخ شده)
-     * این API آدرس آپلود برای بارگذاری تصاویر آگهی را برمی‌گرداند.  مجوزهای مورد نیاز: `UPLOAD_POST_IMAGE`
+     * این API آدرس آپلود برای بارگذاری تصاویر آگهی را برمی‌گرداند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `UPLOAD_POST_IMAGE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostGetImageUploadURLResponse}
      */
     postGetImageUploadURL() {
@@ -438,7 +438,7 @@ export default class PostApi {
 
     /**
      * دریافت آمارهای آگهی
-     * این API امکان دریافت آمار یک آگهی شامل بازدیدها، نمایش‌ها و چت‌ها را فراهم می‌کند. آمار روزانه برای 7 روز اخیر و تعداد کل برمی‌گردد.  **نکات مهم**: - فقط آمار آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شود  مجوزهای مورد نیاز: `POST_STATS_RETRIEVE`. OAuth scope موردنیاز: `USER_POSTS_STATS_READ`
+     * این API امکان دریافت آمار یک آگهی شامل بازدیدها، نمایش‌ها و چت‌ها را فراهم می‌کند. آمار روزانه برای 7 روز اخیر و تعداد کل برمی‌گردد.  **نکات مهم**: - فقط آمار آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شود  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `POST_STATS_RETRIEVE`  ##### OAuth اسکوپ موردنیاز:  - `USER_POSTS_STATS_READ`
      * @param {String} postToken توکن آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostGetPostStatsResponse} and HTTP response
      */
@@ -472,7 +472,7 @@ export default class PostApi {
 
     /**
      * دریافت آمارهای آگهی
-     * این API امکان دریافت آمار یک آگهی شامل بازدیدها، نمایش‌ها و چت‌ها را فراهم می‌کند. آمار روزانه برای 7 روز اخیر و تعداد کل برمی‌گردد.  **نکات مهم**: - فقط آمار آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شود  مجوزهای مورد نیاز: `POST_STATS_RETRIEVE`. OAuth scope موردنیاز: `USER_POSTS_STATS_READ`
+     * این API امکان دریافت آمار یک آگهی شامل بازدیدها، نمایش‌ها و چت‌ها را فراهم می‌کند. آمار روزانه برای 7 روز اخیر و تعداد کل برمی‌گردد.  **نکات مهم**: - فقط آمار آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شود  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `POST_STATS_RETRIEVE`  ##### OAuth اسکوپ موردنیاز:  - `USER_POSTS_STATS_READ`
      * @param {String} postToken توکن آگهی
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostGetPostStatsResponse}
      */
@@ -486,7 +486,7 @@ export default class PostApi {
 
     /**
      * دریافت آدرس آپلود تصاویر و ویدیو
-     * این API امکان دریافت آدرس‌های آپلود برای بارگذاری تصاویر و ویدیوهای آگهی را فراهم می‌کند. می‌توانید تصاویر/ویدیوها را با درخواست POST یا PUT با کدگذاری باینری به آدرس برگشتی آپلود کنید.  **نکات مهم**: - آدرس برگشتی برای آپلود نیاز به api-key شما دارد  مجوزهای مورد نیاز: `UPLOAD_POST_IMAGE`
+     * این API امکان دریافت آدرس‌های آپلود برای بارگذاری تصاویر و ویدیوهای آگهی را فراهم می‌کند. می‌توانید تصاویر/ویدیوها را با درخواست POST یا PUT با کدگذاری باینری به آدرس برگشتی آپلود کنید.  **نکات مهم**: - آدرس برگشتی برای آپلود نیاز به api-key شما دارد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `UPLOAD_POST_IMAGE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostGetUploadURLsV2Response} and HTTP response
      */
     postGetUploadURLsV2WithHttpInfo() {
@@ -514,7 +514,7 @@ export default class PostApi {
 
     /**
      * دریافت آدرس آپلود تصاویر و ویدیو
-     * این API امکان دریافت آدرس‌های آپلود برای بارگذاری تصاویر و ویدیوهای آگهی را فراهم می‌کند. می‌توانید تصاویر/ویدیوها را با درخواست POST یا PUT با کدگذاری باینری به آدرس برگشتی آپلود کنید.  **نکات مهم**: - آدرس برگشتی برای آپلود نیاز به api-key شما دارد  مجوزهای مورد نیاز: `UPLOAD_POST_IMAGE`
+     * این API امکان دریافت آدرس‌های آپلود برای بارگذاری تصاویر و ویدیوهای آگهی را فراهم می‌کند. می‌توانید تصاویر/ویدیوها را با درخواست POST یا PUT با کدگذاری باینری به آدرس برگشتی آپلود کنید.  **نکات مهم**: - آدرس برگشتی برای آپلود نیاز به api-key شما دارد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `UPLOAD_POST_IMAGE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostGetUploadURLsV2Response}
      */
     postGetUploadURLsV2() {
@@ -527,7 +527,7 @@ export default class PostApi {
 
     /**
      * دریافت آگهی با توکن
-     * این API امکان دریافت اطلاعات دقیق یک آگهی شامل داده‌های عمومی، داده‌های دسته‌بندی، داده‌های کسب‌وکار، وضعیت و دلیل رد را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل دریافت هستند.  مجوزهای مورد نیاز: `GET_USER_POST`. OAuth scope موردنیاز: `USER_POSTS_GET`
+     * این API امکان دریافت اطلاعات دقیق یک آگهی شامل داده‌های عمومی، داده‌های دسته‌بندی، داده‌های کسب‌وکار، وضعیت و دلیل رد را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل دریافت هستند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `GET_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `USER_POSTS_GET`
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostGetUserPostResponse} and HTTP response
      */
@@ -561,7 +561,7 @@ export default class PostApi {
 
     /**
      * دریافت آگهی با توکن
-     * این API امکان دریافت اطلاعات دقیق یک آگهی شامل داده‌های عمومی، داده‌های دسته‌بندی، داده‌های کسب‌وکار، وضعیت و دلیل رد را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل دریافت هستند.  مجوزهای مورد نیاز: `GET_USER_POST`. OAuth scope موردنیاز: `USER_POSTS_GET`
+     * این API امکان دریافت اطلاعات دقیق یک آگهی شامل داده‌های عمومی، داده‌های دسته‌بندی، داده‌های کسب‌وکار، وضعیت و دلیل رد را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل دریافت هستند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `GET_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `USER_POSTS_GET`
      * @param {String} token 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostGetUserPostResponse}
      */
@@ -575,7 +575,7 @@ export default class PostApi {
 
     /**
      * تنظیم دکمه اختصاصی روی آگهی
-     * این API تنظیمات دکمه اختصاصی را برای یک آگهی تعیین می‌کند. اگر دکمه وجود نداشته باشد، ایجاد می‌شود. اگر از قبل وجود داشته باشد، داده‌های آن به‌روزرسانی می‌شوند.  مجوزهای مورد نیاز: `SET_CUSTOMIZED_BUTTON`. OAuth scope موردنیاز: `USER_SET_CUSTOMIZED_BUTTON`
+     * این API تنظیمات دکمه اختصاصی را برای یک آگهی تعیین می‌کند. اگر دکمه وجود نداشته باشد، ایجاد می‌شود. اگر از قبل وجود داشته باشد، داده‌های آن به‌روزرسانی می‌شوند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SET_CUSTOMIZED_BUTTON`  ##### OAuth اسکوپ موردنیاز:  - `USER_SET_CUSTOMIZED_BUTTON`
      * @param {String} postToken 
      * @param {module:model/PostSetPostCustomizedButtonBody} postSetPostCustomizedButtonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -614,7 +614,7 @@ export default class PostApi {
 
     /**
      * تنظیم دکمه اختصاصی روی آگهی
-     * این API تنظیمات دکمه اختصاصی را برای یک آگهی تعیین می‌کند. اگر دکمه وجود نداشته باشد، ایجاد می‌شود. اگر از قبل وجود داشته باشد، داده‌های آن به‌روزرسانی می‌شوند.  مجوزهای مورد نیاز: `SET_CUSTOMIZED_BUTTON`. OAuth scope موردنیاز: `USER_SET_CUSTOMIZED_BUTTON`
+     * این API تنظیمات دکمه اختصاصی را برای یک آگهی تعیین می‌کند. اگر دکمه وجود نداشته باشد، ایجاد می‌شود. اگر از قبل وجود داشته باشد، داده‌های آن به‌روزرسانی می‌شوند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SET_CUSTOMIZED_BUTTON`  ##### OAuth اسکوپ موردنیاز:  - `USER_SET_CUSTOMIZED_BUTTON`
      * @param {String} postToken 
      * @param {module:model/PostSetPostCustomizedButtonBody} postSetPostCustomizedButtonBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -629,7 +629,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی (منسوخ شده)
-     * این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  مجوزهای مورد نیاز: `SUBMIT_POST`
+     * این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
      * @param {module:model/PostSubmitPostRequest} postSubmitPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
      */
@@ -662,7 +662,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی (منسوخ شده)
-     * این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  مجوزهای مورد نیاز: `SUBMIT_POST`
+     * این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
      * @param {module:model/PostSubmitPostRequest} postSubmitPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
      */
@@ -676,7 +676,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی
-     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  مجوزهای مورد نیاز: `SUBMIT_POST`
+     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
      * @param {module:model/PostSubmitPostV2Request} postSubmitPostV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
      */
@@ -709,7 +709,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی
-     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  مجوزهای مورد نیاز: `SUBMIT_POST`
+     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
      * @param {module:model/PostSubmitPostV2Request} postSubmitPostV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
      */
@@ -723,7 +723,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی به عنوان کاربر
-     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  مجوزهای مورد نیاز: `SUBMIT_USER_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
+     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
      * @param {module:model/PostSubmitUserPostRequest} postSubmitUserPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
      */
@@ -756,7 +756,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی به عنوان کاربر
-     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  مجوزهای مورد نیاز: `SUBMIT_USER_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
+     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
      * @param {module:model/PostSubmitUserPostRequest} postSubmitUserPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
      */

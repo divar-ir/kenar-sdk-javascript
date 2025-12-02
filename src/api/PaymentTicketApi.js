@@ -39,7 +39,7 @@ export default class PaymentTicketApi {
 
     /**
      * اعتبارسنجی تیکت پرداخت
-     * این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  مجوزهای مورد نیاز: `PAYMENT_TICKET_VALIDATE`
+     * این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `PAYMENT_TICKET_VALIDATE`
      * @param {module:model/PaymentTicketValidateRequest} paymentTicketValidateRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentTicketValidateResponse} and HTTP response
      */
@@ -72,7 +72,7 @@ export default class PaymentTicketApi {
 
     /**
      * اعتبارسنجی تیکت پرداخت
-     * این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  مجوزهای مورد نیاز: `PAYMENT_TICKET_VALIDATE`
+     * این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `PAYMENT_TICKET_VALIDATE`
      * @param {module:model/PaymentTicketValidateRequest} paymentTicketValidateRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentTicketValidateResponse}
      */

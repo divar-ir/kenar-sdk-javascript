@@ -43,7 +43,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_BOT_SEND_MESSAGE`. OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_BOT_SEND_MESSAGE`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -82,7 +82,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_BOT_SEND_MESSAGE`. OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_BOT_SEND_MESSAGE`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -97,7 +97,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} userId شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -136,7 +136,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} userId شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -151,7 +151,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -190,7 +190,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -205,7 +205,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} userId شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -244,7 +244,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} userId شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -259,7 +259,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiChatBotSendMessageResponse} and HTTP response
@@ -298,7 +298,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه ChatBot
-     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+     * این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `CHAT_BOT_USER_MESSAGE_SEND`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIChatBotSendMessageBody} chatAPIChatBotSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiChatBotSendMessageResponse}
@@ -313,7 +313,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه
-     * این API امکان ارسال پیام متنی یا رسانه به یک مکالمه را فراهم می‌کند. اگر مکالمه وجود نداشته باشد، به صورت خودکار ایجاد می‌شود.  **نکات مهم**: - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_SEND_MESSAGE_OAUTH`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
+     * این API امکان ارسال پیام متنی یا رسانه به یک مکالمه را فراهم می‌کند. اگر مکالمه وجود نداشته باشد، به صورت خودکار ایجاد می‌شود.  **نکات مهم**: - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_SEND_MESSAGE_OAUTH`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIConversationSendMessageBody} chatAPIConversationSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiConversationSendMessageResponse} and HTTP response
@@ -352,7 +352,7 @@ export default class ChatAPIApi {
 
     /**
      * ارسال پیام به مکالمه
-     * این API امکان ارسال پیام متنی یا رسانه به یک مکالمه را فراهم می‌کند. اگر مکالمه وجود نداشته باشد، به صورت خودکار ایجاد می‌شود.  **نکات مهم**: - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_SEND_MESSAGE_OAUTH`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
+     * این API امکان ارسال پیام متنی یا رسانه به یک مکالمه را فراهم می‌کند. اگر مکالمه وجود نداشته باشد، به صورت خودکار ایجاد می‌شود.  **نکات مهم**: - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_SEND_MESSAGE_OAUTH`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @param {module:model/ChatAPIConversationSendMessageBody} chatAPIConversationSendMessageBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiConversationSendMessageResponse}
@@ -367,7 +367,7 @@ export default class ChatAPIApi {
 
     /**
      * تولید توکن آپلود
-     * این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.  مجوزهای مورد نیاز: `CHAT_UPLOAD_MEDIA`
+     * این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_UPLOAD_MEDIA`
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiGenerateUploadTokenResponse} and HTTP response
      */
@@ -400,7 +400,7 @@ export default class ChatAPIApi {
 
     /**
      * تولید توکن آپلود
-     * این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.  مجوزهای مورد نیاز: `CHAT_UPLOAD_MEDIA`
+     * این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_UPLOAD_MEDIA`
      * @param {Object.<String, Object>} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiGenerateUploadTokenResponse}
      */
@@ -414,7 +414,7 @@ export default class ChatAPIApi {
 
     /**
      * دریافت مکالمه
-     * این API امکان دریافت مکالمه و پیام‌های آن با شناسه مکالمه را فراهم می‌کند. جزئیات مکالمه و پیام‌های متنی تا زمان انقضای توکن OAuth برمی‌گردد.  **نکات مهم**: - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند) - پیام‌ها به ترتیب صعودی برگردانده می‌شوند  مجوزهای مورد نیاز: `CHAT_READ_CONVERSATION`. OAuth scope موردنیاز: `CHAT_CONVERSATION_READ.conversation_id`
+     * این API امکان دریافت مکالمه و پیام‌های آن با شناسه مکالمه را فراهم می‌کند. جزئیات مکالمه و پیام‌های متنی تا زمان انقضای توکن OAuth برمی‌گردد.  **نکات مهم**: - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند) - پیام‌ها به ترتیب صعودی برگردانده می‌شوند  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_READ_CONVERSATION`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_CONVERSATION_READ.conversation_id`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ChatapiGetConversationResponse} and HTTP response
      */
@@ -448,7 +448,7 @@ export default class ChatAPIApi {
 
     /**
      * دریافت مکالمه
-     * این API امکان دریافت مکالمه و پیام‌های آن با شناسه مکالمه را فراهم می‌کند. جزئیات مکالمه و پیام‌های متنی تا زمان انقضای توکن OAuth برمی‌گردد.  **نکات مهم**: - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند) - پیام‌ها به ترتیب صعودی برگردانده می‌شوند  مجوزهای مورد نیاز: `CHAT_READ_CONVERSATION`. OAuth scope موردنیاز: `CHAT_CONVERSATION_READ.conversation_id`
+     * این API امکان دریافت مکالمه و پیام‌های آن با شناسه مکالمه را فراهم می‌کند. جزئیات مکالمه و پیام‌های متنی تا زمان انقضای توکن OAuth برمی‌گردد.  **نکات مهم**: - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند) - پیام‌ها به ترتیب صعودی برگردانده می‌شوند  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `CHAT_READ_CONVERSATION`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_CONVERSATION_READ.conversation_id`
      * @param {String} conversationId شناسه منحصر به فرد برای مکالمه
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ChatapiGetConversationResponse}
      */

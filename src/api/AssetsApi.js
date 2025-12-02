@@ -404,7 +404,7 @@ export default class AssetsApi {
 
     /**
      * لیست دامنه‌های OAuth
-     * این API لیست OAuth scopeهای موجود برای کنار دیوار را برمی‌گرداند. از این scopeها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر scope شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی scopeها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
+     * این API لیست OAuth اسکوپ‌های موجود برای کنار دیوار را برمی‌گرداند. از این اسکوپ‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر اسکوپ شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی اسکوپ‌ها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AssetsGetOAuthScopesResponse} and HTTP response
      */
     assetsGetOAuthScopesWithHttpInfo() {
@@ -432,7 +432,7 @@ export default class AssetsApi {
 
     /**
      * لیست دامنه‌های OAuth
-     * این API لیست OAuth scopeهای موجود برای کنار دیوار را برمی‌گرداند. از این scopeها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر scope شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی scopeها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
+     * این API لیست OAuth اسکوپ‌های موجود برای کنار دیوار را برمی‌گرداند. از این اسکوپ‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر اسکوپ شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی اسکوپ‌ها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AssetsGetOAuthScopesResponse}
      */
     assetsGetOAuthScopes() {
