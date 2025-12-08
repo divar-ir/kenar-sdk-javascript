@@ -181,7 +181,7 @@ export default class FinderApi {
 
     /**
      * دریافت کسب‌وکارهای کاربر
-     * این API امکان دریافت تمام کسب‌وکارهای مرتبط با کاربر احراز هویت شده را فراهم می‌کند، همراه با نقش کاربر در هر کسب‌وکار.  **نکات مهم**: - تمام کسب‌وکارهایی که کاربر در آنها نقش دارد (مثلاً مالک یا همکار) را برمی‌گرداند - شامل اطلاعات کسب‌وکار مانند business_token، business_type، brand_name و نقش کاربر است  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_BUSINESSES_READ`
+     * این API امکان دریافت تمام کسب‌وکارهای مرتبط با کاربر احراز هویت شده را فراهم می‌کند، همراه با نقش کاربر در هر کسب‌وکار.  **نکات مهم**: - تمام کسب‌وکارهایی که کاربر در آنها نقش دارد (مثلاً مالک یا همکار) را برمی‌گرداند - شامل اطلاعات کسب‌وکار مانند business_token، business_type، brand_name و نقش کاربر است  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `GET_USER_BUSINESSES`  ##### OAuth اسکوپ موردنیاز:  - `USER_BUSINESSES_READ`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetUserBusinessesResponse} and HTTP response
      */
     finderGetUserBusinessesWithHttpInfo() {
@@ -209,7 +209,7 @@ export default class FinderApi {
 
     /**
      * دریافت کسب‌وکارهای کاربر
-     * این API امکان دریافت تمام کسب‌وکارهای مرتبط با کاربر احراز هویت شده را فراهم می‌کند، همراه با نقش کاربر در هر کسب‌وکار.  **نکات مهم**: - تمام کسب‌وکارهایی که کاربر در آنها نقش دارد (مثلاً مالک یا همکار) را برمی‌گرداند - شامل اطلاعات کسب‌وکار مانند business_token، business_type، brand_name و نقش کاربر است  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_BUSINESSES_READ`
+     * این API امکان دریافت تمام کسب‌وکارهای مرتبط با کاربر احراز هویت شده را فراهم می‌کند، همراه با نقش کاربر در هر کسب‌وکار.  **نکات مهم**: - تمام کسب‌وکارهایی که کاربر در آنها نقش دارد (مثلاً مالک یا همکار) را برمی‌گرداند - شامل اطلاعات کسب‌وکار مانند business_token، business_type، brand_name و نقش کاربر است  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `GET_USER_BUSINESSES`  ##### OAuth اسکوپ موردنیاز:  - `USER_BUSINESSES_READ`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetUserBusinessesResponse}
      */
     finderGetUserBusinesses() {
