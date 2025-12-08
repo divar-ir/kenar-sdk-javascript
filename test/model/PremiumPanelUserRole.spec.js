@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.EventsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +46,13 @@
       object[property] = value;
   }
 
-  describe('EventsApi', function() {
-    describe('eventsRegisterEventSubscription', function() {
-      it('should call eventsRegisterEventSubscription successfully', function(done) {
-        //uncomment below and update the code to test eventsRegisterEventSubscription
-        //instance.eventsRegisterEventSubscription(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('PremiumPanelUserRole', function() {
+    it('should create an instance of PremiumPanelUserRole', function() {
+      // uncomment below and update the code to test PremiumPanelUserRole
+      //var instance = new KenarApiClient.PremiumPanelUserRole();
+      //expect(instance).to.be.a(KenarApiClient.PremiumPanelUserRole);
     });
+
   });
 
 }));

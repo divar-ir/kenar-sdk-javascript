@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('finderGetUserBusinesses', function() {
+      it('should call finderGetUserBusinesses successfully', function(done) {
+        //uncomment below and update the code to test finderGetUserBusinesses
+        //instance.finderGetUserBusinesses(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('finderGetUserIDByPhone', function() {
       it('should call finderGetUserIDByPhone successfully', function(done) {
         //uncomment below and update the code to test finderGetUserIDByPhone

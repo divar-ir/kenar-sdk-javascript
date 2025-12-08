@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import FinderGetPostResponse from '../model/FinderGetPostResponse';
+import FinderGetUserBusinessesResponse from '../model/FinderGetUserBusinessesResponse';
 import FinderGetUserIDByPhoneRequest from '../model/FinderGetUserIDByPhoneRequest';
 import FinderGetUserIDByPhoneResponse from '../model/FinderGetUserIDByPhoneResponse';
 import FinderGetUserPostsResponse from '../model/FinderGetUserPostsResponse';
@@ -139,7 +140,7 @@ export default class FinderApi {
 
     /**
      * دریافت اطلاعات کاربر
-     * این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth اسکوپ‌های اعطا شده بستگی دارد.  **نکات مهم**: - با اسکوپ `USER_PHONE`: شماره تلفن کاربر برمی‌گردد - با اسکوپ `USER_ID`: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_ID` یا `USER_PHONE`
+     * این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth اسکوپ‌های اعطا شده بستگی دارد.  **نکات مهم**: - با اسکوپ `USER_PHONE`: شماره تلفن کاربر برمی‌گردد - با اسکوپ `USER_ID`: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_RETRIEVE`  ##### OAuth اسکوپ موردنیاز:  - `USER_ID` یا `USER_PHONE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderUser} and HTTP response
      */
     finderGetUser2WithHttpInfo() {
@@ -167,7 +168,7 @@ export default class FinderApi {
 
     /**
      * دریافت اطلاعات کاربر
-     * این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth اسکوپ‌های اعطا شده بستگی دارد.  **نکات مهم**: - با اسکوپ `USER_PHONE`: شماره تلفن کاربر برمی‌گردد - با اسکوپ `USER_ID`: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_ID` یا `USER_PHONE`
+     * این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth اسکوپ‌های اعطا شده بستگی دارد.  **نکات مهم**: - با اسکوپ `USER_PHONE`: شماره تلفن کاربر برمی‌گردد - با اسکوپ `USER_ID`: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_RETRIEVE`  ##### OAuth اسکوپ موردنیاز:  - `USER_ID` یا `USER_PHONE`
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderUser}
      */
     finderGetUser2() {
@@ -179,7 +180,48 @@ export default class FinderApi {
 
 
     /**
-     * دریافت شناسه کاربر دیوار با شماره تلفن
+     * دریافت کسب‌وکارهای کاربر
+     * این API امکان دریافت تمام کسب‌وکارهای مرتبط با کاربر احراز هویت شده را فراهم می‌کند، همراه با نقش کاربر در هر کسب‌وکار.  **نکات مهم**: - تمام کسب‌وکارهایی که کاربر در آنها نقش دارد (مثلاً مالک یا همکار) را برمی‌گرداند - شامل اطلاعات کسب‌وکار مانند business_token، business_type، brand_name و نقش کاربر است  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_BUSINESSES_READ`
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetUserBusinessesResponse} and HTTP response
+     */
+    finderGetUserBusinessesWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['APIKey', 'OAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = FinderGetUserBusinessesResponse;
+      return this.apiClient.callApi(
+        '/v1/open-platform/user/businesses', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * دریافت کسب‌وکارهای کاربر
+     * این API امکان دریافت تمام کسب‌وکارهای مرتبط با کاربر احراز هویت شده را فراهم می‌کند، همراه با نقش کاربر در هر کسب‌وکار.  **نکات مهم**: - تمام کسب‌وکارهایی که کاربر در آنها نقش دارد (مثلاً مالک یا همکار) را برمی‌گرداند - شامل اطلاعات کسب‌وکار مانند business_token، business_type، brand_name و نقش کاربر است  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_BUSINESSES_READ`
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetUserBusinessesResponse}
+     */
+    finderGetUserBusinesses() {
+      return this.finderGetUserBusinessesWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * دریافت شناسه کاربر
      * این API امکان پیدا کردن شناسه کاربر با شماره تلفن را می‌دهد. مناسب برای یکپارچه‌سازی با سیستم‌های CRM یا پشتیبانی.  **نکات مهم**: - شناسه مبهم‌شده برمی‌گردد (یکتا برای هر اپلیکیشن، نه شناسه واقعی کاربر دیوار)   #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `GET_USER_ID_BY_PHONE`
      * @param {module:model/FinderGetUserIDByPhoneRequest} finderGetUserIDByPhoneRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FinderGetUserIDByPhoneResponse} and HTTP response
@@ -212,7 +254,7 @@ export default class FinderApi {
     }
 
     /**
-     * دریافت شناسه کاربر دیوار با شماره تلفن
+     * دریافت شناسه کاربر
      * این API امکان پیدا کردن شناسه کاربر با شماره تلفن را می‌دهد. مناسب برای یکپارچه‌سازی با سیستم‌های CRM یا پشتیبانی.  **نکات مهم**: - شناسه مبهم‌شده برمی‌گردد (یکتا برای هر اپلیکیشن، نه شناسه واقعی کاربر دیوار)   #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `GET_USER_ID_BY_PHONE`
      * @param {module:model/FinderGetUserIDByPhoneRequest} finderGetUserIDByPhoneRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FinderGetUserIDByPhoneResponse}

@@ -271,6 +271,13 @@ export default class OAuthScopeScope {
         "EDIT_USER_POST" = "EDIT_USER_POST";
 
     
+        /**
+         * value: "USER_BUSINESSES_READ"
+         * @const
+         */
+        "USER_BUSINESSES_READ" = "USER_BUSINESSES_READ";
+
+    
 
     /**
     * Returns a <code>OAuthScopeScope</code> enum value from a Javascript object name.

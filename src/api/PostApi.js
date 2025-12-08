@@ -23,7 +23,6 @@ import PostGetPostStatsResponse from '../model/PostGetPostStatsResponse';
 import PostGetUploadURLsV2Response from '../model/PostGetUploadURLsV2Response';
 import PostGetUserPostResponse from '../model/PostGetUserPostResponse';
 import PostSetPostCustomizedButtonBody from '../model/PostSetPostCustomizedButtonBody';
-import PostSubmitPostRequest from '../model/PostSubmitPostRequest';
 import PostSubmitPostResponse from '../model/PostSubmitPostResponse';
 import PostSubmitPostV2Request from '../model/PostSubmitPostV2Request';
 import PostSubmitUserPostRequest from '../model/PostSubmitUserPostRequest';
@@ -628,55 +627,8 @@ export default class PostApi {
 
 
     /**
-     * ثبت آگهی (منسوخ شده)
-     * این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
-     * @param {module:model/PostSubmitPostRequest} postSubmitPostRequest 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
-     */
-    postSubmitPostWithHttpInfo(postSubmitPostRequest) {
-      let postBody = postSubmitPostRequest;
-      // verify the required parameter 'postSubmitPostRequest' is set
-      if (postSubmitPostRequest === undefined || postSubmitPostRequest === null) {
-        throw new Error("Missing the required parameter 'postSubmitPostRequest' when calling postSubmitPost");
-      }
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['APIKey'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = PostSubmitPostResponse;
-      return this.apiClient.callApi(
-        '/experimental/open-platform/posts/new', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * ثبت آگهی (منسوخ شده)
-     * این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
-     * @param {module:model/PostSubmitPostRequest} postSubmitPostRequest 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
-     */
-    postSubmitPost(postSubmitPostRequest) {
-      return this.postSubmitPostWithHttpInfo(postSubmitPostRequest)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * ثبت آگهی
-     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
+     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده) - آگهی‌های ثبت شده توسط ارائه‌دهندگان باید آگهی‌های کسب‌وکار باشند، بنابراین توکن کسب‌وکار الزامی است - کاربر احراز هویت شده باید به کسب‌وکار دسترسی داشته باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
      * @param {module:model/PostSubmitPostV2Request} postSubmitPostV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
      */
@@ -709,7 +661,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی
-     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
+     * این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده) - آگهی‌های ثبت شده توسط ارائه‌دهندگان باید آگهی‌های کسب‌وکار باشند، بنابراین توکن کسب‌وکار الزامی است - کاربر احراز هویت شده باید به کسب‌وکار دسترسی داشته باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_POST`
      * @param {module:model/PostSubmitPostV2Request} postSubmitPostV2Request 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
      */
@@ -723,7 +675,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی به عنوان کاربر
-     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
+     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - آگهی‌های ثبت شده توسط ارائه‌دهندگان باید آگهی‌های کسب‌وکار باشند، بنابراین توکن کسب‌وکار الزامی است - کاربر احراز هویت شده باید به کسب‌وکار دسترسی داشته باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
      * @param {module:model/PostSubmitUserPostRequest} postSubmitUserPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PostSubmitPostResponse} and HTTP response
      */
@@ -756,7 +708,7 @@ export default class PostApi {
 
     /**
      * ثبت آگهی به عنوان کاربر
-     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
+     * این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - آگهی‌های ثبت شده توسط ارائه‌دهندگان باید آگهی‌های کسب‌وکار باشند، بنابراین توکن کسب‌وکار الزامی است - کاربر احراز هویت شده باید به کسب‌وکار دسترسی داشته باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `SUBMIT_USER_POST`  ##### OAuth اسکوپ موردنیاز:  - `SUBMIT_USER_POST`
      * @param {module:model/PostSubmitUserPostRequest} postSubmitUserPostRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PostSubmitPostResponse}
      */

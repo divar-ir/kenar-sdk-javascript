@@ -75,4 +75,6 @@
 
 * `EDIT_USER_POST` (value: `"EDIT_USER_POST"`)
 
+* `USER_BUSINESSES_READ` (value: `"USER_BUSINESSES_READ"`)
+
 

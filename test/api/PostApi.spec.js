@@ -168,16 +168,6 @@
         done();
       });
     });
-    describe('postSubmitPost', function() {
-      it('should call postSubmitPost successfully', function(done) {
-        //uncomment below and update the code to test postSubmitPost
-        //instance.postSubmitPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('postSubmitPostV2', function() {
       it('should call postSubmitPostV2 successfully', function(done) {
         //uncomment below and update the code to test postSubmitPostV2

@@ -88,6 +88,7 @@ import AssetsGetServiceTypesResponse from './model/AssetsGetServiceTypesResponse
 import AssetsGetSubmitSchemaResponse from './model/AssetsGetSubmitSchemaResponse';
 import AuthorizationAPICallerInfo from './model/AuthorizationAPICallerInfo';
 import AuthorizationOAuthScope from './model/AuthorizationOAuthScope';
+import BaseBusinessType from './model/BaseBusinessType';
 import ChatAPIChatBotSendMessageBody from './model/ChatAPIChatBotSendMessageBody';
 import ChatAPIConversationSendMessageBody from './model/ChatAPIConversationSendMessageBody';
 import ChatapiChatBotSendMessageResponse from './model/ChatapiChatBotSendMessageResponse';
@@ -104,13 +105,13 @@ import ChatapiMessageSenderSide from './model/ChatapiMessageSenderSide';
 import ChatapiMessageSenderType from './model/ChatapiMessageSenderType';
 import ChatapiMessageType from './model/ChatapiMessageType';
 import DivarIconsIconName from './model/DivarIconsIconName';
-import EventsEventButton from './model/EventsEventButton';
-import EventsEventButtonList from './model/EventsEventButtonList';
 import EventsRegisterEventSubscriptionRequest from './model/EventsRegisterEventSubscriptionRequest';
 import EventsRegisterEventSubscriptionRequestEventType from './model/EventsRegisterEventSubscriptionRequestEventType';
 import FinderGetAllDevelopmentPostsResponse from './model/FinderGetAllDevelopmentPostsResponse';
 import FinderGetPostResponse from './model/FinderGetPostResponse';
 import FinderGetPostResponseBusinessData from './model/FinderGetPostResponseBusinessData';
+import FinderGetUserBusinessesResponse from './model/FinderGetUserBusinessesResponse';
+import FinderGetUserBusinessesResponseBusiness from './model/FinderGetUserBusinessesResponseBusiness';
 import FinderGetUserIDByPhoneRequest from './model/FinderGetUserIDByPhoneRequest';
 import FinderGetUserIDByPhoneResponse from './model/FinderGetUserIDByPhoneResponse';
 import FinderGetUserPostsResponse from './model/FinderGetUserPostsResponse';
@@ -130,10 +131,6 @@ import GetPostStatsResponsePostStats from './model/GetPostStatsResponsePostStats
 import GetServiceTypesResponseServiceTypeData from './model/GetServiceTypesResponseServiceTypeData';
 import GetUploadURLsV2ResponseUploadFormat from './model/GetUploadURLsV2ResponseUploadFormat';
 import GooglerpcStatus from './model/GooglerpcStatus';
-import HomePresellFieldsConstructionPhase from './model/HomePresellFieldsConstructionPhase';
-import HomePresellFieldsDeliveryMonth from './model/HomePresellFieldsDeliveryMonth';
-import HomePresellFieldsDeliveryYear from './model/HomePresellFieldsDeliveryYear';
-import HomePresellFieldsUnitType from './model/HomePresellFieldsUnitType';
 import ImageCarouselRowImageItem from './model/ImageCarouselRowImageItem';
 import ManagementDevelopmentPost from './model/ManagementDevelopmentPost';
 import MessageContactData from './model/MessageContactData';
@@ -146,7 +143,6 @@ import MessageVoiceData from './model/MessageVoiceData';
 import OAuthScopeScope from './model/OAuthScopeScope';
 import OpenPlatformpostHTTPMethod from './model/OpenPlatformpostHTTPMethod';
 import OpenPlatformpostPostState from './model/OpenPlatformpostPostState';
-import OpenPlatformpostServicesFields from './model/OpenPlatformpostServicesFields';
 import PaymentCommitWalletTransactionRequest from './model/PaymentCommitWalletTransactionRequest';
 import PaymentCommitWalletTransactionResponse from './model/PaymentCommitWalletTransactionResponse';
 import PaymentCreateWalletPaymentRequest from './model/PaymentCreateWalletPaymentRequest';
@@ -171,7 +167,6 @@ import PaymentTransactionState from './model/PaymentTransactionState';
 import PaymentTransactionType from './model/PaymentTransactionType';
 import PaymentWalletTransaction from './model/PaymentWalletTransaction';
 import PaymentWalletTransactionStatus from './model/PaymentWalletTransactionStatus';
-import PostApartmentSellFields from './model/PostApartmentSellFields';
 import PostCanUserSubmitPostResponse from './model/PostCanUserSubmitPostResponse';
 import PostCreateBusinessCustomizedButtonBody from './model/PostCreateBusinessCustomizedButtonBody';
 import PostCustomizedButton from './model/PostCustomizedButton';
@@ -185,17 +180,14 @@ import PostGetPostStatsResponse from './model/PostGetPostStatsResponse';
 import PostGetUploadURLsV2Response from './model/PostGetUploadURLsV2Response';
 import PostGetUserPostResponse from './model/PostGetUserPostResponse';
 import PostGetUserPostResponseBusinessData from './model/PostGetUserPostResponseBusinessData';
-import PostHomePresellFields from './model/PostHomePresellFields';
 import PostLocationType from './model/PostLocationType';
 import PostPostGeneralData from './model/PostPostGeneralData';
-import PostRoomsCount from './model/PostRoomsCount';
 import PostSetPostCustomizedButtonBody from './model/PostSetPostCustomizedButtonBody';
-import PostSubmitPostRequest from './model/PostSubmitPostRequest';
 import PostSubmitPostResponse from './model/PostSubmitPostResponse';
 import PostSubmitPostV2Request from './model/PostSubmitPostV2Request';
 import PostSubmitUserPostRequest from './model/PostSubmitUserPostRequest';
-import PostTemporaryResidenceFields from './model/PostTemporaryResidenceFields';
 import PremiumPanelBusinessDataSubBusinessType from './model/PremiumPanelBusinessDataSubBusinessType';
+import PremiumPanelUserRole from './model/PremiumPanelUserRole';
 import ProtobufAny from './model/ProtobufAny';
 import SearchPostItemPrice from './model/SearchPostItemPrice';
 import SearchPostItemRealEstateFields from './model/SearchPostItemRealEstateFields';
@@ -205,12 +197,6 @@ import SemanticCreateUserSemanticBody from './model/SemanticCreateUserSemanticBo
 import SemanticCreateUserSemanticResponse from './model/SemanticCreateUserSemanticResponse';
 import SemanticPostSemanticDeleted from './model/SemanticPostSemanticDeleted';
 import SemanticUserSemanticDeleted from './model/SemanticUserSemanticDeleted';
-import SendEventRequestTargetType from './model/SendEventRequestTargetType';
-import ServicesFieldsCategory from './model/ServicesFieldsCategory';
-import TemporaryResidenceFieldsComfortAmenity from './model/TemporaryResidenceFieldsComfortAmenity';
-import TemporaryResidenceFieldsHeatingCoolingSystem from './model/TemporaryResidenceFieldsHeatingCoolingSystem';
-import TemporaryResidenceFieldsPetsAllowed from './model/TemporaryResidenceFieldsPetsAllowed';
-import TemporaryResidenceFieldsRentalPeriod from './model/TemporaryResidenceFieldsRentalPeriod';
 import AddonsApi from './api/AddonsApi';
 import AssetsApi from './api/AssetsApi';
 import ChatAPIApi from './api/ChatAPIApi';
@@ -711,6 +697,12 @@ export {
     AuthorizationOAuthScope,
 
     /**
+     * The BaseBusinessType model constructor.
+     * @property {module:model/BaseBusinessType}
+     */
+    BaseBusinessType,
+
+    /**
      * The ChatAPIChatBotSendMessageBody model constructor.
      * @property {module:model/ChatAPIChatBotSendMessageBody}
      */
@@ -807,18 +799,6 @@ export {
     DivarIconsIconName,
 
     /**
-     * The EventsEventButton model constructor.
-     * @property {module:model/EventsEventButton}
-     */
-    EventsEventButton,
-
-    /**
-     * The EventsEventButtonList model constructor.
-     * @property {module:model/EventsEventButtonList}
-     */
-    EventsEventButtonList,
-
-    /**
      * The EventsRegisterEventSubscriptionRequest model constructor.
      * @property {module:model/EventsRegisterEventSubscriptionRequest}
      */
@@ -847,6 +827,18 @@ export {
      * @property {module:model/FinderGetPostResponseBusinessData}
      */
     FinderGetPostResponseBusinessData,
+
+    /**
+     * The FinderGetUserBusinessesResponse model constructor.
+     * @property {module:model/FinderGetUserBusinessesResponse}
+     */
+    FinderGetUserBusinessesResponse,
+
+    /**
+     * The FinderGetUserBusinessesResponseBusiness model constructor.
+     * @property {module:model/FinderGetUserBusinessesResponseBusiness}
+     */
+    FinderGetUserBusinessesResponseBusiness,
 
     /**
      * The FinderGetUserIDByPhoneRequest model constructor.
@@ -963,30 +955,6 @@ export {
     GooglerpcStatus,
 
     /**
-     * The HomePresellFieldsConstructionPhase model constructor.
-     * @property {module:model/HomePresellFieldsConstructionPhase}
-     */
-    HomePresellFieldsConstructionPhase,
-
-    /**
-     * The HomePresellFieldsDeliveryMonth model constructor.
-     * @property {module:model/HomePresellFieldsDeliveryMonth}
-     */
-    HomePresellFieldsDeliveryMonth,
-
-    /**
-     * The HomePresellFieldsDeliveryYear model constructor.
-     * @property {module:model/HomePresellFieldsDeliveryYear}
-     */
-    HomePresellFieldsDeliveryYear,
-
-    /**
-     * The HomePresellFieldsUnitType model constructor.
-     * @property {module:model/HomePresellFieldsUnitType}
-     */
-    HomePresellFieldsUnitType,
-
-    /**
      * The ImageCarouselRowImageItem model constructor.
      * @property {module:model/ImageCarouselRowImageItem}
      */
@@ -1057,12 +1025,6 @@ export {
      * @property {module:model/OpenPlatformpostPostState}
      */
     OpenPlatformpostPostState,
-
-    /**
-     * The OpenPlatformpostServicesFields model constructor.
-     * @property {module:model/OpenPlatformpostServicesFields}
-     */
-    OpenPlatformpostServicesFields,
 
     /**
      * The PaymentCommitWalletTransactionRequest model constructor.
@@ -1209,12 +1171,6 @@ export {
     PaymentWalletTransactionStatus,
 
     /**
-     * The PostApartmentSellFields model constructor.
-     * @property {module:model/PostApartmentSellFields}
-     */
-    PostApartmentSellFields,
-
-    /**
      * The PostCanUserSubmitPostResponse model constructor.
      * @property {module:model/PostCanUserSubmitPostResponse}
      */
@@ -1293,12 +1249,6 @@ export {
     PostGetUserPostResponseBusinessData,
 
     /**
-     * The PostHomePresellFields model constructor.
-     * @property {module:model/PostHomePresellFields}
-     */
-    PostHomePresellFields,
-
-    /**
      * The PostLocationType model constructor.
      * @property {module:model/PostLocationType}
      */
@@ -1311,22 +1261,10 @@ export {
     PostPostGeneralData,
 
     /**
-     * The PostRoomsCount model constructor.
-     * @property {module:model/PostRoomsCount}
-     */
-    PostRoomsCount,
-
-    /**
      * The PostSetPostCustomizedButtonBody model constructor.
      * @property {module:model/PostSetPostCustomizedButtonBody}
      */
     PostSetPostCustomizedButtonBody,
-
-    /**
-     * The PostSubmitPostRequest model constructor.
-     * @property {module:model/PostSubmitPostRequest}
-     */
-    PostSubmitPostRequest,
 
     /**
      * The PostSubmitPostResponse model constructor.
@@ -1347,16 +1285,16 @@ export {
     PostSubmitUserPostRequest,
 
     /**
-     * The PostTemporaryResidenceFields model constructor.
-     * @property {module:model/PostTemporaryResidenceFields}
-     */
-    PostTemporaryResidenceFields,
-
-    /**
      * The PremiumPanelBusinessDataSubBusinessType model constructor.
      * @property {module:model/PremiumPanelBusinessDataSubBusinessType}
      */
     PremiumPanelBusinessDataSubBusinessType,
+
+    /**
+     * The PremiumPanelUserRole model constructor.
+     * @property {module:model/PremiumPanelUserRole}
+     */
+    PremiumPanelUserRole,
 
     /**
      * The ProtobufAny model constructor.
@@ -1411,42 +1349,6 @@ export {
      * @property {module:model/SemanticUserSemanticDeleted}
      */
     SemanticUserSemanticDeleted,
-
-    /**
-     * The SendEventRequestTargetType model constructor.
-     * @property {module:model/SendEventRequestTargetType}
-     */
-    SendEventRequestTargetType,
-
-    /**
-     * The ServicesFieldsCategory model constructor.
-     * @property {module:model/ServicesFieldsCategory}
-     */
-    ServicesFieldsCategory,
-
-    /**
-     * The TemporaryResidenceFieldsComfortAmenity model constructor.
-     * @property {module:model/TemporaryResidenceFieldsComfortAmenity}
-     */
-    TemporaryResidenceFieldsComfortAmenity,
-
-    /**
-     * The TemporaryResidenceFieldsHeatingCoolingSystem model constructor.
-     * @property {module:model/TemporaryResidenceFieldsHeatingCoolingSystem}
-     */
-    TemporaryResidenceFieldsHeatingCoolingSystem,
-
-    /**
-     * The TemporaryResidenceFieldsPetsAllowed model constructor.
-     * @property {module:model/TemporaryResidenceFieldsPetsAllowed}
-     */
-    TemporaryResidenceFieldsPetsAllowed,
-
-    /**
-     * The TemporaryResidenceFieldsRentalPeriod model constructor.
-     * @property {module:model/TemporaryResidenceFieldsRentalPeriod}
-     */
-    TemporaryResidenceFieldsRentalPeriod,
 
     /**
     * The AddonsApi service constructor.

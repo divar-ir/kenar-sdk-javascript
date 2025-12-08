@@ -4,11 +4,11 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**chatAPIChatBotSendMessage**](ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
-[**chatAPIChatBotSendMessage2**](ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
-[**chatAPIChatBotSendMessage3**](ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
-[**chatAPIChatBotSendMessage4**](ChatAPIApi.md#chatAPIChatBotSendMessage4) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
-[**chatAPIChatBotSendMessage5**](ChatAPIApi.md#chatAPIChatBotSendMessage5) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+[**chatAPIChatBotSendMessage**](ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه چت‌بات
+[**chatAPIChatBotSendMessage2**](ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه چت‌بات
+[**chatAPIChatBotSendMessage3**](ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه چت‌بات
+[**chatAPIChatBotSendMessage4**](ChatAPIApi.md#chatAPIChatBotSendMessage4) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه چت‌بات
+[**chatAPIChatBotSendMessage5**](ChatAPIApi.md#chatAPIChatBotSendMessage5) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه چت‌بات
 [**chatAPIConversationSendMessage**](ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
 [**chatAPIGenerateUploadToken**](ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 [**chatAPIGetConversation**](ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 > ChatapiChatBotSendMessageResponse chatAPIChatBotSendMessage(conversationId, chatAPIChatBotSendMessageBody)
 
-ارسال پیام به مکالمه ChatBot
+ارسال پیام به مکالمه چت‌بات
 
 این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;CHAT_BOT_SEND_MESSAGE&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
 
@@ -74,9 +74,9 @@ Name | Type | Description  | Notes
 
 > ChatapiChatBotSendMessageResponse chatAPIChatBotSendMessage2(userId, chatAPIChatBotSendMessageBody)
 
-ارسال پیام به مکالمه ChatBot
+ارسال پیام به مکالمه چت‌بات
 
-این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
+این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;CHAT_BOT_SEND_MESSAGE&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
 
 ### Example
 
@@ -129,9 +129,9 @@ Name | Type | Description  | Notes
 
 > ChatapiChatBotSendMessageResponse chatAPIChatBotSendMessage3(conversationId, chatAPIChatBotSendMessageBody)
 
-ارسال پیام به مکالمه ChatBot
+ارسال پیام به مکالمه چت‌بات
 
-این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
+این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;CHAT_BOT_SEND_MESSAGE&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
 
 ### Example
 
@@ -184,9 +184,9 @@ Name | Type | Description  | Notes
 
 > ChatapiChatBotSendMessageResponse chatAPIChatBotSendMessage4(userId, chatAPIChatBotSendMessageBody)
 
-ارسال پیام به مکالمه ChatBot
+ارسال پیام به مکالمه چت‌بات
 
-این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
+این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;CHAT_BOT_SEND_MESSAGE&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
 
 ### Example
 
@@ -239,9 +239,9 @@ Name | Type | Description  | Notes
 
 > ChatapiChatBotSendMessageResponse chatAPIChatBotSendMessage5(conversationId, chatAPIChatBotSendMessageBody)
 
-ارسال پیام به مکالمه ChatBot
+ارسال پیام به مکالمه چت‌بات
 
-این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
+این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;CHAT_BOT_SEND_MESSAGE&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;CHAT_BOT_USER_MESSAGE_SEND&#x60;
 
 ### Example
 

@@ -7,7 +7,8 @@ Method | HTTP request | Description
 [**finderGetPost**](FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 [**finderGetUser**](FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 [**finderGetUser2**](FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
-[**finderGetUserIDByPhone**](FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر دیوار با شماره تلفن
+[**finderGetUserBusinesses**](FinderApi.md#finderGetUserBusinesses) | **GET** /v1/open-platform/user/businesses | دریافت کسب‌وکارهای کاربر
+[**finderGetUserIDByPhone**](FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر
 [**finderGetUserPosts**](FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 [**finderSearchPostV2**](FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجوی آگهی‌های دیوار
 
@@ -122,7 +123,7 @@ Name | Type | Description  | Notes
 
 دریافت اطلاعات کاربر
 
-این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth اسکوپ‌های اعطا شده بستگی دارد.  **نکات مهم**: - با اسکوپ &#x60;USER_PHONE&#x60;: شماره تلفن کاربر برمی‌گردد - با اسکوپ &#x60;USER_ID&#x60;: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - &#x60;USER_ID&#x60; یا &#x60;USER_PHONE&#x60;
+این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth اسکوپ‌های اعطا شده بستگی دارد.  **نکات مهم**: - با اسکوپ &#x60;USER_PHONE&#x60;: شماره تلفن کاربر برمی‌گردد - با اسکوپ &#x60;USER_ID&#x60;: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;USER_RETRIEVE&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;USER_ID&#x60; یا &#x60;USER_PHONE&#x60;
 
 ### Example
 
@@ -165,11 +166,60 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
+## finderGetUserBusinesses
+
+> FinderGetUserBusinessesResponse finderGetUserBusinesses()
+
+دریافت کسب‌وکارهای کاربر
+
+این API امکان دریافت تمام کسب‌وکارهای مرتبط با کاربر احراز هویت شده را فراهم می‌کند، همراه با نقش کاربر در هر کسب‌وکار.  **نکات مهم**: - تمام کسب‌وکارهایی که کاربر در آنها نقش دارد (مثلاً مالک یا همکار) را برمی‌گرداند - شامل اطلاعات کسب‌وکار مانند business_token، business_type، brand_name و نقش کاربر است  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - &#x60;USER_BUSINESSES_READ&#x60;
+
+### Example
+
+```javascript
+import KenarApiClient from 'kenar-api-client';
+let defaultClient = KenarApiClient.ApiClient.instance;
+// Configure API key authorization: APIKey
+let APIKey = defaultClient.authentications['APIKey'];
+APIKey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//APIKey.apiKeyPrefix = 'Token';
+// Configure OAuth2 access token for authorization: OAuth
+let OAuth = defaultClient.authentications['OAuth'];
+OAuth.accessToken = 'YOUR ACCESS TOKEN';
+
+let apiInstance = new KenarApiClient.FinderApi();
+apiInstance.finderGetUserBusinesses().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**FinderGetUserBusinessesResponse**](FinderGetUserBusinessesResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## finderGetUserIDByPhone
 
 > FinderGetUserIDByPhoneResponse finderGetUserIDByPhone(finderGetUserIDByPhoneRequest)
 
-دریافت شناسه کاربر دیوار با شماره تلفن
+دریافت شناسه کاربر
 
 این API امکان پیدا کردن شناسه کاربر با شماره تلفن را می‌دهد. مناسب برای یکپارچه‌سازی با سیستم‌های CRM یا پشتیبانی.  **نکات مهم**: - شناسه مبهم‌شده برمی‌گردد (یکتا برای هر اپلیکیشن، نه شناسه واقعی کاربر دیوار)   #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;GET_USER_ID_BY_PHONE&#x60;
 

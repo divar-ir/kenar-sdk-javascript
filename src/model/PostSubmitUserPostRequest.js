@@ -23,12 +23,13 @@ class PostSubmitUserPostRequest {
     /**
      * Constructs a new <code>PostSubmitUserPostRequest</code>.
      * @alias module:model/PostSubmitUserPostRequest
+     * @param businessToken {String} توکن کسب‌وکاری که این آگهی متعلق به آن می‌شود
      * @param categoryFields {Object} فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
      * @param generalData {module:model/PostPostGeneralData} 
      */
-    constructor(categoryFields, generalData) { 
+    constructor(businessToken, categoryFields, generalData) { 
         
-        PostSubmitUserPostRequest.initialize(this, categoryFields, generalData);
+        PostSubmitUserPostRequest.initialize(this, businessToken, categoryFields, generalData);
     }
 
     /**
@@ -36,7 +37,8 @@ class PostSubmitUserPostRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, categoryFields, generalData) { 
+    static initialize(obj, businessToken, categoryFields, generalData) { 
+        obj['business_token'] = businessToken;
         obj['category_fields'] = categoryFields;
         obj['general_data'] = generalData;
     }
@@ -52,6 +54,9 @@ class PostSubmitUserPostRequest {
         if (data) {
             obj = obj || new PostSubmitUserPostRequest();
 
+            if (data.hasOwnProperty('business_token')) {
+                obj['business_token'] = ApiClient.convertToType(data['business_token'], 'String');
+            }
             if (data.hasOwnProperty('category_fields')) {
                 obj['category_fields'] = ApiClient.convertToType(data['category_fields'], Object);
             }
@@ -74,6 +79,10 @@ class PostSubmitUserPostRequest {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
+        // ensure the json data is a string
+        if (data['business_token'] && !(typeof data['business_token'] === 'string' || data['business_token'] instanceof String)) {
+            throw new Error("Expected the field `business_token` to be a primitive type in the JSON string but got " + data['business_token']);
+        }
         // validate the optional field `general_data`
         if (data['general_data']) { // data not null
           PostPostGeneralData.validateJSON(data['general_data']);
@@ -82,6 +91,21 @@ class PostSubmitUserPostRequest {
         return true;
     }
 
+/**
+     * Returns توکن کسب‌وکاری که این آگهی متعلق به آن می‌شود
+     * @return {String}
+     */
+    getBusinessToken() {
+        return this.business_token;
+    }
+
+    /**
+     * Sets توکن کسب‌وکاری که این آگهی متعلق به آن می‌شود
+     * @param {String} businessToken توکن کسب‌وکاری که این آگهی متعلق به آن می‌شود
+     */
+    setBusinessToken(businessToken) {
+        this['business_token'] = businessToken;
+    }
 /**
      * Returns فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/
      * @return {Object}
@@ -113,7 +137,13 @@ class PostSubmitUserPostRequest {
 
 }
 
-PostSubmitUserPostRequest.RequiredProperties = ["category_fields", "general_data"];
+PostSubmitUserPostRequest.RequiredProperties = ["business_token", "category_fields", "general_data"];
+
+/**
+ * توکن کسب‌وکاری که این آگهی متعلق به آن می‌شود
+ * @member {String} business_token
+ */
+PostSubmitUserPostRequest.prototype['business_token'] = undefined;
 
 /**
  * فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/

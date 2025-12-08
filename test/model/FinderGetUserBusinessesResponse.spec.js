@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.PostSubmitPostV2Request();
+    instance = new KenarApiClient.FinderGetUserBusinessesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,16 @@
       object[property] = value;
   }
 
-  describe('PostSubmitPostV2Request', function() {
-    it('should create an instance of PostSubmitPostV2Request', function() {
-      // uncomment below and update the code to test PostSubmitPostV2Request
-      //var instance = new KenarApiClient.PostSubmitPostV2Request();
-      //expect(instance).to.be.a(KenarApiClient.PostSubmitPostV2Request);
+  describe('FinderGetUserBusinessesResponse', function() {
+    it('should create an instance of FinderGetUserBusinessesResponse', function() {
+      // uncomment below and update the code to test FinderGetUserBusinessesResponse
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponse();
+      //expect(instance).to.be.a(KenarApiClient.FinderGetUserBusinessesResponse);
     });
 
-    it('should have the property businessToken (base name: "business_token")', function() {
-      // uncomment below and update the code to test the property businessToken
-      //var instance = new KenarApiClient.PostSubmitPostV2Request();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property categoryFields (base name: "category_fields")', function() {
-      // uncomment below and update the code to test the property categoryFields
-      //var instance = new KenarApiClient.PostSubmitPostV2Request();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property generalData (base name: "general_data")', function() {
-      // uncomment below and update the code to test the property generalData
-      //var instance = new KenarApiClient.PostSubmitPostV2Request();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property landlineNumbers (base name: "landline_numbers")', function() {
-      // uncomment below and update the code to test the property landlineNumbers
-      //var instance = new KenarApiClient.PostSubmitPostV2Request();
+    it('should have the property businesses (base name: "businesses")', function() {
+      // uncomment below and update the code to test the property businesses
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponse();
       //expect(instance).to.be();
     });
 

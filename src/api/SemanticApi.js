@@ -148,7 +148,7 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
+     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_CREATE`  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
      * @param {String} divarUserId شناسه کاربر دیوار
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SemanticCreateUserSemanticResponse} and HTTP response
@@ -187,7 +187,7 @@ export default class SemanticApi {
 
     /**
      * ایجاد اطلاعات معنایی کاربر
-     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
+     * این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_CREATE`  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
      * @param {String} divarUserId شناسه کاربر دیوار
      * @param {module:model/SemanticCreateUserSemanticBody} semanticCreateUserSemanticBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SemanticCreateUserSemanticResponse}
@@ -256,7 +256,7 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_DELETE`
      * @param {String} divarUserId شناسه کاربر دیوار
      * @param {String} phone شماره موبایل کاربر
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -296,7 +296,7 @@ export default class SemanticApi {
 
     /**
      * حذف اطلاعات معنایی کاربر
-     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+     * این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_DELETE`
      * @param {String} divarUserId شناسه کاربر دیوار
      * @param {String} phone شماره موبایل کاربر
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}

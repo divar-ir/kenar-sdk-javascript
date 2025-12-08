@@ -16,7 +16,6 @@ Method | HTTP request | Description
 [**postGetUploadURLsV2**](PostApi.md#postGetUploadURLsV2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود تصاویر و ویدیو
 [**postGetUserPost**](PostApi.md#postGetUserPost) | **GET** /v1/open-platform/user-post/{token} | دریافت آگهی با توکن
 [**postSetPostCustomizedButton**](PostApi.md#postSetPostCustomizedButton) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی روی آگهی
-[**postSubmitPost**](PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی (منسوخ شده)
 [**postSubmitPostV2**](PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی
 [**postSubmitUserPost**](PostApi.md#postSubmitUserPost) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 
@@ -645,63 +644,13 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## postSubmitPost
-
-> PostSubmitPostResponse postSubmitPost(postSubmitPostRequest)
-
-ثبت آگهی (منسوخ شده)
-
-این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;SUBMIT_POST&#x60;
-
-### Example
-
-```javascript
-import KenarApiClient from 'kenar-api-client';
-let defaultClient = KenarApiClient.ApiClient.instance;
-// Configure API key authorization: APIKey
-let APIKey = defaultClient.authentications['APIKey'];
-APIKey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//APIKey.apiKeyPrefix = 'Token';
-
-let apiInstance = new KenarApiClient.PostApi();
-let postSubmitPostRequest = new KenarApiClient.PostSubmitPostRequest(); // PostSubmitPostRequest | 
-apiInstance.postSubmitPost(postSubmitPostRequest).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **postSubmitPostRequest** | [**PostSubmitPostRequest**](PostSubmitPostRequest.md)|  | 
-
-### Return type
-
-[**PostSubmitPostResponse**](PostSubmitPostResponse.md)
-
-### Authorization
-
-[APIKey](../README.md#APIKey)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
 ## postSubmitPostV2
 
 > PostSubmitPostResponse postSubmitPostV2(postSubmitPostV2Request)
 
 ثبت آگهی
 
-این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;SUBMIT_POST&#x60;
+این API امکان ثبت آگهی با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. داده‌های آگهی در برابر قالب دسته‌بندی مشخص شده اعتبارسنجی می‌شوند.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده) - آگهی‌های ثبت شده توسط ارائه‌دهندگان باید آگهی‌های کسب‌وکار باشند، بنابراین توکن کسب‌وکار الزامی است - کاربر احراز هویت شده باید به کسب‌وکار دسترسی داشته باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;SUBMIT_POST&#x60;
 
 ### Example
 
@@ -751,7 +700,7 @@ Name | Type | Description  | Notes
 
 ثبت آگهی به عنوان کاربر
 
-این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;SUBMIT_USER_POST&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;SUBMIT_USER_POST&#x60;
+این API امکان ثبت آگهی از طرف کاربر احراز هویت شده با استفاده از اعتبارسنجی JSON schema را فراهم می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود و می‌توان از طریق APIهای مختص کاربر مدیریت کرد.  **نکات مهم**: - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود - آگهی‌های ثبت شده توسط ارائه‌دهندگان باید آگهی‌های کسب‌وکار باشند، بنابراین توکن کسب‌وکار الزامی است - کاربر احراز هویت شده باید به کسب‌وکار دسترسی داشته باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - &#x60;SUBMIT_USER_POST&#x60;  ##### OAuth اسکوپ موردنیاز:  - &#x60;SUBMIT_USER_POST&#x60;
 
 ### Example
 

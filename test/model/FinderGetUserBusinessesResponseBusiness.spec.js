@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new KenarApiClient.PostSubmitUserPostRequest();
+    instance = new KenarApiClient.FinderGetUserBusinessesResponseBusiness();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,40 @@
       object[property] = value;
   }
 
-  describe('PostSubmitUserPostRequest', function() {
-    it('should create an instance of PostSubmitUserPostRequest', function() {
-      // uncomment below and update the code to test PostSubmitUserPostRequest
-      //var instance = new KenarApiClient.PostSubmitUserPostRequest();
-      //expect(instance).to.be.a(KenarApiClient.PostSubmitUserPostRequest);
+  describe('FinderGetUserBusinessesResponseBusiness', function() {
+    it('should create an instance of FinderGetUserBusinessesResponseBusiness', function() {
+      // uncomment below and update the code to test FinderGetUserBusinessesResponseBusiness
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponseBusiness();
+      //expect(instance).to.be.a(KenarApiClient.FinderGetUserBusinessesResponseBusiness);
+    });
+
+    it('should have the property brandDescription (base name: "brand_description")', function() {
+      // uncomment below and update the code to test the property brandDescription
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponseBusiness();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property brandName (base name: "brand_name")', function() {
+      // uncomment below and update the code to test the property brandName
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponseBusiness();
+      //expect(instance).to.be();
     });
 
     it('should have the property businessToken (base name: "business_token")', function() {
       // uncomment below and update the code to test the property businessToken
-      //var instance = new KenarApiClient.PostSubmitUserPostRequest();
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponseBusiness();
       //expect(instance).to.be();
     });
 
-    it('should have the property categoryFields (base name: "category_fields")', function() {
-      // uncomment below and update the code to test the property categoryFields
-      //var instance = new KenarApiClient.PostSubmitUserPostRequest();
+    it('should have the property businessType (base name: "business_type")', function() {
+      // uncomment below and update the code to test the property businessType
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponseBusiness();
       //expect(instance).to.be();
     });
 
-    it('should have the property generalData (base name: "general_data")', function() {
-      // uncomment below and update the code to test the property generalData
-      //var instance = new KenarApiClient.PostSubmitUserPostRequest();
+    it('should have the property userRole (base name: "user_role")', function() {
+      // uncomment below and update the code to test the property userRole
+      //var instance = new KenarApiClient.FinderGetUserBusinessesResponseBusiness();
       //expect(instance).to.be();
     });
 

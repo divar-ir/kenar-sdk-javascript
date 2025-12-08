@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**assetsGetPermissions**](AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | لیست مجوزهای کنار دیوار
 [**assetsGetRamMemories**](AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | لیست گزینه‌های حافظه RAM
 [**assetsGetServiceTypes**](AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | لیست انواع سرویس
-[**assetsGetSubmitSchema**](AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت schema ثبت آگهی برای دسته‌بندی
+[**assetsGetSubmitSchema**](AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت schema ثبت آگهی
 
 
 
@@ -594,7 +594,7 @@ This endpoint does not need any parameter.
 
 > AssetsGetSubmitSchemaResponse assetsGetSubmitSchema(categorySlug)
 
-دریافت schema ثبت آگهی برای دسته‌بندی
+دریافت schema ثبت آگهی
 
 این API به شما امکان دریافت قالب ثبت آگهی برای یک دسته‌بندی مشخص را می‌دهد. پاسخ در قالب JSON Schema است.  قالب تعریف کننده ساختار و قوانین برای فیلدهای فرم زمانی که آگهی در یک دسته‌بندی مشخص ثبت می‌شود. هر فیلد در قالب می‌تواند یکی از انواع زیر را داشته باشد:  **انواع اصلی:** - &#x60;string&#x60;: فیلدهای ورودی متنی (مانند عنوان، توضیحات، مقادیر زمانی) - &#x60;integer&#x60;: فیلدهای ورودی عددی برای اعداد صحیح (مانند قیمت، تعداد، اندازه) - &#x60;float&#x60;: فیلدهای ورودی عددی برای اعداد اعشاری - &#x60;boolean&#x60;: فیلدهای ورودی بولین (صحیح/غلط) - &#x60;array&#x60;: فیلدهای ورودی چندگانه که امکان انتخاب چند مقدار را دارند  **فیلدهای Enum:** فیلدها با گزینه‌های پیش‌تعریف شده از &#x60;enum&#x60; و &#x60;enumNames&#x60; استفاده می‌کنند: - &#x60;enum&#x60;: آرایه از مقادیر داخلی استفاده شده برای ارتباط API - &#x60;enumNames&#x60;: آرایه از برچسب‌های نمایشی نشان داده شده به کاربر (معمولاً به زبان فارسی) - اینها برای فیلدهای ورودی چندگانه (مانند انتخاب طبقه، امکان استفاده از پارکینگ) استفاده می‌شوند  **فیلدهای آرایه با Enum:** فیلدهای ورودی چندگانه ترکیب &#x60;type: \&quot;array\&quot;&#x60; با کلید Enum را دارند: - &#x60;items.enum&#x60;: گزینه‌های موجود برای انتخاب - &#x60;items.enumNames&#x60;: برچسب‌های نمایشی برای هر گزینه - کاربران می‌توانند چند مقدار را انتخاب کنند (مانند امکانات رفاهی، سیستم‌های گرمایش)  **ویژگی‌های فیلد:** - &#x60;title&#x60;: نام نمایشی فارسی برای فیلد - &#x60;required&#x60;: آرایه از نام فیلدهای اجباری که باید ارائه شوند - &#x60;type&#x60;: نوع داده فیلد  **مثال استفاده:** &#x60;&#x60;&#x60;json {   \&quot;properties\&quot;: {     \&quot;size\&quot;: {       \&quot;title\&quot;: \&quot;متراژ (متر مربع)\&quot;,       \&quot;type\&quot;: \&quot;integer\&quot;     },     \&quot;elevator\&quot;: {       \&quot;enum\&quot;: [\&quot;دارد\&quot;, \&quot;ندارد\&quot;],       \&quot;enumNames\&quot;: [\&quot;دارد\&quot;, \&quot;ندارد\&quot;],       \&quot;title\&quot;: \&quot;آسانسور\&quot;,       \&quot;type\&quot;: \&quot;string\&quot;     },     \&quot;comfort_amenities\&quot;: {       \&quot;items\&quot;: {         \&quot;enum\&quot;: [\&quot;اینترنت_پرسرعت\&quot;, \&quot;تلویزیون\&quot;],         \&quot;enumNames\&quot;: [\&quot;اینترنت پرسرعت\&quot;, \&quot;تلویزیون\&quot;],         \&quot;type\&quot;: \&quot;string\&quot;       },       \&quot;title\&quot;: \&quot;امکانات رفاهی\&quot;,       \&quot;type\&quot;: \&quot;array\&quot;     }   } } &#x60;&#x60;&#x60;
 

@@ -148,21 +148,21 @@ Class | Method | HTTP request | Description
 *KenarApiClient.AssetsApi* | [**assetsGetPermissions**](docs/AssetsApi.md#assetsGetPermissions) | **GET** /v1/open-platform/assets/permission | لیست مجوزهای کنار دیوار
 *KenarApiClient.AssetsApi* | [**assetsGetRamMemories**](docs/AssetsApi.md#assetsGetRamMemories) | **GET** /v1/open-platform/assets/ram-memory | لیست گزینه‌های حافظه RAM
 *KenarApiClient.AssetsApi* | [**assetsGetServiceTypes**](docs/AssetsApi.md#assetsGetServiceTypes) | **GET** /v1/open-platform/assets/service-type | لیست انواع سرویس
-*KenarApiClient.AssetsApi* | [**assetsGetSubmitSchema**](docs/AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت schema ثبت آگهی برای دسته‌بندی
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage2**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage3**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage4**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage4) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
-*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage5**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage5) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*KenarApiClient.AssetsApi* | [**assetsGetSubmitSchema**](docs/AssetsApi.md#assetsGetSubmitSchema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت schema ثبت آگهی
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه چت‌بات
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage2**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه چت‌بات
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage3**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه چت‌بات
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage4**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage4) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه چت‌بات
+*KenarApiClient.ChatAPIApi* | [**chatAPIChatBotSendMessage5**](docs/ChatAPIApi.md#chatAPIChatBotSendMessage5) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه چت‌بات
 *KenarApiClient.ChatAPIApi* | [**chatAPIConversationSendMessage**](docs/ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
 *KenarApiClient.ChatAPIApi* | [**chatAPIGenerateUploadToken**](docs/ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 *KenarApiClient.ChatAPIApi* | [**chatAPIGetConversation**](docs/ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه
 *KenarApiClient.EventsApi* | [**eventsRegisterEventSubscription**](docs/EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
-*KenarApiClient.EventsApi* | [**eventsSendEvent**](docs/EventsApi.md#eventsSendEvent) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر
 *KenarApiClient.FinderApi* | [**finderGetPost**](docs/FinderApi.md#finderGetPost) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 *KenarApiClient.FinderApi* | [**finderGetUser**](docs/FinderApi.md#finderGetUser) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 *KenarApiClient.FinderApi* | [**finderGetUser2**](docs/FinderApi.md#finderGetUser2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
-*KenarApiClient.FinderApi* | [**finderGetUserIDByPhone**](docs/FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر دیوار با شماره تلفن
+*KenarApiClient.FinderApi* | [**finderGetUserBusinesses**](docs/FinderApi.md#finderGetUserBusinesses) | **GET** /v1/open-platform/user/businesses | دریافت کسب‌وکارهای کاربر
+*KenarApiClient.FinderApi* | [**finderGetUserIDByPhone**](docs/FinderApi.md#finderGetUserIDByPhone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر
 *KenarApiClient.FinderApi* | [**finderGetUserPosts**](docs/FinderApi.md#finderGetUserPosts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 *KenarApiClient.FinderApi* | [**finderSearchPostV2**](docs/FinderApi.md#finderSearchPostV2) | **POST** /v2/open-platform/finder/post | جستجوی آگهی‌های دیوار
 *KenarApiClient.PaymentApi* | [**paymentCommitWalletTransaction**](docs/PaymentApi.md#paymentCommitWalletTransaction) | **POST** /experimental/open-platform/wallet/payments/commit | نهایی کردن تراکنش کیف پول
@@ -189,7 +189,6 @@ Class | Method | HTTP request | Description
 *KenarApiClient.PostApi* | [**postGetUploadURLsV2**](docs/PostApi.md#postGetUploadURLsV2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود تصاویر و ویدیو
 *KenarApiClient.PostApi* | [**postGetUserPost**](docs/PostApi.md#postGetUserPost) | **GET** /v1/open-platform/user-post/{token} | دریافت آگهی با توکن
 *KenarApiClient.PostApi* | [**postSetPostCustomizedButton**](docs/PostApi.md#postSetPostCustomizedButton) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی روی آگهی
-*KenarApiClient.PostApi* | [**postSubmitPost**](docs/PostApi.md#postSubmitPost) | **POST** /experimental/open-platform/posts/new | ثبت آگهی (منسوخ شده)
 *KenarApiClient.PostApi* | [**postSubmitPostV2**](docs/PostApi.md#postSubmitPostV2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی
 *KenarApiClient.PostApi* | [**postSubmitUserPost**](docs/PostApi.md#postSubmitUserPost) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 *KenarApiClient.SemanticApi* | [**semanticCreatePostSemantic**](docs/SemanticApi.md#semanticCreatePostSemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
@@ -276,6 +275,7 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.AssetsGetSubmitSchemaResponse](docs/AssetsGetSubmitSchemaResponse.md)
  - [KenarApiClient.AuthorizationAPICallerInfo](docs/AuthorizationAPICallerInfo.md)
  - [KenarApiClient.AuthorizationOAuthScope](docs/AuthorizationOAuthScope.md)
+ - [KenarApiClient.BaseBusinessType](docs/BaseBusinessType.md)
  - [KenarApiClient.ChatAPIChatBotSendMessageBody](docs/ChatAPIChatBotSendMessageBody.md)
  - [KenarApiClient.ChatAPIConversationSendMessageBody](docs/ChatAPIConversationSendMessageBody.md)
  - [KenarApiClient.ChatapiChatBotSendMessageResponse](docs/ChatapiChatBotSendMessageResponse.md)
@@ -292,13 +292,13 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.ChatapiMessageSenderType](docs/ChatapiMessageSenderType.md)
  - [KenarApiClient.ChatapiMessageType](docs/ChatapiMessageType.md)
  - [KenarApiClient.DivarIconsIconName](docs/DivarIconsIconName.md)
- - [KenarApiClient.EventsEventButton](docs/EventsEventButton.md)
- - [KenarApiClient.EventsEventButtonList](docs/EventsEventButtonList.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
  - [KenarApiClient.EventsRegisterEventSubscriptionRequestEventType](docs/EventsRegisterEventSubscriptionRequestEventType.md)
  - [KenarApiClient.FinderGetAllDevelopmentPostsResponse](docs/FinderGetAllDevelopmentPostsResponse.md)
  - [KenarApiClient.FinderGetPostResponse](docs/FinderGetPostResponse.md)
  - [KenarApiClient.FinderGetPostResponseBusinessData](docs/FinderGetPostResponseBusinessData.md)
+ - [KenarApiClient.FinderGetUserBusinessesResponse](docs/FinderGetUserBusinessesResponse.md)
+ - [KenarApiClient.FinderGetUserBusinessesResponseBusiness](docs/FinderGetUserBusinessesResponseBusiness.md)
  - [KenarApiClient.FinderGetUserIDByPhoneRequest](docs/FinderGetUserIDByPhoneRequest.md)
  - [KenarApiClient.FinderGetUserIDByPhoneResponse](docs/FinderGetUserIDByPhoneResponse.md)
  - [KenarApiClient.FinderGetUserPostsResponse](docs/FinderGetUserPostsResponse.md)
@@ -318,10 +318,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.GetServiceTypesResponseServiceTypeData](docs/GetServiceTypesResponseServiceTypeData.md)
  - [KenarApiClient.GetUploadURLsV2ResponseUploadFormat](docs/GetUploadURLsV2ResponseUploadFormat.md)
  - [KenarApiClient.GooglerpcStatus](docs/GooglerpcStatus.md)
- - [KenarApiClient.HomePresellFieldsConstructionPhase](docs/HomePresellFieldsConstructionPhase.md)
- - [KenarApiClient.HomePresellFieldsDeliveryMonth](docs/HomePresellFieldsDeliveryMonth.md)
- - [KenarApiClient.HomePresellFieldsDeliveryYear](docs/HomePresellFieldsDeliveryYear.md)
- - [KenarApiClient.HomePresellFieldsUnitType](docs/HomePresellFieldsUnitType.md)
  - [KenarApiClient.ImageCarouselRowImageItem](docs/ImageCarouselRowImageItem.md)
  - [KenarApiClient.ManagementDevelopmentPost](docs/ManagementDevelopmentPost.md)
  - [KenarApiClient.MessageContactData](docs/MessageContactData.md)
@@ -334,7 +330,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.OAuthScopeScope](docs/OAuthScopeScope.md)
  - [KenarApiClient.OpenPlatformpostHTTPMethod](docs/OpenPlatformpostHTTPMethod.md)
  - [KenarApiClient.OpenPlatformpostPostState](docs/OpenPlatformpostPostState.md)
- - [KenarApiClient.OpenPlatformpostServicesFields](docs/OpenPlatformpostServicesFields.md)
  - [KenarApiClient.PaymentCommitWalletTransactionRequest](docs/PaymentCommitWalletTransactionRequest.md)
  - [KenarApiClient.PaymentCommitWalletTransactionResponse](docs/PaymentCommitWalletTransactionResponse.md)
  - [KenarApiClient.PaymentCreateWalletPaymentRequest](docs/PaymentCreateWalletPaymentRequest.md)
@@ -359,7 +354,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PaymentTransactionType](docs/PaymentTransactionType.md)
  - [KenarApiClient.PaymentWalletTransaction](docs/PaymentWalletTransaction.md)
  - [KenarApiClient.PaymentWalletTransactionStatus](docs/PaymentWalletTransactionStatus.md)
- - [KenarApiClient.PostApartmentSellFields](docs/PostApartmentSellFields.md)
  - [KenarApiClient.PostCanUserSubmitPostResponse](docs/PostCanUserSubmitPostResponse.md)
  - [KenarApiClient.PostCreateBusinessCustomizedButtonBody](docs/PostCreateBusinessCustomizedButtonBody.md)
  - [KenarApiClient.PostCustomizedButton](docs/PostCustomizedButton.md)
@@ -373,17 +367,14 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.PostGetUploadURLsV2Response](docs/PostGetUploadURLsV2Response.md)
  - [KenarApiClient.PostGetUserPostResponse](docs/PostGetUserPostResponse.md)
  - [KenarApiClient.PostGetUserPostResponseBusinessData](docs/PostGetUserPostResponseBusinessData.md)
- - [KenarApiClient.PostHomePresellFields](docs/PostHomePresellFields.md)
  - [KenarApiClient.PostLocationType](docs/PostLocationType.md)
  - [KenarApiClient.PostPostGeneralData](docs/PostPostGeneralData.md)
- - [KenarApiClient.PostRoomsCount](docs/PostRoomsCount.md)
  - [KenarApiClient.PostSetPostCustomizedButtonBody](docs/PostSetPostCustomizedButtonBody.md)
- - [KenarApiClient.PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
  - [KenarApiClient.PostSubmitPostResponse](docs/PostSubmitPostResponse.md)
  - [KenarApiClient.PostSubmitPostV2Request](docs/PostSubmitPostV2Request.md)
  - [KenarApiClient.PostSubmitUserPostRequest](docs/PostSubmitUserPostRequest.md)
- - [KenarApiClient.PostTemporaryResidenceFields](docs/PostTemporaryResidenceFields.md)
  - [KenarApiClient.PremiumPanelBusinessDataSubBusinessType](docs/PremiumPanelBusinessDataSubBusinessType.md)
+ - [KenarApiClient.PremiumPanelUserRole](docs/PremiumPanelUserRole.md)
  - [KenarApiClient.ProtobufAny](docs/ProtobufAny.md)
  - [KenarApiClient.SearchPostItemPrice](docs/SearchPostItemPrice.md)
  - [KenarApiClient.SearchPostItemRealEstateFields](docs/SearchPostItemRealEstateFields.md)
@@ -393,12 +384,6 @@ Class | Method | HTTP request | Description
  - [KenarApiClient.SemanticCreateUserSemanticResponse](docs/SemanticCreateUserSemanticResponse.md)
  - [KenarApiClient.SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
  - [KenarApiClient.SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
- - [KenarApiClient.SendEventRequestTargetType](docs/SendEventRequestTargetType.md)
- - [KenarApiClient.ServicesFieldsCategory](docs/ServicesFieldsCategory.md)
- - [KenarApiClient.TemporaryResidenceFieldsComfortAmenity](docs/TemporaryResidenceFieldsComfortAmenity.md)
- - [KenarApiClient.TemporaryResidenceFieldsHeatingCoolingSystem](docs/TemporaryResidenceFieldsHeatingCoolingSystem.md)
- - [KenarApiClient.TemporaryResidenceFieldsPetsAllowed](docs/TemporaryResidenceFieldsPetsAllowed.md)
- - [KenarApiClient.TemporaryResidenceFieldsRentalPeriod](docs/TemporaryResidenceFieldsRentalPeriod.md)
 
 
 ## Documentation for Authorization
